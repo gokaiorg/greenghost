@@ -138,7 +138,7 @@ export const MetaHead: FC<MetaHeadProps> = memo(
 
         <meta
           name="google-site-verification"
-          content="PCHvSTFxg13Czg4ibk7D0ubEJ81ps6zhiqW-w9F5xp0"
+          content="dOuCZqslG5Lkw8i3jVwoGcedgH6-nIGGQ71qYu"
         />
         <script
           async
