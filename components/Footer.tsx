@@ -6,7 +6,7 @@ export const Footer = () => {
     <Box
       color="elvenTools.white"
       display="flex"
-      alignItems="center" 
+      alignItems="center"
       mt={{ base: '5rem', md: 'auto' }}
     >
       <Container

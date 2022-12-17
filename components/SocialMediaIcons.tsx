@@ -4,21 +4,20 @@ import { Box } from '@chakra-ui/react';
 export const SocialMediaIcons = () => {
   return (
     <Box display="flex" alignItems="center" gap={3}>
-      <SocialIcon
-        url="https://www.twitter.com/ElvenTools"
-        bgColor="#fff"
-        style={{ width: 30, height: 30 }}
-      />
-      <SocialIcon
-        url="https://www.github.com/ElvenTools"
-        bgColor="#fff"
-        style={{ width: 30, height: 30 }}
-      />
-      <SocialIcon
-        url="https://www.telegram.me/juliancwirko"
-        bgColor="#fff"
-        style={{ width: 30, height: 30 }}
-      />
+      <Box bgColor="black" borderRadius="100%">
+        <SocialIcon
+          url="https://www.facebook.com/GokaiLabs"
+          bgColor="#4cfd27"
+          style={{ width: 60, height: 60 }}
+        />
+      </Box>
+      <Box bgColor="black" borderRadius="100%">
+        <SocialIcon
+          url="https://www.instagram.com/gokai-labs"
+          bgColor="#4cfd27"
+          style={{ width: 60, height: 60 }}
+        />
+      </Box>
     </Box>
   );
 };

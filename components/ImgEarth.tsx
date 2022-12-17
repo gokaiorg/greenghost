@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const ImgEarth = () => {
   return (
-    <Box height={{ base: '50px' }} width={{ base: '50px' }} marginRight={2}>
+    <Box height={{ base: '80px' }} width={{ base: '80px' }} marginRight={2}>
       <motion.div
         animate={{
           y: [-5, 5, -5],
@@ -18,8 +18,8 @@ export const ImgEarth = () => {
         <Box
           as="img"
           src="/media/ghostverse-earth-mr-ghost-mxghosts-nft-dao-multiversx-blockchain.png"
-          width={{ base: '50px' }}
-          height={{ base: '50px' }}
+          width={{ base: '80px' }}
+          height={{ base: '80px' }}
           maxW="inherit"
           alt="Mr Ghost Earth - MultiversX NFT DAO - MxGhosts"
           title="Mr Ghost Earth - MultiversX NFT DAO - MxGhosts"
