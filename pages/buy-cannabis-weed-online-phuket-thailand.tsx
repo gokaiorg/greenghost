@@ -45,7 +45,7 @@ const Home: NextPage = () => {
           mb={2}
           mr="auto"
         >
-          <Link href="tel:+66936459898">+66 93 645 9898</Link>
+          <Link href="tel:+66949486177">+66 94 948 6177</Link>
         </Text>
       </Box>
       <Box display="flex" flexDirection="column">

@@ -18,6 +18,20 @@ export const SocialMediaIcons = () => {
           style={{ width: 60, height: 60 }}
         />
       </Box>
+      <Box bgColor="black" borderRadius="100%">
+        <SocialIcon
+          url="https://t.me/greengardencs"
+          bgColor="#4cfd27"
+          style={{ width: 60, height: 60 }}
+        />
+      </Box>
+      <Box bgColor="black" borderRadius="100%">
+        <SocialIcon
+          url="https://line.me/ti/p/Xh7jcqlmE7"
+          bgColor="#4cfd27"
+          style={{ width: 60, height: 60 }}
+        />
+      </Box>
     </Box>
   );
 };
