@@ -4,6 +4,11 @@ import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import { Weedmap } from '../components/Weedmap';
+import { Bud } from '../components/Bud';
+import Link from 'next/link';
+import { Text } from '@chakra-ui/react';
+import { BuyNowLink } from '../components/BuyNowLink';
+import { PreRoll } from '../components/PreRoll';
 
 const Home: NextPage = () => {
   return (
@@ -11,8 +16,10 @@ const Home: NextPage = () => {
       <HeaderMenu>
         <HeaderMenuButtons enabled={['auth']} />
       </HeaderMenu>
-      <HomeSectionTitle title="Cannabis shop in Phuket." />
-      <Weedmap />
+      <HomeSectionTitle title="Buy weed online - Cannabis Shop Phuket." />
+      <Bud />
+      <PreRoll />
+      <BuyNowLink />
     </MainLayout>
   );
 };

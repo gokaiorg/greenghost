@@ -50,7 +50,7 @@ const Home: NextPage = () => {
           </Text>
           discount on your order when you{' '}
           <Text ml={1} color="ghostVerse.green.base" as="span">
-            <Link href="/buy-cannabis-weed-online-phuket-thailand">
+            <Link href="/buy-weed-online-phuket">
               pay in cryptocurrency
             </Link>
           </Text>

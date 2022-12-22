@@ -45,7 +45,7 @@ const Home: NextPage = () => {
           mb={2}
           mr="auto"
         >
-          <Link href="/cannabis-shop-phuket">Discover</Link>
+          <Link href="/cannabis-shop-phuket">Shop Now</Link>
         </Text>
       </Box>
       <Box display="flex" flexDirection="column">
@@ -80,7 +80,7 @@ const Home: NextPage = () => {
           ml={{ base: '0', md: 'auto' }}
           mr={{ base: 'auto', md: '0' }}
         >
-          <Link href="/buy-cannabis-weed-online-phuket-thailand">
+          <Link href="/buy-weed-online-phuket">
             Contact Us
           </Link>
         </Text>

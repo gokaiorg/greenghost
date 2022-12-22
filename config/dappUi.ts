@@ -17,27 +17,35 @@ export const defaultMetaTags = {
 // Roadmap section data
 export const weedmap = [
   {
-    title: 'Top shelf',
+    title: 'Flowers',
     points: [
-      'Mac1 - 350THB',
-      'Oreoz - 350THB',
-      'Runtz - 350THB',
+      'Grand Daddy Purple - 350THB',
     ],
   },
   {
-    title: 'Thai Farm (Organic 100%)',
+    title: 'Pre Rolled',
     points: [
-      'Strawberry Cookie - 400THB',
-      'Bubble Kush - 400THB',
-      'The Menthol - 400THB',
+      'Grand Daddy Purple - 400THB',
     ],
   },
+];
+
+export const bud = [
   {
-    title: 'Exotic',
-    points: [
-      'Peanut butter cake - 450THB',
-      'Sour cream - 450THB',
-      'Blue city - 450THB',
-    ],
+    name: 'Grand Daddy Purple - 1G',
+    price: '350',
+    pageLink: '/grand-daddy-purple',
+  },
+];
+export const preroll = [
+  {
+    name: 'Grand Daddy Purple Pure - 1G',
+    price: '400',
+    pageLink: '/grand-daddy-purple',
+  },
+  {
+    name: 'Grand Daddy Purple MIXED - 0.25G',
+    price: '150',
+    pageLink: '/grand-daddy-purple',
   },
 ];

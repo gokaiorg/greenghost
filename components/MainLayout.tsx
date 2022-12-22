@@ -23,6 +23,7 @@ export const MainLayout: FC<PropsWithChildren<MetaHeadProps>> = ({
         position="relative"
         zIndex={3}
         color="ghostVerse.color2.darker"
+        mb={5}
       >
         <Container maxW="container.xl">
           <Box>{children}</Box>

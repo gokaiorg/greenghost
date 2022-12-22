@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       <HeaderMenu>
         <HeaderMenuButtons enabled={['auth']} />
       </HeaderMenu>
-      <HomeSectionTitle title="Contact us and get your strain." />
+      <HomeSectionTitle title="Buy weed online - Phuket delivery - Contact us and get your strain now." />
       <Box display="flex" flexDirection="column">
         <Text
           as="h2"
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           p={4}
           mr="auto"
         >
-          Phone Number
+          Contact Us
         </Text>
         <Text
           display="inline-flex"
@@ -63,7 +63,7 @@ const Home: NextPage = () => {
           p={4}
           mr="auto"
         >
-          Social Networks
+          Send a message
         </Text>
         <SocialMediaIcons />
       </Box>
