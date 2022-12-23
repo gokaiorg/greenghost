@@ -8,11 +8,7 @@ interface BudItemProps {
   pageLink: string;
 }
 
-export const BudItem: FC<BudItemProps> = ({
-  name,
-  price,
-  pageLink,
-}) => {
+export const BudItem: FC<BudItemProps> = ({ name, price, pageLink }) => {
   return (
     <Box
       borderColor="ghostVerse.green.base"
@@ -21,11 +17,10 @@ export const BudItem: FC<BudItemProps> = ({
       backdropFilter="blur(3px)"
       py={2}
       px={6}
-      whiteSpace="nowrap"
       textAlign="center"
       fontWeight="bold"
       fontSize="xl"
-      color="ghostVerse.green.base" 
+      color="ghostVerse.green.base"
       display="flex"
       width="fit-content"
     >

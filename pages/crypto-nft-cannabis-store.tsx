@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <HeaderMenu>
         <HeaderMenuButtons enabled={['auth']} />
       </HeaderMenu>
-      <HomeSectionTitle title="Tokenized cannabis store. Smoke and Earn!" />
+      <HomeSectionTitle title="Crypto & NFT - Cannabis Shop Phuket." />
       <Box display="flex" flexDirection="column">
         <Text
           as="h2"
@@ -28,9 +28,10 @@ const Home: NextPage = () => {
           p={4}
           mr="auto"
         >
-          We are Phuket&apos;s first tokenized weed shop. Cryptocurrency is used to
-          get promotion, cashback and to store a percentage of the shop&apos;s
-          profits and is then distributed to our members.
+          Smoke and Earn! We are Phuket&apos;s first tokenized weed shop.
+          Cryptocurrency is used to get promotion, cashback and to store a
+          percentage of the shop&apos;s profits and is then distributed to our
+          members.
         </Text>
         <Text
           as="h3"
@@ -50,9 +51,7 @@ const Home: NextPage = () => {
           </Text>
           discount on your order when you{' '}
           <Text ml={1} color="ghostVerse.green.base" as="span">
-            <Link href="/buy-weed-online-phuket">
-              pay in cryptocurrency
-            </Link>
+            <Link href="/buy-weed-online-phuket">pay in cryptocurrency</Link>
           </Text>
           .
         </Text>

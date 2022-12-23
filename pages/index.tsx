@@ -80,9 +80,7 @@ const Home: NextPage = () => {
           ml={{ base: '0', md: 'auto' }}
           mr={{ base: 'auto', md: '0' }}
         >
-          <Link href="/buy-weed-online-phuket">
-            Contact Us
-          </Link>
+          <Link href="/buy-weed-online-phuket">Contact Us</Link>
         </Text>
       </Box>
       <Box display="flex" flexDirection="column">
@@ -100,9 +98,9 @@ const Home: NextPage = () => {
           p={4}
           mr={50}
         >
-          We are Phuket&apos;s first tokenized weed shop. Cryptocurrency is used to
-          store a percentage of the shop&apos;s profits and is then distributed to
-          our members.
+          We are Phuket&apos;s first tokenized weed shop. Cryptocurrency is used
+          to store a percentage of the shop&apos;s profits and is then
+          distributed to our members.
         </Text>
         <Text
           display="inline-flex"
@@ -117,9 +115,7 @@ const Home: NextPage = () => {
           mb={2}
           mr="auto"
         >
-          <Link href="/tokenized-crypto-NFT-cannabis-weed-store">
-            Learn More
-          </Link>
+          <Link href="/crypto-nft-cannabis-store">Learn More</Link>
         </Text>
       </Box>
     </MainLayout>

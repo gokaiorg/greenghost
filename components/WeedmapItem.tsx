@@ -9,13 +9,7 @@ interface WeedmapItemProps {
 export const WeedmapItem: FC<WeedmapItemProps> = ({ title, points }) => {
   return (
     <Box>
-      <Text
-        as="h2"
-        color="white"
-        fontSize="xl"
-        fontWeight="black"
-        mb={3}
-      >
+      <Text as="h2" color="white" fontSize="xl" fontWeight="black" mb={3}>
         {title}
       </Text>
       <UnorderedList m={0} color="ghostVerse.green.base">

@@ -18,15 +18,11 @@ export const defaultMetaTags = {
 export const weedmap = [
   {
     title: 'Flowers',
-    points: [
-      'Grand Daddy Purple - 350THB',
-    ],
+    points: ['Grand Daddy Purple - 350THB'],
   },
   {
     title: 'Pre Rolled',
-    points: [
-      'Grand Daddy Purple - 400THB',
-    ],
+    points: ['Grand Daddy Purple - 400THB'],
   },
 ];
 
