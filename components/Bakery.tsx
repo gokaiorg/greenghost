@@ -1,5 +1,5 @@
 import { Box, SimpleGrid } from '@chakra-ui/react';
-import { BakeryItem } from './bakeryItem';
+import { BakeryItem } from './BakeryItem';
 import { bakery } from '../config/dappUi';
 
 export const Bakery = () => {
