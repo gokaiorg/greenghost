@@ -2,13 +2,17 @@ import { Box } from '@chakra-ui/react';
 import Link from 'next/link';
 import { FC } from 'react';
 
-interface BudItemProps {
+interface BakeryItemProps {
   name: string;
   price: string;
   pageLink: string;
 }
 
-export const BudItem: FC<BudItemProps> = ({ name, price, pageLink }) => {
+export const BakeryItem: FC<BakeryItemProps> = ({
+  name,
+  price,
+  pageLink,
+}) => {
   return (
     <Box
       borderColor="ghostVerse.green.base"
@@ -23,9 +27,8 @@ export const BudItem: FC<BudItemProps> = ({ name, price, pageLink }) => {
       color="ghostVerse.green.base"
       display="flex"
       width="fit-content"
-      whiteSpace={{ base: 'normal', md: 'nowrap' }}
     >
-      <Link href={pageLink}>
+      <Link href={pageLink} passHref>
         {name} - {price}THB
       </Link>
     </Box>

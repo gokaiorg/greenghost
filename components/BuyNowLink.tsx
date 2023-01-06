@@ -4,7 +4,6 @@ import Link from 'next/link';
 export const BuyNowLink = () => {
   return (
     <Text
-      display="inline-flex"
       color="ghostVerse.green.base"
       borderColor="ghostVerse.green.base"
       fontSize={40}
@@ -13,9 +12,11 @@ export const BuyNowLink = () => {
       backdropFilter="blur(3px)"
       py={2}
       px={6}
-      mb={2}
+      mb={10}
       mt="auto"
       mx="auto"
+      display="flex"
+      width="fit-content"
     >
       <Link href="/buy-weed-online-phuket">Buy Now</Link>
     </Text>

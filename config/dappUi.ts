@@ -24,6 +24,10 @@ export const weedmap = [
     title: 'Pre Rolled',
     points: ['Grand Daddy Purple - 400THB'],
   },
+  {
+    title: 'Bakery',
+    points: ['Chocolat Fondant - 200THB'],
+  },
 ];
 
 export const bud = [
@@ -39,9 +43,11 @@ export const preroll = [
     price: '400',
     pageLink: '/grand-daddy-purple',
   },
+];
+export const bakery = [
   {
-    name: 'Grand Daddy Purple MIXED - 0.25G',
-    price: '150',
-    pageLink: '/grand-daddy-purple',
+    name: 'Chocolate Fondant - 30G',
+    price: '200',
+    pageLink: '/buy-weed-online-phuket',
   },
 ];
