@@ -8,11 +8,7 @@ interface BakeryItemProps {
   pageLink: string;
 }
 
-export const BakeryItem: FC<BakeryItemProps> = ({
-  name,
-  price,
-  pageLink,
-}) => {
+export const BakeryItem: FC<BakeryItemProps> = ({ name, price, pageLink }) => {
   return (
     <Box
       borderColor="ghostVerse.green.base"
