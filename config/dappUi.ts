@@ -9,7 +9,7 @@ export const dappHostname = process.env.NEXT_PUBLIC_DAPP_HOST;
 export const defaultMetaTags = {
   title: 'Green Garden - Phuket Cannabis Shop ร้าน ขาย กัญชา.',
   description:
-    'The top marijuana from Thailand is chosen for you by our experts. Find out about our Sativa, Indica, pre-rolled joints, and the amazing universe of Green Garden.',
+    "Welcome to GreenGarden Dispensary, Phuket's premier destination for high-quality marijuana, weed, and ganja. Our dispensary offers a wide variety of locally-sourced and organic products, including flower, edibles, and accessories. Our experienced staff is always on hand to help you find the perfect product and answer any questions. Visit us today and discover the best selection of cannabis products in Phuket.",
   shortname: 'GreenGarden',
   image: `${dappHostname}/social.png`,
 };
@@ -26,7 +26,7 @@ export const weedmap = [
   },
   {
     title: 'Bakery',
-    points: ['Chocolat Fondant - 200THB'],
+    points: ['Brownie - 200THB'],
   },
 ];
 
@@ -46,8 +46,8 @@ export const preroll = [
 ];
 export const bakery = [
   {
-    name: 'Chocolate Fondant - 30G',
-    price: '200',
-    pageLink: '/buy-weed-online-phuket',
+    name: 'Brownie - 30G',
+    price: '250',
+    pageLink: '/space-cake-brownie',
   },
 ];

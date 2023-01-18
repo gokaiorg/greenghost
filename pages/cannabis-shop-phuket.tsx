@@ -9,7 +9,7 @@ import { BuyNowLink } from '../components/BuyNowLink';
 import { PreRoll } from '../components/PreRoll';
 import { Bakery } from '../components/Bakery';
 
-const Home: NextPage = () => {
+const CannabisShop: NextPage = () => {
   return (
     <MainLayout>
       <HeaderMenu>
@@ -40,4 +40,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default CannabisShop;

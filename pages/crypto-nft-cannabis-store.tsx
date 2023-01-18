@@ -6,7 +6,7 @@ import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 
-const Home: NextPage = () => {
+const CryptoNft: NextPage = () => {
   return (
     <MainLayout>
       <HeaderMenu>
@@ -110,4 +110,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default CryptoNft;

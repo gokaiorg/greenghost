@@ -7,7 +7,7 @@ import { Box } from '@chakra-ui/react';
 import { BuyNowLink } from '../components/BuyNowLink';
 import { GoToShopLink } from '../components/GoToShopLink';
 
-const Home: NextPage = () => {
+const GrandDaddyPurple: NextPage = () => {
   return (
     <MainLayout>
       <HeaderMenu>
@@ -56,4 +56,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default GrandDaddyPurple;

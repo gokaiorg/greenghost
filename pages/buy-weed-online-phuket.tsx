@@ -7,7 +7,7 @@ import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import { SocialMediaIcons } from '../components/SocialMediaIcons';
 
-const Home: NextPage = () => {
+const BuyWeed: NextPage = () => {
   return (
     <MainLayout>
       <HeaderMenu>
@@ -86,4 +86,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default BuyWeed;

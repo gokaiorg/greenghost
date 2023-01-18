@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <HeaderMenu>
         <HeaderMenuButtons enabled={['auth']} />
       </HeaderMenu>
-      <HomeSectionTitle title="Cannabis Shop ร้าน ขาย กัญชา." />
+      <HomeSectionTitle title="Green Garden Dispensary - Cannabis Shop ร้าน ขาย กัญชา." />
       <Box display="flex" flexDirection="column">
         <Text
           as="h2"
@@ -28,9 +28,13 @@ const Home: NextPage = () => {
           p={4}
           mr={50}
         >
-          The top marijuana from Thailand is chosen for you by our experts. Find
-          out about our Sativa, Indica, pre-rolled joints, and the amazing
-          universe of Green Garden.
+          Welcome to Green Garden Dispensary, Phuket&apos;s premier destination
+          for high-quality marijuana, weed, and ganja. Our dispensary offers a
+          wide variety of locally-sourced and organic products, including
+          flower, edibles, and accessories. Our experienced staff is always on
+          hand to help you find the perfect product and answer any questions.
+          Visit us today and discover the best selection of cannabis products in
+          Phuket.
         </Text>
         <Text
           display="inline-flex"
@@ -64,7 +68,7 @@ const Home: NextPage = () => {
           borderWidth={1}
           backdropFilter="blur(3px)"
         >
-          Where to buy and try the best ganja in Phuket NOW!?
+          Buy and try the best ganja in Phuket NOW!
         </Text>
         <Text
           display="inline-flex"
