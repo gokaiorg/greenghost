@@ -102,9 +102,9 @@ const Home: NextPage = () => {
           p={4}
           mr={50}
         >
-          We are Phuket&apos;s first tokenized weed shop. Cryptocurrency is used
-          to store a percentage of the shop&apos;s profits and is then
-          distributed to our members.
+          Experience the future of cannabis shopping with our tokenized shop.
+          Earn rewards and discounts using crypto payments. Secure and
+          transparent transactions with blockchain technology. Try it now!
         </Text>
         <Text
           display="inline-flex"
@@ -119,7 +119,7 @@ const Home: NextPage = () => {
           mb={2}
           mr="auto"
         >
-          <Link href="/crypto-nft-cannabis-store">Smoke and earn</Link>
+          <Link href="/tokenized-cannabis-store">Smoke and earn</Link>
         </Text>
       </Box>
     </MainLayout>

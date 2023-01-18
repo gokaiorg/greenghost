@@ -28,10 +28,26 @@ const CryptoNft: NextPage = () => {
           p={4}
           mr="auto"
         >
-          Smoke and Earn! We are Phuket&apos;s first tokenized weed shop.
-          Cryptocurrency is used to get promotion, cashback and to store a
-          percentage of the shop&apos;s profits and is then distributed to our
-          members.
+          We are excited to introduce our unique "smoke and earn" concept, where
+          customers can earn promotions and cashback when using crypto payments
+          in our shop. Our shop accepts multiple crypto currencies such as EGLD,
+          Bitcoin, Ethereum and more as a method of payment for our wide
+          selection of marijuana, weed and ganja products.
+          <br />
+          <br />
+          To get started, customers need to download a cryptocurrency wallet on
+          their phone and set it up to store the crypto currency they want to
+          use. Once the wallet is set up, customers can use it to make purchases
+          in our shop, and earn rewards and discounts on future purchases. Our
+          shop also utilizes blockchain technology to ensure that your
+          transactions are secure and transparent.
+          <br />
+          <br />
+          With our tokenized shop, customers will have control over their
+          transactions, and all transactions will be recorded on blockchain,
+          providing an additional layer of security. We believe that our
+          tokenized shop will provide a more convenient and secure experience
+          for our customers.
         </Text>
         <Text
           as="h3"
@@ -76,9 +92,9 @@ const CryptoNft: NextPage = () => {
             mx={1}
             color="ghostVerse.green.base"
             as="a"
-            href="https://get.maiar.com/referral/7nvae7kpo1"
+            href="https://xport.al/referral/7nvae7kpo1"
           >
-            Maiar Wallet
+            xPortal Wallet
           </Text>
           to make an EGLD payment.
         </Text>
