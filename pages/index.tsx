@@ -119,7 +119,7 @@ const Home: NextPage = () => {
           mb={2}
           mr="auto"
         >
-          <Link href="/crypto-nft-cannabis-store">Learn More</Link>
+          <Link href="/crypto-nft-cannabis-store">Smoke and earn</Link>
         </Text>
       </Box>
     </MainLayout>
