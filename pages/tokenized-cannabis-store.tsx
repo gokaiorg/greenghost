@@ -28,7 +28,7 @@ const CryptoNft: NextPage = () => {
           p={4}
           mr="auto"
         >
-          We are excited to introduce our unique "smoke and earn" concept, where
+          We are excited to introduce our unique smoke and earn concept, where
           customers can earn promotions and cashback when using crypto payments
           in our shop. Our shop accepts multiple crypto currencies such as EGLD,
           Bitcoin, Ethereum and more as a method of payment for our wide
