@@ -6,8 +6,13 @@ import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import { Box } from '@chakra-ui/react';
 import { BuyNowLink } from '../components/BuyNowLink';
 import { GoToShopLink } from '../components/GoToShopLink';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay } from 'swiper';
+
+import 'swiper/css';
 
 const SpaceCakeBrownie: NextPage = () => {
+  SwiperCore.use([Autoplay]);
   return (
     <MainLayout>
       <HeaderMenu>
@@ -15,13 +20,68 @@ const SpaceCakeBrownie: NextPage = () => {
       </HeaderMenu>
       <GoToShopLink />
       <HomeSectionTitle title="Brownie Space Cake - Cannabis Shop Phuket." />
+      <Swiper
+        spaceBetween={10}
+        slidesPerView={3}
+        autoplay={{
+          delay: 2000,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: false,
+        }}
+        loop
+      >
+        <SwiperSlide>
+          <Box
+            as="img"
+            src="/media/green-garden-dispensary-cannabis-shop-phuket-edible-brownie-og-kush-01.jpeg"
+            width={{ base: '100%' }}
+            height={{ base: '100%' }}
+            maxW="inherit"
+            alt="Green Garden Dispensary - Cannabis Shop Phuket - Brownie OG Kush"
+            title="Green Garden Dispensary - Cannabis Shop Phuket - Brownie OG Kush"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            as="img"
+            src="/media/green-garden-dispensary-cannabis-shop-phuket-edible-brownie-og-kush-02.jpeg"
+            width={{ base: '100%' }}
+            height={{ base: '100%' }}
+            maxW="inherit"
+            alt="Green Garden Dispensary - Cannabis Shop Phuket - Brownie OG Kush"
+            title="Green Garden Dispensary - Cannabis Shop Phuket - Brownie OG Kush"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            as="img"
+            src="/media/green-garden-dispensary-cannabis-shop-phuket-edible-brownie-og-kush-03.jpeg"
+            width={{ base: '100%' }}
+            height={{ base: '100%' }}
+            maxW="inherit"
+            alt="Green Garden Dispensary - Cannabis Shop Phuket - Brownie OG Kush"
+            title="Green Garden Dispensary - Cannabis Shop Phuket - Brownie OG Kush"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            as="img"
+            src="/media/green-garden-dispensary-cannabis-shop-phuket-edible-brownie-og-kush-04.jpeg"
+            width={{ base: '100%' }}
+            height={{ base: '100%' }}
+            maxW="inherit"
+            alt="Green Garden Dispensary - Cannabis Shop Phuket - Brownie OG Kush"
+            title="Green Garden Dispensary - Cannabis Shop Phuket - Brownie OG Kush"
+          />
+        </SwiperSlide>
+      </Swiper>
       <Box
         borderColor="ghostVerse.color2.base"
         bgColor="ghostVerse.dark.lighter"
         borderWidth={1}
         backdropFilter="blur(3px)"
         p={4}
-        mb={4}
+        my={4}
         display="inline-flex"
         flexDirection="column"
         fontSize={20}

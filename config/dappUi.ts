@@ -32,6 +32,11 @@ export const weedmap = [
 
 export const bud = [
   {
+    name: 'Acapulco Gold - 1G',
+    price: '250',
+    pageLink: '/acapulco-gold',
+  },
+  {
     name: 'Grand Daddy Purple - 1G',
     price: '350',
     pageLink: '/grand-daddy-purple',
@@ -39,9 +44,9 @@ export const bud = [
 ];
 export const preroll = [
   {
-    name: 'Grand Daddy Purple Pure - 1G',
-    price: '400',
-    pageLink: '/grand-daddy-purple',
+    name: 'Acapulco Gold Pure - 1G',
+    price: '300',
+    pageLink: '/acapulco-gold',
   },
 ];
 export const bakery = [

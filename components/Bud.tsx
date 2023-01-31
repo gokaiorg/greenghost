@@ -21,7 +21,7 @@ export const Bud = () => {
       >
         Buds
       </Box>
-      <SimpleGrid columns={{ lg: 4, md: 2, sm: 1 }} spacing={10}>
+      <SimpleGrid columns={{ base: 1 }} spacing={5}>
         {bud.map((budItem, index) => (
           <BudItem key={index} {...budItem} />
         ))}
