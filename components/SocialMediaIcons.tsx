@@ -6,7 +6,7 @@ export const SocialMediaIcons = () => {
     <Box display="flex" alignItems="center" gap={3}>
       <Box bgColor="black" borderRadius="100%">
         <SocialIcon
-          url="https://www.facebook.com/greengardencs"
+          url="https://www.facebook.com/greengardend"
           bgColor="#4cfd27"
           style={{ width: 60, height: 60 }}
         />
@@ -20,7 +20,14 @@ export const SocialMediaIcons = () => {
       </Box>
       <Box bgColor="black" borderRadius="100%">
         <SocialIcon
-          url="https://t.me/greengardencs"
+          url="https://t.me/greengardend"
+          bgColor="#4cfd27"
+          style={{ width: 60, height: 60 }}
+        />
+      </Box>
+      <Box bgColor="black" borderRadius="100%">
+        <SocialIcon
+          url="https://www.tiktok.com/@greengardend"
           bgColor="#4cfd27"
           style={{ width: 60, height: 60 }}
         />

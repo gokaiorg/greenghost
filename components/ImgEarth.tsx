@@ -17,12 +17,12 @@ export const ImgEarth = () => {
       >
         <Box
           as="img"
-          src="/media/ghostverse-earth-mr-ghost-mxghosts-nft-dao-multiversx-blockchain.png"
+          src="/media/green-garden-dispensary-tokenized-cannabis-shop-ghostverse-mxghosts-nft-dao.webp"
           width={{ base: '80px' }}
           height={{ base: '80px' }}
           maxW="inherit"
-          alt="Mr Ghost Earth - MultiversX NFT DAO - MxGhosts"
-          title="Mr Ghost Earth - MultiversX NFT DAO - MxGhosts"
+          alt="Green Garden Dispensary - Tokenized Cannabis Shop - GhostVerse MxGhosts NFT DAO"
+          title="Green Garden Dispensary - Tokenized Cannabis Shop - GhostVerse MxGhosts NFT DAO"
         />
       </motion.div>
     </Box>

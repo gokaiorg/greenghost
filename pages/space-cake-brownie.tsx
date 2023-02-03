@@ -33,7 +33,7 @@ const SpaceCakeBrownie: NextPage = () => {
         <SwiperSlide>
           <Box
             as="img"
-            src="/media/green-garden-dispensary-cannabis-shop-phuket-edible-brownie-og-kush-01.jpeg"
+            src="/media/green-garden-dispensary-cannabis-shop-phuket-edible-brownie-og-kush-01.webp"
             width={{ base: '100%' }}
             height={{ base: '100%' }}
             maxW="inherit"
@@ -44,7 +44,7 @@ const SpaceCakeBrownie: NextPage = () => {
         <SwiperSlide>
           <Box
             as="img"
-            src="/media/green-garden-dispensary-cannabis-shop-phuket-edible-brownie-og-kush-02.jpeg"
+            src="/media/green-garden-dispensary-cannabis-shop-phuket-edible-brownie-og-kush-02.webp"
             width={{ base: '100%' }}
             height={{ base: '100%' }}
             maxW="inherit"
@@ -55,7 +55,7 @@ const SpaceCakeBrownie: NextPage = () => {
         <SwiperSlide>
           <Box
             as="img"
-            src="/media/green-garden-dispensary-cannabis-shop-phuket-edible-brownie-og-kush-03.jpeg"
+            src="/media/green-garden-dispensary-cannabis-shop-phuket-edible-brownie-og-kush-03.webp"
             width={{ base: '100%' }}
             height={{ base: '100%' }}
             maxW="inherit"
@@ -66,7 +66,7 @@ const SpaceCakeBrownie: NextPage = () => {
         <SwiperSlide>
           <Box
             as="img"
-            src="/media/green-garden-dispensary-cannabis-shop-phuket-edible-brownie-og-kush-04.jpeg"
+            src="/media/green-garden-dispensary-cannabis-shop-phuket-edible-brownie-og-kush-04.webp"
             width={{ base: '100%' }}
             height={{ base: '100%' }}
             maxW="inherit"

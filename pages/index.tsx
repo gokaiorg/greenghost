@@ -119,7 +119,7 @@ const Home: NextPage = () => {
           mb={2}
           mr="auto"
         >
-          <Link href="/tokenized-cannabis-store">Smoke and earn</Link>
+          <Link href="/tokenized-cannabis-store">Relax and earn</Link>
         </Text>
       </Box>
     </MainLayout>

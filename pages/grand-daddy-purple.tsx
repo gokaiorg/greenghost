@@ -33,7 +33,7 @@ const GrandDaddyPurple: NextPage = () => {
         <SwiperSlide>
           <Box
             as="img"
-            src="/media/green-garden-dispensary-cannabis-shop-phuket-strain-grand-daddy-purple-01.jpeg"
+            src="/media/green-garden-dispensary-cannabis-shop-phuket-strain-grand-daddy-purple-01.webp"
             width={{ base: '100%' }}
             height={{ base: '100%' }}
             maxW="inherit"
@@ -44,7 +44,7 @@ const GrandDaddyPurple: NextPage = () => {
         <SwiperSlide>
           <Box
             as="img"
-            src="/media/green-garden-dispensary-cannabis-shop-phuket-strain-grand-daddy-purple-02.jpeg"
+            src="/media/green-garden-dispensary-cannabis-shop-phuket-strain-grand-daddy-purple-02.webp"
             width={{ base: '100%' }}
             height={{ base: '100%' }}
             maxW="inherit"
@@ -55,7 +55,7 @@ const GrandDaddyPurple: NextPage = () => {
         <SwiperSlide>
           <Box
             as="img"
-            src="/media/green-garden-dispensary-cannabis-shop-phuket-strain-grand-daddy-purple-03.jpeg"
+            src="/media/green-garden-dispensary-cannabis-shop-phuket-strain-grand-daddy-purple-03.webp"
             width={{ base: '100%' }}
             height={{ base: '100%' }}
             maxW="inherit"
