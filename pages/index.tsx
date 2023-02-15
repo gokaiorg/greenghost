@@ -29,9 +29,9 @@ const Home: NextPage = () => {
           mr={50}
         >
           Welcome to Green Garden Dispensary, Phuket&apos;s premier destination
-          for high-quality marijuana, weed, and ganja. Our dispensary offers a
+          for high-quality marijuana, weed, and ganja. Our cannabis shop in Phuket offers a
           wide variety of locally-sourced and organic products, including
-          flower, edibles, and accessories. Our experienced staff is always on
+          flowers, edibles, and accessories. Our experienced staff is always on
           hand to help you find the perfect product and answer any questions.
           Visit us today and discover the best selection of cannabis products in
           Phuket.

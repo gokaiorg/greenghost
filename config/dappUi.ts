@@ -9,7 +9,7 @@ export const dappHostname = process.env.NEXT_PUBLIC_DAPP_HOST;
 export const defaultMetaTags = {
   title: 'Green Garden Dispensary - Phuket Cannabis Shop ร้าน ขาย กัญชา.',
   description:
-    "Welcome to GreenGarden Dispensary, Phuket's premier destination for high-quality marijuana, weed, and ganja. Our dispensary offers a wide variety of locally-sourced and organic products, including flower, edibles, and accessories. Our experienced staff is always on hand to help you find the perfect product and answer any questions. Visit us today and discover the best selection of cannabis products in Phuket.",
+    "Green Garden Dispensary is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories.",
   shortname: 'GreenGarden',
   image: `${dappHostname}/social.png`,
 };
