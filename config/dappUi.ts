@@ -32,6 +32,16 @@ export const weedmap = [
 
 export const bud = [
   {
+    name: 'Runtz',
+    price: '...',
+    pageLink: '/runtz',
+  },
+  {
+    name: 'White Runtz',
+    price: '...',
+    pageLink: '/white-runtz',
+  },
+  {
     name: 'Banana Kush',
     price: '...',
     pageLink: '/banana-kush',
@@ -47,9 +57,14 @@ export const bud = [
     pageLink: '/og-kush',
   },
   {
-    name: 'Gelato',
+    name: 'Gelato Dream',
     price: '...',
-    pageLink: '/gelato',
+    pageLink: '/gelato-dream',
+  },
+  {
+    name: 'Green Gelato',
+    price: '...',
+    pageLink: '/green-gelato',
   },
   {
     name: 'Mimosa',

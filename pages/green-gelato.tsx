@@ -11,14 +11,14 @@ import SwiperCore, { Autoplay } from 'swiper';
 import 'swiper/css';
 import { ImgPercent } from '../components/ImgPercent';
 
-const Gelato: NextPage = () => {
+const GreenGelato: NextPage = () => {
   SwiperCore.use([Autoplay]);
   return (
     <MainLayout>
       <HeaderMenu>
         <HeaderMenuButtons enabled={['auth']} />
       </HeaderMenu>
-      <HomeSectionTitle title="Gelato Strain." />
+      <HomeSectionTitle title="Green Gelato Strain." />
       <Box
         display="flex"
         flexDirection={{ base: 'column', md: 'row' }}
@@ -64,12 +64,12 @@ const Gelato: NextPage = () => {
         <Box maxWidth={{ base: '100%', lg: '50%' }}>
           <Box
             as="img"
-            src="/media/green-garden-dispensary-cannabis-shop-phuket-strain-gelato-01.webp"
+            src="/media/green-garden-dispensary-cannabis-shop-phuket-strain-green-gelato-01.webp"
             width={{ base: '100%' }}
             height={{ base: '100%' }}
             maxW="inherit"
-            alt="Green Garden Dispensary - Cannabis Shop Phuket - Bud Gelato"
-            title="Green Garden Dispensary - Cannabis Shop Phuket - Bud Gelato"
+            alt="Green Garden Dispensary - Cannabis Shop Phuket - Bud Green Gelato"
+            title="Green Garden Dispensary - Cannabis Shop Phuket - Bud Green Gelato"
           />
         </Box>
       </Swiper>
@@ -100,16 +100,16 @@ const Gelato: NextPage = () => {
         flexDirection="column"
         fontSize={20}
       >
-        Gelato, also known as "Larry Bird" and "Gelato #42," is a popular hybrid
-        cannabis strain that offers the best of both worlds with its balanced
-        indica and sativa genetics. This strain is a result of crossing Sunset
-        Sherbet and Thin Mint Girl Scout Cookies, two renowned strains that
-        contribute to Gelato's unique characteristics.
+        Green Gelato is a popular hybrid cannabis strain that offers the best of
+        both worlds with its balanced indica and sativa genetics. This strain is
+        a result of crossing Sunset Sherbet and Thin Mint Girl Scout Cookies,
+        two renowned strains that contribute to Green Gelato's unique
+        characteristics.
         <br />
         <br />
-        Consumers who have smoked Gelato report that the strain's effects come
-        on quickly, inducing a euphoric high accompanied by strong feelings of
-        relaxation. This strain's balanced effects make it ideal for those
+        Consumers who have smoked Green Gelato report that the strain's effects
+        come on quickly, inducing a euphoric high accompanied by strong feelings
+        of relaxation. This strain's balanced effects make it ideal for those
         seeking relief from pain, fatigue, and insomnia, while still remaining
         mentally stimulated and productive.
       </Box>
@@ -121,7 +121,7 @@ const Gelato: NextPage = () => {
         mx={4}
         mb={10}
         target="_blank"
-        href="https://www.leafly.com/strains/gelato"
+        href="https://www.leafly.com/strains/green-gelato"
       >
         Source
       </Box>
@@ -130,4 +130,4 @@ const Gelato: NextPage = () => {
   );
 };
 
-export default Gelato;
+export default GreenGelato;
