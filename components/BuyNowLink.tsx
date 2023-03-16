@@ -18,7 +18,7 @@ export const BuyNowLink = () => {
       display="flex"
       width="fit-content"
     >
-      <Link href="/buy-weed-online-phuket">Buy Now</Link>
+      <Link href="/contact-us-buy-weed-online">Buy Now</Link>
     </Text>
   );
 };
