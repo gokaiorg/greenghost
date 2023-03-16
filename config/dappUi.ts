@@ -32,89 +32,89 @@ export const weedmap = [
 
 export const bud = [
   {
+    name: 'OG Poison',
+    price: '250',
+    pageLink: '/og-poison',
+  },
+  {
     name: 'Runtz',
-    price: '...',
+    price: '250',
     pageLink: '/runtz',
   },
   {
+    name: 'Green Gelato',
+    price: '300',
+    pageLink: '/green-gelato',
+  },
+  {
+    name: 'Gelato Dream',
+    price: '350',
+    pageLink: '/gelato-dream',
+  },
+  {
     name: 'White Runtz',
-    price: '...',
+    price: '350',
     pageLink: '/white-runtz',
   },
   {
     name: 'Banana Kush',
-    price: '...',
+    price: '400',
     pageLink: '/banana-kush',
   },
   {
     name: 'Jack Herer',
-    price: '...',
+    price: '450',
     pageLink: '/jack-herer',
   },
   {
-    name: 'OG Kush',
-    price: '...',
-    pageLink: '/og-kush',
-  },
-  {
-    name: 'Gelato Dream',
-    price: '...',
-    pageLink: '/gelato-dream',
-  },
-  {
-    name: 'Green Gelato',
-    price: '...',
-    pageLink: '/green-gelato',
-  },
-  {
-    name: 'Mimosa',
-    price: '...',
-    pageLink: '/mimosa',
-  },
-  {
-    name: 'Mandarin Cookies',
-    price: '...',
-    pageLink: '/mandarin-cookies',
+    name: 'Chem Dog',
+    price: '600',
+    pageLink: '/chem-dog',
   },
   {
     name: 'Moon Fruit',
-    price: '...',
+    price: '600',
     pageLink: '/moon-fruit',
   },
   {
-    name: 'Lemon Berry Candy',
-    price: '...',
-    pageLink: '/lemon-berry-candy',
+    name: 'Banana Daddy',
+    price: '650',
+    pageLink: '/banana-daddy',
+  },
+  {
+    name: 'Orange Velvet',
+    price: '700',
+    pageLink: '/orange-velvet',
   },
   {
     name: 'Platinum Punch',
-    price: '...',
+    price: '750',
     pageLink: '/platinum-punch',
   },
   {
+    name: 'Lemon Berry Candy',
+    price: '800',
+    pageLink: '/lemon-berry-candy',
+  },
+  {
+    name: 'Mandarin Cookies',
+    price: '800',
+    pageLink: '/mandarin-cookies',
+  },
+  {
+    name: 'Mimosa',
+    price: '850',
+    pageLink: '/mimosa',
+  },
+  {
     name: 'Black Chery Punch',
-    price: '...',
+    price: '900',
     pageLink: '/black-cherry-punch',
   },
   {
     name: 'Snoop Punch',
-    price: '...',
+    price: '900',
     pageLink: '/snoop-punch',
-  },
-  {
-    name: 'Chem Dog',
-    price: '...',
-    pageLink: '/chem-dog',
-  },
-  {
-    name: 'Orange Velvet',
-    price: '...',
-    pageLink: '/orange-velvet',
-  },
-  {
-    name: 'Banana Daddy',
-    price: '...',
-    pageLink: '/banana-daddy',
   },
 ];
 export const preroll = [
