@@ -22,10 +22,19 @@ export const Bud = () => {
         Buds 1G
       </Box>
       <SimpleGrid
-        gridTemplateRows="repeat(6, 50px)"
+        gridTemplateRows={{
+          base: 'repeat(18, 50px)',
+          md: 'repeat(9, 50px)',
+          lg: 'repeat(6, 50px)',
+        }}
         gridAutoFlow="column"
-        gridTemplateColumns="repeat(3, 33%)"
+        gridTemplateColumns={{
+          base: 'repeat(1, 100%)',
+          md: 'repeat(2, 50%)',
+          lg: 'repeat(3, 33%)',
+        }}
         gridGap={5}
+        minChildWidth="350px"
       >
         {bud.map((budItem, index) => (
           <BudItem key={index} {...budItem} />

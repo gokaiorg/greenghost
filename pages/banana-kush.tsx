@@ -64,7 +64,7 @@ const BananaKush: NextPage = () => {
         <Box maxWidth={{ base: '100%', lg: '50%' }}>
           <Box
             as="img"
-            src="/media/green-garden-dispensary-cannabis-shop-phuket-strain-gelato-01.webp"
+            src="/media/green-garden-dispensary-cannabis-shop-phuket-strain-banana-kush-01.webp"
             width={{ base: '100%' }}
             height={{ base: '100%' }}
             maxW="inherit"

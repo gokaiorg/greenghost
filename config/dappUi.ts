@@ -52,9 +52,9 @@ export const bud = [
     pageLink: '/gelato',
   },
   {
-    name: 'Mimosa Orange Punch',
+    name: 'Mimosa',
     price: '...',
-    pageLink: '/mimosa-orange-punch',
+    pageLink: '/mimosa',
   },
   {
     name: 'Mandarin Cookies',

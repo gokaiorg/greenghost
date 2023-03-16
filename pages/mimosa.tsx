@@ -11,14 +11,14 @@ import SwiperCore, { Autoplay } from 'swiper';
 import 'swiper/css';
 import { ImgPercent } from '../components/ImgPercent';
 
-const MimosaOrangePunch: NextPage = () => {
+const Mimosa: NextPage = () => {
   SwiperCore.use([Autoplay]);
   return (
     <MainLayout>
       <HeaderMenu>
         <HeaderMenuButtons enabled={['auth']} />
       </HeaderMenu>
-      <HomeSectionTitle title="Mimosa Orange Punch Strain." />
+      <HomeSectionTitle title="Mimosa Strain." />
       <Box
         display="flex"
         flexDirection={{ base: 'column', md: 'row' }}
@@ -71,12 +71,12 @@ const MimosaOrangePunch: NextPage = () => {
         <Box maxWidth={{ base: '100%', lg: '50%' }}>
           <Box
             as="img"
-            src="/media/green-garden-dispensary-cannabis-shop-phuket-strain-mimosa-orange-punch-01.webp"
+            src="/media/green-garden-dispensary-cannabis-shop-phuket-strain-mimosa-01.webp"
             width={{ base: '100%' }}
             height={{ base: '100%' }}
             maxW="inherit"
-            alt="Green Garden Dispensary - Cannabis Shop Phuket - Bud Mimosa Orange Punch"
-            title="Green Garden Dispensary - Cannabis Shop Phuket - Bud Mimosa Orange Punch"
+            alt="Green Garden Dispensary - Cannabis Shop Phuket - Bud Mimosa"
+            title="Green Garden Dispensary - Cannabis Shop Phuket - Bud Mimosa"
           />
         </Box>
       </Swiper>
@@ -140,4 +140,4 @@ const MimosaOrangePunch: NextPage = () => {
   );
 };
 
-export default MimosaOrangePunch;
+export default Mimosa;

@@ -110,7 +110,9 @@ const BuyWeed: NextPage = () => {
         <Text>
           Committed to local values,{' '}
           <Link href="/cannabis-shop-phuket">
-            <Box display="inline-block" color="ghostVerse.green.base">our products</Box>
+            <Box display="inline-block" color="ghostVerse.green.base">
+              our products
+            </Box>
           </Link>{' '}
           are mainly sourced from Thailand, organic, and carefully selected by
           our experts.
