@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { Box } from '@chakra-ui/react';
+import { Box, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
@@ -15,10 +15,73 @@ const CannabisShop: NextPage = () => {
       <HeaderMenu>
         <HeaderMenuButtons enabled={['auth']} />
       </HeaderMenu>
-      <HomeSectionTitle title="Buy weed online - Cannabis Shop Phuket." />
-      <Bud />
-      <PreRoll />
-      <Bakery />
+      <HomeSectionTitle title="Cannabis Shop - Strains in Phuket." />
+      <Tabs variant="unstyled">
+        <TabList>
+          <Tab
+            bgColor="ghostVerse.dark.lighter"
+            py={2}
+            px={6}
+            textAlign="center"
+            fontWeight="bold"
+            fontSize="lg"
+            color="ghostVerse.green.base"
+            borderColor="black"
+            borderBottomWidth={2}
+            borderTopWidth={0}
+            borderLeftWidth={0}
+            borderRightWidth={0}
+            _selected={{ borderColor: '#4cfd27' }}
+          >
+            Buds
+          </Tab>
+          <Tab
+            bgColor="ghostVerse.dark.lighter"
+            py={2}
+            px={6}
+            textAlign="center"
+            fontWeight="bold"
+            fontSize="lg"
+            color="ghostVerse.green.base"
+            borderColor="black"
+            borderBottomWidth={2}
+            borderTopWidth={0}
+            borderLeftWidth={0}
+            borderRightWidth={0}
+            _selected={{ borderColor: '#4cfd27' }}
+          >
+            Pre Rolled
+          </Tab>
+          <Tab
+            bgColor="ghostVerse.dark.lighter"
+            py={2}
+            px={6}
+            textAlign="center"
+            fontWeight="bold"
+            fontSize="lg"
+            color="ghostVerse.green.base"
+            borderColor="black"
+            borderBottomWidth={2}
+            borderTopWidth={0}
+            borderLeftWidth={0}
+            borderRightWidth={0}
+            _selected={{ borderColor: '#4cfd27' }}
+          >
+            Edibles
+          </Tab>
+        </TabList>
+        <TabPanels>
+          <TabPanel px={0}>
+            <Bud />
+          </TabPanel>
+          <TabPanel px={0}>
+            <PreRoll />
+          </TabPanel>
+          <TabPanel px={0}>
+            <Bakery />
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
       <Box
         as="h3"
         borderColor="ghostVerse.color2.base"

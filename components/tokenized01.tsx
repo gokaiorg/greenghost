@@ -1,0 +1,97 @@
+import { Box, Text } from '@chakra-ui/react';
+import { ImgDollar } from './ImgDollar';
+import { ImgPercent } from './ImgPercent';
+import { ImgQuestion } from './ImgQuestion';
+
+export const Tokenized01 = () => {
+  return (
+    <Box
+      as="div"
+      color="white"
+      fontSize={{ base: 'xl', md: 'lg' }}
+      borderColor="ghostVerse.color2.base"
+      bgColor="ghostVerse.dark.lighter"
+      borderWidth={1}
+      backdropFilter="blur(3px)"
+      mt={5}
+      mb={6}
+      p={4}
+      mr="auto"
+    >
+      <Text as="h2" fontWeight="black" fontSize="2xl">
+        Join the new generation in love for weed, art and crypto.
+      </Text>
+      <br />
+      Green Garden is a contributor to the{' '}
+      <Text color="ghostVerse.green.base" as="a" href="https://ghostverse.org/">
+        GhostVerse DAO
+      </Text>
+      , providing exclusive privileges to NFT holders as members of the Ghost
+      Clan.
+      <br />
+      <br />
+      MxGhosts pixel and voxel NFTs holders receive a 20
+      <ImgPercent /> discount and{' '}
+      <Text
+        color="ghostVerse.green.base"
+        as="a"
+        target="_blank"
+        href="https://linktr.ee/elrondbuds"
+      >
+        <ImgDollar />
+        EBUD
+      </Text>{' '}
+      cashback on all orders, in addition to earning{' '}
+      <Text
+        color="ghostVerse.green.base"
+        as="a"
+        href="https://ghostverse.org/play-and-earn"
+      >
+        passive income in <ImgDollar />
+        EGLD
+      </Text>{' '}
+      on{' '}
+      <Text
+        color="ghostVerse.green.base"
+        as="a"
+        target="_blank"
+        href="https://multiversx.com/"
+      >
+        MultiversX blockchain
+      </Text>
+      .
+      <br />
+      <br />
+      <Text as="h2" fontWeight="black" fontSize="2xl">
+        Looking to get your hands on a unique Mr. Ghost NFT
+        <ImgQuestion />
+      </Text>
+      <br />
+      Head over to{' '}
+      <Text
+        color="ghostVerse.green.base"
+        as="a"
+        href="https://ghostverse.org/mxghosts"
+      >
+        MxGhosts
+      </Text>{' '}
+      and keep an eye out for our upcoming public sales or purchase one on the
+      secondary market. Make sure to follow our links to avoid scams.
+      <br />
+      <br />
+      <Text as="h2" fontWeight="black" fontSize="2xl">
+        New to the world of blockchain and NFTs
+        <ImgQuestion />
+      </Text>
+      <br />
+      <Text
+        color="ghostVerse.green.base"
+        as="a"
+        href="https://xport.al/referral/7nvae7kpo1"
+      >
+        Install xPortal Wallet on your phone
+      </Text>{' '}
+      and join the revolution.
+    </Box>
+  );
+};

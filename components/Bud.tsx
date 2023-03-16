@@ -19,9 +19,14 @@ export const Bud = () => {
         flexDirection="column"
         fontSize={30}
       >
-        Buds
+        Buds 1G
       </Box>
-      <SimpleGrid columns={{ base: 1 }} spacing={5}>
+      <SimpleGrid
+        gridTemplateRows="repeat(6, 50px)"
+        gridAutoFlow="column"
+        gridTemplateColumns="repeat(3, 33%)"
+        gridGap={5}
+      >
         {bud.map((budItem, index) => (
           <BudItem key={index} {...budItem} />
         ))}

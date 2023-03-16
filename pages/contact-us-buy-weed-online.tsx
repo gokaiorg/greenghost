@@ -13,7 +13,7 @@ const BuyWeed: NextPage = () => {
       <HeaderMenu>
         <HeaderMenuButtons enabled={['auth']} />
       </HeaderMenu>
-      <HomeSectionTitle title="Buy weed online - Phuket delivery - Contact us and get your strain now." />
+      <HomeSectionTitle title="Contact us - Buy weed online." />
       <Box display="flex" flexDirection="column">
         <Text
           as="h2"

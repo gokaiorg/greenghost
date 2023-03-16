@@ -10,24 +10,24 @@ interface BudItemProps {
 
 export const BudItem: FC<BudItemProps> = ({ name, price, pageLink }) => {
   return (
-    <Box
-      borderColor="ghostVerse.green.base"
-      borderWidth={1}
-      bgColor="ghostVerse.dark.lighter"
-      backdropFilter="blur(3px)"
-      py={2}
-      px={6}
-      textAlign="center"
-      fontWeight="bold"
-      fontSize="xl"
-      color="ghostVerse.green.base"
-      display="flex"
-      width="fit-content"
-      whiteSpace={{ base: 'normal', md: 'nowrap' }}
-    >
-      <Link href={pageLink}>
-        {name} - {price}THB
-      </Link>
-    </Box>
+    <Link href={pageLink}>
+      <Box
+        borderColor="ghostVerse.green.base"
+        borderWidth={1}
+        bgColor="ghostVerse.dark.lighter"
+        backdropFilter="blur(3px)"
+        py={2}
+        px={6}
+        textAlign="center"
+        fontWeight="bold"
+        fontSize="lg"
+        color="ghostVerse.green.base"
+        display="flex"
+        width="100%"
+        whiteSpace={{ base: 'normal', md: 'nowrap' }}
+      >
+        {name} <Box marginLeft="auto">{price}THB</Box>
+      </Box>
+    </Link>
   );
 };

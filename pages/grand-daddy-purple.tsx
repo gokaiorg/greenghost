@@ -19,7 +19,7 @@ const GrandDaddyPurple: NextPage = () => {
         <HeaderMenuButtons enabled={['auth']} />
       </HeaderMenu>
       <GoToShopLink />
-      <HomeSectionTitle title="Grand Daddy Purple - Cannabis Shop Phuket." />
+      <HomeSectionTitle title="Grand Daddy Purple - Cannabis Shop Phuket. [Out of stock]" />
       <Swiper
         spaceBetween={10}
         slidesPerView={3}

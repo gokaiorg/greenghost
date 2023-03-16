@@ -9,7 +9,7 @@ export const dappHostname = process.env.NEXT_PUBLIC_DAPP_HOST;
 export const defaultMetaTags = {
   title: 'Green Garden Dispensary - Phuket Cannabis Shop ร้าน ขาย กัญชา.',
   description:
-    "Green Garden Dispensary is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories.",
+    'Green Garden Dispensary is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories.',
   shortname: 'GreenGarden',
   image: `${dappHostname}/social.png`,
 };
@@ -32,19 +32,79 @@ export const weedmap = [
 
 export const bud = [
   {
-    name: 'Acapulco Gold - 1G',
-    price: '250',
-    pageLink: '/acapulco-gold',
+    name: 'Banana Kush',
+    price: '...',
+    pageLink: '/banana-kush',
   },
   {
-    name: 'Grand Daddy Purple - 1G',
-    price: '350',
-    pageLink: '/grand-daddy-purple',
+    name: 'Jack Herer',
+    price: '...',
+    pageLink: '/jack-herer',
+  },
+  {
+    name: 'OG Kush',
+    price: '...',
+    pageLink: '/og-kush',
+  },
+  {
+    name: 'Gelato',
+    price: '...',
+    pageLink: '/gelato',
+  },
+  {
+    name: 'Mimosa Orange Punch',
+    price: '...',
+    pageLink: '/mimosa-orange-punch',
+  },
+  {
+    name: 'Mandarin Cookies',
+    price: '...',
+    pageLink: '/mandarin-cookies',
+  },
+  {
+    name: 'Moon Fruit',
+    price: '...',
+    pageLink: '/moon-fruit',
+  },
+  {
+    name: 'Lemon Berry Candy',
+    price: '...',
+    pageLink: '/lemon-berry-candy',
+  },
+  {
+    name: 'Platinum Punch',
+    price: '...',
+    pageLink: '/platinum-punch',
+  },
+  {
+    name: 'Black Chery Punch',
+    price: '...',
+    pageLink: '/black-cherry-punch',
+  },
+  {
+    name: 'Snoop Punch',
+    price: '...',
+    pageLink: '/snoop-punch',
+  },
+  {
+    name: 'Chem Dog',
+    price: '...',
+    pageLink: '/chem-dog',
+  },
+  {
+    name: 'Orange Velvet',
+    price: '...',
+    pageLink: '/orange-velvet',
+  },
+  {
+    name: 'Banana Daddy',
+    price: '...',
+    pageLink: '/banana-daddy',
   },
 ];
 export const preroll = [
   {
-    name: 'Acapulco Gold Pure - 1G',
+    name: 'Poison',
     price: '300',
     pageLink: '/acapulco-gold',
   },

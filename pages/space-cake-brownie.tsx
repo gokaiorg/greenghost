@@ -5,7 +5,6 @@ import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import { Box } from '@chakra-ui/react';
 import { BuyNowLink } from '../components/BuyNowLink';
-import { GoToShopLink } from '../components/GoToShopLink';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay } from 'swiper';
 
@@ -18,7 +17,6 @@ const SpaceCakeBrownie: NextPage = () => {
       <HeaderMenu>
         <HeaderMenuButtons enabled={['auth']} />
       </HeaderMenu>
-      <GoToShopLink />
       <HomeSectionTitle title="Brownie Space Cake - Cannabis Shop Phuket." />
       <Swiper
         spaceBetween={10}

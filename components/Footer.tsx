@@ -34,7 +34,7 @@ export const Footer = () => {
             Gokai Labs
           </Text>
         </Box>
-        <Box
+        {/* <Box
           position="absolute"
           zIndex={0}
           width="100%"
@@ -50,7 +50,7 @@ export const Footer = () => {
             width="2048"
             height="auto"
           />
-        </Box>
+        </Box> */}
       </Container>
     </Box>
   );

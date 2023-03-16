@@ -21,11 +21,12 @@ export const PreRoll = () => {
       >
         Pre Rolled
       </Box>
-      <SimpleGrid columns={{ base: 1 }} spacing={5}>
+      Coming Soon
+      {/* <SimpleGrid columns={{ base: 1 }} spacing={5}>
         {preroll.map((prerollItem, index) => (
           <PreRollItem key={index} {...prerollItem} />
         ))}
-      </SimpleGrid>
+      </SimpleGrid> */}
     </Box>
   );
 };
