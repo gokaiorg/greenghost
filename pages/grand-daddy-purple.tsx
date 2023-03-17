@@ -73,7 +73,8 @@ const GrandDaddyPurple: NextPage = () => {
         my={4}
         display="inline-flex"
         flexDirection="column"
-        fontSize={20}
+        fontSize="3xl"
+        fontFamily="vt323"
       >
         Indulge in the sweet and potent Grand Daddy Purple (GDP) - a beloved
         cannabis strain known for its distinct grape and berry aroma. With high

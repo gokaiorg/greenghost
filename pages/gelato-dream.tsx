@@ -22,9 +22,10 @@ const GelatoDream: NextPage = () => {
       <Box
         display="flex"
         flexDirection={{ base: 'column', md: 'row' }}
-        fontSize="xl"
+        fontSize="3xl"
         marginBottom={4}
         marginTop={-4}
+        fontFamily="vt323"
       >
         <Box marginRight={4} color="ghostVerse.green.base">
           Sativa Dominant Hybrid
@@ -76,9 +77,10 @@ const GelatoDream: NextPage = () => {
       <Box
         display="flex"
         flexDirection={{ base: 'column', md: 'row' }}
-        fontSize="xl"
+        fontSize="3xl"
         marginBottom={4}
         marginTop={4}
+        fontFamily="vt323"
       >
         <Box marginRight={4}>
           <Box as="h2" color="ghostVerse.green.base">
@@ -98,7 +100,8 @@ const GelatoDream: NextPage = () => {
         my={4}
         display="inline-flex"
         flexDirection="column"
-        fontSize={20}
+        fontSize="3xl"
+        fontFamily="vt323"
       >
         With the combination of the original Gelato #41 and a male Loud Dream,
         Gelato Dream was created, and it's a strain that has been improved upon.

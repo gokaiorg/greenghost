@@ -22,9 +22,10 @@ const OrangeVelvet: NextPage = () => {
       <Box
         display="flex"
         flexDirection={{ base: 'column', md: 'row' }}
-        fontSize="xl"
+        fontSize="3xl"
         marginBottom={4}
         marginTop={-4}
+        fontFamily="vt323"
       >
         <Box marginRight={4} color="ghostVerse.green.base">
           Hybrid
@@ -76,9 +77,10 @@ const OrangeVelvet: NextPage = () => {
       <Box
         display="flex"
         flexDirection={{ base: 'column', md: 'row' }}
-        fontSize="xl"
+        fontSize="3xl"
         marginBottom={4}
         marginTop={4}
+        fontFamily="vt323"
       >
         <Box marginRight={4}>
           <Box as="h2" color="ghostVerse.green.base">
@@ -98,7 +100,8 @@ const OrangeVelvet: NextPage = () => {
         my={4}
         display="inline-flex"
         flexDirection="column"
-        fontSize={20}
+        fontSize="3xl"
+        fontFamily="vt323"
       >
         Looking for a unique strain that tastes and smells like an Orange
         Dreamsicle? Look no further than Orange Velvet, a rare gem created by

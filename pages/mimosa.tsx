@@ -22,9 +22,10 @@ const Mimosa: NextPage = () => {
       <Box
         display="flex"
         flexDirection={{ base: 'column', md: 'row' }}
-        fontSize="xl"
+        fontSize="3xl"
         marginBottom={4}
         marginTop={-4}
+        fontFamily="vt323"
       >
         <Box marginRight={4} color="ghostVerse.green.base">
           Hybrid
@@ -83,9 +84,10 @@ const Mimosa: NextPage = () => {
       <Box
         display="flex"
         flexDirection={{ base: 'column', md: 'row' }}
-        fontSize="xl"
+        fontSize="3xl"
         marginBottom={4}
         marginTop={4}
+        fontFamily="vt323"
       >
         <Box marginRight={4}>
           <Box as="h2" color="ghostVerse.green.base">
@@ -105,7 +107,8 @@ const Mimosa: NextPage = () => {
         my={4}
         display="inline-flex"
         flexDirection="column"
-        fontSize={20}
+        fontSize="3xl"
+        fontFamily="vt323"
       >
         Mimosa, also known as "Purple Mimosa," is a popular hybrid cannabis
         strain that offers a balanced high and a delicious taste profile. This

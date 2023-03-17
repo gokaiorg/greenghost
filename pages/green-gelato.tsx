@@ -22,9 +22,10 @@ const GreenGelato: NextPage = () => {
       <Box
         display="flex"
         flexDirection={{ base: 'column', md: 'row' }}
-        fontSize="xl"
+        fontSize="3xl"
         marginBottom={4}
         marginTop={-4}
+        fontFamily="vt323"
       >
         <Box marginRight={4} color="ghostVerse.green.base">
           Indica Dominant Hybrid
@@ -76,9 +77,10 @@ const GreenGelato: NextPage = () => {
       <Box
         display="flex"
         flexDirection={{ base: 'column', md: 'row' }}
-        fontSize="xl"
+        fontSize="3xl"
         marginBottom={4}
         marginTop={4}
+        fontFamily="vt323"
       >
         <Box marginRight={4}>
           <Box as="h2" color="ghostVerse.green.base">
@@ -98,7 +100,8 @@ const GreenGelato: NextPage = () => {
         my={4}
         display="inline-flex"
         flexDirection="column"
-        fontSize={20}
+        fontSize="3xl"
+        fontFamily="vt323"
       >
         Green Gelato is a popular hybrid cannabis strain that offers the best of
         both worlds with its balanced indica and sativa genetics. This strain is

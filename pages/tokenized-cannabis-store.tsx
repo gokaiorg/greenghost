@@ -16,7 +16,7 @@ const CryptoNft: NextPage = () => {
       </HeaderMenu>
       <HomeSectionTitle title="Relax & Earn - Tokenized Cannabis Shop." />
       <Tabs variant="unstyled">
-        <TabList>
+        <TabList overflowX={{ base: 'scroll', md: 'inherit' }}>
           <Tab
             bgColor="ghostVerse.dark.lighter"
             py={2}

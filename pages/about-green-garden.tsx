@@ -5,7 +5,6 @@ import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
-import { SocialMediaIcons } from '../components/SocialMediaIcons';
 import { ImgQuestion } from '../components/ImgQuestion';
 
 const BuyWeed: NextPage = () => {
@@ -20,7 +19,8 @@ const BuyWeed: NextPage = () => {
         flexDirection="column"
         as="div"
         color="white"
-        fontSize={{ base: 'xl', md: 'lg' }}
+        fontSize={{ base: '3xl' }}
+        fontFamily="vt323"
         borderColor="ghostVerse.color2.base"
         bgColor="ghostVerse.dark.lighter"
         borderWidth={1}
@@ -32,7 +32,7 @@ const BuyWeed: NextPage = () => {
         <Text
           as="h2"
           color="white"
-          fontSize={{ base: 'xl', md: 'lg' }}
+          fontSize={{ base: '4xl' }}
           fontWeight="black"
           mb={4}
         >
@@ -41,7 +41,7 @@ const BuyWeed: NextPage = () => {
         </Text>
         <Text>
           Green Garden is the result of a partnership between LH CBD, a network
-          of CBD shops in France for x years, and Gokai Labs, a digital branding
+          of CBD shops in France for 3 years, and Gokai Labs, a digital branding
           and communication agency with over 10 years of experience in Thailand.
         </Text>
         <Box display="flex" my={4}>
@@ -100,7 +100,7 @@ const BuyWeed: NextPage = () => {
         <Text
           as="h2"
           color="white"
-          fontSize={{ base: 'xl', md: 'lg' }}
+          fontSize={{ base: '4xl' }}
           fontWeight="black"
           mb={4}
         >

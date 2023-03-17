@@ -7,7 +7,7 @@ export const Tokenized02 = () => {
     <Box
       as="div"
       color="white"
-      fontSize={{ base: 'xl', md: 'lg' }}
+      fontSize={{ base: '3xl' }}
       borderColor="ghostVerse.color2.base"
       bgColor="ghostVerse.dark.lighter"
       borderWidth={1}
@@ -16,12 +16,12 @@ export const Tokenized02 = () => {
       mb={6}
       p={4}
       mr="auto"
+      fontFamily="vt323"
     >
-      <Text as="h2" fontWeight="black" fontSize="2xl">
+      <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
         Ready to step into a new economic model
         <ImgQuestion />
       </Text>
-      <br />
       If you own an{' '}
       <Text
         color="ghostVerse.green.base"
@@ -69,7 +69,7 @@ export const Tokenized02 = () => {
       EBUD.
       <br />
       <br />
-      <Text as="h2" fontWeight="black" fontSize="2xl">
+      <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
         Join us in this innovative movement and take advantage of our unique
         rewards system.
       </Text>

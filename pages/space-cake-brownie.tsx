@@ -82,7 +82,8 @@ const SpaceCakeBrownie: NextPage = () => {
         my={4}
         display="inline-flex"
         flexDirection="column"
-        fontSize={20}
+        fontSize="3xl"
+        fontFamily="vt323"
       >
         Introducing the ultimate indulgence for cannabis lovers, our Brownie
         Space Cake made with OG kush marijuana butter, Switzerland flour and

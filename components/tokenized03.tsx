@@ -7,7 +7,7 @@ export const Tokenized03 = () => {
     <Box
       as="div"
       color="white"
-      fontSize={{ base: 'xl', md: 'lg' }}
+      fontSize={{ base: '3xl' }}
       borderColor="ghostVerse.color2.base"
       bgColor="ghostVerse.dark.lighter"
       borderWidth={1}
@@ -16,12 +16,12 @@ export const Tokenized03 = () => {
       mb={6}
       p={4}
       mr="auto"
+      fontFamily="vt323"
     >
-      <Text as="h2" fontWeight="black" fontSize="2xl">
+      <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
         Are you from another universe in MultiversX
         <ImgQuestion />
       </Text>
-      <br />
       We also offer privileges to our partners in cannabis, art, gaming,
       community and of course, web3.
       <br />
@@ -167,7 +167,7 @@ export const Tokenized03 = () => {
       </Box>
       <br />
       <br />
-      <Text as="h2" fontWeight="black" fontSize="2xl">
+      <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
         Join us now and take advantage of these exclusive perks!
       </Text>
     </Box>
