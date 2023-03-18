@@ -107,7 +107,7 @@ export const bud = [
     pageLink: '/mimosa',
   },
   {
-    name: 'Black Chery Punch',
+    name: 'Black Cherry Punch',
     price: '900',
     pageLink: '/black-cherry-punch',
   },
