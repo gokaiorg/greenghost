@@ -10,6 +10,7 @@ import SwiperCore, { Autoplay } from 'swiper';
 
 import 'swiper/css';
 import { ImgPercent } from '../components/ImgPercent';
+import { GoToShopLink } from '../components/GoToShopLink';
 
 const BananaDaddy: NextPage = () => {
   SwiperCore.use([Autoplay]);
@@ -18,6 +19,7 @@ const BananaDaddy: NextPage = () => {
       <HeaderMenu>
         <HeaderMenuButtons enabled={['auth']} />
       </HeaderMenu>
+      <GoToShopLink />
       <HomeSectionTitle title="Banana Daddy Strain." />
       <Box
         display="flex"
@@ -27,7 +29,7 @@ const BananaDaddy: NextPage = () => {
         marginTop={-4}
         fontFamily="vt323"
       >
-        <Box marginRight={4} color="ghostVerse.green.base">
+        <Box marginRight={4} color="ghostVerse.orange.base">
           Hybrid
         </Box>
         <Box marginRight={4} display="flex">

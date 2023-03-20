@@ -10,6 +10,7 @@ import SwiperCore, { Autoplay } from 'swiper';
 
 import 'swiper/css';
 import { ImgPercent } from '../components/ImgPercent';
+import { GoToShopLink } from '../components/GoToShopLink';
 
 const PlatinumPunch: NextPage = () => {
   SwiperCore.use([Autoplay]);
@@ -18,6 +19,7 @@ const PlatinumPunch: NextPage = () => {
       <HeaderMenu>
         <HeaderMenuButtons enabled={['auth']} />
       </HeaderMenu>
+      <GoToShopLink />
       <HomeSectionTitle title="Platinum Punch Strain." />
       <Box
         display="flex"
@@ -27,8 +29,8 @@ const PlatinumPunch: NextPage = () => {
         marginTop={-4}
         fontFamily="vt323"
       >
-        <Box marginRight={4} color="ghostVerse.green.base">
-          Sativa Dominant Hybrid
+        <Box marginRight={4} color="ghostVerse.pink.base">
+          Sativa Dominant
         </Box>
         <Box marginRight={4} display="flex">
           Sativa

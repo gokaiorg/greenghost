@@ -10,6 +10,7 @@ import SwiperCore, { Autoplay } from 'swiper';
 
 import 'swiper/css';
 import { ImgPercent } from '../components/ImgPercent';
+import { GoToShopLink } from '../components/GoToShopLink';
 
 const GreenGelato: NextPage = () => {
   SwiperCore.use([Autoplay]);
@@ -18,6 +19,7 @@ const GreenGelato: NextPage = () => {
       <HeaderMenu>
         <HeaderMenuButtons enabled={['auth']} />
       </HeaderMenu>
+      <GoToShopLink />
       <HomeSectionTitle title="Green Gelato Strain." />
       <Box
         display="flex"
@@ -27,8 +29,8 @@ const GreenGelato: NextPage = () => {
         marginTop={-4}
         fontFamily="vt323"
       >
-        <Box marginRight={4} color="ghostVerse.green.base">
-          Indica Dominant Hybrid
+        <Box marginRight={4} color="ghostVerse.blue.base">
+          Indica Dominant
         </Box>
         <Box marginRight={4} display="flex">
           Indica

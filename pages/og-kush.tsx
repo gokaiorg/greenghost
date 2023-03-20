@@ -27,8 +27,8 @@ const OGKush: NextPage = () => {
         marginTop={-4}
         fontFamily="vt323"
       >
-        <Box marginRight={4} color="ghostVerse.green.base">
-          Sativa Dominant Hybrid
+        <Box marginRight={4} color="ghostVerse.pink.base">
+          Sativa Dominant
         </Box>
         <Box marginRight={4} display="flex">
           Sativa

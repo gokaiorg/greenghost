@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay } from 'swiper';
 
 import 'swiper/css';
+import { GoToShopLink } from '../components/GoToShopLink';
 
 const SpaceCakeBrownie: NextPage = () => {
   SwiperCore.use([Autoplay]);
@@ -17,6 +18,7 @@ const SpaceCakeBrownie: NextPage = () => {
       <HeaderMenu>
         <HeaderMenuButtons enabled={['auth']} />
       </HeaderMenu>
+      <GoToShopLink />
       <HomeSectionTitle title="Brownie Space Cake - Cannabis Shop Phuket." />
       <Swiper
         spaceBetween={10}

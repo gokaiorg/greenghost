@@ -55,6 +55,12 @@ export const theme = extendTheme({
         lighter: 'rgba(75,254,38, 0.8)',
         base: '#4cfd27',
       },
+      orange: {
+        base: '#EDBA22',
+      },
+      pink: {
+        base: '#E35295',
+      },
       color1: {
         lighter: 'rgb(109, 208, 246, 0.1)',
         base: '#549db9',
