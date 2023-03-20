@@ -5,7 +5,7 @@ const Fonts = () => (
     styles={`
       /* latin */
       @font-face {
-        font-family: 'Cubic Five 10';
+        font-family: 'CubicFive10';
         font-style: normal;
         font-weight: 400;
         font-display: swap;
@@ -14,7 +14,7 @@ const Fonts = () => (
       }
       /* latin */
       @font-face {
-        font-family: 'Cubic Five 12';
+        font-family: 'CubicFive12';
         font-style: bold;
         font-weight: 700;
         font-display: swap;

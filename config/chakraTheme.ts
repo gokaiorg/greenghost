@@ -29,8 +29,8 @@ export const theme = extendTheme({
     },
   },
   fonts: {
-    heading: `'Cubic Five 12', sans-serif`,
-    body: `'Cubic Five 10', sans-serif`,
+    heading: `'CubicFive12', sans-serif`,
+    body: `'CubicFive10', sans-serif`,
   },
   colors: {
     ghostVerse: {

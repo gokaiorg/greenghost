@@ -49,7 +49,7 @@ export const BudItem: FC<BudItemProps> = ({
         >
           <Image
             src={image}
-            alt="`{name}`"
+            alt={name}
             width={200}
             height={200}
             title="`Green Garden Dispensary - Cannabis Shop Phuket - Bud {name}`"
@@ -58,14 +58,14 @@ export const BudItem: FC<BudItemProps> = ({
             display="flex"
             flexDirection="column"
             width="100%"
-            marginLeft={4}
+            marginLeft={{ base: 0, md: 4 }}
+            marginTop={{ base: 4, md: 0 }}
           >
-            <Box display="flex" alignItems="center" marginBottom={1}>
+            <Box as="h3" fontSize="2xl" fontFamily="CubicFive12" display="flex" alignItems="center" marginBottom={1}>
               {name}{' '}
               <Box
                 marginLeft="auto"
                 color="ghostVerse.green.base"
-                fontSize="2xl"
               >
                 {price}THB
               </Box>
