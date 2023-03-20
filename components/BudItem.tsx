@@ -15,6 +15,7 @@ interface BudItemProps {
   THC: string;
   CBD: string;
   effects: string;
+  imageName: string;
 }
 
 export const BudItem: FC<BudItemProps> = ({
@@ -28,9 +29,10 @@ export const BudItem: FC<BudItemProps> = ({
   THC,
   CBD,
   effects,
+  imageName,
 }) => {
   return (
-    <Box width={{ base: '100%', xl: '50%' }}>
+    <Box width={{ base: '100%' }}>
       <Link href={pageLink}>
         <Box
           borderColor="ghostVerse.green.base"
@@ -46,13 +48,18 @@ export const BudItem: FC<BudItemProps> = ({
           marginRight={{ base: 0, lg: 2 }}
           marginBottom={{ base: 2 }}
           whiteSpace={{ base: 'normal', md: 'nowrap' }}
+          _hover={{
+            bgColor: 'rgba(109, 208, 246, 0.1)',
+            backdropFilter: 'blur(3px)',
+          }}
+          transition="background-color .3s"
         >
           <Image
             src={image}
-            alt={name}
+            alt={imageName}
             width={200}
             height={200}
-            title="`Green Garden Dispensary - Cannabis Shop Phuket - Bud {name}`"
+            title={imageName}
           />
           <Box
             display="flex"
@@ -61,33 +68,41 @@ export const BudItem: FC<BudItemProps> = ({
             marginLeft={{ base: 0, md: 4 }}
             marginTop={{ base: 4, md: 0 }}
           >
-            <Box as="h3" fontSize="2xl" fontFamily="CubicFive12" display="flex" alignItems="center" marginBottom={1}>
+            <Box
+              as="h3"
+              fontSize="2xl"
+              fontFamily="CubicFive12"
+              display="flex"
+              alignItems="center"
+            >
               {name}{' '}
-              <Box
-                marginLeft="auto"
-                color="ghostVerse.green.base"
-              >
+              <Box marginLeft="auto" color="ghostVerse.green.base">
                 {price}THB
               </Box>
             </Box>
             <Box display="flex" fontFamily="vt323" fontSize="3xl">
               {dominance == 'Indica Dominant' && (
-                <Box color="ghostVerse.blue.base" marginRight={2}>
+                <Box as="h4" color="ghostVerse.blue.base" marginRight={2}>
                   {dominance}
                 </Box>
               )}
               {dominance == 'Sativa Dominant' && (
-                <Box color="ghostVerse.pink.base" marginRight={2}>
+                <Box as="h4" color="ghostVerse.pink.base" marginRight={2}>
                   {dominance}
                 </Box>
               )}
               {dominance == 'Hybrid' && (
-                <Box color="ghostVerse.orange.base" marginRight={2}>
+                <Box as="h4" color="ghostVerse.orange.base" marginRight={2}>
                   {dominance}
                 </Box>
               )}
             </Box>
-            <Box display="flex" fontFamily="vt323" fontSize="2xl" flexWrap="wrap">
+            <Box
+              display="flex"
+              fontFamily="vt323"
+              fontSize="2xl"
+              flexWrap="wrap"
+            >
               {sativa !== 'undefined' && (
                 <Box display="flex" marginRight={2}>
                   Sativa
@@ -132,8 +147,9 @@ export const BudItem: FC<BudItemProps> = ({
               marginTop="auto"
             >
               {effects !== 'undefined' && (
-                <Box display="flex" flexDirection="column" marginRight={2}>
-                  <Box color="ghostVerse.green.base">
+                <Box display="flex" marginRight={2}>
+                  Feelings
+                  <Box marginLeft={2} color="ghostVerse.green.base">
                     {effects}
                   </Box>
                 </Box>

@@ -43,6 +43,7 @@ export const bud = [
     effects: 'Sleepy, Hungry, Tingly',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-og-poison-01.webp',
+    imageName: 'Green Garden Dispensary - Cannabis Shop Phuket - Bud OG Poison',
   },
   {
     name: 'Runtz',
@@ -56,6 +57,7 @@ export const bud = [
     effects: 'Talkative, Happy, Giggly',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-runtz-01.webp',
+    imageName: 'Green Garden Dispensary - Cannabis Shop Phuket - Bud Runtz',
   },
   {
     name: 'Green Gelato',
@@ -69,6 +71,8 @@ export const bud = [
     effects: 'Euphoric, Aroused, Happy',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-green-gelato-01.webp',
+    imageName:
+      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Green Gelato',
   },
   {
     name: 'Gelato Dream',
@@ -82,6 +86,8 @@ export const bud = [
     effects: 'Euphoric, Focused, Happy',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-gelato-dream-01.webp',
+    imageName:
+      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Gelato Dream',
   },
   {
     name: 'White Runtz',
@@ -95,6 +101,8 @@ export const bud = [
     effects: 'Tingly, Relaxed, Euphoric',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-white-runtz-01.webp',
+    imageName:
+      'Green Garden Dispensary - Cannabis Shop Phuket - Bud White Runtz',
   },
   {
     name: 'Banana Kush',
@@ -108,6 +116,8 @@ export const bud = [
     effects: 'Talkative, Sleeppy, Giggly',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-banana-kush-01.webp',
+    imageName:
+      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Banana Kush',
   },
   {
     name: 'Jack Herer',
@@ -121,6 +131,8 @@ export const bud = [
     effects: 'Energetic, Creative, Uplifted',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-jack-herer-01.webp',
+    imageName:
+      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Jack Herer',
   },
   {
     name: 'Chem Dog',
@@ -134,6 +146,7 @@ export const bud = [
     effects: 'Euphoric, Uplifted, Creative',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-chem-dog-01.webp',
+    imageName: 'Green Garden Dispensary - Cannabis Shop Phuket - Bud Chem Dog',
   },
   {
     name: 'Moon Fruit',
@@ -147,6 +160,8 @@ export const bud = [
     effects: 'Relaxed, Happy, Talkative',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-moon-fruit-01.webp',
+    imageName:
+      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Moon Fruit',
   },
   {
     name: 'Banana Daddy',
@@ -160,6 +175,8 @@ export const bud = [
     effects: 'Happy, Talktative, Relaxed',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-banana-daddy-01.webp',
+    imageName:
+      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Banana Daddy',
   },
   {
     name: 'Orange Velvet',
@@ -173,6 +190,8 @@ export const bud = [
     effects: 'Aroused, Uplifted, Energetic',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-orange-velvet-01.webp',
+    imageName:
+      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Orange Velvet',
   },
   {
     name: 'Platinum Punch',
@@ -186,6 +205,8 @@ export const bud = [
     effects: 'Focus, Giggly, Relaxed',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-platinum-punch-01.webp',
+    imageName:
+      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Platinum Punch',
   },
   {
     name: 'Lemon Berry Candy',
@@ -199,6 +220,8 @@ export const bud = [
     effects: 'Creative, Energetic, Talkative',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-lemon-berry-candy-01.webp',
+    imageName:
+      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Lemon Berry Candy',
   },
   {
     name: 'Mandarin Cookies',
@@ -212,6 +235,8 @@ export const bud = [
     effects: 'Relaxed, Uplifted, Happy',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-mandarin-cookies-01.webp',
+    imageName:
+      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Mandarin Cookies',
   },
   {
     name: 'Mimosa',
@@ -225,6 +250,7 @@ export const bud = [
     effects: 'Energetic, Focused, Uplifted',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-mimosa-01.webp',
+    imageName: 'Green Garden Dispensary - Cannabis Shop Phuket - Bud Mimosa',
   },
   {
     name: 'Black Cherry Punch',
@@ -238,6 +264,8 @@ export const bud = [
     effects: 'Sleepy, Tingly, Happy',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-black-cherry-punch-01.webp',
+    imageName:
+      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Black Cherry Punch',
   },
   {
     name: 'Snoop Punch',
@@ -251,6 +279,8 @@ export const bud = [
     effects: 'Relaxed, Sleepy, Hungry',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-snoop-punch-01.webp',
+    imageName:
+      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Snoop Punch',
   },
 ];
 export const preroll = [
