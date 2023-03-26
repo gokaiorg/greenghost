@@ -110,7 +110,7 @@ const BuyWeed: NextPage = () => {
         <Text>
           Committed to local values,{' '}
           <Link href="/cannabis-shop-phuket">
-            <Box display="inline-block" color="ghostVerse.green.base">
+            <Box as="span" display="inline-block" color="ghostVerse.green.base">
               our products
             </Box>
           </Link>{' '}
@@ -122,7 +122,7 @@ const BuyWeed: NextPage = () => {
           the passion of an entire team dedicated to our clients with an
           innovative{' '}
           <Link href="/tokenized-cannabis-store">
-            <Box display="inline-block" color="ghostVerse.green.base">
+            <Box as="span" display="inline-block" color="ghostVerse.green.base">
               rewards system
             </Box>
           </Link>

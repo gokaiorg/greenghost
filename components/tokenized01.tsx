@@ -1,4 +1,5 @@
 import { Box, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 import { ImgDollar } from './ImgDollar';
 import { ImgPercent } from './ImgPercent';
 import { ImgQuestion } from './ImgQuestion';
@@ -82,13 +83,11 @@ export const Tokenized01 = () => {
         New to the world of blockchain and NFTs
         <ImgQuestion />
       </Text>
-      <Text
-        color="ghostVerse.green.base"
-        as="a"
-        href="https://xport.al/referral/7nvae7kpo1"
-      >
-        Install xPortal Wallet on your phone
-      </Text>{' '}
+      <Link href="/install-xportal-app">
+        <Box as="span" color="ghostVerse.green.base">
+          Install xPortal Wallet on your phone
+        </Box>
+      </Link>{' '}
       and join the revolution.
     </Box>
   );
