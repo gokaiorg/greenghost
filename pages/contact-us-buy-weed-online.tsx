@@ -29,7 +29,7 @@ const BuyWeed: NextPage = () => {
           p={4}
           mr="auto"
         >
-          Contact Us
+          Call the shop
         </Text>
         <Text
           display="inline-flex"
@@ -45,7 +45,7 @@ const BuyWeed: NextPage = () => {
           mb={2}
           mr="auto"
         >
-          <Link href="tel:+66949486177">+66 94 948 6177</Link>
+          <Link href="tel:+66918485848">+66 918 48 58 48</Link>
         </Text>
       </Box>
       <Box display="flex" flexDirection="column">
@@ -63,7 +63,7 @@ const BuyWeed: NextPage = () => {
           p={4}
           mr="auto"
         >
-          Send a message
+          Contact us to order online
         </Text>
         <SocialMediaIcons />
         <Box
@@ -74,12 +74,13 @@ const BuyWeed: NextPage = () => {
           backdropFilter="blur(3px)"
           p={4}
           mx="auto"
+          mt={10}
           display="flex"
           width="fit-content"
           flexDirection="column"
           fontSize={20}
         >
-          Immediate delivery in Phuket
+          Immediate delivery in Phuket & Worldwide shipping
         </Box>
       </Box>
     </MainLayout>
