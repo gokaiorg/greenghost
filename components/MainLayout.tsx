@@ -11,34 +11,13 @@ export const MainLayout: FC<PropsWithChildren<MetaHeadProps>> = ({
   metaImage,
   metaUrl,
 }) => {
-  const [verified, setVerified] = React.useState(false);
-
   const handleVerify = () => {
-    setVerified(true);
-    if (typeof localStorage !== 'undefined') {
-      localStorage.setItem('ageVerifiedAt', new Date().toISOString());
-    }
+    console.log('User verified age.');
   };
-
-  const handleReset = () => {
-    setVerified(false);
-    if (typeof localStorage !== 'undefined') {
-      localStorage.removeItem('ageVerifiedAt');
-    }
-  };
-
-  let ageVerifiedAt;
-  if (typeof localStorage !== 'undefined') {
-    ageVerifiedAt = localStorage.getItem('ageVerifiedAt');
-  }
-
-  const isVerified =
-    verified ||
-    (ageVerifiedAt &&
-      new Date().getTime() - new Date(ageVerifiedAt).getTime() < 5 * 60 * 1000);
 
   return (
     <>
+      <AgeVerificationPopup onVerify={handleVerify} />
       <MetaHead
         metaTitle={metaTitle}
         metaDescription={metaDescription}

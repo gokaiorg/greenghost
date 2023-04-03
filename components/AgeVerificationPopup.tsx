@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box } from '@chakra-ui/react';
 import { ImgQuestion } from './ImgQuestion';
 import Link from 'next/link';
@@ -7,16 +7,30 @@ type AgeVerificationPopupProps = {
   onVerify: () => void;
 };
 
-const AgeVerificationPopup: React.FC<AgeVerificationPopupProps> = ({
-  onVerify,
-}) => {
-  const handleVerify = () => {
+const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  useEffect(() => {
+    const isVerified = localStorage.getItem("ageVerified");
+    if (isVerified) {
+      setIsOpen(false);
+    }
+  }, []);
+
+  const verifyAge = () => {
+    setIsOpen(false);
+    localStorage.setItem("ageVerified", "true");
     onVerify();
   };
+
+  if (!isOpen) {
+    return null;
+  }
 
   return (
     <Box
       pos="fixed"
+      zIndex="100"
       top={0}
       bottom={0}
       left={0}
@@ -38,7 +52,7 @@ const AgeVerificationPopup: React.FC<AgeVerificationPopupProps> = ({
           Are you 20 or older
           <ImgQuestion />
         </Box>
-        <button onClick={handleVerify}>
+        <button onClick={verifyAge}>
           <Box
             as="span"
             display="inline-flex"
