@@ -4,10 +4,12 @@ import { ImgQuestion } from './ImgQuestion';
 import Link from 'next/link';
 
 type AgeVerificationPopupProps = {
-  onVerify: () => void
-}
+  onVerify: () => void;
+};
 
-const AgeVerificationPopup: React.FC<AgeVerificationPopupProps> = ({ onVerify }) => {
+const AgeVerificationPopup: React.FC<AgeVerificationPopupProps> = ({
+  onVerify,
+}) => {
   const handleVerify = () => {
     onVerify();
   };
