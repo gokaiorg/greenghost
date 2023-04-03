@@ -3,7 +3,11 @@ import { Box } from '@chakra-ui/react';
 import { ImgQuestion } from './ImgQuestion';
 import Link from 'next/link';
 
-const AgeVerificationPopup = ({ onVerify }) => {
+type AgeVerificationPopupProps = {
+  onVerify: () => void
+}
+
+const AgeVerificationPopup: React.FC<AgeVerificationPopupProps> = ({ onVerify }) => {
   const handleVerify = () => {
     onVerify();
   };
@@ -24,6 +28,7 @@ const AgeVerificationPopup = ({ onVerify }) => {
         left={0}
         right={0}
         margin="auto"
+        px={10}
         width={{ base: '100%', md: '60%' }}
         height="50%"
       >
