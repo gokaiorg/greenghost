@@ -11,7 +11,7 @@ export const MainLayout: FC<PropsWithChildren<MetaHeadProps>> = ({
   metaImage,
   metaUrl,
 }) => {
-  const [verified, setVerified] = React.useState(false);
+  const [verified, setVerified] = React.useState(false)
 
   const handleVerify = () => {
     setVerified(true)
@@ -20,12 +20,19 @@ export const MainLayout: FC<PropsWithChildren<MetaHeadProps>> = ({
     }
   }
 
-   let ageVerifiedAt
+  const handleReset = () => {
+    setVerified(false)
+    if (typeof localStorage !== 'undefined') {
+      localStorage.removeItem('ageVerifiedAt')
+    }
+  }
+
+  let ageVerifiedAt
   if (typeof localStorage !== 'undefined') {
     ageVerifiedAt = localStorage.getItem('ageVerifiedAt')
   }
 
-  const isVerified = verified || (ageVerifiedAt && (new Date() - new Date(ageVerifiedAt)) < (5 * 60 * 1000))
+  const isVerified = verified || (ageVerifiedAt && (new Date().getTime() - new Date(ageVerifiedAt).getTime()) < (5 * 60 * 1000))
 
   return (
     <>
