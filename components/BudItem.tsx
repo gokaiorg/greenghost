@@ -54,17 +54,22 @@ export const BudItem: FC<BudItemProps> = ({
           }}
           transition="background-color .3s"
         >
-          <Image
-            src={image}
-            alt={imageName}
-            width={200}
-            height={200}
-            title={imageName}
-          />
+          <Box
+            width={{ base: 'full', md: '200px' }}
+            height={{ base: 'auto', md: '200px' }}
+          >
+            <Image
+              src={image}
+              alt={imageName}
+              width={500}
+              height={500}
+              title={imageName}
+            />
+          </Box>
           <Box
             display="flex"
             flexDirection="column"
-            width="100%"
+            flex="1"
             marginLeft={{ base: 0, md: 4 }}
             marginTop={{ base: 4, md: 0 }}
           >
@@ -73,10 +78,15 @@ export const BudItem: FC<BudItemProps> = ({
               fontSize="2xl"
               fontFamily="CubicFive12"
               display="flex"
+              flexDirection="row"
               alignItems="center"
             >
               {name}{' '}
-              <Box marginLeft="auto" color="ghostVerse.green.base">
+              <Box
+                marginLeft="auto"
+                color="ghostVerse.green.base"
+                whiteSpace="nowrap"
+              >
                 {price}THB
               </Box>
             </Box>
@@ -101,39 +111,63 @@ export const BudItem: FC<BudItemProps> = ({
               display="flex"
               fontFamily="vt323"
               fontSize="2xl"
-              flexWrap="wrap"
+              flexDirection={{ base: 'column', md: 'row' }}
             >
               {sativa !== 'undefined' && (
-                <Box display="flex" marginRight={2}>
+                <Box display="flex" marginRight={2} flexDirection="row">
                   Sativa
-                  <Box marginLeft={2} color="ghostVerse.green.base">
+                  <Box
+                    marginLeft={2}
+                    color="ghostVerse.green.base"
+                    display="flex"
+                    flexDirection="row"
+                    alignItems="baseline"
+                  >
                     {sativa}
                     <ImgPercent />
                   </Box>
                 </Box>
               )}
               {indica !== 'undefined' && (
-                <Box display="flex" marginRight={2}>
+                <Box display="flex" marginRight={2} flexDirection="row">
                   Indica
-                  <Box marginLeft={2} color="ghostVerse.green.base">
+                  <Box
+                    marginLeft={2}
+                    color="ghostVerse.green.base"
+                    display="flex"
+                    flexDirection="row"
+                    alignItems="baseline"
+                  >
                     {indica}
                     <ImgPercent />
                   </Box>
                 </Box>
               )}
               {THC !== 'undefined' && (
-                <Box display="flex" marginRight={2}>
+                <Box display="flex" marginRight={2} flexDirection="row">
                   THC
-                  <Box marginLeft={2} color="ghostVerse.green.base">
+                  <Box
+                    marginLeft={2}
+                    color="ghostVerse.green.base"
+                    display="flex"
+                    flexDirection="row"
+                    alignItems="baseline"
+                  >
                     {THC}
                     <ImgPercent />
                   </Box>
                 </Box>
               )}
               {CBD !== 'undefined' && (
-                <Box display="flex" marginRight={2}>
+                <Box display="flex" marginRight={2} flexDirection="row">
                   CBD
-                  <Box marginLeft={2} color="ghostVerse.green.base">
+                  <Box
+                    marginLeft={2}
+                    color="ghostVerse.green.base"
+                    display="flex"
+                    flexDirection="row"
+                    alignItems="baseline"
+                  >
                     {CBD}
                     <ImgPercent />
                   </Box>
