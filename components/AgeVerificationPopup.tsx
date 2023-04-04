@@ -11,7 +11,7 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
   const [isOpen, setIsOpen] = useState(true);
 
   useEffect(() => {
-    const isVerified = localStorage.getItem("ageVerified");
+    const isVerified = localStorage.getItem('ageVerified');
     if (isVerified) {
       setIsOpen(false);
     }
@@ -19,7 +19,7 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
 
   const verifyAge = () => {
     setIsOpen(false);
-    localStorage.setItem("ageVerified", "true");
+    localStorage.setItem('ageVerified', 'true');
     onVerify();
   };
 
@@ -44,11 +44,20 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
         left={0}
         right={0}
         margin="auto"
-        px={10}
+        px={6}
         width={{ base: '100%', md: '60%' }}
-        height="50%"
+        height="fit-content"
       >
-        <Box as="h2" fontSize="2xl">
+        <Box
+          as="img"
+          src="/media/green-garden-dispensary-cannabis-shop-phuket-older-20-only.webp"
+          width={{ base: '300px' }}
+          height={{ base: '300px' }}
+          maxW="inherit"
+          alt="Green Garden Dispensary - Cannabis Shop Phuket - 20 or older only"
+          title="Green Garden Dispensary - Cannabis Shop Phuket - 20 or older only"
+        />
+        <Box as="h2" fontSize="2xl" mt={4} whiteSpace="nowrap">
           Are you 20 or older
           <ImgQuestion />
         </Box>
@@ -75,8 +84,8 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           <Box
             as="span"
             display="inline-flex"
-            color="ghostVerse.green.base"
-            borderColor="ghostVerse.green.base"
+            color="#EF2625"
+            borderColor="#EF2625"
             fontSize="xl"
             borderWidth={1}
             bgColor="ghostVerse.dark.lighter"
