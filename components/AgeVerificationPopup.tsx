@@ -70,6 +70,7 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           onTouchStart={verifyAge}
           onMouseDown={verifyAge}
           onPointerDown={verifyAge}
+          onTouchEnd={verifyAge}
         >
           <Box
             as="span"
@@ -84,6 +85,7 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
             px={6}
             mb={2}
             mr="auto"
+            outline="none"
           >
             Yes, I am over 20
           </Box>
