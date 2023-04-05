@@ -13,12 +13,12 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
   useEffect(() => {
     const isVerified = localStorage.getItem('ageVerified');
     if (isVerified) {
-      setIsOpen(false);
+      setIsOpen(true);
     }
   }, []);
 
   const verifyAge = () => {
-    setIsOpen(false);
+    setIsOpen(true);
     localStorage.setItem('ageVerified', 'true');
     onVerify();
   };
@@ -56,6 +56,10 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           maxW="inherit"
           alt="Green Garden Dispensary - Cannabis Shop Phuket - 20 or older only"
           title="Green Garden Dispensary - Cannabis Shop Phuket - 20 or older only"
+          onClick={verifyAge}
+          onTouchStart={verifyAge}
+          onMouseDown={verifyAge}
+          onPointerDown={verifyAge}
         />
         <Box as="h2" display="flex" flexDirection="row" alignItems="baseline" fontSize="2xl" mt={4} whiteSpace="nowrap">
           Are you 20 or older
