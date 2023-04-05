@@ -34,21 +34,21 @@ const MoonFruit: NextPage = () => {
         </Box>
         <Box marginRight={4} display="flex">
           Indica
-          <Box color="ghostVerse.green.base" marginLeft={2}>
+          <Box color="ghostVerse.green.base" display="flex" alignItems="baseline" marginLeft={2}>
             50
             <ImgPercent />
           </Box>
         </Box>
         <Box marginRight={4} display="flex">
           Sativa
-          <Box color="ghostVerse.green.base" marginLeft={2}>
+          <Box color="ghostVerse.green.base" display="flex" alignItems="baseline" marginLeft={2}>
             50
             <ImgPercent />
           </Box>
         </Box>
         <Box marginRight={4} display="flex">
           THC
-          <Box color="ghostVerse.green.base" marginLeft={2}>
+          <Box color="ghostVerse.green.base" display="flex" alignItems="baseline" marginLeft={2}>
             20/22
             <ImgPercent />
           </Box>

@@ -79,8 +79,9 @@ export const BudItem: FC<BudItemProps> = ({
               display="flex"
               flexDirection="row"
               alignItems="center"
+              marginRight={1}
             >
-              {name}{' '}
+              {name}
               <Box
                 marginLeft="auto"
                 color="ghostVerse.green.base"

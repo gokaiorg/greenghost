@@ -34,21 +34,21 @@ const ChemDog: NextPage = () => {
         </Box>
         <Box marginRight={4} display="flex">
           Indica
-          <Box color="ghostVerse.green.base" marginLeft={2}>
+          <Box color="ghostVerse.green.base" display="flex" alignItems="baseline" marginLeft={2}>
             55
             <ImgPercent />
           </Box>
         </Box>
         <Box marginRight={4} display="flex">
           Sativa
-          <Box color="ghostVerse.green.base" marginLeft={2}>
+          <Box color="ghostVerse.green.base" display="flex" alignItems="baseline" marginLeft={2}>
             45
             <ImgPercent />
           </Box>
         </Box>
         <Box marginRight={4} display="flex">
           THC
-          <Box color="ghostVerse.green.base" marginLeft={2}>
+          <Box color="ghostVerse.green.base" display="flex" alignItems="baseline" marginLeft={2}>
             15/20
             <ImgPercent />
           </Box>
