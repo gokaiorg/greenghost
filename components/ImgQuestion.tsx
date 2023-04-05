@@ -2,7 +2,7 @@ import { Box } from '@chakra-ui/react';
 
 export const ImgQuestion = () => {
   return (
-    <Box display="inline-flex" marginLeft={1}>
+    <Box display="inline-flex" marginLeft={1} width="16px" height="fit-content">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 189.2 311.7"
