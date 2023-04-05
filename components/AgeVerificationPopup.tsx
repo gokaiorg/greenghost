@@ -91,6 +91,7 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           cursor="pointer"
           onClick={verifyAge}
           onTouchStart={verifyAge}
+          onTouchMove={verifyAge}
           onMouseDown={verifyAge}
           onPointerDown={verifyAge}
           onTouchEnd={verifyAge}
