@@ -2,12 +2,19 @@ import { Box } from '@chakra-ui/react';
 
 export const ImgPercent = () => {
   return (
-    <Box display="inline-flex" marginLeft={1} marginRight={1}>
+    <Box
+      display="block"
+      marginLeft={1}
+      marginRight={1}
+      width="14px"
+      height="14px"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 267.1 267.1"
         fill="currentColor"
         width="14px"
+        height="14px"
       >
         <path d="M33.4 0h44.5v33.4H33.4z" />
         <path d="M0 33.4h33.4v44.5H0zm77.9 0h33.4v44.5H77.9z" />
