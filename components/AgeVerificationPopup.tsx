@@ -61,7 +61,7 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           Are you 20 or older
           <ImgQuestion />
         </Box>
-        <button onClick={verifyAge}>
+        <button onClick={verifyAge} onTouchStart={verifyAge}>
           <Box
             as="span"
             display="inline-flex"
