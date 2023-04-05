@@ -7,29 +7,32 @@ type AgeVerificationPopupProps = {
   onVerify: () => void;
 };
 
-function AgeVerificationPopup({ isOpen, onClose }) {
+const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
+  const [isOpen, setIsOpen] = useState(true);
+
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (isOpen && !event.target.closest("#age-verification-popup")) {
-        onClose();
-      }
-    };
-
-    document.addEventListener("click", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [isOpen, onClose]);
+    const isVerified = localStorage.getItem('ageVerified');
+    if (isVerified) {
+      setIsOpen(true);
+    }
+  }, []);
 
   const verifyAge = () => {
-    // Code for verifying age
-    onClose();
+    setIsOpen(true);
+    localStorage.setItem('ageVerified', 'true');
+    onVerify();
   };
 
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  if (!isOpen) {
+    return null;
+  }
+
   return (
-    isOpen && (
-      <Box
+    <Box
       pos="fixed"
       zIndex="100"
       top={0}
@@ -50,6 +53,7 @@ function AgeVerificationPopup({ isOpen, onClose }) {
         height="fit-content"
       >
         <Box
+          onClick={handleClose}
           as="img"
           src="/media/green-garden-dispensary-cannabis-shop-phuket-older-20-only.webp"
           width={{ base: '300px' }}
@@ -114,7 +118,6 @@ function AgeVerificationPopup({ isOpen, onClose }) {
         </Link>
       </Box>
     </Box>
-    )
   );
 };
 
