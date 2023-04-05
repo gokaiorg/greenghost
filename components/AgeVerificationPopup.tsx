@@ -13,12 +13,12 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
   useEffect(() => {
     const isVerified = localStorage.getItem('ageVerified');
     if (isVerified) {
-      setIsOpen(true);
+      setIsOpen(false);
     }
   }, []);
 
   const verifyAge = () => {
-    setIsOpen(true);
+    setIsOpen(false);
     localStorage.setItem('ageVerified', 'true');
     onVerify();
   };
