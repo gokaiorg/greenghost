@@ -57,11 +57,15 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           alt="Green Garden Dispensary - Cannabis Shop Phuket - 20 or older only"
           title="Green Garden Dispensary - Cannabis Shop Phuket - 20 or older only"
         />
-        <Box as="h2" fontSize="2xl" mt={4} whiteSpace="nowrap">
+        <Box as="h2" display="flex" alignItems="row" fontSize="2xl" mt={4} whiteSpace="nowrap">
           Are you 20 or older
           <ImgQuestion />
         </Box>
-        <button onClick={verifyAge} onTouchStart={verifyAge}>
+        <button
+          onClick={verifyAge}
+          onTouchStart={verifyAge}
+          onMouseDown={verifyAge}
+        >
           <Box
             as="span"
             display="inline-flex"
