@@ -32,7 +32,7 @@ export const BudItem: FC<BudItemProps> = ({
   imageName,
 }) => {
   return (
-    <Box width={{ base: '100%' }}>
+    <Box width={{ base: '100%', md: '50%', lg: '33%' }} paddingBottom={1} paddingRight={1}>
       <Link href={pageLink}>
         <Box
           borderColor="ghostVerse.green.base"
@@ -44,10 +44,9 @@ export const BudItem: FC<BudItemProps> = ({
           fontSize="lg"
           color="ghostVerse.gray.base"
           display="flex"
-          flexDirection={{ base: 'column', md: 'row' }}
-          marginRight={{ base: 0, lg: 2 }}
-          marginBottom={{ base: 2 }}
-          whiteSpace={{ base: 'normal', md: 'nowrap' }}
+          flexDirection={{ base: 'column' }}
+          height="100%"
+          whiteSpace={{ base: 'normal' }}
           _hover={{
             bgColor: 'rgba(109, 208, 246, 0.1)',
             backdropFilter: 'blur(3px)',
@@ -55,8 +54,8 @@ export const BudItem: FC<BudItemProps> = ({
           transition="background-color .3s"
         >
           <Box
-            width={{ base: 'full', md: '200px' }}
-            height={{ base: 'auto', md: '200px' }}
+            width={{ base: 'full' }}
+            height={{ base: 'auto' }}
           >
             <Image
               src={image}
@@ -70,8 +69,8 @@ export const BudItem: FC<BudItemProps> = ({
             display="flex"
             flexDirection="column"
             flex="1"
-            marginLeft={{ base: 0, md: 4 }}
-            marginTop={{ base: 4, md: 0 }}
+            marginLeft={{ base: 0 }}
+            marginTop={{ base: 4 }}
           >
             <Box
               as="h3"
@@ -110,8 +109,8 @@ export const BudItem: FC<BudItemProps> = ({
             <Box
               display="flex"
               fontFamily="vt323"
-              fontSize="2xl"
-              flexDirection={{ base: 'column', md: 'row' }}
+              fontSize="3xl"
+              flexWrap="wrap"
             >
               {sativa !== 'undefined' && (
                 <Box display="flex" marginRight={2} flexDirection="row">
@@ -177,13 +176,14 @@ export const BudItem: FC<BudItemProps> = ({
             <Box
               display="flex"
               fontFamily="vt323"
-              fontSize="2xl"
-              marginTop="auto"
+              fontSize="3xl"
+              mx="auto"
+              mt="auto"
             >
               {effects !== 'undefined' && (
-                <Box display="flex" marginRight={2}>
+                <Box display="flex" textAlign="center" flexDirection="column" fontSize="3xl">
                   Feelings
-                  <Box marginLeft={2} color="ghostVerse.green.base">
+                  <Box color="ghostVerse.green.base">
                     {effects}
                   </Box>
                 </Box>
