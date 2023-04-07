@@ -3,7 +3,7 @@ import { Box } from '@chakra-ui/react';
 export const ImgPercent = () => {
   return (
     <Box
-      display="block"
+      display="inline-block"
       marginLeft={1}
       marginRight={1}
       width="14px"
