@@ -32,7 +32,11 @@ export const BudItem: FC<BudItemProps> = ({
   imageName,
 }) => {
   return (
-    <Box width={{ base: '100%', md: '50%', lg: '33%' }} paddingBottom={1} paddingRight={1}>
+    <Box
+      width={{ base: '100%', md: '50%', lg: '33%' }}
+      paddingBottom={1}
+      paddingRight={1}
+    >
       <Link href={pageLink}>
         <Box
           borderColor="ghostVerse.green.base"
@@ -53,10 +57,7 @@ export const BudItem: FC<BudItemProps> = ({
           }}
           transition="background-color .3s"
         >
-          <Box
-            width={{ base: 'full' }}
-            height={{ base: 'auto' }}
-          >
+          <Box width={{ base: 'full' }} height={{ base: 'auto' }}>
             <Image
               src={image}
               alt={imageName}
@@ -182,9 +183,17 @@ export const BudItem: FC<BudItemProps> = ({
               mt="auto"
             >
               {effects !== 'undefined' && (
-                <Box display="flex" textAlign="center" flexDirection="column" fontSize="3xl">
+                <Box
+                  display="flex"
+                  textAlign="center"
+                  flexDirection="column"
+                  fontSize="3xl"
+                >
                   Feelings
-                  <Box color="ghostVerse.green.base">
+                  <Box
+                    color="ghostVerse.green.base"
+                    whiteSpace={{ base: 'normal', xl: 'nowrap' }}
+                  >
                     {effects}
                   </Box>
                 </Box>

@@ -14,7 +14,7 @@ export const MetaHead: FC<MetaHeadProps> = memo(
   ({ metaTitle, metaDescription, metaName, metaImage, metaUrl }) => {
     return (
       <Head>
-        <meta name="author" content="Green Garden | www.green.gd" />
+        <meta name="author" content="Gokai Labs | gokai.org" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
@@ -23,19 +23,11 @@ export const MetaHead: FC<MetaHeadProps> = memo(
           httpEquiv="Content-Security-Policy"
           content="upgrade-insecure-requests"
         />
-
-        <title>{metaTitle || defaultMetaTags.title}</title>
-        <meta
-          name="description"
-          content={metaDescription || defaultMetaTags.description}
-          data-react-helmet="true"
-        />
         <meta name="theme-color" content="#000000" />
         <link
           rel="shortcut icon"
           href={`${metaUrl || dappHostname}/favicon.ico`}
         />
-
         <link
           rel="icon"
           sizes="192x192"
@@ -69,7 +61,6 @@ export const MetaHead: FC<MetaHeadProps> = memo(
           href={`${metaUrl || dappHostname}/logo-G.svg`}
           color="#fff"
         />
-
         <link
           rel="manifest"
           href={`${metaUrl || dappHostname}/manifest.json`}
@@ -86,56 +77,13 @@ export const MetaHead: FC<MetaHeadProps> = memo(
         />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
-
         <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content={metaTitle || defaultMetaTags.shortname}
-          data-react-helmet="true"
-        />
-        <meta
-          property="og:description"
-          content={metaDescription || defaultMetaTags.description}
-          data-react-helmet="true"
-        />
-        <meta
-          property="og:image"
-          content={metaImage || defaultMetaTags.image}
-          data-react-helmet="true"
-        />
-        <meta
-          property="og:url"
-          content={metaUrl || dappHostname}
-          data-react-helmet="true"
-        />
         <meta
           property="og:site_name"
           content={metaName || defaultMetaTags.shortname}
         />
-
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content={metaTitle || defaultMetaTags.shortname}
-          data-react-helmet="true"
-        />
-        <meta
-          name="twitter:description"
-          content={metaDescription || defaultMetaTags.description}
-          data-react-helmet="true"
-        />
-        <meta
-          name="twitter:image"
-          content={metaImage || defaultMetaTags.image}
-          data-react-helmet="true"
-        />
-        <meta
-          name="twitter:url"
-          content={metaUrl || dappHostname}
-          data-react-helmet="true"
-        />
         <meta name="twitter:creator" content="@GokaiLabs" />
-
         <meta
           name="google-site-verification"
           content="dOuCZqslG5Lkw8i3jVwoGcedgH6-nIGGQ71qYu"
