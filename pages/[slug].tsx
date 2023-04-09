@@ -111,17 +111,17 @@ export default function ProductPage({ product }: ProductPageProps) {
           fontFamily="vt323"
         >
           {product.dominance == 'Indica Dominant' && (
-            <Box as="h4" color="ghostVerse.blue.base" marginRight={4}>
+            <Box as="h2" color="ghostVerse.blue.base" marginRight={4}>
               {product.dominance}
             </Box>
           )}
           {product.dominance == 'Sativa Dominant' && (
-            <Box as="h4" color="ghostVerse.pink.base" marginRight={4}>
+            <Box as="h2" color="ghostVerse.pink.base" marginRight={4}>
               {product.dominance}
             </Box>
           )}
           {product.dominance == 'Hybrid' && (
-            <Box as="h4" color="ghostVerse.orange.base" marginRight={4}>
+            <Box as="h2" color="ghostVerse.orange.base" marginRight={4}>
               {product.dominance}
             </Box>
           )}
