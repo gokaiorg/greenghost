@@ -43,7 +43,7 @@ export const SocialMediaIcons = () => {
       </Box>
       <Box bgColor="black" borderRadius="100%">
         <SocialIcon
-          url="https://t.me/greengardend"
+          url="https://t.me/greenghostdegen"
           bgColor="#4cfd27"
           style={{ width: 60, height: 60 }}
         />
