@@ -17,7 +17,7 @@ export const ImgEarth = () => {
       >
         <Box
           as="img"
-          src="/media/green-garden-dispensary-tokenized-cannabis-shop-ghostverse-mxghosts-nft-dao.webp"
+          src="/media/green-ghost-degen-weed-shop.webp"
           width={{ base: '80px' }}
           height={{ base: '80px' }}
           maxW="inherit"

@@ -45,7 +45,7 @@ export const Tokenized03 = () => {
         >
           <Box
             as="img"
-            src="/media/green-garden-dispensary-cannabis-shop-phuket-partner-ebudsdac.webp"
+            src="/media/green-ghost-degen-weed-shop-partner-ebudsdac.webp"
             width={{ base: '80px' }}
             height={{ base: '80px' }}
             maxW="inherit"
@@ -67,7 +67,7 @@ export const Tokenized03 = () => {
         >
           <Box
             as="img"
-            src="/media/green-garden-dispensary-cannabis-shop-phuket-partner-plata.webp"
+            src="/media/green-ghost-degen-weed-shop-partner-plata.webp"
             width={{ base: '80px' }}
             height={{ base: '80px' }}
             maxW="inherit"
@@ -89,7 +89,7 @@ export const Tokenized03 = () => {
         >
           <Box
             as="img"
-            src="/media/green-garden-dispensary-cannabis-shop-phuket-partner-fainart.webp"
+            src="/media/green-ghost-degen-weed-shop-partner-fainart.webp"
             width={{ base: '80px' }}
             height={{ base: '80px' }}
             maxW="inherit"
@@ -111,7 +111,7 @@ export const Tokenized03 = () => {
         >
           <Box
             as="img"
-            src="/media/green-garden-dispensary-cannabis-shop-phuket-partner-gcc.webp"
+            src="/media/green-ghost-degen-weed-shop-partner-gcc.webp"
             width={{ base: '80px' }}
             height={{ base: '80px' }}
             maxW="inherit"
@@ -133,7 +133,7 @@ export const Tokenized03 = () => {
         >
           <Box
             as="img"
-            src="/media/green-garden-dispensary-cannabis-shop-phuket-partner-effort-economy.webp"
+            src="/media/green-ghost-degen-weed-shop-partner-effort-economy.webp"
             width={{ base: '80px' }}
             height={{ base: '80px' }}
             maxW="inherit"
@@ -155,7 +155,7 @@ export const Tokenized03 = () => {
         >
           <Box
             as="img"
-            src="/media/green-garden-dispensary-cannabis-shop-phuket-partner-peerme.webp"
+            src="/media/green-ghost-degen-weed-shop-partner-peerme.webp"
             width={{ base: '80px' }}
             height={{ base: '80px' }}
             maxW="inherit"

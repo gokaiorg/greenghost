@@ -11,9 +11,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>
-          Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา.
-        </title>
+        <title>Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา.</title>
         <meta
           name="description"
           content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
@@ -62,8 +60,8 @@ const Home: NextPage = () => {
           mr={50}
         >
           <Text as="h2" fontSize="4xl" marginBottom={4}>
-            Welcome to Green Ghost, Phuket&apos;s premier
-            destination for high-quality marijuana, weed, and ganja.
+            Welcome to Green Ghost, Phuket&apos;s premier destination for
+            high-quality marijuana, weed, and ganja.
           </Text>
           <Text as="p" fontSize="3xl">
             Our cannabis shop in Phuket offers a wide variety of locally-sourced

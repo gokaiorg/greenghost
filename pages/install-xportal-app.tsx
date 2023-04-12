@@ -12,9 +12,7 @@ const InstallXportal: NextPage = () => {
   return (
     <>
       <Head>
-        <title>
-          Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา.
-        </title>
+        <title>Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา.</title>
         <meta
           name="description"
           content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
@@ -149,7 +147,7 @@ const InstallXportal: NextPage = () => {
             >
               {' '}
               <Image
-                src="/media/green-garden-dispensary-cannabis-shop-phuket-install-xportal-app-click-referral-link.webp"
+                src="/media/green-ghost-degen-weed-shop-install-xportal-app-click-referral-link.webp"
                 alt="Green Ghost - Degen Weed Shop - Install xPortal - Click Referral Link"
                 title="Green Ghost - Degen Weed Shop - Install xPortal - Click Referral Link"
                 layout="fill"
@@ -165,7 +163,7 @@ const InstallXportal: NextPage = () => {
             >
               {' '}
               <Image
-                src="/media/green-garden-dispensary-cannabis-shop-phuket-install-xportal-app-enter-referral-code.webp"
+                src="/media/green-ghost-degen-weed-shop-install-xportal-app-enter-referral-code.webp"
                 alt="Green Ghost - Degen Weed Shop - Install xPortal - Enter Referral code"
                 title="Green Ghost - Degen Weed Shop - Install xPortal - Enter Referral code"
                 layout="fill"
@@ -181,7 +179,7 @@ const InstallXportal: NextPage = () => {
             >
               {' '}
               <Image
-                src="/media/green-garden-dispensary-cannabis-shop-phuket-install-xportal-app-verify-phone-number.webp"
+                src="/media/green-ghost-degen-weed-shop-install-xportal-app-verify-phone-number.webp"
                 alt="Green Ghost - Degen Weed Shop - Install xPortal - Verify Phone Number"
                 title="Green Ghost - Degen Weed Shop - Install xPortal - Verify Phone Number"
                 layout="fill"
@@ -224,7 +222,7 @@ const InstallXportal: NextPage = () => {
             >
               {' '}
               <Image
-                src="/media/green-garden-dispensary-cannabis-shop-phuket-install-xportal-app-click-play-menu.webp"
+                src="/media/green-ghost-degen-weed-shop-install-xportal-app-click-play-menu.webp"
                 alt="Green Ghost - Degen Weed Shop - Install xPortal - Click Play Menu"
                 title="Green Ghost - Degen Weed Shop - Install xPortal - Click Play Menu"
                 layout="fill"
@@ -240,7 +238,7 @@ const InstallXportal: NextPage = () => {
             >
               {' '}
               <Image
-                src="/media/green-garden-dispensary-cannabis-shop-phuket-install-xportal-app-claim-your-herotag.webp"
+                src="/media/green-ghost-degen-weed-shop-install-xportal-app-claim-your-herotag.webp"
                 alt="Green Ghost - Degen Weed Shop - Install xPortal - Claim Your Herotag"
                 title="Green Ghost - Degen Weed Shop - Install xPortal - Claim Your Herotag"
                 layout="fill"

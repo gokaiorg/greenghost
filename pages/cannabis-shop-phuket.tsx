@@ -15,8 +15,7 @@ const CannabisShop: NextPage = () => {
     <>
       <Head>
         <title>
-          Green Ghost - Cannabis Shop Selection - Buds, Pre Rolled,
-          Edibles.
+          Green Ghost - Cannabis Shop Selection - Buds, Pre Rolled, Edibles.
         </title>
         <meta
           name="description"
@@ -119,20 +118,24 @@ const CannabisShop: NextPage = () => {
           <TabPanels>
             <TabPanel px={0}>
               <Box
-              as="h3"
-          borderColor="ghostVerse.color2.base"
-          bgColor="ghostVerse.dark.lighter"
-          borderWidth={1}
-          backdropFilter="blur(3px)"
-          p={4}
-          my={4}
-          mx="auto"
+                as="h3"
+                borderColor="ghostVerse.color2.base"
+                bgColor="ghostVerse.dark.lighter"
+                borderWidth={1}
+                backdropFilter="blur(3px)"
+                p={4}
+                my={4}
+                mx="auto"
                 display="flex"
                 textAlign="center"
-          width="fit-content"
-          flexDirection="column"
-          fontSize={20}
-              >Our catalogue is no longer available at the moment, your new favourite strains will arrive very soon! Stay tuned so you don't miss 🌱</Box>
+                width="fit-content"
+                flexDirection="column"
+                fontSize={20}
+              >
+                Our catalogue is no longer available at the moment, your new
+                favourite strains will arrive very soon! Stay tuned so you don't
+                miss 🌱
+              </Box>
               {/* <Bud /> */}
             </TabPanel>
             <TabPanel px={0}>

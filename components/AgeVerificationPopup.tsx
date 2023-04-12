@@ -55,7 +55,7 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
         <Box
           onTouchStart={handleClose}
           as="img"
-          src="/media/green-garden-dispensary-cannabis-shop-phuket-older-20-only.webp"
+          src="/media/green-ghost-degen-weed-shop-older-20-only.webp"
           width={{ base: '300px' }}
           height={{ base: '300px' }}
           maxW="inherit"

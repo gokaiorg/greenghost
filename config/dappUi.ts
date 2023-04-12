@@ -41,8 +41,7 @@ export const bud = [
     THC: '22',
     CBD: 'undefined',
     effects: 'Sleepy, Hungry, Tingly',
-    image:
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-og-poison-cover.webp',
+    image: '/media/green-ghost-degen-weed-shop-strain-og-poison-cover.webp',
     imageName: 'Green Ghost - Degen Weed Shop - Bud OG Poison',
   },
   {
@@ -55,8 +54,7 @@ export const bud = [
     THC: '19/29',
     CBD: 'undefined',
     effects: 'Talkative, Happy, Giggly',
-    image:
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-runtz-cover.webp',
+    image: '/media/green-ghost-degen-weed-shop-strain-runtz-cover.webp',
     imageName: 'Green Ghost - Degen Weed Shop - Bud Runtz',
   },
   {
@@ -69,10 +67,8 @@ export const bud = [
     THC: '17/25',
     CBD: 'undefined',
     effects: 'Euphoric, Aroused, Happy',
-    image:
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-green-gelato-cover.webp',
-    imageName:
-      'Green Ghost - Degen Weed Shop - Bud Green Gelato',
+    image: '/media/green-ghost-degen-weed-shop-strain-green-gelato-cover.webp',
+    imageName: 'Green Ghost - Degen Weed Shop - Bud Green Gelato',
   },
   {
     name: 'Gelato Dream',
@@ -84,10 +80,8 @@ export const bud = [
     THC: '20/30',
     CBD: 'undefined',
     effects: 'Euphoric, Focused, Happy',
-    image:
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-gelato-dream-cover.webp',
-    imageName:
-      'Green Ghost - Degen Weed Shop - Bud Gelato Dream',
+    image: '/media/green-ghost-degen-weed-shop-strain-gelato-dream-cover.webp',
+    imageName: 'Green Ghost - Degen Weed Shop - Bud Gelato Dream',
   },
   {
     name: 'White Runtz',
@@ -99,10 +93,8 @@ export const bud = [
     THC: '23/24',
     CBD: 'undefined',
     effects: 'Tingly, Relaxed, Euphoric',
-    image:
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-white-runtz-cover.webp',
-    imageName:
-      'Green Ghost - Degen Weed Shop - Bud White Runtz',
+    image: '/media/green-ghost-degen-weed-shop-strain-white-runtz-cover.webp',
+    imageName: 'Green Ghost - Degen Weed Shop - Bud White Runtz',
   },
   {
     name: 'Banana Kush',
@@ -114,10 +106,8 @@ export const bud = [
     THC: '18/25',
     CBD: 'undefined',
     effects: 'Talkative, Sleeppy, Giggly',
-    image:
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-banana-kush-cover.webp',
-    imageName:
-      'Green Ghost - Degen Weed Shop - Bud Banana Kush',
+    image: '/media/green-ghost-degen-weed-shop-strain-banana-kush-cover.webp',
+    imageName: 'Green Ghost - Degen Weed Shop - Bud Banana Kush',
   },
   {
     name: 'Jack Herer',
@@ -129,10 +119,8 @@ export const bud = [
     THC: '19/29',
     CBD: 'undefined',
     effects: 'Energetic, Creative, Uplifted',
-    image:
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-jack-herer-cover.webp',
-    imageName:
-      'Green Ghost - Degen Weed Shop - Bud Jack Herer',
+    image: '/media/green-ghost-degen-weed-shop-strain-jack-herer-cover.webp',
+    imageName: 'Green Ghost - Degen Weed Shop - Bud Jack Herer',
   },
   {
     name: 'Chem Dog',
@@ -144,8 +132,7 @@ export const bud = [
     THC: '15/20',
     CBD: 'undefined',
     effects: 'Euphoric, Uplifted, Creative',
-    image:
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-chem-dog-cover.webp',
+    image: '/media/green-ghost-degen-weed-shop-strain-chem-dog-cover.webp',
     imageName: 'Green Ghost - Degen Weed Shop - Bud Chem Dog',
   },
   {
@@ -158,10 +145,8 @@ export const bud = [
     THC: '20/22',
     CBD: 'undefined',
     effects: 'Relaxed, Happy, Talkative',
-    image:
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-moon-fruit-cover.webp',
-    imageName:
-      'Green Ghost - Degen Weed Shop - Bud Moon Fruit',
+    image: '/media/green-ghost-degen-weed-shop-strain-moon-fruit-cover.webp',
+    imageName: 'Green Ghost - Degen Weed Shop - Bud Moon Fruit',
   },
   {
     name: 'Banana Daddy',
@@ -173,10 +158,8 @@ export const bud = [
     THC: '21/30',
     CBD: '1/3',
     effects: 'Happy, Talktative, Relaxed',
-    image:
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-banana-daddy-cover.webp',
-    imageName:
-      'Green Ghost - Degen Weed Shop - Bud Banana Daddy',
+    image: '/media/green-ghost-degen-weed-shop-strain-banana-daddy-cover.webp',
+    imageName: 'Green Ghost - Degen Weed Shop - Bud Banana Daddy',
   },
   {
     name: 'Orange Velvet',
@@ -188,10 +171,8 @@ export const bud = [
     THC: '18/22',
     CBD: 'undefined',
     effects: 'Aroused, Uplifted, Energetic',
-    image:
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-orange-velvet-cover.webp',
-    imageName:
-      'Green Ghost - Degen Weed Shop - Bud Orange Velvet',
+    image: '/media/green-ghost-degen-weed-shop-strain-orange-velvet-cover.webp',
+    imageName: 'Green Ghost - Degen Weed Shop - Bud Orange Velvet',
   },
   {
     name: 'Platinum Punch',
@@ -204,9 +185,8 @@ export const bud = [
     CBD: 'undefined',
     effects: 'Focus, Giggly, Relaxed',
     image:
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-platinum-punch-cover.webp',
-    imageName:
-      'Green Ghost - Degen Weed Shop - Bud Platinum Punch',
+      '/media/green-ghost-degen-weed-shop-strain-platinum-punch-cover.webp',
+    imageName: 'Green Ghost - Degen Weed Shop - Bud Platinum Punch',
   },
   {
     name: 'Lemon Berry Candy',
@@ -219,9 +199,8 @@ export const bud = [
     CBD: '3',
     effects: 'Creative, Energetic, Talkative',
     image:
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-lemon-berry-candy-cover.webp',
-    imageName:
-      'Green Ghost - Degen Weed Shop - Bud Lemon Berry Candy',
+      '/media/green-ghost-degen-weed-shop-strain-lemon-berry-candy-cover.webp',
+    imageName: 'Green Ghost - Degen Weed Shop - Bud Lemon Berry Candy',
   },
   {
     name: 'Mandarin Cookies',
@@ -234,9 +213,8 @@ export const bud = [
     CBD: 'undefined',
     effects: 'Relaxed, Uplifted, Happy',
     image:
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-mandarin-cookies-cover.webp',
-    imageName:
-      'Green Ghost - Degen Weed Shop - Bud Mandarin Cookies',
+      '/media/green-ghost-degen-weed-shop-strain-mandarin-cookies-cover.webp',
+    imageName: 'Green Ghost - Degen Weed Shop - Bud Mandarin Cookies',
   },
   {
     name: 'Mimosa',
@@ -248,8 +226,7 @@ export const bud = [
     THC: '20',
     CBD: '1',
     effects: 'Energetic, Focused, Uplifted',
-    image:
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-mimosa-cover.webp',
+    image: '/media/green-ghost-degen-weed-shop-strain-mimosa-cover.webp',
     imageName: 'Green Ghost - Degen Weed Shop - Bud Mimosa',
   },
   {
@@ -263,9 +240,8 @@ export const bud = [
     CBD: 'undefined',
     effects: 'Sleepy, Tingly, Happy',
     image:
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-black-cherry-punch-cover.webp',
-    imageName:
-      'Green Ghost - Degen Weed Shop - Bud Black Cherry Punch',
+      '/media/green-ghost-degen-weed-shop-strain-black-cherry-punch-cover.webp',
+    imageName: 'Green Ghost - Degen Weed Shop - Bud Black Cherry Punch',
   },
   {
     name: 'Snoop Punch',
@@ -277,10 +253,8 @@ export const bud = [
     THC: '28',
     CBD: 'undefined',
     effects: 'Relaxed, Sleepy, Hungry',
-    image:
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-snoop-punch-cover.webp',
-    imageName:
-      'Green Ghost - Degen Weed Shop - Bud Snoop Punch',
+    image: '/media/green-ghost-degen-weed-shop-strain-snoop-punch-cover.webp',
+    imageName: 'Green Ghost - Degen Weed Shop - Bud Snoop Punch',
   },
 ];
 export const preroll = [

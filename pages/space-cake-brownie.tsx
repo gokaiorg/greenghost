@@ -17,9 +17,7 @@ const SpaceCakeBrownie: NextPage = () => {
   return (
     <>
       <Head>
-        <title>
-          Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา.
-        </title>
+        <title>Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา.</title>
         <meta
           name="description"
           content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
@@ -66,7 +64,7 @@ const SpaceCakeBrownie: NextPage = () => {
           <SwiperSlide>
             <Box
               as="img"
-              src="/media/green-garden-dispensary-cannabis-shop-phuket-edible-brownie-og-kush-cover.webp"
+              src="/media/green-ghost-degen-weed-shop-edible-brownie-og-kush-cover.webp"
               width={{ base: '100%' }}
               height={{ base: '100%' }}
               maxW="inherit"
@@ -77,7 +75,7 @@ const SpaceCakeBrownie: NextPage = () => {
           <SwiperSlide>
             <Box
               as="img"
-              src="/media/green-garden-dispensary-cannabis-shop-phuket-edible-brownie-og-kush-02.webp"
+              src="/media/green-ghost-degen-weed-shop-edible-brownie-og-kush-02.webp"
               width={{ base: '100%' }}
               height={{ base: '100%' }}
               maxW="inherit"
@@ -88,7 +86,7 @@ const SpaceCakeBrownie: NextPage = () => {
           <SwiperSlide>
             <Box
               as="img"
-              src="/media/green-garden-dispensary-cannabis-shop-phuket-edible-brownie-og-kush-03.webp"
+              src="/media/green-ghost-degen-weed-shop-edible-brownie-og-kush-03.webp"
               width={{ base: '100%' }}
               height={{ base: '100%' }}
               maxW="inherit"
@@ -99,7 +97,7 @@ const SpaceCakeBrownie: NextPage = () => {
           <SwiperSlide>
             <Box
               as="img"
-              src="/media/green-garden-dispensary-cannabis-shop-phuket-edible-brownie-og-kush-04.webp"
+              src="/media/green-ghost-degen-weed-shop-edible-brownie-og-kush-04.webp"
               width={{ base: '100%' }}
               height={{ base: '100%' }}
               maxW="inherit"

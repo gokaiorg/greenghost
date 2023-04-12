@@ -31,9 +31,9 @@ export const products: Product[] = [
     descSeo:
       'OG Poison, also referred to as Poison OG, is a potent hybrid that can induce drowsiness after the initial consumption. This strain was specifically crafted to combat severe insomnia and its effects are quick-acting.',
     images: [
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-og-poison-bud-01.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-og-poison-cover.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-og-poison-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-og-poison-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-og-poison-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-og-poison-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Bud OG Poison',
     source: 'https://www.leafly.com/strains/og-poison',
@@ -53,9 +53,9 @@ export const products: Product[] = [
     descSeo:
       'Runtz, also referred to as "Runtz OG," is a rare and highly sought-after hybrid marijuana strain created by the Cookies Fam by crossing Zkittlez with Gelato. It\'s recognized for its exceptional fruity flavor profile that mimics the aroma of sugary candy we all love.',
     images: [
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-runtz-bud-01.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-runtz-cover.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-runtz-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-runtz-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-runtz-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-runtz-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Bud Runtz',
     source: 'https://www.leafly.com/strains/runtz',
@@ -75,12 +75,11 @@ export const products: Product[] = [
     descSeo:
       "Green Gelato is a popular hybrid cannabis strain that offers the best of both worlds with its balanced indica and sativa genetics. This strain is a result of crossing Sunset Sherbet and Thin Mint Girl Scout Cookies, two renowned strains that contribute to Green Gelato's unique characteristics.",
     images: [
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-green-gelato-bud-01.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-green-gelato-cover.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-green-gelato-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-green-gelato-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-green-gelato-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-green-gelato-qr-code.webp',
     ],
-    imgDesc:
-      'Green Ghost - Degen Weed Shop - Bud Green Gelato',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bud Green Gelato',
     source: 'https://www.leafly.com/strains/green-gelato',
   },
   {
@@ -98,12 +97,11 @@ export const products: Product[] = [
     descSeo:
       "With the combination of the original Gelato #41 and a male Loud Dream, Gelato Dream was created, and it's a strain that has been improved upon.",
     images: [
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-gelato-dream-bud-01.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-gelato-dream-cover.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-gelato-dream-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-gelato-dream-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-gelato-dream-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-gelato-dream-qr-code.webp',
     ],
-    imgDesc:
-      'Green Ghost - Degen Weed Shop - Bud Gelato Dream',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bud Gelato Dream',
     source: 'https://www.leafly.com/strains/gelato',
   },
   {
@@ -121,9 +119,9 @@ export const products: Product[] = [
     descSeo:
       'White Runtz is a highly potent hybrid marijuana strain, resulting from the crossbreeding of Gelato and Zkittlez. Its strong effects are long-lasting, and leave you feeling relaxed and tingly.',
     images: [
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-white-runtz-bud-01.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-white-runtz-cover.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-white-runtz-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-white-runtz-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-white-runtz-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-white-runtz-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Bud White Runtz',
     source: 'https://www.leafly.com/strains/white-runtz',
@@ -143,9 +141,9 @@ export const products: Product[] = [
     descSeo:
       'Banana Kush, also known as "Larry Bird" and "Banana Kush #42," is a popular hybrid cannabis strain that offers the best of both worlds with its balanced indica and sativa genetics. This strain is a result of crossing Sunset Sherbet and Thin Mint Girl Scout Cookies, two renowned strains that contribute to Banana Kush\'s unique characteristics.',
     images: [
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-banana-kush-bud-01.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-banana-kush-cover.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-banana-kush-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-banana-kush-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-banana-kush-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-banana-kush-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Bud Banana Kush',
     source: 'https://www.leafly.com/strains/banana-kush',
@@ -165,9 +163,9 @@ export const products: Product[] = [
     descSeo:
       'Jack Herer, also known as "JH," "The Jack," "Premium Jack," and "Platinum Jack" is a sativa-dominant hybrid marijuana strain named after the marijuana activist and author of The Emperor Wears No Clothes.',
     images: [
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-jack-herer-bud-01.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-jack-herer-cover.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-jack-herer-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-jack-herer-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-jack-herer-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-jack-herer-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Bud Jack Herer',
     source: 'https://www.leafly.com/strains/jack-herer',
@@ -187,12 +185,11 @@ export const products: Product[] = [
     descSeo:
       'Chemdawg, also known as "Chemdog," is a legendary hybrid cannabis strain created and distributed by breeder Chemdog since 1991.',
     images: [
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-chem-dog-bud-01.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-chem-dog-cover.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-chem-dog-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-chem-dog-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-chem-dog-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-chem-dog-qr-code.webp',
     ],
-    imgDesc:
-      'Green Ghost - Degen Weed Shop - Bud Green Gelato',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bud Green Gelato',
     source: 'https://www.leafly.com/strains/chemdawg',
   },
   {
@@ -210,9 +207,9 @@ export const products: Product[] = [
     descSeo:
       'Moon Fruit is a highly sought-after cannabis strain that boasts a tantalizing taste profile and visually stunning appearance. Its unique blend of hard candy, exotic passion fruit, lavender, blueberry, and vanilla/raspberry zingers make for a deluxe connoisseur experience that is all about flexing on taste and smell.',
     images: [
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-moon-fruit-bud-01.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-moon-fruit-cover.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-moon-fruit-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-moon-fruit-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-moon-fruit-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-moon-fruit-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Bud Moon Fruit',
     source:
@@ -233,12 +230,11 @@ export const products: Product[] = [
     descSeo:
       'With Banana Daddy, Ethos Genetics has successfully combined two fruity strains, Granddaddy Purp and Banana Hammock R1, to create an exceptional cannabis strain. The result is a visually stunning plant with large, dense, and dark purple buds that emit a delightful aroma of bubblegum and gas.',
     images: [
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-banana-daddy-bud-01.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-banana-daddy-cover.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-banana-daddy-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-banana-daddy-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-banana-daddy-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-banana-daddy-qr-code.webp',
     ],
-    imgDesc:
-      'Green Ghost - Degen Weed Shop - Bud Banana Daddy',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bud Banana Daddy',
     source: 'https://www.leafly.com/strains/banana-daddy',
   },
   {
@@ -256,12 +252,11 @@ export const products: Product[] = [
     descSeo:
       'Looking for a unique strain that tastes and smells like an Orange Dreamsicle? Look no further than Orange Velvet, a rare gem created by MzJill Genetics.',
     images: [
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-orange-velvet-bud-01.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-orange-velvet-cover.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-orange-velvet-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-orange-velvet-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-orange-velvet-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-orange-velvet-qr-code.webp',
     ],
-    imgDesc:
-      'Green Ghost - Degen Weed Shop - Bud Orange Velvet',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bud Orange Velvet',
     source: 'https://www.leafly.com/strains/orange-velvet',
   },
   {
@@ -279,12 +274,11 @@ export const products: Product[] = [
     descSeo:
       'Platinum Punch is a sativa-dominante hybrid strain that results from crossing Platinum Wreck and Fruit Punch. Its effects are believed to offer relaxation and focus, making it a great option for both daytime and evening use.',
     images: [
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-platinum-punch-bud-01.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-platinum-punch-cover.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-platinum-punch-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-platinum-punch-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-platinum-punch-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-platinum-punch-qr-code.webp',
     ],
-    imgDesc:
-      'Green Ghost - Degen Weed Shop - Bud Platinum Punch',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bud Platinum Punch',
     source: 'https://www.leafly.com/strains/platinum-punch',
   },
   {
@@ -302,12 +296,11 @@ export const products: Product[] = [
     descSeo:
       'Lemon Berry Candy OG, a strain from Ethos Genetics, is a cross between Las Vegas Lemon Skunk and LGBT (Lemon Grape Bubba Temple).',
     images: [
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-lemon-berry-candy-bud-01.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-lemon-berry-candy-cover.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-lemon-berry-candy-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-lemon-berry-candy-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-lemon-berry-candy-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-lemon-berry-candy-qr-code.webp',
     ],
-    imgDesc:
-      'Green Ghost - Degen Weed Shop - Bud Lemon Berry Candy',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bud Lemon Berry Candy',
     source: 'https://www.leafly.com/strains/lemon-berry-candy-og',
   },
   {
@@ -325,12 +318,11 @@ export const products: Product[] = [
     descSeo:
       'Mandarin Cookies, also known as "Mandarin Mints," is a premium hybrid cannabis strain that offers a sedating and calming high, making it an excellent choice for relaxation and unwinding.',
     images: [
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-mandarin-cookies-bud-01.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-mandarin-cookies-cover.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-mandarin-cookies-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mandarin-cookies-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mandarin-cookies-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mandarin-cookies-qr-code.webp',
     ],
-    imgDesc:
-      'Green Ghost - Degen Weed Shop - Bud Mandarin Cookies',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bud Mandarin Cookies',
     source: 'https://www.leafly.com/strains/mandarin-cookies',
   },
   {
@@ -348,9 +340,9 @@ export const products: Product[] = [
     descSeo:
       'Mimosa, also known as "Purple Mimosa," is a popular hybrid cannabis strain that offers a balanced high and a delicious taste profile. This strain is a result of crossing Clementine with Purple Punch, two well-regarded strains that contribute to Mimosa\'s unique characteristics.',
     images: [
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-mimosa-bud-01.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-mimosa-cover.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-mimosa-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mimosa-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mimosa-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mimosa-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Bud Mimosa',
     source: 'https://www.leafly.com/strains/mimosa',
@@ -370,12 +362,11 @@ export const products: Product[] = [
     descSeo:
       'Black Cherry Punch is a potent indica-dominant hybrid strain resulting from the crossing of Purple Punch and Black Cherry Pie. With a THC content of around 20%, this strain is not recommended for those with a low tolerance to cannabis.',
     images: [
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-black-cherry-punch-bud-01.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-black-cherry-punch-cover.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-black-cherry-punch-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-black-cherry-punch-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-black-cherry-punch-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-black-cherry-punch-qr-code.webp',
     ],
-    imgDesc:
-      'Green Ghost - Degen Weed Shop - Bud Black Cherry Punch',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bud Black Cherry Punch',
     source: 'https://www.leafly.com/strains/black-cherry-punch',
   },
   {
@@ -393,9 +384,9 @@ export const products: Product[] = [
     descSeo:
       "By blending two of Snoop Dogg's beloved strains, Blue Dream and Master Kush, Snoop Punch was born. Its balanced effects are a perfect reflection of its hybrid nature, providing a cerebral high that inspires creativity while also inducing relaxation in the body.",
     images: [
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-snoop-punch-bud-01.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-snoop-punch-cover.webp',
-      '/media/green-garden-dispensary-cannabis-shop-phuket-strain-snoop-punch-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-snoop-punch-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-snoop-punch-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-snoop-punch-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Bud Snoop Punch',
     source:

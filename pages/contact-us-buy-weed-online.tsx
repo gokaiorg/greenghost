@@ -12,9 +12,7 @@ const BuyWeed: NextPage = () => {
   return (
     <>
       <Head>
-        <title>
-          Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา.
-        </title>
+        <title>Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา.</title>
         <meta
           name="description"
           content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
@@ -47,11 +45,11 @@ const BuyWeed: NextPage = () => {
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
         <HomeSectionTitle title="Contact us - Buy weed online." />
-        <Box display="flex" flexDirection="column">
+        <Box display="flex" flexDirection="column" fontFamily="vt323">
           <Text
             as="h2"
             color="white"
-            fontSize={{ base: 'xl', md: 'lg' }}
+            fontSize={{ base: '3xl' }}
             fontWeight="black"
             borderColor="ghostVerse.color2.base"
             bgColor="ghostVerse.dark.lighter"
@@ -78,14 +76,14 @@ const BuyWeed: NextPage = () => {
             mb={2}
             mr="auto"
           >
-            <Link href="tel:+66918485848">+66 93 645 9898</Link>
+            <Link href="tel:+66936459898">+66 93 645 9898</Link>
           </Text>
         </Box>
-        <Box display="flex" flexDirection="column">
+        <Box display="flex" flexDirection="column" fontFamily="vt323">
           <Text
             as="h2"
             color="white"
-            fontSize={{ base: 'xl', md: 'lg' }}
+            fontSize={{ base: '3xl' }}
             fontWeight="black"
             borderColor="ghostVerse.color2.base"
             bgColor="ghostVerse.dark.lighter"
@@ -97,6 +95,9 @@ const BuyWeed: NextPage = () => {
             mr="auto"
           >
             Contact us to order online
+            <Box as="span" color="ghostVerse.green.base">
+              { ' ' }@greenghostdegen
+            </Box>
           </Text>
           <SocialMediaIcons />
           <Box

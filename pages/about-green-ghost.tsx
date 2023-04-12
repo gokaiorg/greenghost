@@ -74,9 +74,9 @@ const BuyWeed: NextPage = () => {
             <ImgQuestion />
           </Text>
           <Text>
-            Green Ghost is the result of a partnership with best Phuket growers, and Gokai Labs, a
-            digital branding and communication agency with over 10 years of
-            experience in Thailand.
+            Green Ghost is the result of a partnership with best Phuket growers,
+            and Gokai Labs, a digital branding and communication agency with
+            over 10 years of experience in Thailand.
           </Text>
           <Box display="flex" my={4}>
             <Box
@@ -92,7 +92,7 @@ const BuyWeed: NextPage = () => {
             >
               <Box
                 as="img"
-                src="/media/green-garden-dispensary-cannabis-shop-phuket-partner-gokai-labs.webp"
+                src="/media/green-ghost-degen-weed-shop-partner-gokai-labs.webp"
                 width={{ base: '80px' }}
                 height={{ base: '80px' }}
                 maxW="inherit"
@@ -104,8 +104,9 @@ const BuyWeed: NextPage = () => {
           </Box>
           <Text>
             This collaboration has allowed us to launch a unique concept that
-            combines the precision of quality weed production, weed shop management, technology, and
-            creativity. Green Ghost stands out from its competitors.
+            combines the precision of quality weed production, weed shop
+            management, technology, and creativity. Green Ghost stands out from
+            its competitors.
           </Text>
           <br />
           <br />
