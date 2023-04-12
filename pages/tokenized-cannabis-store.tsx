@@ -14,20 +14,20 @@ const CryptoNft: NextPage = () => {
     <>
       <Head>
         <title>
-          Green Garden Dispensary - Tokenized Cannabis Shop - Crypto Coffeeshop.
+          Green Ghost - Tokenized Cannabis Shop - Crypto Coffeeshop.
         </title>
         <meta
           name="description"
-          content="Discover the future of cannabis shopping with The Green Garden Dispensary - a crypto tokenized coffeeshop offering pre-rolled, edibles, and a wide range of flowers. Become a member with NFT ownership to receive exclusive promotions and token cashback rewards. Shop with ease and security with our innovative blockchain-based platform."
+          content="Discover the future of cannabis shopping with The Green Ghost - a crypto tokenized coffeeshop offering pre-rolled, edibles, and a wide range of flowers. Become a member with NFT ownership to receive exclusive promotions and token cashback rewards. Shop with ease and security with our innovative blockchain-based platform."
         />
         <meta
           property="og:title"
-          content="Green Garden Dispensary - Tokenized Cannabis Shop - Crypto Coffeeshop.
+          content="Green Ghost - Tokenized Cannabis Shop - Crypto Coffeeshop.
           Edibles."
         />
         <meta
           property="og:description"
-          content="Discover the future of cannabis shopping with The Green Garden Dispensary - a crypto tokenized coffeeshop offering pre-rolled, edibles, and a wide range of flowers. Become a member with NFT ownership to receive exclusive promotions and token cashback rewards. Shop with ease and security with our innovative blockchain-based platform."
+          content="Discover the future of cannabis shopping with The Green Ghost - a crypto tokenized coffeeshop offering pre-rolled, edibles, and a wide range of flowers. Become a member with NFT ownership to receive exclusive promotions and token cashback rewards. Shop with ease and security with our innovative blockchain-based platform."
         />
         <meta
           property="og:image"
@@ -41,12 +41,12 @@ const CryptoNft: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Garden Dispensary - Tokenized Cannabis Shop - Crypto Coffeeshop.
+          content="Green Ghost - Tokenized Cannabis Shop - Crypto Coffeeshop.
           Edibles."
         />
         <meta
           name="twitter:description"
-          content="Discover the future of cannabis shopping with The Green Garden Dispensary - a crypto tokenized coffeeshop offering pre-rolled, edibles, and a wide range of flowers. Become a member with NFT ownership to receive exclusive promotions and token cashback rewards. Shop with ease and security with our innovative blockchain-based platform."
+          content="Discover the future of cannabis shopping with The Green Ghost - a crypto tokenized coffeeshop offering pre-rolled, edibles, and a wide range of flowers. Become a member with NFT ownership to receive exclusive promotions and token cashback rewards. Shop with ease and security with our innovative blockchain-based platform."
         />
         <meta
           name="twitter:image"

@@ -28,7 +28,7 @@ export const PreRoll = () => {
         strains
         <ImgQuestion />
       </Text>
-      Look no further than Green Garden! Our selection of pre-rolled joints
+      Look no further than Green Ghost! Our selection of pre-rolled joints
       allows you to indulge in the variety of your choice with ease. Whether
       you're looking for a quick hit on the go or just prefer the convenience of
       a pre-rolled joint, we've got you covered.

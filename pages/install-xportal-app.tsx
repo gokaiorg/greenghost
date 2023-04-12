@@ -13,19 +13,19 @@ const InstallXportal: NextPage = () => {
     <>
       <Head>
         <title>
-          Green Garden Dispensary - Phuket Cannabis Shop ร้าน ขาย กัญชา.
+          Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา.
         </title>
         <meta
           name="description"
-          content="Green Garden Dispensary is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
         />
         <meta
           property="og:title"
-          content="Green Garden Dispensary - Phuket Cannabis Shop ร้าน ขาย กัญชา."
+          content="Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา."
         />
         <meta
           property="og:description"
-          content="Green Garden Dispensary is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
         />
         <meta property="og:image" content="https://green.gd/social.png" />
         <meta property="og:image:width" content="1895" />
@@ -33,11 +33,11 @@ const InstallXportal: NextPage = () => {
         <meta property="og:url" content="https://green.gd" />
         <meta
           name="twitter:title"
-          content="Green Garden Dispensary - Phuket Cannabis Shop ร้าน ขาย กัญชา."
+          content="Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา."
         />
         <meta
           name="twitter:description"
-          content="Green Garden Dispensary is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
         />
         <meta name="twitter:image" content="https://green.gd/social.png" />
         <meta name="twitter:url" content="https://green.gd" />
@@ -84,8 +84,8 @@ const InstallXportal: NextPage = () => {
               >
                 <Image
                   src="/media/app-store.svg"
-                  alt="Green Garden Dispensary - Cannabis Shop Phuket - Install xPortal - App Store"
-                  title="Green Garden Dispensary - Cannabis Shop Phuket - Install xPortal - App Store"
+                  alt="Green Ghost - Degen Weed Shop - Install xPortal - App Store"
+                  title="Green Ghost - Degen Weed Shop - Install xPortal - App Store"
                   width="120"
                   height="42"
                 />
@@ -100,8 +100,8 @@ const InstallXportal: NextPage = () => {
                   src="/media/play-store.svg"
                   width="135"
                   height="42"
-                  alt="Green Garden Dispensary - Cannabis Shop Phuket - Install xPortal - Play Store"
-                  title="Green Garden Dispensary - Cannabis Shop Phuket - Install xPortal - Play Store"
+                  alt="Green Ghost - Degen Weed Shop - Install xPortal - Play Store"
+                  title="Green Ghost - Degen Weed Shop - Install xPortal - Play Store"
                 />
               </Link>
             </Box>
@@ -114,8 +114,8 @@ const InstallXportal: NextPage = () => {
                   src="/media/huawei-store.svg"
                   width="132"
                   height="42"
-                  alt="Green Garden Dispensary - Cannabis Shop Phuket - Install xPortal - Huawei Store"
-                  title="Green Garden Dispensary - Cannabis Shop Phuket - Install xPortal - Huawei Store"
+                  alt="Green Ghost - Degen Weed Shop - Install xPortal - Huawei Store"
+                  title="Green Ghost - Degen Weed Shop - Install xPortal - Huawei Store"
                 />
               </Link>
             </Box>
@@ -150,8 +150,8 @@ const InstallXportal: NextPage = () => {
               {' '}
               <Image
                 src="/media/green-garden-dispensary-cannabis-shop-phuket-install-xportal-app-click-referral-link.webp"
-                alt="Green Garden Dispensary - Cannabis Shop Phuket - Install xPortal - Click Referral Link"
-                title="Green Garden Dispensary - Cannabis Shop Phuket - Install xPortal - Click Referral Link"
+                alt="Green Ghost - Degen Weed Shop - Install xPortal - Click Referral Link"
+                title="Green Ghost - Degen Weed Shop - Install xPortal - Click Referral Link"
                 layout="fill"
                 objectFit="contain"
               />
@@ -166,8 +166,8 @@ const InstallXportal: NextPage = () => {
               {' '}
               <Image
                 src="/media/green-garden-dispensary-cannabis-shop-phuket-install-xportal-app-enter-referral-code.webp"
-                alt="Green Garden Dispensary - Cannabis Shop Phuket - Install xPortal - Enter Referral code"
-                title="Green Garden Dispensary - Cannabis Shop Phuket - Install xPortal - Enter Referral code"
+                alt="Green Ghost - Degen Weed Shop - Install xPortal - Enter Referral code"
+                title="Green Ghost - Degen Weed Shop - Install xPortal - Enter Referral code"
                 layout="fill"
                 objectFit="contain"
               />
@@ -182,8 +182,8 @@ const InstallXportal: NextPage = () => {
               {' '}
               <Image
                 src="/media/green-garden-dispensary-cannabis-shop-phuket-install-xportal-app-verify-phone-number.webp"
-                alt="Green Garden Dispensary - Cannabis Shop Phuket - Install xPortal - Verify Phone Number"
-                title="Green Garden Dispensary - Cannabis Shop Phuket - Install xPortal - Verify Phone Number"
+                alt="Green Ghost - Degen Weed Shop - Install xPortal - Verify Phone Number"
+                title="Green Ghost - Degen Weed Shop - Install xPortal - Verify Phone Number"
                 layout="fill"
                 objectFit="contain"
               />
@@ -225,8 +225,8 @@ const InstallXportal: NextPage = () => {
               {' '}
               <Image
                 src="/media/green-garden-dispensary-cannabis-shop-phuket-install-xportal-app-click-play-menu.webp"
-                alt="Green Garden Dispensary - Cannabis Shop Phuket - Install xPortal - Click Play Menu"
-                title="Green Garden Dispensary - Cannabis Shop Phuket - Install xPortal - Click Play Menu"
+                alt="Green Ghost - Degen Weed Shop - Install xPortal - Click Play Menu"
+                title="Green Ghost - Degen Weed Shop - Install xPortal - Click Play Menu"
                 layout="fill"
                 objectFit="contain"
               />
@@ -241,8 +241,8 @@ const InstallXportal: NextPage = () => {
               {' '}
               <Image
                 src="/media/green-garden-dispensary-cannabis-shop-phuket-install-xportal-app-claim-your-herotag.webp"
-                alt="Green Garden Dispensary - Cannabis Shop Phuket - Install xPortal - Claim Your Herotag"
-                title="Green Garden Dispensary - Cannabis Shop Phuket - Install xPortal - Claim Your Herotag"
+                alt="Green Ghost - Degen Weed Shop - Install xPortal - Claim Your Herotag"
+                title="Green Ghost - Degen Weed Shop - Install xPortal - Claim Your Herotag"
                 layout="fill"
                 objectFit="contain"
               />

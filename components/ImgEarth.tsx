@@ -21,8 +21,8 @@ export const ImgEarth = () => {
           width={{ base: '80px' }}
           height={{ base: '80px' }}
           maxW="inherit"
-          alt="Green Garden Dispensary - Tokenized Cannabis Shop - GhostVerse MxGhosts NFT DAO"
-          title="Green Garden Dispensary - Tokenized Cannabis Shop - GhostVerse MxGhosts NFT DAO"
+          alt="Green Ghost - Tokenized Cannabis Shop - GhostVerse MxGhosts NFT DAO"
+          title="Green Ghost - Tokenized Cannabis Shop - GhostVerse MxGhosts NFT DAO"
         />
       </motion.div>
     </Box>

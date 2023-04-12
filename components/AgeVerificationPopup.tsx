@@ -59,8 +59,8 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           width={{ base: '300px' }}
           height={{ base: '300px' }}
           maxW="inherit"
-          alt="Green Garden Dispensary - Cannabis Shop Phuket - 20 or older only"
-          title="Green Garden Dispensary - Cannabis Shop Phuket - 20 or older only"
+          alt="Green Ghost - Degen Weed Shop - 20 or older only"
+          title="Green Ghost - Degen Weed Shop - 20 or older only"
         />
         <Box
           as="h2"

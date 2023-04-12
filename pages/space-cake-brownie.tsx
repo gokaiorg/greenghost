@@ -18,19 +18,19 @@ const SpaceCakeBrownie: NextPage = () => {
     <>
       <Head>
         <title>
-          Green Garden Dispensary - Phuket Cannabis Shop ร้าน ขาย กัญชา.
+          Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา.
         </title>
         <meta
           name="description"
-          content="Green Garden Dispensary is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
         />
         <meta
           property="og:title"
-          content="Green Garden Dispensary - Phuket Cannabis Shop ร้าน ขาย กัญชา."
+          content="Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา."
         />
         <meta
           property="og:description"
-          content="Green Garden Dispensary is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
         />
         <meta property="og:image" content="https://green.gd/social.png" />
         <meta property="og:image:width" content="1895" />
@@ -38,11 +38,11 @@ const SpaceCakeBrownie: NextPage = () => {
         <meta property="og:url" content="https://green.gd" />
         <meta
           name="twitter:title"
-          content="Green Garden Dispensary - Phuket Cannabis Shop ร้าน ขาย กัญชา."
+          content="Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา."
         />
         <meta
           name="twitter:description"
-          content="Green Garden Dispensary is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
         />
         <meta name="twitter:image" content="https://green.gd/social.png" />
         <meta name="twitter:url" content="https://green.gd" />
@@ -70,8 +70,8 @@ const SpaceCakeBrownie: NextPage = () => {
               width={{ base: '100%' }}
               height={{ base: '100%' }}
               maxW="inherit"
-              alt="Green Garden Dispensary - Cannabis Shop Phuket - Brownie OG Kush"
-              title="Green Garden Dispensary - Cannabis Shop Phuket - Brownie OG Kush"
+              alt="Green Ghost - Degen Weed Shop - Brownie OG Kush"
+              title="Green Ghost - Degen Weed Shop - Brownie OG Kush"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -81,8 +81,8 @@ const SpaceCakeBrownie: NextPage = () => {
               width={{ base: '100%' }}
               height={{ base: '100%' }}
               maxW="inherit"
-              alt="Green Garden Dispensary - Cannabis Shop Phuket - Brownie OG Kush"
-              title="Green Garden Dispensary - Cannabis Shop Phuket - Brownie OG Kush"
+              alt="Green Ghost - Degen Weed Shop - Brownie OG Kush"
+              title="Green Ghost - Degen Weed Shop - Brownie OG Kush"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -92,8 +92,8 @@ const SpaceCakeBrownie: NextPage = () => {
               width={{ base: '100%' }}
               height={{ base: '100%' }}
               maxW="inherit"
-              alt="Green Garden Dispensary - Cannabis Shop Phuket - Brownie OG Kush"
-              title="Green Garden Dispensary - Cannabis Shop Phuket - Brownie OG Kush"
+              alt="Green Ghost - Degen Weed Shop - Brownie OG Kush"
+              title="Green Ghost - Degen Weed Shop - Brownie OG Kush"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -103,8 +103,8 @@ const SpaceCakeBrownie: NextPage = () => {
               width={{ base: '100%' }}
               height={{ base: '100%' }}
               maxW="inherit"
-              alt="Green Garden Dispensary - Cannabis Shop Phuket - Brownie OG Kush"
-              title="Green Garden Dispensary - Cannabis Shop Phuket - Brownie OG Kush"
+              alt="Green Ghost - Degen Weed Shop - Brownie OG Kush"
+              title="Green Ghost - Degen Weed Shop - Brownie OG Kush"
             />
           </SwiperSlide>
         </Swiper>

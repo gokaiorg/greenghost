@@ -12,19 +12,19 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>
-          Green Garden Dispensary - Phuket Cannabis Shop ร้าน ขาย กัญชา.
+          Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา.
         </title>
         <meta
           name="description"
-          content="Green Garden Dispensary is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
         />
         <meta
           property="og:title"
-          content="Green Garden Dispensary - Phuket Cannabis Shop ร้าน ขาย กัญชา."
+          content="Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา."
         />
         <meta
           property="og:description"
-          content="Green Garden Dispensary is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
         />
         <meta property="og:image" content="https://green.gd/social.png" />
         <meta property="og:image:width" content="1895" />
@@ -32,11 +32,11 @@ const Home: NextPage = () => {
         <meta property="og:url" content="https://green.gd" />
         <meta
           name="twitter:title"
-          content="Green Garden Dispensary - Phuket Cannabis Shop ร้าน ขาย กัญชา."
+          content="Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา."
         />
         <meta
           name="twitter:description"
-          content="Green Garden Dispensary is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
         />
         <meta name="twitter:image" content="https://green.gd/social.png" />
         <meta name="twitter:url" content="https://green.gd" />
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <HomeSectionTitle title="Green Garden Dispensary - Cannabis Shop ร้าน ขาย กัญชา." />
+        <HomeSectionTitle title="Green Ghost - Degen Weed Shop ร้าน ขาย กัญชา." />
         <Box
           display="flex"
           flexDirection="column"
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
           mr={50}
         >
           <Text as="h2" fontSize="4xl" marginBottom={4}>
-            Welcome to Green Garden Dispensary, Phuket&apos;s premier
+            Welcome to Green Ghost, Phuket&apos;s premier
             destination for high-quality marijuana, weed, and ganja.
           </Text>
           <Text as="p" fontSize="3xl">

@@ -35,11 +35,11 @@ export default function ProductPage({ product }: ProductPageProps) {
   return (
     <>
       <Head>
-        <title>Green Garden Dispensary - {product.name} Strain</title>
+        <title>Green Ghost - {product.name} Strain</title>
         <meta name="description" content={product.descSeo} />
         <meta
           property="og:title"
-          content={`Green Garden Dispensary - ${product.name} Strain`}
+          content={`Green Ghost - ${product.name} Strain`}
         />
         <meta property="og:description" content={product.descSeo} />
         <meta property="og:image" content={product.images[1]} />
@@ -48,7 +48,7 @@ export default function ProductPage({ product }: ProductPageProps) {
         <meta property="og:url" content={`https://green.gd/${product.slug}`} />
         <meta
           name="twitter:title"
-          content={`Green Garden Dispensary - ${product.name} Strain`}
+          content={`Green Ghost - ${product.name} Strain`}
         />
         <meta name="twitter:description" content={product.descSeo} />
         <meta name="twitter:image" content={product.images[1]} />

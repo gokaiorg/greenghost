@@ -15,20 +15,20 @@ const CannabisShop: NextPage = () => {
     <>
       <Head>
         <title>
-          Green Garden Dispensary - Cannabis Shop Selection - Buds, Pre Rolled,
+          Green Ghost - Cannabis Shop Selection - Buds, Pre Rolled,
           Edibles.
         </title>
         <meta
           name="description"
-          content="Explore our wide selection of high-quality cannabis products including premium flowers, pre-rolled joints, and delicious edibles. Our products are carefully curated and lab-tested to ensure the best possible experience for our customers. Discover your perfect strain today at The Green Garden Dispensary in Phuket."
+          content="Explore our wide selection of high-quality cannabis products including premium flowers, pre-rolled joints, and delicious edibles. Our products are carefully curated and lab-tested to ensure the best possible experience for our customers. Discover your perfect strain today at The Green Ghost in Phuket."
         />
         <meta
           property="og:title"
-          content="Green Garden Dispensary - Cannabis Shop Selection - Buds, Pre Rolled, Edibles."
+          content="Green Ghost - Cannabis Shop Selection - Buds, Pre Rolled, Edibles."
         />
         <meta
           property="og:description"
-          content="Explore our wide selection of high-quality cannabis products including premium flowers, pre-rolled joints, and delicious edibles. Our products are carefully curated and lab-tested to ensure the best possible experience for our customers. Discover your perfect strain today at The Green Garden Dispensary in Phuket."
+          content="Explore our wide selection of high-quality cannabis products including premium flowers, pre-rolled joints, and delicious edibles. Our products are carefully curated and lab-tested to ensure the best possible experience for our customers. Discover your perfect strain today at The Green Ghost in Phuket."
         />
         <meta
           property="og:image"
@@ -42,11 +42,11 @@ const CannabisShop: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Garden Dispensary - Cannabis Shop Selection - Buds, Pre Rolled, Edibles."
+          content="Green Ghost - Cannabis Shop Selection - Buds, Pre Rolled, Edibles."
         />
         <meta
           name="twitter:description"
-          content="Explore our wide selection of high-quality cannabis products including premium flowers, pre-rolled joints, and delicious edibles. Our products are carefully curated and lab-tested to ensure the best possible experience for our customers. Discover your perfect strain today at The Green Garden Dispensary in Phuket."
+          content="Explore our wide selection of high-quality cannabis products including premium flowers, pre-rolled joints, and delicious edibles. Our products are carefully curated and lab-tested to ensure the best possible experience for our customers. Discover your perfect strain today at The Green Ghost in Phuket."
         />
         <meta
           name="twitter:image"
@@ -118,7 +118,22 @@ const CannabisShop: NextPage = () => {
           </TabList>
           <TabPanels>
             <TabPanel px={0}>
-              <Bud />
+              <Box
+              as="h3"
+          borderColor="ghostVerse.color2.base"
+          bgColor="ghostVerse.dark.lighter"
+          borderWidth={1}
+          backdropFilter="blur(3px)"
+          p={4}
+          my={4}
+          mx="auto"
+                display="flex"
+                textAlign="center"
+          width="fit-content"
+          flexDirection="column"
+          fontSize={20}
+              >Our catalogue is no longer available at the moment, your new favourite strains will arrive very soon! Stay tuned so you don't miss 🌱</Box>
+              {/* <Bud /> */}
             </TabPanel>
             <TabPanel px={0}>
               <PreRoll />

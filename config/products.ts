@@ -35,7 +35,7 @@ export const products: Product[] = [
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-og-poison-cover.webp',
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-og-poison-qr-code.webp',
     ],
-    imgDesc: 'Green Garden Dispensary - Cannabis Shop Phuket - Bud OG Poison',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bud OG Poison',
     source: 'https://www.leafly.com/strains/og-poison',
   },
   {
@@ -57,7 +57,7 @@ export const products: Product[] = [
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-runtz-cover.webp',
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-runtz-qr-code.webp',
     ],
-    imgDesc: 'Green Garden Dispensary - Cannabis Shop Phuket - Bud Runtz',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bud Runtz',
     source: 'https://www.leafly.com/strains/runtz',
   },
   {
@@ -80,7 +80,7 @@ export const products: Product[] = [
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-green-gelato-qr-code.webp',
     ],
     imgDesc:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Green Gelato',
+      'Green Ghost - Degen Weed Shop - Bud Green Gelato',
     source: 'https://www.leafly.com/strains/green-gelato',
   },
   {
@@ -103,7 +103,7 @@ export const products: Product[] = [
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-gelato-dream-qr-code.webp',
     ],
     imgDesc:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Gelato Dream',
+      'Green Ghost - Degen Weed Shop - Bud Gelato Dream',
     source: 'https://www.leafly.com/strains/gelato',
   },
   {
@@ -125,7 +125,7 @@ export const products: Product[] = [
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-white-runtz-cover.webp',
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-white-runtz-qr-code.webp',
     ],
-    imgDesc: 'Green Garden Dispensary - Cannabis Shop Phuket - Bud White Runtz',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bud White Runtz',
     source: 'https://www.leafly.com/strains/white-runtz',
   },
   {
@@ -147,7 +147,7 @@ export const products: Product[] = [
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-banana-kush-cover.webp',
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-banana-kush-qr-code.webp',
     ],
-    imgDesc: 'Green Garden Dispensary - Cannabis Shop Phuket - Bud Banana Kush',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bud Banana Kush',
     source: 'https://www.leafly.com/strains/banana-kush',
   },
   {
@@ -169,7 +169,7 @@ export const products: Product[] = [
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-jack-herer-cover.webp',
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-jack-herer-qr-code.webp',
     ],
-    imgDesc: 'Green Garden Dispensary - Cannabis Shop Phuket - Bud Jack Herer',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bud Jack Herer',
     source: 'https://www.leafly.com/strains/jack-herer',
   },
   {
@@ -192,7 +192,7 @@ export const products: Product[] = [
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-chem-dog-qr-code.webp',
     ],
     imgDesc:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Green Gelato',
+      'Green Ghost - Degen Weed Shop - Bud Green Gelato',
     source: 'https://www.leafly.com/strains/chemdawg',
   },
   {
@@ -214,7 +214,7 @@ export const products: Product[] = [
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-moon-fruit-cover.webp',
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-moon-fruit-qr-code.webp',
     ],
-    imgDesc: 'Green Garden Dispensary - Cannabis Shop Phuket - Bud Moon Fruit',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bud Moon Fruit',
     source:
       'https://www.leafly.com/brands/gardeners/products/gardeners-moonfruit-flower',
   },
@@ -238,7 +238,7 @@ export const products: Product[] = [
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-banana-daddy-qr-code.webp',
     ],
     imgDesc:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Banana Daddy',
+      'Green Ghost - Degen Weed Shop - Bud Banana Daddy',
     source: 'https://www.leafly.com/strains/banana-daddy',
   },
   {
@@ -261,7 +261,7 @@ export const products: Product[] = [
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-orange-velvet-qr-code.webp',
     ],
     imgDesc:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Orange Velvet',
+      'Green Ghost - Degen Weed Shop - Bud Orange Velvet',
     source: 'https://www.leafly.com/strains/orange-velvet',
   },
   {
@@ -284,7 +284,7 @@ export const products: Product[] = [
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-platinum-punch-qr-code.webp',
     ],
     imgDesc:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Platinum Punch',
+      'Green Ghost - Degen Weed Shop - Bud Platinum Punch',
     source: 'https://www.leafly.com/strains/platinum-punch',
   },
   {
@@ -307,7 +307,7 @@ export const products: Product[] = [
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-lemon-berry-candy-qr-code.webp',
     ],
     imgDesc:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Lemon Berry Candy',
+      'Green Ghost - Degen Weed Shop - Bud Lemon Berry Candy',
     source: 'https://www.leafly.com/strains/lemon-berry-candy-og',
   },
   {
@@ -330,7 +330,7 @@ export const products: Product[] = [
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-mandarin-cookies-qr-code.webp',
     ],
     imgDesc:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Mandarin Cookies',
+      'Green Ghost - Degen Weed Shop - Bud Mandarin Cookies',
     source: 'https://www.leafly.com/strains/mandarin-cookies',
   },
   {
@@ -352,7 +352,7 @@ export const products: Product[] = [
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-mimosa-cover.webp',
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-mimosa-qr-code.webp',
     ],
-    imgDesc: 'Green Garden Dispensary - Cannabis Shop Phuket - Bud Mimosa',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bud Mimosa',
     source: 'https://www.leafly.com/strains/mimosa',
   },
   {
@@ -375,7 +375,7 @@ export const products: Product[] = [
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-black-cherry-punch-qr-code.webp',
     ],
     imgDesc:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Black Cherry Punch',
+      'Green Ghost - Degen Weed Shop - Bud Black Cherry Punch',
     source: 'https://www.leafly.com/strains/black-cherry-punch',
   },
   {
@@ -397,7 +397,7 @@ export const products: Product[] = [
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-snoop-punch-cover.webp',
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-snoop-punch-qr-code.webp',
     ],
-    imgDesc: 'Green Garden Dispensary - Cannabis Shop Phuket - Bud Snoop Punch',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bud Snoop Punch',
     source:
       'https://www.leafly.com/brands/elev8-seeds/products/elev8-seeds-snoops-punch-hybrid',
   },

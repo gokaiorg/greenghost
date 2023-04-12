@@ -27,7 +27,7 @@ export const Tokenized03 = () => {
       <br />
       <br />
       If you own an NFT from one of our partners, you can enjoy a 10
-      <ImgPercent /> discount on every order made at the Green Garden cannabis
+      <ImgPercent /> discount on every order made at the Green Ghost cannabis
       store.
       <br />
       <br />
@@ -49,8 +49,8 @@ export const Tokenized03 = () => {
             width={{ base: '80px' }}
             height={{ base: '80px' }}
             maxW="inherit"
-            alt="Green Garden Dispensary - Cannabis Shop Phuket - eBudsDAC Partner"
-            title="Green Garden Dispensary - Cannabis Shop Phuket - eBudsDAC Partner"
+            alt="Green Ghost - Degen Weed Shop - eBudsDAC Partner"
+            title="Green Ghost - Degen Weed Shop - eBudsDAC Partner"
           />
           eBudsDAC
         </Box>
@@ -71,8 +71,8 @@ export const Tokenized03 = () => {
             width={{ base: '80px' }}
             height={{ base: '80px' }}
             maxW="inherit"
-            alt="Green Garden Dispensary - Cannabis Shop Phuket - Plata Partner"
-            title="Green Garden Dispensary - Cannabis Shop Phuket - Plata Partner"
+            alt="Green Ghost - Degen Weed Shop - Plata Partner"
+            title="Green Ghost - Degen Weed Shop - Plata Partner"
           />
           Plata
         </Box>
@@ -93,8 +93,8 @@ export const Tokenized03 = () => {
             width={{ base: '80px' }}
             height={{ base: '80px' }}
             maxW="inherit"
-            alt="Green Garden Dispensary - Cannabis Shop Phuket - Fainart Partner"
-            title="Green Garden Dispensary - Cannabis Shop Phuket - Fainart Partner"
+            alt="Green Ghost - Degen Weed Shop - Fainart Partner"
+            title="Green Ghost - Degen Weed Shop - Fainart Partner"
           />
           Fainart
         </Box>
@@ -115,8 +115,8 @@ export const Tokenized03 = () => {
             width={{ base: '80px' }}
             height={{ base: '80px' }}
             maxW="inherit"
-            alt="Green Garden Dispensary - Cannabis Shop Phuket - GCC Partner"
-            title="Green Garden Dispensary - Cannabis Shop Phuket - GCC Partner"
+            alt="Green Ghost - Degen Weed Shop - GCC Partner"
+            title="Green Ghost - Degen Weed Shop - GCC Partner"
           />
           GCC
         </Box>
@@ -137,8 +137,8 @@ export const Tokenized03 = () => {
             width={{ base: '80px' }}
             height={{ base: '80px' }}
             maxW="inherit"
-            alt="Green Garden Dispensary - Cannabis Shop Phuket - Effort Economy Partner"
-            title="Green Garden Dispensary - Cannabis Shop Phuket - Effort Economy Partner"
+            alt="Green Ghost - Degen Weed Shop - Effort Economy Partner"
+            title="Green Ghost - Degen Weed Shop - Effort Economy Partner"
           />
           Effort
         </Box>
@@ -159,8 +159,8 @@ export const Tokenized03 = () => {
             width={{ base: '80px' }}
             height={{ base: '80px' }}
             maxW="inherit"
-            alt="Green Garden Dispensary - Cannabis Shop Phuket - Peerme Partner"
-            title="Green Garden Dispensary - Cannabis Shop Phuket - Peerme Partner"
+            alt="Green Ghost - Degen Weed Shop - Peerme Partner"
+            title="Green Ghost - Degen Weed Shop - Peerme Partner"
           />
           Peerme
         </Box>

@@ -23,7 +23,7 @@ export const Tokenized01 = () => {
       <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
         Join the new generation in love for weed, art and crypto.
       </Text>
-      Green Garden is a contributor to the{' '}
+      Green Ghost is a contributor to the{' '}
       <Text color="ghostVerse.green.base" as="a" href="https://ghostverse.org/">
         GhostVerse DAO
       </Text>

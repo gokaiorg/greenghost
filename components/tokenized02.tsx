@@ -64,7 +64,7 @@ export const Tokenized02 = () => {
       <br />
       <br />
       The token listing is currently underway, and soon you'll be able to buy
-      your cannabis directly in the Green Garden Dispensary with your
+      your cannabis directly in the Green Ghost with your
       accumulated <ImgDollar />
       EBUD.
       <br />

@@ -7,10 +7,10 @@ export const dappHostname = process.env.NEXT_PUBLIC_DAPP_HOST;
 
 // HTML metata and og tags, default values for MetaHead.tsx component
 export const defaultMetaTags = {
-  title: 'Green Garden Dispensary - Phuket Cannabis Shop ร้าน ขาย กัญชา.',
+  title: 'Green Ghost - Degen Weed Shop ร้าน ขาย กัญชา.',
   description:
-    'Green Garden Dispensary is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories.',
-  shortname: 'Green Garden Dispensary',
+    'Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories.',
+  shortname: 'Green Ghost',
   image: `${dappHostname}/social.png`,
 };
 
@@ -43,7 +43,7 @@ export const bud = [
     effects: 'Sleepy, Hungry, Tingly',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-og-poison-cover.webp',
-    imageName: 'Green Garden Dispensary - Cannabis Shop Phuket - Bud OG Poison',
+    imageName: 'Green Ghost - Degen Weed Shop - Bud OG Poison',
   },
   {
     name: 'Runtz',
@@ -57,7 +57,7 @@ export const bud = [
     effects: 'Talkative, Happy, Giggly',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-runtz-cover.webp',
-    imageName: 'Green Garden Dispensary - Cannabis Shop Phuket - Bud Runtz',
+    imageName: 'Green Ghost - Degen Weed Shop - Bud Runtz',
   },
   {
     name: 'Green Gelato',
@@ -72,7 +72,7 @@ export const bud = [
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-green-gelato-cover.webp',
     imageName:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Green Gelato',
+      'Green Ghost - Degen Weed Shop - Bud Green Gelato',
   },
   {
     name: 'Gelato Dream',
@@ -87,7 +87,7 @@ export const bud = [
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-gelato-dream-cover.webp',
     imageName:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Gelato Dream',
+      'Green Ghost - Degen Weed Shop - Bud Gelato Dream',
   },
   {
     name: 'White Runtz',
@@ -102,7 +102,7 @@ export const bud = [
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-white-runtz-cover.webp',
     imageName:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud White Runtz',
+      'Green Ghost - Degen Weed Shop - Bud White Runtz',
   },
   {
     name: 'Banana Kush',
@@ -117,7 +117,7 @@ export const bud = [
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-banana-kush-cover.webp',
     imageName:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Banana Kush',
+      'Green Ghost - Degen Weed Shop - Bud Banana Kush',
   },
   {
     name: 'Jack Herer',
@@ -132,7 +132,7 @@ export const bud = [
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-jack-herer-cover.webp',
     imageName:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Jack Herer',
+      'Green Ghost - Degen Weed Shop - Bud Jack Herer',
   },
   {
     name: 'Chem Dog',
@@ -146,7 +146,7 @@ export const bud = [
     effects: 'Euphoric, Uplifted, Creative',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-chem-dog-cover.webp',
-    imageName: 'Green Garden Dispensary - Cannabis Shop Phuket - Bud Chem Dog',
+    imageName: 'Green Ghost - Degen Weed Shop - Bud Chem Dog',
   },
   {
     name: 'Moon Fruit',
@@ -161,7 +161,7 @@ export const bud = [
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-moon-fruit-cover.webp',
     imageName:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Moon Fruit',
+      'Green Ghost - Degen Weed Shop - Bud Moon Fruit',
   },
   {
     name: 'Banana Daddy',
@@ -176,7 +176,7 @@ export const bud = [
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-banana-daddy-cover.webp',
     imageName:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Banana Daddy',
+      'Green Ghost - Degen Weed Shop - Bud Banana Daddy',
   },
   {
     name: 'Orange Velvet',
@@ -191,7 +191,7 @@ export const bud = [
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-orange-velvet-cover.webp',
     imageName:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Orange Velvet',
+      'Green Ghost - Degen Weed Shop - Bud Orange Velvet',
   },
   {
     name: 'Platinum Punch',
@@ -206,7 +206,7 @@ export const bud = [
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-platinum-punch-cover.webp',
     imageName:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Platinum Punch',
+      'Green Ghost - Degen Weed Shop - Bud Platinum Punch',
   },
   {
     name: 'Lemon Berry Candy',
@@ -221,7 +221,7 @@ export const bud = [
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-lemon-berry-candy-cover.webp',
     imageName:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Lemon Berry Candy',
+      'Green Ghost - Degen Weed Shop - Bud Lemon Berry Candy',
   },
   {
     name: 'Mandarin Cookies',
@@ -236,7 +236,7 @@ export const bud = [
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-mandarin-cookies-cover.webp',
     imageName:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Mandarin Cookies',
+      'Green Ghost - Degen Weed Shop - Bud Mandarin Cookies',
   },
   {
     name: 'Mimosa',
@@ -250,7 +250,7 @@ export const bud = [
     effects: 'Energetic, Focused, Uplifted',
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-mimosa-cover.webp',
-    imageName: 'Green Garden Dispensary - Cannabis Shop Phuket - Bud Mimosa',
+    imageName: 'Green Ghost - Degen Weed Shop - Bud Mimosa',
   },
   {
     name: 'Black Cherry Punch',
@@ -265,7 +265,7 @@ export const bud = [
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-black-cherry-punch-cover.webp',
     imageName:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Black Cherry Punch',
+      'Green Ghost - Degen Weed Shop - Bud Black Cherry Punch',
   },
   {
     name: 'Snoop Punch',
@@ -280,7 +280,7 @@ export const bud = [
     image:
       '/media/green-garden-dispensary-cannabis-shop-phuket-strain-snoop-punch-cover.webp',
     imageName:
-      'Green Garden Dispensary - Cannabis Shop Phuket - Bud Snoop Punch',
+      'Green Ghost - Degen Weed Shop - Bud Snoop Punch',
   },
 ];
 export const preroll = [
