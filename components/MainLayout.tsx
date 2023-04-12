@@ -17,7 +17,7 @@ export const MainLayout: FC<PropsWithChildren<MetaHeadProps>> = ({
 
   return (
     <>
-      {/* <AgeVerificationPopup onVerify={handleVerify} /> */}
+      <AgeVerificationPopup onVerify={handleVerify} />
       <MetaHead
         metaTitle={metaTitle}
         metaDescription={metaDescription}
