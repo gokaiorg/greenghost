@@ -78,7 +78,7 @@ const BuyWeed: NextPage = () => {
             mb={2}
             mr="auto"
           >
-            <Link href="tel:+66918485848">+66 918 48 58 48</Link>
+            <Link href="tel:+66918485848">+66 93 645 9898</Link>
           </Text>
         </Box>
         <Box display="flex" flexDirection="column">
