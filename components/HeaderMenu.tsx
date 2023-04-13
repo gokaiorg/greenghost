@@ -108,7 +108,7 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
             Chat
           </Box>
         </Link>
-        <Link href="https://goo.gl/maps/uYtaLNoaQu9wTZsZ8">
+        <Link href="https://goo.gl/maps/KTU3ZM9ac21WzgJM6">
           <Box
             display="flex"
             flexDirection="column"
