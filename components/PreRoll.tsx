@@ -36,8 +36,8 @@ export const PreRoll = () => {
         <ImgQuestion /> Our prices are just as affordable as buying bud by the
         gram.
       </Text>
-      For example, a 0.5 gram joint of Cherry Garcia is just 125THB, while a 1
-      gram joint of Critical Kush will only set you back 250THB. So why wait?
+      For example, a 0.5 gram joint of Cherry Garcia is just 150THB, while a 1
+      gram joint of Fruit Spirit will only set you back 900THB. So why wait?
       Browse our selection of buds today and find your new favorite way to enjoy
       cannabis.
     </Box>

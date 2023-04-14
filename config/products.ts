@@ -21,7 +21,7 @@ export const products: Product[] = [
   {
     slug: 'cherry-garcia',
     name: 'Cherry Garcia',
-    price: '250',
+    price: '300',
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -43,7 +43,7 @@ export const products: Product[] = [
   {
     slug: 'critical-kush',
     name: 'Critical Kush',
-    price: '500',
+    price: '400',
     dominance: 'Indica Dominant',
     indica: '90',
     sativa: '10',
@@ -65,7 +65,7 @@ export const products: Product[] = [
   {
     slug: 'royal-moby',
     name: 'Royal Moby',
-    price: '350',
+    price: '500',
     dominance: 'Sativa Dominant',
     indica: '35',
     sativa: '65',
@@ -88,7 +88,7 @@ export const products: Product[] = [
   {
     slug: 'mac-and-jack',
     name: 'MAC and Jack',
-    price: '350',
+    price: '600',
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -110,7 +110,7 @@ export const products: Product[] = [
   {
     slug: 'c-vibez',
     name: 'C-Vibez',
-    price: '350',
+    price: '700',
     dominance: 'Indica Dominant',
     indica: '60',
     sativa: '40',
@@ -133,7 +133,7 @@ export const products: Product[] = [
   {
     slug: 'super-lemon-haze',
     name: 'Super Lemon Haze',
-    price: '350',
+    price: '800',
     dominance: 'Sativa Dominant',
     indica: '30',
     sativa: '70',
@@ -155,7 +155,7 @@ export const products: Product[] = [
   {
     slug: 'mandarin-zkittlez',
     name: 'Mandarin Zkittlez',
-    price: '350',
+    price: '900',
     dominance: 'Indica Dominant',
     indica: '60',
     sativa: '40',
@@ -177,7 +177,7 @@ export const products: Product[] = [
   {
     slug: 'fruit-spirit',
     name: 'Fruit Spirit',
-    price: '350',
+    price: '900',
     dominance: 'Sativa Dominant',
     indica: '70',
     sativa: '30',
