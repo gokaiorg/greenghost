@@ -9,8 +9,7 @@ export const Logo = () => {
       <Box display="flex" alignItems="center">
         <ImgEarth />
         <Box width={{ base: '200px', md: '200px' }}>
-          {/* <ImgG /> */}
-          Green Ghost
+          <ImgG />
         </Box>
       </Box>
     </NextLink>
