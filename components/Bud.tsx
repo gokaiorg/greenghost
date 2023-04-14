@@ -43,7 +43,7 @@ export const Bud = () => {
 
   return (
     <Box mt={4} mb="10">
-      <Box display="flex" alignItems="center">
+      <Box display="flex" alignItems="baseline" mr={4} flexDirection={{ base: "column", lg: "row" }}>
         <Box
           as="h2"
           borderColor="ghostVerse.color2.base"
@@ -59,9 +59,13 @@ export const Bud = () => {
         >
           Buds price for 1 gram.
         </Box>
-        <Box display="flex" alignItems="center" mb={4}>
+        <Box display="flex" mb={{ base: "4", lg: "0" }}>
           <Box mr={4}>
-            <Select value={sortBy} onChange={handleSortChange} w={56}>
+            <Select value={sortBy} onChange={handleSortChange}
+              borderRadius="0"
+              borderColor="ghostVerse.green.base"
+              color="ghostVerse.green.base"
+              outline="none">
               <option value="priceLowToHigh">Price: Low to High</option>
               <option value="priceHighToLow">Price: High to Low</option>
             </Select>
@@ -70,9 +74,12 @@ export const Bud = () => {
             <Select
               value={dominanceFilter}
               onChange={handleDominanceChange}
-              w={56}
+              borderRadius="0"
+              borderColor="ghostVerse.green.base"
+              color="ghostVerse.green.base"
+              outline="none"
             >
-              <option value="All">All</option>
+              <option value="All">Dominance</option>
               <option value="Sativa Dominant">Sativa Dominant</option>
               <option value="Indica Dominant">Indica Dominant</option>
               <option value="Hybrid">Hybrid</option>
