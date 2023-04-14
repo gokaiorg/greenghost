@@ -29,7 +29,7 @@ const BuyWeed: NextPage = () => {
         <meta property="og:image" content="https://green.gd/social.png" />
         <meta property="og:image:width" content="1895" />
         <meta property="og:image:height" content="898" />
-        <meta property="og:url" content="https://green.gd/about-green-garden" />
+        <meta property="og:url" content="https://green.gd/about-green-ghost" />
         <meta name="twitter:title" content="Green Ghost - About." />
         <meta
           name="twitter:description"
@@ -38,10 +38,7 @@ const BuyWeed: NextPage = () => {
           and communication agency with over 10 years of experience in Thailand."
         />
         <meta name="twitter:image" content="https://green.gd/social.png" />
-        <meta
-          name="twitter:url"
-          content="https://green.gd/about-green-garden"
-        />
+        <meta name="twitter:url" content="https://green.gd/about-green-ghost" />
       </Head>
       <MainLayout>
         <HeaderMenu>

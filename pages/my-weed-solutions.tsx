@@ -12,14 +12,14 @@ const BuyWeed: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา.</title>
+        <title>Green Ghost - Grower - My Weed Solutions.</title>
         <meta
           name="description"
           content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
         />
         <meta
           property="og:title"
-          content="Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา."
+          content="Green Ghost - Grower - My Weed Solutions."
         />
         <meta
           property="og:description"
@@ -31,7 +31,7 @@ const BuyWeed: NextPage = () => {
         <meta property="og:url" content="https://green.gd" />
         <meta
           name="twitter:title"
-          content="Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา."
+          content="Green Ghost - Grower - My Weed Solutions."
         />
         <meta
           name="twitter:description"
@@ -44,7 +44,7 @@ const BuyWeed: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <HomeSectionTitle title="Contact us - Buy weed online." />
+        <HomeSectionTitle title="Green Ghost - Grower - My Weed Solutions." />
         <Box display="flex" flexDirection="column" fontFamily="vt323">
           <Text
             as="h2"
@@ -60,9 +60,9 @@ const BuyWeed: NextPage = () => {
             p={4}
             mr="auto"
           >
-            Call the shop
+            My Weed Solutions
           </Text>
-          <Text
+          {/* <Text
             display="inline-flex"
             color="ghostVerse.green.base"
             borderColor="ghostVerse.green.base"
@@ -77,9 +77,9 @@ const BuyWeed: NextPage = () => {
             mr="auto"
           >
             <Link href="tel:+66936459898">+66 93 645 9898</Link>
-          </Text>
+          </Text> */}
         </Box>
-        <Box display="flex" flexDirection="column" fontFamily="vt323">
+        {/* <Box display="flex" flexDirection="column" fontFamily="vt323">
           <Text
             as="h2"
             color="white"
@@ -117,7 +117,7 @@ const BuyWeed: NextPage = () => {
           >
             Immediate delivery in Phuket & Worldwide shipping
           </Box>
-        </Box>
+        </Box> */}
       </MainLayout>
     </>
   );

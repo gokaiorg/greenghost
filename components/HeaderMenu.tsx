@@ -19,7 +19,7 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
         marginRight={{ base: 'auto', md: 0 }}
         display="flex"
       >
-        <Link href="/about-green-garden">
+        <Link href="/about-green-ghost">
           <Box
             display="flex"
             flexDirection="column"

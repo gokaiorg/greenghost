@@ -31,7 +31,7 @@ const CryptoNft: NextPage = () => {
         />
         <meta
           property="og:image"
-          content="https://green.gd/green-garden-dispensary-grand-opening.png"
+          content="https://green.gd/green-ghost-degen-weed-shop-grand-opening.png"
         />
         <meta property="og:image:width" content="1748" />
         <meta property="og:image:height" content="2480" />
@@ -50,7 +50,7 @@ const CryptoNft: NextPage = () => {
         />
         <meta
           name="twitter:image"
-          content="https://green.gd/green-garden-dispensary-grand-opening.png"
+          content="https://green.gd/green-ghost-degen-weed-shop-grand-opening.png"
         />
         <meta
           name="twitter:url"

@@ -29,10 +29,7 @@ const CannabisShop: NextPage = () => {
           property="og:description"
           content="Explore our wide selection of high-quality cannabis products including premium flowers, pre-rolled joints, and delicious edibles. Our products are carefully curated and lab-tested to ensure the best possible experience for our customers. Discover your perfect strain today at The Green Ghost in Phuket."
         />
-        <meta
-          property="og:image"
-          content="https://green.gd/green-garden-dispensary-strain-selection.png"
-        />
+        <meta property="og:image" content="https://green.gd/social.png" />
         <meta property="og:image:width" content="1748" />
         <meta property="og:image:height" content="2480" />
         <meta
@@ -47,10 +44,7 @@ const CannabisShop: NextPage = () => {
           name="twitter:description"
           content="Explore our wide selection of high-quality cannabis products including premium flowers, pre-rolled joints, and delicious edibles. Our products are carefully curated and lab-tested to ensure the best possible experience for our customers. Discover your perfect strain today at The Green Ghost in Phuket."
         />
-        <meta
-          name="twitter:image"
-          content="https://green.gd/green-garden-dispensary-strain-selection.png"
-        />
+        <meta name="twitter:image" content="https://green.gd/social.png" />
         <meta
           name="twitter:url"
           content="https://green.gd/cannabis-shop-phuket"
@@ -117,7 +111,7 @@ const CannabisShop: NextPage = () => {
           </TabList>
           <TabPanels>
             <TabPanel px={0}>
-              <Box
+              {/* <Box
                 as="h3"
                 borderColor="ghostVerse.color2.base"
                 bgColor="ghostVerse.dark.lighter"
@@ -135,8 +129,8 @@ const CannabisShop: NextPage = () => {
                 Our catalogue is no longer available at the moment, your new
                 favourite strains will arrive very soon! Stay tuned so you don't
                 miss 🌱
-              </Box>
-              {/* <Bud /> */}
+              </Box> */}
+              <Bud />
             </TabPanel>
             <TabPanel px={0}>
               <PreRoll />

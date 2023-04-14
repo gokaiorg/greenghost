@@ -1,9 +1,6 @@
 import { Box, Text, SimpleGrid } from '@chakra-ui/react';
-import { PreRollItem } from './PreRollItem';
 import { preroll } from '../config/dappUi';
 import { ImgQuestion } from './ImgQuestion';
-import { ImgDollar } from './ImgDollar';
-import { ImgPercent } from './ImgPercent';
 
 export const PreRoll = () => {
   if (!Array.isArray(preroll)) return null;
@@ -39,8 +36,8 @@ export const PreRoll = () => {
         <ImgQuestion /> Our prices are just as affordable as buying bud by the
         gram.
       </Text>
-      For example, a 0.5 gram joint of Poison Dream is just 125THB, while a 1
-      gram joint of Snoop Punch will only set you back 900THB. So why wait?
+      For example, a 0.5 gram joint of Cherry Garcia is just 125THB, while a 1
+      gram joint of Critical Kush will only set you back 250THB. So why wait?
       Browse our selection of buds today and find your new favorite way to enjoy
       cannabis.
     </Box>

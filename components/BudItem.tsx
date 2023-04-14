@@ -1,43 +1,21 @@
 import { Box } from '@chakra-ui/react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { FC } from 'react';
+import Image from 'next/image';
+import { Product } from '../config/products';
 import { ImgPercent } from './ImgPercent';
 
-interface BudItemProps {
-  image: string;
-  name: string;
-  price: string;
-  pageLink: string;
-  dominance: string;
-  sativa: string;
-  indica: string;
-  THC: string;
-  CBD: string;
-  effects: string;
-  imageName: string;
-}
+type BudItemProps = {
+  product: Product;
+};
 
-export const BudItem: FC<BudItemProps> = ({
-  image,
-  name,
-  price,
-  pageLink,
-  dominance,
-  sativa,
-  indica,
-  THC,
-  CBD,
-  effects,
-  imageName,
-}) => {
+export const BudItem = ({ product }: BudItemProps) => {
   return (
     <Box
       width={{ base: '100%', md: '50%', lg: '33%' }}
       paddingBottom={1}
       paddingRight={1}
     >
-      <Link href={pageLink}>
+      <Link href={product.slug}>
         <Box
           borderColor="ghostVerse.green.base"
           borderWidth={1}
@@ -59,11 +37,11 @@ export const BudItem: FC<BudItemProps> = ({
         >
           <Box width={{ base: 'full' }} height={{ base: 'auto' }}>
             <Image
-              src={image}
-              alt={imageName}
+              src={product.images[1]}
+              alt={product.imgDesc}
               width={500}
               height={500}
-              title={imageName}
+              title={product.imgDesc}
             />
           </Box>
           <Box
@@ -82,29 +60,29 @@ export const BudItem: FC<BudItemProps> = ({
               alignItems="center"
               marginRight={1}
             >
-              {name}
+              {product.name}
               <Box
                 marginLeft="auto"
                 color="ghostVerse.green.base"
                 whiteSpace="nowrap"
               >
-                {price}THB
+                {product.price}THB
               </Box>
             </Box>
             <Box display="flex" fontFamily="vt323" fontSize="3xl">
-              {dominance == 'Indica Dominant' && (
+              {product.dominance == 'Indica Dominant' && (
                 <Box as="h4" color="ghostVerse.blue.base" marginRight={2}>
-                  {dominance}
+                  {product.dominance}
                 </Box>
               )}
-              {dominance == 'Sativa Dominant' && (
+              {product.dominance == 'Sativa Dominant' && (
                 <Box as="h4" color="ghostVerse.pink.base" marginRight={2}>
-                  {dominance}
+                  {product.dominance}
                 </Box>
               )}
-              {dominance == 'Hybrid' && (
+              {product.dominance == 'Hybrid' && (
                 <Box as="h4" color="ghostVerse.orange.base" marginRight={2}>
-                  {dominance}
+                  {product.dominance}
                 </Box>
               )}
             </Box>
@@ -114,7 +92,7 @@ export const BudItem: FC<BudItemProps> = ({
               fontSize="3xl"
               flexWrap="wrap"
             >
-              {sativa !== 'undefined' && (
+              {product.sativa !== 'undefined' && (
                 <Box display="flex" marginRight={2} flexDirection="row">
                   Sativa
                   <Box
@@ -124,12 +102,12 @@ export const BudItem: FC<BudItemProps> = ({
                     flexDirection="row"
                     alignItems="baseline"
                   >
-                    {sativa}
+                    {product.sativa}
                     <ImgPercent />
                   </Box>
                 </Box>
               )}
-              {indica !== 'undefined' && (
+              {product.indica !== 'undefined' && (
                 <Box display="flex" marginRight={2} flexDirection="row">
                   Indica
                   <Box
@@ -139,12 +117,12 @@ export const BudItem: FC<BudItemProps> = ({
                     flexDirection="row"
                     alignItems="baseline"
                   >
-                    {indica}
+                    {product.indica}
                     <ImgPercent />
                   </Box>
                 </Box>
               )}
-              {THC !== 'undefined' && (
+              {product.THC !== 'undefined' && (
                 <Box display="flex" marginRight={2} flexDirection="row">
                   THC
                   <Box
@@ -154,12 +132,12 @@ export const BudItem: FC<BudItemProps> = ({
                     flexDirection="row"
                     alignItems="baseline"
                   >
-                    {THC}
+                    {product.THC}
                     <ImgPercent />
                   </Box>
                 </Box>
               )}
-              {CBD !== 'undefined' && (
+              {product.CBD !== 'undefined' && (
                 <Box display="flex" marginRight={2} flexDirection="row">
                   CBD
                   <Box
@@ -169,7 +147,7 @@ export const BudItem: FC<BudItemProps> = ({
                     flexDirection="row"
                     alignItems="baseline"
                   >
-                    {CBD}
+                    {product.CBD}
                     <ImgPercent />
                   </Box>
                 </Box>
@@ -182,7 +160,7 @@ export const BudItem: FC<BudItemProps> = ({
               mx="auto"
               mt="auto"
             >
-              {effects !== 'undefined' && (
+              {product.effects !== 'undefined' && (
                 <Box
                   display="flex"
                   textAlign="center"
@@ -194,7 +172,7 @@ export const BudItem: FC<BudItemProps> = ({
                     color="ghostVerse.green.base"
                     whiteSpace={{ base: 'normal', xl: 'nowrap' }}
                   >
-                    {effects}
+                    {product.effects}
                   </Box>
                 </Box>
               )}
