@@ -55,7 +55,6 @@ const BuyWeed: NextPage = () => {
         >
           Go back
         </Box>
-
         <HomeSectionTitle title="Green Ghost - Grower - My Weed Solutions." />
         <Box display="flex" flexDirection="column" fontFamily="vt323">
           <Text
@@ -74,7 +73,7 @@ const BuyWeed: NextPage = () => {
           >
             My Weed Solutions
           </Text>
-          <Box display="flex" alignItems={{ base: 'column', lg: 'row' }} mb={4}>
+          <Box display="flex" flexDirection={{ base: 'column', lg: 'row' }} alignItems={{ base: 'column', lg: 'row' }} mb={4}>
             <Image
               src="/media/green-ghost-grower-my-weed-solutions.webp"
               width={320}
