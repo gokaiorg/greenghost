@@ -18,6 +18,7 @@ import 'swiper/css/effect-coverflow';
 
 import { ImgPercent } from '../components/ImgPercent';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface ProductPageProps {
   product: Product;
@@ -31,6 +32,10 @@ export default function ProductPage({ product }: ProductPageProps) {
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
+
+  const handleBack = () => {
+    window.history.back();
+  };
 
   return (
     <>
@@ -58,6 +63,13 @@ export default function ProductPage({ product }: ProductPageProps) {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
+        <Box
+          cursor="pointer"
+          color="ghostVerse.green.base"
+          onClick={handleBack}
+        >
+          Go back
+        </Box>
         <HomeSectionTitle title={`${product.name} Strain`} />
         <Swiper
           spaceBetween={10}
@@ -191,13 +203,29 @@ export default function ProductPage({ product }: ProductPageProps) {
           </Box>
           {product.effects}
         </Box>
+        <Box as="h3">Grower</Box>
+        <Link href={product.growerSlug}>
+          <Box
+            display="flex"
+            flexDirection="column"
+            color="ghostVerse.green.base"
+            as="a"
+            mr={4}
+            target="_blank"
+            href={product.source}
+          >
+            {product.grower}
+          </Box>
+        </Link>
         <Box
           borderColor="ghostVerse.color2.base"
           bgColor="ghostVerse.dark.lighter"
           borderWidth={1}
           backdropFilter="blur(3px)"
+          width="full"
           p={4}
           my={4}
+          mb={10}
           display="inline-flex"
           flexDirection="column"
           fontSize="3xl"
@@ -205,18 +233,17 @@ export default function ProductPage({ product }: ProductPageProps) {
           whiteSpace="pre-line"
         >
           {product.description}
-        </Box>
-        <Box
-          display="flex"
-          flexDirection="column"
-          color="ghostVerse.green.base"
-          as="a"
-          mx={4}
-          mb={10}
-          target="_blank"
-          href={product.source}
-        >
-          Source
+          <Box
+            display="flex"
+            flexDirection="column"
+            color="ghostVerse.green.base"
+            as="a"
+            mr={4}
+            target="_blank"
+            href={product.source}
+          >
+            Source
+          </Box>
         </Box>
         <BuyNowLink />
       </MainLayout>

@@ -24,10 +24,25 @@ export const Bud = () => {
   });
 
   const sortedProducts = [...filteredProducts].sort((a, b) => {
-    if (sortBy === 'priceLowToHigh') {
-      return Number(a.price) - Number(b.price);
-    } else {
-      return Number(b.price) - Number(a.price);
+    switch (sortBy) {
+      case 'priceLowToHigh':
+        return Number(a.price) - Number(b.price);
+      case 'priceHighToLow':
+        return Number(b.price) - Number(a.price);
+      case 'THCHighToLow':
+        return Number(b.THC) - Number(a.THC);
+      case 'THCLowToHigh':
+        return Number(a.THC) - Number(b.THC);
+      case 'sativaHighToLow':
+        return Number(b.sativa) - Number(a.sativa);
+      case 'sativaLowToHigh':
+        return Number(a.sativa) - Number(b.sativa);
+      case 'indicaHighToLow':
+        return Number(b.indica) - Number(a.indica);
+      case 'indicaLowToHigh':
+        return Number(a.indica) - Number(b.indica);
+      default:
+        return 0;
     }
   });
 
@@ -43,7 +58,12 @@ export const Bud = () => {
 
   return (
     <Box mt={4} mb="10">
-      <Box display="flex" alignItems="baseline" mr={4} flexDirection={{ base: "column", lg: "row" }}>
+      <Box
+        display="flex"
+        alignItems="baseline"
+        mr={4}
+        flexDirection={{ base: 'column', lg: 'row' }}
+      >
         <Box
           as="h2"
           borderColor="ghostVerse.color2.base"
@@ -59,15 +79,24 @@ export const Bud = () => {
         >
           Buds price for 1 gram.
         </Box>
-        <Box display="flex" mb={{ base: "4", lg: "0" }}>
+        <Box display="flex" mb={{ base: '4', lg: '0' }}>
           <Box mr={4}>
-            <Select value={sortBy} onChange={handleSortChange}
+            <Select
+              value={sortBy}
+              onChange={handleSortChange}
               borderRadius="0"
               borderColor="ghostVerse.green.base"
               color="ghostVerse.green.base"
-              outline="none">
+              outline="none"
+            >
               <option value="priceLowToHigh">Price: Low to High</option>
               <option value="priceHighToLow">Price: High to Low</option>
+              <option value="THCHighToLow">THC: High to Low</option>
+              <option value="THCLowToHigh">THC: Low to High</option>
+              <option value="sativaHighToLow">Sativa: High to Low</option>
+              <option value="sativaLowToHigh">Sativa: Low to High</option>
+              <option value="indicaHighToLow">Indica: High to Low</option>
+              <option value="indicaLowToHigh">Indica: Low to High</option>
             </Select>
           </Box>
           <Box>
@@ -79,7 +108,7 @@ export const Bud = () => {
               color="ghostVerse.green.base"
               outline="none"
             >
-              <option value="All">Dominance</option>
+              <option value="All">All Dominance</option>
               <option value="Sativa Dominant">Sativa Dominant</option>
               <option value="Indica Dominant">Indica Dominant</option>
               <option value="Hybrid">Hybrid</option>

@@ -71,6 +71,7 @@ const CannabisShop: NextPage = () => {
               borderLeftWidth={0}
               borderRightWidth={0}
               _selected={{ borderColor: '#4cfd27' }}
+              whiteSpace="nowrap"
             >
               Buds
             </Tab>
@@ -88,6 +89,7 @@ const CannabisShop: NextPage = () => {
               borderLeftWidth={0}
               borderRightWidth={0}
               _selected={{ borderColor: '#4cfd27' }}
+              whiteSpace="nowrap"
             >
               Pre Rolled
             </Tab>
@@ -105,6 +107,7 @@ const CannabisShop: NextPage = () => {
               borderLeftWidth={0}
               borderRightWidth={0}
               _selected={{ borderColor: '#4cfd27' }}
+              whiteSpace="nowrap"
             >
               Edibles
             </Tab>

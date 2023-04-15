@@ -38,6 +38,9 @@ const nextConfig = {
       'testnet-media.elrond.com',
     ],
   },
+  experimental: {
+    scrollRestoration: true,
+  },
 };
 module.exports = withPWA({
   pwa: {
