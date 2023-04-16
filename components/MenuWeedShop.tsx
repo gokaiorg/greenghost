@@ -1,5 +1,5 @@
-import NextLink, { LinkProps } from 'next/link';
-import { Link } from '@chakra-ui/react';
+import Link, { LinkProps } from 'next/link';
+import { Box } from '@chakra-ui/react';
 
 interface MenuLinkProps extends LinkProps {
   label: string;
@@ -31,27 +31,28 @@ export const MenuWeedShop = () => {
 
   return (
     <>
-      {menuLinks.map((link) => (
-        <NextLink href={link.href}>
-          <Link
-            bgColor="ghostVerse.dark.lighter"
-            py={2}
-            px={6}
-            textAlign="center"
-            fontWeight="bold"
-            fontSize="lg"
-            color="ghostVerse.green.base"
-            borderColor="black"
-            borderBottomWidth={2}
-            borderTopWidth={0}
-            borderLeftWidth={0}
-            borderRightWidth={0}
-            whiteSpace="nowrap"
-            textDecoration="none !important"
-          >
+      {menuLinks.map((link, index) => (
+        <Box
+          bgColor="ghostVerse.dark.lighter"
+          py={6}
+          px={6}
+          textAlign="center"
+          fontWeight="bold"
+          fontSize="lg"
+          display="inline-flex"
+          color="ghostVerse.green.base"
+          borderColor="black"
+          borderBottomWidth={2}
+          borderTopWidth={0}
+          borderLeftWidth={0}
+          borderRightWidth={0}
+          whiteSpace="nowrap"
+          textDecoration="none !important"
+        >
+          <Link key={index} href={link.href} title={link.label} passHref>
             {link.label}
           </Link>
-        </NextLink>
+        </Box>
       ))}
     </>
   );

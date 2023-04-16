@@ -15,7 +15,7 @@ export const BudItem = ({ product }: BudItemProps) => {
       paddingBottom={1}
       paddingRight={1}
     >
-      <Link href={product.slug}>
+      <Link href={product.slug} title={product.name} passHref>
         <Box
           borderColor="ghostVerse.green.base"
           borderWidth={1}

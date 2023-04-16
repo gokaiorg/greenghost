@@ -19,7 +19,7 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
         marginRight={{ base: 'auto', md: 0 }}
         display="flex"
       >
-        <Link href="/about-green-ghost">
+        <Link href="/about-green-ghost" title="About Green Ghost" passHref>
           <Box
             display="flex"
             flexDirection="column"
@@ -41,7 +41,7 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
             About
           </Box>
         </Link>
-        <Link href="/weed-shop">
+        <Link href="/weed-shop" title='Weed Shop' passHref>
           <Box
             display="flex"
             flexDirection="column"
@@ -63,7 +63,7 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
             Shop
           </Box>
         </Link>
-        <Link href="/tokenized-cannabis-store">
+        <Link href="/tokenized-cannabis-store" title='Crypto Coffee Shop' passHref>
           <Box
             display="flex"
             flexDirection="column"
@@ -86,7 +86,7 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
             Earn
           </Box>
         </Link>
-        <Link href="/contact-us-buy-weed-online">
+        <Link href="/contact-us-buy-weed-online" title='Contact us to buy weed online' passHref>
           <Box
             display="flex"
             flexDirection="column"
@@ -108,7 +108,7 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
             Chat
           </Box>
         </Link>
-        <Link href="https://goo.gl/maps/KTU3ZM9ac21WzgJM6">
+        <Link href="https://goo.gl/maps/KTU3ZM9ac21WzgJM6" title="Green Ghost map" passHref>
           <Box
             display="flex"
             flexDirection="column"
