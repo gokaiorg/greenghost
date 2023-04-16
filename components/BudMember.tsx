@@ -5,22 +5,22 @@ import { BudItem } from './BudItem';
 
 type DominanceOption = 'All' | 'Sativa Dominant' | 'Indica Dominant' | 'Hybrid';
 
-export const Bud = () => {
+export const BudMember = () => {
   const [sortBy, setSortBy] = useState('priceLowToHigh');
   const [showUnavailable, setShowUnavailable] = useState(false);
   const [dominanceFilter, setDominanceFilter] =
     useState<DominanceOption>('All');
 
   const filteredProducts = products.filter((product) => {
-    if (
-      !showUnavailable &&
-      (product.price === 'undefined' ||
-        product.price.toLowerCase().includes('member'))
-    ) {
+    if (!showUnavailable && product.price === 'undefined') {
       return false;
     }
 
     if (dominanceFilter !== 'All' && product.dominance !== dominanceFilter) {
+      return false;
+    }
+
+    if (product.price !== 'member') {
       return false;
     }
 
@@ -81,7 +81,7 @@ export const Bud = () => {
           flexWrap="wrap"
           fontSize={30}
         >
-          Buds price for 1 gram.
+          Latest buds for members only.
         </Box>
         <Box display="flex" mb={{ base: '4', lg: '0' }}>
           <Box mr={4}>

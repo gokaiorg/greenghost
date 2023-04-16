@@ -11,26 +11,26 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา.</title>
+        <title>Green Ghost - Degen Weed Shop ร้าน ขาย กัญชา.</title>
         <meta
           name="description"
           content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
         />
         <meta
           property="og:title"
-          content="Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา."
+          content="Green Ghost - Degen Weed Shop ร้าน ขาย กัญชา."
         />
         <meta
           property="og:description"
           content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
         />
         <meta property="og:image" content="https://green.gd/social.png" />
-        <meta property="og:image:width" content="1895" />
-        <meta property="og:image:height" content="898" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:url" content="https://green.gd" />
         <meta
           name="twitter:title"
-          content="Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา."
+          content="Green Ghost - Degen Weed Shop ร้าน ขาย กัญชา."
         />
         <meta
           name="twitter:description"
@@ -84,7 +84,7 @@ const Home: NextPage = () => {
           mb={2}
           mr="auto"
         >
-          <Link href="/cannabis-shop-phuket">Shop Now</Link>
+          <Link href="/weed-shop">Shop Now</Link>
         </Text>
         <Box display="flex" flexDirection="column">
           <Text

@@ -41,7 +41,7 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
             About
           </Box>
         </Link>
-        <Link href="/cannabis-shop-phuket">
+        <Link href="/weed-shop">
           <Box
             display="flex"
             flexDirection="column"

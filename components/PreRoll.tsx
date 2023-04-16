@@ -1,10 +1,7 @@
-import { Box, Text, SimpleGrid } from '@chakra-ui/react';
-import { preroll } from '../config/dappUi';
+import { Box, Text } from '@chakra-ui/react';
 import { ImgQuestion } from './ImgQuestion';
 
 export const PreRoll = () => {
-  if (!Array.isArray(preroll)) return null;
-
   return (
     <Box
       as="div"

@@ -61,13 +61,15 @@ export const BudItem = ({ product }: BudItemProps) => {
               marginRight={1}
             >
               {product.name}
-              <Box
-                marginLeft="auto"
-                color="ghostVerse.green.base"
-                whiteSpace="nowrap"
-              >
-                {product.price}THB
-              </Box>
+              {product.price !== 'member' && (
+                <Box
+                  marginLeft="auto"
+                  color="ghostVerse.green.base"
+                  whiteSpace="nowrap"
+                >
+                  {product.price} THB
+                </Box>
+              )}
             </Box>
             <Box display="flex" fontFamily="vt323" fontSize="3xl">
               {product.dominance == 'Indica Dominant' && (

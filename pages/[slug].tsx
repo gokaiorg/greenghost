@@ -203,20 +203,25 @@ export default function ProductPage({ product }: ProductPageProps) {
           </Box>
           {product.effects}
         </Box>
-        <Box as="h3">Grower</Box>
-        <Link href={product.growerSlug}>
-          <Box
-            display="flex"
-            flexDirection="column"
-            color="ghostVerse.green.base"
-            as="a"
-            mr={4}
-            target="_blank"
-            href={product.source}
-          >
-            {product.grower}
-          </Box>
-        </Link>
+        {product.price !== 'member' && (
+          <>
+            <Box as="h3">Grower</Box>
+            <Link href={product.growerSlug}>
+              <Box
+                display="flex"
+                flexDirection="column"
+                color="ghostVerse.green.base"
+                as="a"
+                mr={4}
+                target="_blank"
+                href={product.source}
+              >
+                {product.grower}
+              </Box>
+            </Link>
+          </>
+        )}
+
         <Box
           borderColor="ghostVerse.color2.base"
           bgColor="ghostVerse.dark.lighter"

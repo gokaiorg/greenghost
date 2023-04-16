@@ -12,33 +12,39 @@ const InstallXportal: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา.</title>
+        <title>Green Ghost - Install xPortal app.</title>
         <meta
           name="description"
-          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="To become a member of the Ghost Clan in the GhostVerse, you can install the XPortal app on your mobile device. XPortal is a secure app that allows you to access the GhostVerse and interact with other members of the Ghost Clan. To get started, visit the XPortal website and download the app for your device. Once installed, create a new account and follow the on-screen instructions to set up your profile. "
         />
         <meta
           property="og:title"
-          content="Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา."
+          content="Green Ghost - Install xPortal app."
         />
         <meta
           property="og:description"
-          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="To become a member of the Ghost Clan in the GhostVerse, you can install the XPortal app on your mobile device. XPortal is a secure app that allows you to access the GhostVerse and interact with other members of the Ghost Clan. To get started, visit the XPortal website and download the app for your device. Once installed, create a new account and follow the on-screen instructions to set up your profile. "
         />
         <meta property="og:image" content="https://green.gd/social.png" />
-        <meta property="og:image:width" content="1895" />
-        <meta property="og:image:height" content="898" />
-        <meta property="og:url" content="https://green.gd" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+          property="og:url"
+          content="https://green.gd/install-xportal-app"
+        />
         <meta
           name="twitter:title"
-          content="Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา."
+          content="Green Ghost - Install xPortal app."
         />
         <meta
           name="twitter:description"
-          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="To become a member of the Ghost Clan in the GhostVerse, you can install the XPortal app on your mobile device. XPortal is a secure app that allows you to access the GhostVerse and interact with other members of the Ghost Clan. To get started, visit the XPortal website and download the app for your device. Once installed, create a new account and follow the on-screen instructions to set up your profile. "
         />
         <meta name="twitter:image" content="https://green.gd/social.png" />
-        <meta name="twitter:url" content="https://green.gd" />
+        <meta
+          name="twitter:url"
+          content="https://green.gd/install-xportal-app"
+        />
       </Head>
       <MainLayout>
         <HeaderMenu>

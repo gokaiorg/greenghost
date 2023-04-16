@@ -1,0 +1,76 @@
+import type { NextPage } from 'next';
+import { Box, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
+import { MainLayout } from '../components/MainLayout';
+import { HeaderMenu } from '../components/HeaderMenu';
+import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
+import { HomeSectionTitle } from '../components/HomeSectionTitle';
+import { Bud } from '../components/Bud';
+import { BuyNowLink } from '../components/BuyNowLink';
+import { PreRoll } from '../components/PreRoll';
+import { Bakery } from '../components/Bakery';
+import Head from 'next/head';
+import { MenuWeedShop } from '../components/MenuWeedShop';
+import { BudMember } from '../components/BudMember';
+
+const WeedShopMember: NextPage = () => {
+  return (
+    <>
+      <Head>
+        <title>Green Ghost - Degen Weed Shop - Member Only.</title>
+        <meta
+          name="description"
+          content="Join our exclusive member shop and gain access to a wide selection of premium cannabis products at unbeatable prices. Our members enjoy special discounts and promotions on top-quality buds, pre-rolls, edibles, and more. We also offer exclusive access to limited edition strains and products, as well as personalized recommendations from our knowledgeable staff. Join us now and experience the best of the cannabis world with our exclusive member shop."
+        />
+        <meta
+          property="og:title"
+          content="Green Ghost - Degen Weed Shop - Menber Only."
+        />
+        <meta
+          property="og:description"
+          content="Join our exclusive member shop and gain access to a wide selection of premium cannabis products at unbeatable prices. Our members enjoy special discounts and promotions on top-quality buds, pre-rolls, edibles, and more. We also offer exclusive access to limited edition strains and products, as well as personalized recommendations from our knowledgeable staff. Join us now and experience the best of the cannabis world with our exclusive member shop."
+        />
+        <meta property="og:image" content="https://green.gd/social.png" />
+        <meta property="og:image:width" content="1748" />
+        <meta property="og:image:height" content="2480" />
+        <meta property="og:url" content="https://green.gd/weed-shop-member" />
+        <meta
+          name="twitter:title"
+          content="Green Ghost - Degen Weed Shop - Menber Only."
+        />
+        <meta
+          name="twitter:description"
+          content="Join our exclusive member shop and gain access to a wide selection of premium cannabis products at unbeatable prices. Our members enjoy special discounts and promotions on top-quality buds, pre-rolls, edibles, and more. We also offer exclusive access to limited edition strains and products, as well as personalized recommendations from our knowledgeable staff. Join us now and experience the best of the cannabis world with our exclusive member shop."
+        />
+        <meta name="twitter:image" content="https://green.gd/social.png" />
+        <meta name="twitter:url" content="https://green.gd/weed-shop-member" />
+      </Head>
+      <MainLayout>
+        <HeaderMenu>
+          <HeaderMenuButtons enabled={['auth']} />
+        </HeaderMenu>
+        <HomeSectionTitle title="Degen Weed Shop - Member Only." />
+        <MenuWeedShop />
+        <BudMember />
+        <Box
+          as="h3"
+          borderColor="ghostVerse.color2.base"
+          bgColor="ghostVerse.dark.lighter"
+          borderWidth={1}
+          backdropFilter="blur(3px)"
+          p={4}
+          my={4}
+          mx="auto"
+          display="flex"
+          width="fit-content"
+          flexDirection="column"
+          fontSize={20}
+        >
+          All our products are organic
+        </Box>
+        <BuyNowLink />
+      </MainLayout>
+    </>
+  );
+};
+
+export default WeedShopMember;

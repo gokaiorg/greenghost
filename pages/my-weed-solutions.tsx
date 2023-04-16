@@ -19,7 +19,8 @@ const BuyWeed: NextPage = () => {
         <title>Green Ghost - Grower - My Weed Solutions.</title>
         <meta
           name="description"
-          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="MW Solutions is a company that believes in its customers and
+              believes in the right to live life their way."
         />
         <meta
           property="og:title"
@@ -27,7 +28,8 @@ const BuyWeed: NextPage = () => {
         />
         <meta
           property="og:description"
-          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="MW Solutions is a company that believes in its customers and
+              believes in the right to live life their way."
         />
         <meta property="og:image" content="https://green.gd/social.png" />
         <meta property="og:image:width" content="1895" />
@@ -39,7 +41,8 @@ const BuyWeed: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="MW Solutions is a company that believes in its customers and
+              believes in the right to live life their way."
         />
         <meta name="twitter:image" content="https://green.gd/social.png" />
         <meta name="twitter:url" content="https://green.gd" />
@@ -73,7 +76,12 @@ const BuyWeed: NextPage = () => {
           >
             My Weed Solutions
           </Text>
-          <Box display="flex" flexDirection={{ base: 'column', lg: 'row' }} alignItems={{ base: 'column', lg: 'row' }} mb={4}>
+          <Box
+            display="flex"
+            flexDirection={{ base: 'column', lg: 'row' }}
+            alignItems={{ base: 'column', lg: 'row' }}
+            mb={4}
+          >
             <Image
               src="/media/green-ghost-grower-my-weed-solutions.webp"
               width={320}

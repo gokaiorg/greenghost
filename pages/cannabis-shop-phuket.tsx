@@ -1,48 +1,45 @@
 import type { NextPage } from 'next';
-import { Box, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
-import { Bud } from '../components/Bud';
 import { BuyNowLink } from '../components/BuyNowLink';
-import { PreRoll } from '../components/PreRoll';
-import { Bakery } from '../components/Bakery';
 import Head from 'next/head';
+import Link from 'next/link';
+import { ImgQuestion } from '../components/ImgQuestion';
 
 const CannabisShop: NextPage = () => {
   return (
     <>
       <Head>
-        <title>
-          Green Ghost - Cannabis Shop Selection - Buds, Pre Rolled, Edibles.
-        </title>
+        <title>Green Ghost - Phuket Cannabis Shops Selection</title>
         <meta
           name="description"
-          content="Explore our wide selection of high-quality cannabis products including premium flowers, pre-rolled joints, and delicious edibles. Our products are carefully curated and lab-tested to ensure the best possible experience for our customers. Discover your perfect strain today at The Green Ghost in Phuket."
+          content="Looking for the best cannabis shops in Phuket? Look no further than the ones trusted by the Green Ghost. We've scoured the island to find the top cannabis shops that offer the highest quality products and the best prices. Whether you're looking for flower, edibles, pre-rolls, or accessories, we've got you covered. Trust us to help you find the perfect cannabis products to suit your needs."
         />
         <meta
           property="og:title"
-          content="Green Ghost - Cannabis Shop Selection - Buds, Pre Rolled, Edibles."
+          content="Green Ghost - Phuket Cannabis Shops Selection."
         />
         <meta
           property="og:description"
-          content="Explore our wide selection of high-quality cannabis products including premium flowers, pre-rolled joints, and delicious edibles. Our products are carefully curated and lab-tested to ensure the best possible experience for our customers. Discover your perfect strain today at The Green Ghost in Phuket."
+          content="Looking for the best cannabis shops in Phuket? Look no further than the ones trusted by the Green Ghost. We've scoured the island to find the top cannabis shops that offer the highest quality products and the best prices. Whether you're looking for flower, edibles, pre-rolls, or accessories, we've got you covered. Trust us to help you find the perfect cannabis products to suit your needs."
         />
         <meta property="og:image" content="https://green.gd/social.png" />
-        <meta property="og:image:width" content="1748" />
-        <meta property="og:image:height" content="2480" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta
           property="og:url"
           content="https://green.gd/cannabis-shop-phuket"
         />
         <meta
           name="twitter:title"
-          content="Green Ghost - Cannabis Shop Selection - Buds, Pre Rolled, Edibles."
+          content="Green Ghost - Phuket Cannabis Shops Selection."
         />
         <meta
           name="twitter:description"
-          content="Explore our wide selection of high-quality cannabis products including premium flowers, pre-rolled joints, and delicious edibles. Our products are carefully curated and lab-tested to ensure the best possible experience for our customers. Discover your perfect strain today at The Green Ghost in Phuket."
+          content="Looking for the best cannabis shops in Phuket? Look no further than the ones trusted by the Green Ghost. We've scoured the island to find the top cannabis shops that offer the highest quality products and the best prices. Whether you're looking for flower, edibles, pre-rolls, or accessories, we've got you covered. Trust us to help you find the perfect cannabis products to suit your needs."
         />
         <meta name="twitter:image" content="https://green.gd/social.png" />
         <meta
@@ -54,95 +51,82 @@ const CannabisShop: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <HomeSectionTitle title="Cannabis Shop - Strains in Phuket." />
-        <Tabs variant="unstyled">
-          <TabList>
-            <Tab
-              bgColor="ghostVerse.dark.lighter"
-              py={2}
-              px={6}
-              textAlign="center"
-              fontWeight="bold"
-              fontSize="lg"
-              color="ghostVerse.green.base"
-              borderColor="black"
-              borderBottomWidth={2}
-              borderTopWidth={0}
-              borderLeftWidth={0}
-              borderRightWidth={0}
-              _selected={{ borderColor: '#4cfd27' }}
-              whiteSpace="nowrap"
-            >
-              Buds
-            </Tab>
-            <Tab
-              bgColor="ghostVerse.dark.lighter"
-              py={2}
-              px={6}
-              textAlign="center"
-              fontWeight="bold"
-              fontSize="lg"
-              color="ghostVerse.green.base"
-              borderColor="black"
-              borderBottomWidth={2}
-              borderTopWidth={0}
-              borderLeftWidth={0}
-              borderRightWidth={0}
-              _selected={{ borderColor: '#4cfd27' }}
-              whiteSpace="nowrap"
-            >
-              Pre Rolled
-            </Tab>
-            <Tab
-              bgColor="ghostVerse.dark.lighter"
-              py={2}
-              px={6}
-              textAlign="center"
-              fontWeight="bold"
-              fontSize="lg"
-              color="ghostVerse.green.base"
-              borderColor="black"
-              borderBottomWidth={2}
-              borderTopWidth={0}
-              borderLeftWidth={0}
-              borderRightWidth={0}
-              _selected={{ borderColor: '#4cfd27' }}
-              whiteSpace="nowrap"
-            >
-              Edibles
-            </Tab>
-          </TabList>
-          <TabPanels>
-            <TabPanel px={0}>
-              {/* <Box
-                as="h3"
-                borderColor="ghostVerse.color2.base"
-                bgColor="ghostVerse.dark.lighter"
-                borderWidth={1}
-                backdropFilter="blur(3px)"
-                p={4}
-                my={4}
+        <HomeSectionTitle title="Green Ghost - Phuket Cannabis Shops Selection." />
+        <Box
+          as="h2"
+          borderColor="ghostVerse.color2.base"
+          bgColor="ghostVerse.dark.lighter"
+          borderWidth={1}
+          backdropFilter="blur(3px)"
+          p={4}
+          my={4}
+          display="flex"
+          width="fit-content"
+          flexDirection="row"
+          alignItems="baseline"
+          fontSize={20}
+        >
+          Looking for the best cannabis shops in Phuket
+          <ImgQuestion />
+        </Box>
+        <Box>
+          Look no further than the ones trusted by the Green Ghost. We've
+          scoured the island to find the top cannabis shops that offer the
+          highest quality products and the best prices.
+        </Box>
+        <Box display="flex" my={4}>
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+            color="ghostVerse.green.base"
+            as="a"
+            mx={4}
+            target="_blank"
+            href="https://gokai.org"
+          >
+            <Link href="/weed-shop">
+              <Box
+                as="img"
+                src="/logo512.png"
+                width={{ base: '80px' }}
+                height={{ base: '80px' }}
+                maxW="inherit"
                 mx="auto"
-                display="flex"
-                textAlign="center"
-                width="fit-content"
-                flexDirection="column"
-                fontSize={20}
-              >
-                Our catalogue is no longer available at the moment, your new
-                favourite strains will arrive very soon! Stay tuned so you don't
-                miss 🌱
-              </Box> */}
-              <Bud />
-            </TabPanel>
-            <TabPanel px={0}>
-              <PreRoll />
-            </TabPanel>
-            <TabPanel px={0}>
-              <Bakery />
-            </TabPanel>
-          </TabPanels>
-        </Tabs>
+                alt="Green Ghost - Degen Weed Shop"
+                title="Green Ghost - Degen Weed Shop"
+              />
+              Green Garden
+            </Link>
+          </Box>
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+            color="ghostVerse.green.base"
+            as="a"
+            mx={4}
+            target="_blank"
+            textAlign="center"
+            href="https://gokai.org"
+          >
+            <Link href="/my-weed-solutions">
+              <Box
+                as="img"
+                src="/media/green-ghost-grower-my-weed-solutions.webp"
+                width={{ base: '100px' }}
+                height={{ base: '80px' }}
+                maxW="inherit"
+                mx="auto"
+                alt="Green Ghost - Degen Weed Shop"
+                title="Green Ghost - Degen Weed Shop"
+              />
+              My Weed
+            </Link>
+          </Box>
+        </Box>
         <Box
           as="h3"
           borderColor="ghostVerse.color2.base"

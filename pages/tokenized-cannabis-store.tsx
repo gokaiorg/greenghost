@@ -33,8 +33,8 @@ const CryptoNft: NextPage = () => {
           property="og:image"
           content="https://green.gd/green-ghost-degen-weed-shop-grand-opening.png"
         />
-        <meta property="og:image:width" content="1748" />
-        <meta property="og:image:height" content="2480" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta
           property="og:url"
           content="https://green.gd/tokenized-cannabis-store"

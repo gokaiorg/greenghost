@@ -12,33 +12,39 @@ const BuyWeed: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา.</title>
+        <title>Green Ghost - Contact Us - Buy Weed Online.</title>
         <meta
           name="description"
-          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Looking to buy weed online? Contact Green Ghost Degen to place your order for high-quality, locally-sourced cannabis products. Our knowledgeable team is dedicated to providing a safe and reliable service, with discreet and secure shipping options available. Whether you're a seasoned smoker or new to the world of cannabis, we have a wide selection of products to suit your needs. Contact us today to learn more and place your order."
         />
         <meta
           property="og:title"
-          content="Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา."
+          content="Green Ghost - Contact Us - Buy Weed Online."
         />
         <meta
           property="og:description"
-          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Looking to buy weed online? Contact Green Ghost Degen to place your order for high-quality, locally-sourced cannabis products. Our knowledgeable team is dedicated to providing a safe and reliable service, with discreet and secure shipping options available. Whether you're a seasoned smoker or new to the world of cannabis, we have a wide selection of products to suit your needs. Contact us today to learn more and place your order."
         />
         <meta property="og:image" content="https://green.gd/social.png" />
-        <meta property="og:image:width" content="1895" />
-        <meta property="og:image:height" content="898" />
-        <meta property="og:url" content="https://green.gd" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+          property="og:url"
+          content="https://green.gd/contact-us-buy-weed-online"
+        />
         <meta
           name="twitter:title"
-          content="Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา."
+          content="Green Ghost - Contact Us - Buy Weed Online."
         />
         <meta
           name="twitter:description"
-          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Looking to buy weed online? Contact Green Ghost Degen to place your order for high-quality, locally-sourced cannabis products. Our knowledgeable team is dedicated to providing a safe and reliable service, with discreet and secure shipping options available. Whether you're a seasoned smoker or new to the world of cannabis, we have a wide selection of products to suit your needs. Contact us today to learn more and place your order."
         />
         <meta name="twitter:image" content="https://green.gd/social.png" />
-        <meta name="twitter:url" content="https://green.gd" />
+        <meta
+          name="twitter:url"
+          content="https://green.gd/contact-us-buy-weed-online"
+        />
       </Head>
       <MainLayout>
         <HeaderMenu>
@@ -111,11 +117,16 @@ const BuyWeed: NextPage = () => {
             mx="auto"
             mt={10}
             display="flex"
+            textAlign="center"
+            fontSize="3xl"
             width="fit-content"
             flexDirection="column"
-            fontSize={20}
           >
-            Immediate delivery in Phuket & Worldwide shipping
+            Immediate delivery in Phuket
+            <br />
+            24/24 delivery only in Rawai
+            <br />
+            Worldwide shipping
           </Box>
         </Box>
       </MainLayout>
