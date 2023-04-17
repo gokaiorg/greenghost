@@ -39,7 +39,7 @@ export const Tokenized02 = () => {
       >
         xPortal app
       </Text>
-      , you'll receive cashback in <ImgDollar />
+      , you&apos;ll receive cashback in <ImgDollar />
       EBUD.
       <br />
       <br />
@@ -63,8 +63,8 @@ export const Tokenized02 = () => {
       and centered around cannabis.
       <br />
       <br />
-      The token listing is currently underway, and soon you'll be able to buy
-      your cannabis directly in the Green Ghost with your accumulated{' '}
+      The token listing is currently underway, and soon you&apos;ll be able to
+      buy your cannabis directly in the Green Ghost with your accumulated{' '}
       <ImgDollar />
       EBUD.
       <br />

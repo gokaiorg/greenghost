@@ -1,12 +1,10 @@
 import type { NextPage } from 'next';
-import { Box, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
-import { Bud } from '../components/Bud';
 import { BuyNowLink } from '../components/BuyNowLink';
-import { PreRoll } from '../components/PreRoll';
 import { Bakery } from '../components/Bakery';
 import Head from 'next/head';
 import { MenuWeedShop } from '../components/MenuWeedShop';

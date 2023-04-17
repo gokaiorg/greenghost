@@ -7,7 +7,7 @@ type DominanceOption = 'All' | 'Sativa Dominant' | 'Indica Dominant' | 'Hybrid';
 
 export const BudMember = () => {
   const [sortBy, setSortBy] = useState('priceLowToHigh');
-  const [showUnavailable, setShowUnavailable] = useState(false);
+  const [showUnavailable] = useState(false);
   const [dominanceFilter, setDominanceFilter] =
     useState<DominanceOption>('All');
 

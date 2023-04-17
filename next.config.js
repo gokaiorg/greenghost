@@ -40,6 +40,7 @@ const nextConfig = {
   },
   experimental: {
     scrollRestoration: true,
+    esmExternals: false,
   },
 };
 module.exports = withPWA({

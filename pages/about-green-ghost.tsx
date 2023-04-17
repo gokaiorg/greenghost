@@ -61,7 +61,7 @@ const BuyWeed: NextPage = () => {
             fontWeight="black"
             mb={4}
           >
-            What's the inspiring story behind Green Ghost's origins
+            What&apos;s the inspiring story behind Green Ghost&apos;s origins
             <ImgQuestion />
           </Text>
           <Text>

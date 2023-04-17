@@ -70,7 +70,7 @@ const CannabisShop: NextPage = () => {
           <ImgQuestion />
         </Box>
         <Box>
-          Look no further than the ones trusted by the Green Ghost. We've
+          Look no further than the ones trusted by the Green Ghost. We&apos;ve
           scoured the island to find the top cannabis shops that offer the
           highest quality products and the best prices.
         </Box>

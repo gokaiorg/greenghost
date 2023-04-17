@@ -24,8 +24,8 @@ export const PreRoll = () => {
       </Text>
       Look no further than Green Ghost! Our selection of pre-rolled joints
       allows you to indulge in the variety of your choice with ease. Whether
-      you're looking for a quick hit on the go or just prefer the convenience of
-      a pre-rolled joint, we've got you covered.
+      you&apos;re looking for a quick hit on the go or just prefer the
+      convenience of a pre-rolled joint, we&apos;ve got you covered.
       <br />
       <br />
       <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>

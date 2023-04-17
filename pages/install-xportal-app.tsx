@@ -138,8 +138,12 @@ const InstallXportal: NextPage = () => {
             </Box>
           </Text>
           <Box as="ul" listStyleType="none" pl={4}>
-            <Box as="li">a. Clic on "Have a referral code?" link.</Box>
-            <Box as="li">b. Fill with our referral code: "7nvae7kpo1".</Box>
+            <Box as="li">
+              a. Clic on &quot;Have a referral code?&quot; link.
+            </Box>
+            <Box as="li">
+              b. Fill with our referral code: &quot;7nvae7kpo1&quot;.
+            </Box>
             <Box as="li">c. Verify your phone number and continue.</Box>
           </Box>
           <br />
@@ -262,7 +266,7 @@ const InstallXportal: NextPage = () => {
             04 - Congratulations! You are all set.
           </Text>
           <Text>
-            Share your Herotag with us and we'll deliver your cashback.
+            Share your Herotag with us and we&apos;ll deliver your cashback.
           </Text>
         </Box>
       </MainLayout>

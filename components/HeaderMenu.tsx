@@ -41,7 +41,7 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
             About
           </Box>
         </Link>
-        <Link href="/weed-shop" title='Weed Shop' passHref>
+        <Link href="/weed-shop" title="Weed Shop" passHref>
           <Box
             display="flex"
             flexDirection="column"
@@ -63,7 +63,11 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
             Shop
           </Box>
         </Link>
-        <Link href="/tokenized-cannabis-store" title='Crypto Coffee Shop' passHref>
+        <Link
+          href="/tokenized-cannabis-store"
+          title="Crypto Coffee Shop"
+          passHref
+        >
           <Box
             display="flex"
             flexDirection="column"
@@ -86,7 +90,11 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
             Earn
           </Box>
         </Link>
-        <Link href="/contact-us-buy-weed-online" title='Contact us to buy weed online' passHref>
+        <Link
+          href="/contact-us-buy-weed-online"
+          title="Contact us to buy weed online"
+          passHref
+        >
           <Box
             display="flex"
             flexDirection="column"
@@ -108,7 +116,11 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
             Chat
           </Box>
         </Link>
-        <Link href="https://goo.gl/maps/KTU3ZM9ac21WzgJM6" title="Green Ghost map" passHref>
+        <Link
+          href="https://goo.gl/maps/KTU3ZM9ac21WzgJM6"
+          title="Green Ghost map"
+          passHref
+        >
           <Box
             display="flex"
             flexDirection="column"

@@ -1,4 +1,4 @@
-import { Container, Box, Text, Image } from '@chakra-ui/react';
+import { Container, Box, Text } from '@chakra-ui/react';
 
 export const Footer = () => {
   return (
@@ -34,23 +34,6 @@ export const Footer = () => {
             Gokai Labs
           </Text>
         </Box>
-        {/* <Box
-          position="absolute"
-          zIndex={0}
-          width="100%"
-          height="auto"
-          left="0"
-          right="0"
-          bottom="0"
-        >
-          <Image
-            src="/media/ghostverse-cemetery-mr-ghost-mxghosts-nft-dao-multiversx-blockchain.png"
-            alt="Mr Ghost Moon"
-            objectFit="contain"
-            width="2048"
-            height="auto"
-          />
-        </Box> */}
       </Container>
     </Box>
   );

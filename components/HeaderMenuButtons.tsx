@@ -6,7 +6,7 @@ interface HeaderMenuButtonsProps {
   enabled: string[];
 }
 
-export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = ({ enabled }) => {
+export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = () => {
   return (
     <Box display="flex" gap={5} alignItems="center">
       <UserAvatar />

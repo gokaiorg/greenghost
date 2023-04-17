@@ -1,59 +1,53 @@
-import Link, { LinkProps } from 'next/link';
 import { Box } from '@chakra-ui/react';
+import NavLink from './NavLink';
 
-interface MenuLinkProps extends LinkProps {
+type Route = {
   label: string;
-}
+  path: string;
+};
 
+const Links: Route[] = [
+  {
+    path: '/weed-shop',
+    label: 'Buds',
+  },
+  {
+    path: '/weed-shop-pre-rolled',
+    label: 'Pre-Rolled',
+  },
+  {
+    path: '/weed-shop-edibles',
+    label: 'Edibles',
+  },
+  {
+    path: '/weed-shop-member',
+    label: 'Member',
+  },
+  {
+    path: '/ghost-degen-weed-shop',
+    label: 'Degen',
+  },
+];
+
+// Take note on how I implement these type, to be able to correctly pass the props
 export const MenuWeedShop = () => {
-  const menuLinks: MenuLinkProps[] = [
-    {
-      href: '/weed-shop',
-      label: 'Buds',
-    },
-    {
-      href: '/weed-shop-pre-rolled',
-      label: 'Pre-Rolled',
-    },
-    {
-      href: '/weed-shop-edibles',
-      label: 'Edibles',
-    },
-    {
-      href: '/weed-shop-member',
-      label: 'Member',
-    },
-    {
-      href: '/ghost-degen-weed-shop',
-      label: 'Degen',
-    },
-  ];
-
   return (
     <>
-      {menuLinks.map((link, index) => (
-        <Box
-          bgColor="ghostVerse.dark.lighter"
-          py={6}
-          px={6}
-          textAlign="center"
-          fontWeight="bold"
-          fontSize="lg"
-          display="inline-flex"
-          color="ghostVerse.green.base"
-          borderColor="black"
-          borderBottomWidth={2}
-          borderTopWidth={0}
-          borderLeftWidth={0}
-          borderRightWidth={0}
-          whiteSpace="nowrap"
-          textDecoration="none !important"
-        >
-          <Link key={index} href={link.href} title={link.label} passHref>
+      <Box
+        display="flex"
+        overflow={{ base: 'auto', md: 'none' }}
+        sx={{
+          '::-webkit-scrollbar': {
+            display: 'none',
+          },
+        }}
+      >
+        {Links.map((link) => (
+          <NavLink key={link.label} to={link.path} title={link.label}>
             {link.label}
-          </Link>
-        </Box>
-      ))}
+          </NavLink>
+        ))}
+      </Box>
     </>
   );
 };
