@@ -25,9 +25,9 @@ const InstallXportal: NextPage = () => {
           property="og:description"
           content="To become a member of the Ghost Clan in the GhostVerse, you can install the XPortal app on your mobile device. XPortal is a secure app that allows you to access the GhostVerse and interact with other members of the Ghost Clan. To get started, visit the XPortal website and download the app for your device. Once installed, create a new account and follow the on-screen instructions to set up your profile. "
         />
-        <meta property="og:image" content="https://green.gd/social.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
+        <meta property="og:image:width" content="2400" />
+        <meta property="og:image:height" content="1260" />
         <meta
           property="og:url"
           content="https://green.gd/install-xportal-app"
@@ -40,7 +40,7 @@ const InstallXportal: NextPage = () => {
           name="twitter:description"
           content="To become a member of the Ghost Clan in the GhostVerse, you can install the XPortal app on your mobile device. XPortal is a secure app that allows you to access the GhostVerse and interact with other members of the Ghost Clan. To get started, visit the XPortal website and download the app for your device. Once installed, create a new account and follow the on-screen instructions to set up your profile. "
         />
-        <meta name="twitter:image" content="https://green.gd/social.png" />
+        <meta name="twitter:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
         <meta
           name="twitter:url"
           content="https://green.gd/install-xportal-app"

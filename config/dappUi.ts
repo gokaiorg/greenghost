@@ -11,7 +11,7 @@ export const defaultMetaTags = {
   description:
     'Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories.',
   shortname: 'Green Ghost',
-  image: `${dappHostname}/social.png`,
+  image: `${dappHostname}/green-ghost-degen-weed-shop.png`,
 };
 
 export const bakery = [

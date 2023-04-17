@@ -26,9 +26,9 @@ const WeedShopMember: NextPage = () => {
           property="og:description"
           content="Looking for high-quality pre-rolled joints made with locally sourced, organic cannabis? Look no further than our pre-rolled shop! We offer a wide selection of pre-rolls made with only the best, all-natural ingredients. Our products are carefully crafted to ensure a consistent, high-quality experience every time. Try our pre-rolls today and taste the difference that local, organic products can make."
         />
-        <meta property="og:image" content="https://green.gd/social.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
+        <meta property="og:image:width" content="2400" />
+        <meta property="og:image:height" content="1260" />
         <meta
           property="og:url"
           content="https://green.gd/weed-shop-pre-rolled"
@@ -41,7 +41,7 @@ const WeedShopMember: NextPage = () => {
           name="twitter:description"
           content="Looking for high-quality pre-rolled joints made with locally sourced, organic cannabis? Look no further than our pre-rolled shop! We offer a wide selection of pre-rolls made with only the best, all-natural ingredients. Our products are carefully crafted to ensure a consistent, high-quality experience every time. Try our pre-rolls today and taste the difference that local, organic products can make."
         />
-        <meta name="twitter:image" content="https://green.gd/social.png" />
+        <meta name="twitter:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
         <meta
           name="twitter:url"
           content="https://green.gd/weed-shop-pre-rolled"

@@ -26,9 +26,9 @@ const WeedShop: NextPage = () => {
           property="og:description"
           content="Looking for a dispensary that prioritizes organic, locally sourced cannabis products? Look no further than Green Ghost Degen Weed Shop. Our shop is stocked with a wide range of flower, edibles, and concentrates, all of which are carefully curated from the best growers in the area."
         />
-        <meta property="og:image" content="https://green.gd/social.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
+        <meta property="og:image:width" content="2400" />
+        <meta property="og:image:height" content="1260" />
         <meta property="og:url" content="https://green.gd/weed-shop" />
         <meta
           name="twitter:title"
@@ -38,7 +38,7 @@ const WeedShop: NextPage = () => {
           name="twitter:description"
           content="Looking for a dispensary that prioritizes organic, locally sourced cannabis products? Look no further than Green Ghost Degen Weed Shop. Our shop is stocked with a wide range of flower, edibles, and concentrates, all of which are carefully curated from the best growers in the area."
         />
-        <meta name="twitter:image" content="https://green.gd/social.png" />
+        <meta name="twitter:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
         <meta name="twitter:url" content="https://green.gd/weed-shop" />
       </Head>
       <MainLayout>

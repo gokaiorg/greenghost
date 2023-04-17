@@ -24,9 +24,9 @@ const Home: NextPage = () => {
           property="og:description"
           content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
         />
-        <meta property="og:image" content="https://green.gd/social.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
+        <meta property="og:image:width" content="2400" />
+        <meta property="og:image:height" content="1260" />
         <meta property="og:url" content="https://green.gd" />
         <meta
           name="twitter:title"
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
           name="twitter:description"
           content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
         />
-        <meta name="twitter:image" content="https://green.gd/social.png" />
+        <meta name="twitter:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
         <meta name="twitter:url" content="https://green.gd" />
       </Head>
       <MainLayout>

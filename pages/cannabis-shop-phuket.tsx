@@ -26,9 +26,9 @@ const CannabisShop: NextPage = () => {
           property="og:description"
           content="Looking for the best cannabis shops in Phuket? Look no further than the ones trusted by the Green Ghost. We've scoured the island to find the top cannabis shops that offer the highest quality products and the best prices. Whether you're looking for flower, edibles, pre-rolls, or accessories, we've got you covered. Trust us to help you find the perfect cannabis products to suit your needs."
         />
-        <meta property="og:image" content="https://green.gd/social.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
+        <meta property="og:image:width" content="2400" />
+        <meta property="og:image:height" content="1260" />
         <meta
           property="og:url"
           content="https://green.gd/cannabis-shop-phuket"
@@ -41,7 +41,7 @@ const CannabisShop: NextPage = () => {
           name="twitter:description"
           content="Looking for the best cannabis shops in Phuket? Look no further than the ones trusted by the Green Ghost. We've scoured the island to find the top cannabis shops that offer the highest quality products and the best prices. Whether you're looking for flower, edibles, pre-rolls, or accessories, we've got you covered. Trust us to help you find the perfect cannabis products to suit your needs."
         />
-        <meta name="twitter:image" content="https://green.gd/social.png" />
+        <meta name="twitter:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
         <meta
           name="twitter:url"
           content="https://green.gd/cannabis-shop-phuket"
