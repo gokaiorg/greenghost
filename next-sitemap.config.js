@@ -1,4 +1,5 @@
-/** @type {import('next-sitemap').IConfig} */
+// next-sitemap.config.js
+const { products, getProductImageUrls } = require('./config/products.ts');
 
 module.exports = {
   siteUrl: 'https://green.gd',
@@ -8,12 +9,17 @@ module.exports = {
   generateRobotsTxt: true,
   // Default transformation function
   transform: async (config, path) => {
-    return {
-      loc: path, // => this will be exported as http(s)://<config.siteUrl>/<path>
-      changefreq: config.changefreq,
-      priority: config.priority,
-      lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
-      images: [{ loc: 'https://green.gd/green-ghost-degen-weed-shop.png' }],
-    };
+    const product = products.find((p) => p.slug === path.slice(7)); // assuming path starts with '/product/'
+    if (product) {
+      const imageUrls = getProductImageUrls(product);
+      return {
+        loc: path, // => this will be exported as http(s)://<config.siteUrl>/<path>
+        changefreq: config.changefreq,
+        priority: config.priority,
+        lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
+        images: imageUrls.map((url) => ({ loc: url })),
+      };
+    }
+    return null;
   },
 };

@@ -81,10 +81,7 @@ const CannabisShop: NextPage = () => {
             alignItems="center"
             flexDirection="column"
             color="ghostVerse.green.base"
-            as="a"
             mx={4}
-            target="_blank"
-            href="https://gokai.org"
           >
             <Link href="/weed-shop">
               <Box
@@ -97,7 +94,7 @@ const CannabisShop: NextPage = () => {
                 alt="Green Ghost - Degen Weed Shop"
                 title="Green Ghost - Degen Weed Shop"
               />
-              Green Garden
+              Green Ghost
             </Link>
           </Box>
           <Box
@@ -106,11 +103,8 @@ const CannabisShop: NextPage = () => {
             alignItems="center"
             flexDirection="column"
             color="ghostVerse.green.base"
-            as="a"
             mx={4}
-            target="_blank"
             textAlign="center"
-            href="https://gokai.org"
           >
             <Link href="/my-weed-solutions">
               <Box

@@ -703,3 +703,7 @@ export function getProductBySlug(slug: string): Product | undefined {
 export function getProducts(): Product[] {
   return products;
 }
+
+export function getProductImageUrls(product: Product): string[] {
+  return product.images.map((image) => `/media/${image}`);
+}
