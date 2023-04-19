@@ -25,7 +25,10 @@ const GhostDegenWeedShop: NextPage = () => {
           property="og:description"
           content="Everything we create is designed to make you feel like a true degen. Our products are made with the highest standards of craftsmanship and attention to detail, ensuring that you get the best possible experience every time you use them."
         />
-        <meta property="og:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
+        <meta
+          property="og:image"
+          content="https://green.gd/green-ghost-degen-weed-shop.png"
+        />
         <meta property="og:image:width" content="2400" />
         <meta property="og:image:height" content="1260" />
         <meta
@@ -40,7 +43,10 @@ const GhostDegenWeedShop: NextPage = () => {
           name="twitter:description"
           content="Everything we create is designed to make you feel like a true degen. Our products are made with the highest standards of craftsmanship and attention to detail, ensuring that you get the best possible experience every time you use them."
         />
-        <meta name="twitter:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
+        <meta
+          name="twitter:image"
+          content="https://green.gd/green-ghost-degen-weed-shop.png"
+        />
         <meta
           name="twitter:url"
           content="https://green.gd/ghost-degen-weed-shop"

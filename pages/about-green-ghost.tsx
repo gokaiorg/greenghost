@@ -22,7 +22,10 @@ const BuyWeed: NextPage = () => {
           property="og:description"
           content="Green Ghost is the result of a partnership with best Phuket growers, and Gokai Labs, a digital branding and communication agency with over 10 years of experience in Thailand."
         />
-        <meta property="og:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
+        <meta
+          property="og:image"
+          content="https://green.gd/green-ghost-degen-weed-shop.png"
+        />
         <meta property="og:image:width" content="2400" />
         <meta property="og:image:height" content="1260" />
         <meta property="og:url" content="https://green.gd/about-green-ghost" />
@@ -31,7 +34,10 @@ const BuyWeed: NextPage = () => {
           name="twitter:description"
           content="Green Ghost is the result of a partnership with best Phuket growers, and Gokai Labs, a digital branding and communication agency with over 10 years of experience in Thailand."
         />
-        <meta name="twitter:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
+        <meta
+          name="twitter:image"
+          content="https://green.gd/green-ghost-degen-weed-shop.png"
+        />
         <meta name="twitter:url" content="https://green.gd/about-green-ghost" />
       </Head>
       <MainLayout>

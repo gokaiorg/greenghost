@@ -26,7 +26,10 @@ const WeedShopEdibles: NextPage = () => {
           property="og:description"
           content="Discover our delicious selection of locally sourced and organic edibles. From classic brownies and gummies to unique artisanal treats, our edibles are carefully crafted to provide a consistent and enjoyable experience. Our products are made with high-quality ingredients and are lab tested for potency and purity. Whether you're looking for a tasty way to relax or a discreet way to medicate, our edibles have got you covered. Order now and indulge in the ultimate edible experience!"
         />
-        <meta property="og:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
+        <meta
+          property="og:image"
+          content="https://green.gd/green-ghost-degen-weed-shop.png"
+        />
         <meta property="og:image:width" content="2400" />
         <meta property="og:image:height" content="1260" />
         <meta property="og:url" content="https://green.gd/weed-shop-edibles" />
@@ -38,7 +41,10 @@ const WeedShopEdibles: NextPage = () => {
           name="twitter:description"
           content="Discover our delicious selection of locally sourced and organic edibles. From classic brownies and gummies to unique artisanal treats, our edibles are carefully crafted to provide a consistent and enjoyable experience. Our products are made with high-quality ingredients and are lab tested for potency and purity. Whether you're looking for a tasty way to relax or a discreet way to medicate, our edibles have got you covered. Order now and indulge in the ultimate edible experience!"
         />
-        <meta name="twitter:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
+        <meta
+          name="twitter:image"
+          content="https://green.gd/green-ghost-degen-weed-shop.png"
+        />
         <meta name="twitter:url" content="https://green.gd/weed-shop-edibles" />
       </Head>
       <MainLayout>

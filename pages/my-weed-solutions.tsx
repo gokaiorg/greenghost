@@ -30,7 +30,10 @@ const BuyWeed: NextPage = () => {
           content="MW Solutions is a company that believes in its customers and
               believes in the right to live life their way."
         />
-        <meta property="og:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
+        <meta
+          property="og:image"
+          content="https://green.gd/green-ghost-degen-weed-shop.png"
+        />
         <meta property="og:image:width" content="2400" />
         <meta property="og:image:height" content="1260" />
         <meta property="og:url" content="https://green.gd" />
@@ -43,7 +46,10 @@ const BuyWeed: NextPage = () => {
           content="MW Solutions is a company that believes in its customers and
               believes in the right to live life their way."
         />
-        <meta name="twitter:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
+        <meta
+          name="twitter:image"
+          content="https://green.gd/green-ghost-degen-weed-shop.png"
+        />
         <meta name="twitter:url" content="https://green.gd" />
       </Head>
       <MainLayout>

@@ -13,9 +13,7 @@ const CryptoWeedShop: NextPage = () => {
   return (
     <>
       <Head>
-        <title>
-          Green Ghost - Crypto Coffee Shop - Relax and Earn.
-        </title>
+        <title>Green Ghost - Crypto Coffee Shop - Relax and Earn.</title>
         <meta
           name="description"
           content="Discover the future of cannabis shopping with The Green Ghost - a crypto tokenized coffee shop offering pre-rolled, edibles, and a wide range of flowers. Become a member with NFT ownership to receive exclusive promotions and token cashback rewards. Shop with ease and security with our innovative blockchain-based platform."

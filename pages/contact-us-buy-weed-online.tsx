@@ -25,7 +25,10 @@ const BuyWeed: NextPage = () => {
           property="og:description"
           content="Looking to buy weed online? Contact Green Ghost Degen to place your order for high-quality, locally-sourced cannabis products. Our knowledgeable team is dedicated to providing a safe and reliable service, with discreet and secure shipping options available. Whether you're a seasoned smoker or new to the world of cannabis, we have a wide selection of products to suit your needs. Contact us today to learn more and place your order."
         />
-        <meta property="og:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
+        <meta
+          property="og:image"
+          content="https://green.gd/green-ghost-degen-weed-shop.png"
+        />
         <meta property="og:image:width" content="2400" />
         <meta property="og:image:height" content="1260" />
         <meta
@@ -40,7 +43,10 @@ const BuyWeed: NextPage = () => {
           name="twitter:description"
           content="Looking to buy weed online? Contact Green Ghost Degen to place your order for high-quality, locally-sourced cannabis products. Our knowledgeable team is dedicated to providing a safe and reliable service, with discreet and secure shipping options available. Whether you're a seasoned smoker or new to the world of cannabis, we have a wide selection of products to suit your needs. Contact us today to learn more and place your order."
         />
-        <meta name="twitter:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
+        <meta
+          name="twitter:image"
+          content="https://green.gd/green-ghost-degen-weed-shop.png"
+        />
         <meta
           name="twitter:url"
           content="https://green.gd/contact-us-buy-weed-online"

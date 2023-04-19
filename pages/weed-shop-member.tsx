@@ -26,7 +26,10 @@ const WeedShopMember: NextPage = () => {
           property="og:description"
           content="Join our exclusive member shop and gain access to a wide selection of premium cannabis products at unbeatable prices. Our members enjoy special discounts and promotions on top-quality buds, pre-rolls, edibles, and more. We also offer exclusive access to limited edition strains and products, as well as personalized recommendations from our knowledgeable staff. Join us now and experience the best of the cannabis world with our exclusive member shop."
         />
-        <meta property="og:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
+        <meta
+          property="og:image"
+          content="https://green.gd/green-ghost-degen-weed-shop.png"
+        />
         <meta property="og:image:width" content="2400" />
         <meta property="og:image:height" content="1260" />
         <meta property="og:url" content="https://green.gd/weed-shop-member" />
@@ -38,7 +41,10 @@ const WeedShopMember: NextPage = () => {
           name="twitter:description"
           content="Join our exclusive member shop and gain access to a wide selection of premium cannabis products at unbeatable prices. Our members enjoy special discounts and promotions on top-quality buds, pre-rolls, edibles, and more. We also offer exclusive access to limited edition strains and products, as well as personalized recommendations from our knowledgeable staff. Join us now and experience the best of the cannabis world with our exclusive member shop."
         />
-        <meta name="twitter:image" content="https://green.gd/green-ghost-degen-weed-shop.png" />
+        <meta
+          name="twitter:image"
+          content="https://green.gd/green-ghost-degen-weed-shop.png"
+        />
         <meta name="twitter:url" content="https://green.gd/weed-shop-member" />
       </Head>
       <MainLayout>
