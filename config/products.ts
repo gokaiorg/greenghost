@@ -125,7 +125,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '03/04/2023',
-    quantity: 107,
+    quantity: 106,
     origin: 'Phuket',
     description:
       "Cherry Garcia is a popular hybrid marijuana strain that is known for its calming effects. This strain is a cross between Animal Cookies and 3x Crazy, and its potency is known to vary. With continued use, Cherry Garcia's effects become more calming than energizing, leading to a balanced high that leaves you feeling happy, relaxed, and euphoric. Consumers of Cherry Garcia often report that it makes them feel giggly and enhances their mood. \n\n One of the most notable features of Cherry Garcia is its unique flavor profile. The strain has a sweet taste, with hints of berry and cherry that shine through. Many users appreciate the smooth and enjoyable smoking experience that Cherry Garcia provides. Medical marijuana patients often choose Cherry Garcia to alleviate symptoms related to stress, pain, and depression. \n\n Cherry Garcia was initially bred by Natural State Cultivation and has gained popularity due to its balanced effects and unique flavor profile. Whether you're looking to unwind after a long day or want to enhance your mood, Cherry Garcia may be the perfect strain for you. With its calming and uplifting effects, it's no surprise that this strain has become a favorite among many cannabis enthusiasts.",
@@ -154,7 +154,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '03/04/2023',
-    quantity: 10,
+    quantity: 9,
     origin: 'Phuket',
     description:
       "Critical Kush is an Indica-dominant marijuana strain that is known for its potent effects. Bred by Barney's Farm, it is a cross between Critical Mass and OG Kush, two of the most beloved strains in the cannabis world. Critical Kush has a pungent earthy aroma with a hint of spice, which can induce a calming effect on the mind and body. Its high THC content combined with a moderate amount of CBD makes it an ideal nighttime medication for those seeking relief from pain, stress, insomnia, and muscle spasms. \n\n This popular strain is highly valued by both medical and recreational users. Medical marijuana patients use Critical Kush to alleviate symptoms related to chronic pain, anxiety, depression, and insomnia. Recreational users appreciate its relaxing, sedative-like effects, which make it an excellent choice for unwinding after a long day. Critical Kush is also a favorite among growers, as it is easy to cultivate and produces high yields. \n\n Indoor growers can expect Critical Kush to flower in about 50-60 days. This strain is known for its resilience and adaptability, making it suitable for both novice and experienced cultivators. With its potent effects and delightful aroma, Critical Kush is a must-try for any cannabis connoisseur looking for a high-quality Indica strain.",
@@ -183,7 +183,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '03/04/2023',
-    quantity: 5,
+    quantity: 3,
     origin: 'Phuket',
     description:
       "Royal Moby is a popular hybrid marijuana strain that has gained a royal status among cannabis enthusiasts worldwide. This strain is known for its hard-hitting smoke and delightful aroma, which have contributed to its widespread popularity. In the early days of cannabis cultivation, Sativa and Indica hybrids were primarily used to develop new strains. While a combination of both traits is typically present, one will often dominate over the other, leading to the emergence of dominant strains. In Spain, growers experimenting with genetics came across a Sativa/Indica hybrid that flowered to the full psychoactive effects of a pure Sativa. The smoke from this cannabis strain was so enormous that it was eventually named Moby Dick. \n\n Royal Moby is a hard-hitting sativa with impressive traits derived from Haze and White Widow. Its aroma is a combination of earthy and spicy notes, with hints of citrus shining through. The effects of this strain are predominantly cerebral, producing a euphoric and energizing high that is perfect for daytime use. Medical marijuana patients have reported that Royal Moby helps relieve symptoms of stress, depression, and anxiety. \n\n If you're looking for a hybrid strain that offers a balanced blend of Sativa and Indica traits, Royal Moby is an excellent choice. With its hard-hitting smoke and pleasant aroma, this strain is sure to become a favorite among cannabis connoisseurs. So why not give it a try and experience the royal treatment that Royal Moby has to offer?",
@@ -213,7 +213,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '03/04/2023',
-    quantity: 60,
+    quantity: 59,
     origin: 'Phuket',
     description:
       "MAC and Jack is a hybrid marijuana strain that's still making waves in the cannabis world. With a mix of genetics from MAC (Miracle Alien Cookies) and Jack Herer, this strain packs a punch that leaves smokers wanting more. Its flavors and effects are still being discovered, but those who have tried it say it's a potent strain that's worth trying. \n\n The exact flavors of MAC and Jack are still up for debate, but some say it has a spicy, earthy aroma with hints of fruit and citrus. As for the effects, this strain is said to offer a strong high that hits both the mind and body. Many users report feeling a surge of creativity and energy, making it a great choice for those looking for inspiration or motivation to get things done. \n\n As with any hybrid strain, the dominant effects and flavors may vary depending on the phenotype and growing conditions. However, MAC and Jack's mix of genetics is sure to provide a unique and enjoyable experience for cannabis enthusiasts.",
@@ -242,7 +242,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '03/04/2023',
-    quantity: 45,
+    quantity: 44,
     origin: 'Phuket',
     description:
       "C-Vibez is a fast-flowering hybrid cannabis strain that's highly sought after for its dense, aromatic buds that grow quickly to maturity. With an average height of about 1.0m - 1.5m, this strain takes only about 8 weeks to finish blooming its rock-hard flowers. C-Vibez is a heavy yielder with an exceptional terpene profile, and most of these high-quality feminized seeds turn into short, green plants. About 30% show some color, ranging from purple to pink. \n\n This strain is the result of Mad Scientist genetics, accompanied by some outstanding Voodoo genetics. Voodoo is a massively potent original Dutch Passion Thai strain, responsible for the strong stone that consumers will experience while vaping or smoking the end result. Despite being an indica-dominant variety, C-Vibez offers remarkable fruity/lemony hints in the taste, especially when being burned. \n\n It's worth noting that C-Vibez has deliberately not been bred to full stability, which ensures a rich selection of seriously high-quality phenotypes with the vigor usually encountered in F2's and F3's. This makes C-Vibez a unique and exciting strain to cultivate and experience, with a potent and flavorful smoke that's sure to please even the most discerning cannabis enthusiasts.",
@@ -272,7 +272,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '03/04/2023',
-    quantity: 90,
+    quantity: 89,
     origin: 'Phuket',
     description:
       'Super Lemon Haze is a sativa-dominant hybrid cannabis strain that is the result of the crossing of Lemon Skunk and Super Silver Haze strains. This award-winning strain has gained popularity due to its multi-colored appearance and intense lemony flavor profile. Super Lemon Haze is known for its unique, energetic and lively effects, making it a popular choice among cannabis enthusiasts. \n\n The aroma of Super Lemon Haze is zesty, citrusy, and slightly sweet. The taste is tart and sweet, reminiscent of lemon candy, but not too sharp. This strain is kief-caked and visually striking with its array of colors. \n\n Super Lemon Haze has a high THC content, making it a potent strain that may not be suitable for those with low tolerance levels. Its effects are said to be uplifting, euphoric, and stimulating, making it a great choice for daytime use. It is often used to treat symptoms related to stress, depression, and fatigue. \n\n Overall, Super Lemon Haze is a top-rated strain with a unique flavor and powerful effects that have won it several awards, including two Cannabis Cup awards. It is a strain that is sure to impress cannabis connoisseurs looking for a flavorful and energetic high.',
@@ -301,7 +301,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '03/04/2023',
-    quantity: 95,
+    quantity: 94,
     origin: 'Phuket',
     description:
       "Mandarin Skittlez is a hybrid cannabis strain that results from the crossing of two potent strains, Dying Breed's California Black Rosé and Ethos' Mandarin Sunset. This striking strain is characterized by its unique and beautiful purple, black, and red buds that are sure to catch anyone's attention. Its dense and resinous buds have a low leaf-to-flower ratio, making it an ideal choice for extraction. \n\n The Mandarin Skittlez strain boasts an impressive array of flavors that are sure to tantalize your taste buds. It has an intense grape, grapefruit, spice, and orange taste that is both refreshing and satisfying. Its effects are equally impressive, offering a potent high that leaves smokers feeling happy, relaxed, and euphoric. It is perfect for unwinding after a long day or for creative inspiration. \n\n Mandarin Skittlez is an excellent choice for cannabis enthusiasts who are looking for a unique strain that packs a punch. Its beautiful appearance, potent effects, and mouth-watering flavors make it a top choice in dispensaries worldwide. Whether you're a seasoned smoker or a newbie, Mandarin Skittlez is a must-try strain for its exceptional quality and amazing effects.",
