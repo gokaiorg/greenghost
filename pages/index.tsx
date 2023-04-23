@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         />
         <meta property="og:image:width" content="2400" />
         <meta property="og:image:height" content="1260" />
-        <meta property="og:url" content="https://green.gd" />
+        <meta property="og:url" content="https://green.gd/" />
         <meta
           name="twitter:title"
           content="Green Ghost - Degen Weed Shop ร้าน ขาย กัญชา."
@@ -43,7 +43,7 @@ const Home: NextPage = () => {
           name="twitter:image"
           content="https://green.gd/green-ghost-degen-weed-shop.png"
         />
-        <meta name="twitter:url" content="https://green.gd" />
+        <meta name="twitter:url" content="https://green.gd/" />
       </Head>
       <MainLayout>
         <HeaderMenu>

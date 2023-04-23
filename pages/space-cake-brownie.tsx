@@ -10,12 +10,11 @@ import SwiperCore, { Autoplay } from 'swiper';
 import Head from 'next/head';
 
 import 'swiper/css';
-import { GoToShopLink } from '../components/GoToShopLink';
 
 const SpaceCakeBrownie: NextPage = () => {
   SwiperCore.use([Autoplay]);
 
-    const handleBack = () => {
+  const handleBack = () => {
     window.history.back();
   };
   return (
@@ -37,7 +36,7 @@ const SpaceCakeBrownie: NextPage = () => {
         />
         <meta property="og:image:width" content="2400" />
         <meta property="og:image:height" content="1260" />
-        <meta property="og:url" content="/space-cake-brownie" />
+        <meta property="og:url" content="https://green.gd/space-cake-brownie" />
         <meta name="twitter:title" content="Green Ghost - Edibles - Brownie." />
         <meta
           name="twitter:description"

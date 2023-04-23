@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const withPWA = require('next-pwa');
+const withOptimizedImages = require('next-optimized-images');
 
 const nextConfig = {
   webpack: (config) => {
@@ -80,5 +81,8 @@ module.exports = withPWA({
       },
     ];
   },
+});
+module.exports = withOptimizedImages({
+  // your Next.js config options here
 });
 module.exports = nextConfig;
