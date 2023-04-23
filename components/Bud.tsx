@@ -12,11 +12,7 @@ export const Bud = () => {
     useState<DominanceOption>('All');
 
   const filteredProducts = products.filter((product) => {
-    if (
-      !showUnavailable &&
-      (product.price === 'undefined' ||
-        product.price.toLowerCase().includes('member'))
-    ) {
+    if (!showUnavailable && (product.quantity === 0 || product.price === 666)) {
       return false;
     }
 

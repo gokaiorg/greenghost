@@ -3,7 +3,6 @@ import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
-import { BuyNowLink } from '../components/BuyNowLink';
 import Head from 'next/head';
 import { MenuWeedShop } from '../components/MenuWeedShop';
 import { ShopDegen } from '../components/ShopDegen';
@@ -59,7 +58,6 @@ const GhostDegenWeedShop: NextPage = () => {
         <HomeSectionTitle title="Degen Weed Shop - Degen Stuff." />
         <MenuWeedShop />
         <ShopDegen />
-        <BuyNowLink />
       </MainLayout>
     </>
   );

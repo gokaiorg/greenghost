@@ -71,7 +71,12 @@ const BuyWeed: NextPage = () => {
             <ImgQuestion />
           </Text>
           <Text>
-            Green Ghost is the result of a partnership with best Phuket growers,
+            Green Ghost is the result of a partnership with{' '}
+            <Link href="/cannabis-grower-phuket">
+              <Box as="span" color="ghostVerse.green.base">
+                best Phuket growers
+              </Box>
+            </Link>{' '}
             and Gokai Labs, a digital branding and communication agency with
             over 10 years of experience in Thailand.
           </Text>
@@ -119,7 +124,7 @@ const BuyWeed: NextPage = () => {
           </Text>
           <Text>
             Committed to local values,{' '}
-            <Link href="/cannabis-shop-phuket">
+            <Link href="/weed-shop">
               <Box
                 as="span"
                 display="inline-block"
@@ -135,7 +140,7 @@ const BuyWeed: NextPage = () => {
             Green Ghost is not just another coffee shop; it is the culmination
             of the passion of an entire team dedicated to our clients with an
             innovative{' '}
-            <Link href="/tokenized-cannabis-store">
+            <Link href="/crypto-weed-shop-relax-and-earn">
               <Box
                 as="span"
                 display="inline-block"

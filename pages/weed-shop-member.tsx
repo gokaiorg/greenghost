@@ -4,7 +4,6 @@ import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
-import { BuyNowLink } from '../components/BuyNowLink';
 import Head from 'next/head';
 import { MenuWeedShop } from '../components/MenuWeedShop';
 import { BudMember } from '../components/BudMember';
@@ -63,6 +62,7 @@ const WeedShopMember: NextPage = () => {
           p={4}
           my={4}
           mx="auto"
+          mt="auto"
           display="flex"
           width="fit-content"
           flexDirection="column"
@@ -70,7 +70,6 @@ const WeedShopMember: NextPage = () => {
         >
           All our products are organic
         </Box>
-        <BuyNowLink />
       </MainLayout>
     </>
   );

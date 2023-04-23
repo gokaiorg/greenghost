@@ -1,31 +1,33 @@
 import type { NextPage } from 'next';
+import { Box, Text } from '@chakra-ui/react';
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
-import { Tokenized01 } from '../components/tokenized01';
-import { Tokenized02 } from '../components/tokenized02';
-import { Tokenized03 } from '../components/tokenized03';
+import Link from 'next/link';
+import { ImgDollar } from '../components/ImgDollar';
+import { ImgPercent } from '../components/ImgPercent';
+import { ImgQuestion } from '../components/ImgQuestion';
 import Head from 'next/head';
+import { MenuCrypto } from '../components/MenuCrypto';
 
 const CryptoWeedShop: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Crypto Coffee Shop - Relax and Earn.</title>
+        <title>Green Ghost - Crypto Weed Shop - Relax and Earn.</title>
         <meta
           name="description"
-          content="Discover the future of cannabis shopping with The Green Ghost - a crypto tokenized coffee shop offering pre-rolled, edibles, and a wide range of flowers. Become a member with NFT ownership to receive exclusive promotions and token cashback rewards. Shop with ease and security with our innovative blockchain-based platform."
+          content="Discover the future of cannabis shopping with The Green Ghost - a tokenized crypto weed shop offering pre-rolled, edibles, and a wide range of flowers. Become a member with NFT ownership to receive exclusive promotions and token cashback rewards. Shop with ease and security with our innovative blockchain-based platform."
         />
         <meta
           property="og:title"
-          content="Green Ghost - Crypto Coffee Shop - Relax and Earn.
+          content="Green Ghost - Crypto Weed Shop - Relax and Earn.
           Edibles."
         />
         <meta
           property="og:description"
-          content="Discover the future of cannabis shopping with The Green Ghost - a crypto tokenized coffee shop offering pre-rolled, edibles, and a wide range of flowers. Become a member with NFT ownership to receive exclusive promotions and token cashback rewards. Shop with ease and security with our innovative blockchain-based platform."
+          content="Discover the future of cannabis shopping with The Green Ghost - a tokenized crypto weed shop offering pre-rolled, edibles, and a wide range of flowers. Become a member with NFT ownership to receive exclusive promotions and token cashback rewards. Shop with ease and security with our innovative blockchain-based platform."
         />
         <meta
           property="og:image"
@@ -39,12 +41,12 @@ const CryptoWeedShop: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Ghost - Crypto Coffee Shop - Relax and Earn.
+          content="Green Ghost - Crypto Weed Shop - Relax and Earn.
           Edibles."
         />
         <meta
           name="twitter:description"
-          content="Discover the future of cannabis shopping with The Green Ghost - a crypto tokenized coffee shop offering pre-rolled, edibles, and a wide range of flowers. Become a member with NFT ownership to receive exclusive promotions and token cashback rewards. Shop with ease and security with our innovative blockchain-based platform."
+          content="Discover the future of cannabis shopping with The Green Ghost - a tokenized crypto weed shop offering pre-rolled, edibles, and a wide range of flowers. Become a member with NFT ownership to receive exclusive promotions and token cashback rewards. Shop with ease and security with our innovative blockchain-based platform."
         />
         <meta
           name="twitter:image"
@@ -59,73 +61,96 @@ const CryptoWeedShop: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <HomeSectionTitle title="Relax & Earn - Tokenized Cannabis Shop." />
-        <Tabs variant="unstyled">
-          <TabList overflowX={{ base: 'scroll', md: 'inherit' }}>
-            <Tab
-              bgColor="ghostVerse.dark.lighter"
-              py={2}
-              px={6}
-              textAlign="center"
-              fontWeight="bold"
-              fontSize="lg"
-              color="ghostVerse.green.base"
-              borderColor="black"
-              borderBottomWidth={2}
-              borderTopWidth={0}
-              borderLeftWidth={0}
-              borderRightWidth={0}
-              _selected={{ borderColor: '#4cfd27' }}
-            >
-              Concept
-            </Tab>
-            <Tab
-              bgColor="ghostVerse.dark.lighter"
-              py={2}
-              px={6}
-              textAlign="center"
-              fontWeight="bold"
-              fontSize="lg"
-              color="ghostVerse.green.base"
-              borderColor="black"
-              borderBottomWidth={2}
-              borderTopWidth={0}
-              borderLeftWidth={0}
-              borderRightWidth={0}
-              _selected={{ borderColor: '#4cfd27' }}
-            >
-              Cashback
-            </Tab>
-            <Tab
-              bgColor="ghostVerse.dark.lighter"
-              py={2}
-              px={6}
-              textAlign="center"
-              fontWeight="bold"
-              fontSize="lg"
-              color="ghostVerse.green.base"
-              borderColor="black"
-              borderBottomWidth={2}
-              borderTopWidth={0}
-              borderLeftWidth={0}
-              borderRightWidth={0}
-              _selected={{ borderColor: '#4cfd27' }}
-            >
-              Partners
-            </Tab>
-          </TabList>
-          <TabPanels>
-            <TabPanel px={0}>
-              <Tokenized01 />
-            </TabPanel>
-            <TabPanel px={0}>
-              <Tokenized02 />
-            </TabPanel>
-            <TabPanel px={0}>
-              <Tokenized03 />
-            </TabPanel>
-          </TabPanels>
-        </Tabs>
+        <HomeSectionTitle title="Crypto Weed Shop - Relax & Earn." />
+        <MenuCrypto />
+        <Box
+          as="div"
+          color="white"
+          fontSize={{ base: '3xl' }}
+          borderColor="ghostVerse.color2.base"
+          bgColor="ghostVerse.dark.lighter"
+          borderWidth={1}
+          backdropFilter="blur(3px)"
+          mt={5}
+          mb={6}
+          p={4}
+          mr="auto"
+          fontFamily="vt323"
+        >
+          <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
+            Join the new generation in love for weed, art and crypto.
+          </Text>
+          Green Ghost is a contributor to the{' '}
+          <Text
+            color="ghostVerse.green.base"
+            as="a"
+            href="https://ghostverse.org/"
+          >
+            GhostVerse DAO
+          </Text>
+          , providing exclusive privileges to NFT holders as members of the
+          Ghost Clan.
+          <br />
+          <br />
+          MxGhosts pixel and voxel NFTs holders receive a 31
+          <ImgPercent /> discount and{' '}
+          <Text
+            color="ghostVerse.green.base"
+            as="a"
+            target="_blank"
+            href="https://linktr.ee/elrondbuds"
+          >
+            <ImgDollar />
+            EBUD
+          </Text>{' '}
+          cashback on all orders, in addition to earning{' '}
+          <Text
+            color="ghostVerse.green.base"
+            as="a"
+            href="https://ghostverse.org/play-and-earn"
+          >
+            passive income in <ImgDollar />
+            EGLD
+          </Text>{' '}
+          on{' '}
+          <Text
+            color="ghostVerse.green.base"
+            as="a"
+            target="_blank"
+            href="https://multiversx.com/"
+          >
+            MultiversX blockchain
+          </Text>
+          .
+          <br />
+          <br />
+          <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
+            Looking to get your hands on a unique Mr. Ghost NFT
+            <ImgQuestion />
+          </Text>
+          Head over to{' '}
+          <Text
+            color="ghostVerse.green.base"
+            as="a"
+            href="https://ghostverse.org/mxghosts"
+          >
+            MxGhosts
+          </Text>{' '}
+          and keep an eye out for our upcoming public sales or purchase one on
+          the secondary market. Make sure to follow our links to avoid scams.
+          <br />
+          <br />
+          <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
+            New to the world of blockchain and NFTs
+            <ImgQuestion />
+          </Text>
+          <Link href="/install-xportal-app">
+            <Box as="span" color="ghostVerse.green.base">
+              Install xPortal Wallet on your phone
+            </Box>
+          </Link>{' '}
+          and join the revolution.
+        </Box>
       </MainLayout>
     </>
   );

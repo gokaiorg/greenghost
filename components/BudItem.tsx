@@ -61,7 +61,7 @@ export const BudItem = ({ product }: BudItemProps) => {
               marginRight={1}
             >
               {product.name}
-              {product.price !== 'member' && (
+              {product.price !== 666 && (
                 <Box
                   marginLeft="auto"
                   color="ghostVerse.green.base"

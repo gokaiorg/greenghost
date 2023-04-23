@@ -12,18 +12,18 @@ const CannabisShop: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Phuket Cannabis Shops Selection</title>
+        <title>Green Ghost - Phuket Cannabis Growers Selection</title>
         <meta
           name="description"
-          content="Looking for the best cannabis shops in Phuket? Look no further than the ones trusted by the Green Ghost. We've scoured the island to find the top cannabis shops that offer the highest quality products and the best prices. Whether you're looking for flower, edibles, pre-rolls, or accessories, we've got you covered. Trust us to help you find the perfect cannabis products to suit your needs."
+          content="Discover the best cannabis grower in Phuket handpicked by Green Ghost. We partner with experienced and passionate growers who cultivate top-quality organic cannabis. From seed to harvest, our growers use advanced techniques to ensure the highest quality of buds. Trust Green Ghost to bring you the best cannabis from the best growers in Phuket."
         />
         <meta
           property="og:title"
-          content="Green Ghost - Phuket Cannabis Shops Selection."
+          content="Green Ghost - Phuket Cannabis Growers Selection."
         />
         <meta
           property="og:description"
-          content="Looking for the best cannabis shops in Phuket? Look no further than the ones trusted by the Green Ghost. We've scoured the island to find the top cannabis shops that offer the highest quality products and the best prices. Whether you're looking for flower, edibles, pre-rolls, or accessories, we've got you covered. Trust us to help you find the perfect cannabis products to suit your needs."
+          content="Discover the best cannabis grower in Phuket handpicked by Green Ghost. We partner with experienced and passionate growers who cultivate top-quality organic cannabis. From seed to harvest, our growers use advanced techniques to ensure the highest quality of buds. Trust Green Ghost to bring you the best cannabis from the best growers in Phuket."
         />
         <meta
           property="og:image"
@@ -33,15 +33,15 @@ const CannabisShop: NextPage = () => {
         <meta property="og:image:height" content="1260" />
         <meta
           property="og:url"
-          content="https://green.gd/cannabis-shop-phuket"
+          content="https://green.gd/cannabis-grower-phuket"
         />
         <meta
           name="twitter:title"
-          content="Green Ghost - Phuket Cannabis Shops Selection."
+          content="Green Ghost - Phuket Cannabis Growers Selection."
         />
         <meta
           name="twitter:description"
-          content="Looking for the best cannabis shops in Phuket? Look no further than the ones trusted by the Green Ghost. We've scoured the island to find the top cannabis shops that offer the highest quality products and the best prices. Whether you're looking for flower, edibles, pre-rolls, or accessories, we've got you covered. Trust us to help you find the perfect cannabis products to suit your needs."
+          content="Discover the best cannabis grower in Phuket handpicked by Green Ghost. We partner with experienced and passionate growers who cultivate top-quality organic cannabis. From seed to harvest, our growers use advanced techniques to ensure the highest quality of buds. Trust Green Ghost to bring you the best cannabis from the best growers in Phuket."
         />
         <meta
           name="twitter:image"
@@ -49,14 +49,14 @@ const CannabisShop: NextPage = () => {
         />
         <meta
           name="twitter:url"
-          content="https://green.gd/cannabis-shop-phuket"
+          content="https://green.gd/cannabis-grower-phuket"
         />
       </Head>
       <MainLayout>
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <HomeSectionTitle title="Green Ghost - Phuket Cannabis Shops Selection." />
+        <HomeSectionTitle title="Green Ghost - Phuket Cannabis Growers Selection." />
         <Box
           as="h2"
           borderColor="ghostVerse.color2.base"
@@ -87,28 +87,6 @@ const CannabisShop: NextPage = () => {
             flexDirection="column"
             color="ghostVerse.green.base"
             mx={4}
-          >
-            <Link href="/weed-shop">
-              <Box
-                as="img"
-                src="/logo512.png"
-                width={{ base: '80px' }}
-                height={{ base: '80px' }}
-                maxW="inherit"
-                mx="auto"
-                alt="Green Ghost - Degen Weed Shop"
-                title="Green Ghost - Degen Weed Shop"
-              />
-              Green Ghost
-            </Link>
-          </Box>
-          <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            flexDirection="column"
-            color="ghostVerse.green.base"
-            mx={4}
             textAlign="center"
           >
             <Link href="/my-weed-solutions">
@@ -122,7 +100,7 @@ const CannabisShop: NextPage = () => {
                 alt="Green Ghost - Degen Weed Shop"
                 title="Green Ghost - Degen Weed Shop"
               />
-              My Weed
+              My Weed Solutions
             </Link>
           </Box>
         </Box>

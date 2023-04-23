@@ -2,10 +2,17 @@ import { FC, PropsWithChildren } from 'react';
 import { Box } from '@chakra-ui/react';
 import { Logo } from './Logo';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
   children,
 }) => {
+  const router = useRouter();
+
+  const isActive = (href: string): boolean => {
+    return router.asPath === href;
+  };
+
   return (
     <Box
       display="flex"
@@ -25,6 +32,14 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
             flexDirection="column"
             alignItems="center"
             marginRight={4}
+            _hover={{
+              color: 'ghostVerse.green.base',
+            }}
+            color={
+              isActive('/about-green-ghost')
+                ? 'ghostVerse.green.base'
+                : 'inherit'
+            }
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -47,6 +62,10 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
             flexDirection="column"
             alignItems="center"
             marginRight={4}
+            _hover={{
+              color: 'ghostVerse.green.base',
+            }}
+            color={isActive('/weed-shop') ? 'ghostVerse.green.base' : 'inherit'}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +83,7 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
           </Box>
         </Link>
         <Link
-          href="/tokenized-cannabis-store"
+          href="/crypto-weed-shop-relax-and-earn"
           title="Crypto Coffee Shop"
           passHref
         >
@@ -73,6 +92,14 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
             flexDirection="column"
             alignItems="center"
             marginRight={4}
+            _hover={{
+              color: 'ghostVerse.green.base',
+            }}
+            color={
+              isActive('/crypto-weed-shop-relax-and-earn')
+                ? 'ghostVerse.green.base'
+                : 'inherit'
+            }
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -100,6 +127,14 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
             flexDirection="column"
             alignItems="center"
             marginRight={4}
+            _hover={{
+              color: 'ghostVerse.green.base',
+            }}
+            color={
+              isActive('/contact-us-buy-weed-online')
+                ? 'ghostVerse.green.base'
+                : 'inherit'
+            }
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -126,6 +161,9 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
             flexDirection="column"
             alignItems="center"
             marginRight={4}
+            _hover={{
+              color: 'ghostVerse.green.base',
+            }}
           >
             <svg
               width="40px"

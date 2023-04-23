@@ -164,7 +164,7 @@ const Home: NextPage = () => {
           mb={2}
           mr="auto"
         >
-          <Link href="/tokenized-cannabis-store">Relax and earn</Link>
+          <Link href="/crypto-weed-shop-relax-and-earn">Relax and earn</Link>
         </Text>
       </MainLayout>
     </>

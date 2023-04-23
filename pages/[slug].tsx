@@ -70,7 +70,10 @@ export default function ProductPage({ product }: ProductPageProps) {
         >
           Go back
         </Box>
-        <HomeSectionTitle title={`${product.name} Strain`} />
+        <Box display="flex" flexDirection={{ base: 'column', md: 'row' }}>
+          <HomeSectionTitle title={`${product.name} Strain`} />
+          <BuyNowLink />
+        </Box>
         <Swiper
           spaceBetween={10}
           slidesPerView="auto"
@@ -115,113 +118,284 @@ export default function ProductPage({ product }: ProductPageProps) {
             </SwiperSlide>
           ))}
         </Swiper>
-        <Box
-          display="flex"
-          flexDirection={{ base: 'column', md: 'row' }}
-          fontSize="3xl"
-          marginTop={4}
-          fontFamily="vt323"
-        >
-          {product.dominance == 'Indica Dominant' && (
-            <Box as="h2" color="ghostVerse.blue.base" marginRight={4}>
-              {product.dominance}
-            </Box>
-          )}
-          {product.dominance == 'Sativa Dominant' && (
-            <Box as="h2" color="ghostVerse.pink.base" marginRight={4}>
-              {product.dominance}
-            </Box>
-          )}
-          {product.dominance == 'Hybrid' && (
-            <Box as="h2" color="ghostVerse.orange.base" marginRight={4}>
-              {product.dominance}
-            </Box>
-          )}
-          <Box marginRight={4} display="flex">
-            Indica
+
+        <Box display="flex" flexDirection={{ base: 'column', lg: 'row' }}>
+          <Box order={{ base: 2, lg: 1 }} marginTop={4}>
             <Box
-              color="ghostVerse.green.base"
               display="flex"
-              alignItems="baseline"
-              marginLeft={2}
+              flexDirection={{ base: 'column' }}
+              fontSize="3xl"
+              fontFamily="vt323"
             >
-              {product.indica}
-              <ImgPercent />
-            </Box>
-          </Box>
-          <Box marginRight={4} display="flex">
-            Sativa
-            <Box
-              color="ghostVerse.green.base"
-              display="flex"
-              alignItems="baseline"
-              marginLeft={2}
-            >
-              {product.sativa}
-              <ImgPercent />
-            </Box>
-          </Box>
-          <Box marginRight={4} display="flex">
-            THC
-            <Box
-              color="ghostVerse.green.base"
-              display="flex"
-              alignItems="baseline"
-              marginLeft={2}
-            >
-              {product.THC}
-              <ImgPercent />
-            </Box>
-          </Box>
-          {product.CBD !== 'undefined' && (
-            <Box marginRight={4} display="flex">
-              CBD
-              <Box
-                color="ghostVerse.green.base"
-                display="flex"
-                alignItems="baseline"
-                marginLeft={2}
-              >
-                {product.CBD}
-                <ImgPercent />
+              <Box>
+                {product.dominance == 'Indica Dominant' && (
+                  <Box as="h2" color="ghostVerse.blue.base" marginRight={4}>
+                    {product.dominance}
+                  </Box>
+                )}
+                {product.dominance == 'Sativa Dominant' && (
+                  <Box as="h2" color="ghostVerse.pink.base" marginRight={4}>
+                    {product.dominance}
+                  </Box>
+                )}
+                {product.dominance == 'Hybrid' && (
+                  <Box as="h2" color="ghostVerse.orange.base" marginRight={4}>
+                    {product.dominance}
+                  </Box>
+                )}
+              </Box>
+              <Box display="flex">
+                <Box marginRight={4} display="flex">
+                  Indica
+                  <Box
+                    color="ghostVerse.green.base"
+                    display="flex"
+                    alignItems="baseline"
+                    marginLeft={2}
+                  >
+                    {product.indica}
+                    <ImgPercent />
+                  </Box>
+                </Box>
+                <Box marginRight={4} display="flex">
+                  Sativa
+                  <Box
+                    color="ghostVerse.green.base"
+                    display="flex"
+                    alignItems="baseline"
+                    marginLeft={2}
+                  >
+                    {product.sativa}
+                    <ImgPercent />
+                  </Box>
+                </Box>
+              </Box>
+              <Box display="flex">
+                <Box marginRight={4} display="flex">
+                  THC
+                  <Box
+                    color="ghostVerse.green.base"
+                    display="flex"
+                    alignItems="baseline"
+                    marginLeft={2}
+                  >
+                    {product.THC}
+                    <ImgPercent />
+                  </Box>
+                </Box>
+                {product.CBD !== 'undefined' && (
+                  <Box marginRight={4} display="flex">
+                    CBD
+                    <Box
+                      color="ghostVerse.green.base"
+                      display="flex"
+                      alignItems="baseline"
+                      marginLeft={2}
+                    >
+                      {product.CBD}
+                      <ImgPercent />
+                    </Box>
+                  </Box>
+                )}
               </Box>
             </Box>
-          )}
-        </Box>
-        <Box
-          display="flex"
-          flexDirection={{ base: 'column', md: 'row' }}
-          fontSize="3xl"
-          marginBottom={4}
-          marginTop={4}
-          fontFamily="vt323"
-        >
-          <Box marginRight={4}>
-            <Box as="h2" color="ghostVerse.green.base">
-              Feelings
+            <Box
+              display="flex"
+              flexDirection={{ base: 'column', md: 'row' }}
+              fontSize="3xl"
+              fontFamily="vt323"
+            >
+              <Box marginRight={4}>
+                <Box as="h2" color="ghostVerse.green.base">
+                  Feelings
+                </Box>
+              </Box>
+              {product.effects}
+            </Box>
+            <Box
+              display="flex"
+              flexDirection={{ base: 'column', md: 'row' }}
+              fontSize="3xl"
+              marginBottom={4}
+              fontFamily="vt323"
+            >
+              <Box marginRight={4}>
+                <Box as="h2" color="ghostVerse.green.base">
+                  Relieves
+                </Box>
+              </Box>
+              {product.relieves}
             </Box>
           </Box>
-          {product.effects}
+          <Box
+            order={{ base: 1, lg: 2 }}
+            marginTop={6}
+            marginLeft="auto"
+            fontSize="2xl"
+          >
+            {product.quantity !== 0 && product.price !== 666 && (
+              <>
+                <Box
+                  display="flex"
+                  justifyContent="end"
+                  fontSize="xl"
+                  color="ghostVerse.red.base"
+                  fontFamily="CubicFive12"
+                >
+                  {product.quantity} grams left
+                </Box>
+                <Box display="flex" justifyContent="end">
+                  <Box as="h3">1G</Box>
+                  <Box
+                    fontFamily="CubicFive12"
+                    display="flex"
+                    color="ghostVerse.green.base"
+                    ml={4}
+                  >
+                    {product.price} THB
+                  </Box>
+                </Box>
+                <Link href="/crypto-weed-shop-relax-and-earn">
+                  <Box
+                    display="flex"
+                    justifyContent="end"
+                    mb={2}
+                    fontSize="xl"
+                    color="ghostVerse.grey.lighter"
+                    _hover={{
+                      color: 'ghostVerse.green.base',
+                    }}
+                  >
+                    <Box as="h3">member</Box>
+                    <Box fontFamily="CubicFive12" display="flex" ml={4}>
+                      {(product.price * 0.69).toFixed(0)} THB
+                    </Box>
+                  </Box>
+                </Link>
+
+                <Box display="flex" justifyContent="end">
+                  <Box as="h3">10G</Box>
+                  <Box
+                    fontFamily="CubicFive12"
+                    display="flex"
+                    color="ghostVerse.green.base"
+                    ml={4}
+                  >
+                    {(product.price * 10 - product.price).toFixed(0)} THB
+                  </Box>
+                </Box>
+                <Link href="/crypto-weed-shop-relax-and-earn">
+                  <Box
+                    display="flex"
+                    justifyContent="end"
+                    mb={2}
+                    fontSize="xl"
+                    color="ghostVerse.grey.lighter"
+                    _hover={{
+                      color: 'ghostVerse.green.base',
+                    }}
+                  >
+                    <Box as="h3">member</Box>
+                    <Box fontFamily="CubicFive12" display="flex" ml={4}>
+                      {((product.price * 10 - product.price) * 0.69).toFixed(0)}{' '}
+                      THB
+                    </Box>
+                  </Box>
+                </Link>
+                <Link href="/contact-us-buy-weed-online">
+                  <Box
+                    display="flex"
+                    justifyContent="end"
+                    mb={2}
+                    fontSize="xl"
+                    color="ghostVerse.green.base"
+                  >
+                    Wholesale
+                  </Box>
+                </Link>
+              </>
+            )}
+            {product.quantity === 0 && (
+              <Box
+                display="flex"
+                justifyContent="end"
+                fontSize="xl"
+                color="ghostVerse.red.base"
+              >
+                SOLD OUT
+              </Box>
+            )}
+            {product.price === 666 && (
+              <Link href="/crypto-weed-shop-relax-and-earn">
+                <Box
+                  display="flex"
+                  justifyContent="end"
+                  fontSize="xl"
+                  color="ghostVerse.red.base"
+                  _hover={{
+                    color: 'ghostVerse.green.base',
+                  }}
+                >
+                  MEMBER ONLY
+                </Box>
+              </Link>
+            )}
+          </Box>
         </Box>
-        {product.price !== 'member' && (
+        {product.price !== 666 && (
           <>
-            <Box as="h3">Grower</Box>
-            <Link href={product.growerSlug}>
-              <Box
-                display="flex"
-                flexDirection="column"
-                color="ghostVerse.green.base"
-                as="a"
-                mr={4}
-                target="_blank"
-                href={product.source}
-              >
-                {product.grower}
+            <Box
+              display="flex"
+              borderColor="ghostVerse.color2.base"
+              bgColor="ghostVerse.dark.lighter"
+              borderWidth={1}
+              backdropFilter="blur(3px)"
+              width="full"
+              p={4}
+              flexDirection={{ base: 'column', md: 'row' }}
+              my={5}
+              fontFamily="CubicFive12"
+              justifyContent="center"
+            >
+              <Box display="flex" flexDirection={{ base: 'column', xl: 'row' }}>
+                <Box as="h3" mr={2}>
+                  Grower
+                </Box>
+                <Link href={product.growerSlug}>
+                  <Box display="flex" color="ghostVerse.green.base" mr={4}>
+                    {product.grower}
+                  </Box>
+                </Link>
               </Box>
-            </Link>
+              <Box display="flex" flexDirection={{ base: 'column', xl: 'row' }}>
+                <Box as="h3" mr={2}>
+                  Origin
+                </Box>
+                <Link href="/cannabis-grower-phuket">
+                  <Box display="flex" color="ghostVerse.green.base" mr={4}>
+                    {product.origin}
+                  </Box>
+                </Link>
+              </Box>
+              <Box display="flex" flexDirection={{ base: 'column', xl: 'row' }}>
+                <Box as="h3" mr={2}>
+                  Environment
+                </Box>
+                <Box display="flex" color="ghostVerse.green.base" mr={4}>
+                  {product.environment}
+                </Box>
+              </Box>
+              <Box display="flex" flexDirection={{ base: 'column', xl: 'row' }}>
+                <Box as="h3" mr={2}>
+                  Harvest
+                </Box>
+                <Box display="flex" color="ghostVerse.green.base" mr={4}>
+                  {product.harvest}
+                </Box>
+              </Box>
+            </Box>
           </>
         )}
-
         <Box
           borderColor="ghostVerse.color2.base"
           bgColor="ghostVerse.dark.lighter"
@@ -250,7 +424,6 @@ export default function ProductPage({ product }: ProductPageProps) {
             Source
           </Box>
         </Box>
-        <BuyNowLink />
       </MainLayout>
     </>
   );

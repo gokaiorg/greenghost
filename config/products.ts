@@ -7,29 +7,39 @@ export type Product = {
   THC: string;
   CBD: string;
   effects: string;
+  relieves: string;
   grower: string;
   growerSlug: string;
-  price: string;
+  price: number;
   description: string;
   descSeo: string;
   images: string[];
   imgDesc: string;
   source: string;
+  origin: string;
+  environment: string;
+  harvest: string;
+  quantity: number;
 };
 
 export const products: Product[] = [
   {
     slug: 'kings-juice',
     name: 'King’s Juice',
-    price: 'member',
+    price: 666,
     dominance: 'Indica Dominant',
     indica: '60',
     sativa: '40',
     THC: '26',
     CBD: 'undefined',
     effects: 'Happy, Relaxed, Uplifted',
+    relieves: 'Pain, Stress, Anxiety',
     grower: 'My Weed Solutions',
     growerSlug: 'my-weed-solutions',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 50,
+    origin: 'Phuket',
     description:
       "The King's Juice is a hybrid cannabis strain created by combining two terpene profiles loved by its creator, Arjan. It is a cross between Mimosa from Symbiotic Genetics and King's Kush, resulting in a plant with a piney, coney growth and a long main cola that grows taller than its side branches. During the flowering period, the plant will stretch considerably, and its branches will grow steadily. \n\n The flowers of The King's Juice are known for their balanced floral and citrusy/earthy fragrance, which creates a complex aroma that resembles fresh fruit juice. Towards the end of the flowering period, the plant will take on beautiful reddish/violet hues, giving it a stunning fall color. The plant is also covered in trichomes, which add to its beauty. \n\n The effect of The King's Juice is a balanced high that can be enjoyed all day. It provides an uplifting head buzz, while the body remains light and active. The taste of the strain stays in the mouth for a while after exhaling, creating a satisfying sensation. Overall, The King's Juice is a beautiful and flavorful strain that offers a well-rounded high.",
     descSeo:
@@ -45,15 +55,20 @@ export const products: Product[] = [
   {
     slug: 'eleven-roses',
     name: 'Eleven Roses',
-    price: 'member',
+    price: 666,
     dominance: 'Indica Dominant',
     indica: '90',
     sativa: '10',
     THC: '24',
     CBD: 'undefined',
     effects: 'Sleepy, Relaxed, Hungry',
+    relieves: 'Stress, Anxiety, Insomnia',
     grower: 'My Weed Solutions',
     growerSlug: 'my-weed-solutions',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 50,
+    origin: 'Phuket',
     description:
       'Eleven Roses is an indica-dominant hybrid marijuana strain with an unknown genetic lineage. The dense and resinous buds of Eleven Roses have a pungent aroma with hints of pine, earth, and fuel. Though there is limited information available about this strain, its effects are said to be deeply relaxing and may be useful for treating insomnia, pain, and stress. \n\n Eleven Roses is also known for its sedative properties, making it a good choice for nighttime use or for those seeking relief from anxiety or tension. The exact THC and CBD levels of Eleven Roses are not known, but it is believed to have a moderately high THC content, potentially reaching up to 20%. \n\n The name Eleven Roses is thought to reference the potent and aromatic nature of this strain, with the eleven representing the abundance of its positive attributes. While there is still much to be learned about Eleven Roses, it is clear that this strain has the potential to provide relief for a range of medical conditions while also delivering a deep sense of relaxation and tranquility.',
     descSeo:
@@ -69,15 +84,20 @@ export const products: Product[] = [
   {
     slug: 'bruce-banner',
     name: 'Bruce Banner',
-    price: 'member',
+    price: 666,
     dominance: 'Sativa Dominant',
     indica: '40',
     sativa: '60',
     THC: '29',
     CBD: 'undefined',
     effects: 'Creative, Energetic, Euphoric',
+    relieves: 'Stress, Depression, Pain',
     grower: 'My Weed Solutions',
     growerSlug: 'my-weed-solutions',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 50,
+    origin: 'Phuket',
     description:
       "Bruce Banner is a highly sought-after hybrid strain known for its powerful effects and high THC content. With its origins traced back to a cross between OG Kush and Strawberry Diesel, Bruce Banner offers a unique blend of sweet and diesel-like flavors with earthy undertones. Its dense, sticky buds are known for their bright green color and orange hairs, often coated in a thick layer of trichomes. \n\n The effects of Bruce Banner are fast-acting and intense, providing a powerful burst of euphoria and creativity followed by deep relaxation and a mellow body buzz. Its high THC levels, which can range between 18-29%, make it a popular choice among experienced cannabis consumers seeking potent and long-lasting effects. It's important to note that the strain's high can be overwhelming for some, so beginners are advised to start with a lower dosage. \n\n Bruce Banner is also a popular strain among growers due to its fast flowering time of 8-10 weeks and high yields. It is known to produce three main phenotypes, one of which is Bruce Banner #3, which has gained a reputation as the most potent and flavorful of the three. Overall, Bruce Banner is a strain that offers a unique blend of flavors and effects that has earned it a place among the most popular hybrid strains on the market today.",
     descSeo:
@@ -93,15 +113,20 @@ export const products: Product[] = [
   {
     slug: 'cherry-garcia',
     name: 'Cherry Garcia',
-    price: '300',
+    price: 300,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
     THC: '22',
     CBD: '1',
     effects: 'Happy, Giggly, Talkative',
+    relieves: 'Depression, Stress, Anxiety',
     grower: 'My Weed Solutions',
     growerSlug: 'my-weed-solutions',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 107,
+    origin: 'Phuket',
     description:
       "Cherry Garcia is a popular hybrid marijuana strain that is known for its calming effects. This strain is a cross between Animal Cookies and 3x Crazy, and its potency is known to vary. With continued use, Cherry Garcia's effects become more calming than energizing, leading to a balanced high that leaves you feeling happy, relaxed, and euphoric. Consumers of Cherry Garcia often report that it makes them feel giggly and enhances their mood. \n\n One of the most notable features of Cherry Garcia is its unique flavor profile. The strain has a sweet taste, with hints of berry and cherry that shine through. Many users appreciate the smooth and enjoyable smoking experience that Cherry Garcia provides. Medical marijuana patients often choose Cherry Garcia to alleviate symptoms related to stress, pain, and depression. \n\n Cherry Garcia was initially bred by Natural State Cultivation and has gained popularity due to its balanced effects and unique flavor profile. Whether you're looking to unwind after a long day or want to enhance your mood, Cherry Garcia may be the perfect strain for you. With its calming and uplifting effects, it's no surprise that this strain has become a favorite among many cannabis enthusiasts.",
     descSeo:
@@ -117,15 +142,20 @@ export const products: Product[] = [
   {
     slug: 'critical-kush',
     name: 'Critical Kush',
-    price: '400',
+    price: 400,
     dominance: 'Indica Dominant',
     indica: '90',
     sativa: '10',
     THC: '18',
     CBD: 'undefined',
     effects: 'Sleepy, Relaxed, Hungry',
+    relieves: 'Stress, Pain, Anxiety',
     grower: 'My Weed Solutions',
     growerSlug: 'my-weed-solutions',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 10,
+    origin: 'Phuket',
     description:
       "Critical Kush is an Indica-dominant marijuana strain that is known for its potent effects. Bred by Barney's Farm, it is a cross between Critical Mass and OG Kush, two of the most beloved strains in the cannabis world. Critical Kush has a pungent earthy aroma with a hint of spice, which can induce a calming effect on the mind and body. Its high THC content combined with a moderate amount of CBD makes it an ideal nighttime medication for those seeking relief from pain, stress, insomnia, and muscle spasms. \n\n This popular strain is highly valued by both medical and recreational users. Medical marijuana patients use Critical Kush to alleviate symptoms related to chronic pain, anxiety, depression, and insomnia. Recreational users appreciate its relaxing, sedative-like effects, which make it an excellent choice for unwinding after a long day. Critical Kush is also a favorite among growers, as it is easy to cultivate and produces high yields. \n\n Indoor growers can expect Critical Kush to flower in about 50-60 days. This strain is known for its resilience and adaptability, making it suitable for both novice and experienced cultivators. With its potent effects and delightful aroma, Critical Kush is a must-try for any cannabis connoisseur looking for a high-quality Indica strain.",
     descSeo:
@@ -141,15 +171,20 @@ export const products: Product[] = [
   {
     slug: 'royal-moby',
     name: 'Royal Moby',
-    price: '500',
+    price: 500,
     dominance: 'Sativa Dominant',
     indica: '35',
     sativa: '65',
     THC: '21',
     CBD: 'undefined',
     effects: 'Strong, Cerebral, Trippy',
+    relieves: 'Stress, Pain, Anxiety',
     grower: 'My Weed Solutions',
     growerSlug: 'my-weed-solutions',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 5,
+    origin: 'Phuket',
     description:
       "Royal Moby is a popular hybrid marijuana strain that has gained a royal status among cannabis enthusiasts worldwide. This strain is known for its hard-hitting smoke and delightful aroma, which have contributed to its widespread popularity. In the early days of cannabis cultivation, Sativa and Indica hybrids were primarily used to develop new strains. While a combination of both traits is typically present, one will often dominate over the other, leading to the emergence of dominant strains. In Spain, growers experimenting with genetics came across a Sativa/Indica hybrid that flowered to the full psychoactive effects of a pure Sativa. The smoke from this cannabis strain was so enormous that it was eventually named Moby Dick. \n\n Royal Moby is a hard-hitting sativa with impressive traits derived from Haze and White Widow. Its aroma is a combination of earthy and spicy notes, with hints of citrus shining through. The effects of this strain are predominantly cerebral, producing a euphoric and energizing high that is perfect for daytime use. Medical marijuana patients have reported that Royal Moby helps relieve symptoms of stress, depression, and anxiety. \n\n If you're looking for a hybrid strain that offers a balanced blend of Sativa and Indica traits, Royal Moby is an excellent choice. With its hard-hitting smoke and pleasant aroma, this strain is sure to become a favorite among cannabis connoisseurs. So why not give it a try and experience the royal treatment that Royal Moby has to offer?",
     descSeo:
@@ -166,15 +201,20 @@ export const products: Product[] = [
   {
     slug: 'mac-and-jack',
     name: 'MAC and Jack',
-    price: '600',
+    price: 600,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
     THC: '30',
     CBD: '2',
     effects: 'Focused, Tingly, Creative',
+    relieves: 'Anxiety, Depression, Fatigue',
     grower: 'My Weed Solutions',
     growerSlug: 'my-weed-solutions',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 60,
+    origin: 'Phuket',
     description:
       "MAC and Jack is a hybrid marijuana strain that's still making waves in the cannabis world. With a mix of genetics from MAC (Miracle Alien Cookies) and Jack Herer, this strain packs a punch that leaves smokers wanting more. Its flavors and effects are still being discovered, but those who have tried it say it's a potent strain that's worth trying. \n\n The exact flavors of MAC and Jack are still up for debate, but some say it has a spicy, earthy aroma with hints of fruit and citrus. As for the effects, this strain is said to offer a strong high that hits both the mind and body. Many users report feeling a surge of creativity and energy, making it a great choice for those looking for inspiration or motivation to get things done. \n\n As with any hybrid strain, the dominant effects and flavors may vary depending on the phenotype and growing conditions. However, MAC and Jack's mix of genetics is sure to provide a unique and enjoyable experience for cannabis enthusiasts.",
     descSeo:
@@ -190,15 +230,20 @@ export const products: Product[] = [
   {
     slug: 'c-vibez',
     name: 'C-Vibez',
-    price: '700',
+    price: 700,
     dominance: 'Indica Dominant',
     indica: '60',
     sativa: '40',
     THC: '25',
     CBD: 'undefined',
     effects: 'Euphoric, Energetic, Creative',
+    relieves: 'Pain, Insomnia, Stress',
     grower: 'My Weed Solutions',
     growerSlug: 'my-weed-solutions',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 45,
+    origin: 'Phuket',
     description:
       "C-Vibez is a fast-flowering hybrid cannabis strain that's highly sought after for its dense, aromatic buds that grow quickly to maturity. With an average height of about 1.0m - 1.5m, this strain takes only about 8 weeks to finish blooming its rock-hard flowers. C-Vibez is a heavy yielder with an exceptional terpene profile, and most of these high-quality feminized seeds turn into short, green plants. About 30% show some color, ranging from purple to pink. \n\n This strain is the result of Mad Scientist genetics, accompanied by some outstanding Voodoo genetics. Voodoo is a massively potent original Dutch Passion Thai strain, responsible for the strong stone that consumers will experience while vaping or smoking the end result. Despite being an indica-dominant variety, C-Vibez offers remarkable fruity/lemony hints in the taste, especially when being burned. \n\n It's worth noting that C-Vibez has deliberately not been bred to full stability, which ensures a rich selection of seriously high-quality phenotypes with the vigor usually encountered in F2's and F3's. This makes C-Vibez a unique and exciting strain to cultivate and experience, with a potent and flavorful smoke that's sure to please even the most discerning cannabis enthusiasts.",
     descSeo:
@@ -215,15 +260,20 @@ export const products: Product[] = [
   {
     slug: 'super-lemon-haze',
     name: 'Super Lemon Haze',
-    price: '800',
+    price: 800,
     dominance: 'Sativa Dominant',
     indica: '30',
     sativa: '70',
     THC: '22',
     CBD: 'undefined',
     effects: 'Energetic, Uplifted, Creative',
+    relieves: 'Stress, Depression, Anxiety',
     grower: 'My Weed Solutions',
     growerSlug: 'my-weed-solutions',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 90,
+    origin: 'Phuket',
     description:
       'Super Lemon Haze is a sativa-dominant hybrid cannabis strain that is the result of the crossing of Lemon Skunk and Super Silver Haze strains. This award-winning strain has gained popularity due to its multi-colored appearance and intense lemony flavor profile. Super Lemon Haze is known for its unique, energetic and lively effects, making it a popular choice among cannabis enthusiasts. \n\n The aroma of Super Lemon Haze is zesty, citrusy, and slightly sweet. The taste is tart and sweet, reminiscent of lemon candy, but not too sharp. This strain is kief-caked and visually striking with its array of colors. \n\n Super Lemon Haze has a high THC content, making it a potent strain that may not be suitable for those with low tolerance levels. Its effects are said to be uplifting, euphoric, and stimulating, making it a great choice for daytime use. It is often used to treat symptoms related to stress, depression, and fatigue. \n\n Overall, Super Lemon Haze is a top-rated strain with a unique flavor and powerful effects that have won it several awards, including two Cannabis Cup awards. It is a strain that is sure to impress cannabis connoisseurs looking for a flavorful and energetic high.',
     descSeo:
@@ -239,15 +289,20 @@ export const products: Product[] = [
   {
     slug: 'mandarin-zkittlez',
     name: 'Mandarin Zkittlez',
-    price: '900',
+    price: 900,
     dominance: 'Indica Dominant',
     indica: '60',
     sativa: '40',
     THC: '24',
     CBD: 'undefined',
     effects: 'Sleepy, Hungry, Euphoric',
+    relieves: 'Anxiety, Cramps, Lack of appetite',
     grower: 'My Weed Solutions',
     growerSlug: 'my-weed-solutions',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 95,
+    origin: 'Phuket',
     description:
       "Mandarin Skittlez is a hybrid cannabis strain that results from the crossing of two potent strains, Dying Breed's California Black Rosé and Ethos' Mandarin Sunset. This striking strain is characterized by its unique and beautiful purple, black, and red buds that are sure to catch anyone's attention. Its dense and resinous buds have a low leaf-to-flower ratio, making it an ideal choice for extraction. \n\n The Mandarin Skittlez strain boasts an impressive array of flavors that are sure to tantalize your taste buds. It has an intense grape, grapefruit, spice, and orange taste that is both refreshing and satisfying. Its effects are equally impressive, offering a potent high that leaves smokers feeling happy, relaxed, and euphoric. It is perfect for unwinding after a long day or for creative inspiration. \n\n Mandarin Skittlez is an excellent choice for cannabis enthusiasts who are looking for a unique strain that packs a punch. Its beautiful appearance, potent effects, and mouth-watering flavors make it a top choice in dispensaries worldwide. Whether you're a seasoned smoker or a newbie, Mandarin Skittlez is a must-try strain for its exceptional quality and amazing effects.",
     descSeo:
@@ -263,15 +318,20 @@ export const products: Product[] = [
   {
     slug: 'fruit-spirit',
     name: 'Fruit Spirit',
-    price: '900',
+    price: 900,
     dominance: 'Sativa Dominant',
     indica: '40',
     sativa: '60',
     THC: '18',
     CBD: 'undefined',
     effects: 'Sleepy, Hungry, Tingly',
+    relieves: 'Stress, Pain, Lack of appetite',
     grower: 'My Weed Solutions',
     growerSlug: 'my-weed-solutions',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       "Fruit Spirit is a premium cannabis strain that is sure to satisfy anyone looking for a unique and delicious smoking experience. This hybrid strain is a cross between White Widow and Blueberry, resulting in a potent and flavorful strain that will leave you feeling relaxed and euphoric. Its fruity aroma and taste are unlike anything else on the market, making it a popular choice among cannabis enthusiasts worldwide. \n\n Not only does Fruit Spirit taste amazing, but it also boasts a well-balanced mix of Indica and Sativa genetics. This makes it a versatile strain that can be enjoyed at any time of day or night. Its high THC content produces a powerful and uplifting effect that can help with stress, anxiety, and depression. Additionally, its sweet flavor profile makes it a great option for those looking to indulge in a little bit of sweetness without the added calories. \n\n Fruit Spirit is a top-shelf strain that is sure to impress even the most discerning cannabis connoisseur. Its buds are dense and covered in trichomes, giving it a unique appearance that's hard to miss. Whether you're looking for a strain to help you unwind after a long day or something to spark your creativity, Fruit Spirit is the perfect choice. So why not give it a try and experience its fruity goodness for yourself?",
     descSeo:
@@ -287,15 +347,20 @@ export const products: Product[] = [
   {
     slug: 'og-poison',
     name: 'OG Poison',
-    price: 'undefined',
+    price: 0,
     dominance: 'Indica Dominant',
     indica: '70',
     sativa: '30',
     THC: '22',
     CBD: 'undefined',
     effects: 'Sleepy, Hungry, Tingly',
+    relieves: 'undefined',
     grower: 'Unknown',
     growerSlug: 'unknown',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       "OG Poison, also referred to as Poison OG, is a potent hybrid that can induce drowsiness after the initial consumption. This strain was specifically crafted to combat severe insomnia and its effects are quick-acting. \n\n However, it is not recommended for individuals who wish to remain productive, as it is intended solely for nighttime use. With a distinct piney scent and strong lasting effects, OG Poison delivers a deeply relaxing and heavy-bodied experience for its users. Its unique qualities make it a desirable choice for those seeking a peaceful night's rest. \n\n Additionally, due to its soothing properties, OG Poison may also be beneficial for those experiencing stress or anxiety. From an SEO perspective, this rephrasing highlights the key benefits and features of the strain while incorporating relevant keywords for search engines to recognize.",
     descSeo:
@@ -311,15 +376,20 @@ export const products: Product[] = [
   {
     slug: 'runtz',
     name: 'Runtz',
-    price: 'undefined',
+    price: 0,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
     THC: '19/29',
     CBD: 'undefined',
     effects: 'Talkative, Happy, Giggly',
+    relieves: 'undefined',
     grower: 'Unknown',
     growerSlug: 'unknown',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       'Runtz, also referred to as "Runtz OG," is a rare and highly sought-after hybrid marijuana strain created by the Cookies Fam by crossing Zkittlez with Gelato. It\'s recognized for its exceptional fruity flavor profile that mimics the aroma of sugary candy we all love. \n\n Its popularity has been rising steadily, and it was named Leafly Strain of the Year in 2020. According to growers, Runtz has resinous buds that range in color from deep purple to vibrant lime green. \n\n It boasts a smooth and creamy smoke that is easy to inhale. This strain is famous for its long-lasting uplifting effects and euphoric highs. Purple Caper Seeds also produced the same cross and marketed it as Gelato Zkittlez.',
     descSeo:
@@ -335,15 +405,20 @@ export const products: Product[] = [
   {
     slug: 'green-gelato',
     name: 'Green Gelato',
-    price: 'undefined',
+    price: 0,
     dominance: 'Indica Dominant',
     indica: '55',
     sativa: '45',
     THC: '17/25',
     CBD: 'undefined',
     effects: 'Euphoric, Aroused, Happy',
+    relieves: 'undefined',
     grower: 'Unknown',
     growerSlug: 'unknown',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       "Green Gelato is a popular hybrid cannabis strain that offers the best of both worlds with its balanced indica and sativa genetics. This strain is a result of crossing Sunset Sherbet and Thin Mint Girl Scout Cookies, two renowned strains that contribute to Green Gelato's unique characteristics. \n\n Consumers who have smoked Green Gelato report that the strain's effects come on quickly, inducing a euphoric high accompanied by strong feelings of relaxation. This strain's balanced effects make it ideal for those seeking relief from pain, fatigue, and insomnia, while still remaining mentally stimulated and productive.",
     descSeo:
@@ -359,15 +434,20 @@ export const products: Product[] = [
   {
     slug: 'gelato-dream',
     name: 'Gelato Dream',
-    price: 'undefined',
+    price: 0,
     dominance: 'Sativa Dominant',
     indica: '30',
     sativa: '70',
     THC: '20/30',
     CBD: 'undefined',
     effects: 'Euphoric, Focused, Happy',
+    relieves: 'undefined',
     grower: 'Unknown',
     growerSlug: 'unknown',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       "With the combination of the original Gelato #41 and a male Loud Dream, Gelato Dream was created, and it's a strain that has been improved upon. \n\n This cookie strain boasts big yields for growers and a smooth, sweet, and fruity terpene profile for consumers. \n\n The high from Gelato Dream induces deep relaxation, along with a sense of euphoria and focus. If you're looking for a sweet and satisfying experience, Gelato Dream may be the perfect strain for you.",
     descSeo:
@@ -383,15 +463,20 @@ export const products: Product[] = [
   {
     slug: 'white-runtz',
     name: 'White Runtz',
-    price: 'undefined',
+    price: 0,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
     THC: '23/24',
     CBD: 'undefined',
     effects: 'Tingly, Relaxed, Euphoric',
+    relieves: 'undefined',
     grower: 'Unknown',
     growerSlug: 'unknown',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       "White Runtz is a highly potent hybrid marijuana strain, resulting from the crossbreeding of Gelato and Zkittlez. Its strong effects are long-lasting, and leave you feeling relaxed and tingly. \n\n White Runtz is famous for its sweet taste that tingles your senses with every puff. The strain's buds are distinctively white, resembling a snowy landscape, due to the abundance of trichomes. \n\n White Runtz is a popular choice among medical marijuana patients who use it to alleviate chronic pain, stress, and anxiety.",
     descSeo:
@@ -407,15 +492,20 @@ export const products: Product[] = [
   {
     slug: 'banana-kush',
     name: 'Banana Kush',
-    price: 'undefined',
+    price: 0,
     dominance: 'Indica Dominant',
     indica: '60',
     sativa: '40',
     THC: '18/25',
     CBD: 'undefined',
     effects: 'Talkative, Sleeppy, Giggly',
+    relieves: 'undefined',
     grower: 'Unknown',
     growerSlug: 'unknown',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       'Banana Kush, also known as "Larry Bird" and "Banana Kush #42," is a popular hybrid cannabis strain that offers the best of both worlds with its balanced indica and sativa genetics. This strain is a result of crossing Sunset Sherbet and Thin Mint Girl Scout Cookies, two renowned strains that contribute to Banana Kush\'s unique characteristics. \n\n Consumers who have smoked Banana Kush report that the strain\'s effects come on quickly, inducing a euphoric high accompanied by strong feelings of relaxation. This strain\'s balanced effects make it ideal for those seeking relief from pain, fatigue, and insomnia, while still remaining mentally stimulated and productive.',
     descSeo:
@@ -431,15 +521,20 @@ export const products: Product[] = [
   {
     slug: 'jack-herer',
     name: 'Jack Herer',
-    price: 'undefined',
+    price: 0,
     dominance: 'Sativa Dominant',
     indica: '20',
     sativa: '80',
     THC: '19/29',
     CBD: 'undefined',
     effects: 'Energetic, Creative, Uplifted',
+    relieves: 'undefined',
     grower: 'Unknown',
     growerSlug: 'unknown',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       'Jack Herer, also known as "JH," "The Jack," "Premium Jack," and "Platinum Jack" is a sativa-dominant hybrid marijuana strain named after the marijuana activist and author of The Emperor Wears No Clothes. \n\n Jack Herer is a balanced hybrid strain with a high THC content that produces a mixed head and body effect. It\'s known to provide a sense of relaxation and is often enjoyed in the evening to ease stress. \n\n Jack Herer was first created in the Netherlands in the mid-1990s and was later distributed by Dutch pharmacies as a recognized medical-grade strain. Its spicy, pine-scented aroma has won numerous awards for its quality and potency.',
     descSeo:
@@ -455,15 +550,20 @@ export const products: Product[] = [
   {
     slug: 'chem-dog',
     name: 'Chem Dog',
-    price: 'undefined',
+    price: 0,
     dominance: 'Indica Dominant',
     indica: '55',
     sativa: '45',
     THC: '15/20',
     CBD: 'undefined',
     effects: 'Euphoric, Uplifted, Creative',
+    relieves: 'undefined',
     grower: 'Unknown',
     growerSlug: 'unknown',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       'Chemdawg, also known as "Chemdog," is a legendary hybrid cannabis strain created and distributed by breeder Chemdog since 1991. \n\n Chemdawg has become a staple strain in the cannabis world and has been responsible for some of the most famous strains, including Sour Diesel and OG Kush. It has a diesel-like aroma that is strong and pungent, making it easily recognizable from afar. However, new users should use caution as it can be very potent. Chemdawg typically produces a cerebral experience, coupled with a strong heavy-bodied feeling. \n\n Medical marijuana patients often choose this strain to help alleviate symptoms associated with stress, anxiety, and pain. Overall, Chemdawg is a versatile strain that is a favorite among cannabis enthusiasts, with its unique history and powerful effects.',
     descSeo:
@@ -479,15 +579,20 @@ export const products: Product[] = [
   {
     slug: 'moon-fruit',
     name: 'Moon Fruit',
-    price: 'undefined',
+    price: 0,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
     THC: '20/22',
     CBD: 'undefined',
     effects: 'Relaxed, Happy, Talkative',
+    relieves: 'undefined',
     grower: 'Unknown',
     growerSlug: 'unknown',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       'Moon Fruit is a highly sought-after cannabis strain that boasts a tantalizing taste profile and visually stunning appearance. Its unique blend of hard candy, exotic passion fruit, lavender, blueberry, and vanilla/raspberry zingers make for a deluxe connoisseur experience that is all about flexing on taste and smell. \n\n This strain has an impressive lineage, derived from the crossing of Cherry Pie, Tangie, and a rare Indica-dominant version of the famous Girl Scout Cookies. As a result, Moon Fruit grows with a symmetrical structure, producing medium-sized, ultra-dense flowers that are simply drop-dead gorgeous.',
     descSeo:
@@ -504,15 +609,20 @@ export const products: Product[] = [
   {
     slug: 'banana-daddy',
     name: 'Banana Daddy',
-    price: 'undefined',
+    price: 0,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
     THC: '21/30',
     CBD: '1/3',
     effects: 'Happy, Talktative, Relaxed',
+    relieves: 'undefined',
     grower: 'Unknown',
     growerSlug: 'unknown',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       "With Banana Daddy, Ethos Genetics has successfully combined two fruity strains, Granddaddy Purp and Banana Hammock R1, to create an exceptional cannabis strain. The result is a visually stunning plant with large, dense, and dark purple buds that emit a delightful aroma of bubblegum and gas. \n\n Despite its high THC content, Banana Daddy provides a mellow, giggly high that is perfect for unwinding in the evening. This strain's relaxing effects are ideal for socializing and having fun with friends. \n\n If you're a fan of fruity strains and looking for a new strain to add to your collection, Banana Daddy is definitely worth trying. This strain is sure to impress with its unique terpene profile and relaxing effects. So, grab some Banana Daddy and enjoy a mellow evening with friends.",
     descSeo:
@@ -528,15 +638,20 @@ export const products: Product[] = [
   {
     slug: 'orange-velvet',
     name: 'Orange Velvet',
-    price: 'undefined',
+    price: 0,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
     THC: '18/22',
     CBD: 'undefined',
     effects: 'Aroused, Uplifted, Energetic',
+    relieves: 'undefined',
     grower: 'Unknown',
     growerSlug: 'unknown',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       "Looking for a unique strain that tastes and smells like an Orange Dreamsicle? Look no further than Orange Velvet, a rare gem created by MzJill Genetics. \n\n While its effects may not be overpowering, its citrusy and creamy aroma and taste make up for it. The high provides just the right amount of euphoria and focus for a duration of 2 to 3 hours, making it perfect for those looking to unwind without getting too couch-locked. \n\n Additionally, Orange Velvet has been known to help alleviate light pain. While it's no longer widely available, keep an eye out for this strainv at your local dispensary and stock up when you find it!",
     descSeo:
@@ -552,15 +667,20 @@ export const products: Product[] = [
   {
     slug: 'platinum-punch',
     name: 'Platinum Punch',
-    price: 'undefined',
+    price: 0,
     dominance: 'Sativa Dominant',
     indica: '30',
     sativa: '70',
     THC: '15/25',
     CBD: 'undefined',
     effects: 'Focus, Giggly, Relaxed',
+    relieves: 'undefined',
     grower: 'Unknown',
     growerSlug: 'unknown',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       "Platinum Punch is a sativa-dominante hybrid strain that results from crossing Platinum Wreck and Fruit Punch. Its effects are believed to offer relaxation and focus, making it a great option for both daytime and evening use. \n\n This strain's taste is described as herbal with subtle hints of citrus and pepper, providing a delightful sensory experience. Platinum Punch features dense, light green buds that are dusted with trichomes, giving it a frosty appearance. \n\n Medical marijuana patients choose Platinum Punch to relieve symptoms associated with stress, anxiety, and depression. Growers appreciate its moderate growth and average flowering time, making it a great strain for those who are just starting.",
     descSeo:
@@ -576,15 +696,20 @@ export const products: Product[] = [
   {
     slug: 'lemon-berry-candy',
     name: 'Lemon Berry Candy',
-    price: 'undefined',
+    price: 0,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
     THC: '25',
     CBD: '3',
     effects: 'Creative, Energetic, Talkative',
+    relieves: 'undefined',
     grower: 'Unknown',
     growerSlug: 'unknown',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       'Lemon Berry Candy OG, a strain from Ethos Genetics, is a cross between Las Vegas Lemon Skunk and LGBT (Lemon Grape Bubba Temple). \n\n This unique hybrid boasts trichome-rich buds with a flavor profile that includes candied lemons, sweet berries, and subtle gassy undertones. \n\n Lemon Berry Candy OG is a favorite among concentrate enthusiasts due to its high resin production. Users have reported feeling elevated, energized, and engaged after just one puff.',
     descSeo:
@@ -600,15 +725,20 @@ export const products: Product[] = [
   {
     slug: 'mandarin-cookies',
     name: 'Mandarin Cookies',
-    price: 'undefined',
+    price: 0,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
     THC: '19',
     CBD: 'undefined',
     effects: 'Relaxed, Uplifted, Happy',
+    relieves: 'undefined',
     grower: 'Unknown',
     growerSlug: 'unknown',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       'Mandarin Cookies, also known as "Mandarin Mints," is a premium hybrid cannabis strain that offers a sedating and calming high, making it an excellent choice for relaxation and unwinding. \n\n Bred by Ethos in Colorado, Mandarin Cookies is a result of crossing the popular Forum Cut Cookies and Mandarin Sunset strains. Its well-balanced genetics produce medium-sized buds with a dense, frosty coating of trichomes that emit a refreshing aroma of citrus and earthy undertones. \n\n This strain is perfect for those seeking a post-dinner dessert that won\'t leave them glued to their couch. Mandarin Cookies offers a moderate high that is ideal for socializing or enjoying a creative endeavor, without the sedative effects of some other strains.',
     descSeo:
@@ -624,15 +754,20 @@ export const products: Product[] = [
   {
     slug: 'mimosa',
     name: 'Mimosa',
-    price: 'undefined',
+    price: 0,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
     THC: '20',
     CBD: '1',
     effects: 'Energetic, Focused, Uplifted',
+    relieves: 'undefined',
     grower: 'Unknown',
     growerSlug: 'unknown',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       "Mimosa, also known as \"Purple Mimosa,\" is a popular hybrid cannabis strain that offers a balanced high and a delicious taste profile. This strain is a result of crossing Clementine with Purple Punch, two well-regarded strains that contribute to Mimosa's unique characteristics. \n\n In small doses, Mimosa produces happy and level-headed effects that leave you feeling uplifted and motivated to tackle any mundane task. \n\n Mimosa's strong aroma and flavor are reminiscent of its namesake, with notes of fruity and citrusy flavors bursting through. This strain's flavors and effects have made it a popular choice among medical marijuana patients seeking relief from symptoms associated with depression and stress.",
     descSeo:
@@ -648,15 +783,20 @@ export const products: Product[] = [
   {
     slug: 'black-cherry-punch',
     name: 'Black Cherry Punch',
-    price: 'undefined',
+    price: 0,
     dominance: 'Indica Dominant',
     indica: '80',
     sativa: '20',
     THC: '20',
     CBD: 'undefined',
     effects: 'Sleepy, Tingly, Happy',
+    relieves: 'undefined',
     grower: 'Unknown',
     growerSlug: 'unknown',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       "Black Cherry Punch is a potent indica-dominant hybrid strain resulting from the crossing of Purple Punch and Black Cherry Pie. With a THC content of around 20%, this strain is not recommended for those with a low tolerance to cannabis. \n\n It's known for its calming effects, which provide a sense of physical relaxation and mental calmness. The strain has a sweet cherry flavor and floral undertones, owing to its dessert ancestry. \n\n Medical cannabis patients often use Black Cherry Punch to manage chronic stress, depression, insomnia, and chronic pain. The buds produced by this strain are tall and slim with light orange hairs, creating a striking contrast with the light green shades.",
     descSeo:
@@ -672,15 +812,20 @@ export const products: Product[] = [
   {
     slug: 'snoop-punch',
     name: 'Snoop Punch',
-    price: 'undefined',
+    price: 0,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
     THC: '28',
     CBD: 'undefined',
     effects: 'Relaxed, Sleepy, Hungry',
+    relieves: 'undefined',
     grower: 'Unknown',
     growerSlug: 'unknown',
+    environment: 'Organic Indoor',
+    harvest: '03/04/2023',
+    quantity: 0,
+    origin: 'Phuket',
     description:
       "By blending two of Snoop Dogg's beloved strains, Blue Dream and Master Kush, Snoop Punch was born. Its balanced effects are a perfect reflection of its hybrid nature, providing a cerebral high that inspires creativity while also inducing relaxation in the body. \n\n Not only does Purple Punch bring its unique flavors to the table, but it also adds an extra level of frost, giving this strain an appealing appearance that will catch anyone's eye. \n\n Whether you're a seasoned smoker or new to the game, Snoop's Dream x Purple Punch is sure to provide a well-rounded experience that satisfies both the palate and mind.",
     descSeo:
