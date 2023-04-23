@@ -87,7 +87,7 @@ const InstallXportal: NextPage = () => {
             justifyContent="space-between"
             maxWidth="400px"
           >
-            <Box mb={4}>
+            <Box mb={4} width="100%" mr={2}>
               <Link
                 href="https://apps.apple.com/app/xportal/id1519405832"
                 target="_blank"
@@ -98,10 +98,11 @@ const InstallXportal: NextPage = () => {
                   title="Green Ghost - Degen Weed Shop - Install xPortal - App Store"
                   width="120"
                   height="42"
+                  layout="responsive"
                 />
               </Link>
             </Box>
-            <Box mb={4}>
+            <Box mb={4} width="100%" mr={2}>
               <Link
                 href="https://play.google.com/store/apps/details?id=com.elrond.maiar.wallet"
                 target="_blank"
@@ -112,10 +113,11 @@ const InstallXportal: NextPage = () => {
                   height="42"
                   alt="Green Ghost - Degen Weed Shop - Install xPortal - Play Store"
                   title="Green Ghost - Degen Weed Shop - Install xPortal - Play Store"
+                  layout="responsive"
                 />
               </Link>
             </Box>
-            <Box mb={4}>
+            <Box mb={4} width="100%" mr={2}>
               <Link
                 href="https://appgallery.huawei.com/app/C104325151"
                 target="_blank"
@@ -126,6 +128,7 @@ const InstallXportal: NextPage = () => {
                   height="42"
                   alt="Green Ghost - Degen Weed Shop - Install xPortal - Huawei Store"
                   title="Green Ghost - Degen Weed Shop - Install xPortal - Huawei Store"
+                  layout="responsive"
                 />
               </Link>
             </Box>
@@ -155,7 +158,6 @@ const InstallXportal: NextPage = () => {
           <br />
           <Box display="flex" flexDirection={{ base: 'column', md: 'row' }}>
             <Box
-              height={{ base: '545px', xl: '725px' }}
               width={{ base: '100%', md: '30%' }}
               marginRight={{ base: '0', md: '4' }}
               marginBottom={4}
@@ -166,12 +168,13 @@ const InstallXportal: NextPage = () => {
                 src="/media/green-ghost-degen-weed-shop-install-xportal-app-click-referral-link.webp"
                 alt="Green Ghost - Degen Weed Shop - Install xPortal - Click Referral Link"
                 title="Green Ghost - Degen Weed Shop - Install xPortal - Click Referral Link"
-                layout="fill"
+                layout="responsive"
                 objectFit="contain"
+                width={300}
+                height={600}
               />
             </Box>
             <Box
-              height={{ base: '545px', xl: '725px' }}
               width={{ base: '100%', md: '30%' }}
               marginRight={{ base: '0', md: '4' }}
               marginBottom={4}
@@ -182,12 +185,13 @@ const InstallXportal: NextPage = () => {
                 src="/media/green-ghost-degen-weed-shop-install-xportal-app-enter-referral-code.webp"
                 alt="Green Ghost - Degen Weed Shop - Install xPortal - Enter Referral code"
                 title="Green Ghost - Degen Weed Shop - Install xPortal - Enter Referral code"
-                layout="fill"
+                layout="responsive"
                 objectFit="contain"
+                width={300}
+                height={600}
               />
             </Box>
             <Box
-              height={{ base: '545px', xl: '725px' }}
               width={{ base: '100%', md: '30%' }}
               marginRight={{ base: '0', md: '4' }}
               marginBottom={4}
@@ -198,8 +202,10 @@ const InstallXportal: NextPage = () => {
                 src="/media/green-ghost-degen-weed-shop-install-xportal-app-verify-phone-number.webp"
                 alt="Green Ghost - Degen Weed Shop - Install xPortal - Verify Phone Number"
                 title="Green Ghost - Degen Weed Shop - Install xPortal - Verify Phone Number"
-                layout="fill"
+                layout="responsive"
                 objectFit="contain"
+                width={300}
+                height={600}
               />
             </Box>
           </Box>
@@ -230,7 +236,6 @@ const InstallXportal: NextPage = () => {
           <br />
           <Box display="flex" flexDirection={{ base: 'column', md: 'row' }}>
             <Box
-              height={{ base: '545px', xl: '725px' }}
               width={{ base: '100%', md: '30%' }}
               marginRight={{ base: '0', md: '4' }}
               marginBottom={4}
@@ -241,12 +246,13 @@ const InstallXportal: NextPage = () => {
                 src="/media/green-ghost-degen-weed-shop-install-xportal-app-click-play-menu.webp"
                 alt="Green Ghost - Degen Weed Shop - Install xPortal - Click Play Menu"
                 title="Green Ghost - Degen Weed Shop - Install xPortal - Click Play Menu"
-                layout="fill"
+                layout="responsive"
                 objectFit="contain"
+                width={300}
+                height={600}
               />
             </Box>
             <Box
-              height={{ base: '545px', xl: '725px' }}
               width={{ base: '100%', md: '30%' }}
               marginRight={{ base: '0', md: '4' }}
               marginBottom={4}
@@ -257,8 +263,10 @@ const InstallXportal: NextPage = () => {
                 src="/media/green-ghost-degen-weed-shop-install-xportal-app-claim-your-herotag.webp"
                 alt="Green Ghost - Degen Weed Shop - Install xPortal - Claim Your Herotag"
                 title="Green Ghost - Degen Weed Shop - Install xPortal - Claim Your Herotag"
-                layout="fill"
+                layout="responsive"
                 objectFit="contain"
+                width={300}
+                height={600}
               />
             </Box>
           </Box>

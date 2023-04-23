@@ -92,6 +92,8 @@ const BuyWeed: NextPage = () => {
               width={320}
               height={320}
               alt="Green Ghost - Grower - My Weed Solutions"
+              title="Green Ghost - Grower - My Weed Solutions"
+              layout="responsive"
             />
             <Text
               display="inline-flex"

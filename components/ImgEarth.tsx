@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const ImgEarth = () => {
   return (
-    <Box height={{ base: '80px' }} width={{ base: '80px' }} marginRight={2}>
+    <Box height="80px" width="80px" marginRight={2}>
       <motion.div
         animate={{
           y: [-5, 5, -5],
@@ -18,8 +18,8 @@ export const ImgEarth = () => {
         <Box
           as="img"
           src="/media/green-ghost-degen-weed-shop.webp"
-          width={{ base: '80px' }}
-          height={{ base: '80px' }}
+          width="80px"
+          height="80px"
           maxW="inherit"
           alt="Green Ghost - Tokenized Cannabis Shop - GhostVerse MxGhosts NFT DAO"
           title="Green Ghost - Tokenized Cannabis Shop - GhostVerse MxGhosts NFT DAO"

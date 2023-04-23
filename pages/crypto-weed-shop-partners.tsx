@@ -103,8 +103,8 @@ const CryptoWeedShop: NextPage = () => {
               <Box
                 as="img"
                 src="/media/green-ghost-degen-weed-shop-partner-ebudsdac.webp"
-                width={{ base: '80px' }}
-                height={{ base: '80px' }}
+                width="80px"
+                height="80px"
                 maxW="inherit"
                 alt="Green Ghost - Degen Weed Shop - eBudsDAC Partner"
                 title="Green Ghost - Degen Weed Shop - eBudsDAC Partner"
@@ -125,8 +125,8 @@ const CryptoWeedShop: NextPage = () => {
               <Box
                 as="img"
                 src="/media/green-ghost-degen-weed-shop-partner-plata.webp"
-                width={{ base: '80px' }}
-                height={{ base: '80px' }}
+                width="80px"
+                height="80px"
                 maxW="inherit"
                 alt="Green Ghost - Degen Weed Shop - Plata Partner"
                 title="Green Ghost - Degen Weed Shop - Plata Partner"
@@ -147,8 +147,8 @@ const CryptoWeedShop: NextPage = () => {
               <Box
                 as="img"
                 src="/media/green-ghost-degen-weed-shop-partner-fainart.webp"
-                width={{ base: '80px' }}
-                height={{ base: '80px' }}
+                width="80px"
+                height="80px"
                 maxW="inherit"
                 alt="Green Ghost - Degen Weed Shop - Fainart Partner"
                 title="Green Ghost - Degen Weed Shop - Fainart Partner"
@@ -169,8 +169,8 @@ const CryptoWeedShop: NextPage = () => {
               <Box
                 as="img"
                 src="/media/green-ghost-degen-weed-shop-partner-gcc.webp"
-                width={{ base: '80px' }}
-                height={{ base: '80px' }}
+                width="80px"
+                height="80px"
                 maxW="inherit"
                 alt="Green Ghost - Degen Weed Shop - GCC Partner"
                 title="Green Ghost - Degen Weed Shop - GCC Partner"
@@ -191,8 +191,8 @@ const CryptoWeedShop: NextPage = () => {
               <Box
                 as="img"
                 src="/media/green-ghost-degen-weed-shop-partner-effort-economy.webp"
-                width={{ base: '80px' }}
-                height={{ base: '80px' }}
+                width="80px"
+                height="80px"
                 maxW="inherit"
                 alt="Green Ghost - Degen Weed Shop - Effort Economy Partner"
                 title="Green Ghost - Degen Weed Shop - Effort Economy Partner"
@@ -213,8 +213,8 @@ const CryptoWeedShop: NextPage = () => {
               <Box
                 as="img"
                 src="/media/green-ghost-degen-weed-shop-partner-peerme.webp"
-                width={{ base: '80px' }}
-                height={{ base: '80px' }}
+                width="80px"
+                height="80px"
                 maxW="inherit"
                 alt="Green Ghost - Degen Weed Shop - Peerme Partner"
                 title="Green Ghost - Degen Weed Shop - Peerme Partner"

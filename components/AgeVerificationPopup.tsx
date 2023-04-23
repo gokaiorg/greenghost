@@ -56,8 +56,8 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           onTouchStart={handleClose}
           as="img"
           src="/media/green-ghost-degen-weed-shop-older-20-only.webp"
-          width={{ base: '300px' }}
-          height={{ base: '300px' }}
+          width="300px"
+          height="300px"
           maxW="inherit"
           alt="Green Ghost - Degen Weed Shop - 20 or older only"
           title="Green Ghost - Degen Weed Shop - 20 or older only"

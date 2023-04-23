@@ -14,21 +14,22 @@ import { GoToShopLink } from '../components/GoToShopLink';
 
 const SpaceCakeBrownie: NextPage = () => {
   SwiperCore.use([Autoplay]);
+
+    const handleBack = () => {
+    window.history.back();
+  };
   return (
     <>
       <Head>
-        <title>Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา.</title>
+        <title>Green Ghost - Edibles - Brownie.</title>
         <meta
           name="description"
-          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Indulge in the delicious and potent Space Cake Brownie from Green Ghost's edibles collection. Made with high-quality ingredients and expertly infused with premium cannabis, this brownie delivers a heavenly experience that will elevate your mind and body. Perfect for sharing with friends or enjoying on your own, order now and experience the magic of Green Ghost's edibles."
         />
-        <meta
-          property="og:title"
-          content="Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา."
-        />
+        <meta property="og:title" content="Green Ghost - Edibles - Brownie." />
         <meta
           property="og:description"
-          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Indulge in the delicious and potent Space Cake Brownie from Green Ghost's edibles collection. Made with high-quality ingredients and expertly infused with premium cannabis, this brownie delivers a heavenly experience that will elevate your mind and body. Perfect for sharing with friends or enjoying on your own, order now and experience the magic of Green Ghost's edibles."
         />
         <meta
           property="og:image"
@@ -36,27 +37,33 @@ const SpaceCakeBrownie: NextPage = () => {
         />
         <meta property="og:image:width" content="2400" />
         <meta property="og:image:height" content="1260" />
-        <meta property="og:url" content="https://green.gd" />
-        <meta
-          name="twitter:title"
-          content="Green Ghost - Phuket Cannabis Shop ร้าน ขาย กัญชา."
-        />
+        <meta property="og:url" content="/space-cake-brownie" />
+        <meta name="twitter:title" content="Green Ghost - Edibles - Brownie." />
         <meta
           name="twitter:description"
-          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Indulge in the delicious and potent Space Cake Brownie from Green Ghost's edibles collection. Made with high-quality ingredients and expertly infused with premium cannabis, this brownie delivers a heavenly experience that will elevate your mind and body. Perfect for sharing with friends or enjoying on your own, order now and experience the magic of Green Ghost's edibles."
         />
         <meta
           name="twitter:image"
           content="https://green.gd/green-ghost-degen-weed-shop.png"
         />
-        <meta name="twitter:url" content="https://green.gd" />
+        <meta
+          name="twitter:url"
+          content="https://green.gd/space-cake-brownie"
+        />
       </Head>
       <MainLayout>
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <GoToShopLink />
-        <HomeSectionTitle title="Brownie Space Cake - Cannabis Shop Phuket." />
+        <Box
+          cursor="pointer"
+          color="ghostVerse.green.base"
+          onClick={handleBack}
+        >
+          Go back
+        </Box>
+        <HomeSectionTitle title="Green Ghost - Brownie." />
         <Swiper
           spaceBetween={10}
           slidesPerView={3}
@@ -70,9 +77,9 @@ const SpaceCakeBrownie: NextPage = () => {
           <SwiperSlide>
             <Box
               as="img"
-              src="/media/green-ghost-degen-weed-shop-edible-brownie-og-kush-cover.webp"
-              width={{ base: '100%' }}
-              height={{ base: '100%' }}
+              src="/media/green-ghost-degen-weed-shop-edible-brownie-og-kush-01.webp"
+              width="100%"
+              height="100%"
               maxW="inherit"
               alt="Green Ghost - Degen Weed Shop - Brownie OG Kush"
               title="Green Ghost - Degen Weed Shop - Brownie OG Kush"
@@ -82,8 +89,8 @@ const SpaceCakeBrownie: NextPage = () => {
             <Box
               as="img"
               src="/media/green-ghost-degen-weed-shop-edible-brownie-og-kush-02.webp"
-              width={{ base: '100%' }}
-              height={{ base: '100%' }}
+              width="100%"
+              height="100%"
               maxW="inherit"
               alt="Green Ghost - Degen Weed Shop - Brownie OG Kush"
               title="Green Ghost - Degen Weed Shop - Brownie OG Kush"
@@ -93,8 +100,8 @@ const SpaceCakeBrownie: NextPage = () => {
             <Box
               as="img"
               src="/media/green-ghost-degen-weed-shop-edible-brownie-og-kush-03.webp"
-              width={{ base: '100%' }}
-              height={{ base: '100%' }}
+              width="100%"
+              height="100%"
               maxW="inherit"
               alt="Green Ghost - Degen Weed Shop - Brownie OG Kush"
               title="Green Ghost - Degen Weed Shop - Brownie OG Kush"
@@ -104,8 +111,8 @@ const SpaceCakeBrownie: NextPage = () => {
             <Box
               as="img"
               src="/media/green-ghost-degen-weed-shop-edible-brownie-og-kush-04.webp"
-              width={{ base: '100%' }}
-              height={{ base: '100%' }}
+              width="100%"
+              height="100%"
               maxW="inherit"
               alt="Green Ghost - Degen Weed Shop - Brownie OG Kush"
               title="Green Ghost - Degen Weed Shop - Brownie OG Kush"

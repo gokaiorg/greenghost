@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { FC, memo } from 'react';
 import { defaultMetaTags, dappHostname } from '../config/dappUi';
+import { useRouter } from 'next/router';
 
 export interface MetaHeadProps {
   metaTitle?: string;
@@ -11,8 +12,11 @@ export interface MetaHeadProps {
 }
 
 export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
+  const router = useRouter();
+  const canonicalUrl = `https://green.gd${router.asPath}`;
   return (
     <Head>
+      <link rel="canonical" href={canonicalUrl} />
       <meta name="author" content="Gokai Labs | gokai.org" />
       <meta
         name="viewport"

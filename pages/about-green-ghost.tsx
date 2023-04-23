@@ -95,8 +95,8 @@ const BuyWeed: NextPage = () => {
               <Box
                 as="img"
                 src="/media/green-ghost-degen-weed-shop-partner-gokai-labs.webp"
-                width={{ base: '80px' }}
-                height={{ base: '80px' }}
+                width="80px"
+                height="80px"
                 maxW="inherit"
                 alt="Green Ghost - Degen Weed Shop - Gokai Labs"
                 title="Green Ghost - Degen Weed Shop - Gokai Labs"
@@ -158,6 +158,11 @@ const BuyWeed: NextPage = () => {
             <br />
             Thank you for your trust.
           </Text>
+          <Link href="/sitemap" title="Sitemap" passHref>
+            <Box as="span" color="ghostVerse.green.base">
+              Sitemap
+            </Box>
+          </Link>
         </Box>
       </MainLayout>
     </>

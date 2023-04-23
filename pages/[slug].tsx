@@ -72,7 +72,19 @@ export default function ProductPage({ product }: ProductPageProps) {
         </Box>
         <Box display="flex" flexDirection={{ base: 'column', md: 'row' }}>
           <HomeSectionTitle title={`${product.name} Strain`} />
-          <BuyNowLink />
+
+          {product.quantity !== 0 && <BuyNowLink />}
+          {product.quantity === 0 && (
+            <Box
+              display="flex"
+              ml="auto"
+              fontSize="xl"
+              fontFamily="CubicFive12"
+              color="ghostVerse.red.base"
+            >
+              SOLD OUT
+            </Box>
+          )}
         </Box>
         <Swiper
           spaceBetween={10}
@@ -114,6 +126,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                 width={500}
                 height={500}
                 alt={product.imgDesc}
+                layout="responsive"
               />
             </SwiperSlide>
           ))}
@@ -212,20 +225,22 @@ export default function ProductPage({ product }: ProductPageProps) {
               </Box>
               {product.effects}
             </Box>
-            <Box
-              display="flex"
-              flexDirection={{ base: 'column', md: 'row' }}
-              fontSize="3xl"
-              marginBottom={4}
-              fontFamily="vt323"
-            >
-              <Box marginRight={4}>
-                <Box as="h2" color="ghostVerse.green.base">
-                  Relieves
+            {product.relieves !== 'undefined' && (
+              <Box
+                display="flex"
+                flexDirection={{ base: 'column', md: 'row' }}
+                fontSize="3xl"
+                marginBottom={4}
+                fontFamily="vt323"
+              >
+                <Box marginRight={4}>
+                  <Box as="h2" color="ghostVerse.green.base">
+                    Relieves
+                  </Box>
                 </Box>
+                {product.relieves}
               </Box>
-              {product.relieves}
-            </Box>
+            )}
           </Box>
           <Box
             order={{ base: 1, lg: 2 }}
@@ -266,7 +281,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                       color: 'ghostVerse.green.base',
                     }}
                   >
-                    <Box as="h3">member</Box>
+                    <Box>member</Box>
                     <Box fontFamily="CubicFive12" display="flex" ml={4}>
                       {(product.price * 0.69).toFixed(0)} THB
                     </Box>
@@ -295,7 +310,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                       color: 'ghostVerse.green.base',
                     }}
                   >
-                    <Box as="h3">member</Box>
+                    <Box>member</Box>
                     <Box fontFamily="CubicFive12" display="flex" ml={4}>
                       {((product.price * 10 - product.price) * 0.69).toFixed(0)}{' '}
                       THB
@@ -315,22 +330,14 @@ export default function ProductPage({ product }: ProductPageProps) {
                 </Link>
               </>
             )}
-            {product.quantity === 0 && (
-              <Box
-                display="flex"
-                justifyContent="end"
-                fontSize="xl"
-                color="ghostVerse.red.base"
-              >
-                SOLD OUT
-              </Box>
-            )}
+
             {product.price === 666 && (
               <Link href="/crypto-weed-shop-relax-and-earn">
                 <Box
                   display="flex"
                   justifyContent="end"
                   fontSize="xl"
+                  fontFamily="CubicFive12"
                   color="ghostVerse.red.base"
                   _hover={{
                     color: 'ghostVerse.green.base',
@@ -342,7 +349,7 @@ export default function ProductPage({ product }: ProductPageProps) {
             )}
           </Box>
         </Box>
-        {product.price !== 666 && (
+        {product.price !== 666 && product.grower !== 'Unknown' && (
           <>
             <Box
               display="flex"

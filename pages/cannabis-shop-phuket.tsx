@@ -92,8 +92,8 @@ const CannabisShop: NextPage = () => {
               <Box
                 as="img"
                 src="/logo512.png"
-                width={{ base: '80px' }}
-                height={{ base: '80px' }}
+                width="80px"
+                height="80px"
                 maxW="inherit"
                 mx="auto"
                 alt="Green Ghost - Degen Weed Shop"
@@ -116,7 +116,7 @@ const CannabisShop: NextPage = () => {
                 as="img"
                 src="/media/green-ghost-grower-my-weed-solutions.webp"
                 width={{ base: '100px' }}
-                height={{ base: '80px' }}
+                height="80px"
                 maxW="inherit"
                 mx="auto"
                 alt="Green Ghost - Degen Weed Shop"
