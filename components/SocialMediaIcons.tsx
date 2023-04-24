@@ -14,7 +14,7 @@ export const SocialMediaIcons = () => {
       <Box bgColor="black" borderRadius="100%">
         <Box
           as="a"
-          href="https://line.me/ti/p/Xh7jcqlmE7"
+          href="https://lin.ee/5XPNsZs"
           color="ghostVerse.green.base"
         >
           <svg
