@@ -31,7 +31,7 @@ export const HomeSlider = () => {
       }}
       loop
       autoplay={{
-        delay: 4000,
+        delay: 8000,
         pauseOnMouseEnter: true,
         disableOnInteraction: false,
       }}
