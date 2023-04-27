@@ -12,6 +12,7 @@ export const HomeSlider = () => {
   SwiperCore.use([Autoplay]);
   return (
     <Swiper
+      autoHeight={true}
       spaceBetween={10}
       slidesPerView="auto"
       breakpoints={{
@@ -45,13 +46,15 @@ export const HomeSlider = () => {
       modules={[EffectCoverflow]}
     >
       <SwiperSlide>
-        <Image
-          src="/green-ghost-weed-shop-phuket.png"
-          width={1260}
-          height={600}
-          alt="ok"
-          layout="responsive"
-        />
+        <Box position="relative" w="100%" h={{ base: '600px' }}>
+          <Image
+            src="/green-ghost-weed-shop-phuket.png"
+            fill
+            style={{ objectFit: 'cover' }}
+            alt="Green Ghost Weed Shop Phuket"
+          />
+        </Box>
+
         <Box
           position="absolute"
           top="0"
@@ -72,13 +75,13 @@ export const HomeSlider = () => {
         >
           <Text
             as="h2"
-            fontSize="6xl"
+            fontSize={{ base: '3xl', md: '6xl' }}
             marginBottom={4}
             fontFamily="CubicFive10"
           >
             Welcome to Green Ghost
           </Text>
-          <Text as="p" fontSize="5xl">
+          <Text as="p" fontSize={{ base: '3xl', md: '4xl' }}>
             Highest quality organic cannabis, hand-selected from the best
             growers in Thailand.
           </Text>
@@ -87,7 +90,7 @@ export const HomeSlider = () => {
               display="inline-flex"
               color="white"
               borderColor="white"
-              fontSize="4xl"
+              fontSize={{ base: '3xl', md: '4xl' }}
               borderWidth={1}
               bgColor="transparent"
               backdropFilter="blur(3px)"
@@ -106,13 +109,15 @@ export const HomeSlider = () => {
         </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <Image
-          src="/green-ghost-weed-shop-buds.png"
-          width={1260}
-          height={600}
-          alt="ok"
-          layout="responsive"
-        />
+        <Box position="relative" w="100%" h={{ base: '600px' }}>
+          <Image
+            src="/green-ghost-weed-shop-buds.png"
+            fill
+            style={{ objectFit: 'cover' }}
+            alt="Green Ghost Weed Shop Buds Menu"
+          />
+        </Box>
+
         <Box
           position="absolute"
           top="0"
@@ -133,13 +138,13 @@ export const HomeSlider = () => {
         >
           <Text
             as="h2"
-            fontSize="6xl"
+            fontSize={{ base: '3xl', md: '6xl' }}
             marginBottom={4}
             fontFamily="CubicFive10"
           >
             Experience a New High
           </Text>
-          <Text as="p" fontSize="5xl">
+          <Text as="p" fontSize={{ base: '3xl', md: '4xl' }}>
             Try our wide range of cannabis products and discover your new
             favorite strain and elevate your experience today.
           </Text>
@@ -149,7 +154,7 @@ export const HomeSlider = () => {
               display="inline-flex"
               color="white"
               borderColor="white"
-              fontSize="4xl"
+              fontSize={{ base: '3xl', md: '4xl' }}
               borderWidth={1}
               bgColor="transparent"
               backdropFilter="blur(3px)"
@@ -168,13 +173,15 @@ export const HomeSlider = () => {
         </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <Image
-          src="/green-ghost-weed-shop-crypto-cashback.png"
-          width={1260}
-          height={600}
-          alt="ok"
-          layout="responsive"
-        />
+        <Box position="relative" w="100%" h={{ base: '600px' }}>
+          <Image
+            src="/green-ghost-weed-shop-crypto-cashback.png"
+            fill
+            style={{ objectFit: 'cover' }}
+            alt="Green Ghost Weed Shop Crypto Cashback"
+          />
+        </Box>
+
         <Box
           position="absolute"
           top="0"
@@ -195,13 +202,13 @@ export const HomeSlider = () => {
         >
           <Text
             as="h2"
-            fontSize="6xl"
+            fontSize={{ base: '3xl', md: '6xl' }}
             marginBottom={4}
             fontFamily="CubicFive10"
           >
             Relax and earn
           </Text>
-          <Text as="p" fontSize="5xl">
+          <Text as="p" fontSize={{ base: '3xl', md: '4xl' }}>
             Visit our crypto weed shop and explore a new world of possibilities
             with blockchain and cannabis.
           </Text>
@@ -210,7 +217,7 @@ export const HomeSlider = () => {
               display="inline-flex"
               color="white"
               borderColor="white"
-              fontSize="4xl"
+              fontSize={{ base: '3xl', md: '4xl' }}
               borderWidth={1}
               bgColor="transparent"
               backdropFilter="blur(3px)"
@@ -229,13 +236,15 @@ export const HomeSlider = () => {
         </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <Image
-          src="/green-ghost-weed-shop-pixel-art.png"
-          width={1260}
-          height={600}
-          alt="ok"
-          layout="responsive"
-        />
+        <Box position="relative" w="100%" h={{ base: '600px' }}>
+          <Image
+            src="/green-ghost-weed-shop-pixel-art.png"
+            fill
+            style={{ objectFit: 'cover' }}
+            alt="Green Ghost Weed Shop Pixel Art"
+          />
+        </Box>
+
         <Box
           position="absolute"
           top="0"
@@ -256,13 +265,13 @@ export const HomeSlider = () => {
         >
           <Text
             as="h2"
-            fontSize="6xl"
+            fontSize={{ base: '3xl', md: '6xl' }}
             marginBottom={4}
             fontFamily="CubicFive10"
           >
             GhostVerse
           </Text>
-          <Text as="p" fontSize="5xl">
+          <Text as="p" fontSize={{ base: '3xl', md: '4xl' }}>
             Join the Ghost Clan and earn 31% on every order, get cashback and
             get exclusive access to our latest strains. #MxGhosts
           </Text>
@@ -271,7 +280,7 @@ export const HomeSlider = () => {
               display="inline-flex"
               color="white"
               borderColor="white"
-              fontSize="4xl"
+              fontSize={{ base: '3xl', md: '4xl' }}
               borderWidth={1}
               bgColor="transparent"
               backdropFilter="blur(3px)"
@@ -290,13 +299,14 @@ export const HomeSlider = () => {
         </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <Image
-          src="/green-ghost-weed-shop-delivery.png"
-          width={1260}
-          height={600}
-          alt="ok"
-          layout="responsive"
-        />
+        <Box position="relative" w="100%" h={{ base: '600px' }}>
+          <Image
+            src="/green-ghost-weed-shop-delivery.png"
+            fill
+            style={{ objectFit: 'cover' }}
+            alt="Green Ghost Weed Shop Delivery"
+          />
+        </Box>
         <Box
           position="absolute"
           top="0"
@@ -317,13 +327,13 @@ export const HomeSlider = () => {
         >
           <Text
             as="h2"
-            fontSize="6xl"
+            fontSize={{ base: '3xl', md: '6xl' }}
             marginBottom={4}
             fontFamily="CubicFive10"
           >
             Weed Delivery
           </Text>
-          <Text as="p" fontSize="5xl">
+          <Text as="p" fontSize={{ base: '3xl', md: '4xl' }}>
             No need to leave the house for your favorite buds, your choice of
             strains is delivered right to your doorstep.
           </Text>
@@ -332,7 +342,7 @@ export const HomeSlider = () => {
               display="inline-flex"
               color="white"
               borderColor="white"
-              fontSize="4xl"
+              fontSize={{ base: '3xl', md: '4xl' }}
               borderWidth={1}
               bgColor="transparent"
               backdropFilter="blur(3px)"
