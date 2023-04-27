@@ -134,6 +134,20 @@ const BuyWeed: NextPage = () => {
             <br />
             Worldwide shipping
           </Box>
+          <Text as="h3" fontSize="xl" mx="auto" fontFamily="CubicFive12" mt={10}>
+            Find Us Also On
+          </Text>
+          <Box display="inline-flex" flexWrap="wrap" alignItems="center" justifyContent="center" mx="auto" mb={4} fontSize="4xl">
+            <Box m={4} color="ghostVerse.green.base">
+              <Link href="https://weed.th/shop/be232698-0464-4352-bd70-15ea51257870">WEED.in.th</Link>
+            </Box>
+            <Box m={4} color="ghostVerse.green.base">
+              <Link href="https://thaiweeddee.com/listing/green-ghost/">Weeddee</Link>
+            </Box>
+            <Box m={4} color="ghostVerse.green.base">
+              <Link href="https://weedhub.asia/listing/green-ghost/">WeedHub</Link>
+            </Box>
+          </Box>
         </Box>
       </MainLayout>
     </>
