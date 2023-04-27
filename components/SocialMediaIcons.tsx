@@ -9,6 +9,7 @@ export const SocialMediaIcons = () => {
           url="https://www.instagram.com/greenghostdegen"
           bgColor="#4cfd27"
           style={{ width: 60, height: 60 }}
+          title="Follow Us on Instagram"
         />
       </Box>
       <Box bgColor="black" borderRadius="100%">
@@ -16,6 +17,7 @@ export const SocialMediaIcons = () => {
           url="https://www.facebook.com/greenghostdegen"
           bgColor="#4cfd27"
           style={{ width: 60, height: 60 }}
+          title="Follow Us on Facebook"
         />
       </Box>
       <Box bgColor="black" borderRadius="100%">
@@ -23,6 +25,7 @@ export const SocialMediaIcons = () => {
           url="https://www.tiktok.com/@greenghostdegen"
           bgColor="#4cfd27"
           style={{ width: 60, height: 60 }}
+          title="Follow Us on TikTok"
         />
       </Box>
       <Box bgColor="black" borderRadius="100%">
@@ -30,6 +33,7 @@ export const SocialMediaIcons = () => {
           url="https://t.me/greenghostdegen"
           bgColor="#4cfd27"
           style={{ width: 60, height: 60 }}
+          title="Follow Us on Telegram"
         />
       </Box>
       <Box bgColor="black" borderRadius="100%">
@@ -37,6 +41,7 @@ export const SocialMediaIcons = () => {
           url="https://twitter.com/GokaiLabs"
           bgColor="#4cfd27"
           style={{ width: 60, height: 60 }}
+          title="Follow Us on Twitter"
         />
       </Box>
     </Box>
