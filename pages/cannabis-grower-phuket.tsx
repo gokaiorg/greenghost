@@ -69,17 +69,18 @@ const CannabisShop: NextPage = () => {
           width="fit-content"
           flexDirection="row"
           alignItems="baseline"
-          fontSize={20}
+          fontSize="4xl"
+          fontFamily="vt323"
         >
           Looking for the best cannabis shops in Phuket
           <ImgQuestion />
         </Box>
-        <Box>
+        <Box fontSize="2xl" fontFamily="vt323">
           Look no further than the ones trusted by the Green Ghost. We&apos;ve
           scoured the island to find the top cannabis shops that offer the
           highest quality products and the best prices.
         </Box>
-        <Box display="flex" my={4}>
+        <Box display="flex" my={4} mt={10}>
           <Box
             display="flex"
             justifyContent="center"
@@ -93,7 +94,7 @@ const CannabisShop: NextPage = () => {
               <Box
                 as="img"
                 src="/media/green-ghost-grower-my-weed-solutions.webp"
-                width={{ base: '100px' }}
+                width="80px"
                 height="80px"
                 maxW="inherit"
                 mx="auto"

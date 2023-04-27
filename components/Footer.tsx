@@ -1,4 +1,5 @@
 import { Container, Box, Text } from '@chakra-ui/react';
+import { SocialMediaIcons } from './SocialMediaIcons';
 
 export const Footer = () => {
   return (
@@ -14,6 +15,10 @@ export const Footer = () => {
         fontWeight="normal"
         textAlign="center"
       >
+        <Text as="h2" fontSize="2xl" marginBottom={4} fontFamily="CubicFive12">
+          Follow Us
+        </Text>
+        <SocialMediaIcons />
         <Box
           fontSize="xs"
           fontWeight="bold"

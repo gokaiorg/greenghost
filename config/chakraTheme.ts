@@ -37,6 +37,7 @@ export const theme = extendTheme({
       bgStripes: '#2c3440',
       shadowColor: '#141414',
       dark: {
+        ultralight: 'rgb(0, 0, 0, 0.3)',
         lighter: 'rgb(0, 0, 0, 0.8)',
         base: 'rgb(0, 0, 0, 0.5)',
         darker: '#000',

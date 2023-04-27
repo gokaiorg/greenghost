@@ -5,8 +5,8 @@ import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
-import { SocialMediaIcons } from '../components/SocialMediaIcons';
 import Head from 'next/head';
+import { SocialContactIcons } from '../components/SocialContactIcons';
 
 const BuyWeed: NextPage = () => {
   return (
@@ -112,7 +112,7 @@ const BuyWeed: NextPage = () => {
               @greenghostdegen
             </Box>
           </Text>
-          <SocialMediaIcons />
+          <SocialContactIcons />
           <Box
             as="h3"
             borderColor="ghostVerse.color2.base"
