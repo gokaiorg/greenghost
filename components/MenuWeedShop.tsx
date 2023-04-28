@@ -12,16 +12,16 @@ const Links: Route[] = [
     label: 'Buds',
   },
   {
+    path: '/weed-shop-member',
+    label: 'Member',
+  },
+  {
     path: '/weed-shop-pre-rolled',
     label: 'Pre-Rolled',
   },
   {
     path: '/weed-shop-edibles',
     label: 'Edibles',
-  },
-  {
-    path: '/weed-shop-member',
-    label: 'Member',
   },
   {
     path: '/ghost-degen-weed-shop',
