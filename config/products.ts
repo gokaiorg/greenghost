@@ -213,7 +213,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '03/04/2023',
-    quantity: 5,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "MAC and Jack is a hybrid marijuana strain that's still making waves in the cannabis world. With a mix of genetics from MAC (Miracle Alien Cookies) and Jack Herer, this strain packs a punch that leaves smokers wanting more. Its flavors and effects are still being discovered, but those who have tried it say it's a potent strain that's worth trying. \n\n The exact flavors of MAC and Jack are still up for debate, but some say it has a spicy, earthy aroma with hints of fruit and citrus. As for the effects, this strain is said to offer a strong high that hits both the mind and body. Many users report feeling a surge of creativity and energy, making it a great choice for those looking for inspiration or motivation to get things done. \n\n As with any hybrid strain, the dominant effects and flavors may vary depending on the phenotype and growing conditions. However, MAC and Jack's mix of genetics is sure to provide a unique and enjoyable experience for cannabis enthusiasts.",
