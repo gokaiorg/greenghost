@@ -21,8 +21,8 @@ export const NFTLeftToMint: FC<NFTLeftToMintProps> = ({
 
   return (
     <Box
-      display="flex"
-      alignItems="center"
+      display={'flex'}
+      alignItems={'center'}
       justifyContent={{ base: 'center', md: 'flex-start' }}
     >
       <Text fontSize={{ base: 'md', sm: 'lg' }} fontWeight="bold">

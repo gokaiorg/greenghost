@@ -5,17 +5,17 @@ export const PreRoll = () => {
   return (
     <Box
       as="div"
-      color="white"
+      color={'white'}
       fontSize={{ base: '3xl' }}
-      borderColor="ghostVerse.color2.base"
-      bgColor="ghostVerse.dark.lighter"
+      borderColor={'ghostVerse.color2.base'}
+      bgColor={'ghostVerse.dark.lighter'}
       borderWidth={1}
-      backdropFilter="blur(3px)"
+      backdropFilter={'blur(3px)'}
       mt={5}
       mb={6}
       p={4}
-      mr="auto"
-      fontFamily="vt323"
+      mr={'auto'}
+      fontFamily={'vt323'}
     >
       <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
         Looking for a convenient and hassle-free way to enjoy your favorite

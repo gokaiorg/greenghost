@@ -64,25 +64,25 @@ const BuyWeed: NextPage = () => {
           Go back
         </Box>
         <HomeSectionTitle title="Green Ghost - Grower - My Weed Solutions." />
-        <Box display="flex" flexDirection="column" fontFamily="vt323">
+        <Box display={'flex'} flexDirection={'column'} fontFamily={'vt323'}>
           <Text
             as="h2"
-            color="white"
+            color={'white'}
             fontSize={{ base: '3xl' }}
             fontWeight="black"
-            borderColor="ghostVerse.color2.base"
-            bgColor="ghostVerse.dark.lighter"
+            borderColor={'ghostVerse.color2.base'}
+            bgColor={'ghostVerse.dark.lighter'}
             borderWidth={1}
-            backdropFilter="blur(3px)"
+            backdropFilter={'blur(3px)'}
             mt={5}
             mb={6}
             p={4}
-            mr="auto"
+            mr={'auto'}
           >
             My Weed Solutions
           </Text>
           <Box
-            display="flex"
+            display={'flex'}
             flexDirection={{ base: 'column', lg: 'row' }}
             alignItems={{ base: 'column', lg: 'row' }}
             mb={4}
@@ -100,15 +100,15 @@ const BuyWeed: NextPage = () => {
               fontSize={{ base: '3xl', md: '40' }}
               mb={2}
               ml={{ base: '0', lg: '10' }}
-              mr="auto"
+              mr={'auto'}
             >
               MW Solutions is a company that believes in its customers and
               believes in the right to live life their way.
             </Text>
           </Box>
         </Box>
-        <Box display="flex" flexDirection="column" fontFamily="vt323">
-          <Box display="flex" alignItems="center" gap={3}>
+        <Box display={'flex'} flexDirection={'column'} fontFamily={'vt323'}>
+          <Box display={'flex'} alignItems={'center'} gap={3}>
             <Box bgColor="black" borderRadius="100%">
               <SocialIcon
                 url="https://www.facebook.com/profile.php?id=100085363101043"

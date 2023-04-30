@@ -7,14 +7,14 @@ export const GoToShopLink = () => {
       display="inline-flex"
       color="ghostVerse.green.base"
       fontSize={20}
-      backdropFilter="blur(3px)"
+      backdropFilter={'blur(3px)'}
       py={2}
       mb={2}
       mt="auto"
       mx="auto"
     >
       <Link href="/cannabis-shop-phuket">
-        <Box marginRight={4} display="flex" alignItems="center">
+        <Box marginRight={4} display={'flex'} alignItems={'center'}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

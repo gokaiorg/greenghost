@@ -44,23 +44,23 @@ const InstallXportal: NextPage = () => {
         </HeaderMenu>
         <HomeSectionTitle title="404 - You got lost bro!" />
         <Box
-          display="flex"
-          flexDirection="column"
+          display={'flex'}
+          flexDirection={'column'}
           as="div"
-          color="white"
+          color={'white'}
           fontSize={{ base: '3xl' }}
-          fontFamily="vt323"
-          borderColor="ghostVerse.color2.base"
-          bgColor="ghostVerse.dark.lighter"
+          fontFamily={'vt323'}
+          borderColor={'ghostVerse.color2.base'}
+          bgColor={'ghostVerse.dark.lighter'}
           borderWidth={1}
-          backdropFilter="blur(3px)"
+          backdropFilter={'blur(3px)'}
           mt={5}
           mb={6}
           p={4}
         >
           <Text
             as="h2"
-            color="white"
+            color={'white'}
             fontSize={{ base: '4xl' }}
             fontWeight="black"
             mb={4}

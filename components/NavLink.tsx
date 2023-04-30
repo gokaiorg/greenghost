@@ -19,7 +19,7 @@ function NavLink({ to, activeProps, children, ...props }: NavLinkProps) {
       <Link href={to}>
         <ChakraLink
           as="span"
-          bgColor="ghostVerse.dark.lighter"
+          bgColor={'ghostVerse.dark.lighter'}
           py={6}
           px={6}
           textAlign="center"
@@ -48,7 +48,7 @@ function NavLink({ to, activeProps, children, ...props }: NavLinkProps) {
       <ChakraLink
         as="span"
         {...props}
-        bgColor="ghostVerse.dark.lighter"
+        bgColor={'ghostVerse.dark.lighter'}
         py={6}
         px={6}
         textAlign="center"

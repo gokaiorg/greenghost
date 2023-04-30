@@ -135,8 +135,8 @@ export const LoginModalButton: FC<LoginModalButtonProps> = ({
           <ModalBody px={10}>
             {isLoggingIn && (
               <Flex
-                alignItems="center"
-                backdropFilter="blur(3px)"
+                alignItems={'center'}
+                backdropFilter={'blur(3px)'}
                 bgColor="blackAlpha.700"
                 justifyContent="center"
                 position="absolute"

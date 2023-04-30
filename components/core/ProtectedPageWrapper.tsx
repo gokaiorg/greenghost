@@ -27,7 +27,7 @@ export const ProtectedPageWrapper: FC<
         height="100vh"
         flex={1}
         direction="row"
-        alignItems="center"
+        alignItems={'center'}
         justifyContent="center"
       >
         <Spinner size="xl" />

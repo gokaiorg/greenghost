@@ -12,8 +12,8 @@ export const NFTLeftToMintPerAddress: FC<NFTLeftToMintPerAddressProps> = ({
 }) => {
   return (
     <Box
-      display="flex"
-      alignItems="center"
+      display={'flex'}
+      alignItems={'center'}
       mb={6}
       justifyContent={{ base: 'flex-start' }}
     >

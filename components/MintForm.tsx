@@ -46,9 +46,9 @@ export const MintForm: FC<MintFormProps> = ({ leftToMintForUser, cb }) => {
   return (
     <>
       <Box
-        display="flex"
+        display={'flex'}
         gap={5}
-        alignItems="center"
+        alignItems={'center'}
         justifyContent={{ base: 'center', md: 'flex-start' }}
       >
         <NumberInput

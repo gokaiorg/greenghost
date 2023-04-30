@@ -110,7 +110,7 @@ export const LedgerAccountsList: FC<LedgerAccountsListProps> = ({
     return (
       <Box
         textAlign="center"
-        marginLeft="auto"
+        marginLeft={'auto'}
         marginRight="auto"
         marginTop={6}
       >
@@ -142,7 +142,7 @@ export const LedgerAccountsList: FC<LedgerAccountsListProps> = ({
     );
 
   return (
-    <Box marginLeft="auto" marginRight="auto" marginTop={6}>
+    <Box marginLeft={'auto'} marginRight="auto" marginTop={6}>
       <Text fontWeight="semibold" textAlign="center" mb={2}>
         Choose address:
       </Text>

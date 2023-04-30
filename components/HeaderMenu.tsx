@@ -15,23 +15,23 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
 
   return (
     <Box
-      display="flex"
-      alignItems="center"
-      flexWrap="wrap"
+      display={'flex'}
+      alignItems={'center'}
+      flexWrap={'wrap'}
       py={{ base: '4', md: '9' }}
     >
       <Logo />
       <Box
-        marginLeft="auto"
+        marginLeft={'auto'}
         marginRight={{ base: 'auto', md: 0 }}
-        display="flex"
+        display={'flex'}
       >
         <Link href="/about-green-ghost" title="About Green Ghost" passHref>
           <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            marginRight={4}
+            display={'flex'}
+            flexDirection={'column'}
+            alignItems={'center'}
+            mx={2}
             _hover={{
               color: 'ghostVerse.green.base',
             }}
@@ -58,10 +58,10 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
         </Link>
         <Link href="/weed-shop" title="Weed Shop" passHref>
           <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            marginRight={4}
+            display={'flex'}
+            flexDirection={'column'}
+            alignItems={'center'}
+            mx={2}
             _hover={{
               color: 'ghostVerse.green.base',
             }}
@@ -88,10 +88,10 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
           passHref
         >
           <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            marginRight={4}
+            display={'flex'}
+            flexDirection={'column'}
+            alignItems={'center'}
+            mx={2}
             _hover={{
               color: 'ghostVerse.green.base',
             }}
@@ -123,10 +123,10 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
           passHref
         >
           <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            marginRight={4}
+            display={'flex'}
+            flexDirection={'column'}
+            alignItems={'center'}
+            mx={2}
             _hover={{
               color: 'ghostVerse.green.base',
             }}
@@ -151,19 +151,20 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
             Chat
           </Box>
         </Link>
-        <Link
-          href="https://goo.gl/maps/KTU3ZM9ac21WzgJM6"
-          title="Green Ghost map"
-          passHref
-        >
+        <Link href="/weed-shop-near-me" title="Weed Shop Near Me" passHref>
           <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            marginRight={4}
+            display={'flex'}
+            flexDirection={'column'}
+            alignItems={'center'}
+            mx={2}
             _hover={{
               color: 'ghostVerse.green.base',
             }}
+            color={
+              isActive('/weed-shop-near-me')
+                ? 'ghostVerse.green.base'
+                : 'inherit'
+            }
           >
             <svg
               width="40px"
@@ -181,7 +182,6 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
           </Box>
         </Link>
       </Box>
-
       {children}
     </Box>
   );

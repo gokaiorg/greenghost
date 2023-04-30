@@ -37,7 +37,7 @@ export const ProfileNFTsList = () => {
       <Stack
         flex={1}
         direction="row"
-        alignItems="center"
+        alignItems={'center'}
         justifyContent="center"
         mt={8}
       >
@@ -72,7 +72,7 @@ export const ProfileNFTsList = () => {
             borderColor="ghostVerse.color1.darker"
             borderWidth={1}
             borderRadius="0"
-            backdropFilter="blur(3px)"
+            backdropFilter={'blur(3px)'}
           >
             <CardBody p={{ base: 1, sm: 2, md: 3 }}>
               <Stack position="relative">

@@ -77,7 +77,7 @@ export const Hero = () => {
         couple of config changes. Check the Elven Tools website for docs.
       </Text>
       <Box
-        display="flex"
+        display={'flex'}
         justifyContent={{ base: 'center', md: 'flex-start' }}
         mt={10}
         gap={3}

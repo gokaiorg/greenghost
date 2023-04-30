@@ -26,7 +26,7 @@ export const MenuCrypto = () => {
   return (
     <>
       <Box
-        display="flex"
+        display={'flex'}
         overflow={{ base: 'auto', md: 'none' }}
         sx={{
           '::-webkit-scrollbar': {

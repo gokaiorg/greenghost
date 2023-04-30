@@ -6,7 +6,7 @@ export const HeroImage = () => {
     <Box
       width={{ base: '100%' }}
       mr={{ base: '0', md: '3rem' }}
-      display="flex"
+      display={'flex'}
       justifyContent="center"
     >
       <motion.div

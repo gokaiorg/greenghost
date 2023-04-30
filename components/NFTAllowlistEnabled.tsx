@@ -21,8 +21,8 @@ export const NFTAllowlistEnabled: FC<NFTAllowlistEnabledProps> = ({
     <>
       {allowlistState && (
         <Box
-          display="flex"
-          alignItems="center"
+          display={'flex'}
+          alignItems={'center'}
           mt={2}
           mb={2}
           justifyContent={{ base: 'center', md: 'flex-start' }}

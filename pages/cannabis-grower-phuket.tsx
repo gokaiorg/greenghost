@@ -59,33 +59,33 @@ const CannabisShop: NextPage = () => {
         <HomeSectionTitle title="Green Ghost - Phuket Cannabis Growers Selection." />
         <Box
           as="h2"
-          borderColor="ghostVerse.color2.base"
-          bgColor="ghostVerse.dark.lighter"
+          borderColor={'ghostVerse.color2.base'}
+          bgColor={'ghostVerse.dark.lighter'}
           borderWidth={1}
-          backdropFilter="blur(3px)"
+          backdropFilter={'blur(3px)'}
           p={4}
           my={4}
-          display="flex"
+          display={'flex'}
           width="fit-content"
           flexDirection="row"
           alignItems="baseline"
           fontSize="4xl"
-          fontFamily="vt323"
+          fontFamily={'vt323'}
         >
           Looking for the best cannabis shops in Phuket
           <ImgQuestion />
         </Box>
-        <Box fontSize="2xl" fontFamily="vt323">
+        <Box fontSize="2xl" fontFamily={'vt323'}>
           Look no further than the ones trusted by the Green Ghost. We&apos;ve
           scoured the island to find the top cannabis shops that offer the
           highest quality products and the best prices.
         </Box>
-        <Box display="flex" my={4} mt={10}>
+        <Box display={'flex'} my={4} mt={10}>
           <Box
-            display="flex"
+            display={'flex'}
             justifyContent="center"
-            alignItems="center"
-            flexDirection="column"
+            alignItems={'center'}
+            flexDirection={'column'}
             color="ghostVerse.green.base"
             mx={4}
             textAlign="center"
@@ -106,18 +106,18 @@ const CannabisShop: NextPage = () => {
           </Box>
         </Box>
         <Box
-          as="h3"
-          borderColor="ghostVerse.color2.base"
-          bgColor="ghostVerse.dark.lighter"
+          as={'h3'}
+          borderColor={'ghostVerse.color2.base'}
+          bgColor={'ghostVerse.dark.lighter'}
           borderWidth={1}
-          backdropFilter="blur(3px)"
+          backdropFilter={'blur(3px)'}
           p={4}
           my={4}
           mx="auto"
           mt="auto"
-          display="flex"
+          display={'flex'}
           width="fit-content"
-          flexDirection="column"
+          flexDirection={'column'}
           fontSize={20}
         >
           All our products are organic

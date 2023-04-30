@@ -47,23 +47,23 @@ const BuyWeed: NextPage = () => {
         </HeaderMenu>
         <HomeSectionTitle title="About Green Ghost - Not another coffeeshop." />
         <Box
-          display="flex"
-          flexDirection="column"
+          display={'flex'}
+          flexDirection={'column'}
           as="div"
-          color="white"
+          color={'white'}
           fontSize={{ base: '3xl' }}
-          fontFamily="vt323"
-          borderColor="ghostVerse.color2.base"
-          bgColor="ghostVerse.dark.lighter"
+          fontFamily={'vt323'}
+          borderColor={'ghostVerse.color2.base'}
+          bgColor={'ghostVerse.dark.lighter'}
           borderWidth={1}
-          backdropFilter="blur(3px)"
+          backdropFilter={'blur(3px)'}
           mt={5}
           mb={6}
           p={4}
         >
           <Text
             as="h2"
-            color="white"
+            color={'white'}
             fontSize={{ base: '4xl' }}
             fontWeight="black"
             mb={4}
@@ -72,7 +72,7 @@ const BuyWeed: NextPage = () => {
             <ImgQuestion />
           </Text>
           <Box
-            display="flex"
+            display={'flex'}
             flexDirection={{ base: 'column', lg: 'row' }}
             mb={10}
           >
@@ -108,12 +108,12 @@ const BuyWeed: NextPage = () => {
                 and Gokai Labs, a digital branding and communication agency with
                 over 10 years of experience in Thailand.
               </Text>
-              <Box display="flex" my={4}>
+              <Box display={'flex'} my={4}>
                 <Box
-                  display="flex"
+                  display={'flex'}
                   justifyContent="center"
-                  alignItems="center"
-                  flexDirection="column"
+                  alignItems={'center'}
+                  flexDirection={'column'}
                   color="ghostVerse.green.base"
                   as="a"
                   mx={4}
@@ -132,10 +132,10 @@ const BuyWeed: NextPage = () => {
                   Gokai Labs
                 </Box>
                 <Box
-                  display="flex"
+                  display={'flex'}
                   justifyContent="center"
-                  alignItems="center"
-                  flexDirection="column"
+                  alignItems={'center'}
+                  flexDirection={'column'}
                   color="ghostVerse.green.base"
                   mx={4}
                   textAlign="center"
@@ -157,11 +157,11 @@ const BuyWeed: NextPage = () => {
               </Box>
             </Box>
           </Box>
-          <Box display="flex" flexDirection={{ base: 'column', lg: 'row' }}>
+          <Box display={'flex'} flexDirection={{ base: 'column', lg: 'row' }}>
             <Box width={{ base: '100%', lg: '65%' }}>
               <Text
                 as="h2"
-                color="white"
+                color={'white'}
                 fontSize={{ base: '4xl' }}
                 fontWeight="black"
                 mb={4}

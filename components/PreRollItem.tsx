@@ -17,15 +17,15 @@ export const PreRollItem: FC<PreRollItemProps> = ({
     <Box
       borderColor="ghostVerse.green.base"
       borderWidth={1}
-      bgColor="ghostVerse.dark.lighter"
-      backdropFilter="blur(3px)"
+      bgColor={'ghostVerse.dark.lighter'}
+      backdropFilter={'blur(3px)'}
       py={2}
       px={6}
       textAlign="center"
       fontWeight="bold"
       fontSize="xl"
       color="ghostVerse.green.base"
-      display="flex"
+      display={'flex'}
       width="fit-content"
     >
       <Link href={pageLink} passHref>

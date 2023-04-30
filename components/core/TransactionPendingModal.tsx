@@ -82,9 +82,9 @@ export const TransactionPendingModal: FC<TransactionPendingModalProps> = ({
           </Text>
 
           {!txError && (
-            <Flex alignItems="center" justifyContent="center" mt={2}>
+            <Flex alignItems={'center'} justifyContent="center" mt={2}>
               {successTxHash && (
-                <Box display="flex" flexDirection="column">
+                <Box display={'flex'} flexDirection={'column'}>
                   <Text
                     as="a"
                     href={`${networkConfig[chainType].explorerAddress}/transactions/${successTxHash}`}

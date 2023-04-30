@@ -119,16 +119,16 @@ const SpaceCakeBrownie: NextPage = () => {
           </SwiperSlide>
         </Swiper>
         <Box
-          borderColor="ghostVerse.color2.base"
-          bgColor="ghostVerse.dark.lighter"
+          borderColor={'ghostVerse.color2.base'}
+          bgColor={'ghostVerse.dark.lighter'}
           borderWidth={1}
-          backdropFilter="blur(3px)"
+          backdropFilter={'blur(3px)'}
           p={4}
           my={4}
           display="inline-flex"
-          flexDirection="column"
+          flexDirection={'column'}
           fontSize="3xl"
-          fontFamily="vt323"
+          fontFamily={'vt323'}
         >
           Introducing the ultimate indulgence for cannabis lovers, our Brownie
           Space Cake made with OG kush marijuana butter, Switzerland flour and

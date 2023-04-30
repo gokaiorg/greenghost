@@ -7,6 +7,7 @@ import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { SocialContactIcons } from '../components/SocialContactIcons';
+import Image from 'next/image';
 
 const BuyWeed: NextPage = () => {
   return (
@@ -57,96 +58,152 @@ const BuyWeed: NextPage = () => {
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
         <HomeSectionTitle title="Contact us - Buy weed online." />
-        <Box display="flex" flexDirection="column" fontFamily="vt323">
-          <Text
-            as="h2"
-            color="white"
-            fontSize={{ base: '3xl' }}
-            fontWeight="black"
-            borderColor="ghostVerse.color2.base"
-            bgColor="ghostVerse.dark.lighter"
-            borderWidth={1}
-            backdropFilter="blur(3px)"
-            mt={5}
-            mb={6}
-            p={4}
-            mr="auto"
-          >
-            Call the shop
-          </Text>
-          <Text
-            display="inline-flex"
-            color="ghostVerse.green.base"
-            borderColor="ghostVerse.green.base"
-            fontSize={{ base: '3xl', md: '40' }}
-            borderWidth={1}
-            whiteSpace="nowrap"
-            bgColor="ghostVerse.dark.lighter"
-            backdropFilter="blur(3px)"
-            py={2}
-            px={6}
-            mb={2}
-            mr="auto"
-          >
-            <Link href="tel:+66936459898">+66 93 645 9898</Link>
-          </Text>
-        </Box>
-        <Box display="flex" flexDirection="column" fontFamily="vt323">
-          <Text
-            as="h2"
-            color="white"
-            fontSize={{ base: '3xl' }}
-            fontWeight="black"
-            borderColor="ghostVerse.color2.base"
-            bgColor="ghostVerse.dark.lighter"
-            borderWidth={1}
-            backdropFilter="blur(3px)"
-            mt={5}
-            mb={6}
-            p={4}
-            mr="auto"
-          >
-            Contact us to order online
-            <Box as="span" color="ghostVerse.green.base">
-              {' '}
-              @greenghostdegen
-            </Box>
-          </Text>
-          <SocialContactIcons />
+        <Text as={'h2'} fontSize={{ base: '3xl' }} fontFamily={'vt323'} mb={10}>
+          Looking to buy weed online? No need to leave the house for your
+          favorite buds, your choice of strains is delivered right to your
+          doorstep.
+        </Text>
+        <Box
+          display={'flex'}
+          flexDirection={{ base: 'column', lg: 'row' }}
+          mb={10}
+        >
           <Box
-            as="h3"
-            borderColor="ghostVerse.color2.base"
-            bgColor="ghostVerse.dark.lighter"
-            borderWidth={1}
-            backdropFilter="blur(3px)"
-            p={4}
-            mx="auto"
-            mt={10}
-            display="flex"
-            textAlign="center"
-            fontSize="3xl"
-            width="fit-content"
-            flexDirection="column"
+            width={{ base: '100%', lg: '35%' }}
+            mr={{ base: 0, lg: 10 }}
+            mt={4}
           >
-            Immediate delivery in Phuket
-            <br />
-            24/24 delivery only in Rawai
-            <br />
-            Worldwide shipping
+            <Image
+              src="/green-ghost-weed-shop-buy-online.png"
+              width={500}
+              height={500}
+              alt="Contact us - Buy weed online."
+              layout="responsive"
+            />
           </Box>
-          <Text title="Find Us on Weed in th" as="h3" fontSize="xl" mx="auto" fontFamily="CubicFive12" mt={10}>
-            Find Us Also On
-          </Text>
-          <Box display="inline-flex" flexWrap="wrap" alignItems="center" justifyContent="center" mx="auto" mb={4} fontSize="4xl">
-            <Box m={4} color="ghostVerse.green.base">
-              <Link title="Find Us on Weed in th" href="https://weed.th/shop/be232698-0464-4352-bd70-15ea51257870">WEED.in.th</Link>
+          <Box width={{ base: '100%', lg: '65%' }}>
+            <Box display={'flex'} flexDirection={'column'}>
+              <Text
+                as={'h3'}
+                color={'white'}
+                fontSize={{ base: '2xl' }}
+                fontFamily={'CubicFive12'}
+                borderColor={'ghostVerse.color2.base'}
+                bgColor={'ghostVerse.dark.lighter'}
+                borderWidth={1}
+                backdropFilter={'blur(3px)'}
+                mt={5}
+                mb={6}
+                p={4}
+                mr={'auto'}
+              >
+                Call us to order online
+              </Text>
+              <Text
+                display="inline-flex"
+                color="ghostVerse.green.base"
+                borderColor="ghostVerse.green.base"
+                fontSize={{ base: '3xl', md: '40' }}
+                borderWidth={1}
+                whiteSpace="nowrap"
+                bgColor={'ghostVerse.dark.lighter'}
+                backdropFilter={'blur(3px)'}
+                py={2}
+                px={6}
+                mb={2}
+                mr={'auto'}
+                fontFamily={'vt323'}
+              >
+                <Link href="tel:+66936459898">+66 93 645 9898</Link>
+              </Text>
             </Box>
-            <Box m={4} color="ghostVerse.green.base">
-              <Link title="Find Us on Weeddee" href="https://thaiweeddee.com/listing/green-ghost/">Weeddee</Link>
+            <Box display={'flex'} flexDirection={'column'}>
+              <Text
+                as={'h3'}
+                color={'white'}
+                fontSize={{ base: '2xl' }}
+                fontFamily={'CubicFive12'}
+                borderColor={'ghostVerse.color2.base'}
+                bgColor={'ghostVerse.dark.lighter'}
+                borderWidth={1}
+                backdropFilter={'blur(3px)'}
+                mt={5}
+                mb={6}
+                p={4}
+                mr={'auto'}
+              >
+                Text us to order online
+              </Text>
+              <SocialContactIcons />
             </Box>
-            <Box m={4} color="ghostVerse.green.base">
-              <Link title="Find Us on WeedHub" href="https://weedhub.asia/listing/green-ghost/">WeedHub</Link>
-            </Box>
+          </Box>
+        </Box>
+        <Box
+          as={'h3'}
+          borderColor={'ghostVerse.color2.base'}
+          bgColor={'ghostVerse.dark.lighter'}
+          borderWidth={1}
+          backdropFilter={'blur(3px)'}
+          p={4}
+          mx="auto"
+          mt={10}
+          display={'flex'}
+          textAlign="center"
+          fontSize="3xl"
+          width="fit-content"
+          flexDirection={'column'}
+          fontFamily={'vt323'}
+        >
+          Immediate delivery in Phuket
+          <br />
+          24/24 delivery only in Rawai
+          <br />
+          Worldwide shipping
+        </Box>
+        <Text
+          title="Find Us on Weed in th"
+          as={'h3'}
+          fontSize="xl"
+          mx="auto"
+          fontFamily={'CubicFive12'}
+          mt={10}
+          textAlign={'center'}
+        >
+          Find Us Also On
+        </Text>
+        <Box
+          display={'flex'}
+          flexWrap={'wrap'}
+          alignItems={'center'}
+          justifyContent="center"
+          mx="auto"
+          mb={4}
+          fontSize="4xl"
+          fontFamily={'vt323'}
+        >
+          <Box m={4} color="ghostVerse.green.base">
+            <Link
+              title="Find Us on Weed in th"
+              href="https://weed.th/shop/be232698-0464-4352-bd70-15ea51257870"
+            >
+              WEED.th
+            </Link>
+          </Box>
+          <Box m={4} color="ghostVerse.green.base">
+            <Link
+              title="Find Us on Weeddee"
+              href="https://thaiweeddee.com/listing/green-ghost/"
+            >
+              Weeddee
+            </Link>
+          </Box>
+          <Box m={4} color="ghostVerse.green.base">
+            <Link
+              title="Find Us on WeedHub"
+              href="https://weedhub.asia/listing/green-ghost/"
+            >
+              WeedHub
+            </Link>
           </Box>
         </Box>
       </MainLayout>

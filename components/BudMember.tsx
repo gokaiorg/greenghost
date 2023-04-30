@@ -63,27 +63,27 @@ export const BudMember = () => {
   return (
     <Box mt={4} mb="10">
       <Box
-        display="flex"
+        display={'flex'}
         alignItems="baseline"
         mr={4}
         flexDirection={{ base: 'column', lg: 'row' }}
       >
         <Box
           as="h2"
-          borderColor="ghostVerse.color2.base"
-          bgColor="ghostVerse.dark.lighter"
+          borderColor={'ghostVerse.color2.base'}
+          bgColor={'ghostVerse.dark.lighter'}
           borderWidth={1}
-          backdropFilter="blur(3px)"
+          backdropFilter={'blur(3px)'}
           p={4}
           mb={4}
           display="inline-flex"
           marginRight="auto"
-          flexWrap="wrap"
+          flexWrap={'wrap'}
           fontSize={30}
         >
           Latest buds for members only.
         </Box>
-        <Box display="flex" mb={{ base: '4', lg: '0' }}>
+        <Box display={'flex'} mb={{ base: '4', lg: '0' }}>
           <Box mr={4}>
             <Select
               value={sortBy}
@@ -121,7 +121,7 @@ export const BudMember = () => {
         </Box>
       </Box>
 
-      <Box display="flex" flexWrap="wrap">
+      <Box display={'flex'} flexWrap={'wrap'}>
         {sortedProducts.map((product) => (
           <BudItem key={product.slug} product={product} />
         ))}

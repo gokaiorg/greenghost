@@ -5,8 +5,8 @@ export const Footer = () => {
   return (
     <Box
       color="elvenTools.white"
-      display="flex"
-      alignItems="center"
+      display={'flex'}
+      alignItems={'center'}
       mt={{ base: '5rem', md: 'auto' }}
     >
       <Container
@@ -15,9 +15,21 @@ export const Footer = () => {
         fontWeight="normal"
         textAlign="center"
       >
-        <Text as="h2" fontSize="2xl" marginBottom={4} fontFamily="CubicFive12">
+        <Text as="h2" fontSize="2xl" fontFamily={'CubicFive12'}>
           Follow Us
         </Text>
+        <Box
+          as={'h3'}
+          display={'flex'}
+          justifyContent="center"
+          fontSize="3xl"
+          marginBottom={4}
+          w={'full'}
+          color="ghostVerse.green.base"
+          fontFamily={'vt323'}
+        >
+          @greenghostdegen
+        </Box>
         <SocialMediaIcons />
         <Box
           fontSize="xs"
@@ -25,7 +37,7 @@ export const Footer = () => {
           mb={{ base: '2', md: '4' }}
           position="relative"
           zIndex={1}
-          display="flex"
+          display={'flex'}
           justifyContent="center"
           whiteSpace="nowrap"
         >

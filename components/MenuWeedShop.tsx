@@ -34,7 +34,7 @@ export const MenuWeedShop = () => {
   return (
     <>
       <Box
-        display="flex"
+        display={'flex'}
         overflow={{ base: 'auto', md: 'none' }}
         sx={{
           '::-webkit-scrollbar': {

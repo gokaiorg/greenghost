@@ -33,7 +33,7 @@ export const ProfileUserData = () => {
       <Stack
         flex={1}
         direction="row"
-        alignItems="center"
+        alignItems={'center'}
         justifyContent="center"
         mt={8}
       >
@@ -45,10 +45,10 @@ export const ProfileUserData = () => {
   return (
     <Stack
       direction="row"
-      borderColor="ghostVerse.color2.base"
+      borderColor={'ghostVerse.color2.base'}
       borderWidth={1}
       p={4}
-      backdropFilter="blur(3px)"
+      backdropFilter={'blur(3px)'}
     >
       <Stack
         direction="row"

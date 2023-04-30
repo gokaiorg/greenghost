@@ -63,15 +63,15 @@ export const HomeSlider = () => {
           right={0}
           margin="auto"
           textAlign="center"
-          display="flex"
-          flexDirection="column"
+          display={'flex'}
+          flexDirection={'column'}
           justifyContent="center"
           fontWeight="black"
-          color="white"
-          fontFamily="vt323"
+          color={'white'}
+          fontFamily={'vt323'}
           px={10}
           bgColor="ghostVerse.dark.ultralight"
-          backdropFilter="blur(3px)"
+          backdropFilter={'blur(3px)'}
         >
           <Text
             as="h2"
@@ -88,12 +88,12 @@ export const HomeSlider = () => {
           <Link href="/about-green-ghost">
             <Text
               display="inline-flex"
-              color="white"
-              borderColor="white"
+              color={'white'}
+              borderColor={'white'}
               fontSize={{ base: '3xl', md: '4xl' }}
               borderWidth={1}
               bgColor="transparent"
-              backdropFilter="blur(3px)"
+              backdropFilter={'blur(3px)'}
               p={6}
               mt={10}
               mx="auto"
@@ -126,15 +126,15 @@ export const HomeSlider = () => {
           right={0}
           margin="auto"
           textAlign="center"
-          display="flex"
-          flexDirection="column"
+          display={'flex'}
+          flexDirection={'column'}
           justifyContent="center"
           fontWeight="black"
-          color="white"
-          fontFamily="vt323"
+          color={'white'}
+          fontFamily={'vt323'}
           px={10}
           bgColor="ghostVerse.dark.ultralight"
-          backdropFilter="blur(3px)"
+          backdropFilter={'blur(3px)'}
         >
           <Text
             as="h2"
@@ -152,12 +152,12 @@ export const HomeSlider = () => {
           <Link href="/weed-shop">
             <Text
               display="inline-flex"
-              color="white"
-              borderColor="white"
+              color={'white'}
+              borderColor={'white'}
               fontSize={{ base: '3xl', md: '4xl' }}
               borderWidth={1}
               bgColor="transparent"
-              backdropFilter="blur(3px)"
+              backdropFilter={'blur(3px)'}
               p={6}
               mt={10}
               mx="auto"
@@ -190,15 +190,15 @@ export const HomeSlider = () => {
           right={0}
           margin="auto"
           textAlign="center"
-          display="flex"
-          flexDirection="column"
+          display={'flex'}
+          flexDirection={'column'}
           justifyContent="center"
           fontWeight="black"
-          color="white"
-          fontFamily="vt323"
+          color={'white'}
+          fontFamily={'vt323'}
           px={10}
           bgColor="ghostVerse.dark.ultralight"
-          backdropFilter="blur(3px)"
+          backdropFilter={'blur(3px)'}
         >
           <Text
             as="h2"
@@ -215,12 +215,12 @@ export const HomeSlider = () => {
           <Link href="/crypto-weed-shop-relax-and-earn">
             <Text
               display="inline-flex"
-              color="white"
-              borderColor="white"
+              color={'white'}
+              borderColor={'white'}
               fontSize={{ base: '3xl', md: '4xl' }}
               borderWidth={1}
               bgColor="transparent"
-              backdropFilter="blur(3px)"
+              backdropFilter={'blur(3px)'}
               p={6}
               mt={10}
               mx="auto"
@@ -253,15 +253,15 @@ export const HomeSlider = () => {
           right={0}
           margin="auto"
           textAlign="center"
-          display="flex"
-          flexDirection="column"
+          display={'flex'}
+          flexDirection={'column'}
           justifyContent="center"
           fontWeight="black"
-          color="white"
-          fontFamily="vt323"
+          color={'white'}
+          fontFamily={'vt323'}
           px={10}
           bgColor="ghostVerse.dark.ultralight"
-          backdropFilter="blur(3px)"
+          backdropFilter={'blur(3px)'}
         >
           <Text
             as="h2"
@@ -278,12 +278,12 @@ export const HomeSlider = () => {
           <Link href="https://ghostverse.org/mxghosts">
             <Text
               display="inline-flex"
-              color="white"
-              borderColor="white"
+              color={'white'}
+              borderColor={'white'}
               fontSize={{ base: '3xl', md: '4xl' }}
               borderWidth={1}
               bgColor="transparent"
-              backdropFilter="blur(3px)"
+              backdropFilter={'blur(3px)'}
               p={6}
               mt={10}
               mx="auto"
@@ -315,15 +315,15 @@ export const HomeSlider = () => {
           right={0}
           margin="auto"
           textAlign="center"
-          display="flex"
-          flexDirection="column"
+          display={'flex'}
+          flexDirection={'column'}
           justifyContent="center"
           fontWeight="black"
-          color="white"
-          fontFamily="vt323"
+          color={'white'}
+          fontFamily={'vt323'}
           px={10}
           bgColor="ghostVerse.dark.ultralight"
-          backdropFilter="blur(3px)"
+          backdropFilter={'blur(3px)'}
         >
           <Text
             as="h2"
@@ -340,12 +340,12 @@ export const HomeSlider = () => {
           <Link href="/contact-us-buy-weed-online">
             <Text
               display="inline-flex"
-              color="white"
-              borderColor="white"
+              color={'white'}
+              borderColor={'white'}
               fontSize={{ base: '3xl', md: '4xl' }}
               borderWidth={1}
               bgColor="transparent"
-              backdropFilter="blur(3px)"
+              backdropFilter={'blur(3px)'}
               p={6}
               mt={10}
               mx="auto"

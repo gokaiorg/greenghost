@@ -64,7 +64,7 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
         />
         <Box
           as="h2"
-          display="flex"
+          display={'flex'}
           flexDirection="row"
           alignItems="baseline"
           fontSize="2xl"
@@ -81,12 +81,12 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           borderColor="ghostVerse.green.base"
           fontSize="xl"
           borderWidth={1}
-          bgColor="ghostVerse.dark.lighter"
-          backdropFilter="blur(3px)"
+          bgColor={'ghostVerse.dark.lighter'}
+          backdropFilter={'blur(3px)'}
           py={2}
           px={6}
           mb={2}
-          mr="auto"
+          mr={'auto'}
           outline="none"
           cursor="pointer"
           onClick={verifyAge}
@@ -107,12 +107,12 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
             borderColor="#EF2625"
             fontSize="xl"
             borderWidth={1}
-            bgColor="ghostVerse.dark.lighter"
-            backdropFilter="blur(3px)"
+            bgColor={'ghostVerse.dark.lighter'}
+            backdropFilter={'blur(3px)'}
             py={2}
             px={6}
             mb={2}
-            mr="auto"
+            mr={'auto'}
           >
             No, NFTs are better for me
           </Box>

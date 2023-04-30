@@ -63,17 +63,17 @@ const CryptoWeedShop: NextPage = () => {
         <MenuCrypto />
         <Box
           as="div"
-          color="white"
+          color={'white'}
           fontSize={{ base: '3xl' }}
-          borderColor="ghostVerse.color2.base"
-          bgColor="ghostVerse.dark.lighter"
+          borderColor={'ghostVerse.color2.base'}
+          bgColor={'ghostVerse.dark.lighter'}
           borderWidth={1}
-          backdropFilter="blur(3px)"
+          backdropFilter={'blur(3px)'}
           mt={5}
           mb={6}
           p={4}
-          mr="auto"
-          fontFamily="vt323"
+          mr={'auto'}
+          fontFamily={'vt323'}
         >
           <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
             Are you from another universe in MultiversX
@@ -88,12 +88,12 @@ const CryptoWeedShop: NextPage = () => {
           cannabis store.
           <br />
           <br />
-          <Box display="flex">
+          <Box display={'flex'}>
             <Box
-              display="flex"
+              display={'flex'}
               justifyContent="center"
-              alignItems="center"
-              flexDirection="column"
+              alignItems={'center'}
+              flexDirection={'column'}
               color="ghostVerse.green.base"
               as="a"
               mx={4}
@@ -112,10 +112,10 @@ const CryptoWeedShop: NextPage = () => {
               eBudsDAC
             </Box>
             <Box
-              display="flex"
+              display={'flex'}
               justifyContent="center"
-              alignItems="center"
-              flexDirection="column"
+              alignItems={'center'}
+              flexDirection={'column'}
               color="ghostVerse.green.base"
               as="a"
               mx={4}
@@ -134,10 +134,10 @@ const CryptoWeedShop: NextPage = () => {
               Plata
             </Box>
             <Box
-              display="flex"
+              display={'flex'}
               justifyContent="center"
-              alignItems="center"
-              flexDirection="column"
+              alignItems={'center'}
+              flexDirection={'column'}
               color="ghostVerse.green.base"
               as="a"
               mx={4}
@@ -156,10 +156,10 @@ const CryptoWeedShop: NextPage = () => {
               Fainart
             </Box>
             <Box
-              display="flex"
+              display={'flex'}
               justifyContent="center"
-              alignItems="center"
-              flexDirection="column"
+              alignItems={'center'}
+              flexDirection={'column'}
               color="ghostVerse.green.base"
               as="a"
               mx={4}
@@ -178,10 +178,10 @@ const CryptoWeedShop: NextPage = () => {
               GCC
             </Box>
             <Box
-              display="flex"
+              display={'flex'}
               justifyContent="center"
-              alignItems="center"
-              flexDirection="column"
+              alignItems={'center'}
+              flexDirection={'column'}
               color="ghostVerse.green.base"
               as="a"
               mx={4}
@@ -200,10 +200,10 @@ const CryptoWeedShop: NextPage = () => {
               Effort
             </Box>
             <Box
-              display="flex"
+              display={'flex'}
               justifyContent="center"
-              alignItems="center"
-              flexDirection="column"
+              alignItems={'center'}
+              flexDirection={'column'}
               color="ghostVerse.green.base"
               as="a"
               mx={4}

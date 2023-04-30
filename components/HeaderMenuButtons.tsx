@@ -8,7 +8,7 @@ interface HeaderMenuButtonsProps {
 
 export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = () => {
   return (
-    <Box display="flex" gap={5} alignItems="center">
+    <Box display={'flex'} gap={5} alignItems={'center'}>
       <UserAvatar />
     </Box>
   );

@@ -65,17 +65,17 @@ const CryptoWeedShop: NextPage = () => {
         <MenuCrypto />
         <Box
           as="div"
-          color="white"
+          color={'white'}
           fontSize={{ base: '3xl' }}
-          borderColor="ghostVerse.color2.base"
-          bgColor="ghostVerse.dark.lighter"
+          borderColor={'ghostVerse.color2.base'}
+          bgColor={'ghostVerse.dark.lighter'}
           borderWidth={1}
-          backdropFilter="blur(3px)"
+          backdropFilter={'blur(3px)'}
           mt={5}
           mb={6}
           p={4}
-          mr="auto"
-          fontFamily="vt323"
+          mr={'auto'}
+          fontFamily={'vt323'}
         >
           <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
             Join the new generation in love for weed, art and crypto.
