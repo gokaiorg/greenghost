@@ -38,7 +38,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '03/04/2023',
-    quantity: 150,
+    quantity: 1,
     origin: 'Phuket',
     description:
       "The King's Juice is a hybrid cannabis strain created by combining two terpene profiles loved by its creator, Arjan. It is a cross between Mimosa from Symbiotic Genetics and King's Kush, resulting in a plant with a piney, coney growth and a long main cola that grows taller than its side branches. During the flowering period, the plant will stretch considerably, and its branches will grow steadily. \n\n The flowers of The King's Juice are known for their balanced floral and citrusy/earthy fragrance, which creates a complex aroma that resembles fresh fruit juice. Towards the end of the flowering period, the plant will take on beautiful reddish/violet hues, giving it a stunning fall color. The plant is also covered in trichomes, which add to its beauty. \n\n The effect of The King's Juice is a balanced high that can be enjoyed all day. It provides an uplifting head buzz, while the body remains light and active. The taste of the strain stays in the mouth for a while after exhaling, creating a satisfying sensation. Overall, The King's Juice is a beautiful and flavorful strain that offers a well-rounded high.",
@@ -67,7 +67,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '08/04/2023',
-    quantity: 245,
+    quantity: 1,
     origin: 'Phuket',
     description:
       'Eleven Roses is an indica-dominant hybrid marijuana strain with an unknown genetic lineage. The dense and resinous buds of Eleven Roses have a pungent aroma with hints of pine, earth, and fuel. Though there is limited information available about this strain, its effects are said to be deeply relaxing and may be useful for treating insomnia, pain, and stress. \n\n Eleven Roses is also known for its sedative properties, making it a good choice for nighttime use or for those seeking relief from anxiety or tension. The exact THC and CBD levels of Eleven Roses are not known, but it is believed to have a moderately high THC content, potentially reaching up to 20%. \n\n The name Eleven Roses is thought to reference the potent and aromatic nature of this strain, with the eleven representing the abundance of its positive attributes. While there is still much to be learned about Eleven Roses, it is clear that this strain has the potential to provide relief for a range of medical conditions while also delivering a deep sense of relaxation and tranquility.',
@@ -84,7 +84,7 @@ export const products: Product[] = [
   {
     slug: 'bruce-banner',
     name: 'Bruce Banner',
-    price: 700,
+    price: 666,
     dominance: 'Sativa Dominant',
     indica: '40',
     sativa: '60',
@@ -96,7 +96,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '04/04/2023',
-    quantity: 34,
+    quantity: 1,
     origin: 'Phuket',
     description:
       "Bruce Banner is a highly sought-after hybrid strain known for its powerful effects and high THC content. With its origins traced back to a cross between OG Kush and Strawberry Diesel, Bruce Banner offers a unique blend of sweet and diesel-like flavors with earthy undertones. Its dense, sticky buds are known for their bright green color and orange hairs, often coated in a thick layer of trichomes. \n\n The effects of Bruce Banner are fast-acting and intense, providing a powerful burst of euphoria and creativity followed by deep relaxation and a mellow body buzz. Its high THC levels, which can range between 18-29%, make it a popular choice among experienced cannabis consumers seeking potent and long-lasting effects. It's important to note that the strain's high can be overwhelming for some, so beginners are advised to start with a lower dosage. \n\n Bruce Banner is also a popular strain among growers due to its fast flowering time of 8-10 weeks and high yields. It is known to produce three main phenotypes, one of which is Bruce Banner #3, which has gained a reputation as the most potent and flavorful of the three. Overall, Bruce Banner is a strain that offers a unique blend of flavors and effects that has earned it a place among the most popular hybrid strains on the market today.",
@@ -125,7 +125,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '22/01/2023',
-    quantity: 28,
+    quantity: 10,
     origin: 'Phuket',
     description:
       "Cherry Garcia is a popular hybrid marijuana strain that is known for its calming effects. This strain is a cross between Animal Cookies and 3x Crazy, and its potency is known to vary. With continued use, Cherry Garcia's effects become more calming than energizing, leading to a balanced high that leaves you feeling happy, relaxed, and euphoric. Consumers of Cherry Garcia often report that it makes them feel giggly and enhances their mood. \n\n One of the most notable features of Cherry Garcia is its unique flavor profile. The strain has a sweet taste, with hints of berry and cherry that shine through. Many users appreciate the smooth and enjoyable smoking experience that Cherry Garcia provides. Medical marijuana patients often choose Cherry Garcia to alleviate symptoms related to stress, pain, and depression. \n\n Cherry Garcia was initially bred by Natural State Cultivation and has gained popularity due to its balanced effects and unique flavor profile. Whether you're looking to unwind after a long day or want to enhance your mood, Cherry Garcia may be the perfect strain for you. With its calming and uplifting effects, it's no surprise that this strain has become a favorite among many cannabis enthusiasts.",
@@ -153,8 +153,8 @@ export const products: Product[] = [
     grower: 'My Weed Solutions',
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
-    harvest: '05/04/2023',
-    quantity: 17,
+    harvest: '07/04/2023',
+    quantity: 10,
     origin: 'Phuket',
     description:
       "Critical Kush is an Indica-dominant marijuana strain that is known for its potent effects. Bred by Barney's Farm, it is a cross between Critical Mass and OG Kush, two of the most beloved strains in the cannabis world. Critical Kush has a pungent earthy aroma with a hint of spice, which can induce a calming effect on the mind and body. Its high THC content combined with a moderate amount of CBD makes it an ideal nighttime medication for those seeking relief from pain, stress, insomnia, and muscle spasms. \n\n This popular strain is highly valued by both medical and recreational users. Medical marijuana patients use Critical Kush to alleviate symptoms related to chronic pain, anxiety, depression, and insomnia. Recreational users appreciate its relaxing, sedative-like effects, which make it an excellent choice for unwinding after a long day. Critical Kush is also a favorite among growers, as it is easy to cultivate and produces high yields. \n\n Indoor growers can expect Critical Kush to flower in about 50-60 days. This strain is known for its resilience and adaptability, making it suitable for both novice and experienced cultivators. With its potent effects and delightful aroma, Critical Kush is a must-try for any cannabis connoisseur looking for a high-quality Indica strain.",
@@ -171,7 +171,7 @@ export const products: Product[] = [
   {
     slug: 'royal-moby',
     name: 'Royal Moby',
-    price: 700,
+    price: 666,
     dominance: 'Sativa Dominant',
     indica: '35',
     sativa: '65',
@@ -183,7 +183,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '01/04/2023',
-    quantity: 11,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Royal Moby is a popular hybrid marijuana strain that has gained a royal status among cannabis enthusiasts worldwide. This strain is known for its hard-hitting smoke and delightful aroma, which have contributed to its widespread popularity. In the early days of cannabis cultivation, Sativa and Indica hybrids were primarily used to develop new strains. While a combination of both traits is typically present, one will often dominate over the other, leading to the emergence of dominant strains. In Spain, growers experimenting with genetics came across a Sativa/Indica hybrid that flowered to the full psychoactive effects of a pure Sativa. The smoke from this cannabis strain was so enormous that it was eventually named Moby Dick. \n\n Royal Moby is a hard-hitting sativa with impressive traits derived from Haze and White Widow. Its aroma is a combination of earthy and spicy notes, with hints of citrus shining through. The effects of this strain are predominantly cerebral, producing a euphoric and energizing high that is perfect for daytime use. Medical marijuana patients have reported that Royal Moby helps relieve symptoms of stress, depression, and anxiety. \n\n If you're looking for a hybrid strain that offers a balanced blend of Sativa and Indica traits, Royal Moby is an excellent choice. With its hard-hitting smoke and pleasant aroma, this strain is sure to become a favorite among cannabis connoisseurs. So why not give it a try and experience the royal treatment that Royal Moby has to offer?",
@@ -230,7 +230,7 @@ export const products: Product[] = [
   {
     slug: 'c-vibez',
     name: 'C-Vibez',
-    price: 300,
+    price: 500,
     dominance: 'Sativa Dominant',
     indica: '40',
     sativa: '60',
@@ -242,7 +242,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '28/12/2022',
-    quantity: 13,
+    quantity: 10,
     origin: 'Phuket',
     description:
       "C-Vibez is a fast-flowering hybrid cannabis strain that's highly sought after for its dense, aromatic buds that grow quickly to maturity. With an average height of about 1.0m - 1.5m, this strain takes only about 8 weeks to finish blooming its rock-hard flowers. C-Vibez is a heavy yielder with an exceptional terpene profile, and most of these high-quality feminized seeds turn into short, green plants. About 30% show some color, ranging from purple to pink. \n\n This strain is the result of Mad Scientist genetics, accompanied by some outstanding Voodoo genetics. Voodoo is a massively potent original Dutch Passion Thai strain, responsible for the strong stone that consumers will experience while vaping or smoking the end result. Despite being an indica-dominant variety, C-Vibez offers remarkable fruity/lemony hints in the taste, especially when being burned. \n\n It's worth noting that C-Vibez has deliberately not been bred to full stability, which ensures a rich selection of seriously high-quality phenotypes with the vigor usually encountered in F2's and F3's. This makes C-Vibez a unique and exciting strain to cultivate and experience, with a potent and flavorful smoke that's sure to please even the most discerning cannabis enthusiasts.",
@@ -271,8 +271,8 @@ export const products: Product[] = [
     grower: 'My Weed Solutions',
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
-    harvest: '28/12/2022',
-    quantity: 22,
+    harvest: '12/04/2023',
+    quantity: 9,
     origin: 'Phuket',
     description:
       'Super Lemon Haze is a sativa-dominant hybrid cannabis strain that is the result of the crossing of Lemon Skunk and Super Silver Haze strains. This award-winning strain has gained popularity due to its multi-colored appearance and intense lemony flavor profile. Super Lemon Haze is known for its unique, energetic and lively effects, making it a popular choice among cannabis enthusiasts. \n\n The aroma of Super Lemon Haze is zesty, citrusy, and slightly sweet. The taste is tart and sweet, reminiscent of lemon candy, but not too sharp. This strain is kief-caked and visually striking with its array of colors. \n\n Super Lemon Haze has a high THC content, making it a potent strain that may not be suitable for those with low tolerance levels. Its effects are said to be uplifting, euphoric, and stimulating, making it a great choice for daytime use. It is often used to treat symptoms related to stress, depression, and fatigue. \n\n Overall, Super Lemon Haze is a top-rated strain with a unique flavor and powerful effects that have won it several awards, including two Cannabis Cup awards. It is a strain that is sure to impress cannabis connoisseurs looking for a flavorful and energetic high.',
@@ -300,8 +300,8 @@ export const products: Product[] = [
     grower: 'My Weed Solutions',
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
-    harvest: '28/12/2022',
-    quantity: 20,
+    harvest: '25/03/2023',
+    quantity: 10,
     origin: 'Phuket',
     description:
       "Mandarin Skittlez is a hybrid cannabis strain that results from the crossing of two potent strains, Dying Breed's California Black Rosé and Ethos' Mandarin Sunset. This striking strain is characterized by its unique and beautiful purple, black, and red buds that are sure to catch anyone's attention. Its dense and resinous buds have a low leaf-to-flower ratio, making it an ideal choice for extraction. \n\n The Mandarin Skittlez strain boasts an impressive array of flavors that are sure to tantalize your taste buds. It has an intense grape, grapefruit, spice, and orange taste that is both refreshing and satisfying. Its effects are equally impressive, offering a potent high that leaves smokers feeling happy, relaxed, and euphoric. It is perfect for unwinding after a long day or for creative inspiration. \n\n Mandarin Skittlez is an excellent choice for cannabis enthusiasts who are looking for a unique strain that packs a punch. Its beautiful appearance, potent effects, and mouth-watering flavors make it a top choice in dispensaries worldwide. Whether you're a seasoned smoker or a newbie, Mandarin Skittlez is a must-try strain for its exceptional quality and amazing effects.",
@@ -330,7 +330,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '08/04/2023',
-    quantity: 16,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Fruit Spirit is a premium cannabis strain that is sure to satisfy anyone looking for a unique and delicious smoking experience. This hybrid strain is a cross between White Widow and Blueberry, resulting in a potent and flavorful strain that will leave you feeling relaxed and euphoric. Its fruity aroma and taste are unlike anything else on the market, making it a popular choice among cannabis enthusiasts worldwide. \n\n Not only does Fruit Spirit taste amazing, but it also boasts a well-balanced mix of Indica and Sativa genetics. This makes it a versatile strain that can be enjoyed at any time of day or night. Its high THC content produces a powerful and uplifting effect that can help with stress, anxiety, and depression. Additionally, its sweet flavor profile makes it a great option for those looking to indulge in a little bit of sweetness without the added calories. \n\n Fruit Spirit is a top-shelf strain that is sure to impress even the most discerning cannabis connoisseur. Its buds are dense and covered in trichomes, giving it a unique appearance that's hard to miss. Whether you're looking for a strain to help you unwind after a long day or something to spark your creativity, Fruit Spirit is the perfect choice. So why not give it a try and experience its fruity goodness for yourself?",
