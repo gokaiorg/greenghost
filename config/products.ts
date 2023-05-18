@@ -230,7 +230,7 @@ export const products: Product[] = [
   {
     slug: 'c-vibez',
     name: 'C-Vibez',
-    price: 500,
+    price: 350,
     dominance: 'Sativa Dominant',
     indica: '40',
     sativa: '60',
