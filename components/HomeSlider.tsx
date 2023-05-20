@@ -52,9 +52,9 @@ export const HomeSlider = () => {
             fill
             style={{ objectFit: 'cover' }}
             alt="Green Ghost Weed Shop Phuket"
+            priority={false}
           />
         </Box>
-
         <Box
           position={'absolute'}
           top="0"
