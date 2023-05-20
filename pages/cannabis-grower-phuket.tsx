@@ -72,13 +72,13 @@ const CannabisShop: NextPage = () => {
           fontSize="4xl"
           fontFamily={'vt323'}
         >
-          Looking for the best cannabis shops in Phuket
+          Seeking the finest cannabis growers in Phuket
           <ImgQuestion />
         </Box>
-        <Box fontSize="2xl" fontFamily={'vt323'}>
-          Look no further than the ones trusted by the Green Ghost. We&apos;ve
-          scoured the island to find the top cannabis shops that offer the
-          highest quality products and the best prices.
+        <Box fontSize="3xl" fontFamily={'vt323'}>
+          Your search ends here with the trusted selection approved by the Green
+          Ghost. Our meticulous search across the island has led us to the
+          premier cannabis shops offering unparalleled quality products.
         </Box>
         <Box display={'flex'} my={4} mt={10}>
           <Box
@@ -90,7 +90,7 @@ const CannabisShop: NextPage = () => {
             mx={4}
             textAlign="center"
           >
-            <Link href="/my-weed-solutions">
+            <Link href="/my-weed-solutions" title="My Weed Solutions" passHref>
               <Box
                 as="img"
                 src="/media/green-ghost-grower-my-weed-solutions.webp"
@@ -104,24 +104,6 @@ const CannabisShop: NextPage = () => {
               My Weed Solutions
             </Link>
           </Box>
-        </Box>
-        <Box
-          as={'h3'}
-          borderColor={'ghostVerse.color2.base'}
-          bgColor={'ghostVerse.dark.lighter'}
-          borderWidth={1}
-          backdropFilter={'blur(3px)'}
-          p={4}
-          my={4}
-          mx="auto"
-          mt="auto"
-          display={'flex'}
-          width="fit-content"
-          flexDirection={'column'}
-          fontSize={20}
-          textAlign="center"
-        >
-          All our products are organic
         </Box>
       </MainLayout>
     </>

@@ -5,6 +5,7 @@ import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import Head from 'next/head';
 import { HomeSlider } from '../components/HomeSlider';
+import { HomeFeature } from '../components/HomeFeatures';
 
 const Home: NextPage = () => {
   return (
@@ -50,6 +51,7 @@ const Home: NextPage = () => {
         </HeaderMenu>
         <HomeSectionTitle title="Green Ghost - Degen Weed Shop ร้าน ขาย กัญชา." />
         <HomeSlider />
+        <HomeFeature />
       </MainLayout>
     </>
   );

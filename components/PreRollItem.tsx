@@ -28,7 +28,7 @@ export const PreRollItem: FC<PreRollItemProps> = ({
       display={'flex'}
       width="fit-content"
     >
-      <Link href={pageLink} passHref>
+      <Link href={pageLink} title={name} passHref>
         {name} - {price}THB
       </Link>
     </Box>

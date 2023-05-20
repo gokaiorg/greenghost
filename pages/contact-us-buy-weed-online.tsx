@@ -8,6 +8,8 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { SocialContactIcons } from '../components/SocialContactIcons';
 import Image from 'next/image';
+import { WeedDeliveryFeature } from '../components/WeedDeliveryFeature';
+import { FindUsAlso } from '../components/FindUsAlso';
 
 const BuyWeed: NextPage = () => {
   return (
@@ -114,7 +116,9 @@ const BuyWeed: NextPage = () => {
                 mr={'auto'}
                 fontFamily={'vt323'}
               >
-                <Link href="tel:+66936459898">+66 93 645 9898</Link>
+                <Link href="tel:+66936459898" title="+66936459898" passHref>
+                  +66 93 645 9898
+                </Link>
               </Text>
             </Box>
             <Box display={'flex'} flexDirection={'column'}>
@@ -138,96 +142,8 @@ const BuyWeed: NextPage = () => {
             </Box>
           </Box>
         </Box>
-        <Box
-          as={'h3'}
-          borderColor={'ghostVerse.color2.base'}
-          bgColor={'ghostVerse.dark.lighter'}
-          borderWidth={1}
-          backdropFilter={'blur(3px)'}
-          p={4}
-          mx="auto"
-          mt={10}
-          display={'flex'}
-          textAlign="center"
-          fontSize="3xl"
-          width="fit-content"
-          flexDirection={'column'}
-          fontFamily={'vt323'}
-        >
-          Immediate weed delivery in Phuket from 10am to midnight
-          <br />
-          Free delivery for orders over 10g
-        </Box>
-        <Text
-          title="Find Us on Weed in th"
-          as={'h3'}
-          fontSize="xl"
-          mx="auto"
-          fontFamily={'CubicFive12'}
-          mt={10}
-          textAlign={'center'}
-        >
-          Find Us Also On
-        </Text>
-        <Box
-          display={'flex'}
-          flexWrap={'wrap'}
-          alignItems={'center'}
-          justifyContent="center"
-          mx="auto"
-          mb={4}
-          fontSize="4xl"
-          fontFamily={'vt323'}
-        >
-          <Box m={4} color="ghostVerse.green.base">
-            <Link
-              title="Find Us on Weed in th"
-              href="https://weed.th/shop/0d9dde2a-13bd-4167-b063-577af34971e8"
-            >
-              WEED.TH Phuket
-            </Link>
-          </Box>
-          <Box m={4} color="ghostVerse.green.base">
-            <Link
-              title="Find Us on Weed in th"
-              href="https://weed.th/shop/be232698-0464-4352-bd70-15ea51257870"
-            >
-              WEED.TH Rawai
-            </Link>
-          </Box>
-          <Box m={4} color="ghostVerse.green.base">
-            <Link
-              title="Find Us on Weeddee"
-              href="https://thaiweeddee.com/listing/green-ghost/"
-            >
-              Weeddee
-            </Link>
-          </Box>
-          <Box m={4} color="ghostVerse.green.base">
-            <Link
-              title="Find Us on WeedHub"
-              href="https://weedhub.asia/listing/green-ghost/"
-            >
-              WeedHub
-            </Link>
-          </Box>
-          <Box m={4} color="ghostVerse.green.base">
-            <Link
-              title="Find Us on Thailand Weed"
-              href="https://www.thailandweed.com/directory-dispensaries/listing/green-ghost/"
-            >
-              Thailand Weed
-            </Link>
-          </Box>
-          <Box m={4} color="ghostVerse.green.base">
-            <Link
-              title="Find Us on High Thailand"
-              href="https://www.highthailand.com/location/green-ghost/"
-            >
-              High Thailand
-            </Link>
-          </Box>
-        </Box>
+        <WeedDeliveryFeature />
+        <FindUsAlso />
       </MainLayout>
     </>
   );

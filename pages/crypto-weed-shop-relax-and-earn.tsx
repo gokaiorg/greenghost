@@ -144,7 +144,11 @@ const CryptoWeedShop: NextPage = () => {
             New to the world of blockchain and NFTs
             <ImgQuestion />
           </Text>
-          <Link href="/install-xportal-app">
+          <Link
+            href="/install-xportal-app"
+            title="Install xPortal App"
+            passHref
+          >
             <Box as="span" color="ghostVerse.green.base">
               Install xPortal Wallet on your phone
             </Box>

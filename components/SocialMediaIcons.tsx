@@ -10,7 +10,6 @@ export const SocialMediaIcons = () => {
       justifyContent="center"
       gap={3}
       mx="auto"
-      mb={10}
     >
       <Box bgColor="black" borderRadius="100%">
         <SocialIcon

@@ -100,7 +100,11 @@ const BuyWeed: NextPage = () => {
               <br />
               <Text>
                 Green Ghost is the result of a partnership with{' '}
-                <Link href="/cannabis-grower-phuket">
+                <Link
+                  href="/cannabis-grower-phuket"
+                  title="Cannabis Grower Phuket"
+                  passHref
+                >
                   <Box as="span" color="ghostVerse.green.base">
                     best Phuket growers
                   </Box>
@@ -140,7 +144,11 @@ const BuyWeed: NextPage = () => {
                   mx={4}
                   textAlign="center"
                 >
-                  <Link href="/my-weed-solutions">
+                  <Link
+                    href="/my-weed-solutions"
+                    title="My Weed Solutions"
+                    passHref
+                  >
                     <Box
                       as="img"
                       src="/media/green-ghost-grower-my-weed-solutions.webp"
@@ -178,7 +186,7 @@ const BuyWeed: NextPage = () => {
               </Text>
               <Text>
                 Committed to local values,{' '}
-                <Link href="/weed-shop">
+                <Link href="/weed-shop" title="Weed Shop" passHref>
                   <Box
                     as="span"
                     display="inline-block"
@@ -194,7 +202,11 @@ const BuyWeed: NextPage = () => {
                 Green Ghost is not just another coffee shop; it is the
                 culmination of the passion of an entire team dedicated to our
                 clients with an innovative{' '}
-                <Link href="/crypto-weed-shop-relax-and-earn">
+                <Link
+                  href="/crypto-weed-shop-relax-and-earn"
+                  title="Crypto Weed Shop Relax And Earn"
+                  passHref
+                >
                   <Box
                     as="span"
                     display="inline-block"

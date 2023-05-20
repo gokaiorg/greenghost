@@ -50,7 +50,7 @@ export const ProfileNFTsList = () => {
     return (
       <Box mt={12} textAlign="center">
         <Text>No NFTs minted yet!</Text>
-        <Link href="/mxghosts">
+        <Link href="/mxghosts" title="MxGhosts" passHref>
           <Text textDecoration="underline">Mint some!</Text>
         </Link>
       </Box>

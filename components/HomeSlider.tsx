@@ -85,7 +85,7 @@ export const HomeSlider = () => {
             Highest quality organic cannabis, hand-selected from the best
             growers in Thailand.
           </Text>
-          <Link href="/about-green-ghost">
+          <Link href="/about-green-ghost" title="About Green Ghost" passHref>
             <Text
               display="inline-flex"
               color={'white'}
@@ -149,7 +149,7 @@ export const HomeSlider = () => {
             favorite strain and elevate your experience today.
           </Text>
 
-          <Link href="/weed-shop">
+          <Link href="/weed-shop" title="Weed Shop" passHref>
             <Text
               display="inline-flex"
               color={'white'}
@@ -212,7 +212,11 @@ export const HomeSlider = () => {
             Visit our crypto weed shop and explore a new world of possibilities
             with blockchain and cannabis.
           </Text>
-          <Link href="/crypto-weed-shop-relax-and-earn">
+          <Link
+            href="/crypto-weed-shop-relax-and-earn"
+            title="Crypto Weed Shop Relax And Earn"
+            passHref
+          >
             <Text
               display="inline-flex"
               color={'white'}
@@ -275,7 +279,11 @@ export const HomeSlider = () => {
             Join the Ghost Clan and earn 31% on every order, get cashback and
             get exclusive access to our latest strains. #MxGhosts
           </Text>
-          <Link href="https://ghostverse.org/mxghosts">
+          <Link
+            href="https://ghostverse.org/mxghosts"
+            title="GhostVerse MxGhosts"
+            passHref
+          >
             <Text
               display="inline-flex"
               color={'white'}
@@ -337,7 +345,10 @@ export const HomeSlider = () => {
             No need to leave the house for your favorite buds, your choice of
             strains is delivered right to your doorstep.
           </Text>
-          <Link href="/contact-us-buy-weed-online">
+          <Link
+            href="/contact-us-buy-weed-online"
+            title="Contact Us To Buy Weed Online"
+          >
             <Text
               display="inline-flex"
               color={'white'}

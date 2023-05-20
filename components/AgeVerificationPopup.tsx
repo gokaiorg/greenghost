@@ -99,7 +99,7 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           Yes, I am over 20
         </Box>
         <br />
-        <Link href="https://ghostverse.org/">
+        <Link href="https://ghostverse.org/" title="GhostVerse" passHref>
           <Box
             as="span"
             display="inline-flex"

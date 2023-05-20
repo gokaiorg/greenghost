@@ -270,7 +270,11 @@ export default function ProductPage({ product }: ProductPageProps) {
                     {product.price} THB
                   </Box>
                 </Box>
-                <Link href="/crypto-weed-shop-relax-and-earn">
+                <Link
+                  href="/crypto-weed-shop-relax-and-earn"
+                  title="Crypto Weed Shop Relax And Earn"
+                  passHref
+                >
                   <Box
                     display={'flex'}
                     justifyContent="end"
@@ -299,7 +303,11 @@ export default function ProductPage({ product }: ProductPageProps) {
                     {(product.price * 10 - product.price).toFixed(0)} THB
                   </Box>
                 </Box>
-                <Link href="/crypto-weed-shop-relax-and-earn">
+                <Link
+                  href="/crypto-weed-shop-relax-and-earn"
+                  title="Crypto Weed Shop Relax And Earn"
+                  passHref
+                >
                   <Box
                     display={'flex'}
                     justifyContent="end"
@@ -317,7 +325,11 @@ export default function ProductPage({ product }: ProductPageProps) {
                     </Box>
                   </Box>
                 </Link>
-                <Link href="/contact-us-buy-weed-online">
+                <Link
+                  href="/contact-us-buy-weed-online"
+                  title="Contact Us To Buy Weed Online"
+                  passHref
+                >
                   <Box
                     display={'flex'}
                     justifyContent="end"
@@ -332,7 +344,11 @@ export default function ProductPage({ product }: ProductPageProps) {
             )}
 
             {product.price === 666 && (
-              <Link href="/crypto-weed-shop-relax-and-earn">
+              <Link
+                href="/crypto-weed-shop-relax-and-earn"
+                title="Crypto Weed Shop Relax And Earn"
+                passHref
+              >
                 <Box
                   display={'flex'}
                   justifyContent="end"
@@ -371,7 +387,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                 <Box as={'h3'} mr={2}>
                   Grower
                 </Box>
-                <Link href={product.growerSlug}>
+                <Link href={product.growerSlug} title={product.grower} passHref>
                   <Box display={'flex'} color="ghostVerse.green.base" mr={4}>
                     {product.grower}
                   </Box>
@@ -384,7 +400,11 @@ export default function ProductPage({ product }: ProductPageProps) {
                 <Box as={'h3'} mr={2}>
                   Origin
                 </Box>
-                <Link href="/cannabis-grower-phuket">
+                <Link
+                  href="/cannabis-grower-phuket"
+                  title="Cannabis Grower Phuket"
+                  passHref
+                >
                   <Box display={'flex'} color="ghostVerse.green.base" mr={4}>
                     {product.origin}
                   </Box>

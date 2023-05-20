@@ -126,7 +126,11 @@ const CryptoWeedShop: NextPage = () => {
           </Text>
           First 1000 customers receive 100 <ImgDollar />
           EBUD cashback.{' '}
-          <Link href="/install-xportal-app">
+          <Link
+            href="/install-xportal-app"
+            title="Install xPortal App"
+            passHref
+          >
             <Box as="span" color="ghostVerse.green.base">
               Claim your cashback!
             </Box>

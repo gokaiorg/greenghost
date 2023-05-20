@@ -89,7 +89,11 @@ const CannabisShop: NextPage = () => {
             color="ghostVerse.green.base"
             mx={4}
           >
-            <Link href="/weed-shop">
+            <Link
+              href="https://goo.gl/maps/FEhBvjDY8Puwp87q9"
+              title="Green Ghost Map"
+              passHref
+            >
               <Box
                 as="img"
                 src="/logo512.png"
@@ -112,7 +116,11 @@ const CannabisShop: NextPage = () => {
             mx={4}
             textAlign="center"
           >
-            <Link href="/my-weed-solutions">
+            <Link
+              href="https://goo.gl/maps/rjQio9APTJKunyRdA?coh=178571&entry=tt"
+              title="My Weed Map"
+              passHref
+            >
               <Box
                 as="img"
                 src="/media/green-ghost-grower-my-weed-solutions.webp"
@@ -126,24 +134,6 @@ const CannabisShop: NextPage = () => {
               My Weed
             </Link>
           </Box>
-        </Box>
-        <Box
-          as={'h3'}
-          borderColor={'ghostVerse.color2.base'}
-          bgColor={'ghostVerse.dark.lighter'}
-          borderWidth={1}
-          backdropFilter={'blur(3px)'}
-          p={4}
-          my={4}
-          mx="auto"
-          mt="auto"
-          display={'flex'}
-          width="fit-content"
-          flexDirection={'column'}
-          fontSize={20}
-          textAlign="center"
-        >
-          All our products are organic
         </Box>
       </MainLayout>
     </>

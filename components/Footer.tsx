@@ -1,5 +1,6 @@
 import { Container, Box, Text } from '@chakra-ui/react';
 import { SocialMediaIcons } from './SocialMediaIcons';
+import { MenuFooter } from './MenuFooter';
 
 export const Footer = () => {
   return (
@@ -31,6 +32,7 @@ export const Footer = () => {
           @greenghostdegen
         </Box>
         <SocialMediaIcons />
+        <MenuFooter />
         <Box
           fontSize="xs"
           fontWeight="bold"

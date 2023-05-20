@@ -91,6 +91,8 @@ const InstallXportal: NextPage = () => {
               <Link
                 href="https://apps.apple.com/app/xportal/id1519405832"
                 target="_blank"
+                title="Install xPortal App on Apple"
+                passHref
               >
                 <Image
                   src="/media/app-store.svg"
@@ -106,6 +108,8 @@ const InstallXportal: NextPage = () => {
               <Link
                 href="https://play.google.com/store/apps/details?id=com.elrond.maiar.wallet"
                 target="_blank"
+                title="Install xPortal App on Android"
+                passHref
               >
                 <Image
                   src="/media/play-store.svg"
@@ -121,6 +125,8 @@ const InstallXportal: NextPage = () => {
               <Link
                 href="https://appgallery.huawei.com/app/C104325151"
                 target="_blank"
+                title="Install xPortal App on Huawei"
+                passHref
               >
                 <Image
                   src="/media/huawei-store.svg"
