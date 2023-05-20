@@ -109,7 +109,7 @@ export const LedgerAccountsList: FC<LedgerAccountsListProps> = ({
   if (error) {
     return (
       <Box
-        textAlign="center"
+        textAlign={'center'}
         marginLeft={'auto'}
         marginRight="auto"
         marginTop={6}
@@ -129,7 +129,7 @@ export const LedgerAccountsList: FC<LedgerAccountsListProps> = ({
       <Flex justify="center" align="center" marginTop={6} direction="column">
         <Spinner color="ghostVerse.color1.darker" />
         <Box marginTop={3}>Confirm on the Ledger device:</Box>
-        <Box marginTop={3} wordBreak="break-word" textAlign="center">
+        <Box marginTop={3} wordBreak="break-word" textAlign={'center'}>
           <Box fontWeight="bold">Address:</Box> {chosenAddress}
         </Box>
         {loginToken && (
@@ -143,7 +143,7 @@ export const LedgerAccountsList: FC<LedgerAccountsListProps> = ({
 
   return (
     <Box marginLeft={'auto'} marginRight="auto" marginTop={6}>
-      <Text fontWeight="semibold" textAlign="center" mb={2}>
+      <Text fontWeight="semibold" textAlign={'center'} mb={2}>
         Choose address:
       </Text>
       {accounts?.map((account: string, index: number) => (
@@ -158,7 +158,12 @@ export const LedgerAccountsList: FC<LedgerAccountsListProps> = ({
           padding={1}
           onClick={login(index, account)}
         >
-          <Box as="span" display="inline-block" textAlign="center" minWidth={4}>
+          <Box
+            as="span"
+            display="inline-block"
+            textAlign={'center'}
+            minWidth={4}
+          >
             {index + currentPage * ADDRESSES_PER_PAGE}
           </Box>
           :
@@ -166,7 +171,7 @@ export const LedgerAccountsList: FC<LedgerAccountsListProps> = ({
             as="span"
             display="inline-block"
             marginLeft={4}
-            textAlign="center"
+            textAlign={'center'}
           >
             {shortenHash(account, 11)}
           </Box>

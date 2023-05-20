@@ -77,7 +77,7 @@ const CryptoWeedShop: NextPage = () => {
           mr={'auto'}
           fontFamily={'vt323'}
         >
-          <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
+          <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
             Join the new generation in love for weed, art and crypto.
           </Text>
           Green Ghost is a contributor to the{' '}
@@ -124,7 +124,7 @@ const CryptoWeedShop: NextPage = () => {
           .
           <br />
           <br />
-          <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
+          <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
             Looking to get your hands on a unique Mr. Ghost NFT
             <ImgQuestion />
           </Text>
@@ -140,7 +140,7 @@ const CryptoWeedShop: NextPage = () => {
           the secondary market. Make sure to follow our links to avoid scams.
           <br />
           <br />
-          <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
+          <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
             New to the world of blockchain and NFTs
             <ImgQuestion />
           </Text>

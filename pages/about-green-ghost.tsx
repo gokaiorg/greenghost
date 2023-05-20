@@ -115,7 +115,7 @@ const BuyWeed: NextPage = () => {
               <Box display={'flex'} my={4}>
                 <Box
                   display={'flex'}
-                  justifyContent="center"
+                  justifyContent={'center'}
                   alignItems={'center'}
                   flexDirection={'column'}
                   color="ghostVerse.green.base"
@@ -137,12 +137,12 @@ const BuyWeed: NextPage = () => {
                 </Box>
                 <Box
                   display={'flex'}
-                  justifyContent="center"
+                  justifyContent={'center'}
                   alignItems={'center'}
                   flexDirection={'column'}
                   color="ghostVerse.green.base"
                   mx={4}
-                  textAlign="center"
+                  textAlign={'center'}
                 >
                   <Link
                     href="/my-weed-solutions"
@@ -232,7 +232,7 @@ const BuyWeed: NextPage = () => {
               />
             </Box>
           </Box>
-          <Text textAlign="center" my={10}>
+          <Text textAlign={'center'} my={10}>
             All our efforts are focused on providing the highest quality
             products at the best possible price.
             <br />

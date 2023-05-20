@@ -18,7 +18,7 @@ export const MenuFooter = () => {
         display={'flex'}
         flexWrap={'wrap'}
         alignItems={'center'}
-        justifyContent="center"
+        justifyContent={'center'}
         mx="auto"
         mb={4}
         fontSize="2xl"

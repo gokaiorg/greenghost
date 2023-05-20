@@ -64,10 +64,10 @@ const WeedShopMember: NextPage = () => {
           mx="auto"
           mt="auto"
           display={'flex'}
-          width="fit-content"
+          width={'fit-content'}
           flexDirection={'column'}
           fontSize={20}
-          textAlign="center"
+          textAlign={'center'}
         >
           All our products are organic
         </Box>

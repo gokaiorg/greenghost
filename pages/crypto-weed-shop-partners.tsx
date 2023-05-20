@@ -75,7 +75,7 @@ const CryptoWeedShop: NextPage = () => {
           mr={'auto'}
           fontFamily={'vt323'}
         >
-          <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
+          <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
             Are you from another universe in MultiversX
             <ImgQuestion />
           </Text>
@@ -91,7 +91,7 @@ const CryptoWeedShop: NextPage = () => {
           <Box display={'flex'}>
             <Box
               display={'flex'}
-              justifyContent="center"
+              justifyContent={'center'}
               alignItems={'center'}
               flexDirection={'column'}
               color="ghostVerse.green.base"
@@ -113,7 +113,7 @@ const CryptoWeedShop: NextPage = () => {
             </Box>
             <Box
               display={'flex'}
-              justifyContent="center"
+              justifyContent={'center'}
               alignItems={'center'}
               flexDirection={'column'}
               color="ghostVerse.green.base"
@@ -135,7 +135,7 @@ const CryptoWeedShop: NextPage = () => {
             </Box>
             <Box
               display={'flex'}
-              justifyContent="center"
+              justifyContent={'center'}
               alignItems={'center'}
               flexDirection={'column'}
               color="ghostVerse.green.base"
@@ -157,7 +157,7 @@ const CryptoWeedShop: NextPage = () => {
             </Box>
             <Box
               display={'flex'}
-              justifyContent="center"
+              justifyContent={'center'}
               alignItems={'center'}
               flexDirection={'column'}
               color="ghostVerse.green.base"
@@ -179,7 +179,7 @@ const CryptoWeedShop: NextPage = () => {
             </Box>
             <Box
               display={'flex'}
-              justifyContent="center"
+              justifyContent={'center'}
               alignItems={'center'}
               flexDirection={'column'}
               color="ghostVerse.green.base"
@@ -201,7 +201,7 @@ const CryptoWeedShop: NextPage = () => {
             </Box>
             <Box
               display={'flex'}
-              justifyContent="center"
+              justifyContent={'center'}
               alignItems={'center'}
               flexDirection={'column'}
               color="ghostVerse.green.base"
@@ -224,7 +224,7 @@ const CryptoWeedShop: NextPage = () => {
           </Box>
           <br />
           <br />
-          <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
+          <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
             Join us now and take advantage of these exclusive perks!
           </Text>
         </Box>

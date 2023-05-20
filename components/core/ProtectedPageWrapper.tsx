@@ -28,7 +28,7 @@ export const ProtectedPageWrapper: FC<
         flex={1}
         direction="row"
         alignItems={'center'}
-        justifyContent="center"
+        justifyContent={'center'}
       >
         <Spinner size="xl" />
       </Stack>

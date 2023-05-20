@@ -20,7 +20,7 @@ export const BuyNowLink = () => {
           px={6}
           mb={4}
           display={'flex'}
-          width="fit-content"
+          width={'fit-content'}
           _hover={{
             bgColor: 'ghostVerse.green.base',
             color: 'black',

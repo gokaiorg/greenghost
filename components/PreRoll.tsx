@@ -17,7 +17,7 @@ export const PreRoll = () => {
       mr={'auto'}
       fontFamily={'vt323'}
     >
-      <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
+      <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
         Looking for a convenient and hassle-free way to enjoy your favorite
         strains
         <ImgQuestion />
@@ -28,7 +28,7 @@ export const PreRoll = () => {
       convenience of a pre-rolled joint, we&apos;ve got you covered.
       <br />
       <br />
-      <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
+      <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
         And the best part
         <ImgQuestion /> Our prices are just as affordable as buying bud by the
         gram.

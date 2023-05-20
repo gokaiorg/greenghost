@@ -22,7 +22,7 @@ function NavLink({ to, activeProps, children, ...props }: NavLinkProps) {
           bgColor={'ghostVerse.dark.lighter'}
           py={6}
           px={6}
-          textAlign="center"
+          textAlign={'center'}
           fontWeight="bold"
           fontSize="lg"
           display="inline-flex"
@@ -51,7 +51,7 @@ function NavLink({ to, activeProps, children, ...props }: NavLinkProps) {
         bgColor={'ghostVerse.dark.lighter'}
         py={6}
         px={6}
-        textAlign="center"
+        textAlign={'center'}
         fontWeight="bold"
         fontSize="lg"
         display="inline-flex"

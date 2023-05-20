@@ -38,7 +38,7 @@ export const ProfileNFTsList = () => {
         flex={1}
         direction="row"
         alignItems={'center'}
-        justifyContent="center"
+        justifyContent={'center'}
         mt={8}
       >
         <Spinner size="lg" />
@@ -48,7 +48,7 @@ export const ProfileNFTsList = () => {
 
   if (!nfts || nfts.length === 0) {
     return (
-      <Box mt={12} textAlign="center">
+      <Box mt={12} textAlign={'center'}>
         <Text>No NFTs minted yet!</Text>
         <Link href="/mxghosts" title="MxGhosts" passHref>
           <Text textDecoration="underline">Mint some!</Text>
@@ -86,7 +86,7 @@ export const ProfileNFTsList = () => {
                 fontWeight={800}
                 mt={5}
                 color="elvenTools.white"
-                textAlign="center"
+                textAlign={'center'}
               >
                 <a
                   href={`${networkConfig[chainType].explorerAddress}/nfts/${nft.identifier}`}
@@ -97,7 +97,7 @@ export const ProfileNFTsList = () => {
                 </a>
               </Box>
               <Box
-                textAlign="center"
+                textAlign={'center'}
                 color="ghostVerse.grey.base"
                 fontSize={{ base: 10, md: 14 }}
               >

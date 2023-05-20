@@ -11,7 +11,7 @@ export const ShopDegen = () => {
       p={4}
       my={4}
       display={'flex'}
-      width="fit-content"
+      width={'fit-content'}
       flexDirection={'column'}
       fontSize={20}
     >

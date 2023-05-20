@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const HomeFeature = () => {
   return (
-    <Box display="flex" my={10} flexWrap="wrap" mx={-1}>
+    <Box display={'flex'} my={10} flexWrap="wrap" mx={-1}>
       <Box width={{ base: '100%', lg: '33.333333%' }}>
         <Link href="/weed-shop" passHref title="Weed Shop Buds Menu">
           <Box
@@ -13,13 +13,13 @@ export const HomeFeature = () => {
             mx={1}
             mb={1}
             bgColor={'ghostVerse.green.base'}
-            textAlign="center"
+            textAlign={'center'}
             p={4}
-            display="flex"
-            alignItems="center"
-            flexDirection="column"
-            justifyContent="center"
-            transition="background-color .3s"
+            display={'flex'}
+            alignItems={'center'}
+            flexDirection={'column'}
+            justifyContent={'center'}
+            transition={'background-color .3s'}
             _hover={{
               borderColor: 'ghostVerse.green.base',
             }}
@@ -60,13 +60,13 @@ export const HomeFeature = () => {
             mx={1}
             mb={1}
             bgColor={'ghostVerse.green.base'}
-            textAlign="center"
+            textAlign={'center'}
             p={4}
-            display="flex"
-            alignItems="center"
-            flexDirection="column"
-            justifyContent="center"
-            transition="background-color .3s"
+            display={'flex'}
+            alignItems={'center'}
+            flexDirection={'column'}
+            justifyContent={'center'}
+            transition={'background-color .3s'}
             _hover={{
               borderColor: 'ghostVerse.green.base',
             }}
@@ -103,13 +103,13 @@ export const HomeFeature = () => {
             mx={1}
             mb={1}
             bgColor={'ghostVerse.green.base'}
-            textAlign="center"
+            textAlign={'center'}
             p={4}
-            display="flex"
-            alignItems="center"
-            flexDirection="column"
-            justifyContent="center"
-            transition="background-color .3s"
+            display={'flex'}
+            alignItems={'center'}
+            flexDirection={'column'}
+            justifyContent={'center'}
+            transition={'background-color .3s'}
             _hover={{
               borderColor: 'ghostVerse.green.base',
             }}

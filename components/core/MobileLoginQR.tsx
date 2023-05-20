@@ -43,10 +43,10 @@ export const MobileLoginQR: FunctionComponent<MobileLoginQRProps> = ({
         }}
       />
       {mobile ? (
-        <Flex justifyContent="center" background="black">
+        <Flex justifyContent={'center'} background="black">
           <Box
             width="100%"
-            textAlign="center"
+            textAlign={'center'}
             borderColor="ghostVerse.color1.darker"
             borderWidth={1}
             bgColor="transparent"
@@ -55,7 +55,7 @@ export const MobileLoginQR: FunctionComponent<MobileLoginQRProps> = ({
             mt={6}
             fontWeight="normal"
             _hover={{ bg: 'GhostVerse.color2.lighter' }}
-            transition="background-color .3s"
+            transition={'background-color .3s'}
             as="a"
             href={`${
               networkConfig[chainType]?.walletConnectDeepLink

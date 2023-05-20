@@ -114,7 +114,7 @@ const WeedShopNearMe: NextPage = () => {
               title="Green Ghost - Degen Weed Shop - Add a review in Phuket Town"
               passHref
             >
-              <Box display="flex" mt={4}>
+              <Box display={'flex'} mt={4}>
                 <svg
                   width="20px"
                   height="20px"
@@ -262,7 +262,7 @@ const WeedShopNearMe: NextPage = () => {
               title="Green Ghost - Degen Weed Shop - Add a review in Rawai"
               passHref
             >
-              <Box display="flex" mt={4}>
+              <Box display={'flex'} mt={4}>
                 <svg
                   width="20px"
                   height="20px"

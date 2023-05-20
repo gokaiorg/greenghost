@@ -77,12 +77,12 @@ export const TransactionPendingModal: FC<TransactionPendingModalProps> = ({
       >
         <ModalCloseButton _focus={{ outline: 'none' }} />
         <ModalBody>
-          <Text textAlign="center" fontWeight="semibold" fontSize="xl">
+          <Text textAlign={'center'} fontWeight="semibold" fontSize="xl">
             {txTitle()}
           </Text>
 
           {!txError && (
-            <Flex alignItems={'center'} justifyContent="center" mt={2}>
+            <Flex alignItems={'center'} justifyContent={'center'} mt={2}>
               {successTxHash && (
                 <Box display={'flex'} flexDirection={'column'}>
                   <Text
@@ -95,7 +95,7 @@ export const TransactionPendingModal: FC<TransactionPendingModalProps> = ({
                     fontWeight="normal"
                     color="ghostVerse.color1.darker"
                     userSelect="none"
-                    transition="background-color .3s"
+                    transition={'background-color .3s'}
                   >
                     {shortenHash(successTxHash)}
                   </Text>
@@ -110,10 +110,10 @@ export const TransactionPendingModal: FC<TransactionPendingModalProps> = ({
                     fontWeight="normal"
                     color="elvenTools.white"
                     userSelect="none"
-                    textAlign="center"
+                    textAlign={'center'}
                     lineHeight={2}
                     _hover={{ bg: 'GhostVerse.color1.lighter' }}
-                    transition="background-color .3s"
+                    transition={'background-color .3s'}
                   >
                     My profile
                   </Text>
@@ -130,7 +130,12 @@ export const TransactionPendingModal: FC<TransactionPendingModalProps> = ({
             </Flex>
           )}
           {additionalMessage && !successTxHash && !txError && (
-            <Text textAlign="center" mt={5} fontWeight="semibold" fontSize="md">
+            <Text
+              textAlign={'center'}
+              mt={5}
+              fontWeight="semibold"
+              fontSize="md"
+            >
               {additionalMessage}
             </Text>
           )}

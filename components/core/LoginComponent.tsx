@@ -32,7 +32,7 @@ export const LoginComponent = memo(() => {
     setLoginMethod(undefined);
   }, []);
 
-  if (error) return <Box textAlign="center">{error}</Box>;
+  if (error) return <Box textAlign={'center'}>{error}</Box>;
 
   return (
     <>

@@ -7,7 +7,7 @@ export const HeroImage = () => {
       width={{ base: '100%' }}
       mr={{ base: '0', md: '3rem' }}
       display={'flex'}
-      justifyContent="center"
+      justifyContent={'center'}
     >
       <motion.div
         animate={{

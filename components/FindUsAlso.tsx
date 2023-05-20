@@ -18,10 +18,10 @@ export const FindUsAlso = () => {
         display={'flex'}
         flexWrap={'wrap'}
         alignItems={'center'}
-        justifyContent="center"
+        justifyContent={'center'}
         mx="auto"
         mb={4}
-        fontSize="4xl"
+        fontSize={'4xl'}
         fontFamily={'vt323'}
       >
         <Box m={4} color="ghostVerse.green.base">

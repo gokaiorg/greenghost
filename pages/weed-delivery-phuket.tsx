@@ -86,18 +86,18 @@ const WeedDelivery: NextPage = () => {
                 bgColor={'ghostVerse.dark.ultralight'}
                 borderWidth={1}
                 backdropFilter={'blur(1px)'}
-                textAlign="center"
+                textAlign={'center'}
                 p={4}
-                position="absolute"
+                position={'absolute'}
                 top={0}
                 bottom={0}
                 left={0}
                 right={0}
-                display="flex"
-                alignItems="center"
-                flexDirection="column"
-                justifyContent="center"
-                transition="background-color .3s"
+                display={'flex'}
+                alignItems={'center'}
+                flexDirection={'column'}
+                justifyContent={'center'}
+                transition={'background-color .3s'}
                 _hover={{
                   color: 'ghostVerse.green.base',
                   bgColor: 'ghostVerse.dark.lighter',
@@ -139,18 +139,18 @@ const WeedDelivery: NextPage = () => {
                 bgColor={'ghostVerse.dark.ultralight'}
                 borderWidth={1}
                 backdropFilter={'blur(1px)'}
-                textAlign="center"
+                textAlign={'center'}
                 p={4}
-                position="absolute"
+                position={'absolute'}
                 top={0}
                 bottom={0}
                 left={0}
                 right={0}
-                display="flex"
-                alignItems="center"
-                flexDirection="column"
-                justifyContent="center"
-                transition="background-color .3s"
+                display={'flex'}
+                alignItems={'center'}
+                flexDirection={'column'}
+                justifyContent={'center'}
+                transition={'background-color .3s'}
                 _hover={{
                   color: 'ghostVerse.green.base',
                   bgColor: 'ghostVerse.dark.lighter',
@@ -176,15 +176,15 @@ const WeedDelivery: NextPage = () => {
           as={'h3'}
           mb={20}
           display={'flex'}
-          textAlign="center"
-          fontSize="4xl"
-          width="fit-content"
+          textAlign={'center'}
+          fontSize={'4xl'}
+          width={'fit-content'}
           flexDirection={'column'}
           fontFamily={'vt323'}
         >
           Sit back and relax as we rapidly deliver your order to your location
           in Phuket and experience the convenience and top-notch service of
-          Green Ghost's weed delivery today!
+          Green Ghost&apos;s weed delivery today!
         </Box>
       </MainLayout>
     </>

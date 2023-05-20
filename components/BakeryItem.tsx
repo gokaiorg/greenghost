@@ -17,12 +17,12 @@ export const BakeryItem: FC<BakeryItemProps> = ({ name, price, pageLink }) => {
       backdropFilter={'blur(3px)'}
       py={2}
       px={6}
-      textAlign="center"
+      textAlign={'center'}
       fontWeight="bold"
       fontSize="xl"
       color="ghostVerse.green.base"
       display={'flex'}
-      width="fit-content"
+      width={'fit-content'}
     >
       <Link href={pageLink} passHref>
         {name} - {price}THB

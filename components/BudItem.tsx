@@ -33,7 +33,7 @@ export const BudItem = ({ product }: BudItemProps) => {
             bgColor: 'rgba(109, 208, 246, 0.1)',
             backdropFilter: 'blur(3px)',
           }}
-          transition="background-color .3s"
+          transition={'background-color .3s'}
         >
           <Box width={{ base: 'full' }} height={{ base: 'auto' }}>
             <Image
@@ -166,7 +166,7 @@ export const BudItem = ({ product }: BudItemProps) => {
               {product.effects !== 'undefined' && (
                 <Box
                   display={'flex'}
-                  textAlign="center"
+                  textAlign={'center'}
                   flexDirection={'column'}
                   fontSize="3xl"
                 >

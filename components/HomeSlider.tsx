@@ -56,16 +56,16 @@ export const HomeSlider = () => {
         </Box>
 
         <Box
-          position="absolute"
+          position={'absolute'}
           top="0"
           bottom={0}
           left={0}
           right={0}
           margin="auto"
-          textAlign="center"
+          textAlign={'center'}
           display={'flex'}
           flexDirection={'column'}
-          justifyContent="center"
+          justifyContent={'center'}
           fontWeight="black"
           color={'white'}
           fontFamily={'vt323'}
@@ -119,16 +119,16 @@ export const HomeSlider = () => {
         </Box>
 
         <Box
-          position="absolute"
+          position={'absolute'}
           top="0"
           bottom={0}
           left={0}
           right={0}
           margin="auto"
-          textAlign="center"
+          textAlign={'center'}
           display={'flex'}
           flexDirection={'column'}
-          justifyContent="center"
+          justifyContent={'center'}
           fontWeight="black"
           color={'white'}
           fontFamily={'vt323'}
@@ -183,16 +183,16 @@ export const HomeSlider = () => {
         </Box>
 
         <Box
-          position="absolute"
+          position={'absolute'}
           top="0"
           bottom={0}
           left={0}
           right={0}
           margin="auto"
-          textAlign="center"
+          textAlign={'center'}
           display={'flex'}
           flexDirection={'column'}
-          justifyContent="center"
+          justifyContent={'center'}
           fontWeight="black"
           color={'white'}
           fontFamily={'vt323'}
@@ -250,16 +250,16 @@ export const HomeSlider = () => {
         </Box>
 
         <Box
-          position="absolute"
+          position={'absolute'}
           top="0"
           bottom={0}
           left={0}
           right={0}
           margin="auto"
-          textAlign="center"
+          textAlign={'center'}
           display={'flex'}
           flexDirection={'column'}
-          justifyContent="center"
+          justifyContent={'center'}
           fontWeight="black"
           color={'white'}
           fontFamily={'vt323'}
@@ -316,16 +316,16 @@ export const HomeSlider = () => {
           />
         </Box>
         <Box
-          position="absolute"
+          position={'absolute'}
           top="0"
           bottom={0}
           left={0}
           right={0}
           margin="auto"
-          textAlign="center"
+          textAlign={'center'}
           display={'flex'}
           flexDirection={'column'}
-          justifyContent="center"
+          justifyContent={'center'}
           fontWeight="black"
           color={'white'}
           fontFamily={'vt323'}

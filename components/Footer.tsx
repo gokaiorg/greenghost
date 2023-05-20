@@ -14,7 +14,7 @@ export const Footer = () => {
         maxW="container.xl"
         fontSize="sm"
         fontWeight="normal"
-        textAlign="center"
+        textAlign={'center'}
       >
         <Text as="h2" fontSize="2xl" fontFamily={'CubicFive12'}>
           Follow Us
@@ -22,7 +22,7 @@ export const Footer = () => {
         <Box
           as={'h3'}
           display={'flex'}
-          justifyContent="center"
+          justifyContent={'center'}
           fontSize="3xl"
           marginBottom={4}
           w={'full'}
@@ -40,7 +40,7 @@ export const Footer = () => {
           position="relative"
           zIndex={1}
           display={'flex'}
-          justifyContent="center"
+          justifyContent={'center'}
           whiteSpace="nowrap"
         >
           <Text>Made with weed by</Text>

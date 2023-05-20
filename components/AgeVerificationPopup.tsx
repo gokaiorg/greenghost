@@ -42,7 +42,7 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
       backgroundColor="black"
     >
       <Box
-        position="absolute"
+        position={'absolute'}
         top={0}
         bottom={0}
         left={0}

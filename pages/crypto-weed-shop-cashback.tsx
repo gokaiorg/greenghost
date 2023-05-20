@@ -76,7 +76,7 @@ const CryptoWeedShop: NextPage = () => {
           mr={'auto'}
           fontFamily={'vt323'}
         >
-          <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
+          <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
             Ready to step into a new economic model
             <ImgQuestion />
           </Text>
@@ -121,7 +121,7 @@ const CryptoWeedShop: NextPage = () => {
           and centered around cannabis.
           <br />
           <br />
-          <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
+          <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
             GRAND OPENING
           </Text>
           First 1000 customers receive 100 <ImgDollar />
@@ -137,7 +137,7 @@ const CryptoWeedShop: NextPage = () => {
           </Link>
           <br />
           <br />
-          <Text as="h2" fontWeight="black" fontSize="4xl" marginBottom={4}>
+          <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
             Join us in this innovative movement and take advantage of our unique
             rewards system.
           </Text>

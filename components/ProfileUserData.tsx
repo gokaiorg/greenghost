@@ -34,7 +34,7 @@ export const ProfileUserData = () => {
         flex={1}
         direction="row"
         alignItems={'center'}
-        justifyContent="center"
+        justifyContent={'center'}
         mt={8}
       >
         <Spinner size="lg" />

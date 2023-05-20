@@ -2,18 +2,18 @@ import { Box, Text } from '@chakra-ui/react';
 
 export const WeedDeliveryFeature = () => {
   return (
-    <Box display="flex" my={10} flexWrap="wrap">
+    <Box display={'flex'} my={10} flexWrap="wrap">
       <Text
         as={'h4'}
         fontSize={{ base: 'xl' }}
         fontFamily={'CubicFive12'}
         color={'white'}
-        textAlign="center"
+        textAlign={'center'}
         p={4}
-        display="flex"
-        alignItems="center"
-        flexDirection="column"
-        justifyContent="center"
+        display={'flex'}
+        alignItems={'center'}
+        flexDirection={'column'}
+        justifyContent={'center'}
         width={{ base: '100%', lg: '33%' }}
       >
         <Box fontSize={{ base: '5xl' }} marginBottom={5}>
@@ -39,12 +39,12 @@ export const WeedDeliveryFeature = () => {
         fontSize={{ base: 'xl' }}
         fontFamily={'CubicFive12'}
         color={'white'}
-        textAlign="center"
+        textAlign={'center'}
         p={4}
-        display="flex"
-        alignItems="center"
-        flexDirection="column"
-        justifyContent="center"
+        display={'flex'}
+        alignItems={'center'}
+        flexDirection={'column'}
+        justifyContent={'center'}
         width={{ base: '100%', lg: '33%' }}
       >
         <Box fontSize={{ base: '5xl' }} marginBottom={5}>
@@ -68,12 +68,12 @@ export const WeedDeliveryFeature = () => {
         fontSize={{ base: 'xl' }}
         fontFamily={'CubicFive12'}
         color={'white'}
-        textAlign="center"
+        textAlign={'center'}
         p={4}
-        display="flex"
-        alignItems="center"
-        flexDirection="column"
-        justifyContent="center"
+        display={'flex'}
+        alignItems={'center'}
+        flexDirection={'column'}
+        justifyContent={'center'}
         width={{ base: '100%', lg: '33%' }}
       >
         <Box fontSize={{ base: '5xl' }} marginBottom={5}>

@@ -7,7 +7,7 @@ export const SocialMediaIcons = () => {
       display="inline-flex"
       flexWrap="wrap"
       alignItems={'center'}
-      justifyContent="center"
+      justifyContent={'center'}
       gap={3}
       mx="auto"
     >

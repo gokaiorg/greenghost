@@ -128,7 +128,7 @@ export const LoginModalButton: FC<LoginModalButtonProps> = ({
         >
           <ModalCloseButton _focus={{ outline: 'none' }} />
           <ModalHeader>
-            <Text textAlign="center" fontWeight="black" fontSize="2xl">
+            <Text textAlign={'center'} fontWeight="black" fontSize="2xl">
               Connect your wallet
             </Text>
           </ModalHeader>
@@ -138,8 +138,8 @@ export const LoginModalButton: FC<LoginModalButtonProps> = ({
                 alignItems={'center'}
                 backdropFilter={'blur(3px)'}
                 bgColor="blackAlpha.700"
-                justifyContent="center"
-                position="absolute"
+                justifyContent={'center'}
+                position={'absolute'}
                 inset={0}
               >
                 <Spinner

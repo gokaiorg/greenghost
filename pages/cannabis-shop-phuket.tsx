@@ -66,10 +66,10 @@ const CannabisShop: NextPage = () => {
           p={4}
           my={4}
           display={'flex'}
-          width="fit-content"
+          width={'fit-content'}
           flexDirection="row"
           alignItems="baseline"
-          fontSize="4xl"
+          fontSize={'4xl'}
           fontFamily={'vt323'}
         >
           Looking for the best cannabis shops in Phuket
@@ -83,7 +83,7 @@ const CannabisShop: NextPage = () => {
         <Box display={'flex'} my={4} mt={10}>
           <Box
             display={'flex'}
-            justifyContent="center"
+            justifyContent={'center'}
             alignItems={'center'}
             flexDirection={'column'}
             color="ghostVerse.green.base"
@@ -109,12 +109,12 @@ const CannabisShop: NextPage = () => {
           </Box>
           <Box
             display={'flex'}
-            justifyContent="center"
+            justifyContent={'center'}
             alignItems={'center'}
             flexDirection={'column'}
             color="ghostVerse.green.base"
             mx={4}
-            textAlign="center"
+            textAlign={'center'}
           >
             <Link
               href="https://goo.gl/maps/rjQio9APTJKunyRdA?coh=178571&entry=tt"

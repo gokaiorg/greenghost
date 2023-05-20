@@ -378,7 +378,7 @@ export default function ProductPage({ product }: ProductPageProps) {
               flexDirection={{ base: 'column', md: 'row' }}
               my={5}
               fontFamily={'CubicFive12'}
-              justifyContent="center"
+              justifyContent={'center'}
             >
               <Box
                 display={'flex'}
