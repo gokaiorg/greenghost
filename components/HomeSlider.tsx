@@ -331,7 +331,7 @@ export const HomeSlider = () => {
             marginBottom={4}
             fontFamily="CubicFive10"
           >
-            Weed Delivery
+            Weed Delivery Phuket
           </Text>
           <Text as="p" fontSize={{ base: '3xl', md: '4xl' }}>
             No need to leave the house for your favorite buds, your choice of

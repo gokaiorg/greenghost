@@ -16,7 +16,7 @@ const BuyWeed: NextPage = () => {
         <title>Green Ghost - Contact Us - Buy Weed Online.</title>
         <meta
           name="description"
-          content="Looking to buy weed online? Contact Green Ghost Degen to place your order for high-quality, locally-sourced cannabis products. Our knowledgeable team is dedicated to providing a safe and reliable service, with discreet and secure shipping options available. Whether you're a seasoned smoker or new to the world of cannabis, we have a wide selection of products to suit your needs. Contact us today to learn more and place your order."
+          content="Looking to buy weed online? Contact Green Ghost Degen to place your order for high-quality, locally-sourced cannabis products. Our knowledgeable team is dedicated to providing a safe and reliable service, with discreet and secure shipping options available. Whether you're a seasoned smoker or new to the world of cannabis, we have a wide selection of products to suit your needs. Try the fastest Phuket weed delivery."
         />
         <meta
           property="og:title"
@@ -24,7 +24,7 @@ const BuyWeed: NextPage = () => {
         />
         <meta
           property="og:description"
-          content="Looking to buy weed online? Contact Green Ghost Degen to place your order for high-quality, locally-sourced cannabis products. Our knowledgeable team is dedicated to providing a safe and reliable service, with discreet and secure shipping options available. Whether you're a seasoned smoker or new to the world of cannabis, we have a wide selection of products to suit your needs. Contact us today to learn more and place your order."
+          content="Looking to buy weed online? Contact Green Ghost Degen to place your order for high-quality, locally-sourced cannabis products. Our knowledgeable team is dedicated to providing a safe and reliable service, with discreet and secure shipping options available. Whether you're a seasoned smoker or new to the world of cannabis, we have a wide selection of products to suit your needs. Try the fastest Phuket weed delivery."
         />
         <meta
           property="og:image"
@@ -42,7 +42,7 @@ const BuyWeed: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Looking to buy weed online? Contact Green Ghost Degen to place your order for high-quality, locally-sourced cannabis products. Our knowledgeable team is dedicated to providing a safe and reliable service, with discreet and secure shipping options available. Whether you're a seasoned smoker or new to the world of cannabis, we have a wide selection of products to suit your needs. Contact us today to learn more and place your order."
+          content="Looking to buy weed online? Contact Green Ghost Degen to place your order for high-quality, locally-sourced cannabis products. Our knowledgeable team is dedicated to providing a safe and reliable service, with discreet and secure shipping options available. Whether you're a seasoned smoker or new to the world of cannabis, we have a wide selection of products to suit your needs. Try the fastest Phuket weed delivery."
         />
         <meta
           name="twitter:image"
@@ -154,7 +154,7 @@ const BuyWeed: NextPage = () => {
           flexDirection={'column'}
           fontFamily={'vt323'}
         >
-          Immediate delivery in Phuket from 10am to midnight
+          Immediate weed delivery in Phuket from 10am to midnight
           <br />
           Free delivery for orders over 10g
         </Box>
