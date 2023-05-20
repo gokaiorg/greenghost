@@ -67,6 +67,7 @@ const WeedShopMember: NextPage = () => {
           width="fit-content"
           flexDirection={'column'}
           fontSize={20}
+          textAlign="center"
         >
           All our products are organic
         </Box>

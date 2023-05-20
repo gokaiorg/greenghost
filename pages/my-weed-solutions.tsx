@@ -134,7 +134,6 @@ const BuyWeed: NextPage = () => {
                 url="https://www.facebook.com/profile.php?id=100085363101043"
                 bgColor="#4cfd27"
                 style={{ width: 36, height: 36 }}
-                
               />
             </Box>
             <Link
@@ -162,7 +161,6 @@ const BuyWeed: NextPage = () => {
                 </svg>
               </Box>
             </Link>
-            
           </Box>
         </Box>
       </MainLayout>
