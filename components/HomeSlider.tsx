@@ -48,7 +48,7 @@ export const HomeSlider = () => {
       <SwiperSlide>
         <Box position="relative" w="100%" h={{ base: '600px' }}>
           <Image
-            src="/green-ghost-weed-shop-phuket.png"
+            src="/media/green-ghost-weed-shop-phuket.webp"
             fill
             style={{ objectFit: 'cover' }}
             alt="Green Ghost Weed Shop Phuket"
@@ -111,13 +111,12 @@ export const HomeSlider = () => {
       <SwiperSlide>
         <Box position="relative" w="100%" h={{ base: '600px' }}>
           <Image
-            src="/green-ghost-weed-shop-buds.png"
+            src="/media/green-ghost-weed-shop-buds.webp"
             fill
             style={{ objectFit: 'cover' }}
             alt="Green Ghost Weed Shop Buds Menu"
           />
         </Box>
-
         <Box
           position={'absolute'}
           top="0"
@@ -175,7 +174,7 @@ export const HomeSlider = () => {
       <SwiperSlide>
         <Box position="relative" w="100%" h={{ base: '600px' }}>
           <Image
-            src="/green-ghost-weed-shop-crypto-cashback.png"
+            src="/media/green-ghost-weed-shop-crypto-cashback.webp"
             fill
             style={{ objectFit: 'cover' }}
             alt="Green Ghost Weed Shop Crypto Cashback"
@@ -242,13 +241,12 @@ export const HomeSlider = () => {
       <SwiperSlide>
         <Box position="relative" w="100%" h={{ base: '600px' }}>
           <Image
-            src="/green-ghost-weed-shop-pixel-art.png"
+            src="/media/green-ghost-weed-shop-pixel-art.webp"
             fill
             style={{ objectFit: 'cover' }}
             alt="Green Ghost Weed Shop Pixel Art"
           />
         </Box>
-
         <Box
           position={'absolute'}
           top="0"
@@ -309,7 +307,7 @@ export const HomeSlider = () => {
       <SwiperSlide>
         <Box position="relative" w="100%" h={{ base: '600px' }}>
           <Image
-            src="/green-ghost-weed-shop-delivery.png"
+            src="/media/green-ghost-weed-shop-delivery.webp"
             fill
             style={{ objectFit: 'cover' }}
             alt="Green Ghost Weed Shop Delivery"
