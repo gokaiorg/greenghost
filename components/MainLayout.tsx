@@ -17,6 +17,12 @@ export const MainLayout: FC<PropsWithChildren<MetaHeadProps>> = ({
 
   return (
     <>
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQL8CG2"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+        }}
+      ></noscript>
       <AgeVerificationPopup onVerify={handleVerify} />
       <MetaHead
         metaTitle={metaTitle}

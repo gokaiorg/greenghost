@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { FC, memo } from 'react';
 import { defaultMetaTags, dappHostname } from '../config/dappUi';
 import { useRouter } from 'next/router';
+import Script from 'next/script';
 
 export interface MetaHeadProps {
   metaTitle?: string;
@@ -16,6 +17,16 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
   const canonicalUrl = `https://green.gd${router.asPath}`;
   return (
     <Head>
+      <Script
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WQL8CG2');`,
+        }}
+      ></Script>
       <link rel="canonical" href={canonicalUrl} />
       <meta name="author" content="Gokai Labs | gokai.org" />
       <meta
