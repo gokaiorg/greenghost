@@ -103,7 +103,7 @@ const BuyWeed: NextPage = () => {
                 display="inline-flex"
                 color="ghostVerse.green.base"
                 borderColor="ghostVerse.green.base"
-                fontSize={{ base: '3xl', md: '40' }}
+                fontSize={{ base: '5xl' }}
                 borderWidth={1}
                 whiteSpace="nowrap"
                 bgColor={'ghostVerse.dark.lighter'}
@@ -154,11 +154,9 @@ const BuyWeed: NextPage = () => {
           flexDirection={'column'}
           fontFamily={'vt323'}
         >
-          Immediate delivery in Phuket
+          Immediate delivery in Phuket from 10am to midnight
           <br />
-          24/24 delivery only in Rawai
-          <br />
-          Worldwide shipping
+          Free delivery for orders over 10g
         </Box>
         <Text
           title="Find Us on Weed in th"
@@ -184,9 +182,17 @@ const BuyWeed: NextPage = () => {
           <Box m={4} color="ghostVerse.green.base">
             <Link
               title="Find Us on Weed in th"
+              href="https://weed.th/shop/0d9dde2a-13bd-4167-b063-577af34971e8"
+            >
+              WEED.TH Phuket
+            </Link>
+          </Box>
+          <Box m={4} color="ghostVerse.green.base">
+            <Link
+              title="Find Us on Weed in th"
               href="https://weed.th/shop/be232698-0464-4352-bd70-15ea51257870"
             >
-              WEED.th
+              WEED.TH Rawai
             </Link>
           </Box>
           <Box m={4} color="ghostVerse.green.base">
@@ -203,6 +209,22 @@ const BuyWeed: NextPage = () => {
               href="https://weedhub.asia/listing/green-ghost/"
             >
               WeedHub
+            </Link>
+          </Box>
+          <Box m={4} color="ghostVerse.green.base">
+            <Link
+              title="Find Us on Thailand Weed"
+              href="https://www.thailandweed.com/directory-dispensaries/listing/green-ghost/"
+            >
+              Thailand Weed
+            </Link>
+          </Box>
+          <Box m={4} color="ghostVerse.green.base">
+            <Link
+              title="Find Us on High Thailand"
+              href="https://www.highthailand.com/location/green-ghost/"
+            >
+              High Thailand
             </Link>
           </Box>
         </Box>

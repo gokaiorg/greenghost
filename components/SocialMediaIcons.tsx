@@ -3,7 +3,15 @@ import { Box } from '@chakra-ui/react';
 
 export const SocialMediaIcons = () => {
   return (
-    <Box display="inline-flex" alignItems={'center'} gap={3} mx="auto" mb={10}>
+    <Box
+      display="inline-flex"
+      flexWrap="wrap"
+      alignItems={'center'}
+      justifyContent="center"
+      gap={3}
+      mx="auto"
+      mb={10}
+    >
       <Box bgColor="black" borderRadius="100%">
         <SocialIcon
           url="https://www.instagram.com/greenghostdegen"
@@ -42,6 +50,14 @@ export const SocialMediaIcons = () => {
           bgColor="#4cfd27"
           style={{ width: 60, height: 60 }}
           title="Follow Us on Twitter"
+        />
+      </Box>
+      <Box bgColor="black" borderRadius="100%">
+        <SocialIcon
+          url="https://discord.gg/tXSeJfVVnH"
+          bgColor="#4cfd27"
+          style={{ width: 60, height: 60 }}
+          title="Join Us on Discord"
         />
       </Box>
     </Box>
