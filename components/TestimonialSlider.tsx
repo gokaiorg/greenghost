@@ -149,7 +149,7 @@ export const TestimonialSlider = () => {
             </Text>
             <Link
               href={'https://goo.gl/maps/NtVCHj4dKiN2UTej7'}
-              title={'Read more review on Google Map Place'}
+              title={'Read More Review on Google Map Place'}
               passHref
             >
               <Text
@@ -159,7 +159,7 @@ export const TestimonialSlider = () => {
                 mt={4}
                 fontFamily={'CubicFive10'}
               >
-                Read More
+                Read Review
               </Text>
             </Link>
           </Box>
@@ -268,7 +268,7 @@ export const TestimonialSlider = () => {
             </Text>
             <Link
               href={'https://goo.gl/maps/PHH4eoMhN1SikuuL7'}
-              title={'Read more review on Google Map Place'}
+              title={'Read More Review on Google Map Place'}
               passHref
             >
               <Text
@@ -278,7 +278,7 @@ export const TestimonialSlider = () => {
                 mt={4}
                 fontFamily={'CubicFive10'}
               >
-                Read More
+                Read Review
               </Text>
             </Link>
           </Box>
@@ -387,7 +387,7 @@ export const TestimonialSlider = () => {
             </Text>
             <Link
               href={'https://goo.gl/maps/aXs9vzgcNHEN2b9CA'}
-              title={'Read more review on Google Map Place'}
+              title={'Read More Review on Google Map Place'}
               passHref
             >
               <Text
@@ -397,7 +397,7 @@ export const TestimonialSlider = () => {
                 mt={4}
                 fontFamily={'CubicFive10'}
               >
-                Read More
+                Read Review
               </Text>
             </Link>
           </Box>
@@ -507,7 +507,7 @@ export const TestimonialSlider = () => {
             </Text>
             <Link
               href={'https://goo.gl/maps/xkfjZMNEEe24E5tD9'}
-              title={'Read more review on Google Map Place'}
+              title={'Read More Review on Google Map Place'}
               passHref
             >
               <Text
@@ -517,7 +517,7 @@ export const TestimonialSlider = () => {
                 mt={4}
                 fontFamily={'CubicFive10'}
               >
-                Read More
+                Read Review
               </Text>
             </Link>
           </Box>
@@ -627,7 +627,7 @@ export const TestimonialSlider = () => {
             </Text>
             <Link
               href={'https://goo.gl/maps/sw3L6myRRmhXiopDA'}
-              title={'Read more review on Google Map Place'}
+              title={'Read More Review on Google Map Place'}
               passHref
             >
               <Text
@@ -637,7 +637,7 @@ export const TestimonialSlider = () => {
                 mt={4}
                 fontFamily={'CubicFive10'}
               >
-                Read More
+                Read Review
               </Text>
             </Link>
           </Box>
@@ -747,7 +747,7 @@ export const TestimonialSlider = () => {
             </Text>
             <Link
               href={'https://goo.gl/maps/kEduAbxzoCLewQ1d9'}
-              title={'Read more review on Google Map Place'}
+              title={'Read More Review on Google Map Place'}
               passHref
             >
               <Text
@@ -757,7 +757,7 @@ export const TestimonialSlider = () => {
                 mt={4}
                 fontFamily={'CubicFive10'}
               >
-                Read More
+                Read Review
               </Text>
             </Link>
           </Box>
@@ -867,7 +867,7 @@ export const TestimonialSlider = () => {
             </Text>
             <Link
               href={'https://goo.gl/maps/xw1gbUi8zGE9kb3m9'}
-              title={'Read more review on Google Map Place'}
+              title={'Read More Review on Google Map Place'}
               passHref
             >
               <Text
@@ -877,7 +877,7 @@ export const TestimonialSlider = () => {
                 mt={4}
                 fontFamily={'CubicFive10'}
               >
-                Read More
+                Read Review
               </Text>
             </Link>
           </Box>
@@ -988,7 +988,7 @@ export const TestimonialSlider = () => {
             </Text>
             <Link
               href={'https://goo.gl/maps/jawsHz9Zg1PQLYg99'}
-              title={'Read more review on Google Map Place'}
+              title={'Read More Review on Google Map Place'}
               passHref
             >
               <Text
@@ -998,7 +998,7 @@ export const TestimonialSlider = () => {
                 mt={4}
                 fontFamily={'CubicFive10'}
               >
-                Read More
+                Read Review
               </Text>
             </Link>
           </Box>
@@ -1108,7 +1108,7 @@ export const TestimonialSlider = () => {
             </Text>
             <Link
               href={'https://goo.gl/maps/KmUpTyatuoJKXis28'}
-              title={'Read more review on Google Map Place'}
+              title={'Read More Review on Google Map Place'}
               passHref
             >
               <Text
@@ -1118,7 +1118,7 @@ export const TestimonialSlider = () => {
                 mt={4}
                 fontFamily={'CubicFive10'}
               >
-                Read More
+                Read Review
               </Text>
             </Link>
           </Box>
