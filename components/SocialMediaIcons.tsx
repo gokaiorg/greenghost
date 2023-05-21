@@ -56,7 +56,7 @@ export const SocialMediaIcons = () => {
           url="https://medium.com/@GokaiLabs"
           bgColor="#4cfd27"
           style={{ width: 60, height: 60 }}
-          title="Follow Us on Twitter"
+          title="Follow Us on Medium"
         />
       </Box>
       <Box bgColor="black" borderRadius="100%">
