@@ -62,10 +62,10 @@ const BuyWeed: NextPage = () => {
           p={4}
         >
           <Text
-            as="h2"
+            as={'h2'}
             color={'white'}
             fontSize={{ base: '4xl' }}
-            fontWeight="black"
+            fontWeight={'black'}
             mb={4}
           >
             What&apos;s the inspiring story behind Green Ghost&apos;s origins
@@ -86,7 +86,7 @@ const BuyWeed: NextPage = () => {
                 width={500}
                 height={500}
                 alt="ok"
-                layout="responsive"
+                layout={'responsive'}
               />
             </Box>
             <Box width={{ base: '100%', lg: '65%' }}>
@@ -105,7 +105,7 @@ const BuyWeed: NextPage = () => {
                   title="Cannabis Grower Phuket"
                   passHref
                 >
-                  <Box as="span" color="ghostVerse.green.base">
+                  <Box as={'span'} color={'ghostVerse.green.base'}>
                     best Phuket growers
                   </Box>
                 </Link>{' '}
@@ -118,18 +118,18 @@ const BuyWeed: NextPage = () => {
                   justifyContent={'center'}
                   alignItems={'center'}
                   flexDirection={'column'}
-                  color="ghostVerse.green.base"
+                  color={'ghostVerse.green.base'}
                   as="a"
                   mx={4}
                   target="_blank"
                   href="https://gokai.org"
                 >
                   <Box
-                    as="img"
+                    as={'img'}
                     src="/media/green-ghost-degen-weed-shop-partner-gokai-labs.webp"
                     width="80px"
                     height="80px"
-                    maxW="inherit"
+                    maxW={'inherit'}
                     alt="Green Ghost - Degen Weed Shop - Gokai Labs"
                     title="Green Ghost - Degen Weed Shop - Gokai Labs"
                   />
@@ -140,7 +140,7 @@ const BuyWeed: NextPage = () => {
                   justifyContent={'center'}
                   alignItems={'center'}
                   flexDirection={'column'}
-                  color="ghostVerse.green.base"
+                  color={'ghostVerse.green.base'}
                   mx={4}
                   textAlign={'center'}
                 >
@@ -150,12 +150,12 @@ const BuyWeed: NextPage = () => {
                     passHref
                   >
                     <Box
-                      as="img"
+                      as={'img'}
                       src="/media/green-ghost-grower-my-weed-solutions.webp"
                       width="80px"
                       height="80px"
-                      maxW="inherit"
-                      mx="auto"
+                      maxW={'inherit'}
+                      mx={'auto'}
                       alt="Green Ghost - My Weed Solutions"
                       title="Green Ghost - My Weed Solutions"
                     />
@@ -168,10 +168,10 @@ const BuyWeed: NextPage = () => {
           <Box display={'flex'} flexDirection={{ base: 'column', lg: 'row' }}>
             <Box width={{ base: '100%', lg: '65%' }}>
               <Text
-                as="h2"
+                as={'h2'}
                 color={'white'}
                 fontSize={{ base: '4xl' }}
-                fontWeight="black"
+                fontWeight={'black'}
                 mb={4}
               >
                 What sets Green Ghost apart from other coffeeshop in the
@@ -186,11 +186,11 @@ const BuyWeed: NextPage = () => {
               </Text>
               <Text>
                 Committed to local values,{' '}
-                <Link href="/weed-shop" title="Weed Shop" passHref>
+                <Link href={'/weed-shop'} title={'Weed Shop'} passHref>
                   <Box
-                    as="span"
+                    as={'span'}
                     display="inline-block"
-                    color="ghostVerse.green.base"
+                    color={'ghostVerse.green.base'}
                   >
                     our products
                   </Box>
@@ -208,9 +208,9 @@ const BuyWeed: NextPage = () => {
                   passHref
                 >
                   <Box
-                    as="span"
+                    as={'span'}
                     display="inline-block"
-                    color="ghostVerse.green.base"
+                    color={'ghostVerse.green.base'}
                   >
                     rewards system
                   </Box>
@@ -228,7 +228,7 @@ const BuyWeed: NextPage = () => {
                 width={500}
                 height={500}
                 alt="ok"
-                layout="responsive"
+                layout={'responsive'}
               />
             </Box>
           </Box>
@@ -239,7 +239,7 @@ const BuyWeed: NextPage = () => {
             Thank you for your trust.
           </Text>
           <Link href="/sitemap" title="Sitemap" passHref>
-            <Box as="span" color="ghostVerse.green.base">
+            <Box as={'span'} color={'ghostVerse.green.base'}>
               Sitemap
             </Box>
           </Link>

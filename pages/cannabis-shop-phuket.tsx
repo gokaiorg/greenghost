@@ -58,7 +58,7 @@ const CannabisShop: NextPage = () => {
         </HeaderMenu>
         <HomeSectionTitle title="Green Ghost - Phuket Cannabis Shops Selection." />
         <Box
-          as="h2"
+          as={'h2'}
           borderColor={'ghostVerse.color2.base'}
           bgColor={'ghostVerse.dark.lighter'}
           borderWidth={1}
@@ -75,7 +75,7 @@ const CannabisShop: NextPage = () => {
           Looking for the best cannabis shops in Phuket
           <ImgQuestion />
         </Box>
-        <Box fontSize="2xl" fontFamily={'vt323'}>
+        <Box fontSize={'2xl'} fontFamily={'vt323'}>
           Look no further than the ones trusted by the Green Ghost. We&apos;ve
           scoured the island to find the top cannabis shops that offer the
           highest quality products and the best prices.
@@ -86,7 +86,7 @@ const CannabisShop: NextPage = () => {
             justifyContent={'center'}
             alignItems={'center'}
             flexDirection={'column'}
-            color="ghostVerse.green.base"
+            color={'ghostVerse.green.base'}
             mx={4}
           >
             <Link
@@ -95,12 +95,12 @@ const CannabisShop: NextPage = () => {
               passHref
             >
               <Box
-                as="img"
+                as={'img'}
                 src="/logo512.png"
                 width="80px"
                 height="80px"
-                maxW="inherit"
-                mx="auto"
+                maxW={'inherit'}
+                mx={'auto'}
                 alt="Green Ghost - Degen Weed Shop"
                 title="Green Ghost - Degen Weed Shop"
               />
@@ -112,7 +112,7 @@ const CannabisShop: NextPage = () => {
             justifyContent={'center'}
             alignItems={'center'}
             flexDirection={'column'}
-            color="ghostVerse.green.base"
+            color={'ghostVerse.green.base'}
             mx={4}
             textAlign={'center'}
           >
@@ -122,12 +122,12 @@ const CannabisShop: NextPage = () => {
               passHref
             >
               <Box
-                as="img"
+                as={'img'}
                 src="/media/green-ghost-grower-my-weed-solutions.webp"
                 width="80px"
                 height="80px"
-                maxW="inherit"
-                mx="auto"
+                maxW={'inherit'}
+                mx={'auto'}
                 alt="Green Ghost - My Weed Solutions"
                 title="Green Ghost - My Weed Solutions"
               />

@@ -76,13 +76,18 @@ const CryptoWeedShop: NextPage = () => {
           mr={'auto'}
           fontFamily={'vt323'}
         >
-          <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
+          <Text
+            as={'h2'}
+            fontWeight={'black'}
+            fontSize={'4xl'}
+            marginBottom={4}
+          >
             Ready to step into a new economic model
             <ImgQuestion />
           </Text>
           If you own an{' '}
           <Text
-            color="ghostVerse.green.base"
+            color={'ghostVerse.green.base'}
             as="a"
             href="https://ghostverse.org/mxghosts"
           >
@@ -91,7 +96,7 @@ const CryptoWeedShop: NextPage = () => {
           and pay with <ImgDollar />
           EGLD using the{' '}
           <Text
-            color="ghostVerse.green.base"
+            color={'ghostVerse.green.base'}
             as="a"
             href="https://xport.al/referral/7nvae7kpo1"
           >
@@ -102,7 +107,7 @@ const CryptoWeedShop: NextPage = () => {
           <br />
           <br />
           <Text
-            color="ghostVerse.green.base"
+            color={'ghostVerse.green.base'}
             as="a"
             target="_blank"
             href="https://linktr.ee/elrondbuds"
@@ -111,7 +116,7 @@ const CryptoWeedShop: NextPage = () => {
           </Text>{' '}
           is a decentralized autonomous community project on the{' '}
           <Text
-            color="ghostVerse.green.base"
+            color={'ghostVerse.green.base'}
             as="a"
             target="_blank"
             href="https://multiversx.com/"
@@ -121,7 +126,12 @@ const CryptoWeedShop: NextPage = () => {
           and centered around cannabis.
           <br />
           <br />
-          <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
+          <Text
+            as={'h2'}
+            fontWeight={'black'}
+            fontSize={'4xl'}
+            marginBottom={4}
+          >
             GRAND OPENING
           </Text>
           First 1000 customers receive 100 <ImgDollar />
@@ -131,13 +141,18 @@ const CryptoWeedShop: NextPage = () => {
             title="Install xPortal App"
             passHref
           >
-            <Box as="span" color="ghostVerse.green.base">
+            <Box as={'span'} color={'ghostVerse.green.base'}>
               Claim your cashback!
             </Box>
           </Link>
           <br />
           <br />
-          <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
+          <Text
+            as={'h2'}
+            fontWeight={'black'}
+            fontSize={'4xl'}
+            marginBottom={4}
+          >
             Join us in this innovative movement and take advantage of our unique
             rewards system.
           </Text>

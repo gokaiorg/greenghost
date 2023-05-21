@@ -75,7 +75,7 @@ export const ProfileNFTsList = () => {
             backdropFilter={'blur(3px)'}
           >
             <CardBody p={{ base: 1, sm: 2, md: 3 }}>
-              <Stack position="relative">
+              <Stack position={'relative'}>
                 <NftImageHelper
                   thumbnail={nft.media?.[0].thumbnailUrl}
                   elrondIPFSGatewayUrl={nft.url}

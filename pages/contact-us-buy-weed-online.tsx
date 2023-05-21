@@ -80,7 +80,7 @@ const BuyWeed: NextPage = () => {
               width={500}
               height={500}
               alt="Contact us - Buy weed online."
-              layout="responsive"
+              layout={'responsive'}
             />
           </Box>
           <Box width={{ base: '100%', lg: '65%' }}>
@@ -102,9 +102,9 @@ const BuyWeed: NextPage = () => {
                 Call us to order online
               </Text>
               <Text
-                display="inline-flex"
-                color="ghostVerse.green.base"
-                borderColor="ghostVerse.green.base"
+                display={'inline-flex'}
+                color={'ghostVerse.green.base'}
+                bordercolor={'ghostVerse.green.base'}
                 fontSize={{ base: '5xl' }}
                 borderWidth={1}
                 whiteSpace="nowrap"

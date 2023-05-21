@@ -65,18 +65,18 @@ const WeedDelivery: NextPage = () => {
         <Box
           display={'flex'}
           flexDirection={{ base: 'column', lg: 'row' }}
-          alignItems="stretch"
+          alignItems={'stretch'}
           mb={10}
         >
           <Box
             display={'flex'}
             flexDirection={'column'}
-            position="relative"
-            height="fit-content"
+            position={'relative'}
+            height={'fit-content'}
             width={{ base: '100%', lg: '50%' }}
             mb={2}
           >
-            <Link href="/weed-shop" title="Weed Shop" passHref>
+            <Link href={'/weed-shop'} title={'Weed Shop'} passHref>
               <Text
                 as={'h2'}
                 fontSize={{ base: 'xl', lg: '2xl' }}
@@ -113,21 +113,21 @@ const WeedDelivery: NextPage = () => {
                 width={1200}
                 height={600}
                 alt="Weed Menu - Weed delivery Phuket - Buy weed online."
-                layout="responsive"
+                layout={'responsive'}
               />
             </Box>
           </Box>
           <Box
             display={'flex'}
             flexDirection={'column'}
-            position="relative"
-            height="fit-content"
+            position={'relative'}
+            height={'fit-content'}
             width={{ base: '100%', lg: '50%' }}
             mb={2}
           >
             <Link
               href="/contact-us-buy-weed-online"
-              title="Contact Us"
+              title={'Contact Us'}
               passHref
             >
               <Text
@@ -166,7 +166,7 @@ const WeedDelivery: NextPage = () => {
                 width={1200}
                 height={600}
                 alt="Contact us - Weed delivery Phuket - Buy weed online."
-                layout="responsive"
+                layout={'responsive'}
               />
             </Box>
           </Box>

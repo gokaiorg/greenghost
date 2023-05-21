@@ -17,7 +17,7 @@ export const BudItem = ({ product }: BudItemProps) => {
     >
       <Link href={product.slug} title={product.name} passHref>
         <Box
-          borderColor="ghostVerse.green.base"
+          bordercolor={'ghostVerse.green.base'}
           borderWidth={1}
           bgColor={'ghostVerse.dark.lighter'}
           backdropFilter={'blur(3px)'}
@@ -27,7 +27,7 @@ export const BudItem = ({ product }: BudItemProps) => {
           color="ghostVerse.gray.base"
           display={'flex'}
           flexDirection={{ base: 'column' }}
-          height="100%"
+          height={'100%'}
           whiteSpace={{ base: 'normal' }}
           _hover={{
             bgColor: 'rgba(109, 208, 246, 0.1)',
@@ -42,7 +42,7 @@ export const BudItem = ({ product }: BudItemProps) => {
               width={500}
               height={500}
               title={product.imgDesc}
-              layout="responsive"
+              layout={'responsive'}
             />
           </Box>
           <Box
@@ -54,7 +54,7 @@ export const BudItem = ({ product }: BudItemProps) => {
           >
             <Box
               as={'h3'}
-              fontSize="2xl"
+              fontSize={'2xl'}
               fontFamily={'CubicFive12'}
               display={'flex'}
               flexDirection="row"
@@ -65,26 +65,26 @@ export const BudItem = ({ product }: BudItemProps) => {
               {product.price !== 666 && (
                 <Box
                   marginLeft={'auto'}
-                  color="ghostVerse.green.base"
+                  color={'ghostVerse.green.base'}
                   whiteSpace="nowrap"
                 >
                   {product.price} THB
                 </Box>
               )}
             </Box>
-            <Box display={'flex'} fontFamily={'vt323'} fontSize="3xl">
+            <Box display={'flex'} fontFamily={'vt323'} fontSize={'3xl'}>
               {product.dominance == 'Indica Dominant' && (
-                <Box as="h4" color="ghostVerse.blue.base" marginRight={2}>
+                <Box as={'h4'} color="ghostVerse.blue.base" marginRight={2}>
                   {product.dominance}
                 </Box>
               )}
               {product.dominance == 'Sativa Dominant' && (
-                <Box as="h4" color="ghostVerse.pink.base" marginRight={2}>
+                <Box as={'h4'} color="ghostVerse.pink.base" marginRight={2}>
                   {product.dominance}
                 </Box>
               )}
               {product.dominance == 'Hybrid' && (
-                <Box as="h4" color="ghostVerse.orange.base" marginRight={2}>
+                <Box as={'h4'} color="ghostVerse.orange.base" marginRight={2}>
                   {product.dominance}
                 </Box>
               )}
@@ -92,7 +92,7 @@ export const BudItem = ({ product }: BudItemProps) => {
             <Box
               display={'flex'}
               fontFamily={'vt323'}
-              fontSize="3xl"
+              fontSize={'3xl'}
               flexWrap={'wrap'}
             >
               {product.sativa !== 'undefined' && (
@@ -100,7 +100,7 @@ export const BudItem = ({ product }: BudItemProps) => {
                   Sativa
                   <Box
                     marginLeft={2}
-                    color="ghostVerse.green.base"
+                    color={'ghostVerse.green.base'}
                     display={'flex'}
                     flexDirection="row"
                     alignItems="baseline"
@@ -115,7 +115,7 @@ export const BudItem = ({ product }: BudItemProps) => {
                   Indica
                   <Box
                     marginLeft={2}
-                    color="ghostVerse.green.base"
+                    color={'ghostVerse.green.base'}
                     display={'flex'}
                     flexDirection="row"
                     alignItems="baseline"
@@ -130,7 +130,7 @@ export const BudItem = ({ product }: BudItemProps) => {
                   THC
                   <Box
                     marginLeft={2}
-                    color="ghostVerse.green.base"
+                    color={'ghostVerse.green.base'}
                     display={'flex'}
                     flexDirection="row"
                     alignItems="baseline"
@@ -145,7 +145,7 @@ export const BudItem = ({ product }: BudItemProps) => {
                   CBD
                   <Box
                     marginLeft={2}
-                    color="ghostVerse.green.base"
+                    color={'ghostVerse.green.base'}
                     display={'flex'}
                     flexDirection="row"
                     alignItems="baseline"
@@ -159,8 +159,8 @@ export const BudItem = ({ product }: BudItemProps) => {
             <Box
               display={'flex'}
               fontFamily={'vt323'}
-              fontSize="3xl"
-              mx="auto"
+              fontSize={'3xl'}
+              mx={'auto'}
               mt="auto"
             >
               {product.effects !== 'undefined' && (
@@ -168,11 +168,11 @@ export const BudItem = ({ product }: BudItemProps) => {
                   display={'flex'}
                   textAlign={'center'}
                   flexDirection={'column'}
-                  fontSize="3xl"
+                  fontSize={'3xl'}
                 >
                   Feelings
                   <Box
-                    color="ghostVerse.green.base"
+                    color={'ghostVerse.green.base'}
                     whiteSpace={{ base: 'normal', xl: 'nowrap' }}
                   >
                     {product.effects}

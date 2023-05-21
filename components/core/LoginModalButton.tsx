@@ -68,13 +68,13 @@ export const LoginModalButton: FC<LoginModalButtonProps> = ({
           >
             <svg
               width="30px"
-              xmlns="http://www.w3.org/2000/svg"
+              xmlns={'http://www.w3.org/2000/svg'}
               viewBox="0 0 1290 1100"
             >
               <path
                 d="M607 0h152v38h114v38h75v38h38v38h38v38h76v-76h76v417h38v38h38v38h38v152h-38v37h-38v-37h-38v341h-38v-38h-38v-38h-38v-38h-38v-38h-38v-76h-38v-38h-37v38h-38v38h-38v38h-38v38h-38v38h-38v38h-76v-38h-38v-38h-38v-38h-38v-38h-38v-38h-38v-38h-37v38h-38v76h-38v38h-38v38h-38v38h-38v38h-38V759H38v-38H0v-76h38v-38h38v-38h76v-38h38V114h76v76h76v-38h38v-38h38V76h75V38h114z"
                 fill="#e5e8f1"
-                fillRule="evenodd"
+                fillRule={'evenodd'}
               />
             </svg>
           </Tooltip>
@@ -97,13 +97,13 @@ export const LoginModalButton: FC<LoginModalButtonProps> = ({
           >
             <svg
               width="30px"
-              xmlns="http://www.w3.org/2000/svg"
+              xmlns={'http://www.w3.org/2000/svg'}
               viewBox="0 0 1290 1100"
             >
               <path
                 d="M607 0h152v38h114v38h75v38h38v38h38v38h76v-76h76v417h38v38h38v38h38v152h-38v37h-38v-37h-38v341h-38v-38h-38v-38h-38v-38h-38v-38h-38v-76h-38v-38h-37v38h-38v38h-38v38h-38v38h-38v38h-38v38h-76v-38h-38v-38h-38v-38h-38v-38h-38v-38h-38v-38h-37v38h-38v76h-38v38h-38v38h-38v38h-38v38h-38V759H38v-38H0v-76h38v-38h38v-38h76v-38h38V114h76v76h76v-38h38v-38h38V76h75V38h114z"
                 fill="#6dd0f6"
-                fillRule="evenodd"
+                fillRule={'evenodd'}
               />
             </svg>
           </Tooltip>
@@ -124,11 +124,11 @@ export const LoginModalButton: FC<LoginModalButtonProps> = ({
           pb={10}
           px={0}
           borderRadius="none"
-          position="relative"
+          position={'relative'}
         >
           <ModalCloseButton _focus={{ outline: 'none' }} />
           <ModalHeader>
-            <Text textAlign={'center'} fontWeight="black" fontSize="2xl">
+            <Text textAlign={'center'} fontWeight={'black'} fontSize={'2xl'}>
               Connect your wallet
             </Text>
           </ModalHeader>

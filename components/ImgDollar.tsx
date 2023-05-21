@@ -4,9 +4,9 @@ export const ImgDollar = () => {
   return (
     <Box display="inline-block" marginRight={1} width="10px" height="14px">
       <svg
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns={'http://www.w3.org/2000/svg'}
         viewBox="0 0 226.8 317.5"
-        fill="#4cfd27"
+        fill={'#4cfd27'}
         width="10px"
         height="14px"
       >

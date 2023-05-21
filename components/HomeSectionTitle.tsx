@@ -8,7 +8,7 @@ interface HomeSectionTitleProps {
 export const HomeSectionTitle: FC<HomeSectionTitleProps> = ({ title }) => {
   return (
     <Text
-      as="h1"
+      as={'h1'}
       fontSize={{ base: '2xl', md: '3xl' }}
       fontFamily={'CubicFive12'}
       display={'flex'}

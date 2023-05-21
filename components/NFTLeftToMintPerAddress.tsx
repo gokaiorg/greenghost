@@ -25,8 +25,8 @@ export const NFTLeftToMintPerAddress: FC<NFTLeftToMintPerAddressProps> = ({
       ) : (
         <Text
           color="ghostVerse.color1.darker"
-          fontSize="3xl"
-          fontWeight="black"
+          fontSize={'3xl'}
+          fontWeight={'black'}
           ml={3}
         >
           {leftToMintForUser}

@@ -29,7 +29,7 @@ export const NFTAllowlistEnabled: FC<NFTAllowlistEnabledProps> = ({
         >
           <Box>
             <Text
-              as="span"
+              as={'span'}
               fontSize={{ base: 'md', sm: 'lg' }}
               fontWeight="bold"
             >
@@ -40,7 +40,7 @@ export const NFTAllowlistEnabled: FC<NFTAllowlistEnabledProps> = ({
             ) : data !== 0 ? (
               <Text
                 color="ghostVerse.color1.darker"
-                as="span"
+                as={'span'}
                 fontWeight="bold"
                 fontSize={{ base: 'md', sm: 'lg' }}
               >
@@ -49,7 +49,7 @@ export const NFTAllowlistEnabled: FC<NFTAllowlistEnabledProps> = ({
             ) : (
               <Text
                 color="elvenTools.color3.base"
-                as="span"
+                as={'span'}
                 fontWeight="bold"
                 fontSize={{ base: 'md', sm: 'lg' }}
               >
@@ -57,7 +57,7 @@ export const NFTAllowlistEnabled: FC<NFTAllowlistEnabledProps> = ({
               </Text>
             )}{' '}
             <Text
-              as="span"
+              as={'span'}
               fontSize={{ base: 'md', sm: 'lg' }}
               fontWeight="bold"
             >

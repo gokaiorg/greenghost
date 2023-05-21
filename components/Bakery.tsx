@@ -8,14 +8,14 @@ export const Bakery = () => {
   return (
     <Box mt={10} mb="10">
       <Box
-        as="h2"
+        as={'h2'}
         borderColor={'ghostVerse.color2.base'}
         bgColor={'ghostVerse.dark.lighter'}
         borderWidth={1}
         backdropFilter={'blur(3px)'}
         p={4}
         mb={4}
-        display="inline-flex"
+        display={'inline-flex'}
         flexDirection={'column'}
         fontSize={30}
       >

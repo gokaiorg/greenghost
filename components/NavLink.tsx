@@ -18,16 +18,16 @@ function NavLink({ to, activeProps, children, ...props }: NavLinkProps) {
     return (
       <Link href={to}>
         <ChakraLink
-          as="span"
+          as={'span'}
           bgColor={'ghostVerse.dark.lighter'}
           py={6}
           px={6}
           textAlign={'center'}
           fontWeight="bold"
           fontSize="lg"
-          display="inline-flex"
-          color="ghostVerse.green.base"
-          borderColor="ghostVerse.green.base"
+          display={'inline-flex'}
+          color={'ghostVerse.green.base'}
+          bordercolor={'ghostVerse.green.base'}
           borderBottomWidth={2}
           borderTopWidth={0}
           borderLeftWidth={0}
@@ -46,7 +46,7 @@ function NavLink({ to, activeProps, children, ...props }: NavLinkProps) {
   return (
     <Link href={to}>
       <ChakraLink
-        as="span"
+        as={'span'}
         {...props}
         bgColor={'ghostVerse.dark.lighter'}
         py={6}
@@ -54,8 +54,8 @@ function NavLink({ to, activeProps, children, ...props }: NavLinkProps) {
         textAlign={'center'}
         fontWeight="bold"
         fontSize="lg"
-        display="inline-flex"
-        color="ghostVerse.green.base"
+        display={'inline-flex'}
+        color={'ghostVerse.green.base'}
         borderColor="black"
         borderBottomWidth={2}
         borderTopWidth={0}

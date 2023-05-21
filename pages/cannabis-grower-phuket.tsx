@@ -58,7 +58,7 @@ const CannabisShop: NextPage = () => {
         </HeaderMenu>
         <HomeSectionTitle title="Green Ghost - Phuket Cannabis Growers Selection." />
         <Box
-          as="h2"
+          as={'h2'}
           borderColor={'ghostVerse.color2.base'}
           bgColor={'ghostVerse.dark.lighter'}
           borderWidth={1}
@@ -75,7 +75,7 @@ const CannabisShop: NextPage = () => {
           Seeking the finest cannabis growers in Phuket
           <ImgQuestion />
         </Box>
-        <Box fontSize="3xl" fontFamily={'vt323'}>
+        <Box fontSize={'3xl'} fontFamily={'vt323'}>
           Your search ends here with the trusted selection approved by the Green
           Ghost. Our meticulous search across the island has led us to the
           premier cannabis shops offering unparalleled quality products.
@@ -86,18 +86,18 @@ const CannabisShop: NextPage = () => {
             justifyContent={'center'}
             alignItems={'center'}
             flexDirection={'column'}
-            color="ghostVerse.green.base"
+            color={'ghostVerse.green.base'}
             mx={4}
             textAlign={'center'}
           >
             <Link href="/my-weed-solutions" title="My Weed Solutions" passHref>
               <Box
-                as="img"
+                as={'img'}
                 src="/media/green-ghost-grower-my-weed-solutions.webp"
                 width="80px"
                 height="80px"
-                maxW="inherit"
-                mx="auto"
+                maxW={'inherit'}
+                mx={'auto'}
                 alt="Green Ghost - Degen Weed Shop"
                 title="Green Ghost - Degen Weed Shop"
               />

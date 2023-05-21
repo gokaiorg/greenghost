@@ -11,7 +11,7 @@ interface BakeryItemProps {
 export const BakeryItem: FC<BakeryItemProps> = ({ name, price, pageLink }) => {
   return (
     <Box
-      borderColor="ghostVerse.green.base"
+      bordercolor={'ghostVerse.green.base'}
       borderWidth={1}
       bgColor={'ghostVerse.dark.lighter'}
       backdropFilter={'blur(3px)'}
@@ -19,8 +19,8 @@ export const BakeryItem: FC<BakeryItemProps> = ({ name, price, pageLink }) => {
       px={6}
       textAlign={'center'}
       fontWeight="bold"
-      fontSize="xl"
-      color="ghostVerse.green.base"
+      fontSize={'xl'}
+      color={'ghostVerse.green.base'}
       display={'flex'}
       width={'fit-content'}
     >

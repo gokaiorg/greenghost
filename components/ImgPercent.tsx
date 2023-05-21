@@ -10,7 +10,7 @@ export const ImgPercent = () => {
       height="14px"
     >
       <svg
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns={'http://www.w3.org/2000/svg'}
         viewBox="0 0 267.1 267.1"
         fill="currentColor"
         width="14px"

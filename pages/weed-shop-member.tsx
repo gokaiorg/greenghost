@@ -61,7 +61,7 @@ const WeedShopMember: NextPage = () => {
           backdropFilter={'blur(3px)'}
           p={4}
           my={4}
-          mx="auto"
+          mx={'auto'}
           mt="auto"
           display={'flex'}
           width={'fit-content'}

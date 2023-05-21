@@ -150,7 +150,7 @@ export const LedgerAccountsList: FC<LedgerAccountsListProps> = ({
         <Box
           key={account}
           marginBottom={0.5}
-          cursor="pointer"
+          cursor={'pointer'}
           border="1px solid transparent"
           borderRadius="md"
           _hover={{ border: '1px dotted #fff', paddingLeft: 2 }}
@@ -159,7 +159,7 @@ export const LedgerAccountsList: FC<LedgerAccountsListProps> = ({
           onClick={login(index, account)}
         >
           <Box
-            as="span"
+            as={'span'}
             display="inline-block"
             textAlign={'center'}
             minWidth={4}
@@ -168,7 +168,7 @@ export const LedgerAccountsList: FC<LedgerAccountsListProps> = ({
           </Box>
           :
           <Box
-            as="span"
+            as={'span'}
             display="inline-block"
             marginLeft={4}
             textAlign={'center'}
@@ -185,7 +185,7 @@ export const LedgerAccountsList: FC<LedgerAccountsListProps> = ({
         >
           Prev
         </Text>
-        <Text onClick={handleNext} cursor="pointer">
+        <Text onClick={handleNext} cursor={'pointer'}>
           Next
         </Text>
       </Flex>

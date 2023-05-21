@@ -75,7 +75,12 @@ const CryptoWeedShop: NextPage = () => {
           mr={'auto'}
           fontFamily={'vt323'}
         >
-          <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
+          <Text
+            as={'h2'}
+            fontWeight={'black'}
+            fontSize={'4xl'}
+            marginBottom={4}
+          >
             Are you from another universe in MultiversX
             <ImgQuestion />
           </Text>
@@ -94,18 +99,18 @@ const CryptoWeedShop: NextPage = () => {
               justifyContent={'center'}
               alignItems={'center'}
               flexDirection={'column'}
-              color="ghostVerse.green.base"
+              color={'ghostVerse.green.base'}
               as="a"
               mx={4}
               target="_blank"
               href="https://linktr.ee/elrondbuds"
             >
               <Box
-                as="img"
+                as={'img'}
                 src="/media/green-ghost-degen-weed-shop-partner-ebudsdac.webp"
                 width="80px"
                 height="80px"
-                maxW="inherit"
+                maxW={'inherit'}
                 alt="Green Ghost - Degen Weed Shop - eBudsDAC Partner"
                 title="Green Ghost - Degen Weed Shop - eBudsDAC Partner"
               />
@@ -116,18 +121,18 @@ const CryptoWeedShop: NextPage = () => {
               justifyContent={'center'}
               alignItems={'center'}
               flexDirection={'column'}
-              color="ghostVerse.green.base"
+              color={'ghostVerse.green.base'}
               as="a"
               mx={4}
               target="_blank"
               href="https://power.plata.network/"
             >
               <Box
-                as="img"
+                as={'img'}
                 src="/media/green-ghost-degen-weed-shop-partner-plata.webp"
                 width="80px"
                 height="80px"
-                maxW="inherit"
+                maxW={'inherit'}
                 alt="Green Ghost - Degen Weed Shop - Plata Partner"
                 title="Green Ghost - Degen Weed Shop - Plata Partner"
               />
@@ -138,18 +143,18 @@ const CryptoWeedShop: NextPage = () => {
               justifyContent={'center'}
               alignItems={'center'}
               flexDirection={'column'}
-              color="ghostVerse.green.base"
+              color={'ghostVerse.green.base'}
               as="a"
               mx={4}
               target="_blank"
               href="https://www.instagram.com/faintart.x/"
             >
               <Box
-                as="img"
+                as={'img'}
                 src="/media/green-ghost-degen-weed-shop-partner-fainart.webp"
                 width="80px"
                 height="80px"
-                maxW="inherit"
+                maxW={'inherit'}
                 alt="Green Ghost - Degen Weed Shop - Fainart Partner"
                 title="Green Ghost - Degen Weed Shop - Fainart Partner"
               />
@@ -160,18 +165,18 @@ const CryptoWeedShop: NextPage = () => {
               justifyContent={'center'}
               alignItems={'center'}
               flexDirection={'column'}
-              color="ghostVerse.green.base"
+              color={'ghostVerse.green.base'}
               as="a"
               mx={4}
               target="_blank"
               href="https://linktr.ee/gccmmxxi"
             >
               <Box
-                as="img"
+                as={'img'}
                 src="/media/green-ghost-degen-weed-shop-partner-gcc.webp"
                 width="80px"
                 height="80px"
-                maxW="inherit"
+                maxW={'inherit'}
                 alt="Green Ghost - Degen Weed Shop - GCC Partner"
                 title="Green Ghost - Degen Weed Shop - GCC Partner"
               />
@@ -182,18 +187,18 @@ const CryptoWeedShop: NextPage = () => {
               justifyContent={'center'}
               alignItems={'center'}
               flexDirection={'column'}
-              color="ghostVerse.green.base"
+              color={'ghostVerse.green.base'}
               as="a"
               mx={4}
               target="_blank"
               href="https://efforteconomy.io/"
             >
               <Box
-                as="img"
+                as={'img'}
                 src="/media/green-ghost-degen-weed-shop-partner-effort-economy.webp"
                 width="80px"
                 height="80px"
-                maxW="inherit"
+                maxW={'inherit'}
                 alt="Green Ghost - Degen Weed Shop - Effort Economy Partner"
                 title="Green Ghost - Degen Weed Shop - Effort Economy Partner"
               />
@@ -204,18 +209,18 @@ const CryptoWeedShop: NextPage = () => {
               justifyContent={'center'}
               alignItems={'center'}
               flexDirection={'column'}
-              color="ghostVerse.green.base"
+              color={'ghostVerse.green.base'}
               as="a"
               mx={4}
               target="_blank"
               href="https://peerme.io/"
             >
               <Box
-                as="img"
+                as={'img'}
                 src="/media/green-ghost-degen-weed-shop-partner-peerme.webp"
                 width="80px"
                 height="80px"
-                maxW="inherit"
+                maxW={'inherit'}
                 alt="Green Ghost - Degen Weed Shop - Peerme Partner"
                 title="Green Ghost - Degen Weed Shop - Peerme Partner"
               />
@@ -224,7 +229,12 @@ const CryptoWeedShop: NextPage = () => {
           </Box>
           <br />
           <br />
-          <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
+          <Text
+            as={'h2'}
+            fontWeight={'black'}
+            fontSize={'4xl'}
+            marginBottom={4}
+          >
             Join us now and take advantage of these exclusive perks!
           </Text>
         </Box>

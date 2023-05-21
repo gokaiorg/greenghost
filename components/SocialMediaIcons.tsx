@@ -4,12 +4,12 @@ import { Box } from '@chakra-ui/react';
 export const SocialMediaIcons = () => {
   return (
     <Box
-      display="inline-flex"
+      display={'inline-flex'}
       flexWrap="wrap"
       alignItems={'center'}
       justifyContent={'center'}
       gap={3}
-      mx="auto"
+      mx={'auto'}
     >
       <Box bgColor="black" borderRadius="100%">
         <SocialIcon

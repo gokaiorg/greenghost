@@ -77,12 +77,17 @@ const CryptoWeedShop: NextPage = () => {
           mr={'auto'}
           fontFamily={'vt323'}
         >
-          <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
+          <Text
+            as={'h2'}
+            fontWeight={'black'}
+            fontSize={'4xl'}
+            marginBottom={4}
+          >
             Join the new generation in love for weed, art and crypto.
           </Text>
           Green Ghost is a contributor to the{' '}
           <Text
-            color="ghostVerse.green.base"
+            color={'ghostVerse.green.base'}
             as="a"
             href="https://ghostverse.org/"
           >
@@ -95,7 +100,7 @@ const CryptoWeedShop: NextPage = () => {
           MxGhosts pixel and voxel NFTs holders receive a 31
           <ImgPercent /> discount and{' '}
           <Text
-            color="ghostVerse.green.base"
+            color={'ghostVerse.green.base'}
             as="a"
             target="_blank"
             href="https://linktr.ee/elrondbuds"
@@ -105,7 +110,7 @@ const CryptoWeedShop: NextPage = () => {
           </Text>{' '}
           cashback on all orders, in addition to earning{' '}
           <Text
-            color="ghostVerse.green.base"
+            color={'ghostVerse.green.base'}
             as="a"
             href="https://ghostverse.org/play-and-earn"
           >
@@ -114,7 +119,7 @@ const CryptoWeedShop: NextPage = () => {
           </Text>{' '}
           on{' '}
           <Text
-            color="ghostVerse.green.base"
+            color={'ghostVerse.green.base'}
             as="a"
             target="_blank"
             href="https://multiversx.com/"
@@ -124,13 +129,18 @@ const CryptoWeedShop: NextPage = () => {
           .
           <br />
           <br />
-          <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
+          <Text
+            as={'h2'}
+            fontWeight={'black'}
+            fontSize={'4xl'}
+            marginBottom={4}
+          >
             Looking to get your hands on a unique Mr. Ghost NFT
             <ImgQuestion />
           </Text>
           Head over to{' '}
           <Text
-            color="ghostVerse.green.base"
+            color={'ghostVerse.green.base'}
             as="a"
             href="https://ghostverse.org/mxghosts"
           >
@@ -140,7 +150,12 @@ const CryptoWeedShop: NextPage = () => {
           the secondary market. Make sure to follow our links to avoid scams.
           <br />
           <br />
-          <Text as="h2" fontWeight="black" fontSize={'4xl'} marginBottom={4}>
+          <Text
+            as={'h2'}
+            fontWeight={'black'}
+            fontSize={'4xl'}
+            marginBottom={4}
+          >
             New to the world of blockchain and NFTs
             <ImgQuestion />
           </Text>
@@ -149,7 +164,7 @@ const CryptoWeedShop: NextPage = () => {
             title="Install xPortal App"
             passHref
           >
-            <Box as="span" color="ghostVerse.green.base">
+            <Box as={'span'} color={'ghostVerse.green.base'}>
               Install xPortal Wallet on your phone
             </Box>
           </Link>{' '}

@@ -73,11 +73,11 @@ export const TransactionPendingModal: FC<TransactionPendingModalProps> = ({
         px={6}
         pt={7}
         pb={10}
-        position="relative"
+        position={'relative'}
       >
         <ModalCloseButton _focus={{ outline: 'none' }} />
         <ModalBody>
-          <Text textAlign={'center'} fontWeight="semibold" fontSize="xl">
+          <Text textAlign={'center'} fontWeight="semibold" fontSize={'xl'}>
             {txTitle()}
           </Text>
 

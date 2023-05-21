@@ -95,15 +95,15 @@ const WeedShopNearMe: NextPage = () => {
               >
                 <svg
                   width="30px"
-                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns={'http://www.w3.org/2000/svg'}
                   viewBox="0 0 24 24"
-                  fill="#4cfd27"
+                  fill={'#4cfd27'}
                   style={{ float: 'left', marginTop: '8', marginRight: '8' }}
                 >
                   <path
-                    fillRule="evenodd"
+                    fillRule={'evenodd'}
                     d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
-                    clipRule="evenodd"
+                    clipRule={'evenodd'}
                   />
                 </svg>
                 17 Thalang Rd, Talat Yai, Mueang Phuket District, Phuket 83000
@@ -116,71 +116,71 @@ const WeedShopNearMe: NextPage = () => {
             >
               <Box display={'flex'} mt={4}>
                 <svg
-                  width="20px"
-                  height="20px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="#4cfd27"
+                  width={'20px'}
+                  height={'20px'}
+                  xmlns={'http://www.w3.org/2000/svg'}
+                  viewBox={'0 0 20 20'}
+                  fill={'#4cfd27'}
                 >
                   <path
-                    fillRule="evenodd"
+                    fillRule={'evenodd'}
                     d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule="evenodd"
+                    clipRule={'evenodd'}
                   />
                 </svg>
                 <svg
-                  width="20px"
-                  height="20px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="#4cfd27"
+                  width={'20px'}
+                  height={'20px'}
+                  xmlns={'http://www.w3.org/2000/svg'}
+                  viewBox={'0 0 20 20'}
+                  fill={'#4cfd27'}
                 >
                   <path
-                    fillRule="evenodd"
+                    fillRule={'evenodd'}
                     d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule="evenodd"
+                    clipRule={'evenodd'}
                   />
                 </svg>
                 <svg
-                  width="20px"
-                  height="20px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="#4cfd27"
+                  width={'20px'}
+                  height={'20px'}
+                  xmlns={'http://www.w3.org/2000/svg'}
+                  viewBox={'0 0 20 20'}
+                  fill={'#4cfd27'}
                 >
                   <path
-                    fillRule="evenodd"
+                    fillRule={'evenodd'}
                     d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule="evenodd"
+                    clipRule={'evenodd'}
                   />
                 </svg>
                 <svg
-                  width="20px"
-                  height="20px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="#4cfd27"
+                  width={'20px'}
+                  height={'20px'}
+                  xmlns={'http://www.w3.org/2000/svg'}
+                  viewBox={'0 0 20 20'}
+                  fill={'#4cfd27'}
                 >
                   <path
-                    fillRule="evenodd"
+                    fillRule={'evenodd'}
                     d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule="evenodd"
+                    clipRule={'evenodd'}
                   />
                 </svg>
                 <svg
-                  width="20px"
-                  height="20px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="#4cfd27"
+                  width={'20px'}
+                  height={'20px'}
+                  xmlns={'http://www.w3.org/2000/svg'}
+                  viewBox={'0 0 20 20'}
+                  fill={'#4cfd27'}
                 >
                   <path
-                    fillRule="evenodd"
+                    fillRule={'evenodd'}
                     d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule="evenodd"
+                    clipRule={'evenodd'}
                   />
                 </svg>
-                <Box ml={2} color="ghostVerse.green.base">
+                <Box ml={2} color={'ghostVerse.green.base'}>
                   Add a review
                 </Box>
               </Box>
@@ -243,15 +243,15 @@ const WeedShopNearMe: NextPage = () => {
               >
                 <svg
                   width="30px"
-                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns={'http://www.w3.org/2000/svg'}
                   viewBox="0 0 24 24"
-                  fill="#4cfd27"
+                  fill={'#4cfd27'}
                   style={{ float: 'left', marginTop: '8', marginRight: '8' }}
                 >
                   <path
-                    fillRule="evenodd"
+                    fillRule={'evenodd'}
                     d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
-                    clipRule="evenodd"
+                    clipRule={'evenodd'}
                   />
                 </svg>
                 69/53 Soi Saiyuan, Rawai, Mueang Phuket District, Phuket 83100
@@ -264,71 +264,71 @@ const WeedShopNearMe: NextPage = () => {
             >
               <Box display={'flex'} mt={4}>
                 <svg
-                  width="20px"
-                  height="20px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="#4cfd27"
+                  width={'20px'}
+                  height={'20px'}
+                  xmlns={'http://www.w3.org/2000/svg'}
+                  viewBox={'0 0 20 20'}
+                  fill={'#4cfd27'}
                 >
                   <path
-                    fillRule="evenodd"
+                    fillRule={'evenodd'}
                     d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule="evenodd"
+                    clipRule={'evenodd'}
                   />
                 </svg>
                 <svg
-                  width="20px"
-                  height="20px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="#4cfd27"
+                  width={'20px'}
+                  height={'20px'}
+                  xmlns={'http://www.w3.org/2000/svg'}
+                  viewBox={'0 0 20 20'}
+                  fill={'#4cfd27'}
                 >
                   <path
-                    fillRule="evenodd"
+                    fillRule={'evenodd'}
                     d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule="evenodd"
+                    clipRule={'evenodd'}
                   />
                 </svg>
                 <svg
-                  width="20px"
-                  height="20px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="#4cfd27"
+                  width={'20px'}
+                  height={'20px'}
+                  xmlns={'http://www.w3.org/2000/svg'}
+                  viewBox={'0 0 20 20'}
+                  fill={'#4cfd27'}
                 >
                   <path
-                    fillRule="evenodd"
+                    fillRule={'evenodd'}
                     d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule="evenodd"
+                    clipRule={'evenodd'}
                   />
                 </svg>
                 <svg
-                  width="20px"
-                  height="20px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="#4cfd27"
+                  width={'20px'}
+                  height={'20px'}
+                  xmlns={'http://www.w3.org/2000/svg'}
+                  viewBox={'0 0 20 20'}
+                  fill={'#4cfd27'}
                 >
                   <path
-                    fillRule="evenodd"
+                    fillRule={'evenodd'}
                     d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule="evenodd"
+                    clipRule={'evenodd'}
                   />
                 </svg>
                 <svg
-                  width="20px"
-                  height="20px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="#4cfd27"
+                  width={'20px'}
+                  height={'20px'}
+                  xmlns={'http://www.w3.org/2000/svg'}
+                  viewBox={'0 0 20 20'}
+                  fill={'#4cfd27'}
                 >
                   <path
-                    fillRule="evenodd"
+                    fillRule={'evenodd'}
                     d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule="evenodd"
+                    clipRule={'evenodd'}
                   />
                 </svg>
-                <Box ml={2} color="ghostVerse.green.base">
+                <Box ml={2} color={'ghostVerse.green.base'}>
                   Add a review
                 </Box>
               </Box>

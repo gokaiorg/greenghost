@@ -59,10 +59,10 @@ const InstallXportal: NextPage = () => {
           p={4}
         >
           <Text
-            as="h2"
+            as={'h2'}
             color={'white'}
             fontSize={{ base: '4xl' }}
-            fontWeight="black"
+            fontWeight={'black'}
             mb={4}
           >
             You should try something that keeps you focused.

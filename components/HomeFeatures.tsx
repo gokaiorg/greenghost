@@ -5,7 +5,7 @@ export const HomeFeature = () => {
   return (
     <Box display={'flex'} my={10} flexWrap="wrap" mx={-1}>
       <Box width={{ base: '100%', lg: '33.333333%' }}>
-        <Link href="/weed-shop" passHref title="Weed Shop Buds Menu">
+        <Link href={'/weed-shop'} passHref title="Weed Shop Buds Menu">
           <Box
             fontSize={{ base: 'xl' }}
             fontFamily={'CubicFive12'}
@@ -95,7 +95,7 @@ export const HomeFeature = () => {
         </Link>
       </Box>
       <Box width={{ base: '100%', lg: '33.333333%' }}>
-        <Link href="/contact-us-buy-weed-online" passHref title="Contact Us">
+        <Link href="/contact-us-buy-weed-online" passHref title={'Contact Us'}>
           <Box
             fontSize={{ base: 'xl' }}
             fontFamily={'CubicFive12'}

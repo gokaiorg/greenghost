@@ -3,7 +3,7 @@ import { Box } from '@chakra-ui/react';
 export const ShopDegen = () => {
   return (
     <Box
-      as="h2"
+      as={'h2'}
       borderColor={'ghostVerse.color2.base'}
       bgColor={'ghostVerse.dark.lighter'}
       borderWidth={1}

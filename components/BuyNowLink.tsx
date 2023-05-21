@@ -10,8 +10,8 @@ export const BuyNowLink = () => {
         passHref
       >
         <Text
-          color="ghostVerse.green.base"
-          borderColor="ghostVerse.green.base"
+          color={'ghostVerse.green.base'}
+          bordercolor={'ghostVerse.green.base'}
           fontSize={20}
           borderWidth={1}
           bgColor={'ghostVerse.dark.lighter'}

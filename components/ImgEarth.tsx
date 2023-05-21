@@ -16,11 +16,11 @@ export const ImgEarth = () => {
         }}
       >
         <Box
-          as="img"
+          as={'img'}
           src="/media/green-ghost-degen-weed-shop.webp"
           width="80px"
           height="80px"
-          maxW="inherit"
+          maxW={'inherit'}
           alt="Green Ghost - Tokenized Cannabis Shop - GhostVerse MxGhosts NFT DAO"
           title="Green Ghost - Tokenized Cannabis Shop - GhostVerse MxGhosts NFT DAO"
         />

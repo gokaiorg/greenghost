@@ -15,7 +15,7 @@ export const PreRollItem: FC<PreRollItemProps> = ({
 }) => {
   return (
     <Box
-      borderColor="ghostVerse.green.base"
+      bordercolor={'ghostVerse.green.base'}
       borderWidth={1}
       bgColor={'ghostVerse.dark.lighter'}
       backdropFilter={'blur(3px)'}
@@ -23,8 +23,8 @@ export const PreRollItem: FC<PreRollItemProps> = ({
       px={6}
       textAlign={'center'}
       fontWeight="bold"
-      fontSize="xl"
-      color="ghostVerse.green.base"
+      fontSize={'xl'}
+      color={'ghostVerse.green.base'}
       display={'flex'}
       width={'fit-content'}
     >

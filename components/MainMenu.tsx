@@ -29,7 +29,7 @@ export const MainMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
       animate="animate"
       variants={fadeInUp}
     >
-      <SimpleGrid width="100%" columns={{ md: 4, sm: 2 }} spacing={10}>
+      <SimpleGrid width={'100%'} columns={{ md: 4, sm: 2 }} spacing={10}>
         {children}
       </SimpleGrid>
     </motion.div>

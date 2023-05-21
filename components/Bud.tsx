@@ -65,14 +65,14 @@ export const Bud = () => {
         flexDirection={{ base: 'column', lg: 'row' }}
       >
         <Box
-          as="h2"
+          as={'h2'}
           borderColor={'ghostVerse.color2.base'}
           bgColor={'ghostVerse.dark.lighter'}
           borderWidth={1}
           backdropFilter={'blur(3px)'}
           p={4}
           mb={4}
-          display="inline-flex"
+          display={'inline-flex'}
           marginRight="auto"
           flexWrap={'wrap'}
           fontSize={30}
@@ -85,8 +85,8 @@ export const Bud = () => {
               value={sortBy}
               onChange={handleSortChange}
               borderRadius="0"
-              borderColor="ghostVerse.green.base"
-              color="ghostVerse.green.base"
+              bordercolor={'ghostVerse.green.base'}
+              color={'ghostVerse.green.base'}
               outline="none"
             >
               <option value="priceLowToHigh">Price: Low to High</option>
@@ -104,8 +104,8 @@ export const Bud = () => {
               value={dominanceFilter}
               onChange={handleDominanceChange}
               borderRadius="0"
-              borderColor="ghostVerse.green.base"
-              color="ghostVerse.green.base"
+              bordercolor={'ghostVerse.green.base'}
+              color={'ghostVerse.green.base'}
               outline="none"
             >
               <option value="All">All Dominance</option>

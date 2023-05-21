@@ -30,12 +30,12 @@ export const Hero = () => {
     collectionSize && totalTokensLeft ? collectionSize - totalTokensLeft : 0;
 
   return (
-    <Box width="100%">
+    <Box width={'100%'}>
       <Text
-        as="h1"
+        as={'h1'}
         fontSize={{ base: '2xl', md: '3xl', lg: '5xl' }}
         textAlign={{ base: 'center', md: 'left' }}
-        fontWeight="black"
+        fontWeight={'black'}
         lineHeight="shorter"
         mb={5}
       >
@@ -62,14 +62,14 @@ export const Hero = () => {
         blockchain.
       </Text>
       <Text
-        as="h2"
+        as={'h2'}
         fontSize="lg"
         fontWeight="thin"
         textAlign={{ base: 'center', md: 'left' }}
       >
         The actual working example is connected to the Elven Tools smart
         contract deployed on the MultiversX blockchain{' '}
-        <Text as="span" fontWeight="medium">
+        <Text as={'span'} fontWeight="medium">
           devnet
         </Text>
         ! You can play with it. I will redeploy it from time to time to keep the

@@ -64,8 +64,8 @@ export default function ProductPage({ product }: ProductPageProps) {
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
         <Box
-          cursor="pointer"
-          color="ghostVerse.green.base"
+          cursor={'pointer'}
+          color={'ghostVerse.green.base'}
           onClick={handleBack}
         >
           Go back
@@ -78,7 +78,7 @@ export default function ProductPage({ product }: ProductPageProps) {
             <Box
               display={'flex'}
               ml="auto"
-              fontSize="xl"
+              fontSize={'xl'}
               fontFamily={'CubicFive12'}
               color="ghostVerse.red.base"
             >
@@ -88,7 +88,7 @@ export default function ProductPage({ product }: ProductPageProps) {
         </Box>
         <Swiper
           spaceBetween={10}
-          slidesPerView="auto"
+          slidesPerView={'auto'}
           breakpoints={{
             320: {
               slidesPerView: 1,
@@ -126,7 +126,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                 width={500}
                 height={500}
                 alt={product.imgDesc}
-                layout="responsive"
+                layout={'responsive'}
               />
             </SwiperSlide>
           ))}
@@ -137,22 +137,22 @@ export default function ProductPage({ product }: ProductPageProps) {
             <Box
               display={'flex'}
               flexDirection={{ base: 'column' }}
-              fontSize="3xl"
+              fontSize={'3xl'}
               fontFamily={'vt323'}
             >
               <Box>
                 {product.dominance == 'Indica Dominant' && (
-                  <Box as="h2" color="ghostVerse.blue.base" marginRight={4}>
+                  <Box as={'h2'} color="ghostVerse.blue.base" marginRight={4}>
                     {product.dominance}
                   </Box>
                 )}
                 {product.dominance == 'Sativa Dominant' && (
-                  <Box as="h2" color="ghostVerse.pink.base" marginRight={4}>
+                  <Box as={'h2'} color="ghostVerse.pink.base" marginRight={4}>
                     {product.dominance}
                   </Box>
                 )}
                 {product.dominance == 'Hybrid' && (
-                  <Box as="h2" color="ghostVerse.orange.base" marginRight={4}>
+                  <Box as={'h2'} color="ghostVerse.orange.base" marginRight={4}>
                     {product.dominance}
                   </Box>
                 )}
@@ -161,7 +161,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                 <Box marginRight={4} display={'flex'}>
                   Indica
                   <Box
-                    color="ghostVerse.green.base"
+                    color={'ghostVerse.green.base'}
                     display={'flex'}
                     alignItems="baseline"
                     marginLeft={2}
@@ -173,7 +173,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                 <Box marginRight={4} display={'flex'}>
                   Sativa
                   <Box
-                    color="ghostVerse.green.base"
+                    color={'ghostVerse.green.base'}
                     display={'flex'}
                     alignItems="baseline"
                     marginLeft={2}
@@ -187,7 +187,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                 <Box marginRight={4} display={'flex'}>
                   THC
                   <Box
-                    color="ghostVerse.green.base"
+                    color={'ghostVerse.green.base'}
                     display={'flex'}
                     alignItems="baseline"
                     marginLeft={2}
@@ -200,7 +200,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                   <Box marginRight={4} display={'flex'}>
                     CBD
                     <Box
-                      color="ghostVerse.green.base"
+                      color={'ghostVerse.green.base'}
                       display={'flex'}
                       alignItems="baseline"
                       marginLeft={2}
@@ -215,11 +215,11 @@ export default function ProductPage({ product }: ProductPageProps) {
             <Box
               display={'flex'}
               flexDirection={{ base: 'column', md: 'row' }}
-              fontSize="3xl"
+              fontSize={'3xl'}
               fontFamily={'vt323'}
             >
               <Box marginRight={4}>
-                <Box as="h2" color="ghostVerse.green.base">
+                <Box as={'h2'} color={'ghostVerse.green.base'}>
                   Feelings
                 </Box>
               </Box>
@@ -229,12 +229,12 @@ export default function ProductPage({ product }: ProductPageProps) {
               <Box
                 display={'flex'}
                 flexDirection={{ base: 'column', md: 'row' }}
-                fontSize="3xl"
+                fontSize={'3xl'}
                 marginBottom={4}
                 fontFamily={'vt323'}
               >
                 <Box marginRight={4}>
-                  <Box as="h2" color="ghostVerse.green.base">
+                  <Box as={'h2'} color={'ghostVerse.green.base'}>
                     Relieves
                   </Box>
                 </Box>
@@ -246,14 +246,14 @@ export default function ProductPage({ product }: ProductPageProps) {
             order={{ base: 1, lg: 2 }}
             marginTop={6}
             marginLeft={'auto'}
-            fontSize="2xl"
+            fontSize={'2xl'}
           >
             {product.quantity !== 0 && product.price !== 666 && (
               <>
                 <Box
                   display={'flex'}
                   justifyContent="end"
-                  fontSize="xl"
+                  fontSize={'xl'}
                   color="ghostVerse.red.base"
                   fontFamily={'CubicFive12'}
                 >
@@ -264,7 +264,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                   <Box
                     fontFamily={'CubicFive12'}
                     display={'flex'}
-                    color="ghostVerse.green.base"
+                    color={'ghostVerse.green.base'}
                     ml={4}
                   >
                     {product.price} THB
@@ -279,7 +279,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                     display={'flex'}
                     justifyContent="end"
                     mb={2}
-                    fontSize="xl"
+                    fontSize={'xl'}
                     color="ghostVerse.grey.lighter"
                     _hover={{
                       color: 'ghostVerse.green.base',
@@ -297,7 +297,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                   <Box
                     fontFamily={'CubicFive12'}
                     display={'flex'}
-                    color="ghostVerse.green.base"
+                    color={'ghostVerse.green.base'}
                     ml={4}
                   >
                     {(product.price * 10 - product.price).toFixed(0)} THB
@@ -312,7 +312,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                     display={'flex'}
                     justifyContent="end"
                     mb={2}
-                    fontSize="xl"
+                    fontSize={'xl'}
                     color="ghostVerse.grey.lighter"
                     _hover={{
                       color: 'ghostVerse.green.base',
@@ -334,8 +334,8 @@ export default function ProductPage({ product }: ProductPageProps) {
                     display={'flex'}
                     justifyContent="end"
                     mb={2}
-                    fontSize="xl"
-                    color="ghostVerse.green.base"
+                    fontSize={'xl'}
+                    color={'ghostVerse.green.base'}
                   >
                     Wholesale
                   </Box>
@@ -352,7 +352,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                 <Box
                   display={'flex'}
                   justifyContent="end"
-                  fontSize="xl"
+                  fontSize={'xl'}
                   fontFamily={'CubicFive12'}
                   color="ghostVerse.red.base"
                   _hover={{
@@ -388,7 +388,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                   Grower
                 </Box>
                 <Link href={product.growerSlug} title={product.grower} passHref>
-                  <Box display={'flex'} color="ghostVerse.green.base" mr={4}>
+                  <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
                     {product.grower}
                   </Box>
                 </Link>
@@ -405,7 +405,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                   title="Cannabis Grower Phuket"
                   passHref
                 >
-                  <Box display={'flex'} color="ghostVerse.green.base" mr={4}>
+                  <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
                     {product.origin}
                   </Box>
                 </Link>
@@ -417,7 +417,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                 <Box as={'h3'} mr={2}>
                   Environment
                 </Box>
-                <Box display={'flex'} color="ghostVerse.green.base" mr={4}>
+                <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
                   {product.environment}
                 </Box>
               </Box>
@@ -428,7 +428,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                 <Box as={'h3'} mr={2}>
                   Harvest
                 </Box>
-                <Box display={'flex'} color="ghostVerse.green.base" mr={4}>
+                <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
                   {product.harvest}
                 </Box>
               </Box>
@@ -444,9 +444,9 @@ export default function ProductPage({ product }: ProductPageProps) {
           p={4}
           my={4}
           mb={10}
-          display="inline-flex"
+          display={'inline-flex'}
           flexDirection={'column'}
-          fontSize="3xl"
+          fontSize={'3xl'}
           fontFamily={'vt323'}
           whiteSpace="pre-line"
         >
@@ -454,7 +454,7 @@ export default function ProductPage({ product }: ProductPageProps) {
           <Box
             display={'flex'}
             flexDirection={'column'}
-            color="ghostVerse.green.base"
+            color={'ghostVerse.green.base'}
             as="a"
             mr={4}
             target="_blank"

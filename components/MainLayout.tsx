@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       />
       <Box
         minHeight="calc(100vh - 34px)"
-        position="relative"
+        position={'relative'}
         zIndex={3}
         color="ghostVerse.color2.darker"
         mb={5}

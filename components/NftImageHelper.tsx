@@ -63,14 +63,14 @@ const MaybeWithHref: FC<PropsWithChildren<WithHrefProps>> = ({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        position="relative"
+        position={'relative'}
         display="block"
       >
         {children}
       </Box>
     );
   }
-  return <Box position="relative">{children}</Box>;
+  return <Box position={'relative'}>{children}</Box>;
 };
 
 export const NftImageHelper: FC<NftImageHelperProps> = ({

@@ -4,7 +4,7 @@ export const ImgQuestion = () => {
   return (
     <Box display="inline-block" marginLeft={1} width="16px" height="27px">
       <svg
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns={'http://www.w3.org/2000/svg'}
         viewBox="0 0 189.2 311.7"
         fill="#fff"
         width="16px"

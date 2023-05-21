@@ -56,8 +56,8 @@ const SpaceCakeBrownie: NextPage = () => {
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
         <Box
-          cursor="pointer"
-          color="ghostVerse.green.base"
+          cursor={'pointer'}
+          color={'ghostVerse.green.base'}
           onClick={handleBack}
         >
           Go back
@@ -75,44 +75,44 @@ const SpaceCakeBrownie: NextPage = () => {
         >
           <SwiperSlide>
             <Box
-              as="img"
+              as={'img'}
               src="/media/green-ghost-degen-weed-shop-edible-brownie-og-kush-01.webp"
-              width="100%"
-              height="100%"
-              maxW="inherit"
+              width={'100%'}
+              height={'100%'}
+              maxW={'inherit'}
               alt="Green Ghost - Degen Weed Shop - Brownie OG Kush"
               title="Green Ghost - Degen Weed Shop - Brownie OG Kush"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Box
-              as="img"
+              as={'img'}
               src="/media/green-ghost-degen-weed-shop-edible-brownie-og-kush-02.webp"
-              width="100%"
-              height="100%"
-              maxW="inherit"
+              width={'100%'}
+              height={'100%'}
+              maxW={'inherit'}
               alt="Green Ghost - Degen Weed Shop - Brownie OG Kush"
               title="Green Ghost - Degen Weed Shop - Brownie OG Kush"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Box
-              as="img"
+              as={'img'}
               src="/media/green-ghost-degen-weed-shop-edible-brownie-og-kush-03.webp"
-              width="100%"
-              height="100%"
-              maxW="inherit"
+              width={'100%'}
+              height={'100%'}
+              maxW={'inherit'}
               alt="Green Ghost - Degen Weed Shop - Brownie OG Kush"
               title="Green Ghost - Degen Weed Shop - Brownie OG Kush"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Box
-              as="img"
+              as={'img'}
               src="/media/green-ghost-degen-weed-shop-edible-brownie-og-kush-04.webp"
-              width="100%"
-              height="100%"
-              maxW="inherit"
+              width={'100%'}
+              height={'100%'}
+              maxW={'inherit'}
               alt="Green Ghost - Degen Weed Shop - Brownie OG Kush"
               title="Green Ghost - Degen Weed Shop - Brownie OG Kush"
             />
@@ -125,9 +125,9 @@ const SpaceCakeBrownie: NextPage = () => {
           backdropFilter={'blur(3px)'}
           p={4}
           my={4}
-          display="inline-flex"
+          display={'inline-flex'}
           flexDirection={'column'}
-          fontSize="3xl"
+          fontSize={'3xl'}
           fontFamily={'vt323'}
         >
           Introducing the ultimate indulgence for cannabis lovers, our Brownie

@@ -6,6 +6,8 @@ import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import Head from 'next/head';
 import { HomeSlider } from '../components/HomeSlider';
 import { HomeFeature } from '../components/HomeFeatures';
+import { TestimonialSlider } from '../components/TestimonialSlider';
+import { Text } from '@chakra-ui/react';
 
 const Home: NextPage = () => {
   return (
@@ -52,6 +54,17 @@ const Home: NextPage = () => {
         <HomeSectionTitle title="Green Ghost - Degen Weed Shop ร้าน ขาย กัญชา." />
         <HomeSlider />
         <HomeFeature />
+        <Text
+          as={'h3'}
+          fontSize={'2xl'}
+          mx={'auto'}
+          fontFamily={'CubicFive12'}
+          mt={10}
+          textAlign={'center'}
+        >
+          Green Ghosted Peeps
+        </Text>
+        <TestimonialSlider />
       </MainLayout>
     </>
   );

@@ -16,17 +16,17 @@ export const Footer = () => {
         fontWeight="normal"
         textAlign={'center'}
       >
-        <Text as="h2" fontSize="2xl" fontFamily={'CubicFive12'}>
+        <Text as={'h2'} fontSize={'2xl'} fontFamily={'CubicFive12'}>
           Follow Us
         </Text>
         <Box
           as={'h3'}
           display={'flex'}
           justifyContent={'center'}
-          fontSize="3xl"
+          fontSize={'3xl'}
           marginBottom={4}
           w={'full'}
-          color="ghostVerse.green.base"
+          color={'ghostVerse.green.base'}
           fontFamily={'vt323'}
         >
           @greenghostdegen
@@ -37,7 +37,7 @@ export const Footer = () => {
           fontSize="xs"
           fontWeight="bold"
           mb={{ base: '2', md: '4' }}
-          position="relative"
+          position={'relative'}
           zIndex={1}
           display={'flex'}
           justifyContent={'center'}

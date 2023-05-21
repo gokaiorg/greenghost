@@ -50,24 +50,24 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
         margin="auto"
         px={6}
         width={{ base: '100%', md: '60%' }}
-        height="fit-content"
+        height={'fit-content'}
       >
         <Box
           onTouchStart={handleClose}
-          as="img"
+          as={'img'}
           src="/media/green-ghost-degen-weed-shop-older-20-only.webp"
           width="300px"
           height="300px"
-          maxW="inherit"
+          maxW={'inherit'}
           alt="Green Ghost - Degen Weed Shop - 20 or older only"
           title="Green Ghost - Degen Weed Shop - 20 or older only"
         />
         <Box
-          as="h2"
+          as={'h2'}
           display={'flex'}
           flexDirection="row"
           alignItems="baseline"
-          fontSize="2xl"
+          fontSize={'2xl'}
           mt={4}
           whiteSpace="nowrap"
         >
@@ -75,11 +75,11 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           <ImgQuestion />
         </Box>
         <Box
-          as="span"
-          display="inline-flex"
-          color="ghostVerse.green.base"
-          borderColor="ghostVerse.green.base"
-          fontSize="xl"
+          as={'span'}
+          display={'inline-flex'}
+          color={'ghostVerse.green.base'}
+          bordercolor={'ghostVerse.green.base'}
+          fontSize={'xl'}
           borderWidth={1}
           bgColor={'ghostVerse.dark.lighter'}
           backdropFilter={'blur(3px)'}
@@ -88,7 +88,7 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           mb={2}
           mr={'auto'}
           outline="none"
-          cursor="pointer"
+          cursor={'pointer'}
           onClick={verifyAge}
           onTouchStart={verifyAge}
           onTouchMove={verifyAge}
@@ -101,11 +101,11 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
         <br />
         <Link href="https://ghostverse.org/" title="GhostVerse" passHref>
           <Box
-            as="span"
-            display="inline-flex"
+            as={'span'}
+            display={'inline-flex'}
             color="#EF2625"
             borderColor="#EF2625"
-            fontSize="xl"
+            fontSize={'xl'}
             borderWidth={1}
             bgColor={'ghostVerse.dark.lighter'}
             backdropFilter={'blur(3px)'}

@@ -45,7 +45,7 @@ export const MobileLoginQR: FunctionComponent<MobileLoginQRProps> = ({
       {mobile ? (
         <Flex justifyContent={'center'} background="black">
           <Box
-            width="100%"
+            width={'100%'}
             textAlign={'center'}
             borderColor="ghostVerse.color1.darker"
             borderWidth={1}
