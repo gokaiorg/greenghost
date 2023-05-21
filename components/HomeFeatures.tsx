@@ -95,7 +95,11 @@ export const HomeFeature = () => {
         </Link>
       </Box>
       <Box width={{ base: '100%', lg: '33.333333%' }}>
-        <Link href={'/contact-us-buy-weed-online'} passHref title={'Contact Us'}>
+        <Link
+          href={'/contact-us-buy-weed-online'}
+          passHref
+          title={'Contact Us'}
+        >
           <Box
             fontSize={{ base: 'xl' }}
             fontFamily={'CubicFive12'}

@@ -63,7 +63,9 @@ export const FindUsAlso = () => {
         <Box m={4} color={'ghostVerse.green.base'}>
           <Link
             title={'Find Us on Thailand Weed'}
-            href={'https://www.thailandweed.com/directory-dispensaries/listing/green-ghost/'}
+            href={
+              'https://www.thailandweed.com/directory-dispensaries/listing/green-ghost/'
+            }
             passHref
           >
             Thailand Weed
