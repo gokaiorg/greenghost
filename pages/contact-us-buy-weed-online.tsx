@@ -104,7 +104,7 @@ const BuyWeed: NextPage = () => {
               <Text
                 display={'inline-flex'}
                 color={'ghostVerse.green.base'}
-                bordercolor={'ghostVerse.green.base'}
+                borderColor={'ghostVerse.green.base'}
                 fontSize={{ base: '5xl' }}
                 borderWidth={1}
                 whiteSpace="nowrap"

@@ -27,7 +27,7 @@ function NavLink({ to, activeProps, children, ...props }: NavLinkProps) {
           fontSize="lg"
           display={'inline-flex'}
           color={'ghostVerse.green.base'}
-          bordercolor={'ghostVerse.green.base'}
+          borderColor={'ghostVerse.green.base'}
           borderBottomWidth={2}
           borderTopWidth={0}
           borderLeftWidth={0}

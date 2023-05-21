@@ -5,7 +5,7 @@ export const SocialMediaIcons = () => {
   return (
     <Box
       display={'inline-flex'}
-      flexWrap="wrap"
+      flexWrap={'wrap'}
       alignItems={'center'}
       justifyContent={'center'}
       gap={3}

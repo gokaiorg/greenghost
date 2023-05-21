@@ -2,7 +2,7 @@ import { Box, Text } from '@chakra-ui/react';
 
 export const WeedDeliveryFeature = () => {
   return (
-    <Box display={'flex'} my={10} flexWrap="wrap">
+    <Box display={'flex'} my={10} flexWrap={'wrap'}>
       <Text
         as={'h4'}
         fontSize={{ base: 'xl' }}

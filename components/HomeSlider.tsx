@@ -344,8 +344,8 @@ export const HomeSlider = () => {
             strains is delivered right to your doorstep.
           </Text>
           <Link
-            href="/contact-us-buy-weed-online"
-            title="Contact Us To Buy Weed Online"
+            href={'/contact-us-buy-weed-online'}
+            title={'Contact Us to buy weed online'}
           >
             <Text
               display={'inline-flex'}

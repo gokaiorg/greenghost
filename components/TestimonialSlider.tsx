@@ -1103,7 +1103,7 @@ export const TestimonialSlider = () => {
               </svg>
             </Box>
             <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
-              Nati a été très sympathique, ses produits sont d'une grande
+              Nati a été très sympathique, ses produits sont d&apos;une grande
               qualité. Je recommande chaudement !{' '}
             </Text>
             <Link

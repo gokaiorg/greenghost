@@ -118,8 +118,8 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
           </Box>
         </Link>
         <Link
-          href="/contact-us-buy-weed-online"
-          title="Contact us to buy weed online"
+          href={'/contact-us-buy-weed-online'}
+          title={'Contact Us to buy weed online'}
           passHref
         >
           <Box

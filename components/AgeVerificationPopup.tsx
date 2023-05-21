@@ -78,7 +78,7 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           as={'span'}
           display={'inline-flex'}
           color={'ghostVerse.green.base'}
-          bordercolor={'ghostVerse.green.base'}
+          borderColor={'ghostVerse.green.base'}
           fontSize={'xl'}
           borderWidth={1}
           bgColor={'ghostVerse.dark.lighter'}
@@ -99,7 +99,7 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           Yes, I am over 20
         </Box>
         <br />
-        <Link href="https://ghostverse.org/" title="GhostVerse" passHref>
+        <Link href={'https://ghostverse.org/'} title={'GhostVerse'} passHref>
           <Box
             as={'span'}
             display={'inline-flex'}

@@ -11,7 +11,7 @@ interface BakeryItemProps {
 export const BakeryItem: FC<BakeryItemProps> = ({ name, price, pageLink }) => {
   return (
     <Box
-      bordercolor={'ghostVerse.green.base'}
+      borderColor={'ghostVerse.green.base'}
       borderWidth={1}
       bgColor={'ghostVerse.dark.lighter'}
       backdropFilter={'blur(3px)'}

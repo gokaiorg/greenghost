@@ -17,7 +17,7 @@ export const BudItem = ({ product }: BudItemProps) => {
     >
       <Link href={product.slug} title={product.name} passHref>
         <Box
-          bordercolor={'ghostVerse.green.base'}
+          borderColor={'ghostVerse.green.base'}
           borderWidth={1}
           bgColor={'ghostVerse.dark.lighter'}
           backdropFilter={'blur(3px)'}

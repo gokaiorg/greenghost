@@ -77,7 +77,7 @@ export default function ProductPage({ product }: ProductPageProps) {
           {product.quantity === 0 && (
             <Box
               display={'flex'}
-              ml="auto"
+              ml={'auto'}
               fontSize={'xl'}
               fontFamily={'CubicFive12'}
               color="ghostVerse.red.base"
@@ -326,8 +326,8 @@ export default function ProductPage({ product }: ProductPageProps) {
                   </Box>
                 </Link>
                 <Link
-                  href="/contact-us-buy-weed-online"
-                  title="Contact Us To Buy Weed Online"
+                  href={'/contact-us-buy-weed-online'}
+                  title={'Contact Us to buy weed online'}
                   passHref
                 >
                   <Box

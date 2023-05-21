@@ -85,7 +85,7 @@ export const Bud = () => {
               value={sortBy}
               onChange={handleSortChange}
               borderRadius="0"
-              bordercolor={'ghostVerse.green.base'}
+              borderColor={'ghostVerse.green.base'}
               color={'ghostVerse.green.base'}
               outline="none"
             >
@@ -104,7 +104,7 @@ export const Bud = () => {
               value={dominanceFilter}
               onChange={handleDominanceChange}
               borderRadius="0"
-              bordercolor={'ghostVerse.green.base'}
+              borderColor={'ghostVerse.green.base'}
               color={'ghostVerse.green.base'}
               outline="none"
             >
