@@ -48,23 +48,22 @@ export const Footer = () => {
           </Text>
         </Box>
         <Text
-            as="a"
-            color="ghostVerse.color1.darker"
-            href="https://ghostverse.org/"
-            mx={2}
+          as="a"
+          color="ghostVerse.color1.darker"
+          href="https://ghostverse.org/"
+          mx={2}
           width={'100%'}
-          
-          >
-            <Box w={'200px'} mx={'auto'}>
-              <Image
-                src="/media/green-ghost-degen-weed-shop-ghostverse-dao.png"
-                width={100}
-                height={100}
-                alt="Green Ghost - Degen Weed Shop - Weed Menu."
-                layout={'responsive'}
-              />
-            </Box>
-          </Text>
+        >
+          <Box w={'200px'} mx={'auto'}>
+            <Image
+              src="/media/green-ghost-degen-weed-shop-ghostverse-dao.png"
+              width={100}
+              height={100}
+              alt="Green Ghost - Degen Weed Shop - Weed Menu."
+              layout={'responsive'}
+            />
+          </Box>
+        </Text>
       </Container>
     </Box>
   );
