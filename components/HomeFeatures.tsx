@@ -10,7 +10,7 @@ export const HomeFeature = () => {
       mx={-1}
       alignItems={'stretch'}
     >
-      <Box width={{ base: '100%', lg: '33.333333%' }}>
+      <Box width={{ base: '100%', lg: '33.333333%' }} mb={2}>
         <Link
           href="/weed-delivery-phuket"
           passHref
@@ -59,7 +59,7 @@ export const HomeFeature = () => {
           </Box>
         </Link>
       </Box>
-      <Box width={{ base: '100%', lg: '33.333333%' }}>
+      <Box width={{ base: '100%', lg: '33.333333%' }} mb={2}>
         <Link
           href={'/weed-drive-thru-phuket'}
           passHref
@@ -108,7 +108,7 @@ export const HomeFeature = () => {
           </Box>
         </Link>
       </Box>
-      <Box width={{ base: '100%', lg: '33.333333%' }}>
+      <Box width={{ base: '100%', lg: '33.333333%' }} mb={2}>
         <Link
           href={'/contact-us-buy-weed-online'}
           passHref
