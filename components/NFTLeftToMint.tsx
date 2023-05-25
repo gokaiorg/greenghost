@@ -25,7 +25,7 @@ export const NFTLeftToMint: FC<NFTLeftToMintProps> = ({
       alignItems={'center'}
       justifyContent={{ base: 'center', md: 'flex-start' }}
     >
-      <Text fontSize={{ base: 'md', sm: 'lg' }} fontWeight="bold">
+      <Text fontSize={{ base: 'md', sm: 'lg' }} fontWeight={'bold'}>
         {dropActive ? 'Current drop' : 'Total'} NFTs left to mint:{' '}
       </Text>
       {dataLoading ? (

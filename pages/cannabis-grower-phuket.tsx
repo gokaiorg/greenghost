@@ -67,7 +67,7 @@ const CannabisShop: NextPage = () => {
           my={4}
           display={'flex'}
           width={'fit-content'}
-          flexDirection="row"
+          flexDirection={'row'}
           alignItems="baseline"
           fontSize={'4xl'}
           fontFamily={'vt323'}
@@ -102,6 +102,56 @@ const CannabisShop: NextPage = () => {
                 title="Green Ghost - Degen Weed Shop"
               />
               My Weed Solutions
+            </Link>
+          </Box>
+          <Box
+            display={'flex'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            flexDirection={'column'}
+            color={'ghostVerse.green.base'}
+            mx={4}
+            textAlign={'center'}
+          >
+            <Link
+              href="/cosmic-temple-vibes"
+              title="Cosmic Temple Vibes"
+              passHref
+            >
+              <Box
+                as={'img'}
+                src="/media/green-ghost-grower-cosmic-temple-vibes.png"
+                width="80px"
+                height="80px"
+                maxW={'inherit'}
+                mx={'auto'}
+                alt="Green Ghost - Cosmic Temple Vibes"
+                title="Green Ghost - Cosmic Temple Vibes"
+              />
+              Cosmic Temple Vibes
+            </Link>
+          </Box>
+          <Box
+            display={'flex'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            flexDirection={'column'}
+            color={'ghostVerse.green.base'}
+            mx={4}
+            textAlign={'center'}
+          >
+            <Link href="/buddy-bud-weed" title="Buddy Bud Weed" passHref>
+              <Box
+                as={'img'}
+                src="/media/green-ghost-grower-buddy-bud-weed.png"
+                width="80px"
+                height="80px"
+                maxW={'inherit'}
+                mx={'auto'}
+                alt="Green Ghost - Buddy Bud Weed"
+                title="Green Ghost - Buddy Bud Weed"
+              />
+              Buddy Bud Weed
             </Link>
           </Box>
         </Box>

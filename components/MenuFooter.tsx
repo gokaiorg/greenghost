@@ -6,11 +6,12 @@ export const MenuFooter = () => {
     <>
       <Text
         as={'h3'}
-        fontSize="lg"
+        fontSize={'lg'}
         mx={'auto'}
         fontFamily={'CubicFive12'}
         mt={10}
         textAlign={'center'}
+        color={'ghostVerse.color2.darker'}
       >
         Links
       </Text>
@@ -54,6 +55,15 @@ export const MenuFooter = () => {
             passHref
           >
             Delivery |
+          </Link>
+        </Box>
+        <Box m={2} color={'ghostVerse.green.base'}>
+          <Link
+            title="Drive Thru Phuket"
+            href="/weed-drive-thru-phuket"
+            passHref
+          >
+            Drive-Thru |
           </Link>
         </Box>
         <Box m={2} color={'ghostVerse.green.base'}>

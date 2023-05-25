@@ -107,7 +107,7 @@ const BuyWeed: NextPage = () => {
                 borderColor={'ghostVerse.green.base'}
                 fontSize={{ base: '5xl' }}
                 borderWidth={1}
-                whiteSpace="nowrap"
+                whiteSpace={'nowrap'}
                 bgColor={'ghostVerse.dark.lighter'}
                 backdropFilter={'blur(3px)'}
                 py={2}

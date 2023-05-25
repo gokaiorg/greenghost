@@ -16,7 +16,7 @@ export const NFTMintedAlready: FC<NFTMintedAlreadyProps> = ({
       alignItems={'center'}
       justifyContent={{ base: 'center', md: 'flex-start' }}
     >
-      <Text fontSize={{ base: 'md', sm: 'lg' }} fontWeight="bold">
+      <Text fontSize={{ base: 'md', sm: 'lg' }} fontWeight={'bold'}>
         You have minted:{' '}
       </Text>
 
@@ -33,7 +33,7 @@ export const NFTMintedAlready: FC<NFTMintedAlreadyProps> = ({
         </Text>
       )}
 
-      <Text fontSize={{ base: 'md', sm: 'lg' }} fontWeight="bold" ml={3}>
+      <Text fontSize={{ base: 'md', sm: 'lg' }} fontWeight={'bold'} ml={3}>
         in total
       </Text>
     </Box>

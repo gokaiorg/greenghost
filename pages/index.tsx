@@ -2,12 +2,12 @@ import type { NextPage } from 'next';
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
-import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import Head from 'next/head';
 import { HomeSlider } from '../components/HomeSlider';
 import { HomeFeature } from '../components/HomeFeatures';
 import { TestimonialSlider } from '../components/TestimonialSlider';
-import { Text } from '@chakra-ui/react';
+import { HomeMenu } from '../components/HomeMenu';
+import { HomeFwens } from '../components/HomeFwens';
 
 const Home: NextPage = () => {
   return (
@@ -51,19 +51,10 @@ const Home: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <HomeSectionTitle title="Green Ghost - Degen Weed Shop ร้าน ขาย กัญชา." />
         <HomeSlider />
+        <HomeMenu />
         <HomeFeature />
-        <Text
-          as={'h3'}
-          fontSize={'2xl'}
-          mx={'auto'}
-          fontFamily={'CubicFive12'}
-          mt={10}
-          textAlign={'center'}
-        >
-          Green Ghosted Peeps
-        </Text>
+        <HomeFwens />
         <TestimonialSlider />
       </MainLayout>
     </>

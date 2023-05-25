@@ -95,7 +95,7 @@ export const TransactionPendingModal: FC<TransactionPendingModalProps> = ({
                     fontWeight="normal"
                     color="ghostVerse.color1.darker"
                     userSelect="none"
-                    transition={'background-color .3s'}
+                    transition={'all .3s'}
                   >
                     {shortenHash(successTxHash)}
                   </Text>
@@ -113,7 +113,7 @@ export const TransactionPendingModal: FC<TransactionPendingModalProps> = ({
                     textAlign={'center'}
                     lineHeight={2}
                     _hover={{ bg: 'GhostVerse.color1.lighter' }}
-                    transition={'background-color .3s'}
+                    transition={'all .3s'}
                   >
                     My profile
                   </Text>

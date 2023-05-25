@@ -162,6 +162,56 @@ const BuyWeed: NextPage = () => {
                     My Weed
                   </Link>
                 </Box>
+                <Box
+                  display={'flex'}
+                  justifyContent={'center'}
+                  alignItems={'center'}
+                  flexDirection={'column'}
+                  color={'ghostVerse.green.base'}
+                  mx={4}
+                  textAlign={'center'}
+                >
+                  <Link
+                    href="/cosmic-temple-vibes"
+                    title="Cosmic Temple Vibes"
+                    passHref
+                  >
+                    <Box
+                      as={'img'}
+                      src="/media/green-ghost-grower-cosmic-temple-vibes.png"
+                      width="80px"
+                      height="80px"
+                      maxW={'inherit'}
+                      mx={'auto'}
+                      alt="Green Ghost - Cosmic Temple Vibes"
+                      title="Green Ghost - Cosmic Temple Vibes"
+                    />
+                    Cosmic Temple Vibes
+                  </Link>
+                </Box>
+                <Box
+                  display={'flex'}
+                  justifyContent={'center'}
+                  alignItems={'center'}
+                  flexDirection={'column'}
+                  color={'ghostVerse.green.base'}
+                  mx={4}
+                  textAlign={'center'}
+                >
+                  <Link href="/buddy-bud-weed" title="Buddy Bud Weed" passHref>
+                    <Box
+                      as={'img'}
+                      src="/media/green-ghost-grower-buddy-bud-weed.png"
+                      width="80px"
+                      height="80px"
+                      maxW={'inherit'}
+                      mx={'auto'}
+                      alt="Green Ghost - Buddy Bud Weed"
+                      title="Green Ghost - Buddy Bud Weed"
+                    />
+                    Buddy Bud Weed
+                  </Link>
+                </Box>
               </Box>
             </Box>
           </Box>
@@ -238,11 +288,6 @@ const BuyWeed: NextPage = () => {
             <br />
             Thank you for your trust.
           </Text>
-          <Link href="/sitemap" title="Sitemap" passHref>
-            <Box as={'span'} color={'ghostVerse.green.base'}>
-              Sitemap
-            </Box>
-          </Link>
         </Box>
       </MainLayout>
     </>

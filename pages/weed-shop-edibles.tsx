@@ -7,6 +7,7 @@ import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import { Bakery } from '../components/Bakery';
 import Head from 'next/head';
 import { MenuWeedShop } from '../components/MenuWeedShop';
+import Image from 'next/image';
 
 const WeedShopEdibles: NextPage = () => {
   return (
@@ -50,7 +51,18 @@ const WeedShopEdibles: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <HomeSectionTitle title="Degen Weed Shop - Edibles." />
+        <Box display={'flex'} alignItems={'top'}>
+          <Box w={'50px'} mr={4} mt={2}>
+            <Image
+              src="/media/green-ghost-degen-weed-shop-menu.png"
+              width={100}
+              height={100}
+              alt="Green Ghost - Degen Weed Shop - Weed Menu."
+              layout={'responsive'}
+            />
+          </Box>
+          <HomeSectionTitle title="Degen Weed Shop - Edibles Menu." />
+        </Box>
         <MenuWeedShop />
         <Bakery />
         <Box

@@ -3,7 +3,7 @@ import { Box } from '@chakra-ui/react';
 export const SocialContactIcons = () => {
   return (
     <Box display={'flex'} alignItems={'center'} gap={3}>
-      <Box bgColor="black" borderRadius="100%">
+      <Box bgColor={'black'} borderRadius={'100%'}>
         <Box
           as="a"
           href="https://page.line.me/greenghostdegen"
@@ -20,7 +20,7 @@ export const SocialContactIcons = () => {
           </svg>
         </Box>
       </Box>
-      <Box bgColor="black" borderRadius="100%">
+      <Box bgColor={'black'} borderRadius={'100%'}>
         <Box
           as="a"
           href="http://m.me/greenghostdegen"
@@ -37,7 +37,7 @@ export const SocialContactIcons = () => {
           </svg>
         </Box>
       </Box>
-      <Box bgColor="black" borderRadius="100%">
+      <Box bgColor={'black'} borderRadius={'100%'}>
         <Box
           as="a"
           href="https://wa.me/message/XUOXIOUI4MZAJ1"
@@ -54,7 +54,7 @@ export const SocialContactIcons = () => {
           </svg>
         </Box>
       </Box>
-      <Box bgColor="black" borderRadius="100%">
+      <Box bgColor={'black'} borderRadius={'100%'}>
         <Box
           as="a"
           href="https://ig.me/m/greenghostdegen"
@@ -71,7 +71,7 @@ export const SocialContactIcons = () => {
           </svg>
         </Box>
       </Box>
-      <Box bgColor="black" borderRadius="100%">
+      <Box bgColor={'black'} borderRadius={'100%'}>
         <Box
           as="a"
           href="https://t.me/+66936459898"

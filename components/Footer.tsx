@@ -1,6 +1,7 @@
 import { Container, Box, Text } from '@chakra-ui/react';
 import { SocialMediaIcons } from './SocialMediaIcons';
 import { MenuFooter } from './MenuFooter';
+import Image from 'next/image';
 
 export const Footer = () => {
   return (
@@ -16,32 +17,16 @@ export const Footer = () => {
         fontWeight="normal"
         textAlign={'center'}
       >
-        <Text as={'h2'} fontSize={'2xl'} fontFamily={'CubicFive12'}>
-          Follow Us
-        </Text>
-        <Box
-          as={'h3'}
-          display={'flex'}
-          justifyContent={'center'}
-          fontSize={'3xl'}
-          marginBottom={4}
-          w={'full'}
-          color={'ghostVerse.green.base'}
-          fontFamily={'vt323'}
-        >
-          @greenghostdegen
-        </Box>
         <SocialMediaIcons />
         <MenuFooter />
         <Box
           fontSize="xs"
-          fontWeight="bold"
-          mb={{ base: '2', md: '4' }}
+          fontWeight={'bold'}
           position={'relative'}
           zIndex={1}
           display={'flex'}
           justifyContent={'center'}
-          whiteSpace="nowrap"
+          whiteSpace={'nowrap'}
         >
           <Text>Made with weed by</Text>
           <Text
@@ -52,7 +37,34 @@ export const Footer = () => {
           >
             Gokai Labs
           </Text>
+          <Text>for</Text>
+          <Text
+            as="a"
+            color="ghostVerse.color1.darker"
+            href="https://ghostverse.org/"
+            mx={2}
+          >
+            GhostVerse DAO
+          </Text>
         </Box>
+        <Text
+            as="a"
+            color="ghostVerse.color1.darker"
+            href="https://ghostverse.org/"
+            mx={2}
+          width={'100%'}
+          
+          >
+            <Box w={'200px'} mx={'auto'}>
+              <Image
+                src="/media/green-ghost-degen-weed-shop-ghostverse-dao.png"
+                width={100}
+                height={100}
+                alt="Green Ghost - Degen Weed Shop - Weed Menu."
+                layout={'responsive'}
+              />
+            </Box>
+          </Text>
       </Container>
     </Box>
   );

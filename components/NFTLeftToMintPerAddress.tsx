@@ -17,7 +17,7 @@ export const NFTLeftToMintPerAddress: FC<NFTLeftToMintPerAddressProps> = ({
       mb={6}
       justifyContent={{ base: 'flex-start' }}
     >
-      <Text fontSize={{ base: 'md', sm: 'lg' }} fontWeight="bold">
+      <Text fontSize={{ base: 'md', sm: 'lg' }} fontWeight={'bold'}>
         You can mint:
       </Text>
       {dataLoading ? (
@@ -32,7 +32,7 @@ export const NFTLeftToMintPerAddress: FC<NFTLeftToMintPerAddressProps> = ({
           {leftToMintForUser}
         </Text>
       )}
-      <Text fontSize={{ base: 'md', sm: 'lg' }} fontWeight="bold" ml={3}>
+      <Text fontSize={{ base: 'md', sm: 'lg' }} fontWeight={'bold'} ml={3}>
         NFTs
       </Text>
     </Box>

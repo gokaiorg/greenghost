@@ -2,7 +2,7 @@ import { Box, Text } from '@chakra-ui/react';
 
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
+import SwiperCore, { Autoplay, EffectCreative } from 'swiper';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -12,38 +12,18 @@ export const HomeSlider = () => {
   SwiperCore.use([Autoplay]);
   return (
     <Swiper
-      autoHeight={true}
-      spaceBetween={10}
-      slidesPerView={'auto'}
-      breakpoints={{
-        320: {
-          slidesPerView: 1,
+      grabCursor={true}
+      effect={'creative'}
+      creativeEffect={{
+        prev: {
+          shadow: true,
+          translate: [0, 0, -400],
         },
-        640: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 1,
-        },
-        1024: {
-          slidesPerView: 1,
+        next: {
+          translate: ['100%', 0, 0],
         },
       }}
-      loop
-      autoplay={{
-        delay: 8000,
-        pauseOnMouseEnter: true,
-        disableOnInteraction: false,
-      }}
-      effect={'coverflow'}
-      coverflowEffect={{
-        rotate: 25,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      }}
-      modules={[EffectCoverflow]}
+      modules={[EffectCreative]}
     >
       <SwiperSlide>
         <Box position={'relative'} w="100%" h={{ base: '600px' }}>
@@ -57,7 +37,7 @@ export const HomeSlider = () => {
         </Box>
         <Box
           position={'absolute'}
-          top="0"
+          top={0}
           bottom={0}
           left={0}
           right={0}
@@ -74,12 +54,13 @@ export const HomeSlider = () => {
           backdropFilter={'blur(3px)'}
         >
           <Text
-            as={'h2'}
+            as={'h1'}
             fontSize={{ base: '3xl', md: '6xl' }}
             marginBottom={4}
-            fontFamily={'CubicFive10'}
+            fontFamily={'CubicFive12'}
+            color={'ghostVerse.green.base'}
           >
-            Welcome to Green Ghost
+            DEGEN WEED SHOP
           </Text>
           <Text as={'p'} fontSize={{ base: '3xl', md: '4xl' }}>
             Highest quality organic cannabis, hand-selected from the best
@@ -119,7 +100,7 @@ export const HomeSlider = () => {
         </Box>
         <Box
           position={'absolute'}
-          top="0"
+          top={0}
           bottom={0}
           left={0}
           right={0}
@@ -139,7 +120,7 @@ export const HomeSlider = () => {
             as={'h2'}
             fontSize={{ base: '3xl', md: '6xl' }}
             marginBottom={4}
-            fontFamily={'CubicFive10'}
+            fontFamily={'CubicFive12'}
           >
             Experience a New High
           </Text>
@@ -183,7 +164,7 @@ export const HomeSlider = () => {
 
         <Box
           position={'absolute'}
-          top="0"
+          top={0}
           bottom={0}
           left={0}
           right={0}
@@ -203,7 +184,7 @@ export const HomeSlider = () => {
             as={'h2'}
             fontSize={{ base: '3xl', md: '6xl' }}
             marginBottom={4}
-            fontFamily={'CubicFive10'}
+            fontFamily={'CubicFive12'}
           >
             Relax and earn
           </Text>
@@ -249,7 +230,7 @@ export const HomeSlider = () => {
         </Box>
         <Box
           position={'absolute'}
-          top="0"
+          top={0}
           bottom={0}
           left={0}
           right={0}
@@ -269,7 +250,7 @@ export const HomeSlider = () => {
             as={'h2'}
             fontSize={{ base: '3xl', md: '6xl' }}
             marginBottom={4}
-            fontFamily={'CubicFive10'}
+            fontFamily={'CubicFive12'}
           >
             GhostVerse
           </Text>
@@ -315,7 +296,7 @@ export const HomeSlider = () => {
         </Box>
         <Box
           position={'absolute'}
-          top="0"
+          top={0}
           bottom={0}
           left={0}
           right={0}
@@ -335,7 +316,7 @@ export const HomeSlider = () => {
             as={'h2'}
             fontSize={{ base: '3xl', md: '6xl' }}
             marginBottom={4}
-            fontFamily={'CubicFive10'}
+            fontFamily={'CubicFive12'}
           >
             Weed Delivery Phuket
           </Text>

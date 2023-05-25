@@ -20,11 +20,13 @@ function NavLink({ to, activeProps, children, ...props }: NavLinkProps) {
         <ChakraLink
           as={'span'}
           bgColor={'ghostVerse.dark.lighter'}
-          py={6}
+          py={4}
           px={6}
+          height={'66px'}
           textAlign={'center'}
-          fontWeight="bold"
-          fontSize="lg"
+          alignItems={'center'}
+          fontWeight={'bold'}
+          fontSize={'lg'}
           display={'inline-flex'}
           color={'ghostVerse.green.base'}
           borderColor={'ghostVerse.green.base'}
@@ -32,8 +34,8 @@ function NavLink({ to, activeProps, children, ...props }: NavLinkProps) {
           borderTopWidth={0}
           borderLeftWidth={0}
           borderRightWidth={0}
-          whiteSpace="nowrap"
-          textDecoration="none !important"
+          whiteSpace={'nowrap'}
+          textDecoration={'none !important'}
           {...props}
           {...activeProps}
         >
@@ -49,20 +51,22 @@ function NavLink({ to, activeProps, children, ...props }: NavLinkProps) {
         as={'span'}
         {...props}
         bgColor={'ghostVerse.dark.lighter'}
-        py={6}
+        py={4}
         px={6}
+        height={'66px'}
         textAlign={'center'}
-        fontWeight="bold"
-        fontSize="lg"
+        alignItems={'center'}
+        fontWeight={'bold'}
+        fontSize={'lg'}
         display={'inline-flex'}
         color={'ghostVerse.green.base'}
-        borderColor="black"
+        borderColor={'black'}
         borderBottomWidth={2}
         borderTopWidth={0}
         borderLeftWidth={0}
         borderRightWidth={0}
-        whiteSpace="nowrap"
-        textDecoration="none !important"
+        whiteSpace={'nowrap'}
+        textDecoration={'none !important'}
         {...props}
         {...activeProps}
         _hover={{ borderColor: 'ghostVerse.green.base' }}

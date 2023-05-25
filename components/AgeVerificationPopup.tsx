@@ -65,11 +65,11 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
         <Box
           as={'h2'}
           display={'flex'}
-          flexDirection="row"
+          flexDirection={'row'}
           alignItems="baseline"
           fontSize={'2xl'}
           mt={4}
-          whiteSpace="nowrap"
+          whiteSpace={'nowrap'}
         >
           Are you 20 or older
           <ImgQuestion />

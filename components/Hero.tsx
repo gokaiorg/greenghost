@@ -63,7 +63,7 @@ export const Hero = () => {
       </Text>
       <Text
         as={'h2'}
-        fontSize="lg"
+        fontSize={'lg'}
         fontWeight="thin"
         textAlign={{ base: 'center', md: 'left' }}
       >

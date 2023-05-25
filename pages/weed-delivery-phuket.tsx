@@ -97,7 +97,7 @@ const WeedDelivery: NextPage = () => {
                 alignItems={'center'}
                 flexDirection={'column'}
                 justifyContent={'center'}
-                transition={'background-color .3s'}
+                transition={'all .3s'}
                 _hover={{
                   color: 'ghostVerse.green.base',
                   bgColor: 'ghostVerse.dark.lighter',
@@ -150,7 +150,7 @@ const WeedDelivery: NextPage = () => {
                 alignItems={'center'}
                 flexDirection={'column'}
                 justifyContent={'center'}
-                transition={'background-color .3s'}
+                transition={'all .3s'}
                 _hover={{
                   color: 'ghostVerse.green.base',
                   bgColor: 'ghostVerse.dark.lighter',

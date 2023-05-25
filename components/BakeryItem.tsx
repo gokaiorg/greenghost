@@ -18,7 +18,7 @@ export const BakeryItem: FC<BakeryItemProps> = ({ name, price, pageLink }) => {
       py={2}
       px={6}
       textAlign={'center'}
-      fontWeight="bold"
+      fontWeight={'bold'}
       fontSize={'xl'}
       color={'ghostVerse.green.base'}
       display={'flex'}

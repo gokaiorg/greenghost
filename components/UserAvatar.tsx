@@ -12,8 +12,8 @@ export const UserAvatar = () => {
     <Text
       as="a"
       href="/profile"
-      borderColor="black"
-      borderRadius="100%"
+      borderColor={'black'}
+      borderRadius={'100%'}
       borderWidth={1}
       _hover={{ borderColor: 'ghostVerse.color1.darker' }}
     >

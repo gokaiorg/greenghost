@@ -12,7 +12,7 @@ export const HomeSectionTitle: FC<HomeSectionTitleProps> = ({ title }) => {
       fontSize={{ base: '2xl', md: '3xl' }}
       fontFamily={'CubicFive12'}
       display={'flex'}
-      flexDirection="row"
+      flexDirection={'row'}
       alignItems={'center'}
       marginRight={1}
       marginBottom={4}

@@ -61,7 +61,7 @@ export const Bud = () => {
       <Box
         display={'flex'}
         alignItems="baseline"
-        mr={4}
+        mr={1}
         flexDirection={{ base: 'column', lg: 'row' }}
       >
         <Box

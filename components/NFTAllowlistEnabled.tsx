@@ -31,7 +31,7 @@ export const NFTAllowlistEnabled: FC<NFTAllowlistEnabledProps> = ({
             <Text
               as={'span'}
               fontSize={{ base: 'md', sm: 'lg' }}
-              fontWeight="bold"
+              fontWeight={'bold'}
             >
               Allowlist is enabled. You are{' '}
             </Text>
@@ -41,7 +41,7 @@ export const NFTAllowlistEnabled: FC<NFTAllowlistEnabledProps> = ({
               <Text
                 color="ghostVerse.color1.darker"
                 as={'span'}
-                fontWeight="bold"
+                fontWeight={'bold'}
                 fontSize={{ base: 'md', sm: 'lg' }}
               >
                 on
@@ -50,7 +50,7 @@ export const NFTAllowlistEnabled: FC<NFTAllowlistEnabledProps> = ({
               <Text
                 color="elvenTools.color3.base"
                 as={'span'}
-                fontWeight="bold"
+                fontWeight={'bold'}
                 fontSize={{ base: 'md', sm: 'lg' }}
               >
                 not on
@@ -59,7 +59,7 @@ export const NFTAllowlistEnabled: FC<NFTAllowlistEnabledProps> = ({
             <Text
               as={'span'}
               fontSize={{ base: 'md', sm: 'lg' }}
-              fontWeight="bold"
+              fontWeight={'bold'}
             >
               the list!
             </Text>

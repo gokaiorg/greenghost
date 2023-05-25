@@ -130,11 +130,11 @@ export const LedgerAccountsList: FC<LedgerAccountsListProps> = ({
         <Spinner color="ghostVerse.color1.darker" />
         <Box marginTop={3}>Confirm on the Ledger device:</Box>
         <Box marginTop={3} wordBreak="break-word" textAlign={'center'}>
-          <Box fontWeight="bold">Address:</Box> {chosenAddress}
+          <Box fontWeight={'bold'}>Address:</Box> {chosenAddress}
         </Box>
         {loginToken && (
           <Box mt={3}>
-            <Box fontWeight="bold">Auth token:</Box> {loginToken}
+            <Box fontWeight={'bold'}>Auth token:</Box> {loginToken}
             {'{}'}
           </Box>
         )}

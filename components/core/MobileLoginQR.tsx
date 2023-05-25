@@ -55,7 +55,7 @@ export const MobileLoginQR: FunctionComponent<MobileLoginQRProps> = ({
             mt={6}
             fontWeight="normal"
             _hover={{ bg: 'GhostVerse.color2.lighter' }}
-            transition={'background-color .3s'}
+            transition={'all .3s'}
             as="a"
             href={`${
               networkConfig[chainType]?.walletConnectDeepLink
