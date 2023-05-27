@@ -5,10 +5,10 @@ import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import Head from 'next/head';
-import Link from 'next/link';
 import { ImgQuestion } from '../components/ImgQuestion';
+import { PhuketGrowers } from '../components/PhuketGrowers';
 
-const CannabisShop: NextPage = () => {
+const CannabisGrower: NextPage = () => {
   return (
     <>
       <Head>
@@ -80,84 +80,10 @@ const CannabisShop: NextPage = () => {
           Ghost. Our meticulous search across the island has led us to the
           premier cannabis shops offering unparalleled quality products.
         </Box>
-        <Box display={'flex'} my={4} mt={10}>
-          <Box
-            display={'flex'}
-            justifyContent={'center'}
-            alignItems={'center'}
-            flexDirection={'column'}
-            color={'ghostVerse.green.base'}
-            mx={4}
-            textAlign={'center'}
-          >
-            <Link href="/my-weed-solutions" title="My Weed Solutions" passHref>
-              <Box
-                as={'img'}
-                src="/media/green-ghost-grower-my-weed-solutions.webp"
-                width="80px"
-                height="80px"
-                maxW={'inherit'}
-                mx={'auto'}
-                alt="Green Ghost - Degen Weed Shop"
-                title="Green Ghost - Degen Weed Shop"
-              />
-              My Weed Solutions
-            </Link>
-          </Box>
-          <Box
-            display={'flex'}
-            justifyContent={'center'}
-            alignItems={'center'}
-            flexDirection={'column'}
-            color={'ghostVerse.green.base'}
-            mx={4}
-            textAlign={'center'}
-          >
-            <Link
-              href="/cosmic-temple-vibes"
-              title="Cosmic Temple Vibes"
-              passHref
-            >
-              <Box
-                as={'img'}
-                src="/media/green-ghost-grower-cosmic-temple-vibes.png"
-                width="80px"
-                height="80px"
-                maxW={'inherit'}
-                mx={'auto'}
-                alt="Green Ghost - Cosmic Temple Vibes"
-                title="Green Ghost - Cosmic Temple Vibes"
-              />
-              Cosmic Temple Vibes
-            </Link>
-          </Box>
-          <Box
-            display={'flex'}
-            justifyContent={'center'}
-            alignItems={'center'}
-            flexDirection={'column'}
-            color={'ghostVerse.green.base'}
-            mx={4}
-            textAlign={'center'}
-          >
-            <Link href="/buddy-bud-weed" title="Buddy Bud Weed" passHref>
-              <Box
-                as={'img'}
-                src="/media/green-ghost-grower-buddy-bud-weed.png"
-                width="80px"
-                height="80px"
-                maxW={'inherit'}
-                mx={'auto'}
-                alt="Green Ghost - Buddy Bud Weed"
-                title="Green Ghost - Buddy Bud Weed"
-              />
-              Buddy Bud Weed
-            </Link>
-          </Box>
-        </Box>
+        <PhuketGrowers />
       </MainLayout>
     </>
   );
 };
 
-export default CannabisShop;
+export default CannabisGrower;

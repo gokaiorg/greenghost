@@ -8,6 +8,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { ImgQuestion } from '../components/ImgQuestion';
 import Image from 'next/image';
+import { PhuketPartners } from '../components/PhuketPartners';
 
 const BuyWeed: NextPage = () => {
   return (
@@ -112,109 +113,9 @@ const BuyWeed: NextPage = () => {
                 and Gokai Labs, a digital branding and communication agency with
                 over 10 years of experience in Thailand.
               </Text>
-              <Box display={'flex'} my={4}>
-                <Box
-                  display={'flex'}
-                  justifyContent={'center'}
-                  alignItems={'center'}
-                  flexDirection={'column'}
-                  color={'ghostVerse.green.base'}
-                  as="a"
-                  mx={4}
-                  target="_blank"
-                  href="https://gokai.org"
-                >
-                  <Box
-                    as={'img'}
-                    src="/media/green-ghost-degen-weed-shop-partner-gokai-labs.webp"
-                    width="80px"
-                    height="80px"
-                    maxW={'inherit'}
-                    alt="Green Ghost - Degen Weed Shop - Gokai Labs"
-                    title="Green Ghost - Degen Weed Shop - Gokai Labs"
-                  />
-                  Gokai Labs
-                </Box>
-                <Box
-                  display={'flex'}
-                  justifyContent={'center'}
-                  alignItems={'center'}
-                  flexDirection={'column'}
-                  color={'ghostVerse.green.base'}
-                  mx={4}
-                  textAlign={'center'}
-                >
-                  <Link
-                    href="/my-weed-solutions"
-                    title="My Weed Solutions"
-                    passHref
-                  >
-                    <Box
-                      as={'img'}
-                      src="/media/green-ghost-grower-my-weed-solutions.webp"
-                      width="80px"
-                      height="80px"
-                      maxW={'inherit'}
-                      mx={'auto'}
-                      alt="Green Ghost - My Weed Solutions"
-                      title="Green Ghost - My Weed Solutions"
-                    />
-                    My Weed
-                  </Link>
-                </Box>
-                <Box
-                  display={'flex'}
-                  justifyContent={'center'}
-                  alignItems={'center'}
-                  flexDirection={'column'}
-                  color={'ghostVerse.green.base'}
-                  mx={4}
-                  textAlign={'center'}
-                >
-                  <Link
-                    href="/cosmic-temple-vibes"
-                    title="Cosmic Temple Vibes"
-                    passHref
-                  >
-                    <Box
-                      as={'img'}
-                      src="/media/green-ghost-grower-cosmic-temple-vibes.png"
-                      width="80px"
-                      height="80px"
-                      maxW={'inherit'}
-                      mx={'auto'}
-                      alt="Green Ghost - Cosmic Temple Vibes"
-                      title="Green Ghost - Cosmic Temple Vibes"
-                    />
-                    Cosmic Temple Vibes
-                  </Link>
-                </Box>
-                <Box
-                  display={'flex'}
-                  justifyContent={'center'}
-                  alignItems={'center'}
-                  flexDirection={'column'}
-                  color={'ghostVerse.green.base'}
-                  mx={4}
-                  textAlign={'center'}
-                >
-                  <Link href="/buddy-bud-weed" title="Buddy Bud Weed" passHref>
-                    <Box
-                      as={'img'}
-                      src="/media/green-ghost-grower-buddy-bud-weed.png"
-                      width="80px"
-                      height="80px"
-                      maxW={'inherit'}
-                      mx={'auto'}
-                      alt="Green Ghost - Buddy Bud Weed"
-                      title="Green Ghost - Buddy Bud Weed"
-                    />
-                    Buddy Bud Weed
-                  </Link>
-                </Box>
-              </Box>
             </Box>
           </Box>
+          <PhuketPartners />
           <Box display={'flex'} flexDirection={{ base: 'column', lg: 'row' }}>
             <Box width={{ base: '100%', lg: '65%' }}>
               <Text
@@ -288,6 +189,15 @@ const BuyWeed: NextPage = () => {
             <br />
             Thank you for your trust.
           </Text>
+          <Box position={'relative'} w="100%" h={{ base: '200px', lg: '600px' }}>
+            <Image
+              src="/media/green-ghost-weed-shop-phuket.webp"
+              fill
+              style={{ objectFit: 'contain' }}
+              alt={'Green Ghost Weed Shop Phuket'}
+              priority={false}
+            />
+          </Box>
         </Box>
       </MainLayout>
     </>
