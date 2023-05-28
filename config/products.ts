@@ -358,7 +358,7 @@ export const products: Product[] = [
     grower: 'Cosmic Temple Vibes',
     growerSlug: 'cosmic-temple-vibes',
     environment: 'Organic Indoor',
-    harvest: '08/04/2023',
+    harvest: '16/05/2023',
     quantity: 10,
     origin: 'Phuket',
     description:
@@ -387,7 +387,7 @@ export const products: Product[] = [
     grower: 'Cosmic Temple Vibes',
     growerSlug: 'cosmic-temple-vibes',
     environment: 'Organic Indoor',
-    harvest: '08/04/2023',
+    harvest: '16/05/2023',
     quantity: 10,
     origin: 'Phuket',
     description:
