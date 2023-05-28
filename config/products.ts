@@ -84,7 +84,7 @@ export const products: Product[] = [
   {
     slug: 'bruce-banner',
     name: 'Bruce Banner',
-    price: 666,
+    price: 700,
     dominance: 'Sativa Dominant',
     indica: '40',
     sativa: '60',
@@ -96,7 +96,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '04/04/2023',
-    quantity: 1,
+    quantity: 10,
     origin: 'Phuket',
     description:
       "Bruce Banner is a highly sought-after hybrid strain known for its powerful effects and high THC content. With its origins traced back to a cross between OG Kush and Strawberry Diesel, Bruce Banner offers a unique blend of sweet and diesel-like flavors with earthy undertones. Its dense, sticky buds are known for their bright green color and orange hairs, often coated in a thick layer of trichomes. \n\n The effects of Bruce Banner are fast-acting and intense, providing a powerful burst of euphoria and creativity followed by deep relaxation and a mellow body buzz. Its high THC levels, which can range between 18-29%, make it a popular choice among experienced cannabis consumers seeking potent and long-lasting effects. It's important to note that the strain's high can be overwhelming for some, so beginners are advised to start with a lower dosage. \n\n Bruce Banner is also a popular strain among growers due to its fast flowering time of 8-10 weeks and high yields. It is known to produce three main phenotypes, one of which is Bruce Banner #3, which has gained a reputation as the most potent and flavorful of the three. Overall, Bruce Banner is a strain that offers a unique blend of flavors and effects that has earned it a place among the most popular hybrid strains on the market today.",
@@ -230,7 +230,7 @@ export const products: Product[] = [
   {
     slug: 'c-vibez',
     name: 'C-Vibez',
-    price: 350,
+    price: 500,
     dominance: 'Sativa Dominant',
     indica: '40',
     sativa: '60',
@@ -242,7 +242,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '28/12/2022',
-    quantity: 8,
+    quantity: 5,
     origin: 'Phuket',
     description:
       "C-Vibez is a fast-flowering hybrid cannabis strain that's highly sought after for its dense, aromatic buds that grow quickly to maturity. With an average height of about 1.0m - 1.5m, this strain takes only about 8 weeks to finish blooming its rock-hard flowers. C-Vibez is a heavy yielder with an exceptional terpene profile, and most of these high-quality feminized seeds turn into short, green plants. About 30% show some color, ranging from purple to pink. \n\n This strain is the result of Mad Scientist genetics, accompanied by some outstanding Voodoo genetics. Voodoo is a massively potent original Dutch Passion Thai strain, responsible for the strong stone that consumers will experience while vaping or smoking the end result. Despite being an indica-dominant variety, C-Vibez offers remarkable fruity/lemony hints in the taste, especially when being burned. \n\n It's worth noting that C-Vibez has deliberately not been bred to full stability, which ensures a rich selection of seriously high-quality phenotypes with the vigor usually encountered in F2's and F3's. This makes C-Vibez a unique and exciting strain to cultivate and experience, with a potent and flavorful smoke that's sure to please even the most discerning cannabis enthusiasts.",
@@ -301,7 +301,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '25/03/2023',
-    quantity: 10,
+    quantity: 3,
     origin: 'Phuket',
     description:
       "Mandarin Skittlez is a hybrid cannabis strain that results from the crossing of two potent strains, Dying Breed's California Black Rosé and Ethos' Mandarin Sunset. This striking strain is characterized by its unique and beautiful purple, black, and red buds that are sure to catch anyone's attention. Its dense and resinous buds have a low leaf-to-flower ratio, making it an ideal choice for extraction. \n\n The Mandarin Skittlez strain boasts an impressive array of flavors that are sure to tantalize your taste buds. It has an intense grape, grapefruit, spice, and orange taste that is both refreshing and satisfying. Its effects are equally impressive, offering a potent high that leaves smokers feeling happy, relaxed, and euphoric. It is perfect for unwinding after a long day or for creative inspiration. \n\n Mandarin Skittlez is an excellent choice for cannabis enthusiasts who are looking for a unique strain that packs a punch. Its beautiful appearance, potent effects, and mouth-watering flavors make it a top choice in dispensaries worldwide. Whether you're a seasoned smoker or a newbie, Mandarin Skittlez is a must-try strain for its exceptional quality and amazing effects.",
@@ -347,7 +347,7 @@ export const products: Product[] = [
   {
     slug: 'amnesia-haze',
     name: 'Amnesia Haze',
-    price: 666,
+    price: 500,
     dominance: 'Sativa Dominant',
     indica: '30',
     sativa: '70',
@@ -376,7 +376,7 @@ export const products: Product[] = [
   {
     slug: 'platinum-oreoz',
     name: 'Platinum Oreoz',
-    price: 666,
+    price: 500,
     dominance: 'Indica Dominant',
     indica: '60',
     sativa: '40',
@@ -400,7 +400,7 @@ export const products: Product[] = [
       '/media/green-ghost-degen-weed-shop-strain-platinum-oreoz-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Platinum Oreoz',
-    source: 'https://www.leafly.com/strains/amnesia-haze',
+    source: 'https://weed.th/shop/20ce9823-8d9d-465c-b31d-b5ffe67ba71e/flowers/7961f539-285c-4b59-b976-90be63408af3',
   },
   {
     slug: 'dosidos',
