@@ -347,7 +347,7 @@ export const products: Product[] = [
   {
     slug: 'amnesia-haze',
     name: 'Amnesia Haze',
-    price: 500,
+    price: 600,
     dominance: 'Sativa Dominant',
     indica: '30',
     sativa: '70',
@@ -376,7 +376,7 @@ export const products: Product[] = [
   {
     slug: 'platinum-oreoz',
     name: 'Platinum Oreoz',
-    price: 500,
+    price: 600,
     dominance: 'Indica Dominant',
     indica: '60',
     sativa: '40',
