@@ -242,7 +242,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '28/12/2022',
-    quantity: 5,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "C-Vibez is a fast-flowering hybrid cannabis strain that's highly sought after for its dense, aromatic buds that grow quickly to maturity. With an average height of about 1.0m - 1.5m, this strain takes only about 8 weeks to finish blooming its rock-hard flowers. C-Vibez is a heavy yielder with an exceptional terpene profile, and most of these high-quality feminized seeds turn into short, green plants. About 30% show some color, ranging from purple to pink. \n\n This strain is the result of Mad Scientist genetics, accompanied by some outstanding Voodoo genetics. Voodoo is a massively potent original Dutch Passion Thai strain, responsible for the strong stone that consumers will experience while vaping or smoking the end result. Despite being an indica-dominant variety, C-Vibez offers remarkable fruity/lemony hints in the taste, especially when being burned. \n\n It's worth noting that C-Vibez has deliberately not been bred to full stability, which ensures a rich selection of seriously high-quality phenotypes with the vigor usually encountered in F2's and F3's. This makes C-Vibez a unique and exciting strain to cultivate and experience, with a potent and flavorful smoke that's sure to please even the most discerning cannabis enthusiasts.",
