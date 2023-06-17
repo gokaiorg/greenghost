@@ -71,7 +71,7 @@ const GrowerMyWeed: NextPage = () => {
           color={'ghostVerse.green.base'}
           onClick={handleBack}
         >
-          Go back
+          {'< back'}
         </Box>
         <HomeSectionTitle title={'Green Ghost - Grower - My Weed Solutions.'} />
         <Box display={'flex'} flexDirection={'column'} fontFamily={'vt323'}>

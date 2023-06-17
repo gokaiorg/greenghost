@@ -4,10 +4,10 @@ import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
-import { Bakery } from '../components/Bakery';
 import Head from 'next/head';
 import { MenuWeedShop } from '../components/MenuWeedShop';
 import Image from 'next/image';
+import { Edible } from '../components/Edible';
 
 const WeedShopEdibles: NextPage = () => {
   return (
@@ -16,7 +16,7 @@ const WeedShopEdibles: NextPage = () => {
         <title>Green Ghost - Degen Weed Shop - Edibles.</title>
         <meta
           name="description"
-          content="Discover our delicious selection of locally sourced and organic edibles. From classic brownies and gummies to unique artisanal treats, our edibles are carefully crafted to provide a consistent and enjoyable experience. Our products are made with high-quality ingredients and are lab tested for potency and purity. Whether you're looking for a tasty way to relax or a discreet way to medicate, our edibles have got you covered. Order now and indulge in the ultimate edible experience!"
+          content="Discover our delicious selection of locally sourced and organic edibles. From classic brownies and gummies to unique artisanal cookies, our edibles are carefully crafted to provide a consistent and enjoyable experience. Our products are made with high-quality ingredients and are lab tested for potency and purity. Whether you're looking for a tasty way to relax or a discreet way to medicate, our edibles have got you covered. Order now and indulge in the ultimate edible experience!"
         />
         <meta
           property="og:title"
@@ -24,7 +24,7 @@ const WeedShopEdibles: NextPage = () => {
         />
         <meta
           property="og:description"
-          content="Discover our delicious selection of locally sourced and organic edibles. From classic brownies and gummies to unique artisanal treats, our edibles are carefully crafted to provide a consistent and enjoyable experience. Our products are made with high-quality ingredients and are lab tested for potency and purity. Whether you're looking for a tasty way to relax or a discreet way to medicate, our edibles have got you covered. Order now and indulge in the ultimate edible experience!"
+          content="Discover our delicious selection of locally sourced and organic edibles. From classic brownies and gummies to unique artisanal cookies, our edibles are carefully crafted to provide a consistent and enjoyable experience. Our products are made with high-quality ingredients and are lab tested for potency and purity. Whether you're looking for a tasty way to relax or a discreet way to medicate, our edibles have got you covered. Order now and indulge in the ultimate edible experience!"
         />
         <meta
           property="og:image"
@@ -39,7 +39,7 @@ const WeedShopEdibles: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Discover our delicious selection of locally sourced and organic edibles. From classic brownies and gummies to unique artisanal treats, our edibles are carefully crafted to provide a consistent and enjoyable experience. Our products are made with high-quality ingredients and are lab tested for potency and purity. Whether you're looking for a tasty way to relax or a discreet way to medicate, our edibles have got you covered. Order now and indulge in the ultimate edible experience!"
+          content="Discover our delicious selection of locally sourced and organic edibles. From classic brownies and gummies to unique artisanal cookies, our edibles are carefully crafted to provide a consistent and enjoyable experience. Our products are made with high-quality ingredients and are lab tested for potency and purity. Whether you're looking for a tasty way to relax or a discreet way to medicate, our edibles have got you covered. Order now and indulge in the ultimate edible experience!"
         />
         <meta
           name="twitter:image"
@@ -64,25 +64,7 @@ const WeedShopEdibles: NextPage = () => {
           <HomeSectionTitle title="Degen Weed Shop - Edibles Menu." />
         </Box>
         <MenuWeedShop />
-        <Bakery />
-        <Box
-          as={'h3'}
-          borderColor={'ghostVerse.color2.base'}
-          bgColor={'ghostVerse.dark.lighter'}
-          borderWidth={1}
-          backdropFilter={'blur(3px)'}
-          p={4}
-          my={4}
-          mx={'auto'}
-          mt="auto"
-          display={'flex'}
-          width={'fit-content'}
-          flexDirection={'column'}
-          fontSize={20}
-          textAlign={'center'}
-        >
-          All our products are organic
-        </Box>
+        <Edible />
       </MainLayout>
     </>
   );

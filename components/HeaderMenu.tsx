@@ -79,7 +79,7 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
                 clipRule={'evenodd'}
               />
             </svg>
-            Shop
+            Menu
           </Box>
         </Link>
         <Link

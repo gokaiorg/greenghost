@@ -68,7 +68,7 @@ export default function ProductPage({ product }: ProductPageProps) {
           color={'ghostVerse.green.base'}
           onClick={handleBack}
         >
-          Go back
+          {'< back'}
         </Box>
         <Box display={'flex'} flexDirection={{ base: 'column', md: 'row' }}>
           <HomeSectionTitle title={`${product.name} Strain`} />
@@ -451,17 +451,19 @@ export default function ProductPage({ product }: ProductPageProps) {
           whiteSpace="pre-line"
         >
           {product.description}
-          <Box
-            display={'flex'}
-            flexDirection={'column'}
-            color={'ghostVerse.green.base'}
-            as="a"
-            mr={4}
-            target="_blank"
-            href={product.source}
-          >
-            Source
-          </Box>
+          {product.source !== 'undefined' && (
+            <Box
+              display={'flex'}
+              flexDirection={'column'}
+              color={'ghostVerse.green.base'}
+              as="a"
+              mr={4}
+              target="_blank"
+              href={product.source}
+            >
+              Source
+            </Box>
+          )}
         </Box>
       </MainLayout>
     </>

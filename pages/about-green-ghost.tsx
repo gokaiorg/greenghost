@@ -189,7 +189,11 @@ const BuyWeed: NextPage = () => {
             <br />
             Thank you for your trust.
           </Text>
-          <Box position={'relative'} w="100%" h={{ base: '200px', lg: '600px' }}>
+          <Box
+            position={'relative'}
+            w="100%"
+            h={{ base: '200px', lg: '600px' }}
+          >
             <Image
               src="/media/green-ghost-weed-shop-phuket.webp"
               fill

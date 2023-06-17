@@ -1,96 +1,77 @@
-export type Product = {
+export type Edible = {
   slug: string;
   name: string;
-  dominance: string;
-  indica: string;
-  sativa: string;
+  packaging: string;
   THC: string;
   CBD: string;
   effects: string;
-  relieves: string;
-  grower: string;
-  growerSlug: string;
+  ingretiens: string;
   price: number;
   description: string;
   descSeo: string;
   images: string[];
   imgDesc: string;
-  source: string;
-  origin: string;
-  environment: string;
-  harvest: string;
   quantity: number;
 };
 
-export const edibles: Product[] = [
+export const edibles: Edible[] = [
   {
-    slug: 'kings-juice',
-    name: 'King’s Juice',
-    price: 666,
-    dominance: 'Indica Dominant',
-    indica: '60',
-    sativa: '40',
-    THC: '26',
+    slug: 'thc-brownie',
+    name: 'THC Brownie',
+    price: 250,
+    packaging: '1 piece',
+    THC: '20mg',
     CBD: 'undefined',
-    effects: 'Happy, Relaxed, Uplifted',
-    relieves: 'Pain, Stress, Anxiety',
-    grower: 'My Weed Solutions',
-    growerSlug: 'my-weed-solutions',
-    environment: 'Organic Indoor',
-    harvest: '03/04/2023',
-    quantity: 1,
-    origin: 'Phuket',
+    effects: 'Happy, Relaxed, Sleepy',
+    ingretiens: 'Belgium dark chocolate, Sugar, Cannabutter, Eggs, Flour',
+    quantity: 0,
     description:
-      "The King's Juice is a hybrid cannabis strain created by combining two terpene profiles loved by its creator, Arjan. It is a cross between Mimosa from Symbiotic Genetics and King's Kush, resulting in a plant with a piney, coney growth and a long main cola that grows taller than its side branches. During the flowering period, the plant will stretch considerably, and its branches will grow steadily. \n\n The flowers of The King's Juice are known for their balanced floral and citrusy/earthy fragrance, which creates a complex aroma that resembles fresh fruit juice. Towards the end of the flowering period, the plant will take on beautiful reddish/violet hues, giving it a stunning fall color. The plant is also covered in trichomes, which add to its beauty. \n\n The effect of The King's Juice is a balanced high that can be enjoyed all day. It provides an uplifting head buzz, while the body remains light and active. The taste of the strain stays in the mouth for a while after exhaling, creating a satisfying sensation. Overall, The King's Juice is a beautiful and flavorful strain that offers a well-rounded high.",
+      'Introducing the ultimate indulgence for cannabis lovers, our Brownie Space Cake made with OG kush marijuana butter, Switzerland flour and Belgium chocolate. This delicious treat is the perfect way to enjoy the full benefits of marijuana in a delectable and decadent form. \n\n Our Brownie Space Cake is made with only the finest ingredients, including premium OG kush marijuana butter, which is known for its strong and relaxing effects. The Switzerland flour and Belgium chocolate add a rich and indulgent flavor to the brownie. \n\n Each bite of this heavenly treat will transport you to a new level of taste and relaxation. Perfect for any occasion, from a special treat for yourself or as a gift for your friends, this Brownie Space Cake is sure to be a hit.',
     descSeo:
-      "The King's Juice is a hybrid cannabis strain created by combining two terpene profiles loved by its creator, Arjan. It is a cross between Mimosa from Symbiotic Genetics and King's Kush, resulting in a plant with a piney, coney growth and a long main cola that grows taller than its side branches. During the flowering period, the plant will stretch considerably, and its branches will grow steadily.",
+      'Introducing the ultimate indulgence for cannabis lovers, our Brownie Space Cake made with OG kush marijuana butter, Switzerland flour and Belgium chocolate. This delicious treat is the perfect way to enjoy the full benefits of marijuana in a delectable and decadent form.',
     images: [
-      '/media/green-ghost-degen-weed-shop-strain-kings-juice-bud-01.webp',
-      '/media/green-ghost-degen-weed-shop-strain-kings-juice-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-kings-juice-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-brownie-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-brownie-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-brownie-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-brownie-04.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-brownie-03.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-brownie-02.webp',
     ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Strain King’s Juice',
-    source: 'https://growdiaries.com/seedbank/green-house-seeds/kings-juice',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Edible THC Brownie',
   },
   {
-    slug: 'eleven-roses',
-    name: 'Eleven Roses',
-    price: 666,
-    dominance: 'Indica Dominant',
-    indica: '90',
-    sativa: '10',
-    THC: '24',
+    slug: 'thc-cookies',
+    name: 'THC Cookies',
+    price: 350,
+    packaging: '4 pieces',
+    THC: '10mg/piece',
     CBD: 'undefined',
-    effects: 'Sleepy, Relaxed, Hungry',
-    relieves: 'Stress, Anxiety, Insomnia',
-    grower: 'My Weed Solutions',
-    growerSlug: 'my-weed-solutions',
-    environment: 'Organic Indoor',
-    harvest: '08/04/2023',
-    quantity: 1,
-    origin: 'Phuket',
+    effects: 'Creative, Happy, Euphoric',
+    ingretiens: 'Cannabutter, Eggs, Flour, Dried Grapes',
+    quantity: 3,
     description:
-      'Eleven Roses is an indica-dominant hybrid marijuana strain with an unknown genetic lineage. The dense and resinous buds of Eleven Roses have a pungent aroma with hints of pine, earth, and fuel. Though there is limited information available about this strain, its effects are said to be deeply relaxing and may be useful for treating insomnia, pain, and stress. \n\n Eleven Roses is also known for its sedative properties, making it a good choice for nighttime use or for those seeking relief from anxiety or tension. The exact THC and CBD levels of Eleven Roses are not known, but it is believed to have a moderately high THC content, potentially reaching up to 20%. \n\n The name Eleven Roses is thought to reference the potent and aromatic nature of this strain, with the eleven representing the abundance of its positive attributes. While there is still much to be learned about Eleven Roses, it is clear that this strain has the potential to provide relief for a range of medical conditions while also delivering a deep sense of relaxation and tranquility.',
+      "Satisfy your sweet tooth and cannabis cravings with our THC-infused cookies, lovingly made in Phuket. Each pack includes four delectable cookies that are crafted with precision and care. From the first bite, you'll experience the delightful fusion of flavors and the gentle, soothing effects of THC. Treat yourself to a homemade cannabis-infused delight that captures the essence of Phuket's culinary craftsmanship. \n\n Indulge in the homemade goodness of our THC cookies, meticulously prepared in Phuket. With four cookies per pack, these delectable treats are infused with a carefully measured dose of THC for a consistent and enjoyable experience. Baked with high-quality ingredients, our cookies offer a delightful combination of taste and potency. Experience the mouthwatering flavors and relaxation that our THC cookies have to offer. \n\n Experience the taste of Phuket with our homemade THC cookies. Crafted with love and care, these cookies are the perfect indulgence for cannabis enthusiasts. Each pack contains four cookies, expertly infused with THC to deliver a satisfying and pleasurable experience. Enjoy the rich flavors and the soothing effects of our THC cookies, made with the finest ingredients right here in Phuket.",
     descSeo:
-      'Eleven Roses is an indica-dominant hybrid marijuana strain with an unknown genetic lineage. The dense and resinous buds of Eleven Roses have a pungent aroma with hints of pine, earth, and fuel. Though there is limited information available about this strain, its effects are said to be deeply relaxing and may be useful for treating insomnia, pain, and stress.',
+      "Satisfy your sweet tooth and cannabis cravings with our THC-infused cookies, lovingly made in Phuket. Each pack includes four delectable cookies that are crafted with precision and care. From the first bite, you'll experience the delightful fusion of flavors and the gentle, soothing effects of THC. Treat yourself to a homemade cannabis-infused delight that captures the essence of Phuket's culinary craftsmanship.",
     images: [
-      '/media/green-ghost-degen-weed-shop-strain-eleven-roses-bud-01.webp',
-      '/media/green-ghost-degen-weed-shop-strain-eleven-roses-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-eleven-roses-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookies-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookies-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookies-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookies-02.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookies-03.webp',
     ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Eleven Roses',
-    source: 'https://www.leafly.com/strains/eleven-roses',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Edible THC Cookies',
   },
 ];
 
-export function getProductBySlug(slug: string): Product | undefined {
+export function getEdibleBySlug(slug: string): Edible | undefined {
   return edibles.find((edible) => edible.slug === slug);
 }
 
-export function getEdibles(): Product[] {
+export function getEdibles(): Edible[] {
   return edibles;
 }
 
-export function getProductImageUrls(edible: Product): string[] {
+export function getEdibleImageUrls(edible: Edible): string[] {
   return edible.images.map((image) => `/media/${image}`);
 }

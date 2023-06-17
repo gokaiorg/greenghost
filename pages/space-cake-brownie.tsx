@@ -60,7 +60,7 @@ const SpaceCakeBrownie: NextPage = () => {
           color={'ghostVerse.green.base'}
           onClick={handleBack}
         >
-          Go back
+          {'< back'}
         </Box>
         <HomeSectionTitle title="Green Ghost - Brownie." />
         <Swiper

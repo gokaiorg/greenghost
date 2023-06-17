@@ -17,12 +17,6 @@ const Links: Route[] = [
     imageW: '25px',
   },
   {
-    path: '/weed-shop-pre-rolled',
-    image: '/media/green-ghost-degen-weed-shop-menu-pre-rolled.png',
-    label: 'Pre-Rolled',
-    imageW: '10px',
-  },
-  {
     path: '/weed-shop-edibles',
     image: '/media/green-ghost-degen-weed-shop-menu-edibles.png',
     label: 'Edibles',
@@ -32,6 +26,18 @@ const Links: Route[] = [
     path: '/weed-shop-degen',
     image: '/media/green-ghost-degen-weed-shop-menu-degen.png',
     label: 'Degen',
+    imageW: '10px',
+  },
+  {
+    path: '/weed-shop-gadgets',
+    image: '/media/green-ghost-degen-weed-shop-menu-gadgets.webp',
+    label: 'Gadgets',
+    imageW: '20px',
+  },
+  {
+    path: '/weed-shop-pre-rolled',
+    image: '/media/green-ghost-degen-weed-shop-menu-pre-rolled.png',
+    label: 'Pre-Rolled',
     imageW: '10px',
   },
   {

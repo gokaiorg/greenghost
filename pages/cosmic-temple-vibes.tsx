@@ -71,7 +71,7 @@ const GrowerCosmic: NextPage = () => {
           color={'ghostVerse.green.base'}
           onClick={handleBack}
         >
-          Go back
+          {'< back'}
         </Box>
         <HomeSectionTitle
           title={'Green Ghost - Grower - Cosmic Temple Vibes.'}

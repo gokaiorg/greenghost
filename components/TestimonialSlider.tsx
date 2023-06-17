@@ -8,6 +8,8 @@ import Link from 'next/link';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
+import { TestimonialStars } from './TestimonialStars';
+import { TestimonialPfp } from './TestimonialPfp';
 
 export const TestimonialSlider = () => {
   SwiperCore.use([Autoplay]);
@@ -87,15 +89,406 @@ export const TestimonialSlider = () => {
             bgColor={'ghostVerse.dark.lighter'}
             p={'5'}
           >
-            <Box position={'relative'} w={'20%'} h={{ base: '100px' }}>
-              <Image
-                src="/media/green-ghost-smiling-pfp.webp"
-                fill
-                style={{ objectFit: 'contain' }}
-                alt={'Green Ghost Weed Shop Phuket'}
-                priority={false}
-              />
+            <TestimonialPfp />
+            <Box
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              fontWeight={'black'}
+              color={'white'}
+              w={'80%'}
+              fontFamily={'vt323'}
+              px={4}
+              backdropFilter={'blur(3px)'}
+            >
+              <Text
+                as={'h2'}
+                fontSize={{ base: 'xl' }}
+                marginBottom={2}
+                fontFamily={'CubicFive10'}
+              >
+                Alli Rainer
+              </Text>
+              <TestimonialStars />
+              <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
+                Great shop! I love the different grinders and the lady was super
+                nice!!! Must go!
+              </Text>
+              <Link
+                href={'https://g.co/kgs/FCkLhk'}
+                title={'Read More Review on Google Map Place'}
+                passHref
+              >
+                <Text
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={{ base: 'xl' }}
+                  mt={4}
+                  fontFamily={'CubicFive10'}
+                >
+                  Read Review
+                </Text>
+              </Link>
             </Box>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            display={'flex'}
+            my={'10'}
+            bgColor={'ghostVerse.dark.lighter'}
+            p={'5'}
+          >
+            <TestimonialPfp />
+            <Box
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              fontWeight={'black'}
+              color={'white'}
+              w={'80%'}
+              fontFamily={'vt323'}
+              px={4}
+              backdropFilter={'blur(3px)'}
+            >
+              <Text
+                as={'h2'}
+                fontSize={{ base: 'xl' }}
+                marginBottom={2}
+                fontFamily={'CubicFive10'}
+              >
+                MantorMBU
+              </Text>
+              <TestimonialStars />
+              <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
+                super cool store. Just best quality
+              </Text>
+              <Link
+                href={'https://g.co/kgs/3d6buh'}
+                title={'Read More Review on Google Map Place'}
+                passHref
+              >
+                <Text
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={{ base: 'xl' }}
+                  mt={4}
+                  fontFamily={'CubicFive10'}
+                >
+                  Read Review
+                </Text>
+              </Link>
+            </Box>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            display={'flex'}
+            my={'10'}
+            bgColor={'ghostVerse.dark.lighter'}
+            p={'5'}
+          >
+            <TestimonialPfp />
+            <Box
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              fontWeight={'black'}
+              color={'white'}
+              w={'80%'}
+              fontFamily={'vt323'}
+              px={4}
+              backdropFilter={'blur(3px)'}
+            >
+              <Text
+                as={'h2'}
+                fontSize={{ base: 'xl' }}
+                marginBottom={2}
+                fontFamily={'CubicFive10'}
+              >
+                Martin
+              </Text>
+              <TestimonialStars />
+              <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
+                Great service, prompt and with free delivery if you&apos;re in
+                Rawai 😊
+              </Text>
+              <Link
+                href={'https://g.co/kgs/DgPkUo'}
+                title={'Read More Review on Google Map Place'}
+                passHref
+              >
+                <Text
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={{ base: 'xl' }}
+                  mt={4}
+                  fontFamily={'CubicFive10'}
+                >
+                  Read Review
+                </Text>
+              </Link>
+            </Box>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            display={'flex'}
+            my={'10'}
+            bgColor={'ghostVerse.dark.lighter'}
+            p={'5'}
+          >
+            <TestimonialPfp />
+            <Box
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              fontWeight={'black'}
+              color={'white'}
+              w={'80%'}
+              fontFamily={'vt323'}
+              px={4}
+              backdropFilter={'blur(3px)'}
+            >
+              <Text
+                as={'h2'}
+                fontSize={{ base: 'xl' }}
+                marginBottom={2}
+                fontFamily={'CubicFive10'}
+              >
+                R de Hooge
+              </Text>
+              <TestimonialStars />
+              <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
+                Make sure to visit this new great place, to try one or more of
+                those tasty 😋 buds
+              </Text>
+              <Link
+                href={'https://g.co/kgs/oGcK7n'}
+                title={'Read More Review on Google Map Place'}
+                passHref
+              >
+                <Text
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={{ base: 'xl' }}
+                  mt={4}
+                  fontFamily={'CubicFive10'}
+                >
+                  Read Review
+                </Text>
+              </Link>
+            </Box>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            display={'flex'}
+            my={'10'}
+            bgColor={'ghostVerse.dark.lighter'}
+            p={'5'}
+          >
+            <TestimonialPfp />
+            <Box
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              fontWeight={'black'}
+              color={'white'}
+              w={'80%'}
+              fontFamily={'vt323'}
+              px={4}
+              backdropFilter={'blur(3px)'}
+            >
+              <Text
+                as={'h2'}
+                fontSize={{ base: 'xl' }}
+                marginBottom={2}
+                fontFamily={'CubicFive10'}
+              >
+                Aaron Chong
+              </Text>
+              <TestimonialStars />
+              <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
+                I came here for the service and people. Cannabis is better with
+                people. They have a variety of ganjas for newbies to connoseurs.
+                The vibe is pretty cool as it feels like a house.
+              </Text>
+              <Link
+                href={'https://g.co/kgs/1UN67Y'}
+                title={'Read More Review on Google Map Place'}
+                passHref
+              >
+                <Text
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={{ base: 'xl' }}
+                  mt={4}
+                  fontFamily={'CubicFive10'}
+                >
+                  Read Review
+                </Text>
+              </Link>
+            </Box>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            display={'flex'}
+            my={'10'}
+            bgColor={'ghostVerse.dark.lighter'}
+            p={'5'}
+          >
+            <TestimonialPfp />
+            <Box
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              fontWeight={'black'}
+              color={'white'}
+              w={'80%'}
+              fontFamily={'vt323'}
+              px={4}
+              backdropFilter={'blur(3px)'}
+            >
+              <Text
+                as={'h2'}
+                fontSize={{ base: 'xl' }}
+                marginBottom={2}
+                fontFamily={'CubicFive10'}
+              >
+                Nikki-Rilie
+              </Text>
+              <TestimonialStars />
+              <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
+                Quick response time, nati is very kind and responsive and green
+                ghost provides good delivery services!! Cute NFT options that
+                give discounts in store.
+              </Text>
+              <Link
+                href={'https://g.co/kgs/ugCnyP'}
+                title={'Read More Review on Google Map Place'}
+                passHref
+              >
+                <Text
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={{ base: 'xl' }}
+                  mt={4}
+                  fontFamily={'CubicFive10'}
+                >
+                  Read Review
+                </Text>
+              </Link>
+            </Box>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            display={'flex'}
+            my={'10'}
+            bgColor={'ghostVerse.dark.lighter'}
+            p={'5'}
+          >
+            <TestimonialPfp />
+            <Box
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              fontWeight={'black'}
+              color={'white'}
+              w={'80%'}
+              fontFamily={'vt323'}
+              px={4}
+              backdropFilter={'blur(3px)'}
+            >
+              <Text
+                as={'h2'}
+                fontSize={{ base: 'xl' }}
+                marginBottom={2}
+                fontFamily={'CubicFive10'}
+              >
+                Adrian Ivascu
+              </Text>
+              <TestimonialStars />
+              <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
+                New Location same good stuff
+              </Text>
+              <Link
+                href={'https://g.co/kgs/T6QbmU'}
+                title={'Read More Review on Google Map Place'}
+                passHref
+              >
+                <Text
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={{ base: 'xl' }}
+                  mt={4}
+                  fontFamily={'CubicFive10'}
+                >
+                  Read Review
+                </Text>
+              </Link>
+            </Box>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            display={'flex'}
+            my={'10'}
+            bgColor={'ghostVerse.dark.lighter'}
+            p={'5'}
+          >
+            <TestimonialPfp />
+            <Box
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              fontWeight={'black'}
+              color={'white'}
+              w={'80%'}
+              fontFamily={'vt323'}
+              px={4}
+              backdropFilter={'blur(3px)'}
+            >
+              <Text
+                as={'h2'}
+                fontSize={{ base: 'xl' }}
+                marginBottom={2}
+                fontFamily={'CubicFive10'}
+              >
+                Monique Munoz
+              </Text>
+              <TestimonialStars />
+              <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
+                💖 Nice place to relax 👻
+              </Text>
+              <Link
+                href={'https://g.co/kgs/4Y8AGR'}
+                title={'Read More Review on Google Map Place'}
+                passHref
+              >
+                <Text
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={{ base: 'xl' }}
+                  mt={4}
+                  fontFamily={'CubicFive10'}
+                >
+                  Read Review
+                </Text>
+              </Link>
+            </Box>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            display={'flex'}
+            my={'10'}
+            bgColor={'ghostVerse.dark.lighter'}
+            p={'5'}
+          >
+            <TestimonialPfp />
             <Box
               display={'flex'}
               flexDirection={'column'}
@@ -115,73 +508,7 @@ export const TestimonialSlider = () => {
               >
                 Sona Al3moudi
               </Text>
-              <Box display={'flex'} mb={2}>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-              </Box>
+              <TestimonialStars />
               <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
                 Nati is very good and beautiful lady who owns this shop and have
                 good stuff.
@@ -211,15 +538,56 @@ export const TestimonialSlider = () => {
             bgColor={'ghostVerse.dark.lighter'}
             p={'5'}
           >
-            <Box position={'relative'} w={'20%'} h={{ base: '100px' }}>
-              <Image
-                src="/media/green-ghost-smiling-pfp.webp"
-                fill
-                style={{ objectFit: 'contain' }}
-                alt={'Green Ghost Weed Shop Phuket'}
-                priority={false}
-              />
+            <TestimonialPfp />
+            <Box
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              fontWeight={'black'}
+              color={'white'}
+              w={'80%'}
+              fontFamily={'vt323'}
+              px={4}
+              backdropFilter={'blur(3px)'}
+            >
+              <Text
+                as={'h2'}
+                fontSize={{ base: 'xl' }}
+                marginBottom={2}
+                fontFamily={'CubicFive10'}
+              >
+                Nica Dragos (Jeje)
+              </Text>
+              <TestimonialStars />
+              <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
+                Lovely place! It&apos;s a must check if you&apos;re nearby
+              </Text>
+              <Link
+                href={'https://g.co/kgs/4Gm4kh'}
+                title={'Read More Review on Google Map Place'}
+                passHref
+              >
+                <Text
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={{ base: 'xl' }}
+                  mt={4}
+                  fontFamily={'CubicFive10'}
+                >
+                  Read Review
+                </Text>
+              </Link>
             </Box>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            display={'flex'}
+            my={'10'}
+            bgColor={'ghostVerse.dark.lighter'}
+            p={'5'}
+          >
+            <TestimonialPfp />
             <Box
               display={'flex'}
               flexDirection={'column'}
@@ -239,73 +607,7 @@ export const TestimonialSlider = () => {
               >
                 Jai Chopra
               </Text>
-              <Box display={'flex'} mb={2}>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-              </Box>
+              <TestimonialStars />
               <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
                 amazing collection
               </Text>
@@ -334,15 +636,7 @@ export const TestimonialSlider = () => {
             bgColor={'ghostVerse.dark.lighter'}
             p={'5'}
           >
-            <Box position={'relative'} w={'20%'} h={{ base: '100px' }}>
-              <Image
-                src="/media/green-ghost-smiling-pfp.webp"
-                fill
-                style={{ objectFit: 'contain' }}
-                alt={'Green Ghost Weed Shop Phuket'}
-                priority={false}
-              />
-            </Box>
+            <TestimonialPfp />
             <Box
               display={'flex'}
               flexDirection={'column'}
@@ -362,73 +656,7 @@ export const TestimonialSlider = () => {
               >
                 Abdullah Fageeh
               </Text>
-              <Box display={'flex'} mb={2}>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-              </Box>
+              <TestimonialStars />
               <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
                 Awesome place and awesome treatment
               </Text>
@@ -457,15 +685,7 @@ export const TestimonialSlider = () => {
             bgColor={'ghostVerse.dark.lighter'}
             p={'5'}
           >
-            <Box position={'relative'} w={'20%'} h={{ base: '100px' }}>
-              <Image
-                src="/media/green-ghost-smiling-pfp.webp"
-                fill
-                style={{ objectFit: 'contain' }}
-                alt={'Green Ghost Weed Shop Phuket'}
-                priority={false}
-              />
-            </Box>
+            <TestimonialPfp />
             <Box
               display={'flex'}
               flexDirection={'column'}
@@ -485,73 +705,7 @@ export const TestimonialSlider = () => {
               >
                 G P
               </Text>
-              <Box display={'flex'} mb={2}>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-              </Box>
+              <TestimonialStars />
               <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
                 Really great shop, good quality products and the service is
                 really friendly ! I recommend a lot 👍🏻 …
@@ -581,15 +735,7 @@ export const TestimonialSlider = () => {
             bgColor={'ghostVerse.dark.lighter'}
             p={'5'}
           >
-            <Box position={'relative'} w={'20%'} h={{ base: '100px' }}>
-              <Image
-                src="/media/green-ghost-smiling-pfp.webp"
-                fill
-                style={{ objectFit: 'contain' }}
-                alt={'Green Ghost Weed Shop Phuket'}
-                priority={false}
-              />
-            </Box>
+            <TestimonialPfp />
             <Box
               display={'flex'}
               flexDirection={'column'}
@@ -609,73 +755,7 @@ export const TestimonialSlider = () => {
               >
                 Sonia Deslouis
               </Text>
-              <Box display={'flex'} mb={2}>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-              </Box>
+              <TestimonialStars />
               <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
                 Super endroit !!! Je recommande. Super accueil, j adore !!!
                 N’hesitez pas à vous y rendre si vous venez à Phuket
@@ -705,15 +785,7 @@ export const TestimonialSlider = () => {
             bgColor={'ghostVerse.dark.lighter'}
             p={'5'}
           >
-            <Box position={'relative'} w={'20%'} h={{ base: '100px' }}>
-              <Image
-                src="/media/green-ghost-smiling-pfp.webp"
-                fill
-                style={{ objectFit: 'contain' }}
-                alt={'Green Ghost Weed Shop Phuket'}
-                priority={false}
-              />
-            </Box>
+            <TestimonialPfp />
             <Box
               display={'flex'}
               flexDirection={'column'}
@@ -733,73 +805,7 @@ export const TestimonialSlider = () => {
               >
                 Lea Serrar
               </Text>
-              <Box display={'flex'} mb={2}>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-              </Box>
+              <TestimonialStars />
               <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
                 The weed is amazing, they have great promotions on their
                 incredible quality weed. So happy I found them!
@@ -829,15 +835,7 @@ export const TestimonialSlider = () => {
             bgColor={'ghostVerse.dark.lighter'}
             p={'5'}
           >
-            <Box position={'relative'} w={'20%'} h={{ base: '100px' }}>
-              <Image
-                src="/media/green-ghost-smiling-pfp.webp"
-                fill
-                style={{ objectFit: 'contain' }}
-                alt={'Green Ghost Weed Shop Phuket'}
-                priority={false}
-              />
-            </Box>
+            <TestimonialPfp />
             <Box
               display={'flex'}
               flexDirection={'column'}
@@ -857,73 +855,7 @@ export const TestimonialSlider = () => {
               >
                 mark Innes
               </Text>
-              <Box display={'flex'} mb={2}>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-              </Box>
+              <TestimonialStars />
               <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
                 Great vibe and great herbs. Felt super chilled, Also Nati was
                 really friendly and helpful when answering my questions.
@@ -953,15 +885,57 @@ export const TestimonialSlider = () => {
             bgColor={'ghostVerse.dark.lighter'}
             p={'5'}
           >
-            <Box position={'relative'} w={'20%'} h={{ base: '100px' }}>
-              <Image
-                src="/media/green-ghost-smiling-pfp.webp"
-                fill
-                style={{ objectFit: 'contain' }}
-                alt={'Green Ghost Weed Shop Phuket'}
-                priority={false}
-              />
+            <TestimonialPfp />
+            <Box
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              fontWeight={'black'}
+              color={'white'}
+              w={'80%'}
+              fontFamily={'vt323'}
+              px={4}
+              backdropFilter={'blur(3px)'}
+            >
+              <Text
+                as={'h2'}
+                fontSize={{ base: 'xl' }}
+                marginBottom={2}
+                fontFamily={'CubicFive10'}
+              >
+                Apiwat Puchchong
+              </Text>
+              <TestimonialStars />
+              <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
+                Nice place, Great buds in Karon town. Recommended if you need to
+                find somewhere get you relaxing.
+              </Text>
+              <Link
+                href={'https://g.co/kgs/1rs95T'}
+                title={'Read More Review on Google Map Place'}
+                passHref
+              >
+                <Text
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={{ base: 'xl' }}
+                  mt={4}
+                  fontFamily={'CubicFive10'}
+                >
+                  Read Review
+                </Text>
+              </Link>
             </Box>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            display={'flex'}
+            my={'10'}
+            bgColor={'ghostVerse.dark.lighter'}
+            p={'5'}
+          >
+            <TestimonialPfp />
             <Box
               display={'flex'}
               flexDirection={'column'}
@@ -981,73 +955,7 @@ export const TestimonialSlider = () => {
               >
                 Aoifelouise
               </Text>
-              <Box display={'flex'} mb={2}>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-              </Box>
+              <TestimonialStars />
               <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
                 What an amazing woman!! Very knowledgeable on her buds and also
                 great prices compared to other places in the area. Highly
@@ -1078,15 +986,7 @@ export const TestimonialSlider = () => {
             bgColor={'ghostVerse.dark.lighter'}
             p={'5'}
           >
-            <Box position={'relative'} w={'20%'} h={{ base: '100px' }}>
-              <Image
-                src="/media/green-ghost-smiling-pfp.webp"
-                fill
-                style={{ objectFit: 'contain' }}
-                alt={'Green Ghost Weed Shop Phuket'}
-                priority={false}
-              />
-            </Box>
+            <TestimonialPfp />
             <Box
               display={'flex'}
               flexDirection={'column'}
@@ -1106,73 +1006,7 @@ export const TestimonialSlider = () => {
               >
                 Jean de Colombel
               </Text>
-              <Box display={'flex'} mb={2}>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-              </Box>
+              <TestimonialStars />
               <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
                 Nati a été très sympathique, ses produits sont d&apos;une grande
                 qualité. Je recommande chaudement !{' '}
@@ -1202,15 +1036,7 @@ export const TestimonialSlider = () => {
             bgColor={'ghostVerse.dark.lighter'}
             p={'5'}
           >
-            <Box position={'relative'} w={'20%'} h={{ base: '100px' }}>
-              <Image
-                src="/media/green-ghost-smiling-pfp.webp"
-                fill
-                style={{ objectFit: 'contain' }}
-                alt={'Green Ghost Weed Shop Phuket'}
-                priority={false}
-              />
-            </Box>
+            <TestimonialPfp />
             <Box
               display={'flex'}
               flexDirection={'column'}
@@ -1230,73 +1056,7 @@ export const TestimonialSlider = () => {
               >
                 Aneas Morelli
               </Text>
-              <Box display={'flex'} mb={2}>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'30px'}
-                  height={'30px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-              </Box>
+              <TestimonialStars />
               <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
                 Satisfied{' '}
               </Text>

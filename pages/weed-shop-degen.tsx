@@ -5,9 +5,9 @@ import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import Head from 'next/head';
 import { MenuWeedShop } from '../components/MenuWeedShop';
-import { ShopDegen } from '../components/ShopDegen';
 import Image from 'next/image';
 import { Box } from '@chakra-ui/react';
+import { Degen } from '../components/Degen';
 
 const GhostDegenWeedShop: NextPage = () => {
   return (
@@ -16,7 +16,7 @@ const GhostDegenWeedShop: NextPage = () => {
         <title>Green Ghost - Degen Weed Shop - Degen Stuff.</title>
         <meta
           name="description"
-          content="Everything we create is designed to make you feel like a true degen. Our products are made with the highest standards of craftsmanship and attention to detail, ensuring that you get the best possible experience every time you use them."
+          content="Indulge in the ultimate cannabis experience with our degen menu. Explore a tantalizing selection of concentrated weed products, including hash, wax, and oil. Each item is carefully crafted to deliver potent and flavorful hits that will elevate your high to new heights. Discover the rich aromas, smooth textures, and powerful effects that our degen menu has to offer. Elevate your smoking sessions with our degen menu and unlock a world of intense and unforgettable sensations."
         />
         <meta
           property="og:title"
@@ -24,7 +24,7 @@ const GhostDegenWeedShop: NextPage = () => {
         />
         <meta
           property="og:description"
-          content="Everything we create is designed to make you feel like a true degen. Our products are made with the highest standards of craftsmanship and attention to detail, ensuring that you get the best possible experience every time you use them."
+          content="Indulge in the ultimate cannabis experience with our degen menu. Explore a tantalizing selection of concentrated weed products, including hash, wax, and oil. Each item is carefully crafted to deliver potent and flavorful hits that will elevate your high to new heights. Discover the rich aromas, smooth textures, and powerful effects that our degen menu has to offer. Elevate your smoking sessions with our degen menu and unlock a world of intense and unforgettable sensations."
         />
         <meta
           property="og:image"
@@ -32,26 +32,20 @@ const GhostDegenWeedShop: NextPage = () => {
         />
         <meta property="og:image:width" content="2400" />
         <meta property="og:image:height" content="1260" />
-        <meta
-          property="og:url"
-          content="https://green.gd/ghost-degen-weed-shop"
-        />
+        <meta property="og:url" content="https://green.gd/weed-shop-degen" />
         <meta
           name="twitter:title"
           content="Green Ghost - Degen Weed Shop - Degen Stuff."
         />
         <meta
           name="twitter:description"
-          content="Everything we create is designed to make you feel like a true degen. Our products are made with the highest standards of craftsmanship and attention to detail, ensuring that you get the best possible experience every time you use them."
+          content="Indulge in the ultimate cannabis experience with our degen menu. Explore a tantalizing selection of concentrated weed products, including hash, wax, and oil. Each item is carefully crafted to deliver potent and flavorful hits that will elevate your high to new heights. Discover the rich aromas, smooth textures, and powerful effects that our degen menu has to offer. Elevate your smoking sessions with our degen menu and unlock a world of intense and unforgettable sensations."
         />
         <meta
           name="twitter:image"
           content="https://green.gd/green-ghost-degen-weed-shop.png"
         />
-        <meta
-          name="twitter:url"
-          content="https://green.gd/ghost-degen-weed-shop"
-        />
+        <meta name="twitter:url" content="https://green.gd/weed-shop-degen" />
       </Head>
       <MainLayout>
         <HeaderMenu>
@@ -70,7 +64,7 @@ const GhostDegenWeedShop: NextPage = () => {
           <HomeSectionTitle title="Degen Weed Shop - Degen Stuff Menu." />
         </Box>
         <MenuWeedShop />
-        <ShopDegen />
+        <Degen />
       </MainLayout>
     </>
   );

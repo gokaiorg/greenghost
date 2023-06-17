@@ -68,7 +68,7 @@ const GrowerCosmic: NextPage = () => {
           color={'ghostVerse.green.base'}
           onClick={handleBack}
         >
-          Go back
+          {'< back'}
         </Box>
         <HomeSectionTitle title={'Green Ghost - Grower - Buddy Bud Weed.'} />
         <Box display={'flex'} flexDirection={'column'} fontFamily={'vt323'}>
@@ -159,7 +159,7 @@ const GrowerCosmic: NextPage = () => {
               />
             </Box>
             <Link
-              href={'https://goo.gl/maps/mi3Vs656FyVoCfc18'}
+              href={'https://maps.app.goo.gl/u7MqhtefwqtEmyJq5'}
               title={'Buddy Bud Weed Map'}
               passHref
             >
