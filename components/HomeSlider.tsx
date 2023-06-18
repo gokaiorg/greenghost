@@ -14,7 +14,7 @@ export const HomeSlider = () => {
     <Swiper
       grabCursor={true}
       autoplay={{
-        delay: 5000,
+        delay: 6000,
         pauseOnMouseEnter: true,
         disableOnInteraction: false,
       }}
