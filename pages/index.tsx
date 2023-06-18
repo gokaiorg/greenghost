@@ -13,7 +13,7 @@ import { NextSeo } from 'next-seo';
 const Home: NextPage = () => {
   const jsonLdSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Dispensary',
+    '@type': 'Coffee Shop',
     name: 'Green Ghost',
     url: 'https://green.gd',
     logo: 'https://green.gd/green-ghost-degen-weed-shop.png',
