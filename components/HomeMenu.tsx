@@ -164,9 +164,9 @@ export const HomeMenu = () => {
       </Box>
       <Box width={{ base: '100%', lg: '25%' }} mb={'4'} minHeight={'170px'}>
         <Link
-          href="/weed-shop-pre-rolled"
+          href="/weed-shop-gadgets"
           passHref
-          title="Weed Shop Menu Pre Rolled"
+          title="Weed Shop Menu Gadgets"
         >
           <Box
             h={'100%'}
@@ -193,7 +193,7 @@ export const HomeMenu = () => {
                 src="/media/green-ghost-degen-weed-shop-menu-gadgets.webp"
                 width={342}
                 height={1290}
-                alt="Weed Shop Menu - Pre Rolled."
+                alt="Weed Shop Menu - Gadgets."
                 layout={'responsive'}
               />
             </Box>
