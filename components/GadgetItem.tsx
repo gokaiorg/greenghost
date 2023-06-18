@@ -46,7 +46,7 @@ export const GadgetItem = ({ gadget }: GadgetItemProps) => {
               width={500}
               height={500}
               title={gadget.imgDesc}
-              layout={'responsive'}
+              priority={false}
             />
           </Box>
           <Box

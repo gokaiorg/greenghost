@@ -69,7 +69,6 @@ export const MenuWeedShop = () => {
                 width={50}
                 height={50}
                 alt="Green Ghost - Degen Weed Shop - Weed Menu."
-                layout={'responsive'}
               />
             </Box>
             {link.label}

@@ -46,7 +46,7 @@ export const EdibleItem = ({ edible }: EdibleItemProps) => {
               width={500}
               height={500}
               title={edible.imgDesc}
-              layout={'responsive'}
+              priority={false}
             />
           </Box>
           <Box

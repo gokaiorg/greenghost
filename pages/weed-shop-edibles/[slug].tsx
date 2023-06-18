@@ -112,7 +112,6 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
                 width={500}
                 height={500}
                 alt={edible.imgDesc}
-                layout={'responsive'}
               />
             </SwiperSlide>
           ))}

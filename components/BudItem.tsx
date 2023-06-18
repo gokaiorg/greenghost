@@ -43,7 +43,7 @@ export const BudItem = ({ product }: BudItemProps) => {
               width={500}
               height={500}
               title={product.imgDesc}
-              layout={'responsive'}
+              priority={false}
             />
           </Box>
           <Box

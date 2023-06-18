@@ -28,10 +28,9 @@ export const HomeMenu = () => {
           >
             <Image
               src="/media/green-ghost-degen-weed-shop-menu.png"
-              width={100}
-              height={100}
+              width={256}
+              height={151}
               alt="Green Ghost - Degen Weed Shop - Weed Menu."
-              layout={'responsive'}
             />
           </motion.div>
         </Box>
@@ -75,7 +74,6 @@ export const HomeMenu = () => {
                 width={380}
                 height={494}
                 alt="Weed Shop Menu - Buds."
-                layout={'responsive'}
               />
             </Box>
             <Box as={'h2'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
@@ -116,7 +114,6 @@ export const HomeMenu = () => {
                 width={418}
                 height={608}
                 alt="Weed Shop Menu - Edibles."
-                layout={'responsive'}
               />
             </Box>
             <Box as={'h2'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
@@ -153,7 +150,6 @@ export const HomeMenu = () => {
                 width={1200}
                 height={600}
                 alt="Weed Shop Menu - Degen."
-                layout={'responsive'}
               />
             </Box>
             <Box as={'h2'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
@@ -163,11 +159,7 @@ export const HomeMenu = () => {
         </Link>
       </Box>
       <Box width={{ base: '100%', lg: '25%' }} mb={'4'} minHeight={'170px'}>
-        <Link
-          href="/weed-shop-gadgets"
-          passHref
-          title="Weed Shop Menu Gadgets"
-        >
+        <Link href="/weed-shop-gadgets" passHref title="Weed Shop Menu Gadgets">
           <Box
             h={'100%'}
             fontSize={{ base: 'xl' }}
@@ -194,7 +186,6 @@ export const HomeMenu = () => {
                 width={342}
                 height={1290}
                 alt="Weed Shop Menu - Gadgets."
-                layout={'responsive'}
               />
             </Box>
             <Box as={'h2'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>

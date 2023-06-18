@@ -33,7 +33,7 @@ export const HomeSlider = () => {
             fill
             style={{ objectFit: 'cover' }}
             alt={'Green Ghost Weed Shop Phuket'}
-            priority={false}
+            priority={true}
           />
         </Box>
         <Box

@@ -49,7 +49,6 @@ export const HomeFwens = () => {
               width={2048}
               height={2048}
               alt={'Green Ghost - Degen Weed Shop - Weed Menu.'}
-              layout={'responsive'}
             />
           </motion.div>
         </Box>
@@ -84,7 +83,6 @@ export const HomeFwens = () => {
                 width={408}
                 height={408}
                 alt={'Green Ghost Grower - My Weed Solutions.'}
-                layout={'responsive'}
               />
             </Box>
             <Box as={'h2'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
@@ -123,7 +121,6 @@ export const HomeFwens = () => {
                 width={208}
                 height={232}
                 alt={'Green Ghost Grower - Cosmic Temple Vibes.'}
-                layout={'responsive'}
               />
             </Box>
             <Box as={'h2'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
@@ -162,7 +159,6 @@ export const HomeFwens = () => {
                 width={253}
                 height={253}
                 alt={'Green Ghost Grower - Buddy Bud Weed.'}
-                layout={'responsive'}
               />
             </Box>
             <Box as={'h2'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>

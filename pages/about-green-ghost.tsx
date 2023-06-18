@@ -87,7 +87,6 @@ const BuyWeed: NextPage = () => {
                 width={500}
                 height={500}
                 alt="ok"
-                layout={'responsive'}
               />
             </Box>
             <Box width={{ base: '100%', lg: '65%' }}>
@@ -179,7 +178,6 @@ const BuyWeed: NextPage = () => {
                 width={500}
                 height={500}
                 alt="ok"
-                layout={'responsive'}
               />
             </Box>
           </Box>

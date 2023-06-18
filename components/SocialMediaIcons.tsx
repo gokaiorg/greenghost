@@ -25,7 +25,6 @@ export const SocialMediaIcons = () => {
               width={190}
               height={152}
               alt="Weed Menu - Weed delivery Phuket - Buy weed online."
-              layout={'responsive'}
             />
           </motion.div>
         </Box>

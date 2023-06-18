@@ -6,7 +6,8 @@ export const TestimonialPfp = () => {
     <Box position={'relative'} w={'20%'} h={{ base: '100px' }}>
       <Image
         src="/media/green-ghost-smiling-pfp.webp"
-        fill
+        width={100}
+        height={100}
         style={{ objectFit: 'contain' }}
         alt={'Green Ghost Weed Shop Phuket'}
         priority={false}

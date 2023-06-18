@@ -103,8 +103,8 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           <Box
             as={'span'}
             display={'inline-flex'}
-            color="#EF2625"
-            borderColor="#EF2625"
+            color="#FFE12B"
+            borderColor="#FFE12B"
             fontSize={'xl'}
             borderWidth={1}
             bgColor={'ghostVerse.dark.lighter'}

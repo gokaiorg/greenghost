@@ -101,7 +101,6 @@ const GrowerCosmic: NextPage = () => {
                 height={320}
                 alt={'Green Ghost - Grower - Buddy Bud Weed'}
                 title={'Green Ghost - Grower - Buddy Bud Weed'}
-                layout={'responsive'}
               />
             </Box>
             <Text

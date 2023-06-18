@@ -99,8 +99,7 @@ const InstallXportal: NextPage = () => {
                   alt="Green Ghost - Degen Weed Shop - Install xPortal - App Store"
                   title="Green Ghost - Degen Weed Shop - Install xPortal - App Store"
                   width="120"
-                  height="42"
-                  layout={'responsive'}
+                  height="40"
                 />
               </Link>
             </Box>
@@ -114,10 +113,9 @@ const InstallXportal: NextPage = () => {
                 <Image
                   src="/media/play-store.svg"
                   width="135"
-                  height="42"
+                  height="40"
                   alt="Green Ghost - Degen Weed Shop - Install xPortal - Play Store"
                   title="Green Ghost - Degen Weed Shop - Install xPortal - Play Store"
-                  layout={'responsive'}
                 />
               </Link>
             </Box>
@@ -130,11 +128,10 @@ const InstallXportal: NextPage = () => {
               >
                 <Image
                   src="/media/huawei-store.svg"
-                  width="132"
-                  height="42"
+                  width="133"
+                  height="40"
                   alt="Green Ghost - Degen Weed Shop - Install xPortal - Huawei Store"
                   title="Green Ghost - Degen Weed Shop - Install xPortal - Huawei Store"
-                  layout={'responsive'}
                 />
               </Link>
             </Box>
@@ -174,10 +171,8 @@ const InstallXportal: NextPage = () => {
                 src="/media/green-ghost-degen-weed-shop-install-xportal-app-click-referral-link.webp"
                 alt="Green Ghost - Degen Weed Shop - Install xPortal - Click Referral Link"
                 title="Green Ghost - Degen Weed Shop - Install xPortal - Click Referral Link"
-                layout={'responsive'}
-                objectFit="contain"
-                width={300}
-                height={600}
+                width={500}
+                height={1029}
               />
             </Box>
             <Box
@@ -191,10 +186,8 @@ const InstallXportal: NextPage = () => {
                 src="/media/green-ghost-degen-weed-shop-install-xportal-app-enter-referral-code.webp"
                 alt="Green Ghost - Degen Weed Shop - Install xPortal - Enter Referral code"
                 title="Green Ghost - Degen Weed Shop - Install xPortal - Enter Referral code"
-                layout={'responsive'}
-                objectFit="contain"
-                width={300}
-                height={600}
+                width={500}
+                height={1029}
               />
             </Box>
             <Box
@@ -208,10 +201,8 @@ const InstallXportal: NextPage = () => {
                 src="/media/green-ghost-degen-weed-shop-install-xportal-app-verify-phone-number.webp"
                 alt="Green Ghost - Degen Weed Shop - Install xPortal - Verify Phone Number"
                 title="Green Ghost - Degen Weed Shop - Install xPortal - Verify Phone Number"
-                layout={'responsive'}
-                objectFit="contain"
-                width={300}
-                height={600}
+                width={500}
+                height={1029}
               />
             </Box>
           </Box>
@@ -252,10 +243,8 @@ const InstallXportal: NextPage = () => {
                 src="/media/green-ghost-degen-weed-shop-install-xportal-app-click-play-menu.webp"
                 alt="Green Ghost - Degen Weed Shop - Install xPortal - Click Play Menu"
                 title="Green Ghost - Degen Weed Shop - Install xPortal - Click Play Menu"
-                layout={'responsive'}
-                objectFit="contain"
-                width={300}
-                height={600}
+                width={500}
+                height={1029}
               />
             </Box>
             <Box
@@ -269,10 +258,8 @@ const InstallXportal: NextPage = () => {
                 src="/media/green-ghost-degen-weed-shop-install-xportal-app-claim-your-herotag.webp"
                 alt="Green Ghost - Degen Weed Shop - Install xPortal - Claim Your Herotag"
                 title="Green Ghost - Degen Weed Shop - Install xPortal - Claim Your Herotag"
-                layout={'responsive'}
-                objectFit="contain"
-                width={300}
-                height={600}
+                width={500}
+                height={1029}
               />
             </Box>
           </Box>

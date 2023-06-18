@@ -57,10 +57,9 @@ export const Footer = () => {
           <Box w={'200px'} mx={'auto'}>
             <Image
               src="/media/green-ghost-degen-weed-shop-ghostverse-dao.png"
-              width={100}
-              height={100}
+              width={256}
+              height={91}
               alt="Green Ghost - Degen Weed Shop - Weed Menu."
-              layout={'responsive'}
             />
           </Box>
         </Text>

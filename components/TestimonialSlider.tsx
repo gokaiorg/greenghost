@@ -33,7 +33,6 @@ export const TestimonialSlider = () => {
               width={478}
               height={475}
               alt={'Green Ghost - Degen Weed Shop - Cannabis Leaf.'}
-              layout={'responsive'}
             />
           </motion.div>
         </Box>

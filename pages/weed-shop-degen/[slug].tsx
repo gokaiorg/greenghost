@@ -101,13 +101,7 @@ export default function DegensPage({ degen }: DegensPageProps) {
         >
           {degen.images.map((image, index) => (
             <SwiperSlide key={index}>
-              <Image
-                src={image}
-                width={500}
-                height={500}
-                alt={degen.imgDesc}
-                layout={'responsive'}
-              />
+              <Image src={image} width={500} height={500} alt={degen.imgDesc} />
             </SwiperSlide>
           ))}
         </Swiper>

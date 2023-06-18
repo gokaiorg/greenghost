@@ -42,7 +42,7 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
               width={500}
               height={500}
               title={degen.imgDesc}
-              layout={'responsive'}
+              priority={false}
             />
           </Box>
           <Box

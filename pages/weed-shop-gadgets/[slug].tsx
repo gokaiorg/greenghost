@@ -107,7 +107,6 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
                 width={500}
                 height={500}
                 alt={gadget.imgDesc}
-                layout={'responsive'}
               />
             </SwiperSlide>
           ))}

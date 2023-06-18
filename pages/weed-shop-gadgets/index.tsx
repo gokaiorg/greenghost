@@ -55,10 +55,9 @@ const WeedShopGadgets: NextPage = () => {
           <Box w={'50px'} mr={4} mt={2}>
             <Image
               src="/media/green-ghost-degen-weed-shop-menu.png"
-              width={100}
-              height={100}
+              width={256}
+              height={151}
               alt="Green Ghost - Degen Weed Shop - Weed Menu."
-              layout={'responsive'}
             />
           </Box>
           <HomeSectionTitle title="Degen Weed Shop - Gadgets Menu." />

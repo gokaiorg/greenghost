@@ -126,7 +126,6 @@ export default function ProductPage({ product }: ProductPageProps) {
                 width={500}
                 height={500}
                 alt={product.imgDesc}
-                layout={'responsive'}
               />
             </SwiperSlide>
           ))}
