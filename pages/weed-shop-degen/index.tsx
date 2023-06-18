@@ -1,13 +1,13 @@
 import type { NextPage } from 'next';
-import { MainLayout } from '../components/MainLayout';
-import { HeaderMenu } from '../components/HeaderMenu';
-import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
-import { HomeSectionTitle } from '../components/HomeSectionTitle';
+import { MainLayout } from '../../components/MainLayout';
+import { HeaderMenu } from '../../components/HeaderMenu';
+import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
+import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import Head from 'next/head';
-import { MenuWeedShop } from '../components/MenuWeedShop';
+import { MenuWeedShop } from '../../components/MenuWeedShop';
 import Image from 'next/image';
 import { Box } from '@chakra-ui/react';
-import { Degen } from '../components/Degen';
+import { Degen } from '../../components/Degen';
 
 const GhostDegenWeedShop: NextPage = () => {
   return (

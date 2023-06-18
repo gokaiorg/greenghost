@@ -47,7 +47,7 @@ export const Gadget = () => {
           p={4}
           mb={4}
           display={'inline-flex'}
-          marginRight="auto"
+          mr={'auto'}
           flexWrap={'wrap'}
           fontSize={30}
         >

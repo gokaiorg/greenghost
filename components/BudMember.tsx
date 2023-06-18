@@ -65,7 +65,7 @@ export const BudMember = () => {
       <Box
         display={'flex'}
         alignItems="baseline"
-        mr={4}
+        mr={1}
         flexDirection={{ base: 'column', lg: 'row' }}
       >
         <Box
@@ -77,13 +77,17 @@ export const BudMember = () => {
           p={4}
           mb={4}
           display={'inline-flex'}
-          marginRight="auto"
+          mr={'auto'}
           flexWrap={'wrap'}
           fontSize={30}
         >
           Latest buds for members only.
         </Box>
-        <Box display={'flex'} mb={{ base: '4', lg: '0' }}>
+        <Box
+          display={'flex'}
+          mb={{ base: '4', lg: '0' }}
+          ml={{ base: '0', lg: '4' }}
+        >
           <Box mr={4}>
             <Select
               value={sortBy}

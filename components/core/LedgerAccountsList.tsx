@@ -108,12 +108,7 @@ export const LedgerAccountsList: FC<LedgerAccountsListProps> = ({
 
   if (error) {
     return (
-      <Box
-        textAlign={'center'}
-        marginLeft={'auto'}
-        marginRight="auto"
-        marginTop={6}
-      >
+      <Box textAlign={'center'} marginLeft={'auto'} mr={'auto'} marginTop={6}>
         <Text>{error}</Text>
         <ActionButton mt={4} onClick={handleRefresh}>
           Refresh
@@ -142,7 +137,7 @@ export const LedgerAccountsList: FC<LedgerAccountsListProps> = ({
     );
 
   return (
-    <Box marginLeft={'auto'} marginRight="auto" marginTop={6}>
+    <Box marginLeft={'auto'} mr={'auto'} marginTop={6}>
       <Text fontWeight="semibold" textAlign={'center'} mb={2}>
         Choose address:
       </Text>

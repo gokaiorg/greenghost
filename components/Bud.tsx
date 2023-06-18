@@ -73,13 +73,17 @@ export const Bud = () => {
           p={4}
           mb={4}
           display={'inline-flex'}
-          marginRight="auto"
+          mr={'auto'}
           flexWrap={'wrap'}
           fontSize={30}
         >
           Buds price for 1 gram.
         </Box>
-        <Box display={'flex'} mb={{ base: '4', lg: '0' }}>
+        <Box
+          display={'flex'}
+          mb={{ base: '4', lg: '0' }}
+          ml={{ base: '0', lg: '4' }}
+        >
           <Box mr={4}>
             <Select
               value={sortBy}

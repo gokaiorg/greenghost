@@ -86,47 +86,6 @@ export const HomeMenu = () => {
       </Box>
       <Box width={{ base: '100%', lg: '25%' }} mb={'4'} minHeight={'170px'}>
         <Link
-          href="/weed-shop-pre-rolled"
-          passHref
-          title="Weed Shop Menu Pre Rolled"
-        >
-          <Box
-            h={'100%'}
-            fontSize={{ base: 'xl' }}
-            color={'ghostVerse.green.base'}
-            fontFamily={'CubicFive12'}
-            borderColor={'ghostVerse.grey.base'}
-            borderWidth={1}
-            mx={2}
-            bgColor={'ghostVerse.dark.lighter'}
-            textAlign={'center'}
-            p={4}
-            display={'flex'}
-            justifyContent={'center'}
-            flexDirection={'column'}
-            alignItems={'center'}
-            transition={'all .3s'}
-            _hover={{
-              borderColor: 'ghostVerse.green.base',
-            }}
-          >
-            <Box w={'26px'}>
-              <Image
-                src="/media/green-ghost-degen-weed-shop-menu-pre-rolled.png"
-                width={342}
-                height={1290}
-                alt="Weed Shop Menu - Pre Rolled."
-                layout={'responsive'}
-              />
-            </Box>
-            <Box as={'h2'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
-              Pre-Rolled
-            </Box>
-          </Box>
-        </Link>
-      </Box>
-      <Box width={{ base: '100%', lg: '25%' }} mb={'4'} minHeight={'170px'}>
-        <Link
           href={'/weed-shop-edibles'}
           passHref
           title={'Weed Shop Menu Edibles'}
@@ -199,6 +158,47 @@ export const HomeMenu = () => {
             </Box>
             <Box as={'h2'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
               Degen
+            </Box>
+          </Box>
+        </Link>
+      </Box>
+      <Box width={{ base: '100%', lg: '25%' }} mb={'4'} minHeight={'170px'}>
+        <Link
+          href="/weed-shop-pre-rolled"
+          passHref
+          title="Weed Shop Menu Pre Rolled"
+        >
+          <Box
+            h={'100%'}
+            fontSize={{ base: 'xl' }}
+            color={'ghostVerse.green.base'}
+            fontFamily={'CubicFive12'}
+            borderColor={'ghostVerse.grey.base'}
+            borderWidth={1}
+            mx={2}
+            bgColor={'ghostVerse.dark.lighter'}
+            textAlign={'center'}
+            p={4}
+            display={'flex'}
+            justifyContent={'center'}
+            flexDirection={'column'}
+            alignItems={'center'}
+            transition={'all .3s'}
+            _hover={{
+              borderColor: 'ghostVerse.green.base',
+            }}
+          >
+            <Box w={'55px'}>
+              <Image
+                src="/media/green-ghost-degen-weed-shop-menu-gadgets.webp"
+                width={342}
+                height={1290}
+                alt="Weed Shop Menu - Pre Rolled."
+                layout={'responsive'}
+              />
+            </Box>
+            <Box as={'h2'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
+              Gadgets
             </Box>
           </Box>
         </Link>

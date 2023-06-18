@@ -8,10 +8,27 @@ import { HomeFeature } from '../components/HomeFeatures';
 import { TestimonialSlider } from '../components/TestimonialSlider';
 import { HomeMenu } from '../components/HomeMenu';
 import { HomeFwens } from '../components/HomeFwens';
+import { NextSeo } from 'next-seo';
 
 const Home: NextPage = () => {
+  const jsonLdSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Dispensary',
+    name: 'Green Ghost',
+    url: 'https://green.gd',
+    logo: 'https://green.gd/green-ghost-degen-weed-shop.png',
+  };
+
   return (
     <>
+      <NextSeo
+        additionalMetaTags={[
+          {
+            name: 'json-ld',
+            content: JSON.stringify(jsonLdSchema),
+          },
+        ]}
+      />
       <Head>
         <title>Green Ghost - Degen Weed Shop ร้าน ขาย กัญชา.</title>
         <meta

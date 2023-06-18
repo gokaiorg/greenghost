@@ -15,7 +15,7 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
       paddingRight={1}
       lineHeight={1}
     >
-      <Link href={`weed-shop-degens/${degen.slug}`} title={degen.name} passHref>
+      <Link href={`weed-shop-degen/${degen.slug}`} title={degen.name} passHref>
         <Box
           borderColor={'ghostVerse.green.base'}
           borderWidth={1}
