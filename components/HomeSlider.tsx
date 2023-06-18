@@ -13,7 +13,11 @@ export const HomeSlider = () => {
   return (
     <Swiper
       grabCursor={true}
-      autoplay={{ delay: 5000 }}
+      autoplay={{
+        delay: 5000,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false,
+      }}
       effect={'creative'}
       creativeEffect={{
         prev: {
