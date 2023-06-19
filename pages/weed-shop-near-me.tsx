@@ -6,6 +6,7 @@ import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import Head from 'next/head';
 import Link from 'next/link';
+import { IconMap } from '../components/IconMap';
 
 const WeedShopNearMe: NextPage = () => {
   return (
@@ -49,7 +50,12 @@ const WeedShopNearMe: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <HomeSectionTitle title="Degen Weed Shop - Near Me." />
+        <Box display={'flex'} alignItems={'center'}>
+          <Box w={'40px'} mr={4} mb={4}>
+            <IconMap />
+          </Box>
+          <HomeSectionTitle title="Degen Weed Shop - Near Me." />
+        </Box>
         <Text as={'h2'} fontSize={{ base: '3xl' }} fontFamily={'vt323'} mb={10}>
           Looking for a trusted and high-quality weed shop near you?
         </Text>

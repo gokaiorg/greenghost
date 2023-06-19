@@ -5,13 +5,15 @@ import { ImgG } from './ImgG';
 
 export const Logo = () => {
   return (
-    <NextLink href="/">
-      <Box display={'flex'} alignItems={'center'}>
-        <ImgEarth />
-        <Box width={{ base: '200px', md: '200px' }}>
-          <ImgG />
+    <Box mx={{ base: 'auto', md: 'inherit' }} mb={{ base: '4', md: '0' }}>
+      <NextLink href="/">
+        <Box display={'flex'} alignItems={'center'}>
+          <ImgEarth />
+          <Box width={{ base: '200px', md: '200px' }}>
+            <ImgG />
+          </Box>
         </Box>
-      </Box>
-    </NextLink>
+      </NextLink>
+    </Box>
   );
 };

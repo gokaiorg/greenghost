@@ -10,6 +10,7 @@ import { SocialContactIcons } from '../components/SocialContactIcons';
 import Image from 'next/image';
 import { WeedDeliveryFeature } from '../components/WeedDeliveryFeature';
 import { FindUsAlso } from '../components/FindUsAlso';
+import { IconChat } from '../components/IconChat';
 
 const BuyWeed: NextPage = () => {
   return (
@@ -59,7 +60,12 @@ const BuyWeed: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <HomeSectionTitle title="Contact us - Buy weed online." />
+        <Box display={'flex'} alignItems={'center'}>
+          <Box w={'28px'} mr={4} mb={4}>
+            <IconChat />
+          </Box>
+          <HomeSectionTitle title="Contact us - Buy weed online." />
+        </Box>
         <Text as={'h2'} fontSize={{ base: '3xl' }} fontFamily={'vt323'} mb={10}>
           Looking to buy weed online? No need to leave the house for your
           favorite buds, your choice of strains is delivered right to your

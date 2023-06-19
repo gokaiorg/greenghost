@@ -2,6 +2,7 @@ import { Box, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { IconMenu } from './IconMenu';
 
 export const HomeMenu = () => {
   return (
@@ -26,12 +27,7 @@ export const HomeMenu = () => {
               repeatDelay: 0,
             }}
           >
-            <Image
-              src="/media/green-ghost-degen-weed-shop-menu.png"
-              width={256}
-              height={151}
-              alt="Green Ghost - Degen Weed Shop - Weed Menu."
-            />
+            <IconMenu />
           </motion.div>
         </Box>
         <Text

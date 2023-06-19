@@ -8,6 +8,7 @@ import { ImgPercent } from '../components/ImgPercent';
 import { ImgQuestion } from '../components/ImgQuestion';
 import Head from 'next/head';
 import { MenuCrypto } from '../components/MenuCrypto';
+import { IconEarn } from '../components/IconEarn';
 
 const CryptoWeedShop: NextPage = () => {
   return (
@@ -59,7 +60,12 @@ const CryptoWeedShop: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <HomeSectionTitle title="Crypto Weed Shop - Partners." />
+        <Box display={'flex'} alignItems={'center'}>
+          <Box w={'38px'} mr={4} mb={4}>
+            <IconEarn />
+          </Box>
+          <HomeSectionTitle title="Crypto Weed Shop - Partners." />
+        </Box>
         <MenuCrypto />
         <Box
           as="div"

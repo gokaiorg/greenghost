@@ -8,7 +8,7 @@ import { Bud } from '../components/Bud';
 import Head from 'next/head';
 import { MenuWeedShop } from '../components/MenuWeedShop';
 import { HomeFeature } from '../components/HomeFeatures';
-import Image from 'next/image';
+import { IconMenu } from '../components/IconMenu';
 
 const WeedShop: NextPage = () => {
   return (
@@ -52,14 +52,9 @@ const WeedShop: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <Box display={'flex'} alignItems={'top'}>
-          <Box w={'50px'} mr={4} mt={2}>
-            <Image
-              src="/media/green-ghost-degen-weed-shop-menu.png"
-              width={256}
-              height={151}
-              alt="Green Ghost - Degen Weed Shop - Weed Menu."
-            />
+        <Box display={'flex'} alignItems={'center'}>
+          <Box w={'70px'} mr={4} mb={4}>
+            <IconMenu />
           </Box>
           <HomeSectionTitle title="Degen Weed Shop - Buds Menu." />
         </Box>
