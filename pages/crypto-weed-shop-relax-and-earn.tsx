@@ -5,14 +5,10 @@ import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import Link from 'next/link';
-import { ImgDollar } from '../components/ImgDollar';
-import { ImgPercent } from '../components/ImgPercent';
-import { ImgQuestion } from '../components/ImgQuestion';
 import Head from 'next/head';
 import { MenuCrypto } from '../components/MenuCrypto';
 import { IconEarn } from '../components/IconEarn';
 import Image from 'next/image';
-import { ImgGhostverse } from '../components/ImgGhostverse';
 
 const CryptoWeedShop: NextPage = () => {
   return (
@@ -147,7 +143,7 @@ const CryptoWeedShop: NextPage = () => {
               >
                 How does it work?
               </Text>
-              A percentage of Green Ghost's revenue is allocated to staking in
+              A percentage of Green Ghost&apos;s revenue is allocated to staking in
               the{' '}
               <Link
                 href="https://ghostverse.org/"
@@ -159,7 +155,7 @@ const CryptoWeedShop: NextPage = () => {
                 </Box>
               </Link>{' '}
               to increase passive income for NFT holders, and a portion of
-              GhostVerse's revenue is redistributed to Green Ghost customers in
+              GhostVerse&apos;s revenue is redistributed to Green Ghost customers in
               the form of{' '}
               <Link
                 href="/crypto-weed-shop-cashback"
