@@ -4,8 +4,8 @@ export const IconEarn = () => {
   return (
     <Image
       src="/media/green-ghost-degen-weed-shop-earn.png"
-      width={256}
-      height={151}
+      width={418}
+      height={569}
       alt="Green Ghost - Degen Weed Shop - Relax and Earn."
     />
   );

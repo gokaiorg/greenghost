@@ -4,8 +4,8 @@ export const IconChat = () => {
   return (
     <Image
       src="/media/green-ghost-degen-weed-shop-chat.png"
-      width={256}
-      height={151}
+      width={380}
+      height={683}
       alt="Green Ghost - Degen Weed Shop - Chat with us."
     />
   );

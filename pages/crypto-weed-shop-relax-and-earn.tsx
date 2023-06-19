@@ -11,6 +11,8 @@ import { ImgQuestion } from '../components/ImgQuestion';
 import Head from 'next/head';
 import { MenuCrypto } from '../components/MenuCrypto';
 import { IconEarn } from '../components/IconEarn';
+import Image from 'next/image';
+import { ImgGhostverse } from '../components/ImgGhostverse';
 
 const CryptoWeedShop: NextPage = () => {
   return (
@@ -70,9 +72,12 @@ const CryptoWeedShop: NextPage = () => {
         </Box>
         <MenuCrypto />
         <Box
+          display={'flex'}
+          flexDirection={'column'}
           as="div"
           color={'white'}
           fontSize={{ base: '3xl' }}
+          fontFamily={'vt323'}
           borderColor={'ghostVerse.color2.base'}
           bgColor={'ghostVerse.dark.lighter'}
           borderWidth={1}
@@ -80,101 +85,251 @@ const CryptoWeedShop: NextPage = () => {
           mt={5}
           mb={6}
           p={4}
-          mr={'auto'}
-          fontFamily={'vt323'}
         >
           <Text
             as={'h2'}
+            color={'white'}
+            fontSize={'5xl'}
             fontWeight={'black'}
-            fontSize={'4xl'}
-            marginBottom={4}
+            mb={4}
           >
             Join the new generation in love for weed, art and crypto.
           </Text>
-          Green Ghost is a contributor to the{' '}
-          <Text
-            color={'ghostVerse.green.base'}
-            as="a"
-            href="https://ghostverse.org/"
+          <Box
+            display={'flex'}
+            alignItems={'center'}
+            flexDirection={{ base: 'column', lg: 'row' }}
+            mb={10}
           >
-            GhostVerse DAO
-          </Text>
-          , providing exclusive privileges to NFT holders as members of the
-          Ghost Clan.
-          <br />
-          <br />
-          MxGhosts pixel and voxel NFTs holders receive a 31
-          <ImgPercent /> discount and{' '}
-          <Text
-            color={'ghostVerse.green.base'}
-            as="a"
-            target="_blank"
-            href="https://linktr.ee/elrondbuds"
-          >
-            <ImgDollar />
-            EBUD
-          </Text>{' '}
-          cashback on all orders, in addition to earning{' '}
-          <Text
-            color={'ghostVerse.green.base'}
-            as="a"
-            href="https://ghostverse.org/play-and-earn"
-          >
-            passive income in <ImgDollar />
-            EGLD
-          </Text>{' '}
-          on{' '}
-          <Text
-            color={'ghostVerse.green.base'}
-            as="a"
-            target="_blank"
-            href="https://multiversx.com/"
-          >
-            MultiversX blockchain
-          </Text>
-          .
-          <br />
-          <br />
-          <Text
-            as={'h2'}
-            fontWeight={'black'}
-            fontSize={'4xl'}
-            marginBottom={4}
-          >
-            Looking to get your hands on a unique Mr. Ghost NFT
-            <ImgQuestion />
-          </Text>
-          Head over to{' '}
-          <Text
-            color={'ghostVerse.green.base'}
-            as="a"
-            href="https://ghostverse.org/mxghosts"
-          >
-            MxGhosts
-          </Text>{' '}
-          and keep an eye out for our upcoming public sales or purchase one on
-          the secondary market. Make sure to follow our links to avoid scams.
-          <br />
-          <br />
-          <Text
-            as={'h2'}
-            fontWeight={'black'}
-            fontSize={'4xl'}
-            marginBottom={4}
-          >
-            New to the world of blockchain and NFTs
-            <ImgQuestion />
-          </Text>
-          <Link
-            href="/install-xportal-app"
-            title="Install xPortal App"
-            passHref
-          >
-            <Box as={'span'} color={'ghostVerse.green.base'}>
-              Install xPortal Wallet on your phone
+            <Box
+              width={{ base: '100%', lg: '45%' }}
+              mr={{ base: 0, lg: 10 }}
+              mt={4}
+            >
+              <Image
+                src="/media/green-ghost-weed-shop-pixel-art.webp"
+                width={1080}
+                height={514}
+                alt="Green Ghost is a part of the GhostVerse ecosystem"
+              />
             </Box>
-          </Link>{' '}
-          and join the revolution.
+            <Box width={{ base: '100%', lg: '55%' }}>
+              By being a part of the GhostVerse ecosystem, the Green Ghost aims
+              to offer a unique platform for members to access and enjoy
+              cannabis-related products and services, leveraging the
+              advancements of blockchain technology.
+            </Box>
+          </Box>
+          <Box
+            width={{ base: '100%' }}
+            mb={'6'}
+            color={'ghostVerse.blue.base'}
+            p={4}
+            borderColor={'ghostVerse.blue.base'}
+            borderWidth={1}
+          >
+            Green Ghost strives to create a community where Ghost Clan members
+            can experience exclusive perks, discounts, and rewards while
+            engaging with the world of crypto and cannabis in a secure and
+            innovative environment.
+          </Box>
+          <Box
+            display={'flex'}
+            flexDirection={{ base: 'column', lg: 'row' }}
+            mb={8}
+          >
+            <Box width={{ base: '100%', lg: '65%' }}>
+              <Text
+                as={'h2'}
+                fontWeight={'black'}
+                fontSize={'5xl'}
+                marginBottom={4}
+              >
+                How does it work?
+              </Text>
+              A percentage of Green Ghost's revenue is allocated to staking in
+              the{' '}
+              <Link
+                href="https://ghostverse.org/"
+                title="GhostVerse DAO"
+                passHref
+              >
+                <Box as={'span'} color={'ghostVerse.green.base'}>
+                  GhostVerse DAO
+                </Box>
+              </Link>{' '}
+              to increase passive income for NFT holders, and a portion of
+              GhostVerse's revenue is redistributed to Green Ghost customers in
+              the form of{' '}
+              <Link
+                href="/crypto-weed-shop-cashback"
+                title="Green Ghost cashback"
+                passHref
+              >
+                <Box as={'span'} color={'ghostVerse.green.base'}>
+                  cashback
+                </Box>
+              </Link>
+              .
+              <br />
+              <br />
+              This ensures that both the NFT holders and customers of Green
+              Ghost benefit from the earnings generated by the GhostVerse
+              ecosystem.
+            </Box>
+            <Box
+              width={{ base: '100%', lg: '35%' }}
+              ml={{ base: 0, lg: 10 }}
+              mt={4}
+            >
+              <Image
+                src="/media/green-ghost-weed-shop-crypto-system.png"
+                width={500}
+                height={500}
+                alt="Green Ghost - Crypto System"
+              />
+            </Box>
+          </Box>
+          <Box
+            display={'flex'}
+            flexDirection={{ base: 'column', lg: 'row' }}
+            mb={8}
+          >
+            <Box
+              width={{ base: '100%', lg: '35%' }}
+              mr={{ base: 0, lg: 10 }}
+              mt={4}
+            >
+              <Image
+                src="/media/green-ghost-weed-shop-crypto-member.png"
+                width={500}
+                height={500}
+                alt="Green Ghost - Crypto Member"
+              />
+            </Box>
+            <Box width={{ base: '100%', lg: '65%' }}>
+              <Text
+                as={'h2'}
+                fontWeight={'black'}
+                fontSize={'5xl'}
+                marginBottom={4}
+              >
+                How to become a member?
+              </Text>
+              Own at least 1 of our NFTs!
+              <br />
+              You need to{' '}
+              <Link
+                href="/install-xportal-app"
+                title="Install xPortal App"
+                passHref
+              >
+                <Box as={'span'} color={'ghostVerse.green.base'}>
+                  Install xPortal Wallet
+                </Box>
+              </Link>{' '}
+              and purchase an{' '}
+              <Link
+                href="https://ghostverse.org/mxghosts"
+                title="Green Ghost buy NFT"
+                passHref
+              >
+                <Box as={'span'} color={'ghostVerse.green.base'}>
+                  MxGhosts
+                </Box>
+              </Link>{' '}
+              NFT.
+              <br />
+              <br />
+              <Box
+                as={'div'}
+                color={'ghostVerse.blue.base'}
+                p={4}
+                borderColor={'ghostVerse.blue.base'}
+                borderWidth={1}
+              >
+                Keep an eye out for our upcoming public sales or purchase one on
+                the secondary market.
+              </Box>
+            </Box>
+          </Box>
+          <Box
+            display={'flex'}
+            flexDirection={{ base: 'column', lg: 'row' }}
+            mb={8}
+          >
+            <Box width={{ base: '100%', lg: '65%' }}>
+              <Text
+                as={'h2'}
+                fontWeight={'black'}
+                fontSize={'5xl'}
+                marginBottom={4}
+              >
+                What are the benefits?
+              </Text>
+              You get 31% off on buds and certain other products, and privileged
+              access to our new strain arrivals. You also receive cashback in{' '}
+              <Link
+                href="https://linktr.ee/elrondbuds"
+                title="Green Ghost - Elrond Buds"
+                passHref
+              >
+                <Box as={'span'} color={'ghostVerse.green.base'}>
+                  $EBUD
+                </Box>
+              </Link>
+              . You can also get discounts if you are a member of an{' '}
+              <Link
+                href="/crypto-weed-shop-partners"
+                title="Green Ghost - Crypto partners"
+                passHref
+              >
+                <Box as={'span'} color={'ghostVerse.green.base'}>
+                  NFT partner project
+                </Box>
+              </Link>
+              .
+              <br />
+              <br />
+              <Link
+                href="https://ghostverse.org/play-and-earn"
+                title="GhostVerse MxGhosts - Play and Earn"
+                passHref
+              >
+                <Text
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  borderColor={'ghostVerse.green.base'}
+                  fontSize={{ base: '3xl', md: '4xl' }}
+                  borderWidth={1}
+                  bgColor="transparent"
+                  backdropFilter={'blur(3px)'}
+                  p={6}
+                  mt={10}
+                  mx={'auto'}
+                  fontFamily={'CubicFive10'}
+                  _hover={{
+                    borderColor: 'ghostVerse.green.base',
+                    color: 'ghostVerse.green.base',
+                  }}
+                >
+                  More rewards
+                </Text>
+              </Link>
+            </Box>
+            <Box
+              width={{ base: '100%', lg: '35%' }}
+              ml={{ base: 0, lg: 10 }}
+              mt={4}
+            >
+              <Image
+                src="/media/green-ghost-weed-shop-crypto-benefits.png"
+                width={500}
+                height={500}
+                alt="Green Ghost - Crypto Benefits"
+              />
+            </Box>
+          </Box>
         </Box>
       </MainLayout>
     </>

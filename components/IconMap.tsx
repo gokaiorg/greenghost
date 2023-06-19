@@ -4,8 +4,8 @@ export const IconMap = () => {
   return (
     <Image
       src="/media/green-ghost-degen-weed-shop-map.png"
-      width={256}
-      height={151}
+      width={189}
+      height={189}
       alt="Green Ghost - Degen Weed Shop - Map Near Me."
     />
   );

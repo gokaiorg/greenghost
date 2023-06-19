@@ -2,6 +2,7 @@ import { Container, Box, Text } from '@chakra-ui/react';
 import { SocialMediaIcons } from './SocialMediaIcons';
 import { MenuFooter } from './MenuFooter';
 import Image from 'next/image';
+import { ImgGhostverse } from './ImgGhostverse';
 
 export const Footer = () => {
   return (
@@ -55,12 +56,7 @@ export const Footer = () => {
           width={'100%'}
         >
           <Box w={'200px'} mx={'auto'}>
-            <Image
-              src="/media/green-ghost-degen-weed-shop-ghostverse-dao.png"
-              width={256}
-              height={91}
-              alt="Green Ghost - Degen Weed Shop - Weed Menu."
-            />
+            <ImgGhostverse />
           </Box>
         </Text>
       </Container>
