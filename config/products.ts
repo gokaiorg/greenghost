@@ -376,7 +376,7 @@ export const products: Product[] = [
   {
     slug: 'fruit-spirit',
     name: 'Fruit Spirit',
-    price: 700,
+    price: 666,
     dominance: 'Sativa Dominant',
     indica: '40',
     sativa: '60',
@@ -388,7 +388,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '08/04/2023',
-    quantity: 0,
+    quantity: 10,
     origin: 'Phuket',
     description:
       "Fruit Spirit is a premium cannabis strain that is sure to satisfy anyone looking for a unique and delicious smoking experience. This hybrid strain is a cross between White Widow and Blueberry, resulting in a potent and flavorful strain that will leave you feeling relaxed and euphoric. Its fruity aroma and taste are unlike anything else on the market, making it a popular choice among cannabis enthusiasts worldwide. \n\n Not only does Fruit Spirit taste amazing, but it also boasts a well-balanced mix of Indica and Sativa genetics. This makes it a versatile strain that can be enjoyed at any time of day or night. Its high THC content produces a powerful and uplifting effect that can help with stress, anxiety, and depression. Additionally, its sweet flavor profile makes it a great option for those looking to indulge in a little bit of sweetness without the added calories. \n\n Fruit Spirit is a top-shelf strain that is sure to impress even the most discerning cannabis connoisseur. Its buds are dense and covered in trichomes, giving it a unique appearance that's hard to miss. Whether you're looking for a strain to help you unwind after a long day or something to spark your creativity, Fruit Spirit is the perfect choice. So why not give it a try and experience its fruity goodness for yourself?",
