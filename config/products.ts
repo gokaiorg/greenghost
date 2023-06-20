@@ -125,7 +125,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '22/01/2023',
-    quantity: 3,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Cherry Garcia is a popular hybrid marijuana strain that is known for its calming effects. This strain is a cross between Animal Cookies and 3x Crazy, and its potency is known to vary. With continued use, Cherry Garcia's effects become more calming than energizing, leading to a balanced high that leaves you feeling happy, relaxed, and euphoric. Consumers of Cherry Garcia often report that it makes them feel giggly and enhances their mood. \n\n One of the most notable features of Cherry Garcia is its unique flavor profile. The strain has a sweet taste, with hints of berry and cherry that shine through. Many users appreciate the smooth and enjoyable smoking experience that Cherry Garcia provides. Medical marijuana patients often choose Cherry Garcia to alleviate symptoms related to stress, pain, and depression. \n\n Cherry Garcia was initially bred by Natural State Cultivation and has gained popularity due to its balanced effects and unique flavor profile. Whether you're looking to unwind after a long day or want to enhance your mood, Cherry Garcia may be the perfect strain for you. With its calming and uplifting effects, it's no surprise that this strain has become a favorite among many cannabis enthusiasts.",
@@ -522,7 +522,7 @@ export const products: Product[] = [
   {
     slug: 'stardawg',
     name: 'Stardawg',
-    price: 666,
+    price: 600,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -534,7 +534,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '11/06/2023',
-    quantity: 10,
+    quantity: 9,
     origin: 'Phuket',
     description:
       "Stardawg, also known as Stardog, is a hybrid marijuana strain created from Chemdog 4 and Tres Dawg. Its earthy pine flavor with hints of sour diesel is truly captivating. The effects of Stardawg are uplifting and beneficial for relieving stress, fatigue, and anxiety. With a flowering time of 67 days indoors, it yields moderate amounts of high-quality buds. \n\n Stardawg is a mesmerizing hybrid strain derived from Chemdog 4 and Tres Dawg. Its distinct earthy pine taste intertwined with sour diesel undertones is truly delightful. This strain offers uplifting effects that can provide relief from stress, fatigue, and anxiety. Indoor growers can expect a moderate yield of exceptional buds after approximately 67 days of flowering. \n\n Discover Stardawg, a remarkable hybrid strain bred from Chemdog 4 and Tres Dawg. Its enticing flavor profile blends earthy pine with subtle sour diesel notes. Stardawg's uplifting effects make it an ideal choice for relieving stress, fatigue, and anxiety. With an indoor flowering time of around 67 days, this strain yields moderate amounts of top-quality buds.",
