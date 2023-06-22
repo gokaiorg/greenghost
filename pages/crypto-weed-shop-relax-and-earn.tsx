@@ -21,8 +21,7 @@ const CryptoWeedShop: NextPage = () => {
         />
         <meta
           property="og:title"
-          content="Green Ghost - Crypto Weed Shop - Relax and Earn.
-          Edibles."
+          content="Green Ghost - Crypto Weed Shop - Relax and Earn."
         />
         <meta
           property="og:description"
@@ -40,8 +39,7 @@ const CryptoWeedShop: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Ghost - Crypto Weed Shop - Relax and Earn.
-          Edibles."
+          content="Green Ghost - Crypto Weed Shop - Relax and Earn."
         />
         <meta
           name="twitter:description"

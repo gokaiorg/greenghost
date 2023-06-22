@@ -376,7 +376,7 @@ export const products: Product[] = [
   {
     slug: 'fruit-spirit',
     name: 'Fruit Spirit',
-    price: 666,
+    price: 600,
     dominance: 'Sativa Dominant',
     indica: '40',
     sativa: '60',
