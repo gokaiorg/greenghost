@@ -39,8 +39,8 @@ export const BudItem = ({ product }: BudItemProps) => {
             <Image
               src={product.images[1]}
               alt={product.imgDesc}
-              width={500}
-              height={500}
+              width={700}
+              height={700}
               title={product.imgDesc}
               priority={false}
             />

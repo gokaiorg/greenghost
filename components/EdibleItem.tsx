@@ -43,8 +43,8 @@ export const EdibleItem = ({ edible }: EdibleItemProps) => {
             <Image
               src={edible.images[1]}
               alt={edible.imgDesc}
-              width={500}
-              height={500}
+              width={700}
+              height={700}
               title={edible.imgDesc}
               priority={false}
             />

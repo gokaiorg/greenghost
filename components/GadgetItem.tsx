@@ -43,8 +43,8 @@ export const GadgetItem = ({ gadget }: GadgetItemProps) => {
             <Image
               src={gadget.images[1]}
               alt={gadget.imgDesc}
-              width={500}
-              height={500}
+              width={700}
+              height={700}
               title={gadget.imgDesc}
               priority={false}
             />

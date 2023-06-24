@@ -39,8 +39,8 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
             <Image
               src={degen.images[1]}
               alt={degen.imgDesc}
-              width={500}
-              height={500}
+              width={700}
+              height={700}
               title={degen.imgDesc}
               priority={false}
             />
