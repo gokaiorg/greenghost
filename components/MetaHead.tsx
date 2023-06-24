@@ -89,6 +89,18 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
         name="google-site-verification"
         content="dOuCZqslG5Lkw8i3jVwoGcedgH6-nIGGQ71qYu"
       />
+      <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'CafeOrCoffeeShop',
+              name: 'Green Ghost',
+              url: 'https://green.gd',
+              logo: 'https://green.gd/green-ghost-degen-weed-shop.png',
+            }),
+          }}
+        />
     </Head>
   );
 });
