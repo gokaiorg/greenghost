@@ -66,7 +66,7 @@ export const MintForm: FC<MintFormProps> = ({ leftToMintForUser, cb }) => {
             borderColor="ghostVerse.color1.darker"
             borderWidth={1}
             borderRadius={0}
-            outline="none"
+            outline={'none'}
           />
           {leftToMintForUser <= 0 ? null : (
             <NumberInputStepper>

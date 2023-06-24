@@ -71,7 +71,7 @@ export const ProfileNFTsList = () => {
             backgroundColor="ghostVerse.color1.lighter"
             borderColor="ghostVerse.color1.darker"
             borderWidth={1}
-            borderRadius="0"
+            borderRadius={'0'}
             backdropFilter={'blur(3px)'}
           >
             <CardBody p={{ base: 1, sm: 2, md: 3 }}>

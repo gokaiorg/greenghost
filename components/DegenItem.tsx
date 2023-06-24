@@ -21,7 +21,7 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
           borderWidth={1}
           bgColor={'ghostVerse.dark.lighter'}
           backdropFilter={'blur(3px)'}
-          p={6}
+          p={4}
           fontWeight={'bold'}
           fontSize={'lg'}
           color="ghostVerse.gray.base"

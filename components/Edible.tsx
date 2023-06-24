@@ -62,10 +62,17 @@ export const Edible = () => {
             <Select
               value={sortBy}
               onChange={handleSortChange}
-              borderRadius="0"
-              borderColor={'ghostVerse.green.base'}
+              borderRadius={'0'}
               color={'ghostVerse.green.base'}
-              outline="none"
+              borderColor={'black'}
+              outline={'none'}
+              p={0}
+              cursor={'pointer'}
+              fontFamily={'vt323'}
+              fontSize={{ base: '2xl' }}
+              _hover={{ borderColor: 'ghostVerse.green.base' }}
+              _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
+              w={'fit-content'}
             >
               <option value="priceLowToHigh">Price: Low to High</option>
               <option value="priceHighToLow">Price: High to Low</option>
