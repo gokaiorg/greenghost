@@ -17,7 +17,7 @@
   ],
   "theme_color": "#FFFFFF",
   "background_color": "#000",
-  "start_url": "/",
+  "start_url": "https://green.gd",
   "display": "standalone",
   "orientation": "portrait"
 }
