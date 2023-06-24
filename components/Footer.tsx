@@ -9,7 +9,7 @@ export const Footer = () => {
       color="elvenTools.white"
       display={'flex'}
       alignItems={'center'}
-      mt={{ base: '5rem', md: 'auto' }}
+      mt={{ base: '5rem' }}
     >
       <Container
         maxW="container.xl"

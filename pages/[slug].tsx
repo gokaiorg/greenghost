@@ -16,7 +16,6 @@ import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 
-import { ImgPercent } from '../components/ImgPercent';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -165,8 +164,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                     alignItems="baseline"
                     marginLeft={2}
                   >
-                    {product.indica}
-                    <ImgPercent />
+                    {product.indica}%
                   </Box>
                 </Box>
                 <Box marginRight={4} display={'flex'}>
@@ -177,8 +175,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                     alignItems="baseline"
                     marginLeft={2}
                   >
-                    {product.sativa}
-                    <ImgPercent />
+                    {product.sativa}%
                   </Box>
                 </Box>
               </Box>
@@ -191,8 +188,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                     alignItems="baseline"
                     marginLeft={2}
                   >
-                    {product.THC}
-                    <ImgPercent />
+                    {product.THC}%
                   </Box>
                 </Box>
                 {product.CBD !== 'undefined' && (
@@ -204,8 +200,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                       alignItems="baseline"
                       marginLeft={2}
                     >
-                      {product.CBD}
-                      <ImgPercent />
+                      {product.CBD}%
                     </Box>
                   </Box>
                 )}

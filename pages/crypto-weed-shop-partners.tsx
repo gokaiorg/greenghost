@@ -4,7 +4,6 @@ import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
-import { ImgPercent } from '../components/ImgPercent';
 import { ImgQuestion } from '../components/ImgQuestion';
 import Head from 'next/head';
 import { MenuCrypto } from '../components/MenuCrypto';
@@ -94,9 +93,11 @@ const CryptoWeedShop: NextPage = () => {
           community and of course, web3.
           <br />
           <br />
-          If you own an NFT from one of our partners, you can enjoy a 13
-          <ImgPercent /> discount on every order made at the Green Ghost
-          cannabis store.
+          If you own an NFT from one of our partners, you can enjoy a{' '}
+          <Box as={'span'} color={'ghostVerse.blue.base'}>
+            13% discount
+          </Box>{' '}
+          on every order made at the Green Ghost cannabis store.
           <br />
           <br />
           <Box display={'flex'}>

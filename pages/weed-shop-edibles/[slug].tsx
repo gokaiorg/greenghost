@@ -16,7 +16,6 @@ import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 
-import { ImgPercent } from '../../components/ImgPercent';
 import Image from 'next/image';
 interface EdiblesPageProps {
   edible: Edible;
@@ -148,8 +147,7 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
                       alignItems="baseline"
                       marginLeft={2}
                     >
-                      {edible.CBD}
-                      <ImgPercent />
+                      {edible.CBD}%
                     </Box>
                   </Box>
                 )}

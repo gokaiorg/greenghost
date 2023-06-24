@@ -4,12 +4,11 @@ import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
-import { ImgDollar } from '../components/ImgDollar';
-import { ImgQuestion } from '../components/ImgQuestion';
 import Head from 'next/head';
 import { MenuCrypto } from '../components/MenuCrypto';
 import Link from 'next/link';
 import { IconEarn } from '../components/IconEarn';
+import Image from 'next/image';
 
 const CryptoWeedShop: NextPage = () => {
   return (
@@ -69,9 +68,12 @@ const CryptoWeedShop: NextPage = () => {
         </Box>
         <MenuCrypto />
         <Box
+          display={'flex'}
+          flexDirection={'column'}
           as="div"
           color={'white'}
           fontSize={{ base: '3xl' }}
+          fontFamily={'vt323'}
           borderColor={'ghostVerse.color2.base'}
           bgColor={'ghostVerse.dark.lighter'}
           borderWidth={1}
@@ -79,89 +81,169 @@ const CryptoWeedShop: NextPage = () => {
           mt={5}
           mb={6}
           p={4}
-          mr={'auto'}
-          fontFamily={'vt323'}
         >
           <Text
             as={'h2'}
+            color={'white'}
+            fontSize={'5xl'}
             fontWeight={'black'}
-            fontSize={'4xl'}
-            marginBottom={4}
+            mb={4}
           >
-            Ready to step into a new economic model
-            <ImgQuestion />
+            Ready to step into a new economic model?
           </Text>
-          If you own an{' '}
-          <Text
-            color={'ghostVerse.green.base'}
-            as="a"
-            href="https://ghostverse.org/mxghosts"
+          <Box
+            as={'div'}
+            color={'ghostVerse.blue.base'}
+            p={4}
+            mb={10}
+            borderColor={'ghostVerse.blue.base'}
+            borderWidth={1}
           >
-            NFT from our collection
-          </Text>{' '}
-          and pay with <ImgDollar />
-          EGLD using the{' '}
-          <Text
-            color={'ghostVerse.green.base'}
-            as="a"
-            href="https://xport.al/referral/7nvae7kpo1"
+            Green Ghost offers cashback to Ghost Clan members who pay with
+            crypto and{' '}
+            <Link
+              href="/install-xportal-app"
+              title="Install xPortal App"
+              passHref
+            >
+              <Box as={'span'} color={'white'}>
+                xPortal App
+              </Box>
+            </Link>
+            . To do this, we have teamed up with{' '}
+            <Link
+              href="https://linktr.ee/elrondbuds"
+              title="Green Ghost - ElrondBuds DAC"
+              passHref
+            >
+              <Box as={'span'} color={'white'}>
+                ElrondBuds DAC
+              </Box>
+            </Link>
+            . Discover{' '}
+            <Link
+              href="crypto-weed-shop-partners"
+              title="Green Ghost - Crypto partners"
+              passHref
+            >
+              <Box as={'span'} color={'white'}>
+                all our partners
+              </Box>
+            </Link>{' '}
+            and maybe future cashback opportunities.
+          </Box>
+          <Box
+            display={'flex'}
+            alignItems={'top'}
+            flexDirection={{ base: 'column', lg: 'row' }}
+            mb={10}
           >
-            xPortal app
-          </Text>
-          , you&apos;ll receive cashback in <ImgDollar />
-          EBUD.
-          <br />
-          <br />
-          <Text
-            color={'ghostVerse.green.base'}
-            as="a"
-            target="_blank"
-            href="https://linktr.ee/elrondbuds"
-          >
-            eBudsDAC
-          </Text>{' '}
-          is a decentralized autonomous community project on the{' '}
-          <Text
-            color={'ghostVerse.green.base'}
-            as="a"
-            target="_blank"
-            href="https://multiversx.com/"
-          >
-            MultiversX blockchain
-          </Text>{' '}
-          and centered around cannabis.
-          <br />
-          <br />
-          <Text
-            as={'h2'}
-            fontWeight={'black'}
-            fontSize={'4xl'}
-            marginBottom={4}
-          >
-            GRAND OPENING
-          </Text>
-          First 1000 customers receive 100 <ImgDollar />
-          EBUD cashback.{' '}
-          <Link
-            href="/install-xportal-app"
-            title="Install xPortal App"
-            passHref
-          >
-            <Box as={'span'} color={'ghostVerse.green.base'}>
-              Claim your cashback!
+            <Box
+              width={{ base: '100%', lg: '45%' }}
+              mr={{ base: 0, lg: 10 }}
+              mt={4}
+            >
+              <Image
+                src="/media/green-ghost-weed-shop-crypto-cashback.webp"
+                width={1260}
+                height={600}
+                alt="Green Ghost - Crypto Cashback"
+              />
             </Box>
-          </Link>
-          <br />
-          <br />
-          <Text
-            as={'h2'}
-            fontWeight={'black'}
-            fontSize={'4xl'}
-            marginBottom={4}
+            <Box width={{ base: '100%', lg: '65%' }}>
+              <Text
+                as={'h2'}
+                fontWeight={'black'}
+                fontSize={'5xl'}
+                marginBottom={4}
+              >
+                How does it work?
+              </Text>
+              Green Ghost has invested in{' '}
+              <Link
+                href="https://www.frameit.gg/marketplace/BUD-3ee0cf/mint?sp=true"
+                title="Green Ghost - $EBUD token"
+                passHref
+              >
+                <Box as={'span'} color={'ghostVerse.green.base'}>
+                  eBuds NFTs
+                </Box>
+              </Link>{' '}
+              and{' '}
+              <Link
+                href="https://eneftor.com/stakeableCollection/BUD-3ee0cf/EBUD-d29cce"
+                title="Green Ghost - $EBUD token"
+                passHref
+              >
+                <Box as={'span'} color={'ghostVerse.green.base'}>
+                  stakes them
+                </Box>{' '}
+              </Link>
+              to generate income in{' '}
+              <Link
+                href="https://explorer.multiversx.com/tokens/EBUD-d29cce"
+                title="Green Ghost - $EBUD token"
+                passHref
+              >
+                <Box as={'span'} color={'ghostVerse.green.base'}>
+                  $EBUD tokens
+                </Box>
+              </Link>
+              .
+              <br />
+              Every month, the generated interest is distributed among all
+              consumers who have paid with cryptocurrency.
+            </Box>
+          </Box>
+          <Box
+            display={'flex'}
+            flexDirection={{ base: 'column', lg: 'row' }}
+            mb={8}
           >
-            Join us in this innovative movement and take advantage of our unique
-            rewards system.
-          </Text>
+            <Box width={{ base: '100%', lg: '65%' }}>
+              <Text
+                as={'h2'}
+                fontWeight={'black'}
+                fontSize={'5xl'}
+                marginBottom={4}
+              >
+                Grand opening
+              </Text>
+              ElrondBuds DAC has allocated an exceptional fund of{' '}
+              <Box as={'span'} color={'ghostVerse.blue.base'}>
+                $100,000EBUD
+              </Box>{' '}
+              tokens.
+              <br />
+              First 1,000 customers who{' '}
+              <Link
+                href="/install-xportal-app"
+                title="Install xPortal App"
+                passHref
+              >
+                <Box as={'span'} color={'ghostVerse.green.base'}>
+                  Install xPortal Wallet
+                </Box>
+              </Link>{' '}
+              will receive{' '}
+              <Box as={'span'} color={'ghostVerse.blue.base'}>
+                $100EBUD
+              </Box>{' '}
+              as cashback.
+            </Box>
+            <Box
+              width={{ base: '100%', lg: '50%' }}
+              ml={{ base: 0, lg: 10 }}
+              mt={4}
+            >
+              <Image
+                src="/media/green-ghost-crypto-weed-shop-ebud-nft.png"
+                width={1260}
+                height={600}
+                alt="Green Ghost - eBudNFT"
+              />
+            </Box>
+          </Box>
         </Box>
       </MainLayout>
     </>

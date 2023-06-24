@@ -2,7 +2,6 @@ import { Box } from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Product } from '../config/products';
-import { ImgPercent } from './ImgPercent';
 
 type BudItemProps = {
   product: Product;
@@ -106,8 +105,7 @@ export const BudItem = ({ product }: BudItemProps) => {
                     flexDirection={'row'}
                     alignItems="baseline"
                   >
-                    {product.sativa}
-                    <ImgPercent />
+                    {product.sativa}%
                   </Box>
                 </Box>
               )}
@@ -121,8 +119,7 @@ export const BudItem = ({ product }: BudItemProps) => {
                     flexDirection={'row'}
                     alignItems="baseline"
                   >
-                    {product.indica}
-                    <ImgPercent />
+                    {product.indica}%
                   </Box>
                 </Box>
               )}
@@ -136,8 +133,7 @@ export const BudItem = ({ product }: BudItemProps) => {
                     flexDirection={'row'}
                     alignItems="baseline"
                   >
-                    {product.THC}
-                    <ImgPercent />
+                    {product.THC}%
                   </Box>
                 </Box>
               )}
@@ -151,8 +147,7 @@ export const BudItem = ({ product }: BudItemProps) => {
                     flexDirection={'row'}
                     alignItems="baseline"
                   >
-                    {product.CBD}
-                    <ImgPercent />
+                    {product.CBD}%
                   </Box>
                 </Box>
               )}
