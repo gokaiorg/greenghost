@@ -207,7 +207,7 @@ const CryptoWeedShop: NextPage = () => {
                 fontSize={'5xl'}
                 marginBottom={4}
               >
-                Grand opening
+                Grand opening!
               </Text>
               ElrondBuds DAC has allocated an exceptional fund of{' '}
               <Box as={'span'} color={'ghostVerse.blue.base'}>

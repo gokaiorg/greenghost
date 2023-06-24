@@ -79,12 +79,55 @@ const WeedShopNearMe: NextPage = () => {
               borderWidth={1}
               backdropFilter={'blur(3px)'}
               mt={5}
-              mb={6}
               p={4}
               mr={'auto'}
             >
               Degen Weed Shop in Phuket Town
             </Text>
+            <Box
+              as={'div'}
+              color={'ghostVerse.blue.base'}
+              fontFamily={'vt323'}
+              fontSize={{ base: '2xl' }}
+              mb={4}
+            >
+              <Box display={'flex'} alignItems={'center'}>
+                <svg
+                  width={20}
+                  height={20}
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z"
+                  />
+                </svg>
+                <Box ml={2} mb={1}>Gadgets Shop. Grinders, bongs, rolling papers, ...</Box>
+              </Box>
+              <Box display={'flex'} alignItems={'center'}>
+                <svg
+                  width={20}
+                  height={20}
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <Box ml={2} mb={1}>Monday/Saturday 10h-19h. Sunday 10h-22h.</Box>
+              </Box>
+            </Box>
             <Text
               display={'flex'}
               pr={{ base: '0', md: '10rem' }}
@@ -200,7 +243,7 @@ const WeedShopNearMe: NextPage = () => {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15808.387850146597!2d98.387895!3d7.8849236!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305031353d385cf7%3A0xfc698838827f19d1!2sGreen%20Ghost%20%7C%20Degen%20Weed%20Shop%20Phuket!5e0!3m2!1sen!2sth!4v1682823349216!5m2!1sen!2sth"
               width="350"
-              height="200"
+              height="250"
               style={{ border: 0 }}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -227,12 +270,55 @@ const WeedShopNearMe: NextPage = () => {
               borderWidth={1}
               backdropFilter={'blur(3px)'}
               mt={5}
-              mb={6}
               p={4}
               mr={'auto'}
             >
               Degen Weed Shop in Rawai
             </Text>
+            <Box
+              as={'div'}
+              color={'ghostVerse.blue.base'}
+              fontFamily={'vt323'}
+              fontSize={{ base: '2xl' }}
+              mb={4}
+            >
+              <Box display={'flex'} alignItems={'center'}>
+                <svg
+                  width={20}
+                  height={20}
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z"
+                  />
+                </svg>
+                <Box ml={2} mb={1}>My Weed Partner Shop. Same weed, same chill ...</Box>
+              </Box>
+              <Box display={'flex'} alignItems={'center'}>
+                <svg
+                  width={20}
+                  height={20}
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <Box ml={2} mb={1}>Monday/Sunday 10h-22h. Close on Saturday.</Box>
+              </Box>
+            </Box>
             <Text
               display={'flex'}
               pr={{ base: '0', md: '10rem' }}
@@ -348,7 +434,7 @@ const WeedShopNearMe: NextPage = () => {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15811.90431127206!2d98.3203122!3d7.7923573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaa82f76285212d49%3A0x789b3b4011edb19f!2sGreen%20Ghost%20%7C%20Degen%20Weed%20Shop%20Rawai!5e0!3m2!1sen!2sth!4v1682822659232!5m2!1sen!2sth"
               width="350"
-              height="200"
+              height="250"
               style={{ border: 0 }}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
