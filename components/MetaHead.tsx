@@ -90,17 +90,75 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
         content="dOuCZqslG5Lkw8i3jVwoGcedgH6-nIGGQ71qYu"
       />
       <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'CafeOrCoffeeShop',
-              name: 'Green Ghost',
-              url: 'https://green.gd',
-              logo: 'https://green.gd/green-ghost-degen-weed-shop.png',
-            }),
-          }}
-        />
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'CafeOrCoffeeShop',
+            name: 'Green Ghost',
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'Talat Yai',
+              addressRegion: 'Phuket',
+              postalCode: '83000',
+              streetAddress: '17 Thalang Rd',
+            },
+            description:
+              'Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories.',
+            url: 'https://green.gd',
+            logo: 'https://green.gd/media/green-ghost-degen-weed-shop.webp',
+            image: 'https://green.gd/green-ghost-degen-weed-shop.png',
+            priceRange: '$$$',
+            openingHours: ['Mo-Su 9:00-00:00'],
+            telephone: '+66936459898',
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5',
+              reviewCount: '30',
+            },
+            servesCuisine: ['Cannabis'],
+            hasMenu: [
+              {
+                '@type': 'Menu',
+                name: 'Green Ghost Menu',
+                description:
+                  'Try our wide range of cannabis products and discover your new favorite strain and elevate your experience today.',
+                url: 'https://green.gd/weed-shop',
+                hasMenuSection: [
+                  {
+                    '@type': 'MenuSection',
+                    name: 'Buds Menu',
+                    description:
+                      'Our shop is stocked with a wide range of organic and locally sourced flowers.',
+                    url: 'https://green.gd/weed-shop',
+                  },
+                  {
+                    '@type': 'MenuSection',
+                    name: 'Edibles Menu',
+                    description:
+                      'Discover our delicious selection of locally sourced and organic edibles from classic brownies and gummies to unique artisanal cookies.',
+                    url: 'https://green.gd/weed-shop-edibles',
+                  },
+                  {
+                    '@type': 'MenuSection',
+                    name: 'Degen Menu',
+                    description:
+                      'Indulge in the ultimate cannabis experience with our degen menu. Explore a tantalizing selection of concentrated weed products, including hash, wax, and oil.',
+                    url: 'https://green.gd/weed-shop-degen',
+                  },
+                  {
+                    '@type': 'MenuSection',
+                    name: 'Gadgets Menu',
+                    description:
+                      'Elevate your smoking experience with our premium selection of weed gadgets. From high-quality grinders to sleek bongs and rolling papers, we offer everything you need to enhance your sessions.',
+                    url: 'https://green.gd/weed-shop-gadgets',
+                  },
+                ],
+              },
+            ],
+          }),
+        }}
+      />
     </Head>
   );
 });

@@ -157,9 +157,9 @@ export const products: Product[] = [
     quantity: 10,
     origin: 'Phuket',
     description:
-      "White Widow is undeniably one of the most renowned strains globally, originating from the Netherlands and meticulously bred by Green House Seeds. \n\n This well-balanced hybrid is the result of crossing a Brazilian sativa landrace with a resin-rich South Indian indica. \n\n Since its inception in the 1990s, White Widow has become a staple on the menu of Dutch coffee shops. Its distinctive buds are adorned with a glistening layer of crystal resin, serving as a forewarning of its potent effects. Upon consumption, a surge of euphoria and energy quickly takes hold, invigorating both conversation and creativity. The genetic legacy of White Widow has paved the way for other legendary strains like White Russian, White Rhino, and Blue Widow.",
+      'White Widow is undeniably one of the most renowned strains globally, originating from the Netherlands and meticulously bred by Green House Seeds. \n\n This well-balanced hybrid is the result of crossing a Brazilian sativa landrace with a resin-rich South Indian indica. \n\n Since its inception in the 1990s, White Widow has become a staple on the menu of Dutch coffee shops. Its distinctive buds are adorned with a glistening layer of crystal resin, serving as a forewarning of its potent effects. Upon consumption, a surge of euphoria and energy quickly takes hold, invigorating both conversation and creativity. The genetic legacy of White Widow has paved the way for other legendary strains like White Russian, White Rhino, and Blue Widow.',
     descSeo:
-      "White Widow is undeniably one of the most renowned strains globally, originating from the Netherlands and meticulously bred by Green House Seeds.",
+      'White Widow is undeniably one of the most renowned strains globally, originating from the Netherlands and meticulously bred by Green House Seeds.',
     images: [
       '/media/green-ghost-degen-weed-shop-strain-white-widow-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-white-widow-cover.webp',

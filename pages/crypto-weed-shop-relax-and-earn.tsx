@@ -141,8 +141,8 @@ const CryptoWeedShop: NextPage = () => {
               >
                 How does it work?
               </Text>
-              A percentage of Green Ghost&apos;s revenue is allocated to staking in
-              the{' '}
+              A percentage of Green Ghost&apos;s revenue is allocated to staking
+              in the{' '}
               <Link
                 href="https://ghostverse.org/"
                 title="GhostVerse DAO"
@@ -153,8 +153,8 @@ const CryptoWeedShop: NextPage = () => {
                 </Box>
               </Link>{' '}
               to increase passive income for NFT holders, and a portion of
-              GhostVerse&apos;s revenue is redistributed to Green Ghost customers in
-              the form of{' '}
+              GhostVerse&apos;s revenue is redistributed to Green Ghost
+              customers in the form of{' '}
               <Link
                 href="/crypto-weed-shop-cashback"
                 title="Green Ghost cashback"
