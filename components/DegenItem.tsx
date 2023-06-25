@@ -66,6 +66,11 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
                   color={'ghostVerse.green.base'}
                   whiteSpace={'nowrap'}
                   mb={2}
+                  position={'absolute'}
+                  right={0}
+                  top={'25px'}
+                  background={'black'}
+                  padding={'0.5rem'}
                 >
                   {degen.price} THB
                 </Box>
@@ -76,7 +81,7 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
               display={'flex'}
               fontFamily={'vt323'}
               fontSize={'3xl'}
-              flexDirection={'column'}
+              flexWrap={'wrap'}
             >
               {degen.THC !== 'undefined' && (
                 <Box display={'flex'} marginRight={2} flexDirection={'row'}>

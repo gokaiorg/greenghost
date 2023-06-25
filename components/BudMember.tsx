@@ -70,16 +70,12 @@ export const BudMember = () => {
       >
         <Box
           as={'h2'}
-          borderColor={'ghostVerse.color2.base'}
-          bgColor={'ghostVerse.dark.lighter'}
-          borderWidth={1}
-          backdropFilter={'blur(3px)'}
-          p={4}
           mb={4}
           display={'inline-flex'}
           mr={'auto'}
           flexWrap={'wrap'}
           fontSize={30}
+          fontFamily={'vt323'}
         >
           Latest buds for members only.
         </Box>

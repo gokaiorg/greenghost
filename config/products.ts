@@ -432,7 +432,7 @@ export const products: Product[] = [
     source: 'https://www.leafly.com/strains/amnesia-haze',
   },
   {
-    slug: 'amnesia-haze-buddy-bud-weed',
+    slug: 'amnesia-haze-01',
     name: 'Amnesia Haze',
     price: 700,
     dominance: 'Sativa Dominant',

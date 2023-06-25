@@ -70,6 +70,11 @@ export const GadgetItem = ({ gadget }: GadgetItemProps) => {
                   color={'ghostVerse.green.base'}
                   whiteSpace={'nowrap'}
                   mb={2}
+                  position={'absolute'}
+                  right={0}
+                  top={'25px'}
+                  background={'black'}
+                  padding={'0.5rem'}
                 >
                   {gadget.price} THB
                 </Box>

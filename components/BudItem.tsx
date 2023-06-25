@@ -10,7 +10,7 @@ type BudItemProps = {
 export const BudItem = ({ product }: BudItemProps) => {
   return (
     <Box
-      width={{ base: '100%', md: '50%', lg: '25%' }}
+      width={{ base: '100%', md: '33%', lg: '25%', xl: '20%' }}
       paddingBottom={1}
       paddingRight={1}
       lineHeight={1}
@@ -66,6 +66,11 @@ export const BudItem = ({ product }: BudItemProps) => {
                   color={'ghostVerse.green.base'}
                   whiteSpace={'nowrap'}
                   mb={2}
+                  position={'absolute'}
+                  right={0}
+                  top={'25px'}
+                  background={'black'}
+                  padding={'0.5rem'}
                 >
                   {product.price} THB
                 </Box>
@@ -93,7 +98,7 @@ export const BudItem = ({ product }: BudItemProps) => {
               display={'flex'}
               fontFamily={'vt323'}
               fontSize={'3xl'}
-              flexDirection={'column'}
+              flexWrap={'wrap'}
             >
               {product.sativa !== 'undefined' && (
                 <Box display={'flex'} marginRight={2} flexDirection={'row'}>
@@ -152,7 +157,7 @@ export const BudItem = ({ product }: BudItemProps) => {
                 </Box>
               )}
             </Box>
-            <Box
+            {/* <Box
               display={'flex'}
               fontFamily={'vt323'}
               fontSize={'3xl'}
@@ -170,7 +175,7 @@ export const BudItem = ({ product }: BudItemProps) => {
                   <Box color={'ghostVerse.green.base'}>{product.effects}</Box>
                 </Box>
               )}
-            </Box>
+            </Box> */}
           </Box>
         </Box>
       </Link>
