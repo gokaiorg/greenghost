@@ -14,7 +14,7 @@ const WeedShop: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Degen Weed Shop - Buds.</title>
+        <title>Green Ghost - Degen Weed Shop - Buds Menu.</title>
         <meta
           name="description"
           content="Looking for a dispensary that prioritizes organic, locally sourced cannabis products? Look no further than Green Ghost Degen Weed Shop. Our shop is stocked with a wide range of flower, edibles, and concentrates, all of which are carefully curated from the best growers in the area."

@@ -13,7 +13,7 @@ const WeedShopMember: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Degen Weed Shop - Pre Rolled.</title>
+        <title>Green Ghost - Degen Weed Shop - Pre Rolled Menu.</title>
         <meta
           name="description"
           content="Looking for high-quality pre-rolled joints made with locally sourced, organic cannabis? Look no further than our pre-rolled shop! We offer a wide selection of pre-rolls made with only the best, all-natural ingredients. Our products are carefully crafted to ensure a consistent, high-quality experience every time. Try our pre-rolls today and taste the difference that local, organic products can make."

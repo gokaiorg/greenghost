@@ -13,7 +13,7 @@ const WeedShopGadgets: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Degen Weed Shop - Gadgets.</title>
+        <title>Green Ghost - Degen Weed Shop - Gadgets Menu.</title>
         <meta
           name="description"
           content="Elevate your smoking experience with our premium selection of weed gadgets. From high-quality grinders to sleek bongs and rolling papers, we offer everything you need to enhance your sessions. Discover top-notch accessories designed for convenience, durability, and optimal performance. Whether you're a casual smoker or a seasoned connoisseur, our weed gadgets are crafted to meet your needs and elevate your enjoyment. Explore our collection and unlock a new level of satisfaction in your smoking rituals."
