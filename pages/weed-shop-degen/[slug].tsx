@@ -113,7 +113,7 @@ export default function DegensPage({ degen }: DegensPageProps) {
               fontSize={'3xl'}
               fontFamily={'vt323'}
             >
-              <Box as={'h2'} color="ghostVerse.blue.base" marginRight={4}>
+              <Box as={'h2'} color={'ghostVerse.blue.base'} marginRight={4}>
                 {degen.packaging}
               </Box>
               <Box display={'flex'}>
@@ -122,7 +122,7 @@ export default function DegensPage({ degen }: DegensPageProps) {
                   <Box
                     color={'ghostVerse.green.base'}
                     display={'flex'}
-                    alignItems="baseline"
+                    alignItems={'baseline'}
                     marginLeft={2}
                   >
                     {degen.THC}
@@ -134,7 +134,7 @@ export default function DegensPage({ degen }: DegensPageProps) {
                     <Box
                       color={'ghostVerse.green.base'}
                       display={'flex'}
-                      alignItems="baseline"
+                      alignItems={'baseline'}
                       marginLeft={2}
                     >
                       {degen.CBD}

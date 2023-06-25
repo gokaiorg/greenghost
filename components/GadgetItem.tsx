@@ -25,7 +25,7 @@ export const GadgetItem = ({ gadget }: GadgetItemProps) => {
           borderWidth={1}
           bgColor={'ghostVerse.dark.lighter'}
           backdropFilter={'blur(3px)'}
-          p={4}
+          p={3}
           fontWeight={'bold'}
           fontSize={'lg'}
           color="ghostVerse.gray.base"
@@ -52,7 +52,7 @@ export const GadgetItem = ({ gadget }: GadgetItemProps) => {
           <Box
             display={'flex'}
             flexDirection={'column'}
-            flex="1"
+            flex={'1'}
             marginLeft={{ base: 0 }}
             marginTop={{ base: 4 }}
           >
@@ -88,7 +88,7 @@ export const GadgetItem = ({ gadget }: GadgetItemProps) => {
             fontSize={'3xl'}
             flexDirection={'column'}
           >
-            <Box as={'h4'} color="ghostVerse.blue.base" marginRight={4}>
+            <Box as={'h4'} color={'ghostVerse.blue.base'} marginRight={4}>
               {gadget.packaging}
             </Box>
           </Box>

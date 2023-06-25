@@ -10,7 +10,7 @@ export const GoToShopLink = () => {
       backdropFilter={'blur(3px)'}
       py={2}
       mb={2}
-      mt="auto"
+      mt={'auto'}
       mx={'auto'}
     >
       <Link href="/cannabis-shop-phuket" title="Cannabis Shop Phuket" passHref>

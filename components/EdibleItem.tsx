@@ -25,7 +25,7 @@ export const EdibleItem = ({ edible }: EdibleItemProps) => {
           borderWidth={1}
           bgColor={'ghostVerse.dark.lighter'}
           backdropFilter={'blur(3px)'}
-          p={4}
+          p={3}
           fontWeight={'bold'}
           fontSize={'lg'}
           color="ghostVerse.gray.base"
@@ -52,7 +52,7 @@ export const EdibleItem = ({ edible }: EdibleItemProps) => {
           <Box
             display={'flex'}
             flexDirection={'column'}
-            flex="1"
+            flex={'1'}
             marginLeft={{ base: 0 }}
             marginTop={{ base: 4 }}
           >
@@ -96,7 +96,7 @@ export const EdibleItem = ({ edible }: EdibleItemProps) => {
                     color={'ghostVerse.green.base'}
                     display={'flex'}
                     flexDirection={'row'}
-                    alignItems="baseline"
+                    alignItems={'baseline'}
                   >
                     {edible.THC}
                   </Box>
@@ -110,7 +110,7 @@ export const EdibleItem = ({ edible }: EdibleItemProps) => {
                     color={'ghostVerse.green.base'}
                     display={'flex'}
                     flexDirection={'row'}
-                    alignItems="baseline"
+                    alignItems={'baseline'}
                   >
                     {edible.CBD}
                   </Box>
@@ -122,7 +122,7 @@ export const EdibleItem = ({ edible }: EdibleItemProps) => {
               fontFamily={'vt323'}
               fontSize={'3xl'}
               mx={'auto'}
-              mt="auto"
+              mt={'auto'}
             >
               {edible.effects !== 'undefined' && (
                 <Box

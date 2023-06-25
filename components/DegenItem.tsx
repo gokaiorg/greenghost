@@ -21,7 +21,7 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
           borderWidth={1}
           bgColor={'ghostVerse.dark.lighter'}
           backdropFilter={'blur(3px)'}
-          p={4}
+          p={3}
           fontWeight={'bold'}
           fontSize={'lg'}
           color="ghostVerse.gray.base"
@@ -48,7 +48,7 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
           <Box
             display={'flex'}
             flexDirection={'column'}
-            flex="1"
+            flex={'1'}
             marginLeft={{ base: 0 }}
             marginTop={{ base: 4 }}
           >
@@ -91,7 +91,7 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
                     color={'ghostVerse.green.base'}
                     display={'flex'}
                     flexDirection={'row'}
-                    alignItems="baseline"
+                    alignItems={'baseline'}
                   >
                     {degen.THC}
                   </Box>
@@ -105,7 +105,7 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
                     color={'ghostVerse.green.base'}
                     display={'flex'}
                     flexDirection={'row'}
-                    alignItems="baseline"
+                    alignItems={'baseline'}
                   >
                     {degen.CBD}
                   </Box>

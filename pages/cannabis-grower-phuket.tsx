@@ -68,7 +68,7 @@ const CannabisGrower: NextPage = () => {
           display={'flex'}
           width={'fit-content'}
           flexDirection={'row'}
-          alignItems="baseline"
+          alignItems={'baseline'}
           fontSize={'4xl'}
           fontFamily={'vt323'}
         >

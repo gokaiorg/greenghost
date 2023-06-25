@@ -69,7 +69,7 @@ const WeedShop: NextPage = () => {
           p={4}
           my={4}
           mx={'auto'}
-          mt="auto"
+          mt={'auto'}
           display={'flex'}
           width={'fit-content'}
           flexDirection={'column'}

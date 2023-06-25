@@ -140,17 +140,17 @@ export default function ProductPage({ product }: ProductPageProps) {
             >
               <Box>
                 {product.dominance == 'Indica Dominant' && (
-                  <Box as={'h2'} color="ghostVerse.blue.base" marginRight={4}>
+                  <Box as={'h2'} color={'ghostVerse.blue.base'} marginRight={4}>
                     {product.dominance}
                   </Box>
                 )}
                 {product.dominance == 'Sativa Dominant' && (
-                  <Box as={'h2'} color="ghostVerse.pink.base" marginRight={4}>
+                  <Box as={'h2'} color={'ghostVerse.pink.base'} marginRight={4}>
                     {product.dominance}
                   </Box>
                 )}
                 {product.dominance == 'Hybrid' && (
-                  <Box as={'h2'} color="ghostVerse.orange.base" marginRight={4}>
+                  <Box as={'h2'} color={'ghostVerse.orange.base'} marginRight={4}>
                     {product.dominance}
                   </Box>
                 )}
@@ -161,7 +161,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                   <Box
                     color={'ghostVerse.green.base'}
                     display={'flex'}
-                    alignItems="baseline"
+                    alignItems={'baseline'}
                     marginLeft={2}
                   >
                     {product.indica}%
@@ -172,7 +172,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                   <Box
                     color={'ghostVerse.green.base'}
                     display={'flex'}
-                    alignItems="baseline"
+                    alignItems={'baseline'}
                     marginLeft={2}
                   >
                     {product.sativa}%
@@ -185,7 +185,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                   <Box
                     color={'ghostVerse.green.base'}
                     display={'flex'}
-                    alignItems="baseline"
+                    alignItems={'baseline'}
                     marginLeft={2}
                   >
                     {product.THC}%
@@ -197,7 +197,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                     <Box
                       color={'ghostVerse.green.base'}
                       display={'flex'}
-                      alignItems="baseline"
+                      alignItems={'baseline'}
                       marginLeft={2}
                     >
                       {product.CBD}%

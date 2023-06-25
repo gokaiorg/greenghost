@@ -21,7 +21,7 @@ export const BudItem = ({ product }: BudItemProps) => {
           borderWidth={1}
           bgColor={'ghostVerse.dark.lighter'}
           backdropFilter={'blur(3px)'}
-          p={4}
+          p={3}
           fontWeight={'bold'}
           fontSize={'lg'}
           color="ghostVerse.gray.base"
@@ -48,13 +48,13 @@ export const BudItem = ({ product }: BudItemProps) => {
           <Box
             display={'flex'}
             flexDirection={'column'}
-            flex="1"
+            flex={'1'}
             marginLeft={{ base: 0 }}
             marginTop={{ base: 4 }}
           >
             <Box
               as={'h3'}
-              fontSize={'xl'}
+              fontSize={'lg'}
               fontFamily={'CubicFive12'}
               display={'flex'}
               flexDirection={'column'}
@@ -77,19 +77,19 @@ export const BudItem = ({ product }: BudItemProps) => {
               )}
               {product.name}
             </Box>
-            <Box display={'flex'} fontFamily={'vt323'} fontSize={'3xl'}>
+            <Box display={'flex'} fontFamily={'vt323'} fontSize={'2xl'} mb={1}>
               {product.dominance == 'Indica Dominant' && (
-                <Box as={'h4'} color="ghostVerse.blue.base" marginRight={2}>
+                <Box as={'h4'} color={'ghostVerse.blue.base'} marginRight={2}>
                   {product.dominance}
                 </Box>
               )}
               {product.dominance == 'Sativa Dominant' && (
-                <Box as={'h4'} color="ghostVerse.pink.base" marginRight={2}>
+                <Box as={'h4'} color={'ghostVerse.pink.base'} marginRight={2}>
                   {product.dominance}
                 </Box>
               )}
               {product.dominance == 'Hybrid' && (
-                <Box as={'h4'} color="ghostVerse.orange.base" marginRight={2}>
+                <Box as={'h4'} color={'ghostVerse.orange.base'} marginRight={2}>
                   {product.dominance}
                 </Box>
               )}
@@ -97,8 +97,9 @@ export const BudItem = ({ product }: BudItemProps) => {
             <Box
               display={'flex'}
               fontFamily={'vt323'}
-              fontSize={'3xl'}
+              fontSize={'2xl'}
               flexWrap={'wrap'}
+              mb={1}
             >
               {product.sativa !== 'undefined' && (
                 <Box display={'flex'} marginRight={2} flexDirection={'row'}>
@@ -108,7 +109,7 @@ export const BudItem = ({ product }: BudItemProps) => {
                     color={'ghostVerse.green.base'}
                     display={'flex'}
                     flexDirection={'row'}
-                    alignItems="baseline"
+                    alignItems={'baseline'}
                   >
                     {product.sativa}%
                   </Box>
@@ -122,7 +123,7 @@ export const BudItem = ({ product }: BudItemProps) => {
                     color={'ghostVerse.green.base'}
                     display={'flex'}
                     flexDirection={'row'}
-                    alignItems="baseline"
+                    alignItems={'baseline'}
                   >
                     {product.indica}%
                   </Box>
@@ -136,7 +137,7 @@ export const BudItem = ({ product }: BudItemProps) => {
                     color={'ghostVerse.green.base'}
                     display={'flex'}
                     flexDirection={'row'}
-                    alignItems="baseline"
+                    alignItems={'baseline'}
                   >
                     {product.THC}%
                   </Box>
@@ -150,32 +151,25 @@ export const BudItem = ({ product }: BudItemProps) => {
                     color={'ghostVerse.green.base'}
                     display={'flex'}
                     flexDirection={'row'}
-                    alignItems="baseline"
+                    alignItems={'baseline'}
                   >
                     {product.CBD}%
                   </Box>
                 </Box>
               )}
             </Box>
-            {/* <Box
+            <Box
               display={'flex'}
               fontFamily={'vt323'}
-              fontSize={'3xl'}
+              fontSize={'lg'}
               mx={'auto'}
-              mt="auto"
+              mt={'auto'}
+              textAlign={'center'}
             >
               {product.effects !== 'undefined' && (
-                <Box
-                  display={'flex'}
-                  textAlign={'center'}
-                  flexDirection={'column'}
-                  fontSize={'2xl'}
-                >
-                  Feelings
-                  <Box color={'ghostVerse.green.base'}>{product.effects}</Box>
-                </Box>
+                <Box color={'ghostVerse.green.base'}>{product.effects}</Box>
               )}
-            </Box> */}
+            </Box>
           </Box>
         </Box>
       </Link>

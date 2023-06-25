@@ -208,7 +208,7 @@ const InstallXportal: NextPage = () => {
           </Box>
           <Text>
             Follow the process to generate your secret phrase.{' '}
-            <Box as={'span'} color="ghostVerse.orange.base">
+            <Box as={'span'} color={'ghostVerse.orange.base'}>
               The secret phrase is the only access to your funds, never share
               it.
             </Box>

@@ -38,7 +38,7 @@ export const Degen = () => {
     <Box mt={4} mb="10">
       <Box
         display={'flex'}
-        alignItems="baseline"
+        alignItems={'baseline'}
         mr={1}
         flexDirection={{ base: 'column', lg: 'row' }}
       >

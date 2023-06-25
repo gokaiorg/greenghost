@@ -66,7 +66,7 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           as={'h2'}
           display={'flex'}
           flexDirection={'row'}
-          alignItems="baseline"
+          alignItems={'baseline'}
           fontSize={'2xl'}
           mt={4}
           whiteSpace={'nowrap'}

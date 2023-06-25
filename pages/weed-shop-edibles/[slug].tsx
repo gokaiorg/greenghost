@@ -123,7 +123,7 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
               fontSize={'3xl'}
               fontFamily={'vt323'}
             >
-              <Box as={'h2'} color="ghostVerse.blue.base" marginRight={4}>
+              <Box as={'h2'} color={'ghostVerse.blue.base'} marginRight={4}>
                 {edible.packaging}
               </Box>
               <Box display={'flex'}>
@@ -132,7 +132,7 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
                   <Box
                     color={'ghostVerse.green.base'}
                     display={'flex'}
-                    alignItems="baseline"
+                    alignItems={'baseline'}
                     marginLeft={2}
                   >
                     {edible.THC}
@@ -144,7 +144,7 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
                     <Box
                       color={'ghostVerse.green.base'}
                       display={'flex'}
-                      alignItems="baseline"
+                      alignItems={'baseline'}
                       marginLeft={2}
                     >
                       {edible.CBD}%

@@ -119,7 +119,7 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
               fontSize={'3xl'}
               fontFamily={'vt323'}
             >
-              <Box as={'h2'} color="ghostVerse.blue.base" marginRight={4}>
+              <Box as={'h2'} color={'ghostVerse.blue.base'} marginRight={4}>
                 {gadget.packaging}
               </Box>
             </Box>
