@@ -58,6 +58,7 @@ export const theme = extendTheme({
         base: '#4cfd27',
       },
       orange: {
+        light: '#FDEC2E',
         base: '#EDBA22',
       },
       pink: {

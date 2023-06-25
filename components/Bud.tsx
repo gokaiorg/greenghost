@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { products } from '../config/products';
 import { BudItem } from './BudItem';
 
-type DominanceOption = 'All' | 'Sativa Dominant' | 'Indica Dominant' | 'Hybrid';
+type DominanceOption = 'All' | 'Sativa' | 'Indica' | 'Hybrid';
 
 export const Bud = () => {
   const [sortBy, setSortBy] = useState('priceLowToHigh');
@@ -123,8 +123,8 @@ export const Bud = () => {
               w={'fit-content'}
             >
               <option value="All">All Dominance</option>
-              <option value="Sativa Dominant">Sativa Dominant</option>
-              <option value="Indica Dominant">Indica Dominant</option>
+              <option value="Sativa">Sativa</option>
+              <option value="Indica">Indica</option>
               <option value="Hybrid">Hybrid</option>
             </Select>
           </Box>
