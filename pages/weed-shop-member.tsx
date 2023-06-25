@@ -20,7 +20,7 @@ const WeedShopMember: NextPage = () => {
         />
         <meta
           property="og:title"
-          content="Green Ghost - Degen Weed Shop - Menber Only."
+          content="Green Ghost - Degen Weed Shop - Menber Only Menu."
         />
         <meta
           property="og:description"
@@ -35,7 +35,7 @@ const WeedShopMember: NextPage = () => {
         <meta property="og:url" content="https://green.gd/weed-shop-member" />
         <meta
           name="twitter:title"
-          content="Green Ghost - Degen Weed Shop - Menber Only."
+          content="Green Ghost - Degen Weed Shop - Menber Only Menu."
         />
         <meta
           name="twitter:description"

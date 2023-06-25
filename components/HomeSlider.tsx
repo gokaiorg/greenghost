@@ -197,8 +197,8 @@ export const HomeSlider = () => {
             strains is delivered right to your doorstep.
           </Text>
           <Link
-            href={'/contact-us-buy-weed-online'}
-            title={'Contact Us to buy weed online'}
+            href={'/weed-delivery-phuket'}
+            title={'Order Now - Weed delivery Phuket'}
           >
             <Text
               display={'inline-flex'}
@@ -217,7 +217,7 @@ export const HomeSlider = () => {
                 color: 'ghostVerse.green.base',
               }}
             >
-              Contact Us
+              Order now
             </Text>
           </Link>
         </Box>

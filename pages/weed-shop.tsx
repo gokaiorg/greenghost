@@ -21,7 +21,7 @@ const WeedShop: NextPage = () => {
         />
         <meta
           property="og:title"
-          content="Green Ghost - Degen Weed Shop - Buds."
+          content="Green Ghost - Degen Weed Shop - Buds Menu."
         />
         <meta
           property="og:description"
@@ -36,7 +36,7 @@ const WeedShop: NextPage = () => {
         <meta property="og:url" content="https://green.gd/weed-shop" />
         <meta
           name="twitter:title"
-          content="Green Ghost - Degen Weed Shop - Buds."
+          content="Green Ghost - Degen Weed Shop - Buds Menu."
         />
         <meta
           name="twitter:description"

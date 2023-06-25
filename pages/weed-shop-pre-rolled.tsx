@@ -20,7 +20,7 @@ const WeedShopMember: NextPage = () => {
         />
         <meta
           property="og:title"
-          content="Green Ghost - Degen Weed Shop - Pre Rolled."
+          content="Green Ghost - Degen Weed Shop - Pre Rolled Menu."
         />
         <meta
           property="og:description"
@@ -38,7 +38,7 @@ const WeedShopMember: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Ghost - Degen Weed Shop - Pre Rolled."
+          content="Green Ghost - Degen Weed Shop - Pre Rolled Menu."
         />
         <meta
           name="twitter:description"
