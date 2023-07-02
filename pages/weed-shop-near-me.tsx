@@ -276,7 +276,7 @@ const WeedShopNearMe: NextPage = () => {
               <Box display={'flex'} alignItems={'center'}>
                 <IconClock />
                 <Box ml={2} mb={1}>
-                  Monday/Sunday 10h-22h. Close on Saturday.
+                  Monday/Sunday 16h-00h. Close on Saturday.
                 </Box>
               </Box>
             </Box>

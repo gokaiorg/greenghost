@@ -33,7 +33,7 @@ export const HomeSlider = () => {
       <SwiperSlide>
         <Box position={'relative'} w="100%" h={{ base: '600px' }}>
           <Image
-            src="/media/green-ghost-weed-shop-phuket.webp"
+            src="/media/green-ghost-weed-shop-karon.webp"
             fill
             style={{ objectFit: 'cover' }}
             alt={'Green Ghost Weed Shop Karon'}
@@ -93,7 +93,7 @@ export const HomeSlider = () => {
                 color: 'ghostVerse.green.base',
               }}
             >
-              Go there now
+              Visit us now
             </Text>
           </Link>
         </Box>
