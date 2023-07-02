@@ -68,7 +68,7 @@ export const HomeSlider = () => {
             NEW KARON WEED SHOP
           </Text>
           <Text as={'p'} fontSize={{ base: '3xl', md: '4xl' }}>
-            We are thrilled to unveil the newest addition to the Green Ghost
+            We are thrilled to unveil our newest location to the Green Ghost
             family right here in the heart of Karon, Phuket!
           </Text>
           <Link
