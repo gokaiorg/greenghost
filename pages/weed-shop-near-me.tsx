@@ -7,6 +7,10 @@ import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import Head from 'next/head';
 import Link from 'next/link';
 import { IconMap } from '../components/IconMap';
+import { IconsReview } from '../components/IconsReview';
+import { IconPin } from '../components/IconPin';
+import { IconClock } from '../components/IconClock';
+import { IconShop } from '../components/IconShop';
 
 const WeedShopNearMe: NextPage = () => {
   return (
@@ -82,6 +86,92 @@ const WeedShopNearMe: NextPage = () => {
               p={4}
               mr={'auto'}
             >
+              Degen Weed Shop in Karon
+            </Text>
+            <Box
+              as={'div'}
+              color={'ghostVerse.blue.base'}
+              fontFamily={'vt323'}
+              fontSize={{ base: '2xl' }}
+              mb={4}
+            >
+              <Box display={'flex'} alignItems={'center'}>
+                <IconShop />
+                <Box ml={2} mb={1}>
+                  Main Shop. All our buds and gadgets. Smoking room ...
+                </Box>
+              </Box>
+              <Box display={'flex'} alignItems={'center'}>
+                <IconClock />
+                <Box ml={2} mb={1}>
+                  Monday/Sunday 9h-12h & 18h-00h.
+                </Box>
+              </Box>
+            </Box>
+            <Text
+              display={'flex'}
+              pr={{ base: '0', md: '10rem' }}
+              fontSize={{ base: '3xl', md: '3xl' }}
+              fontFamily={'vt323'}
+              _hover={{
+                color: 'ghostVerse.green.base',
+              }}
+            >
+              <Link
+                href="https://goo.gl/maps/GJU2GmYibHxEohqm8"
+                title="Green Ghost - Degen Weed Shop - Map Karon"
+                passHref
+              >
+                <IconPin />
+                452 Patak Road, Karon, Mueang Phuket District, Phuket 83100
+              </Link>
+            </Text>
+            {/* <Link
+              href="https://g.page/r/CdEZf4I4iGn8EBE/review"
+              title="Green Ghost - Degen Weed Shop - Add a review in Karon"
+              passHref
+            >
+              <IconsReview />
+            </Link> */}
+          </Box>
+          <Box
+            width={{ base: '100%', lg: 'auto' }}
+            ml={{ base: 0, lg: 'auto' }}
+            mt={8}
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3952.456807136641!2d98.298599!3d7.847164999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNTAnNDkuOCJOIDk4wrAxNyc1NS4wIkU!5e0!3m2!1sen!2sth!4v1688274621435!5m2!1sen!2sth"
+              width="350"
+              height="250"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </Box>
+        </Box>
+        <Box
+          display={'flex'}
+          flexDirection={{ base: 'column', lg: 'row' }}
+          mb={10}
+        >
+          <Box
+            display={'flex'}
+            flexDirection={'column'}
+            width={{ base: '100%', lg: '65%' }}
+          >
+            <Text
+              as={'h3'}
+              color={'white'}
+              fontSize={{ base: '2xl' }}
+              fontFamily={'CubicFive12'}
+              borderColor={'ghostVerse.color2.base'}
+              bgColor={'ghostVerse.dark.lighter'}
+              borderWidth={1}
+              backdropFilter={'blur(3px)'}
+              mt={5}
+              p={4}
+              mr={'auto'}
+            >
               Degen Weed Shop in Phuket Town
             </Text>
             <Box
@@ -92,41 +182,13 @@ const WeedShopNearMe: NextPage = () => {
               mb={4}
             >
               <Box display={'flex'} alignItems={'center'}>
-                <svg
-                  width={20}
-                  height={20}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z"
-                  />
-                </svg>
+                <IconShop />
                 <Box ml={2} mb={1}>
                   Gadgets Shop. Grinders, bongs, rolling papers, ...
                 </Box>
               </Box>
               <Box display={'flex'} alignItems={'center'}>
-                <svg
-                  width={20}
-                  height={20}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+                <IconClock />
                 <Box ml={2} mb={1}>
                   Monday/Saturday 10h-19h. Sunday 10h-22h.
                 </Box>
@@ -146,19 +208,7 @@ const WeedShopNearMe: NextPage = () => {
                 title="Green Ghost - Degen Weed Shop - Map Phuket Town"
                 passHref
               >
-                <svg
-                  width="30px"
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox="0 0 24 24"
-                  fill={'#4cfd27'}
-                  style={{ float: 'left', marginTop: '8', marginRight: '8' }}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
+                <IconPin />
                 17 Thalang Rd, Talat Yai, Mueang Phuket District, Phuket 83000
               </Link>
             </Text>
@@ -167,76 +217,7 @@ const WeedShopNearMe: NextPage = () => {
               title="Green Ghost - Degen Weed Shop - Add a review in Phuket Town"
               passHref
             >
-              <Box display={'flex'} mt={4}>
-                <svg
-                  width={'20px'}
-                  height={'20px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'20px'}
-                  height={'20px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'20px'}
-                  height={'20px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'20px'}
-                  height={'20px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'20px'}
-                  height={'20px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <Box ml={2} color={'ghostVerse.green.base'}>
-                  Add a review
-                </Box>
-              </Box>
+              <IconsReview />
             </Link>
           </Box>
           <Box
@@ -287,41 +268,13 @@ const WeedShopNearMe: NextPage = () => {
               mb={4}
             >
               <Box display={'flex'} alignItems={'center'}>
-                <svg
-                  width={20}
-                  height={20}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z"
-                  />
-                </svg>
+                <IconShop />
                 <Box ml={2} mb={1}>
-                  My Weed Partner Shop. Same weed, same chill ...
+                  My Weed Partner Shop. Same awesome weed. Rooftop ...
                 </Box>
               </Box>
               <Box display={'flex'} alignItems={'center'}>
-                <svg
-                  width={20}
-                  height={20}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+                <IconClock />
                 <Box ml={2} mb={1}>
                   Monday/Sunday 10h-22h. Close on Saturday.
                 </Box>
@@ -341,19 +294,7 @@ const WeedShopNearMe: NextPage = () => {
                 title="Green Ghost - Degen Weed Shop - Map Rawai"
                 passHref
               >
-                <svg
-                  width="30px"
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox="0 0 24 24"
-                  fill={'#4cfd27'}
-                  style={{ float: 'left', marginTop: '8', marginRight: '8' }}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
+                <IconPin />
                 69/53 Soi Saiyuan, Rawai, Mueang Phuket District, Phuket 83100
               </Link>
             </Text>
@@ -362,76 +303,7 @@ const WeedShopNearMe: NextPage = () => {
               title="Green Ghost - Degen Weed Shop - Add a review in Rawai"
               passHref
             >
-              <Box display={'flex'} mt={4}>
-                <svg
-                  width={'20px'}
-                  height={'20px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'20px'}
-                  height={'20px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'20px'}
-                  height={'20px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'20px'}
-                  height={'20px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <svg
-                  width={'20px'}
-                  height={'20px'}
-                  xmlns={'http://www.w3.org/2000/svg'}
-                  viewBox={'0 0 20 20'}
-                  fill={'#4cfd27'}
-                >
-                  <path
-                    fillRule={'evenodd'}
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clipRule={'evenodd'}
-                  />
-                </svg>
-                <Box ml={2} color={'ghostVerse.green.base'}>
-                  Add a review
-                </Box>
-              </Box>
+              <IconsReview />
             </Link>
           </Box>
           <Box
