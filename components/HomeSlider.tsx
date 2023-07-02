@@ -36,7 +36,7 @@ export const HomeSlider = () => {
             src="/media/green-ghost-weed-shop-phuket.webp"
             fill
             style={{ objectFit: 'cover' }}
-            alt={'Green Ghost Weed Shop Phuket'}
+            alt={'Green Ghost Weed Shop Karon'}
             priority={true}
           />
         </Box>
