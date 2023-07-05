@@ -72,7 +72,7 @@ export const HomeSlider = () => {
             family right here in the heart of Karon, Phuket!
           </Text>
           <Link
-            href="https://goo.gl/maps/GJU2GmYibHxEohqm8"
+            href="https://goo.gl/maps/2mrscgVuBc73KRot8"
             title={'Degen Weed Shop in Karon'}
             passHref
           >
