@@ -69,7 +69,7 @@ export const HomeSlider = () => {
           </Text>
           <Text as={'p'} fontSize={{ base: '3xl', md: '4xl' }}>
             We are thrilled to unveil our newest location to the Green Ghost
-            family right here in the heart of Kata-Karon, Phuket!
+            family right here in the heart of Karon, Phuket!
           </Text>
           <Link
             href="https://goo.gl/maps/2mrscgVuBc73KRot8"
