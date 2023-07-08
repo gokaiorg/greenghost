@@ -6,7 +6,7 @@ export const PhuketShops = () => {
     <Box display={'flex'} flexWrap={'wrap'} my={4} mx={-1} mt={10}>
       <Box width={{ base: '50%', lg: '25%' }}>
         <Link
-          href="https://goo.gl/maps/FEhBvjDY8Puwp87q9"
+          href="https://goo.gl/maps/nAic8frZQtuJRA8QA"
           title="Green Ghost Map"
           passHref
         >

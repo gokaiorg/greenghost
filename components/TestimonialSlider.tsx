@@ -106,6 +106,107 @@ export const TestimonialSlider = () => {
                 marginBottom={2}
                 fontFamily={'CubicFive10'}
               >
+                Aric Sangchat
+              </Text>
+              <TestimonialStars />
+              <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
+                All the best goodies 🫠 highly recommend!
+              </Text>
+              <Link
+                href={'https://goo.gl/maps/vtqwmSuy48QoAp2q7'}
+                title={'Read More Review on Google Map Place'}
+                passHref
+              >
+                <Text
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={{ base: 'xl' }}
+                  mt={4}
+                  fontFamily={'CubicFive10'}
+                >
+                  Read Review
+                </Text>
+              </Link>
+            </Box>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            display={'flex'}
+            my={'10'}
+            bgColor={'ghostVerse.dark.lighter'}
+            p={'5'}
+          >
+            <TestimonialPfp />
+            <Box
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              fontWeight={'black'}
+              color={'white'}
+              w={'80%'}
+              fontFamily={'vt323'}
+              px={4}
+              backdropFilter={'blur(3px)'}
+            >
+              <Text
+                as={'h2'}
+                fontSize={{ base: 'xl' }}
+                marginBottom={2}
+                fontFamily={'CubicFive10'}
+              >
+                G P
+              </Text>
+              <TestimonialStars />
+              <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
+                Really great and smart coffee shop, the customer service is
+                really nice, friendly and competent… The cannabis they offer is
+                really of great and highest quality, I highly recommend 👍🏻👌🏻
+                Thanks a lot again for the really great moment !
+              </Text>
+              <Link
+                href={'https://goo.gl/maps/zPHEfMXMrxTEJQt18'}
+                title={'Read More Review on Google Map Place'}
+                passHref
+              >
+                <Text
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={{ base: 'xl' }}
+                  mt={4}
+                  fontFamily={'CubicFive10'}
+                >
+                  Read Review
+                </Text>
+              </Link>
+            </Box>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            display={'flex'}
+            my={'10'}
+            bgColor={'ghostVerse.dark.lighter'}
+            p={'5'}
+          >
+            <TestimonialPfp />
+            <Box
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              fontWeight={'black'}
+              color={'white'}
+              w={'80%'}
+              fontFamily={'vt323'}
+              px={4}
+              backdropFilter={'blur(3px)'}
+            >
+              <Text
+                as={'h2'}
+                fontSize={{ base: 'xl' }}
+                marginBottom={2}
+                fontFamily={'CubicFive10'}
+              >
                 Alli Rainer
               </Text>
               <TestimonialStars />
@@ -661,56 +762,6 @@ export const TestimonialSlider = () => {
               </Text>
               <Link
                 href={'https://goo.gl/maps/aXs9vzgcNHEN2b9CA'}
-                title={'Read More Review on Google Map Place'}
-                passHref
-              >
-                <Text
-                  display={'inline-flex'}
-                  color={'ghostVerse.green.base'}
-                  fontSize={{ base: 'xl' }}
-                  mt={4}
-                  fontFamily={'CubicFive10'}
-                >
-                  Read Review
-                </Text>
-              </Link>
-            </Box>
-          </Box>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Box
-            display={'flex'}
-            my={'10'}
-            bgColor={'ghostVerse.dark.lighter'}
-            p={'5'}
-          >
-            <TestimonialPfp />
-            <Box
-              display={'flex'}
-              flexDirection={'column'}
-              justifyContent={'center'}
-              fontWeight={'black'}
-              color={'white'}
-              w={'80%'}
-              fontFamily={'vt323'}
-              px={4}
-              backdropFilter={'blur(3px)'}
-            >
-              <Text
-                as={'h2'}
-                fontSize={{ base: 'xl' }}
-                marginBottom={2}
-                fontFamily={'CubicFive10'}
-              >
-                G P
-              </Text>
-              <TestimonialStars />
-              <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
-                Really great shop, good quality products and the service is
-                really friendly ! I recommend a lot 👍🏻 …
-              </Text>
-              <Link
-                href={'https://goo.gl/maps/xkfjZMNEEe24E5tD9'}
                 title={'Read More Review on Google Map Place'}
                 passHref
               >
