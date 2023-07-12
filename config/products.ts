@@ -96,7 +96,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '04/04/2023',
-    quantity: 4,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Bruce Banner is a highly sought-after hybrid strain known for its powerful effects and high THC content. With its origins traced back to a cross between OG Kush and Strawberry Diesel, Bruce Banner offers a unique blend of sweet and diesel-like flavors with earthy undertones. Its dense, sticky buds are known for their bright green color and orange hairs, often coated in a thick layer of trichomes. \n\n The effects of Bruce Banner are fast-acting and intense, providing a powerful burst of euphoria and creativity followed by deep relaxation and a mellow body buzz. Its high THC levels, which can range between 18-29%, make it a popular choice among experienced cannabis consumers seeking potent and long-lasting effects. It's important to note that the strain's high can be overwhelming for some, so beginners are advised to start with a lower dosage. \n\n Bruce Banner is also a popular strain among growers due to its fast flowering time of 8-10 weeks and high yields. It is known to produce three main phenotypes, one of which is Bruce Banner #3, which has gained a reputation as the most potent and flavorful of the three. Overall, Bruce Banner is a strain that offers a unique blend of flavors and effects that has earned it a place among the most popular hybrid strains on the market today.",
@@ -142,7 +142,7 @@ export const products: Product[] = [
   {
     slug: 'white-widow',
     name: 'White Widow',
-    price: 800,
+    price: 600,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -154,7 +154,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '22/05/2023',
-    quantity: 10,
+    quantity: 20,
     origin: 'Phuket',
     description:
       'White Widow is undeniably one of the most renowned strains globally, originating from the Netherlands and meticulously bred by Green House Seeds. \n\n This well-balanced hybrid is the result of crossing a Brazilian sativa landrace with a resin-rich South Indian indica. \n\n Since its inception in the 1990s, White Widow has become a staple on the menu of Dutch coffee shops. Its distinctive buds are adorned with a glistening layer of crystal resin, serving as a forewarning of its potent effects. Upon consumption, a surge of euphoria and energy quickly takes hold, invigorating both conversation and creativity. The genetic legacy of White Widow has paved the way for other legendary strains like White Russian, White Rhino, and Blue Widow.',
@@ -171,7 +171,7 @@ export const products: Product[] = [
   {
     slug: 'tangerine-dream',
     name: 'Tangerine Dream',
-    price: 800,
+    price: 500,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -183,7 +183,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '22/05/2023',
-    quantity: 10,
+    quantity: 20,
     origin: 'Phuket',
     description:
       "Tangerine Dream is a sativa-dominant strain renowned for its multifaceted effects that can potentially alleviate pain and provide a boost of energy. This remarkable strain, developed by the esteemed Barney's Farm, is the result of crossing G13, Afghani, and Neville's A5 Haze. With a primary focus on meeting the therapeutic needs of medical patients, Tangerine Dream has been meticulously bred to offer a well-rounded experience. However, it's worth noting that overconsumption of this strain may lead to a sedating couch-lock effect, making it best suited for those seeking deep relaxation. \n\n One of the standout qualities of Tangerine Dream is its ability to uplift the spirit and induce a euphoric state of mind. Alongside its mental invigoration, this strain also excels at providing physical relaxation, making it a popular choice for those looking to unwind and relieve muscle tension. The captivating citrusy aroma of Tangerine Dream further enhances the overall sensory experience, leaving a delightful impression on the senses. \n\n In terms of cultivation, Tangerine Dream typically undergoes a flowering period of 8 to 10 weeks, allowing growers to anticipate the development of its resinous buds. The vibrant combination of genetics in this strain contributes to its unique profile, offering a harmonious blend of fruity flavors and earthy undertones. Whether seeking a rejuvenating boost or therapeutic relief, Tangerine Dream stands as a testament to the incredible potential of cannabis breeding, consistently delivering a satisfying and aromatic journey for enthusiasts and medical users alike.",
@@ -212,7 +212,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '07/04/2023',
-    quantity: 8,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Critical Kush is an Indica-dominant marijuana strain that is known for its potent effects. Bred by Barney's Farm, it is a cross between Critical Mass and OG Kush, two of the most beloved strains in the cannabis world. Critical Kush has a pungent earthy aroma with a hint of spice, which can induce a calming effect on the mind and body. Its high THC content combined with a moderate amount of CBD makes it an ideal nighttime medication for those seeking relief from pain, stress, insomnia, and muscle spasms. \n\n This popular strain is highly valued by both medical and recreational users. Medical marijuana patients use Critical Kush to alleviate symptoms related to chronic pain, anxiety, depression, and insomnia. Recreational users appreciate its relaxing, sedative-like effects, which make it an excellent choice for unwinding after a long day. Critical Kush is also a favorite among growers, as it is easy to cultivate and produces high yields. \n\n Indoor growers can expect Critical Kush to flower in about 50-60 days. This strain is known for its resilience and adaptability, making it suitable for both novice and experienced cultivators. With its potent effects and delightful aroma, Critical Kush is a must-try for any cannabis connoisseur looking for a high-quality Indica strain.",
@@ -318,7 +318,7 @@ export const products: Product[] = [
   {
     slug: 'super-lemon-haze',
     name: 'Super Lemon Haze',
-    price: 500,
+    price: 400,
     dominance: 'Sativa',
     indica: '30',
     sativa: '70',
@@ -330,7 +330,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '12/04/2023',
-    quantity: 6,
+    quantity: 20,
     origin: 'Phuket',
     description:
       'Super Lemon Haze is a sativa-dominant hybrid cannabis strain that is the result of the crossing of Lemon Skunk and Super Silver Haze strains. This award-winning strain has gained popularity due to its multi-colored appearance and intense lemony flavor profile. Super Lemon Haze is known for its unique, energetic and lively effects, making it a popular choice among cannabis enthusiasts. \n\n The aroma of Super Lemon Haze is zesty, citrusy, and slightly sweet. The taste is tart and sweet, reminiscent of lemon candy, but not too sharp. This strain is kief-caked and visually striking with its array of colors. \n\n Super Lemon Haze has a high THC content, making it a potent strain that may not be suitable for those with low tolerance levels. Its effects are said to be uplifting, euphoric, and stimulating, making it a great choice for daytime use. It is often used to treat symptoms related to stress, depression, and fatigue. \n\n Overall, Super Lemon Haze is a top-rated strain with a unique flavor and powerful effects that have won it several awards, including two Cannabis Cup awards. It is a strain that is sure to impress cannabis connoisseurs looking for a flavorful and energetic high.',
@@ -359,7 +359,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '25/03/2023',
-    quantity: 0,
+    quantity: 20,
     origin: 'Phuket',
     description:
       "Mandarin Skittlez is a hybrid cannabis strain that results from the crossing of two potent strains, Dying Breed's California Black Rosé and Ethos' Mandarin Sunset. This striking strain is characterized by its unique and beautiful purple, black, and red buds that are sure to catch anyone's attention. Its dense and resinous buds have a low leaf-to-flower ratio, making it an ideal choice for extraction. \n\n The Mandarin Skittlez strain boasts an impressive array of flavors that are sure to tantalize your taste buds. It has an intense grape, grapefruit, spice, and orange taste that is both refreshing and satisfying. Its effects are equally impressive, offering a potent high that leaves smokers feeling happy, relaxed, and euphoric. It is perfect for unwinding after a long day or for creative inspiration. \n\n Mandarin Skittlez is an excellent choice for cannabis enthusiasts who are looking for a unique strain that packs a punch. Its beautiful appearance, potent effects, and mouth-watering flavors make it a top choice in dispensaries worldwide. Whether you're a seasoned smoker or a newbie, Mandarin Skittlez is a must-try strain for its exceptional quality and amazing effects.",
@@ -388,7 +388,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '08/04/2023',
-    quantity: 10,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Fruit Spirit is a premium cannabis strain that is sure to satisfy anyone looking for a unique and delicious smoking experience. This hybrid strain is a cross between White Widow and Blueberry, resulting in a potent and flavorful strain that will leave you feeling relaxed and euphoric. Its fruity aroma and taste are unlike anything else on the market, making it a popular choice among cannabis enthusiasts worldwide. \n\n Not only does Fruit Spirit taste amazing, but it also boasts a well-balanced mix of Indica and Sativa genetics. This makes it a versatile strain that can be enjoyed at any time of day or night. Its high THC content produces a powerful and uplifting effect that can help with stress, anxiety, and depression. Additionally, its sweet flavor profile makes it a great option for those looking to indulge in a little bit of sweetness without the added calories. \n\n Fruit Spirit is a top-shelf strain that is sure to impress even the most discerning cannabis connoisseur. Its buds are dense and covered in trichomes, giving it a unique appearance that's hard to miss. Whether you're looking for a strain to help you unwind after a long day or something to spark your creativity, Fruit Spirit is the perfect choice. So why not give it a try and experience its fruity goodness for yourself?",
@@ -446,7 +446,7 @@ export const products: Product[] = [
     growerSlug: 'buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/04/2023',
-    quantity: 10,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Amnesia Haze is a unique sativa-dominant hybrid born from the crossbreeding of Jamaican and Laotian sativas with Afghan Hawaiian indica. With a sativa to indica ratio of 80:20, it's an ideal strain for daytime use and clear thinking. Boasting potent THC levels of over 22%, it offers relief from anxiety, depression, fatigue, ADHD, migraines, mood swings, and physical pain. However, its lower CBD content makes it less suitable for conditions treated with CBD, such as epilepsy. \n\n Prepare for a creative and euphoric high with Amnesia Haze, accompanied by a delightful boost in mood and a tendency to induce laughter. Its taste is reminiscent of fresh, fruity hash, complemented by a sweet and earthy aroma with subtle hints of spicy pepper. The buds are light green with darker brown strands, generously coated in trichomes, providing a visually appealing appearance. \n\n While Amnesia Haze is more prevalent in parts of Europe, it can also be found in select dispensaries across the United States, including Colorado, California, Washington State, Oregon, and Michigan. It's a strain that can cause dry mouth and red eyes, and some users have reported occasional experiences of paranoia and dizziness. Embraced by cannabis enthusiasts, Amnesia Haze has also gained popularity in the beautiful region of British Columbia.",
@@ -621,7 +621,7 @@ export const products: Product[] = [
     growerSlug: 'my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '11/06/2023',
-    quantity: 9,
+    quantity: 20,
     origin: 'Phuket',
     description:
       "Stardawg, also known as Stardog, is a hybrid marijuana strain created from Chemdog 4 and Tres Dawg. Its earthy pine flavor with hints of sour diesel is truly captivating. The effects of Stardawg are uplifting and beneficial for relieving stress, fatigue, and anxiety. With a flowering time of 67 days indoors, it yields moderate amounts of high-quality buds. \n\n Stardawg is a mesmerizing hybrid strain derived from Chemdog 4 and Tres Dawg. Its distinct earthy pine taste intertwined with sour diesel undertones is truly delightful. This strain offers uplifting effects that can provide relief from stress, fatigue, and anxiety. Indoor growers can expect a moderate yield of exceptional buds after approximately 67 days of flowering. \n\n Discover Stardawg, a remarkable hybrid strain bred from Chemdog 4 and Tres Dawg. Its enticing flavor profile blends earthy pine with subtle sour diesel notes. Stardawg's uplifting effects make it an ideal choice for relieving stress, fatigue, and anxiety. With an indoor flowering time of around 67 days, this strain yields moderate amounts of top-quality buds.",
@@ -650,7 +650,7 @@ export const products: Product[] = [
     growerSlug: 'buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/06/2023',
-    quantity: 10,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Amnesia is a highly sought-after Sativa-dominant marijuana strain renowned for its potent effects. With a THC level of up to 24 percent, it offers a strong and uplifting buzz. This strain has a flowering period of 10 to 11 weeks and rewards growers with a bountiful yield. Its genetic lineage can be traced back to the legendary strains Cinderella 99, Jack Herer, and Skunk. The delightful earthy flavors and citrusy aroma, reminiscent of lemons and oranges, make Amnesia an enjoyable sensory experience. \n\n Originating from Jamaican Landrace and South Asian strains, Amnesia has gained recognition in the cannabis community. It claimed the first prize in the Cannabis Cup 2014 and the Sativa Cup 2012, solidifying its reputation. Coffee shops in Amsterdam have embraced its popularity, making it widely available. The lime and dark green buds of Amnesia possess a visually appealing appearance, adorned with abundant trichomes and fine hairs. Prepare for a powerful and rapid onset of effects, as Amnesia hits you intensely within 10 to 15 minutes of consumption. \n\n Beyond its invigorating properties, Amnesia is a versatile strain with medicinal benefits. It effectively combats lethargy, providing a boost of energy and enhancing productivity. Patients suffering from depression, anxiety, and stress find relief in its therapeutic qualities. Moreover, Amnesia is known to alleviate nausea and migraine symptoms. If you seek an exceptional strain that offers both recreational enjoyment and medicinal value, Amnesia is a remarkable choice.',
