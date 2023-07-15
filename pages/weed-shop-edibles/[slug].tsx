@@ -189,7 +189,7 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
             marginLeft={'auto'}
             fontSize={'2xl'}
           >
-            {edible.quantity !== 0 && edible.price !== 666 && (
+            {edible.quantity !== 0 && edible.price !== 999 && (
               <>
                 <Box
                   display={'flex'}

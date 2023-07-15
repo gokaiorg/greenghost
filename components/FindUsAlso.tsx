@@ -21,9 +21,18 @@ export const FindUsAlso = () => {
         justifyContent={'center'}
         mx={'auto'}
         mb={4}
-        fontSize={'4xl'}
+        fontSize={'3xl'}
         fontFamily={'vt323'}
       >
+        <Box m={4} color={'ghostVerse.green.base'}>
+          <Link
+            title={'Find Us on Weed in th'}
+            href={'https://weed.th/shop/fe835e3b-d043-4672-af43-8cc039aa013b'}
+            passHref
+          >
+            WEED.TH Karon
+          </Link>
+        </Box>
         <Box m={4} color={'ghostVerse.green.base'}>
           <Link
             title={'Find Us on Weed in th'}

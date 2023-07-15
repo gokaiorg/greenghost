@@ -64,7 +64,7 @@ export const GadgetItem = ({ gadget }: GadgetItemProps) => {
               flexDirection={'column'}
               marginRight={1}
             >
-              {gadget.price !== 666 && (
+              {gadget.price !== 999 && (
                 <Box
                   marginLeft={'auto'}
                   color={'ghostVerse.green.base'}

@@ -33,10 +33,10 @@ export const HomeSlider = () => {
       <SwiperSlide>
         <Box position={'relative'} w="100%" h={{ base: '600px' }}>
           <Image
-            src="/media/green-ghost-weed-shop-phuket.webp"
+            src="/media/green-ghost-weed-shop-karon.webp"
             fill
             style={{ objectFit: 'cover' }}
-            alt={'Green Ghost Weed Shop Karon'}
+            alt={'Green Ghost Weed Shop Kata-Karon'}
             priority={true}
           />
         </Box>
@@ -72,7 +72,7 @@ export const HomeSlider = () => {
             family right here in the heart of Karon, Phuket!
           </Text>
           <Link
-            href="https://goo.gl/maps/GJU2GmYibHxEohqm8"
+            href="https://goo.gl/maps/2mrscgVuBc73KRot8"
             title={'Degen Weed Shop in Karon'}
             passHref
           >
@@ -93,7 +93,7 @@ export const HomeSlider = () => {
                 color: 'ghostVerse.green.base',
               }}
             >
-              Go there now
+              Visit us now
             </Text>
           </Link>
         </Box>
