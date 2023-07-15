@@ -166,7 +166,7 @@ export default function DegensPage({ degen }: DegensPageProps) {
             marginLeft={'auto'}
             fontSize={'2xl'}
           >
-            {degen.quantity !== 0 && degen.price !== 666 && (
+            {degen.quantity !== 0 && degen.price !== 999 && (
               <>
                 <Box
                   display={'flex'}

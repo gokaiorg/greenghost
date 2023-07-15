@@ -8,7 +8,7 @@ export const Degen = () => {
   const [showUnavailable] = useState(false);
 
   const filteredProducts = degens.filter((degen) => {
-    if (!showUnavailable && degen.price === 666) {
+    if (!showUnavailable && degen.price === 999) {
       return false;
     }
 

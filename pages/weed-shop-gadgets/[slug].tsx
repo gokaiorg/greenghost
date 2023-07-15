@@ -130,7 +130,7 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
             marginLeft={'auto'}
             fontSize={'2xl'}
           >
-            {gadget.quantity !== 0 && gadget.price !== 666 && (
+            {gadget.quantity !== 0 && gadget.price !== 999 && (
               <>
                 <Box
                   display={'flex'}

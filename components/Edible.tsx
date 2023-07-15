@@ -8,7 +8,7 @@ export const Edible = () => {
   const [showUnavailable] = useState(false);
 
   const filteredProducts = edibles.filter((edible) => {
-    if (!showUnavailable && edible.price === 666) {
+    if (!showUnavailable && edible.price === 999) {
       return false;
     }
 
