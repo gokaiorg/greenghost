@@ -8,7 +8,7 @@ export const Gadget = () => {
   const [showUnavailable] = useState(false);
 
   const filteredProducts = gadgets.filter((gadget) => {
-    if (!showUnavailable && gadget.price === 666) {
+    if (!showUnavailable && gadget.price === 999) {
       return false;
     }
 

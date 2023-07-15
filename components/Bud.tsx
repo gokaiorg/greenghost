@@ -1,22 +1,31 @@
-import { Box, Select } from '@chakra-ui/react';
+import { Box, Select, Checkbox } from '@chakra-ui/react';
 import { useState } from 'react';
 import { products } from '../config/products';
 import { BudItem } from './BudItem';
 
 type DominanceOption = 'All' | 'Sativa' | 'Indica' | 'Hybrid';
+type GrowerOption =
+  | 'All'
+  | 'My Weed Solutions'
+  | 'Buddy Bud Weed'
+  | 'Cosmic Temple Vibes';
 
 export const Bud = () => {
   const [sortBy, setSortBy] = useState('priceLowToHigh');
-  const [showUnavailable] = useState(false);
+  const [showUnavailable, setShowUnavailable] = useState(false);
   const [dominanceFilter, setDominanceFilter] =
     useState<DominanceOption>('All');
+  const [growerFilter, setGrowerFilter] = useState<GrowerOption>('All');
 
   const filteredProducts = products.filter((product) => {
-    if (!showUnavailable && (product.quantity === 0 || product.price === 666)) {
+    if (!showUnavailable && (product.quantity === 0 || product.price === 999)) {
       return false;
     }
 
     if (dominanceFilter !== 'All' && product.dominance !== dominanceFilter) {
+      return false;
+    }
+    if (growerFilter !== 'All' && product.grower !== growerFilter) {
       return false;
     }
 
@@ -56,79 +65,113 @@ export const Bud = () => {
     setDominanceFilter(event.target.value as DominanceOption);
   };
 
+  const handleGrowerChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setGrowerFilter(event.target.value as GrowerOption);
+  };
+
+  const handleShowUnavailableChange = () => {
+    setShowUnavailable((prevValue) => !prevValue);
+  };
+
   return (
     <Box mt={4} mb="10">
       <Box
+        as={'h2'}
+        mb={4}
+        display={'inline-flex'}
+        mr={'auto'}
+        flexWrap={'wrap'}
+        fontSize={30}
+        fontFamily={'vt323'}
+      >
+        Buds price for 1 gram.
+      </Box>
+      <Box
         display={'flex'}
+        width={'100%'}
         alignItems={'baseline'}
-        mr={1}
+        mb={4}
         flexDirection={{ base: 'column', lg: 'row' }}
       >
-        <Box
-          as={'h2'}
-          mb={4}
-          display={'inline-flex'}
-          mr={'auto'}
-          flexWrap={'wrap'}
-          fontSize={30}
-          fontFamily={'vt323'}
-        >
-          Buds price for 1 gram.
+        <Box mr={4}>
+          <Select
+            value={dominanceFilter}
+            onChange={handleDominanceChange}
+            borderRadius={'0'}
+            color={'ghostVerse.green.base'}
+            borderColor={'black'}
+            outline={'none'}
+            p={0}
+            cursor={'pointer'}
+            fontFamily={'vt323'}
+            fontSize={{ base: '2xl' }}
+            _hover={{ borderColor: 'ghostVerse.green.base' }}
+            _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
+            w={'fit-content'}
+          >
+            <option value="All">All Dominance</option>
+            <option value="Sativa">Sativa</option>
+            <option value="Indica">Indica</option>
+            <option value="Hybrid">Hybrid</option>
+          </Select>
         </Box>
-        <Box
-          display={'flex'}
-          mb={{ base: '4', lg: '0' }}
-          ml={{ base: '0', lg: '4' }}
-        >
-          <Box mr={4}>
-            <Select
-              value={sortBy}
-              onChange={handleSortChange}
-              borderRadius={'0'}
-              color={'ghostVerse.green.base'}
-              borderColor={'black'}
-              outline={'none'}
-              p={0}
-              cursor={'pointer'}
-              fontFamily={'vt323'}
-              fontSize={{ base: '2xl' }}
-              _hover={{ borderColor: 'ghostVerse.green.base' }}
-              _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
-              w={'fit-content'}
-            >
-              <option value="priceLowToHigh">Price: Low to High</option>
-              <option value="priceHighToLow">Price: High to Low</option>
-              <option value="THCHighToLow">THC: High to Low</option>
-              <option value="THCLowToHigh">THC: Low to High</option>
-              <option value="sativaHighToLow">Sativa: High to Low</option>
-              <option value="sativaLowToHigh">Sativa: Low to High</option>
-              <option value="indicaHighToLow">Indica: High to Low</option>
-              <option value="indicaLowToHigh">Indica: Low to High</option>
-            </Select>
-          </Box>
-          <Box>
-            <Select
-              value={dominanceFilter}
-              onChange={handleDominanceChange}
-              borderRadius={'0'}
-              color={'ghostVerse.green.base'}
-              borderColor={'black'}
-              outline={'none'}
-              p={0}
-              cursor={'pointer'}
-              fontFamily={'vt323'}
-              fontSize={{ base: '2xl' }}
-              _hover={{ borderColor: 'ghostVerse.green.base' }}
-              _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
-              w={'fit-content'}
-            >
-              <option value="All">All Dominance</option>
-              <option value="Sativa">Sativa</option>
-              <option value="Indica">Indica</option>
-              <option value="Hybrid">Hybrid</option>
-            </Select>
-          </Box>
+        <Box mr={4}>
+          <Select
+            value={sortBy}
+            onChange={handleSortChange}
+            borderRadius={'0'}
+            color={'ghostVerse.green.base'}
+            borderColor={'black'}
+            outline={'none'}
+            p={0}
+            cursor={'pointer'}
+            fontFamily={'vt323'}
+            fontSize={{ base: '2xl' }}
+            _hover={{ borderColor: 'ghostVerse.green.base' }}
+            _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
+            w={'fit-content'}
+          >
+            <option value="priceLowToHigh">Price: Low to High</option>
+            <option value="priceHighToLow">Price: High to Low</option>
+            <option value="THCHighToLow">THC: High to Low</option>
+            <option value="THCLowToHigh">THC: Low to High</option>
+            <option value="sativaHighToLow">Sativa: High to Low</option>
+            <option value="sativaLowToHigh">Sativa: Low to High</option>
+            <option value="indicaHighToLow">Indica: High to Low</option>
+            <option value="indicaLowToHigh">Indica: Low to High</option>
+          </Select>
         </Box>
+        <Box>
+          <Select
+            value={growerFilter}
+            onChange={handleGrowerChange}
+            borderRadius={'0'}
+            color={'ghostVerse.green.base'}
+            borderColor={'black'}
+            outline={'none'}
+            p={0}
+            cursor={'pointer'}
+            fontFamily={'vt323'}
+            fontSize={{ base: '2xl' }}
+            _hover={{ borderColor: 'ghostVerse.green.base' }}
+            _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
+            w={'fit-content'}
+          >
+            <option value="All">All Growers</option>
+            <option value="My Weed Solutions">My Weed Solutions</option>
+            <option value="Buddy Bud Weed">Buddy Bud Weed</option>
+            <option value="Cosmic Temple Vibes">Cosmic Temple Vibes</option>
+          </Select>
+        </Box>
+        <Checkbox
+          ml={{ base: '0', lg: 'auto' }}
+          colorScheme="green"
+          checked={showUnavailable}
+          onChange={handleShowUnavailableChange}
+          _checked={{ color: 'ghostVerse.green.base' }}
+        >
+          All Buds
+        </Checkbox>
       </Box>
 
       <Box display={'flex'} flexWrap={'wrap'}>

@@ -15,7 +15,7 @@ export const BudItem = ({ product }: BudItemProps) => {
       paddingRight={1}
       lineHeight={1}
     >
-      <Link href={product.slug} title={product.name} passHref>
+      <Link href={`weed-shop/${product.slug}`} title={product.name} passHref>
         <Box
           borderColor={'ghostVerse.green.base'}
           borderWidth={1}
@@ -61,21 +61,24 @@ export const BudItem = ({ product }: BudItemProps) => {
               flexDirection={'column'}
               marginRight={1}
             >
-              {product.price !== 666 && (
-                <Box
-                  marginLeft={'auto'}
-                  color={'ghostVerse.green.base'}
-                  whiteSpace={'nowrap'}
-                  mb={2}
-                  position={'absolute'}
-                  right={0}
-                  top={4}
-                  background={'black'}
-                  padding={'0.5rem'}
-                >
-                  {product.price} THB
-                </Box>
-              )}
+              <Box
+                marginLeft={'auto'}
+                whiteSpace={'nowrap'}
+                mb={2}
+                position={'absolute'}
+                right={0}
+                top={4}
+                background={'black'}
+                padding={'0.5rem'}
+              >
+                {product.price == 999 ? (
+                  <Box color={'ghostVerse.green.base'}>Coming Soon</Box>
+                ) : product.quantity === 0 ? (
+                  <Box color={'ghostVerse.red.base'}>Sold Out</Box>
+                ) : (
+                  <Box color={'ghostVerse.green.base'}>{product.price} THB</Box>
+                )}
+              </Box>
               {product.name}
             </Box>
             <Box display={'flex'} fontFamily={'vt323'} fontSize={'2xl'} mb={1}>

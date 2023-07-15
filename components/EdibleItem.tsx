@@ -64,7 +64,7 @@ export const EdibleItem = ({ edible }: EdibleItemProps) => {
               flexDirection={'column'}
               marginRight={1}
             >
-              {edible.price !== 666 && (
+              {edible.price !== 999 && (
                 <Box
                   marginLeft={'auto'}
                   color={'ghostVerse.green.base'}
