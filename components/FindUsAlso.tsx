@@ -50,7 +50,7 @@ export const FindUsAlso = () => {
           >
             WEED.TH Rawai
           </Link>
-        </Box><br/>
+        </Box>
         <Box m={4} color={'ghostVerse.green.base'}>
           <Link
             title={'Find Us on Weeddee'}
