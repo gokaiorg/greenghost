@@ -71,6 +71,15 @@ export const FindUsAlso = () => {
         </Box>
         <Box m={4} color={'ghostVerse.green.base'}>
           <Link
+            title={'Find Us on ThaiWeedGuide'}
+            href={'https://thaiweedguide.com/directory-dispensaries/listing/green-ghost/'}
+            passHref
+          >
+            ThaiWeedGuide
+          </Link>
+        </Box>
+        <Box m={4} color={'ghostVerse.green.base'}>
+          <Link
             title={'Find Us on WeedHub'}
             href={'https://weedhub.asia/listing/green-ghost/'}
             passHref
