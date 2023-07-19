@@ -50,7 +50,7 @@ export const FindUsAlso = () => {
           >
             WEED.TH Rawai
           </Link>
-        </Box>
+        </Box><br/>
         <Box m={4} color={'ghostVerse.green.base'}>
           <Link
             title={'Find Us on Weeddee'}
@@ -67,6 +67,15 @@ export const FindUsAlso = () => {
             passHref
           >
             Smoking Skunk
+          </Link>
+        </Box>
+        <Box m={4} color={'ghostVerse.green.base'}>
+          <Link
+            title={'Find Us on ThaiWeedGuide'}
+            href={'https://thaiweedguide.com/directory-dispensaries/listing/green-ghost/'}
+            passHref
+          >
+            ThaiWeedGuide
           </Link>
         </Box>
         <Box m={4} color={'ghostVerse.green.base'}>
