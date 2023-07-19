@@ -62,6 +62,15 @@ export const FindUsAlso = () => {
         </Box>
         <Box m={4} color={'ghostVerse.green.base'}>
           <Link
+            title={'Find Us on Smoking Skunk'}
+            href={'https://smokingskunk.com/weed-in-thailand/green-ghost-degen-weed-shop-karon/'}
+            passHref
+          >
+            Smoking Skunk
+          </Link>
+        </Box>
+        <Box m={4} color={'ghostVerse.green.base'}>
+          <Link
             title={'Find Us on WeedHub'}
             href={'https://weedhub.asia/listing/green-ghost/'}
             passHref
