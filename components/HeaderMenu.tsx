@@ -125,31 +125,32 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
       </Box>
       {children}
       <Box
-            as={'div'}
-            color={'ghostVerse.yellow.base'}
-            p={4}
-            mt={10}
+        as={'div'}
+        color={'ghostVerse.yellow.base'}
+        p={4}
+        mt={10}
         mb={5}
         mx={'auto'}
         w={'100%'}
-            borderColor={'ghostVerse.yellow.base'}
+        borderColor={'ghostVerse.yellow.base'}
         borderWidth={1}
         fontSize={'2xl'}
         textAlign={'center'}
-          >
+      >
         Do not miss the strain of the week!
-        <br />Discover the{' '}
-            <Link
-              href="/weed-shop/gelato-runtz"
-              title="Gelato Runtz only 400 THB this week!"
-              passHref
-            >
-              <Box as={'span'} color={'white'}>
-                Gelato Runtz
-              </Box>
-            </Link>{' '}
-            for only 400 THB.
+        <br />
+        Discover the{' '}
+        <Link
+          href="/weed-shop/gelato-runtz"
+          title="Gelato Runtz only 400 THB this week!"
+          passHref
+        >
+          <Box as={'span'} color={'white'}>
+            Gelato Runtz
           </Box>
+        </Link>{' '}
+        for only 400 THB.
+      </Box>
     </Box>
   );
 };
