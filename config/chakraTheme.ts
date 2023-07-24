@@ -67,6 +67,9 @@ export const theme = extendTheme({
       red: {
         base: '#de2128',
       },
+      yellow: {
+        base: '#FED349',
+      },
       color1: {
         lighter: 'rgb(109, 208, 246, 0.1)',
         base: '#549db9',

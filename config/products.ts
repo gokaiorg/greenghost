@@ -84,7 +84,7 @@ export const products: Product[] = [
   {
     slug: 'super-lemon-haze',
     name: 'Super Lemon Haze',
-    price: 400,
+    price: 999,
     dominance: 'Sativa',
     indica: '30',
     sativa: '70',
@@ -96,7 +96,7 @@ export const products: Product[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '12/04/2023',
-    quantity: 20,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Super Lemon Haze is a sativa-dominant hybrid cannabis strain that is the result of the crossing of Lemon Skunk and Super Silver Haze strains. This award-winning strain has gained popularity due to its multi-colored appearance and intense lemony flavor profile. Super Lemon Haze is known for its unique, energetic and lively effects, making it a popular choice among cannabis enthusiasts. \n\n The aroma of Super Lemon Haze is zesty, citrusy, and slightly sweet. The taste is tart and sweet, reminiscent of lemon candy, but not too sharp. This strain is kief-caked and visually striking with its array of colors. \n\n Super Lemon Haze has a high THC content, making it a potent strain that may not be suitable for those with low tolerance levels. Its effects are said to be uplifting, euphoric, and stimulating, making it a great choice for daytime use. It is often used to treat symptoms related to stress, depression, and fatigue. \n\n Overall, Super Lemon Haze is a top-rated strain with a unique flavor and powerful effects that have won it several awards, including two Cannabis Cup awards. It is a strain that is sure to impress cannabis connoisseurs looking for a flavorful and energetic high.',
@@ -754,7 +754,7 @@ export const products: Product[] = [
   {
     slug: 'gelato-runtz',
     name: 'Gelato Runtz',
-    price: 700,
+    price: 400,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -773,9 +773,10 @@ export const products: Product[] = [
     descSeo:
       'Gelato Runtz is a potent hybrid strain resulting from the crossbreeding of Runtz and Gelato #33. Bred by Elev8, this strain contains a THC content of 21%, making it a popular choice among experienced cannabis users. Gelato Runtz is known to provide a relaxed, euphoric, and tingly sensation, as reported by Leafly customers. It is often favored by medical marijuana patients seeking relief from pain, anxiety, and depression. With its dominant terpene, limonene, Gelato Runtz offers an enticing aroma and flavor profile reminiscent of vanilla, berries, and coffee.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-gelato-runtz-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-gelato-runtz-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-gelato-runtz-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-gelato-runtz-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-gelato-runtz-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-gelato-runtz-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Gelato Runtz',
     source: 'https://www.leafly.com/strains/gelato-runtz',
