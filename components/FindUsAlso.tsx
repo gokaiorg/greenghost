@@ -63,7 +63,9 @@ export const FindUsAlso = () => {
         <Box m={4} color={'ghostVerse.green.base'}>
           <Link
             title={'Find Us on Smoking Skunk'}
-            href={'https://smokingskunk.com/weed-in-thailand/green-ghost-degen-weed-shop-karon/'}
+            href={
+              'https://smokingskunk.com/weed-in-thailand/green-ghost-degen-weed-shop-karon/'
+            }
             passHref
           >
             Smoking Skunk
@@ -72,7 +74,9 @@ export const FindUsAlso = () => {
         <Box m={4} color={'ghostVerse.green.base'}>
           <Link
             title={'Find Us on ThaiWeedGuide'}
-            href={'https://thaiweedguide.com/directory-dispensaries/listing/green-ghost/'}
+            href={
+              'https://thaiweedguide.com/directory-dispensaries/listing/green-ghost/'
+            }
             passHref
           >
             ThaiWeedGuide
