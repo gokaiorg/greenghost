@@ -679,7 +679,7 @@ export const products: Product[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '11/06/2023',
-    quantity: 20,
+    quantity: 16,
     origin: 'Phuket',
     description:
       "Stardawg, also known as Stardog, is a hybrid marijuana strain created from Chemdog 4 and Tres Dawg. Its earthy pine flavor with hints of sour diesel is truly captivating. The effects of Stardawg are uplifting and beneficial for relieving stress, fatigue, and anxiety. With a flowering time of 67 days indoors, it yields moderate amounts of high-quality buds. \n\n Stardawg is a mesmerizing hybrid strain derived from Chemdog 4 and Tres Dawg. Its distinct earthy pine taste intertwined with sour diesel undertones is truly delightful. This strain offers uplifting effects that can provide relief from stress, fatigue, and anxiety. Indoor growers can expect a moderate yield of exceptional buds after approximately 67 days of flowering. \n\n Discover Stardawg, a remarkable hybrid strain bred from Chemdog 4 and Tres Dawg. Its enticing flavor profile blends earthy pine with subtle sour diesel notes. Stardawg's uplifting effects make it an ideal choice for relieving stress, fatigue, and anxiety. With an indoor flowering time of around 67 days, this strain yields moderate amounts of top-quality buds.",
@@ -766,7 +766,7 @@ export const products: Product[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/06/2023',
-    quantity: 53,
+    quantity: 51,
     origin: 'Phuket',
     description:
       'Gelato Runtz is a potent hybrid strain resulting from the crossbreeding of Runtz and Gelato #33. Bred by Elev8, this strain contains a THC content of 21%, making it a popular choice among experienced cannabis users. Gelato Runtz is known to provide a relaxed, euphoric, and tingly sensation, as reported by Leafly customers. It is often favored by medical marijuana patients seeking relief from pain, anxiety, and depression. With its dominant terpene, limonene, Gelato Runtz offers an enticing aroma and flavor profile reminiscent of vanilla, berries, and coffee. \n\n Discover the captivating blend of Runtz and Gelato #33 in Gelato Runtz. Bred by Elev8, this exceptional hybrid strain packs a THC punch at 21%, catering to the preferences of seasoned cannabis enthusiasts. Gelato Runtz has gained a reputation for inducing relaxation, euphoria, and a delightful tingling sensation, as noted by Leafly customers. Medical marijuana patients often turn to Gelato Runtz to find respite from pain, anxiety, and depression. With its dominant terpene, limonene, Gelato Runtz offers a captivating aroma and flavor profile highlighted by hints of vanilla, berries, and coffee. \n\n Experience the enchanting union of Runtz and Gelato #33 in Gelato Runtz, an impressive hybrid strain meticulously crafted by Elev8. With a THC level of 21%, Gelato Runtz is a favored choice among seasoned cannabis consumers seeking a potent and enjoyable experience. Leafly customers have reported feelings of relaxation, euphoria, and a pleasant tingling sensation. Medical marijuana patients often embrace Gelato Runtz for its potential in alleviating symptoms related to pain, anxiety, and depression. Infused with the dominant terpene limonene, Gelato Runtz entices the senses with its alluring aroma and indulgent flavor profile featuring notes of vanilla, berries, and coffee.',
@@ -824,7 +824,7 @@ export const products: Product[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/06/2023',
-    quantity: 56,
+    quantity: 52,
     origin: 'Phuket',
     description:
       "Buddy Critical is a remarkable hybrid strain that combines the best traits of its parent strains, Critical Plus and Bubble Gum. Critical Plus, a cross between Skunk and Big Bud, is known for its fast growth and high yields. It has gained recognition in cannabis competitions, including winning the first Highlife Cup in Barcelona. Buddy Critical inherits the pungent and citrusy flavors of Critical Plus, accompanied by a subtle diesel and nutty undertone. With the addition of Bubble Gum genetics, this strain offers a relaxing and pain-relieving experience while keeping the mind pleasantly stimulated. \n\n Bred by Dinafem Seeds, Buddy Critical exemplifies the expertise and dedication of its breeders. The careful selection and combination of Critical Plus and Bubble Gum have resulted in a strain that offers a well-balanced and enjoyable experience. The body-numbing effects of Bubble Gum are complemented by the uplifting and euphoric qualities of Critical Plus. This combination makes Buddy Critical a popular choice among cannabis enthusiasts seeking relaxation and pain relief without sacrificing mental clarity. \n\n The precise genetic lineage of Bubble Gum, one of Buddy Critical's parent strains, remains somewhat mysterious. It is believed to be derived from an unknown cross of Indiana Bubble Gum. What is known, however, is the exceptional body-numbing high that Bubble Gum delivers. Users often experience a sense of pain relief and relaxation, accompanied by a gentle mental stimulation. Buddy Critical takes these desirable qualities and enhances them with the addition of Critical Plus genetics, resulting in a well-rounded and satisfying cannabis strain that appeals to a wide range of users.",
@@ -969,7 +969,7 @@ export const products: Product[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/06/2023',
-    quantity: 10,
+    quantity: 23,
     origin: 'Phuket',
     description:
       "Lemon Zkittlez is an extraordinary hybrid strain that brings together the best qualities of Sweet Zkittlez and Critical Plus. With its lineage rooted in the indica-dominant Sweet Zkittlez, Lemon ZZ offers a delightful combination of a sweet flavor profile and a deeply relaxing high. Perfect for those seeking a flavorful experience, Lemon ZZ entices the taste buds with its fruity and citrusy notes, leaving a pleasant aftertaste with every inhale. \n\n The genetic influence of Critical Plus adds a special touch to Lemon ZZ, enhancing its growth potential and yield. Critical Plus is renowned for its fast growth and abundant harvests, making it a favorite among cultivators. This blend of robust genetics and exceptional flavors makes Lemon ZZ an ideal choice for those who appreciate a sweet taste accompanied by a relaxing high. \n\n Indulge in the calming effects of Lemon ZZ as it washes over your body, melting away tension and promoting a sense of deep tranquility. Let its aromatic citrus and diesel undertones transport you to a state of pure bliss. Whether you're looking for a strain to unwind after a long day or to enhance social gatherings, Lemon ZZ is sure to deliver an enjoyable and memorable experience.",

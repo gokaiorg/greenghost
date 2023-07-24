@@ -104,7 +104,7 @@ const WeedShopNearMe: NextPage = () => {
               <Box display={'flex'} alignItems={'center'}>
                 <IconClock />
                 <Box ml={2} mb={1}>
-                  Monday/Sunday 9h-12h & 18h-00h.
+                  Monday/Sunday 14h-00h.
                 </Box>
               </Box>
             </Box>
