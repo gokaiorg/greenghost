@@ -754,7 +754,7 @@ export const products: Product[] = [
   {
     slug: 'gelato-runtz',
     name: 'Gelato Runtz',
-    price: 400,
+    price: 600,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -958,7 +958,7 @@ export const products: Product[] = [
   {
     slug: 'lemon-zkittlez',
     name: 'Lemon Zkittlez',
-    price: 600,
+    price: 400,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -979,7 +979,7 @@ export const products: Product[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-lemon-zkittlez-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-lemon-zkittlez-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-lemon-zkittlez-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-lemon-zkittlez-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Lemon Zkittlez',
     source: 'undefined',
