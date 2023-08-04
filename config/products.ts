@@ -38,7 +38,7 @@ export const products: Product[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '22/05/2023',
-    quantity: 20,
+    quantity: 14,
     origin: 'Phuket',
     description:
       'White Widow is undeniably one of the most renowned strains globally, originating from the Netherlands and meticulously bred by Green House Seeds. \n\n This well-balanced hybrid is the result of crossing a Brazilian sativa landrace with a resin-rich South Indian indica. \n\n Since its inception in the 1990s, White Widow has become a staple on the menu of Dutch coffee shops. Its distinctive buds are adorned with a glistening layer of crystal resin, serving as a forewarning of its potent effects. Upon consumption, a surge of euphoria and energy quickly takes hold, invigorating both conversation and creativity. The genetic legacy of White Widow has paved the way for other legendary strains like White Russian, White Rhino, and Blue Widow.',
@@ -67,7 +67,7 @@ export const products: Product[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '25/03/2023',
-    quantity: 20,
+    quantity: 7,
     origin: 'Phuket',
     description:
       "Mandarin Skittlez is a hybrid cannabis strain that results from the crossing of two potent strains, Dying Breed's California Black Rosé and Ethos' Mandarin Sunset. This striking strain is characterized by its unique and beautiful purple, black, and red buds that are sure to catch anyone's attention. Its dense and resinous buds have a low leaf-to-flower ratio, making it an ideal choice for extraction. \n\n The Mandarin Skittlez strain boasts an impressive array of flavors that are sure to tantalize your taste buds. It has an intense grape, grapefruit, spice, and orange taste that is both refreshing and satisfying. Its effects are equally impressive, offering a potent high that leaves smokers feeling happy, relaxed, and euphoric. It is perfect for unwinding after a long day or for creative inspiration. \n\n Mandarin Skittlez is an excellent choice for cannabis enthusiasts who are looking for a unique strain that packs a punch. Its beautiful appearance, potent effects, and mouth-watering flavors make it a top choice in dispensaries worldwide. Whether you're a seasoned smoker or a newbie, Mandarin Skittlez is a must-try strain for its exceptional quality and amazing effects.",
@@ -125,7 +125,7 @@ export const products: Product[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '22/05/2023',
-    quantity: 20,
+    quantity: 13,
     origin: 'Phuket',
     description:
       "Tangerine Dream is a sativa-dominant strain renowned for its multifaceted effects that can potentially alleviate pain and provide a boost of energy. This remarkable strain, developed by the esteemed Barney's Farm, is the result of crossing G13, Afghani, and Neville's A5 Haze. With a primary focus on meeting the therapeutic needs of medical patients, Tangerine Dream has been meticulously bred to offer a well-rounded experience. However, it's worth noting that overconsumption of this strain may lead to a sedating couch-lock effect, making it best suited for those seeking deep relaxation. \n\n One of the standout qualities of Tangerine Dream is its ability to uplift the spirit and induce a euphoric state of mind. Alongside its mental invigoration, this strain also excels at providing physical relaxation, making it a popular choice for those looking to unwind and relieve muscle tension. The captivating citrusy aroma of Tangerine Dream further enhances the overall sensory experience, leaving a delightful impression on the senses. \n\n In terms of cultivation, Tangerine Dream typically undergoes a flowering period of 8 to 10 weeks, allowing growers to anticipate the development of its resinous buds. The vibrant combination of genetics in this strain contributes to its unique profile, offering a harmonious blend of fruity flavors and earthy undertones. Whether seeking a rejuvenating boost or therapeutic relief, Tangerine Dream stands as a testament to the incredible potential of cannabis breeding, consistently delivering a satisfying and aromatic journey for enthusiasts and medical users alike.",
@@ -679,7 +679,7 @@ export const products: Product[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '11/06/2023',
-    quantity: 16,
+    quantity: 15,
     origin: 'Phuket',
     description:
       "Stardawg, also known as Stardog, is a hybrid marijuana strain created from Chemdog 4 and Tres Dawg. Its earthy pine flavor with hints of sour diesel is truly captivating. The effects of Stardawg are uplifting and beneficial for relieving stress, fatigue, and anxiety. With a flowering time of 67 days indoors, it yields moderate amounts of high-quality buds. \n\n Stardawg is a mesmerizing hybrid strain derived from Chemdog 4 and Tres Dawg. Its distinct earthy pine taste intertwined with sour diesel undertones is truly delightful. This strain offers uplifting effects that can provide relief from stress, fatigue, and anxiety. Indoor growers can expect a moderate yield of exceptional buds after approximately 67 days of flowering. \n\n Discover Stardawg, a remarkable hybrid strain bred from Chemdog 4 and Tres Dawg. Its enticing flavor profile blends earthy pine with subtle sour diesel notes. Stardawg's uplifting effects make it an ideal choice for relieving stress, fatigue, and anxiety. With an indoor flowering time of around 67 days, this strain yields moderate amounts of top-quality buds.",
@@ -766,7 +766,7 @@ export const products: Product[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/06/2023',
-    quantity: 51,
+    quantity: 33,
     origin: 'Phuket',
     description:
       'Gelato Runtz is a potent hybrid strain resulting from the crossbreeding of Runtz and Gelato #33. Bred by Elev8, this strain contains a THC content of 21%, making it a popular choice among experienced cannabis users. Gelato Runtz is known to provide a relaxed, euphoric, and tingly sensation, as reported by Leafly customers. It is often favored by medical marijuana patients seeking relief from pain, anxiety, and depression. With its dominant terpene, limonene, Gelato Runtz offers an enticing aroma and flavor profile reminiscent of vanilla, berries, and coffee. \n\n Discover the captivating blend of Runtz and Gelato #33 in Gelato Runtz. Bred by Elev8, this exceptional hybrid strain packs a THC punch at 21%, catering to the preferences of seasoned cannabis enthusiasts. Gelato Runtz has gained a reputation for inducing relaxation, euphoria, and a delightful tingling sensation, as noted by Leafly customers. Medical marijuana patients often turn to Gelato Runtz to find respite from pain, anxiety, and depression. With its dominant terpene, limonene, Gelato Runtz offers a captivating aroma and flavor profile highlighted by hints of vanilla, berries, and coffee. \n\n Experience the enchanting union of Runtz and Gelato #33 in Gelato Runtz, an impressive hybrid strain meticulously crafted by Elev8. With a THC level of 21%, Gelato Runtz is a favored choice among seasoned cannabis consumers seeking a potent and enjoyable experience. Leafly customers have reported feelings of relaxation, euphoria, and a pleasant tingling sensation. Medical marijuana patients often embrace Gelato Runtz for its potential in alleviating symptoms related to pain, anxiety, and depression. Infused with the dominant terpene limonene, Gelato Runtz entices the senses with its alluring aroma and indulgent flavor profile featuring notes of vanilla, berries, and coffee.',
@@ -825,7 +825,7 @@ export const products: Product[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/06/2023',
-    quantity: 52,
+    quantity: 47,
     origin: 'Phuket',
     description:
       "Buddy Critical is a remarkable hybrid strain that combines the best traits of its parent strains, Critical Plus and Bubble Gum. Critical Plus, a cross between Skunk and Big Bud, is known for its fast growth and high yields. It has gained recognition in cannabis competitions, including winning the first Highlife Cup in Barcelona. Buddy Critical inherits the pungent and citrusy flavors of Critical Plus, accompanied by a subtle diesel and nutty undertone. With the addition of Bubble Gum genetics, this strain offers a relaxing and pain-relieving experience while keeping the mind pleasantly stimulated. \n\n Bred by Dinafem Seeds, Buddy Critical exemplifies the expertise and dedication of its breeders. The careful selection and combination of Critical Plus and Bubble Gum have resulted in a strain that offers a well-balanced and enjoyable experience. The body-numbing effects of Bubble Gum are complemented by the uplifting and euphoric qualities of Critical Plus. This combination makes Buddy Critical a popular choice among cannabis enthusiasts seeking relaxation and pain relief without sacrificing mental clarity. \n\n The precise genetic lineage of Bubble Gum, one of Buddy Critical's parent strains, remains somewhat mysterious. It is believed to be derived from an unknown cross of Indiana Bubble Gum. What is known, however, is the exceptional body-numbing high that Bubble Gum delivers. Users often experience a sense of pain relief and relaxation, accompanied by a gentle mental stimulation. Buddy Critical takes these desirable qualities and enhances them with the addition of Critical Plus genetics, resulting in a well-rounded and satisfying cannabis strain that appeals to a wide range of users.",
@@ -912,7 +912,7 @@ export const products: Product[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/06/2023',
-    quantity: 40,
+    quantity: 30,
     origin: 'Phuket',
     description:
       'Purple Zkittlez is an exquisite indica-dominant hybrid strain that delivers a truly remarkable experience. Crafted through a meticulous crossing of Purple Punch and Zkittlez, Purple Zkittlez showcases a stunning appearance and an irresistibly delicious flavor profile. Its buds boast spade-shaped dark green nugs, adorned with deep purple undertones, dark amber hairs, and a generous coating of thick frosty purple-tinted crystal trichomes that glisten with sweet resin. \n\n Upon breaking apart these sticky gems, a delightful blend of spicy earthy herbs and ripe blueberries fills the air, tantalizing the senses. The flavor mirrors the aroma, with a captivating sweetness reminiscent of berry candy that dances on the tongue. But Purple Zkittlez is more than just a treat for the taste buds. Its effects are equally delightful, inducing a full-bodied and euphoric buzz that invites relaxation while keeping the mind alert. \n\n This strain also brings a creative spark, unleashing a touch of artistic energy without any accompanying anxiety. With an average THC level of 14-19%, Purple Zkittlez is well-suited for a variety of therapeutic applications. It can effectively alleviate symptoms of depression, chronic pain, headaches, migraines, chronic fatigue, nausea, appetite loss, and chronic stress. Embrace the enchanting allure of Purple Zkittlez and let its blissful qualities guide you towards a state of tranquility and well-being.',
@@ -970,7 +970,7 @@ export const products: Product[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/06/2023',
-    quantity: 23,
+    quantity: 20,
     origin: 'Phuket',
     description:
       "Lemon Zkittlez is an extraordinary hybrid strain that brings together the best qualities of Sweet Zkittlez and Critical Plus. With its lineage rooted in the indica-dominant Sweet Zkittlez, Lemon ZZ offers a delightful combination of a sweet flavor profile and a deeply relaxing high. Perfect for those seeking a flavorful experience, Lemon ZZ entices the taste buds with its fruity and citrusy notes, leaving a pleasant aftertaste with every inhale. \n\n The genetic influence of Critical Plus adds a special touch to Lemon ZZ, enhancing its growth potential and yield. Critical Plus is renowned for its fast growth and abundant harvests, making it a favorite among cultivators. This blend of robust genetics and exceptional flavors makes Lemon ZZ an ideal choice for those who appreciate a sweet taste accompanied by a relaxing high. \n\n Indulge in the calming effects of Lemon ZZ as it washes over your body, melting away tension and promoting a sense of deep tranquility. Let its aromatic citrus and diesel undertones transport you to a state of pure bliss. Whether you're looking for a strain to unwind after a long day or to enhance social gatherings, Lemon ZZ is sure to deliver an enjoyable and memorable experience.",
