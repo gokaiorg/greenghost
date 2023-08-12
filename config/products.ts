@@ -463,7 +463,7 @@ export const products: Product[] = [
   {
     slug: 'amnesia-haze',
     name: 'Amnesia Haze',
-    price: 999,
+    price: 1000,
     dominance: 'Sativa',
     indica: '30',
     sativa: '70',
@@ -475,7 +475,7 @@ export const products: Product[] = [
     growerSlug: '/cosmic-temple-vibes',
     environment: 'Organic Indoor',
     harvest: '16/05/2023',
-    quantity: 20,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Amnesia Haze is a unique sativa-dominant hybrid born from the crossbreeding of Jamaican and Laotian sativas with Afghan Hawaiian indica. With a sativa to indica ratio of 80:20, it's an ideal strain for daytime use and clear thinking. Boasting potent THC levels of over 22%, it offers relief from anxiety, depression, fatigue, ADHD, migraines, mood swings, and physical pain. However, its lower CBD content makes it less suitable for conditions treated with CBD, such as epilepsy. \n\n Prepare for a creative and euphoric high with Amnesia Haze, accompanied by a delightful boost in mood and a tendency to induce laughter. Its taste is reminiscent of fresh, fruity hash, complemented by a sweet and earthy aroma with subtle hints of spicy pepper. The buds are light green with darker brown strands, generously coated in trichomes, providing a visually appealing appearance. \n\n While Amnesia Haze is more prevalent in parts of Europe, it can also be found in select dispensaries across the United States, including Colorado, California, Washington State, Oregon, and Michigan. It's a strain that can cause dry mouth and red eyes, and some users have reported occasional experiences of paranoia and dizziness. Embraced by cannabis enthusiasts, Amnesia Haze has also gained popularity in the beautiful region of British Columbia.",
@@ -492,7 +492,7 @@ export const products: Product[] = [
   {
     slug: 'amnesia-haze-01',
     name: 'Amnesia Haze',
-    price: 1000,
+    price: 999,
     dominance: 'Sativa',
     indica: '30',
     sativa: '70',
@@ -504,7 +504,7 @@ export const products: Product[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/04/2023',
-    quantity: 0,
+    quantity: 1,
     origin: 'Phuket',
     description:
       "Amnesia Haze is a unique sativa-dominant hybrid born from the crossbreeding of Jamaican and Laotian sativas with Afghan Hawaiian indica. With a sativa to indica ratio of 80:20, it's an ideal strain for daytime use and clear thinking. Boasting potent THC levels of over 22%, it offers relief from anxiety, depression, fatigue, ADHD, migraines, mood swings, and physical pain. However, its lower CBD content makes it less suitable for conditions treated with CBD, such as epilepsy. \n\n Prepare for a creative and euphoric high with Amnesia Haze, accompanied by a delightful boost in mood and a tendency to induce laughter. Its taste is reminiscent of fresh, fruity hash, complemented by a sweet and earthy aroma with subtle hints of spicy pepper. The buds are light green with darker brown strands, generously coated in trichomes, providing a visually appealing appearance. \n\n While Amnesia Haze is more prevalent in parts of Europe, it can also be found in select dispensaries across the United States, including Colorado, California, Washington State, Oregon, and Michigan. It's a strain that can cause dry mouth and red eyes, and some users have reported occasional experiences of paranoia and dizziness. Embraced by cannabis enthusiasts, Amnesia Haze has also gained popularity in the beautiful region of British Columbia.",
