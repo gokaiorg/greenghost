@@ -26,7 +26,7 @@ export const products: Product[] = [
   {
     slug: 'white-widow',
     name: 'White Widow',
-    price: 600,
+    price: 500,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -667,7 +667,7 @@ export const products: Product[] = [
   {
     slug: 'stardawg',
     name: 'Stardawg',
-    price: 600,
+    price: 400,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -900,7 +900,7 @@ export const products: Product[] = [
   {
     slug: 'purple-zkittlez',
     name: 'Purple Zkittlez',
-    price: 700,
+    price: 600,
     dominance: 'Indica',
     indica: '60',
     sativa: '40',
@@ -958,7 +958,7 @@ export const products: Product[] = [
   {
     slug: 'lemon-zkittlez',
     name: 'Lemon Zkittlez',
-    price: 400,
+    price: 1000,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -970,7 +970,7 @@ export const products: Product[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/06/2023',
-    quantity: 20,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Lemon Zkittlez is an extraordinary hybrid strain that brings together the best qualities of Sweet Zkittlez and Critical Plus. With its lineage rooted in the indica-dominant Sweet Zkittlez, Lemon ZZ offers a delightful combination of a sweet flavor profile and a deeply relaxing high. Perfect for those seeking a flavorful experience, Lemon ZZ entices the taste buds with its fruity and citrusy notes, leaving a pleasant aftertaste with every inhale. \n\n The genetic influence of Critical Plus adds a special touch to Lemon ZZ, enhancing its growth potential and yield. Critical Plus is renowned for its fast growth and abundant harvests, making it a favorite among cultivators. This blend of robust genetics and exceptional flavors makes Lemon ZZ an ideal choice for those who appreciate a sweet taste accompanied by a relaxing high. \n\n Indulge in the calming effects of Lemon ZZ as it washes over your body, melting away tension and promoting a sense of deep tranquility. Let its aromatic citrus and diesel undertones transport you to a state of pure bliss. Whether you're looking for a strain to unwind after a long day or to enhance social gatherings, Lemon ZZ is sure to deliver an enjoyable and memorable experience.",
