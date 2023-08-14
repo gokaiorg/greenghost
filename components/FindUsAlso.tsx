@@ -26,6 +26,17 @@ export const FindUsAlso = () => {
       >
         <Box m={4} color={'ghostVerse.green.base'}>
           <Link
+            title={'Find Us on Trip Advisor'}
+            href={
+              'https://www.tripadvisor.com.sg/Attraction_Review-g1215780-d26518105-Reviews-Green_Ghost-Karon_Phuket.html'
+            }
+            passHref
+          >
+            Trip Advisor
+          </Link>
+        </Box>
+        <Box m={4} color={'ghostVerse.green.base'}>
+          <Link
             title={'Find Us on Weed in th'}
             href={'https://weed.th/shop/fe835e3b-d043-4672-af43-8cc039aa013b'}
             passHref

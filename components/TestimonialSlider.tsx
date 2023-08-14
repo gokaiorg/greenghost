@@ -106,6 +106,206 @@ export const TestimonialSlider = () => {
                 marginBottom={2}
                 fontFamily={'CubicFive10'}
               >
+                MotniA
+              </Text>
+              <TestimonialStars />
+              <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
+                Good stuff, funny site, professional and friendly service!
+              </Text>
+              <Link
+                href={'https://g.co/kgs/WLLa43'}
+                title={'Read More Review on Google Map Place'}
+                passHref
+              >
+                <Text
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={{ base: 'xl' }}
+                  mt={4}
+                  fontFamily={'CubicFive10'}
+                >
+                  Read Review
+                </Text>
+              </Link>
+            </Box>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            display={'flex'}
+            my={'10'}
+            bgColor={'ghostVerse.dark.lighter'}
+            p={'5'}
+          >
+            <TestimonialPfp />
+            <Box
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              fontWeight={'black'}
+              color={'white'}
+              w={'80%'}
+              fontFamily={'vt323'}
+              px={4}
+              backdropFilter={'blur(3px)'}
+            >
+              <Text
+                as={'h2'}
+                fontSize={{ base: 'xl' }}
+                marginBottom={2}
+                fontFamily={'CubicFive10'}
+              >
+                Aptem Yeh
+              </Text>
+              <TestimonialStars />
+              <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
+                This store can claim to be the best in Phuket, in terms of
+                quality of goods and service! If you want to find a really
+                high-quality staff, and most importantly, clean, grown according
+                to the right technology - you are here. Believe me, this is a
+                big problem for Phuket...
+              </Text>
+              <Link
+                href={'https://g.co/kgs/hjf9EP'}
+                title={'Read More Review on Google Map Place'}
+                passHref
+              >
+                <Text
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={{ base: 'xl' }}
+                  mt={4}
+                  fontFamily={'CubicFive10'}
+                >
+                  Read Review
+                </Text>
+              </Link>
+            </Box>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            display={'flex'}
+            my={'10'}
+            bgColor={'ghostVerse.dark.lighter'}
+            p={'5'}
+          >
+            <TestimonialPfp />
+            <Box
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              fontWeight={'black'}
+              color={'white'}
+              w={'80%'}
+              fontFamily={'vt323'}
+              px={4}
+              backdropFilter={'blur(3px)'}
+            >
+              <Text
+                as={'h2'}
+                fontSize={{ base: 'xl' }}
+                marginBottom={2}
+                fontFamily={'CubicFive10'}
+              >
+                Raoul Duke
+              </Text>
+              <TestimonialStars />
+              <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
+                Je conseil ce coffee a tous les connaisseurs
+              </Text>
+              <Link
+                href={'https://g.co/kgs/bkTZkp'}
+                title={'Read More Review on Google Map Place'}
+                passHref
+              >
+                <Text
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={{ base: 'xl' }}
+                  mt={4}
+                  fontFamily={'CubicFive10'}
+                >
+                  Read Review
+                </Text>
+              </Link>
+            </Box>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            display={'flex'}
+            my={'10'}
+            bgColor={'ghostVerse.dark.lighter'}
+            p={'5'}
+          >
+            <TestimonialPfp />
+            <Box
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              fontWeight={'black'}
+              color={'white'}
+              w={'80%'}
+              fontFamily={'vt323'}
+              px={4}
+              backdropFilter={'blur(3px)'}
+            >
+              <Text
+                as={'h2'}
+                fontSize={{ base: 'xl' }}
+                marginBottom={2}
+                fontFamily={'CubicFive10'}
+              >
+                Yanis Mostafa
+              </Text>
+              <TestimonialStars />
+              <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
+                Bonne qualite et livraison parfaite
+              </Text>
+              <Link
+                href={'https://g.co/kgs/P6zeHE'}
+                title={'Read More Review on Google Map Place'}
+                passHref
+              >
+                <Text
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={{ base: 'xl' }}
+                  mt={4}
+                  fontFamily={'CubicFive10'}
+                >
+                  Read Review
+                </Text>
+              </Link>
+            </Box>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            display={'flex'}
+            my={'10'}
+            bgColor={'ghostVerse.dark.lighter'}
+            p={'5'}
+          >
+            <TestimonialPfp />
+            <Box
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
+              fontWeight={'black'}
+              color={'white'}
+              w={'80%'}
+              fontFamily={'vt323'}
+              px={4}
+              backdropFilter={'blur(3px)'}
+            >
+              <Text
+                as={'h2'}
+                fontSize={{ base: 'xl' }}
+                marginBottom={2}
+                fontFamily={'CubicFive10'}
+              >
                 Aric Sangchat
               </Text>
               <TestimonialStars />
