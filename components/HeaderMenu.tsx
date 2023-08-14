@@ -141,12 +141,12 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
         <br />
         Discover the{' '}
         <Link
-          href="/weed-shop/stardawg"
-          title="Stardawg only 400 THB this week!"
+          href="/weed-shop/white-widow"
+          title="White Widow only 400 THB this week!"
           passHref
         >
           <Box as={'span'} color={'white'}>
-            Stardawg
+            White Widow
           </Box>
         </Link>{' '}
         for only 400 THB.
