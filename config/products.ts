@@ -24,6 +24,36 @@ export type Product = {
 
 export const products: Product[] = [
   {
+    slug: 'buddy-critical',
+    name: 'Buddy Critical',
+    price: 400,
+    dominance: 'Indica',
+    indica: '60',
+    sativa: '40',
+    THC: '20',
+    CBD: 'undefined',
+    effects: 'Euphoric, Relaxing, Mediativ',
+    relieves: 'Stress, Pain, Lack of appetite',
+    grower: 'Buddy Bud Weed',
+    growerSlug: '/buddy-bud-weed',
+    environment: 'Organic Indoor',
+    harvest: '12/06/2023',
+    quantity: 30,
+    origin: 'Phuket',
+    description:
+      "Buddy Critical is a remarkable hybrid strain that combines the best traits of its parent strains, Critical Plus and Bubble Gum. Critical Plus, a cross between Skunk and Big Bud, is known for its fast growth and high yields. It has gained recognition in cannabis competitions, including winning the first Highlife Cup in Barcelona. Buddy Critical inherits the pungent and citrusy flavors of Critical Plus, accompanied by a subtle diesel and nutty undertone. With the addition of Bubble Gum genetics, this strain offers a relaxing and pain-relieving experience while keeping the mind pleasantly stimulated. \n\n Bred by Dinafem Seeds, Buddy Critical exemplifies the expertise and dedication of its breeders. The careful selection and combination of Critical Plus and Bubble Gum have resulted in a strain that offers a well-balanced and enjoyable experience. The body-numbing effects of Bubble Gum are complemented by the uplifting and euphoric qualities of Critical Plus. This combination makes Buddy Critical a popular choice among cannabis enthusiasts seeking relaxation and pain relief without sacrificing mental clarity. \n\n The precise genetic lineage of Bubble Gum, one of Buddy Critical's parent strains, remains somewhat mysterious. It is believed to be derived from an unknown cross of Indiana Bubble Gum. What is known, however, is the exceptional body-numbing high that Bubble Gum delivers. Users often experience a sense of pain relief and relaxation, accompanied by a gentle mental stimulation. Buddy Critical takes these desirable qualities and enhances them with the addition of Critical Plus genetics, resulting in a well-rounded and satisfying cannabis strain that appeals to a wide range of users.",
+    descSeo:
+      'Buddy Critical is a remarkable hybrid strain that combines the best traits of its parent strains, Critical Plus and Bubble Gum. Critical Plus, a cross between Skunk and Big Bud, is known for its fast growth and high yields. It has gained recognition in cannabis competitions, including winning the first Highlife Cup in Barcelona. Buddy Critical inherits the pungent and citrusy flavors of Critical Plus, accompanied by a subtle diesel and nutty undertone. With the addition of Bubble Gum genetics, this strain offers a relaxing and pain-relieving experience while keeping the mind pleasantly stimulated.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-buddy-critical-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-buddy-critical-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-buddy-critical-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-buddy-critical-bud-02.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Buddy Critical',
+    source: 'undefined',
+  },
+  {
     slug: 'bruce-banner',
     name: 'Bruce Banner',
     price: 600,
@@ -113,7 +143,7 @@ export const products: Product[] = [
   {
     slug: 'white-widow',
     name: 'White Widow',
-    price: 400,
+    price: 500,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -868,36 +898,6 @@ export const products: Product[] = [
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Sorbet #4',
     source: 'https://www.leafly.com/strains/sorbet-4',
-  },
-  {
-    slug: 'buddy-critical',
-    name: 'Buddy Critical',
-    price: 500,
-    dominance: 'Indica',
-    indica: '60',
-    sativa: '40',
-    THC: '20',
-    CBD: 'undefined',
-    effects: 'Euphoric, Relaxing, Mediativ',
-    relieves: 'Stress, Pain, Lack of appetite',
-    grower: 'Buddy Bud Weed',
-    growerSlug: '/buddy-bud-weed',
-    environment: 'Organic Indoor',
-    harvest: '12/06/2023',
-    quantity: 30,
-    origin: 'Phuket',
-    description:
-      "Buddy Critical is a remarkable hybrid strain that combines the best traits of its parent strains, Critical Plus and Bubble Gum. Critical Plus, a cross between Skunk and Big Bud, is known for its fast growth and high yields. It has gained recognition in cannabis competitions, including winning the first Highlife Cup in Barcelona. Buddy Critical inherits the pungent and citrusy flavors of Critical Plus, accompanied by a subtle diesel and nutty undertone. With the addition of Bubble Gum genetics, this strain offers a relaxing and pain-relieving experience while keeping the mind pleasantly stimulated. \n\n Bred by Dinafem Seeds, Buddy Critical exemplifies the expertise and dedication of its breeders. The careful selection and combination of Critical Plus and Bubble Gum have resulted in a strain that offers a well-balanced and enjoyable experience. The body-numbing effects of Bubble Gum are complemented by the uplifting and euphoric qualities of Critical Plus. This combination makes Buddy Critical a popular choice among cannabis enthusiasts seeking relaxation and pain relief without sacrificing mental clarity. \n\n The precise genetic lineage of Bubble Gum, one of Buddy Critical's parent strains, remains somewhat mysterious. It is believed to be derived from an unknown cross of Indiana Bubble Gum. What is known, however, is the exceptional body-numbing high that Bubble Gum delivers. Users often experience a sense of pain relief and relaxation, accompanied by a gentle mental stimulation. Buddy Critical takes these desirable qualities and enhances them with the addition of Critical Plus genetics, resulting in a well-rounded and satisfying cannabis strain that appeals to a wide range of users.",
-    descSeo:
-      'Buddy Critical is a remarkable hybrid strain that combines the best traits of its parent strains, Critical Plus and Bubble Gum. Critical Plus, a cross between Skunk and Big Bud, is known for its fast growth and high yields. It has gained recognition in cannabis competitions, including winning the first Highlife Cup in Barcelona. Buddy Critical inherits the pungent and citrusy flavors of Critical Plus, accompanied by a subtle diesel and nutty undertone. With the addition of Bubble Gum genetics, this strain offers a relaxing and pain-relieving experience while keeping the mind pleasantly stimulated.',
-    images: [
-      '/media/green-ghost-degen-weed-shop-strain-buddy-critical-bud-01.webp',
-      '/media/green-ghost-degen-weed-shop-strain-buddy-critical-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-buddy-critical-qr-code.webp',
-      '/media/green-ghost-degen-weed-shop-strain-buddy-critical-bud-02.webp',
-    ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Buddy Critical',
-    source: 'undefined',
   },
   {
     slug: 'bubble-mango',
