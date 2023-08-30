@@ -76,7 +76,7 @@ export const products: Product[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-hulkberry-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-hulkberry-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-hulkberry-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-hulkberry-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Hulkberry',
     source:
