@@ -4,11 +4,11 @@ import { products } from '../config/products';
 import { BudItem } from './BudItem';
 
 type DominanceOption = 'All' | 'Sativa' | 'Indica' | 'Hybrid';
-type GrowerOption =
-  | 'All'
-  | 'My Weed Solutions'
-  | 'Buddy Bud Weed'
-  | 'Cosmic Temple Vibes';
+type GrowerOption = 'All';
+('Buddy Bud Weed');
+('Cosmic Temple Vibes');
+('My Weed Solutions');
+('Ohigho');
 
 export const Bud = () => {
   const [sortBy, setSortBy] = useState('priceLowToHigh');
@@ -158,9 +158,10 @@ export const Bud = () => {
             w={'fit-content'}
           >
             <option value="All">All Growers</option>
-            <option value="My Weed Solutions">My Weed Solutions</option>
             <option value="Buddy Bud Weed">Buddy Bud Weed</option>
             <option value="Cosmic Temple Vibes">Cosmic Temple Vibes</option>
+            <option value="My Weed Solutions">My Weed Solutions</option>
+            <option value="Ohigho">Ohigho</option>
           </Select>
         </Box>
         <Checkbox
