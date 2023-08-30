@@ -26,6 +26,17 @@ export const FindUsAlso = () => {
       >
         <Box m={4} color={'ghostVerse.green.base'}>
           <Link
+            title={'Find Us on Trip Advisor'}
+            href={
+              'https://www.tripadvisor.com.sg/Attraction_Review-g1215780-d26518105-Reviews-Green_Ghost-Karon_Phuket.html'
+            }
+            passHref
+          >
+            Trip Advisor
+          </Link>
+        </Box>
+        <Box m={4} color={'ghostVerse.green.base'}>
+          <Link
             title={'Find Us on Weed in th'}
             href={'https://weed.th/shop/fe835e3b-d043-4672-af43-8cc039aa013b'}
             passHref
@@ -58,6 +69,28 @@ export const FindUsAlso = () => {
             passHref
           >
             Weeddee
+          </Link>
+        </Box>
+        <Box m={4} color={'ghostVerse.green.base'}>
+          <Link
+            title={'Find Us on Smoking Skunk'}
+            href={
+              'https://smokingskunk.com/weed-in-thailand/green-ghost-degen-weed-shop-karon/'
+            }
+            passHref
+          >
+            Smoking Skunk
+          </Link>
+        </Box>
+        <Box m={4} color={'ghostVerse.green.base'}>
+          <Link
+            title={'Find Us on ThaiWeedGuide'}
+            href={
+              'https://thaiweedguide.com/directory-dispensaries/listing/green-ghost/'
+            }
+            passHref
+          >
+            ThaiWeedGuide
           </Link>
         </Box>
         <Box m={4} color={'ghostVerse.green.base'}>

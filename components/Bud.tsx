@@ -164,8 +164,11 @@ export const Bud = () => {
           </Select>
         </Box>
         <Checkbox
-          ml={{ base: '0', lg: 'auto' }}
+          ml={{ base: '4', lg: 'auto' }}
+          my={{ base: '2', lg: '0' }}
+          pl={4}
           colorScheme="green"
+          display={'flex'}
           checked={showUnavailable}
           onChange={handleShowUnavailableChange}
           _checked={{ color: 'ghostVerse.green.base' }}
