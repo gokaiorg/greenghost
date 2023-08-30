@@ -100,6 +100,14 @@ export const SocialMediaIcons = () => {
         </Box>
         <Box bgColor={'black'} borderRadius={'100%'}>
           <SocialIcon
+            url="https://www.linkedin.com/company/green-ghost"
+            bgColor={'#4cfd27'}
+            style={{ width: 60, height: 60 }}
+            title="Join Us on Linkedin"
+          />
+        </Box>
+        <Box bgColor={'black'} borderRadius={'100%'}>
+          <SocialIcon
             url="https://medium.com/@GokaiLabs"
             bgColor={'#4cfd27'}
             style={{ width: 60, height: 60 }}

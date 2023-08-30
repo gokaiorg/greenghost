@@ -60,7 +60,7 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
               flexDirection={'column'}
               marginRight={1}
             >
-              {degen.price !== 666 && (
+              {degen.price !== 999 && (
                 <Box
                   marginLeft={'auto'}
                   color={'ghostVerse.green.base'}

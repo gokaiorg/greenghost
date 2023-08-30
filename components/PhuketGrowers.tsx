@@ -106,6 +106,40 @@ export const PhuketGrowers = () => {
           </Box>
         </Link>
       </Box>
+      <Box width={{ base: '50%', lg: '25%' }}>
+        <Link href="/ohigho" title="Ohigho" passHref>
+          <Box
+            display={'flex'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            textAlign={'center'}
+            flexDirection={'column'}
+            color={'ghostVerse.green.base'}
+            mx={1}
+            mb={2}
+            p={4}
+            borderColor={'ghostVerse.grey.base'}
+            borderWidth={1}
+            transition={'all .3s'}
+            _hover={{
+              bgColor: 'ghostVerse.dark.lighter',
+              borderColor: 'ghostVerse.green.base',
+            }}
+          >
+            <Box
+              as={'img'}
+              src="/media/green-ghost-grower-ohigho.png"
+              width="80px"
+              height="80px"
+              maxW={'inherit'}
+              mx={'auto'}
+              alt="Green Ghost - Ohigho"
+              title="Green Ghost - Ohigho"
+            />
+            Ohigho
+          </Box>
+        </Link>
+      </Box>
     </Box>
   );
 };

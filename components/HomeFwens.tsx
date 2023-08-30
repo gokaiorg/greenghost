@@ -167,6 +167,40 @@ export const HomeFwens = () => {
           </Box>
         </Link>
       </Box>
+      <Box width={{ base: '100%', lg: '25%' }} mb={'4'} minHeight={'170px'}>
+        <Link href={'/ohigho'} passHref title={'Green Ghost Fwen - Ohigho'}>
+          <Box
+            h={'100%'}
+            fontSize={{ base: 'xl' }}
+            color={'ghostVerse.color2.darker'}
+            fontFamily={'CubicFive12'}
+            mx={2}
+            textAlign={'center'}
+            p={4}
+            display={'flex'}
+            justifyContent={'center'}
+            flexDirection={'column'}
+            alignItems={'center'}
+            transition={'all .3s'}
+            _hover={{
+              bgColor: 'ghostVerse.dark.lighter',
+              color: 'ghostVerse.green.base',
+            }}
+          >
+            <Box w={'100px'}>
+              <Image
+                src={'/media/green-ghost-grower-ohigho.png'}
+                width={253}
+                height={253}
+                alt={'Green Ghost Grower - Ohigho.'}
+              />
+            </Box>
+            <Box as={'h2'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
+              Ohigho
+            </Box>
+          </Box>
+        </Link>
+      </Box>
     </Box>
   );
 };

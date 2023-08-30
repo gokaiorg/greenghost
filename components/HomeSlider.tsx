@@ -59,74 +59,6 @@ export const HomeSlider = () => {
           backdropFilter={'blur(3px)'}
         >
           <Text
-            as={'h2'}
-            fontSize={{ base: '3xl', md: '6xl' }}
-            marginBottom={4}
-            fontFamily={'CubicFive12'}
-            color={'ghostVerse.green.base'}
-          >
-            NEW KARON WEED SHOP
-          </Text>
-          <Text as={'p'} fontSize={{ base: '3xl', md: '4xl' }}>
-            We are thrilled to unveil our newest location to the Green Ghost
-            family right here in the heart of Karon, Phuket!
-          </Text>
-          <Link
-            href="https://goo.gl/maps/GJU2GmYibHxEohqm8"
-            title={'Degen Weed Shop in Karon'}
-            passHref
-          >
-            <Text
-              display={'inline-flex'}
-              color={'white'}
-              borderColor={'white'}
-              fontSize={{ base: '3xl', md: '4xl' }}
-              borderWidth={1}
-              bgColor="transparent"
-              backdropFilter={'blur(3px)'}
-              p={6}
-              mt={10}
-              mx={'auto'}
-              fontFamily={'CubicFive10'}
-              _hover={{
-                borderColor: 'ghostVerse.green.base',
-                color: 'ghostVerse.green.base',
-              }}
-            >
-              Go there now
-            </Text>
-          </Link>
-        </Box>
-      </SwiperSlide>
-      <SwiperSlide>
-        <Box position={'relative'} w="100%" h={{ base: '600px' }}>
-          <Image
-            src="/media/green-ghost-weed-shop-phuket.webp"
-            fill
-            style={{ objectFit: 'cover' }}
-            alt={'Green Ghost Weed Shop Phuket'}
-            priority={true}
-          />
-        </Box>
-        <Box
-          position={'absolute'}
-          top={0}
-          bottom={0}
-          left={0}
-          right={0}
-          margin="auto"
-          textAlign={'center'}
-          display={'flex'}
-          flexDirection={'column'}
-          justifyContent={'center'}
-          fontWeight={'black'}
-          color={'white'}
-          fontFamily={'vt323'}
-          px={10}
-          bgColor={'ghostVerse.dark.ultralight'}
-          backdropFilter={'blur(3px)'}
-        >
-          <Text
             as={'h1'}
             fontSize={{ base: '3xl', md: '6xl' }}
             marginBottom={4}
@@ -158,6 +90,74 @@ export const HomeSlider = () => {
               }}
             >
               Discover
+            </Text>
+          </Link>
+        </Box>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Box position={'relative'} w="100%" h={{ base: '600px' }}>
+          <Image
+            src="/media/green-ghost-weed-shop-karon.webp"
+            fill
+            style={{ objectFit: 'cover' }}
+            alt={'Green Ghost Weed Shop Kata-Karon'}
+            priority={true}
+          />
+        </Box>
+        <Box
+          position={'absolute'}
+          top={0}
+          bottom={0}
+          left={0}
+          right={0}
+          margin="auto"
+          textAlign={'center'}
+          display={'flex'}
+          flexDirection={'column'}
+          justifyContent={'center'}
+          fontWeight={'black'}
+          color={'white'}
+          fontFamily={'vt323'}
+          px={10}
+          bgColor={'ghostVerse.dark.ultralight'}
+          backdropFilter={'blur(3px)'}
+        >
+          <Text
+            as={'h2'}
+            fontSize={{ base: '3xl', md: '6xl' }}
+            marginBottom={4}
+            fontFamily={'CubicFive12'}
+            color={'ghostVerse.green.base'}
+          >
+            NEW KARON WEED SHOP
+          </Text>
+          <Text as={'p'} fontSize={{ base: '3xl', md: '4xl' }}>
+            We are thrilled to unveil our newest location to the Green Ghost
+            family right here in the heart of Karon, Phuket!
+          </Text>
+          <Link
+            href="https://goo.gl/maps/2mrscgVuBc73KRot8"
+            title={'Degen Weed Shop in Karon'}
+            passHref
+          >
+            <Text
+              display={'inline-flex'}
+              color={'white'}
+              borderColor={'white'}
+              fontSize={{ base: '3xl', md: '4xl' }}
+              borderWidth={1}
+              bgColor="transparent"
+              backdropFilter={'blur(3px)'}
+              p={6}
+              mt={10}
+              mx={'auto'}
+              fontFamily={'CubicFive10'}
+              _hover={{
+                borderColor: 'ghostVerse.green.base',
+                color: 'ghostVerse.green.base',
+              }}
+            >
+              Visit us now
             </Text>
           </Link>
         </Box>

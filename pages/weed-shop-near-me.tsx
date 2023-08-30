@@ -104,7 +104,7 @@ const WeedShopNearMe: NextPage = () => {
               <Box display={'flex'} alignItems={'center'}>
                 <IconClock />
                 <Box ml={2} mb={1}>
-                  Monday/Sunday 9h-12h & 18h-00h.
+                  Monday/Sunday 14h-00h.
                 </Box>
               </Box>
             </Box>
@@ -118,7 +118,7 @@ const WeedShopNearMe: NextPage = () => {
               }}
             >
               <Link
-                href="https://goo.gl/maps/GJU2GmYibHxEohqm8"
+                href="https://goo.gl/maps/2mrscgVuBc73KRot8"
                 title="Green Ghost - Degen Weed Shop - Map Karon"
                 passHref
               >
@@ -126,13 +126,13 @@ const WeedShopNearMe: NextPage = () => {
                 452 Patak Road, Karon, Mueang Phuket District, Phuket 83100
               </Link>
             </Text>
-            {/* <Link
-              href="https://g.page/r/CdEZf4I4iGn8EBE/review"
+            <Link
+              href="https://g.page/r/CcPCrFf7RfRNEBM/review"
               title="Green Ghost - Degen Weed Shop - Add a review in Karon"
               passHref
             >
               <IconsReview />
-            </Link> */}
+            </Link>
           </Box>
           <Box
             width={{ base: '100%', lg: 'auto' }}
@@ -140,7 +140,7 @@ const WeedShopNearMe: NextPage = () => {
             mt={8}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3952.456807136641!2d98.298599!3d7.847164999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNTAnNDkuOCJOIDk4wrAxNyc1NS4wIkU!5e0!3m2!1sen!2sth!4v1688274621435!5m2!1sen!2sth"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.456934535779!2d98.2985733!3d7.847151599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305025d1fcbc13ff%3A0x4df445fb57acc2c3!2sGreen%20Ghost%20%7C%20Degen%20Weed%20Shop%20Karon!5e0!3m2!1sen!2sth!4v1688547648541!5m2!1sen!2sth"
               width="350"
               height="250"
               style={{ border: 0 }}
@@ -276,7 +276,7 @@ const WeedShopNearMe: NextPage = () => {
               <Box display={'flex'} alignItems={'center'}>
                 <IconClock />
                 <Box ml={2} mb={1}>
-                  Monday/Sunday 10h-22h. Close on Saturday.
+                  Monday/Sunday 16h-00h. Close on Saturday.
                 </Box>
               </Box>
             </Box>

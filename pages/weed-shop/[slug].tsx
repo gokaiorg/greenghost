@@ -2,14 +2,14 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 
 import { useRouter } from 'next/router';
-import { getProducts, Product } from '../config/products';
+import { getProducts, Product } from '../../config/products';
 
-import { MainLayout } from '../components/MainLayout';
-import { HeaderMenu } from '../components/HeaderMenu';
-import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
-import { HomeSectionTitle } from '../components/HomeSectionTitle';
+import { MainLayout } from '../../components/MainLayout';
+import { HeaderMenu } from '../../components/HeaderMenu';
+import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
+import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import { Box } from '@chakra-ui/react';
-import { BuyNowLink } from '../components/BuyNowLink';
+import { BuyNowLink } from '../../components/BuyNowLink';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
 
@@ -246,7 +246,7 @@ export default function ProductPage({ product }: ProductPageProps) {
             marginLeft={'auto'}
             fontSize={'2xl'}
           >
-            {product.quantity !== 0 && product.price !== 666 && (
+            {product.quantity !== 0 && product.price !== 999 && (
               <>
                 <Box
                   display={'flex'}
@@ -323,25 +323,10 @@ export default function ProductPage({ product }: ProductPageProps) {
                     </Box>
                   </Box>
                 </Link>
-                <Link
-                  href={'/contact-us-buy-weed-online'}
-                  title={'Contact Us to buy weed online'}
-                  passHref
-                >
-                  <Box
-                    display={'flex'}
-                    justifyContent="end"
-                    mb={2}
-                    fontSize={'xl'}
-                    color={'ghostVerse.green.base'}
-                  >
-                    Wholesale
-                  </Box>
-                </Link>
               </>
             )}
 
-            {product.price === 666 && (
+            {product.price === 999 && (
               <Link
                 href="/crypto-weed-shop-relax-and-earn"
                 title="Crypto Weed Shop Relax And Earn"
@@ -363,7 +348,7 @@ export default function ProductPage({ product }: ProductPageProps) {
             )}
           </Box>
         </Box>
-        {product.price !== 666 && product.grower !== 'Unknown' && (
+        {product.price !== 999 && product.grower !== 'Unknown' && (
           <>
             <Box
               display={'flex'}
