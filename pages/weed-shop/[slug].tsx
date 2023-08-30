@@ -323,21 +323,6 @@ export default function ProductPage({ product }: ProductPageProps) {
                     </Box>
                   </Box>
                 </Link>
-                <Link
-                  href={'/contact-us-buy-weed-online'}
-                  title={'Contact Us to buy weed online'}
-                  passHref
-                >
-                  <Box
-                    display={'flex'}
-                    justifyContent="end"
-                    mb={2}
-                    fontSize={'xl'}
-                    color={'ghostVerse.green.base'}
-                  >
-                    Wholesale
-                  </Box>
-                </Link>
               </>
             )}
 
