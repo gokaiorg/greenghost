@@ -50,7 +50,7 @@ export const degens: Degen[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-degen-pure-kief-product-01.webp',
       '/media/green-ghost-degen-weed-shop-degen-pure-kief-cover.webp',
-      '/media/green-ghost-degen-weed-shop-degen-pure-kief-cover.webp',
+      '/media/green-ghost-degen-weed-shop-degen-pure-kief-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Pure Kief',
   },
