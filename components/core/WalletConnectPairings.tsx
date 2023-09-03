@@ -34,11 +34,21 @@ export const WalletConnectPairings: FC<WalletConnectPairingsProps> = ({
       )}
       {pairings.map((pairing) => (
         <Box
-          bgColor="elvenTools.white"
-          py={2}
-          px={4}
-          pr={8}
-          borderRadius="md"
+          color={'ghostVerse.green.base'}
+          borderColor={'ghostVerse.green.base'}
+          fontSize={{ base: 'xl' }}
+          borderWidth={1}
+          bgColor="transparent"
+          backdropFilter={'blur(3px)'}
+          p={4}
+          w={'100%'}
+          mx={'auto'}
+          fontFamily={'CubicFive10'}
+          _hover={{
+            borderColor: 'ghostVerse.green.base',
+            color: 'black',
+            backgroundColor: 'ghostVerse.green.base',
+          }}
           key={pairing.topic}
           cursor="pointer"
           onClick={handleLogin(pairing.topic)}
@@ -50,19 +60,15 @@ export const WalletConnectPairings: FC<WalletConnectPairingsProps> = ({
             top={2}
             right={2}
             aria-label="remove-pairing"
-            color="elvenTools.dark.base"
+            color="black"
             h={6}
             minW={6}
-            icon={<CloseIcon boxSize={2} />}
+            icon={<CloseIcon borderRadius={0} boxSize={2} />}
             onClick={handleRemove(pairing.topic)}
           />
-          <Text fontSize="lg" color="elvenTools.dark.base">
-            {pairing.peerMetadata?.name}
-          </Text>
+          <Text fontSize="lg">{pairing.peerMetadata?.name}</Text>
           {pairing.peerMetadata?.url ? (
-            <Text fontSize="xs" color="elvenTools.dark.base">
-              ({pairing.peerMetadata.url})
-            </Text>
+            <Text fontSize="xs">({pairing.peerMetadata.url})</Text>
           ) : null}
         </Box>
       ))}

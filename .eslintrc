@@ -1,5 +1,6 @@
 {
   "extends": ["next", "prettier", "plugin:@typescript-eslint/recommended"],
   "plugins": ["@typescript-eslint"],
-  "parser": "@typescript-eslint/parser"
+  "parser": "@typescript-eslint/parser",
+  "ignorePatterns": ["sitemap.tsx"]
 }

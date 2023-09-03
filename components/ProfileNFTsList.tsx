@@ -1,6 +1,6 @@
-import { Box, Stack, Spinner, Card, CardBody, Text } from '@chakra-ui/react';
+import { Box, Stack, Spinner, Text } from '@chakra-ui/react';
 import Link from 'next/link';
-import { useAccount, useApiCall, SCQueryType, useConfig } from '@useelven/core';
+import { useAccount, useApiCall, SCQueryType } from '@useelven/core';
 import { NFT } from '../types/nfts';
 import { useElvenScQuery } from '../hooks/useElvenScQuery';
 // import { NftImageHelper } from './NftImageHelper';
@@ -9,7 +9,7 @@ const SIZE_PER_PAGE = 10000;
 
 export const ProfileNFTsList = () => {
   const { address } = useAccount();
-  const { explorerAddress } = useConfig();
+  // const { explorerAddress } = useConfig();
 
   const { data: collectionTicker, isLoading: collectionTickerLoading } =
     useElvenScQuery<number>({
@@ -75,6 +75,7 @@ export const ProfileNFTsList = () => {
           fontFamily={'CubicFive12'}
           color={'ghostVerse.green.base'}
           textAlign={'center'}
+          w={'100%'}
         >
           You are a member
         </Box>

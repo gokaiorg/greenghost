@@ -51,50 +51,6 @@ export const LoginComponent = memo(() => {
 
   return (
     <>
-      <Stack spacing={4} direction="column" align="center">
-        {!isLoggedIn && (
-          <>
-            <ActionButton
-              isFullWidth
-              onClick={handleLogin(LoginMethodsEnum.walletconnect)}
-            >
-              xPortal App
-            </ActionButton>
-            <ActionButton
-              isFullWidth
-              onClick={handleLogin(LoginMethodsEnum.wallet)}
-            >
-              Web Wallet
-            </ActionButton>
-            <ActionButton
-              isFullWidth
-              onClick={handleLogin(LoginMethodsEnum.extension)}
-            >
-              Browser Extension
-            </ActionButton>
-            <ActionButton isFullWidth onClick={handleLedgerAccountsList}>
-              Ledger
-            </ActionButton>
-            <Box
-              fontSize={{ base: '3xl' }}
-              textAlign={'center'}
-              fontFamily={'vt323'}
-            >
-              No wallet yet?
-              <br />{' '}
-              <Link
-                href="/install-xportal-app"
-                title="Install xPortal App"
-                passHref
-              >
-                <Box as={'span'} color={'ghostVerse.green.base'}>
-                  Install xPortal App
-                </Box>
-              </Link>
-            </Box>
-          </>
-        )}
-      </Stack>
       {loginMethod === LoginMethodsEnum.walletconnect && walletConnectUri && (
         <Box mt={5}>
           <WalletConnectQRCode uri={walletConnectUri} />
@@ -119,6 +75,52 @@ export const LoginComponent = memo(() => {
             handleLogin={handleLogin}
           />
         </>
+      )}
+      {!loginMethod && (
+        <Stack spacing={4} mt={4} direction="column" align="center">
+          {!isLoggedIn && (
+            <>
+              <ActionButton
+                isFullWidth
+                onClick={handleLogin(LoginMethodsEnum.walletconnect)}
+              >
+                xPortal App
+              </ActionButton>
+              <ActionButton
+                isFullWidth
+                onClick={handleLogin(LoginMethodsEnum.wallet)}
+              >
+                Web Wallet
+              </ActionButton>
+              <ActionButton
+                isFullWidth
+                onClick={handleLogin(LoginMethodsEnum.extension)}
+              >
+                Browser Extension
+              </ActionButton>
+              <ActionButton isFullWidth onClick={handleLedgerAccountsList}>
+                Ledger
+              </ActionButton>
+              <Box
+                fontSize={{ base: '3xl' }}
+                textAlign={'center'}
+                fontFamily={'vt323'}
+              >
+                No wallet yet?
+                <br />{' '}
+                <Link
+                  href="/install-xportal-app"
+                  title="Install xPortal App"
+                  passHref
+                >
+                  <Box as={'span'} color={'ghostVerse.green.base'}>
+                    Install xPortal App
+                  </Box>
+                </Link>
+              </Box>
+            </>
+          )}
+        </Stack>
       )}
     </>
   );

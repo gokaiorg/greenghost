@@ -17,9 +17,8 @@ import { FC } from 'react';
 import { LoginComponent } from './LoginComponent';
 import { useEffectOnlyOnUpdate } from '../../hooks/useEffectOnlyOnUpdate';
 import { getSigningDeviceName } from '../../utils/getSigningDeviceName';
-import { useLogin, useLogout, useLoginInfo } from '@useelven/core';
+import { useLogin, useLoginInfo } from '@useelven/core';
 import { IconLogin } from '../IconLogin';
-import Link from 'next/link';
 
 interface LoginModalButtonProps {
   onClose?: () => void;
@@ -36,7 +35,7 @@ export const LoginModalButton: FC<LoginModalButtonProps> = ({
 }) => {
   const { isLoggedIn, isLoggingIn, setLoggingInState } = useLogin();
   const { loginMethod } = useLoginInfo();
-  const { logout } = useLogout();
+  // const { logout } = useLogout();
   const {
     isOpen: opened,
     onOpen: open,

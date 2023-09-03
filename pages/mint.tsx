@@ -18,7 +18,7 @@ const Mint: NextPage = () => {
         mt={{ base: 8, xl: 12, '2xl': 24 }}
       >
         <MintHero />
-        {/* <HeroImage /> */}
+        <HeroImage />
       </Box>
     </MainLayout>
   );

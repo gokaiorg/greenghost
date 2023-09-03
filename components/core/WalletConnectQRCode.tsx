@@ -34,11 +34,6 @@ export const WalletConnectQRCode: FunctionComponent<
   return (
     <Box>
       <Box
-        sx={{
-          svg: {
-            borderRadius: 'xl',
-          },
-        }}
         dangerouslySetInnerHTML={{
           __html: qrCodeSvg,
         }}
@@ -46,17 +41,21 @@ export const WalletConnectQRCode: FunctionComponent<
       {mobile ? (
         <Flex justifyContent="center">
           <Box
-            width="100%"
-            textAlign="center"
-            color="elvenTools.white"
-            borderColor="elvenTools.color2.base"
-            borderWidth={2}
-            borderRadius="lg"
-            py={2}
-            px={6}
-            mt={6}
-            fontWeight="normal"
-            _hover={{ bg: 'elvenTools.color2.darker' }}
+            color={'ghostVerse.green.base'}
+            borderColor={'ghostVerse.green.base'}
+            fontSize={{ base: 'xl' }}
+            borderWidth={1}
+            bgColor="transparent"
+            backdropFilter={'blur(3px)'}
+            p={4}
+            mx={'auto'}
+            mt={10}
+            fontFamily={'CubicFive10'}
+            _hover={{
+              borderColor: 'ghostVerse.green.base',
+              color: 'black',
+              backgroundColor: 'ghostVerse.green.base',
+            }}
             transition="background-color .3s"
             as="a"
             href={`${walletConnectDeepLink}?wallet-connect=${encodeURIComponent(
