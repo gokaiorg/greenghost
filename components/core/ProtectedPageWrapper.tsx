@@ -1,7 +1,7 @@
 import { useEffect, PropsWithChildren, FC } from 'react';
 import { Spinner, Stack } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-import { useLogin } from '../../hooks/auth/useLogin';
+import { useLogin } from '@useelven/core';
 
 interface ProtectedPageWrapper {
   redirectPath?: string;
@@ -27,8 +27,8 @@ export const ProtectedPageWrapper: FC<
         height="100vh"
         flex={1}
         direction="row"
-        alignItems={'center'}
-        justifyContent={'center'}
+        alignItems="center"
+        justifyContent="center"
       >
         <Spinner size="xl" />
       </Stack>

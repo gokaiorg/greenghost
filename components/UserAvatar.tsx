@@ -1,7 +1,8 @@
-import { Avatar, Text } from '@chakra-ui/react';
+import { Avatar } from '@chakra-ui/react';
 import { Tooltip } from '@chakra-ui/react';
-import { avatarIdUrl } from '../config/network';
-import { useAccount } from '../hooks/auth/useAccount';
+import Link from 'next/link';
+import { avatarIdUrl } from '../config/dappCustoms';
+import { useAccount } from '@useelven/core';
 
 export const UserAvatar = () => {
   const { address } = useAccount();
@@ -9,16 +10,9 @@ export const UserAvatar = () => {
   if (!address) return null;
 
   return (
-    <Text
-      as="a"
-      href="/profile"
-      borderColor={'black'}
-      borderRadius={'100%'}
-      borderWidth={1}
-      _hover={{ borderColor: 'ghostVerse.color1.darker' }}
-    >
+    <Link href="/profile">
       <Tooltip
-        bg="ghostVerse.green.base"
+        bg="black"
         fontWeight="light"
         placement="top"
         py={3}
@@ -27,10 +21,19 @@ export const UserAvatar = () => {
         hasArrow
         arrowSize={12}
         borderRadius={0}
-        label="Go to profile page"
+        color={'ghostVerse.green.base'}
+        label="Verify membership"
       >
-        <Avatar size="md" src={avatarIdUrl(address)} />
+        <Avatar
+          borderWidth={1}
+          borderRadius={0}
+          ml={4}
+          borderColor={'ghostVerse.green.base'}
+          width={'60px'}
+          height={'60px'}
+          src={avatarIdUrl(address)}
+        />
       </Tooltip>
-    </Text>
+    </Link>
   );
 };

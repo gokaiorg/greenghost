@@ -8,6 +8,7 @@ import { HomeFeature } from '../components/HomeFeatures';
 import { TestimonialSlider } from '../components/TestimonialSlider';
 import { HomeMenu } from '../components/HomeMenu';
 import { HomeFwens } from '../components/HomeFwens';
+import { StrainWeek } from '../components/StrainWeek';
 
 const Home: NextPage = () => {
   return (
@@ -51,6 +52,7 @@ const Home: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
+        <StrainWeek />
         <HomeSlider />
         <HomeMenu />
         <HomeFeature />

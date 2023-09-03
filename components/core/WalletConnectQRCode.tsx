@@ -1,32 +1,33 @@
 import { useEffect, useState, FunctionComponent } from 'react';
 import { Flex, Box } from '@chakra-ui/react';
-import { networkConfig, chainType } from '../../config/network';
+import { useConfig } from '@useelven/core';
 import { isMobile } from '../../utils/isMobile';
 import QRCode from 'qrcode';
 
-interface MobileLoginQRProps {
-  walletConnectUri: string;
+interface WalletConnectQRCodeProps {
+  uri: string;
 }
 
-export const MobileLoginQR: FunctionComponent<MobileLoginQRProps> = ({
-  walletConnectUri,
-}) => {
+export const WalletConnectQRCode: FunctionComponent<
+  WalletConnectQRCodeProps
+> = ({ uri }) => {
   const [qrCodeSvg, setQrCodeSvg] = useState('');
+  const { walletConnectDeepLink } = useConfig();
 
   useEffect(() => {
     const generateQRCode = async () => {
-      if (!walletConnectUri) {
+      if (!uri) {
         return;
       }
 
-      const svg = await QRCode.toString(walletConnectUri, {
+      const svg = await QRCode.toString(uri, {
         type: 'svg',
       });
 
       setQrCodeSvg(svg);
     };
     generateQRCode();
-  }, [walletConnectUri]);
+  }, [uri]);
 
   const mobile = isMobile();
 
@@ -43,28 +44,28 @@ export const MobileLoginQR: FunctionComponent<MobileLoginQRProps> = ({
         }}
       />
       {mobile ? (
-        <Flex justifyContent={'center'} background="black">
+        <Flex justifyContent="center">
           <Box
-            width={'100%'}
-            textAlign={'center'}
-            borderColor="ghostVerse.color1.darker"
-            borderWidth={1}
-            bgColor="transparent"
+            width="100%"
+            textAlign="center"
+            color="elvenTools.white"
+            borderColor="elvenTools.color2.base"
+            borderWidth={2}
+            borderRadius="lg"
             py={2}
             px={6}
             mt={6}
             fontWeight="normal"
-            _hover={{ bg: 'GhostVerse.color2.lighter' }}
-            transition={'all .3s'}
+            _hover={{ bg: 'elvenTools.color2.darker' }}
+            transition="background-color .3s"
             as="a"
-            href={`${networkConfig[chainType]
-              ?.walletConnectDeepLink}?wallet-connect=${encodeURIComponent(
-              walletConnectUri
+            href={`${walletConnectDeepLink}?wallet-connect=${encodeURIComponent(
+              uri
             )}`}
             rel="noopener noreferrer nofollow"
             target="_blank"
           >
-            Maiar Login
+            xPortal Login
           </Box>
         </Flex>
       ) : null}

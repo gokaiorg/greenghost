@@ -1,3 +1,5 @@
+// The component for triggering functions. For in-app navigation use Next Link component
+
 import { Box, BoxProps } from '@chakra-ui/react';
 import { FC, PropsWithChildren, useCallback } from 'react';
 
@@ -16,24 +18,28 @@ export const ActionButton: FC<PropsWithChildren<ActionButtonProps>> = ({
 }) => {
   const handleClick = useCallback(() => {
     if (!disabled) {
-      onClick?.();
+      onClick();
     }
   }, [disabled, onClick]);
 
   return (
     <Box
       as="button"
-      borderColor="ghostVerse.color1.darker"
+      color={'ghostVerse.green.base'}
+      borderColor={'ghostVerse.green.base'}
+      fontSize={{ base: 'xl' }}
       borderWidth={1}
       bgColor="transparent"
-      p={2}
-      height="48px"
-      fontWeight="normal"
-      cursor={disabled ? 'not-allowed' : 'pointer'}
-      color="elvenTools.white"
-      userSelect="none"
-      _hover={!disabled ? { bg: 'GhostVerse.color1.lighter' } : {}}
-      transition={'all .3s'}
+      backdropFilter={'blur(3px)'}
+      p={4}
+      mx={'auto'}
+      fontFamily={'CubicFive10'}
+      _hover={{
+        borderColor: 'ghostVerse.green.base',
+        color: 'black',
+        backgroundColor: 'ghostVerse.green.base',
+      }}
+      transition="background-color .3s"
       width={isFullWidth ? '100%' : 'auto'}
       onClick={handleClick}
       opacity={!disabled ? 1 : 0.5}

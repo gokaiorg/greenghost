@@ -10,7 +10,7 @@ import '@fontsource/poppins/900.css';
 
 import type { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
-import { useElrondNetworkSync } from '../hooks/auth/useElrondNetworkSync';
+import { useNetworkSync } from '@useelven/core';
 import { theme } from '../config/chakraTheme';
 import { SWRConfig } from 'swr';
 import { useToast } from '@chakra-ui/react';
@@ -21,7 +21,17 @@ import { AnimatePresence } from 'framer-motion';
 const toastId = 'elven-tools-error-toast';
 
 const ElvenToolsDapp = ({ Component, pageProps }: AppProps) => {
-  useElrondNetworkSync();
+  useNetworkSync({
+    apiTimeout: '10000',
+    chainType: process.env.NEXT_PUBLIC_MULTIVERSX_CHAIN,
+    ...(process.env.NEXT_PUBLIC_MULTIVERSX_API
+      ? { apiAddress: process.env.NEXT_PUBLIC_MULTIVERSX_API }
+      : {}),
+    ...(process.env.NEXT_PUBLIC_WC_PROJECT_ID
+      ? { walletConnectV2ProjectId: process.env.NEXT_PUBLIC_WC_PROJECT_ID }
+      : {}),
+  });
+
   const toast = useToast();
 
   const handleErrorToast = useCallback(() => {
@@ -31,7 +41,7 @@ const ElvenToolsDapp = ({ Component, pageProps }: AppProps) => {
         variant: 'subtle',
         title: 'API error!',
         description:
-          'The API is not responding at the moment. Please try later.',
+          'The API is not responding at the moment. Please try later. Also, make sure that you are using the proper chain type when connecting locally',
         status: 'error',
         duration: 10000,
         isClosable: true,
@@ -40,7 +50,7 @@ const ElvenToolsDapp = ({ Component, pageProps }: AppProps) => {
   }, [toast]);
 
   return (
-    <SWRConfig>
+    <SWRConfig value={{ onError: handleErrorToast }}>
       <AnimatePresence>
         <ChakraProvider theme={theme}>
           <Fonts />

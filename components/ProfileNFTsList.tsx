@@ -1,25 +1,15 @@
-import {
-  Box,
-  Stack,
-  Spinner,
-  Card,
-  CardBody,
-  Text,
-  SimpleGrid,
-} from '@chakra-ui/react';
+import { Box, Stack, Spinner, Card, CardBody, Text } from '@chakra-ui/react';
 import Link from 'next/link';
-import { useAccount } from '../hooks/auth/useAccount';
-import { useApiCall } from '../hooks/interaction/useApiCall';
+import { useAccount, useApiCall, SCQueryType, useConfig } from '@useelven/core';
 import { NFT } from '../types/nfts';
-import { SCQueryType } from '../hooks/interaction/useScQuery';
-import { useElvenScQuery } from '../hooks/interaction/elvenScHooks/useElvenScQuery';
-import { NftImageHelper } from './NftImageHelper';
-import { networkConfig, chainType } from '../config/network';
+import { useElvenScQuery } from '../hooks/useElvenScQuery';
+// import { NftImageHelper } from './NftImageHelper';
 
 const SIZE_PER_PAGE = 10000;
 
 export const ProfileNFTsList = () => {
   const { address } = useAccount();
+  const { explorerAddress } = useConfig();
 
   const { data: collectionTicker, isLoading: collectionTickerLoading } =
     useElvenScQuery<number>({
@@ -37,8 +27,8 @@ export const ProfileNFTsList = () => {
       <Stack
         flex={1}
         direction="row"
-        alignItems={'center'}
-        justifyContent={'center'}
+        alignItems="center"
+        justifyContent="center"
         mt={8}
       >
         <Spinner size="lg" />
@@ -48,10 +38,22 @@ export const ProfileNFTsList = () => {
 
   if (!nfts || nfts.length === 0) {
     return (
-      <Box mt={12} textAlign={'center'}>
-        <Text>No NFTs minted yet!</Text>
-        <Link href="/mxghosts" title="MxGhosts" passHref>
-          <Text textDecoration="underline">Mint some!</Text>
+      <Box mt={12} textAlign="center">
+        <Text
+          as={'h2'}
+          fontSize={{ base: '3xl', md: '6xl' }}
+          fontFamily={'CubicFive12'}
+        >
+          You are not a member
+        </Text>
+        <Link href="https://ghostverse.org/mxghosts" passHref>
+          <Text
+            fontSize={{ base: '4xl' }}
+            fontFamily={'vt323'}
+            color={'ghostVerse.green.base'}
+          >
+            Get your MxGhosts NOW!
+          </Text>
         </Link>
       </Box>
     );
@@ -59,50 +61,75 @@ export const ProfileNFTsList = () => {
 
   return (
     <>
-      <SimpleGrid
-        my={{ base: '8', md: '12' }}
-        columns={{ base: 1, sm: 2, md: 3, xl: 5 }}
-        gap={{ base: 1, sm: 2, md: 3, xl: 5 }}
+      <Stack
+        direction="row"
+        mt={12}
+        justifyContent="center"
+        flexWrap="wrap"
+        gap={6}
+        spacing={0}
       >
-        {nfts?.map((nft) => (
-          <Card
-            w="100%"
-            key={nft.identifier}
-            backgroundColor="ghostVerse.color1.lighter"
-            borderColor="ghostVerse.color1.darker"
-            borderWidth={1}
-            borderRadius={'0'}
-            backdropFilter={'blur(3px)'}
+        <Box
+          as={'h2'}
+          fontSize={{ base: '3xl', md: '6xl' }}
+          fontFamily={'CubicFive12'}
+          color={'ghostVerse.green.base'}
+          textAlign={'center'}
+        >
+          You are a member
+        </Box>
+        <Text
+          color={'white'}
+          textAlign={'center'}
+          fontSize={{ base: '3xl' }}
+          fontFamily={'vt323'}
+          marginBottom={4}
+        >
+          Explore your{' '}
+          <Link
+            href="/crypto-weed-shop-relax-and-earn#benefits"
+            title="Green Ghost - Member benefits"
+            passHref
           >
-            <CardBody p={{ base: 1, sm: 2, md: 3 }}>
-              <Stack position={'relative'}>
+            <Box as={'span'} color={'ghostVerse.green.base'}>
+              Benefits
+            </Box>
+          </Link>{' '}
+          today.
+        </Text>
+
+        {/* {nfts?.map((nft) => (
+          <Card
+            maxW="xs"
+            minW="xs"
+            key={nft.identifier}
+            backgroundColor="elvenTools.dark.darker"
+          >
+            <CardBody>
+              <Stack height={280} position="relative">
                 <NftImageHelper
                   thumbnail={nft.media?.[0].thumbnailUrl}
-                  elrondIPFSGatewayUrl={nft.url}
-                  href={`${networkConfig[chainType].explorerAddress}/nfts/${nft.identifier}`}
+                  multiversxIPFSGatewayUrl={nft.url}
+                  href={`${explorerAddress}/nfts/${nft.identifier}`}
                 />
               </Stack>
               <Box
                 fontWeight={800}
                 mt={5}
                 color="elvenTools.white"
-                textAlign={'center'}
+                textAlign="center"
               >
                 <a
-                  href={`${networkConfig[chainType].explorerAddress}/nfts/${nft.identifier}`}
+                  href={`${explorerAddress}/nfts/${nft.identifier}`}
                   rel="noopener noreferrer"
                   target="_blank"
                 >
                   {nft.name}
                 </a>
               </Box>
-              <Box
-                textAlign={'center'}
-                color="ghostVerse.grey.base"
-                fontSize={{ base: 10, md: 14 }}
-              >
+              <Box color="elvenTools.white" textAlign="center">
                 <a
-                  href={`${networkConfig[chainType].explorerAddress}/nfts/${nft.identifier}`}
+                  href={`${explorerAddress}/nfts/${nft.identifier}`}
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -111,8 +138,8 @@ export const ProfileNFTsList = () => {
               </Box>
             </CardBody>
           </Card>
-        ))}
-      </SimpleGrid>
+        ))} */}
+      </Stack>
     </>
   );
 };
