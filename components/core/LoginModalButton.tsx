@@ -72,7 +72,7 @@ export const LoginModalButton: FC<LoginModalButtonProps> = ({
             color: 'ghostVerse.green.base',
           }}
         >
-          <Box display={'flex'} flex={'1'} alignItems={'center'} w={'60px'}>
+          <Box display={'block'} mx={'auto'} w={'42px'}>
             <IconLogin />
           </Box>
           Login
