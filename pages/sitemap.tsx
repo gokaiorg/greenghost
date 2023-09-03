@@ -1,7 +1,8 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import xml2js from 'xml2js';
+// import xml2js from '../node_modules/xml2js/lib/xml2js';
+const xml2js = require('xml2js').parseString;
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';

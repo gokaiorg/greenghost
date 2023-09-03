@@ -1,34 +1,30 @@
-import { Box, Image } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
+import { Box } from '@chakra-ui/react';
 
 export const HeroImage = () => {
   return (
     <Box
-      width={{ base: '100%' }}
-      mr={{ base: '0', md: '3rem' }}
-      display={'flex'}
-      justifyContent={'center'}
+      minWidth="400px"
+      height="400px"
+      display="flex"
+      justifyContent="flex-end"
+      sx={{
+        '@media screen and (max-width: 1000px)': {
+          display: 'none',
+        },
+      }}
     >
-      <motion.div
-        animate={{
-          y: [-15, 15, -15],
-        }}
-        transition={{
-          duration: 1,
-          ease: 'easeInOut',
-          repeat: Infinity,
-          repeatDelay: 0,
-        }}
+      <Box
+        padding={10}
+        bgColor="elvenTools.dark.darker"
+        borderRadius="2xl"
+        userSelect="none"
+        boxShadow="0 0 25px"
+        color="elvenTools.shadowColor"
+        display="flex"
+        bgGradient="linear-gradient(90deg, elvenTools.dark.base 0%, elvenTools.dark.darker 70%);"
       >
-        <Image
-          src="/media/ghostverse-mint-mr-ghost-mxghosts-nft-dao-multiversx-blockchain.gif"
-          title="Mint Mr Ghost Mr Ghost Minting - MultiversX NFT DAO - MxGhosts"
-          alt="Mint Mr Ghost Mr Ghost Minting - MultiversX NFT DAO - MxGhosts"
-          width={300}
-          height={300}
-          maxWidth="inherit"
-        />
-      </motion.div>
+        <Box as="img" src="/img.gif" alt="" width="300px" height="300px" />
+      </Box>
     </Box>
   );
 };

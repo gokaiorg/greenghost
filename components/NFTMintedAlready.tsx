@@ -12,28 +12,28 @@ export const NFTMintedAlready: FC<NFTMintedAlreadyProps> = ({
 }) => {
   return (
     <Box
-      display={'flex'}
-      alignItems={'center'}
+      display="flex"
+      alignItems="center"
       justifyContent={{ base: 'center', md: 'flex-start' }}
     >
-      <Text fontSize={{ base: 'md', sm: 'lg' }} fontWeight={'bold'}>
+      <Text fontSize={{ base: 'md', sm: 'xl' }} fontWeight="bold">
         You have minted:{' '}
       </Text>
 
       {dataLoading ? (
-        <Spinner ml={3} color="ghostVerse.color1.darker" />
+        <Spinner ml={3} color="elvenTools.color2.base" />
       ) : (
         <Text
-          color="ghostVerse.color1.darker"
-          fontSize={'3xl'}
-          fontWeight={'black'}
+          color="elvenTools.color2.base"
+          fontSize="3xl"
+          fontWeight="black"
           ml={3}
         >
           {data}
         </Text>
       )}
 
-      <Text fontSize={{ base: 'md', sm: 'lg' }} fontWeight={'bold'} ml={3}>
+      <Text fontSize={{ base: 'md', sm: 'xl' }} fontWeight="bold" ml={3}>
         in total
       </Text>
     </Box>

@@ -1,13 +1,13 @@
 import { Box, Text } from '@chakra-ui/react';
 import { CollectionInfoBox } from './CollectionInfoBox';
-import { chainType, networkConfig } from '../config/network';
 import { shortenHash } from '../utils/shortenHash';
-import { useElvenScQuery } from '../hooks/interaction/elvenScHooks/useElvenScQuery';
-import { SCQueryType } from '../hooks/interaction/useScQuery';
+import { useElvenScQuery } from '../hooks/useElvenScQuery';
+import { SCQueryType, useConfig } from '@useelven/core';
 
 const smartContractAddress = process.env.NEXT_PUBLIC_NFT_SMART_CONTRACT;
 
 export const Hero = () => {
+  const { explorerAddress, chainType } = useConfig();
   const { data: collectionSize, isLoading: collectionSizeLoading } =
     useElvenScQuery<number>({
       funcName: 'getTotalSupply',
@@ -30,12 +30,12 @@ export const Hero = () => {
     collectionSize && totalTokensLeft ? collectionSize - totalTokensLeft : 0;
 
   return (
-    <Box width={'100%'}>
+    <Box width="100%">
       <Text
-        as={'h1'}
+        as="h1"
         fontSize={{ base: '2xl', md: '3xl', lg: '5xl' }}
         textAlign={{ base: 'center', md: 'left' }}
-        fontWeight={'black'}
+        fontWeight="black"
         lineHeight="shorter"
         mb={5}
       >
@@ -53,7 +53,7 @@ export const Hero = () => {
         <Text
           as="a"
           color="elvenTools.color2.base"
-          href="https://www.multiversx.com"
+          href="https://multiversx.com"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -62,22 +62,22 @@ export const Hero = () => {
         blockchain.
       </Text>
       <Text
-        as={'h2'}
-        fontSize={'lg'}
+        as="h2"
+        fontSize="lg"
         fontWeight="thin"
         textAlign={{ base: 'center', md: 'left' }}
       >
         The actual working example is connected to the Elven Tools smart
         contract deployed on the MultiversX blockchain{' '}
-        <Text as={'span'} fontWeight="medium">
-          devnet
+        <Text as="span" fontWeight="medium">
+          {chainType}
         </Text>
         ! You can play with it. I will redeploy it from time to time to keep the
         minting active. You can also use the template on the mainnet with a
         couple of config changes. Check the Elven Tools website for docs.
       </Text>
       <Box
-        display={'flex'}
+        display="flex"
         justifyContent={{ base: 'center', md: 'flex-start' }}
         mt={10}
         gap={3}
@@ -91,7 +91,7 @@ export const Hero = () => {
           content={collectionTicker || '-'}
           label="Collection ticker. Click for details."
           isLoading={collectionTickerLoading}
-          href={`${networkConfig[chainType].explorerAddress}/collections/${collectionTicker}`}
+          href={`${explorerAddress}/collections/${collectionTicker}`}
         />
         <CollectionInfoBox
           content={
@@ -102,7 +102,7 @@ export const Hero = () => {
           label={`Minter smart contract. Click for details.`}
           href={
             smartContractAddress
-              ? `${networkConfig[chainType].explorerAddress}/accounts/${smartContractAddress}`
+              ? `${explorerAddress}/accounts/${smartContractAddress}`
               : undefined
           }
         />
