@@ -1,3 +1,65 @@
+### [7.3.0](https://github.com/ElvenTools/elven-tools-dapp/releases/tag/v7.3.0) (2023-07-31)
+- update useElven (support for guardians)
+- update dependencies
+
+### [7.2.0](https://github.com/ElvenTools/elven-tools-dapp/releases/tag/v7.2.0) (2023-06-22)
+- update useElven (new useTokenTransfer hook)
+- update dependencies
+
+### [7.1.1](https://github.com/ElvenTools/elven-tools-dapp/releases/tag/v7.1.1) (2023-06-07)
+- update useElven - fix native auth login token handling
+- update dependencies
+
+### [7.1.0](https://github.com/ElvenTools/elven-tools-dapp/releases/tag/v7.1.0) (2023-06-04)
+- update useElven and dependencies
+
+### [7.0.0](https://github.com/ElvenTools/elven-tools-dapp/releases/tag/v7.0.0) (2023-05-28)
+- **Breaking:** The dapp now uses the useElven version with built-in native token support. There is no fallback, so it is a breaking change. Standard string-based tokens will be deprecated across the MultiversX soon
+- update dependencies
+
+### [6.2.1](https://github.com/ElvenTools/elven-tools-dapp/releases/tag/v6.2.1) (2023-05-14)
+- update [useElven](https://www.useelven.com/)
+- fix problems with initialization of the HW provider
+
+### [6.2.0](https://github.com/ElvenTools/elven-tools-dapp/releases/tag/v6.2.0) (2023-05-07)
+- update [useElven](https://www.useelven.com/)
+- fix HW integration when strict mode is enabled
+
+### [6.1.0](https://github.com/ElvenTools/elven-tools-dapp/releases/tag/v6.1.0) (2023-05-02)
+- update `useElven` and `sdk-core`, adjust the code
+- update other dependencies
+- fix NFT image IPFS fallback when MultiversX thumbnail is not ready yet
+
+### [6.0.0](https://github.com/ElvenTools/elven-tools-dapp/releases/tag/v6.0.0) (2023-03-05)
+- switch to v0.1.0 of [useElven](https://www.useelven.com/) with support for xPortal when signing
+- changes for Wallet Connect pairings list
+- other minor improvements
+
+### [5.1.0](https://github.com/ElvenTools/elven-tools-dapp/releases/tag/v5.1.0) (2023-03-04)
+- fix passing custom configuration, one should use .env variables for that, `useNetworkSync` will read from them
+
+### [5.0.0](https://github.com/ElvenTools/elven-tools-dapp/releases/tag/v5.0.0) (2023-02-21)
+- switch to [@useelven/core](https://www.useelven.com) when it comes to core functionality
+- update dependencies
+
+### [4.2.0](https://github.com/ElvenTools/elven-tools-dapp/releases/tag/v4.2.0) (2023-01-28)
+- rebuilt in-app navigation using Next Link instead ActionButton that should be used only for triggering functions, and not navigation
+- `useScQuery` can now query more complex data using abi file and result parser from MultiversX sdk-core 
+- better errors handling through the network provider
+- update npm dependencies
+
+### [4.1.0](https://github.com/ElvenTools/elven-tools-dapp/releases/tag/v4.1.0) (2023-01-15)
+- rebrand to multiversx (continuation)
+    - npm packages are replaced
+    - public api/explorer endpoints are replaced
+- update dependencies
+- **Breaking:** `useElrondNetworkSync` is now `useNetworkSync`
+
+### [4.0.0](https://github.com/ElvenTools/elven-tools-dapp/releases/tag/v4.0.0) (2022-12-24)
+- breaking: env vars naming changes and API proxy is now optional, check for more in the docs
+- dependencies update
+- demo homepage updates and rebranding
+
 ### [3.3.0](https://github.com/ElvenTools/elven-tools-dapp/releases/tag/v3.3.0) (2022-11-26)
 - added Profile page with the list of minted NFTs and basic account/wallet information
 - updated dependencies, including Next 13 (without changing the files structure yet)

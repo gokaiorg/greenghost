@@ -7,7 +7,6 @@ import { Box, Text } from '@chakra-ui/react';
 import { SocialIcon } from 'react-social-icons';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const GrowerCosmic: NextPage = () => {
   const handleBack = () => {

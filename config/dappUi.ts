@@ -13,11 +13,3 @@ export const defaultMetaTags = {
   shortname: 'Green Ghost',
   image: `${dappHostname}/green-ghost-degen-weed-shop.png`,
 };
-
-export const bakery = [
-  {
-    name: 'Brownie - 30G',
-    price: '250',
-    pageLink: '/space-cake-brownie',
-  },
-];

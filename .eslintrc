@@ -1,13 +1,6 @@
 {
-  "extends": [
-    "next",
-    "prettier",
-    "plugin:valtio/recommended",
-    "plugin:@typescript-eslint/recommended"
-  ],
-  "rules": {
-    "valtio/state-snapshot-rule": "off"
-  },
+  "extends": ["next", "prettier", "plugin:@typescript-eslint/recommended"],
   "plugins": ["@typescript-eslint"],
-  "parser": "@typescript-eslint/parser"
+  "parser": "@typescript-eslint/parser",
+  "ignorePatterns": ["sitemap.tsx"]
 }

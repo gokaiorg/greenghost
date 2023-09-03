@@ -254,6 +254,7 @@ const CryptoWeedShop: NextPage = () => {
           >
             <Box width={{ base: '100%', lg: '65%' }}>
               <Text
+                id={'benefits'}
                 as={'h2'}
                 fontWeight={'black'}
                 fontSize={'5xl'}
