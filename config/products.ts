@@ -38,7 +38,7 @@ export const products: Product[] = [
     growerSlug: '/ohigho',
     environment: 'Organic Indoor',
     harvest: '09/08/2023',
-    quantity: 50,
+    quantity: 32,
     origin: 'Phuket',
     description:
       "Green Gelato is a popular hybrid cannabis strain that offers the best of both worlds with its balanced indica and sativa genetics. This strain is a result of crossing Sunset Sherbet and Thin Mint Girl Scout Cookies, two renowned strains that contribute to Green Gelato's unique characteristics. \n\n Consumers who have smoked Green Gelato report that the strain's effects come on quickly, inducing a euphoric high accompanied by strong feelings of relaxation. This strain's balanced effects make it ideal for those seeking relief from pain, fatigue, and insomnia, while still remaining mentally stimulated and productive.",
@@ -67,7 +67,7 @@ export const products: Product[] = [
     growerSlug: '/ohigho',
     environment: 'Organic Indoor',
     harvest: '09/08/2023',
-    quantity: 50,
+    quantity: 27,
     origin: 'Phuket',
     description:
       "Hulkberry, a captivating strain with a genetic makeup of 65% sativa and 35% indica, emerges as a result of expertly blending the beloved Strawberry Diesel and OG Kush varieties. This strain earns its name from the remarkable density of its buds and a delightful infusion of berry essence. The appearance is a spectacle to behold, featuring robust, minty-green popcorn-shaped buds that sport subtle undertones of dark olive. Accentuating these nugs are long, delicate orange hairs and a generous dusting of petite, luminous white trichomes, glistening like morning dew. Upon breaking apart these frosty nuggets, an exquisite bouquet of sweet and tangy citrus notes wafts forth, accompanied by an underlying diesel richness that gains prominence when the buds are ignited. This symphony of scents preludes the flavor experience, characterized by a pronounced tang of sour lemon that harmonizes with hints of zesty diesel and earthiness upon exhalation. \n\n The Hulkberry strain wields an impressive potency, boasting an average THC level of 27%, which contributes to its robust effects. The high takes hold swiftly and profoundly, initiating a surge of invigorating sensations that kindle creativity and motivation. This euphoric ascent of the mind coexists harmoniously with a gentle, calming embrace that leaves physical energy untouched. Hulkberry's formidable potency makes it a promising contender for addressing various conditions, including chronic fatigue, migraines, ADD or ADHD, depression, and mood swings. Its distinctive profile combines the best of both sativa and indica worlds, offering a dynamic yet balanced experience that has the potential to elevate and soothe, all in one enticing package. \n\n In the realm of cannabis strains, Hulkberry emerges as a beacon of potency and flavor, beckoning connoisseurs and seekers of relief alike. Its lineage, traceable to Strawberry Diesel and OG Kush, lends it a unique character that tantalizes the senses and delivers a multifaceted high. Whether you're yearning for a wellspring of creativity or a respite from various ailments, Hulkberry stands ready to unleash its green magic, offering a remarkable journey that traverses the realms of taste, aroma, and effect.",
@@ -97,7 +97,7 @@ export const products: Product[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/06/2023',
-    quantity: 30,
+    quantity: 24,
     origin: 'Phuket',
     description:
       "Buddy Critical is a remarkable hybrid strain that combines the best traits of its parent strains, Critical Plus and Bubble Gum. Critical Plus, a cross between Skunk and Big Bud, is known for its fast growth and high yields. It has gained recognition in cannabis competitions, including winning the first Highlife Cup in Barcelona. Buddy Critical inherits the pungent and citrusy flavors of Critical Plus, accompanied by a subtle diesel and nutty undertone. With the addition of Bubble Gum genetics, this strain offers a relaxing and pain-relieving experience while keeping the mind pleasantly stimulated. \n\n Bred by Dinafem Seeds, Buddy Critical exemplifies the expertise and dedication of its breeders. The careful selection and combination of Critical Plus and Bubble Gum have resulted in a strain that offers a well-balanced and enjoyable experience. The body-numbing effects of Bubble Gum are complemented by the uplifting and euphoric qualities of Critical Plus. This combination makes Buddy Critical a popular choice among cannabis enthusiasts seeking relaxation and pain relief without sacrificing mental clarity. \n\n The precise genetic lineage of Bubble Gum, one of Buddy Critical's parent strains, remains somewhat mysterious. It is believed to be derived from an unknown cross of Indiana Bubble Gum. What is known, however, is the exceptional body-numbing high that Bubble Gum delivers. Users often experience a sense of pain relief and relaxation, accompanied by a gentle mental stimulation. Buddy Critical takes these desirable qualities and enhances them with the addition of Critical Plus genetics, resulting in a well-rounded and satisfying cannabis strain that appeals to a wide range of users.",
@@ -127,7 +127,7 @@ export const products: Product[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '04/04/2023',
-    quantity: 20,
+    quantity: 17,
     origin: 'Phuket',
     description:
       "Bruce Banner is a highly sought-after hybrid strain known for its powerful effects and high THC content. With its origins traced back to a cross between OG Kush and Strawberry Diesel, Bruce Banner offers a unique blend of sweet and diesel-like flavors with earthy undertones. Its dense, sticky buds are known for their bright green color and orange hairs, often coated in a thick layer of trichomes. \n\n The effects of Bruce Banner are fast-acting and intense, providing a powerful burst of euphoria and creativity followed by deep relaxation and a mellow body buzz. Its high THC levels, which can range between 18-29%, make it a popular choice among experienced cannabis consumers seeking potent and long-lasting effects. It's important to note that the strain's high can be overwhelming for some, so beginners are advised to start with a lower dosage. \n\n Bruce Banner is also a popular strain among growers due to its fast flowering time of 8-10 weeks and high yields. It is known to produce three main phenotypes, one of which is Bruce Banner #3, which has gained a reputation as the most potent and flavorful of the three. Overall, Bruce Banner is a strain that offers a unique blend of flavors and effects that has earned it a place among the most popular hybrid strains on the market today.",
@@ -290,7 +290,7 @@ export const products: Product[] = [
   {
     slug: 'super-lemon-haze',
     name: 'Super Lemon Haze',
-    price: 999,
+    price: 1000,
     dominance: 'Sativa',
     indica: '30',
     sativa: '70',
@@ -319,7 +319,7 @@ export const products: Product[] = [
   {
     slug: 'stardawg',
     name: 'Stardawg',
-    price: 999,
+    price: 1000,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -331,7 +331,7 @@ export const products: Product[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '11/06/2023',
-    quantity: 15,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Stardawg, also known as Stardog, is a hybrid marijuana strain created from Chemdog 4 and Tres Dawg. Its earthy pine flavor with hints of sour diesel is truly captivating. The effects of Stardawg are uplifting and beneficial for relieving stress, fatigue, and anxiety. With a flowering time of 67 days indoors, it yields moderate amounts of high-quality buds. \n\n Stardawg is a mesmerizing hybrid strain derived from Chemdog 4 and Tres Dawg. Its distinct earthy pine taste intertwined with sour diesel undertones is truly delightful. This strain offers uplifting effects that can provide relief from stress, fatigue, and anxiety. Indoor growers can expect a moderate yield of exceptional buds after approximately 67 days of flowering. \n\n Discover Stardawg, a remarkable hybrid strain bred from Chemdog 4 and Tres Dawg. Its enticing flavor profile blends earthy pine with subtle sour diesel notes. Stardawg's uplifting effects make it an ideal choice for relieving stress, fatigue, and anxiety. With an indoor flowering time of around 67 days, this strain yields moderate amounts of top-quality buds.",
@@ -348,7 +348,7 @@ export const products: Product[] = [
   {
     slug: 'tangerine-dream',
     name: 'Tangerine Dream',
-    price: 999,
+    price: 1000,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -360,7 +360,7 @@ export const products: Product[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '22/05/2023',
-    quantity: 13,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Tangerine Dream is a sativa-dominant strain renowned for its multifaceted effects that can potentially alleviate pain and provide a boost of energy. This remarkable strain, developed by the esteemed Barney's Farm, is the result of crossing G13, Afghani, and Neville's A5 Haze. With a primary focus on meeting the therapeutic needs of medical patients, Tangerine Dream has been meticulously bred to offer a well-rounded experience. However, it's worth noting that overconsumption of this strain may lead to a sedating couch-lock effect, making it best suited for those seeking deep relaxation. \n\n One of the standout qualities of Tangerine Dream is its ability to uplift the spirit and induce a euphoric state of mind. Alongside its mental invigoration, this strain also excels at providing physical relaxation, making it a popular choice for those looking to unwind and relieve muscle tension. The captivating citrusy aroma of Tangerine Dream further enhances the overall sensory experience, leaving a delightful impression on the senses. \n\n In terms of cultivation, Tangerine Dream typically undergoes a flowering period of 8 to 10 weeks, allowing growers to anticipate the development of its resinous buds. The vibrant combination of genetics in this strain contributes to its unique profile, offering a harmonious blend of fruity flavors and earthy undertones. Whether seeking a rejuvenating boost or therapeutic relief, Tangerine Dream stands as a testament to the incredible potential of cannabis breeding, consistently delivering a satisfying and aromatic journey for enthusiasts and medical users alike.",
@@ -464,7 +464,7 @@ export const products: Product[] = [
   {
     slug: 'kings-juice',
     name: 'King’s Juice',
-    price: 999,
+    price: 1000,
     dominance: 'Indica',
     indica: '60',
     sativa: '40',
@@ -476,7 +476,7 @@ export const products: Product[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '03/04/2023',
-    quantity: 1,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "The King's Juice is a hybrid cannabis strain created by combining two terpene profiles loved by its creator, Arjan. It is a cross between Mimosa from Symbiotic Genetics and King's Kush, resulting in a plant with a piney, coney growth and a long main cola that grows taller than its side branches. During the flowering period, the plant will stretch considerably, and its branches will grow steadily. \n\n The flowers of The King's Juice are known for their balanced floral and citrusy/earthy fragrance, which creates a complex aroma that resembles fresh fruit juice. Towards the end of the flowering period, the plant will take on beautiful reddish/violet hues, giving it a stunning fall color. The plant is also covered in trichomes, which add to its beauty. \n\n The effect of The King's Juice is a balanced high that can be enjoyed all day. It provides an uplifting head buzz, while the body remains light and active. The taste of the strain stays in the mouth for a while after exhaling, creating a satisfying sensation. Overall, The King's Juice is a beautiful and flavorful strain that offers a well-rounded high.",
@@ -493,7 +493,7 @@ export const products: Product[] = [
   {
     slug: 'eleven-roses',
     name: 'Eleven Roses',
-    price: 999,
+    price: 1000,
     dominance: 'Indica',
     indica: '90',
     sativa: '10',
@@ -505,7 +505,7 @@ export const products: Product[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '08/04/2023',
-    quantity: 1,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Eleven Roses is an indica-dominant hybrid marijuana strain with an unknown genetic lineage. The dense and resinous buds of Eleven Roses have a pungent aroma with hints of pine, earth, and fuel. Though there is limited information available about this strain, its effects are said to be deeply relaxing and may be useful for treating insomnia, pain, and stress. \n\n Eleven Roses is also known for its sedative properties, making it a good choice for nighttime use or for those seeking relief from anxiety or tension. The exact THC and CBD levels of Eleven Roses are not known, but it is believed to have a moderately high THC content, potentially reaching up to 20%. \n\n The name Eleven Roses is thought to reference the potent and aromatic nature of this strain, with the eleven representing the abundance of its positive attributes. While there is still much to be learned about Eleven Roses, it is clear that this strain has the potential to provide relief for a range of medical conditions while also delivering a deep sense of relaxation and tranquility.',
@@ -580,7 +580,7 @@ export const products: Product[] = [
   {
     slug: 'critical-kush',
     name: 'Critical Kush',
-    price: 999,
+    price: 1000,
     dominance: 'Indica',
     indica: '90',
     sativa: '10',
@@ -592,7 +592,7 @@ export const products: Product[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '07/04/2023',
-    quantity: 1,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Critical Kush is an Indica-dominant marijuana strain that is known for its potent effects. Bred by Barney's Farm, it is a cross between Critical Mass and OG Kush, two of the most beloved strains in the cannabis world. Critical Kush has a pungent earthy aroma with a hint of spice, which can induce a calming effect on the mind and body. Its high THC content combined with a moderate amount of CBD makes it an ideal nighttime medication for those seeking relief from pain, stress, insomnia, and muscle spasms. \n\n This popular strain is highly valued by both medical and recreational users. Medical marijuana patients use Critical Kush to alleviate symptoms related to chronic pain, anxiety, depression, and insomnia. Recreational users appreciate its relaxing, sedative-like effects, which make it an excellent choice for unwinding after a long day. Critical Kush is also a favorite among growers, as it is easy to cultivate and produces high yields. \n\n Indoor growers can expect Critical Kush to flower in about 50-60 days. This strain is known for its resilience and adaptability, making it suitable for both novice and experienced cultivators. With its potent effects and delightful aroma, Critical Kush is a must-try for any cannabis connoisseur looking for a high-quality Indica strain.",
@@ -698,7 +698,7 @@ export const products: Product[] = [
   {
     slug: 'fruit-spirit',
     name: 'Fruit Spirit',
-    price: 999,
+    price: 1000,
     dominance: 'Sativa',
     indica: '40',
     sativa: '60',
@@ -710,7 +710,7 @@ export const products: Product[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '08/04/2023',
-    quantity: 1,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Fruit Spirit is a premium cannabis strain that is sure to satisfy anyone looking for a unique and delicious smoking experience. This hybrid strain is a cross between White Widow and Blueberry, resulting in a potent and flavorful strain that will leave you feeling relaxed and euphoric. Its fruity aroma and taste are unlike anything else on the market, making it a popular choice among cannabis enthusiasts worldwide. \n\n Not only does Fruit Spirit taste amazing, but it also boasts a well-balanced mix of Indica and Sativa genetics. This makes it a versatile strain that can be enjoyed at any time of day or night. Its high THC content produces a powerful and uplifting effect that can help with stress, anxiety, and depression. Additionally, its sweet flavor profile makes it a great option for those looking to indulge in a little bit of sweetness without the added calories. \n\n Fruit Spirit is a top-shelf strain that is sure to impress even the most discerning cannabis connoisseur. Its buds are dense and covered in trichomes, giving it a unique appearance that's hard to miss. Whether you're looking for a strain to help you unwind after a long day or something to spark your creativity, Fruit Spirit is the perfect choice. So why not give it a try and experience its fruity goodness for yourself?",
@@ -844,7 +844,7 @@ export const products: Product[] = [
   {
     slug: 'jack-herer',
     name: 'Jack Herer',
-    price: 999,
+    price: 1000,
     dominance: 'Sativa',
     indica: '45',
     sativa: '55',
@@ -856,7 +856,7 @@ export const products: Product[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '11/06/2023',
-    quantity: 1,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Jack Herer, also known as "JH," "The Jack," "Premium Jack," and "Platinum Jack" is a sativa-dominant hybrid marijuana strain named after the marijuana activist and author of The Emperor Wears No Clothes. \n\n Jack Herer is a balanced hybrid strain with a high THC content that produces a mixed head and body effect. It\'s known to provide a sense of relaxation and is often enjoyed in the evening to ease stress. \n\n Jack Herer was first created in the Netherlands in the mid-1990s and was later distributed by Dutch pharmacies as a recognized medical-grade strain. Its spicy, pine-scented aroma has won numerous awards for its quality and potency.',
@@ -1049,7 +1049,7 @@ export const products: Product[] = [
   {
     slug: 'mac-1',
     name: 'MAC 1',
-    price: 999,
+    price: 1000,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -1061,7 +1061,7 @@ export const products: Product[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '11/06/2023',
-    quantity: 1,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Mac 1, also known as The MAC, is a highly sought-after hybrid strain resulting from the cross between Alien Cookies F2 and Miracle 15. Renowned for its uplifting and harmonizing effects, Mac 1 is a favorite among cannabis enthusiasts. Growing Mac 1 requires a special touch, as only select growers chosen by the breeder have the privilege of cultivating this exceptional flower. \n\n Prepare to be captivated by the visually stunning buds of Mac 1, boasting a nearly white appearance and a thick coating of milky trichomes. Its terpene profile offers a delightful blend of smooth creaminess and funky aromas, making it enjoyable around the clock. \n\n Discover the legend of Mac 1, or The MAC, a hybrid strain renowned for its exceptional qualities derived from crossing Alien Cookies F2 and Miracle 15. Mac 1 has gained immense popularity for its uplifting and harmonizing effects. However, not just anyone can cultivate this extraordinary flower. Capulator, the breeder behind Mac 1 (Capulator's Cut), meticulously selects growers to ensure the utmost quality of this prized strain. Indulge in the smooth, creamy, and funky terpene profile of Mac 1, a sensory delight that can be enjoyed throughout the day and into the night.",
