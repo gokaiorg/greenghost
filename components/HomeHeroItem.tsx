@@ -47,7 +47,7 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
         fontWeight={'black'}
         color={'white'}
         fontFamily={'vt323'}
-        px={10}
+        px={10} 
         bgColor={'ghostVerse.dark.ultralight'}
         backdropFilter={'blur(3px)'}
       >

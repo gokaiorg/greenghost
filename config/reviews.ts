@@ -8,7 +8,7 @@ export const review = [
     title: 'Aptem Yeh',
     review:
       'This store can claim to be the best in Phuket, in terms of quality of goods and service! If you want to find a really high-quality staff, and most importantly, clean, grown according to the right technology - you are here. Believe me, this is a big problem for Phuket...',
-    reviewLink: 'https://g.co/kgs/hjf9EP',
+    reviewLink: 'https://g.co/kgs/hjf9EP', 
   },
   {
     title: 'Raoul Duke',

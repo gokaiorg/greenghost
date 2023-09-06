@@ -9,7 +9,6 @@ import 'swiper/css/effect-coverflow';
 export const HomeHero = () => {
   SwiperCore.use([Autoplay]);
   if (!Array.isArray(homehero)) return null;
-
   return (
     <Swiper
       grabCursor={true}
