@@ -137,6 +137,6 @@ export const review = [
     title: 'Lea Serrar',
     review:
       'The weed is amazing, they have great promotions on their incredible quality weed. So happy I found them!',
-    reviewLink: 'https://goo.gl/maps/kEduAbxzoCLewQ1d9',
+    reviewLink: 'https://goo.gl/maps/kEduAbxzoCLewQ1d9', 
   },
 ];

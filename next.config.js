@@ -53,6 +53,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/space-cake-brownie',
+        destination: '/weed-shop-edibles/thc-brownie',
+        permanent: true,
+      },
+      {
         source: '/kings-juice',
         destination: '/weed-shop/kings-juice',
         permanent: true,
