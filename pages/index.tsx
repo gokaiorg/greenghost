@@ -3,12 +3,12 @@ import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import Head from 'next/head';
+import { HomeSlider } from '../components/HomeSlider';
 import { HomeFeature } from '../components/HomeFeatures';
+import { TestimonialSlider } from '../components/TestimonialSlider';
 import { HomeMenu } from '../components/HomeMenu';
 import { HomeFwens } from '../components/HomeFwens';
 import { StrainWeek } from '../components/StrainWeek';
-import { HomeHero } from '../components/HomeHero';
-import { Review } from '../components/Review';
 
 const Home: NextPage = () => {
   return (
@@ -53,11 +53,11 @@ const Home: NextPage = () => {
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
         <StrainWeek />
-        <HomeHero />
+        <HomeSlider />
         <HomeMenu />
         <HomeFeature />
         <HomeFwens />
-        <Review />
+        <TestimonialSlider />
       </MainLayout>
     </>
   );
