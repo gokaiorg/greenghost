@@ -12,7 +12,6 @@ import Image from 'next/image';
 export const Review = () => {
   SwiperCore.use([Autoplay]);
   if (!Array.isArray(review)) return null;
-
   return (
     <>
       <Box display={'flex'} flexDir={'column'} alignItems={'center'} mt={20}>

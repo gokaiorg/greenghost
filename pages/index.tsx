@@ -7,8 +7,8 @@ import { HomeFeature } from '../components/HomeFeatures';
 import { HomeMenu } from '../components/HomeMenu';
 import { HomeFwens } from '../components/HomeFwens';
 import { StrainWeek } from '../components/StrainWeek';
-import { HomeHero } from '../components/HomeHero';
 import { Review } from '../components/Review';
+import { HomeHero } from '../components/HomeHero';
 
 const Home: NextPage = () => {
   return (
