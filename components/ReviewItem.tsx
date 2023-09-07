@@ -8,7 +8,7 @@ interface ReviewItemProps {
   title: string;
   review: string;
   reviewLink: string;
-} 
+}
 
 export const ReviewItem: FC<ReviewItemProps> = ({
   title,

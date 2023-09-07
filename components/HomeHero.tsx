@@ -1,7 +1,7 @@
 import { HomeHeroItem } from './HomeHeroItem';
 import { homehero } from '../config/homeHero';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay, EffectCreative } from 'swiper'; 
+import SwiperCore, { Autoplay, EffectCreative } from 'swiper';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';

@@ -57,7 +57,7 @@ const Home: NextPage = () => {
         <HomeMenu />
         <HomeFeature />
         <HomeFwens />
-        <Review /> 
+        <Review />
       </MainLayout>
     </>
   );

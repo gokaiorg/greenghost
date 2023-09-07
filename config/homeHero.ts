@@ -7,7 +7,7 @@ export const homehero = [
       'Highest quality organic cannabis, hand-selected from the best growers in Thailand.',
     link: '/about-green-ghost',
     linkTitle: 'About Green Ghost',
-    linkLabel: 'Discover', 
+    linkLabel: 'Discover',
   },
   {
     title: 'NEW KARON WEED SHOP',
