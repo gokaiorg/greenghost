@@ -45,7 +45,7 @@ export const review = [
   {
     title: 'Martin',
     review:
-      'Great service, prompt and with free delivery if you&apos;re in Rawai 😊',
+      'Great service, prompt and with free delivery if you\'re in Rawai 😊',
     reviewLink: 'https://g.co/kgs/DgPkUo',
   },
   {
@@ -84,7 +84,7 @@ export const review = [
   },
   {
     title: 'Nica Dragos (Jeje)',
-    review: 'Lovely place! It&apos;s a must check if you&apos;re nearby',
+    review: 'Lovely place! It\'s a must check if you\'re nearby',
     reviewLink: 'https://g.co/kgs/4Gm4kh',
   },
   {
@@ -130,7 +130,7 @@ export const review = [
   {
     title: 'Jean de Colombel',
     review:
-      'Nati a été très sympathique, ses produits sont d&apos;une grande qualité. Je recommande chaudement !',
+      'Nati a été très sympathique, ses produits sont d\'une grande qualité. Je recommande chaudement !',
     reviewLink: 'https://goo.gl/maps/KmUpTyatuoJKXis28',
   },
   {
