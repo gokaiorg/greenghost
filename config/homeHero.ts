@@ -10,24 +10,14 @@ export const homehero = [
     linkLabel: 'Discover',
   },
   {
-    title: 'NEW KARON WEED SHOP',
-    image: '/media/green-ghost-weed-shop-karon.webp',
-    imageAlt: 'Green Ghost Weed Shop Karon',
-    description:
-      'We are thrilled to unveil our newest location to the Green Ghost family right here in the heart of Karon, Phuket!',
-    link: 'https://goo.gl/maps/2mrscgVuBc73KRot8',
-    linkTitle: 'Degen Weed Shop in Karon',
-    linkLabel: 'Visit us now',
-  },
-  {
     title: 'Experience a New High',
     image: '/media/green-ghost-weed-shop-buds.webp',
     imageAlt: 'Green Ghost Weed Shop Buds Menu',
     description:
       'Try our wide range of cannabis products and discover your new favorite strain and elevate your experience today.',
     link: '/weed-shop',
-    linkTitle: 'Weed Shop',
-    linkLabel: 'Visit us now',
+    linkTitle: 'Weed Shop - Buds Menu',
+    linkLabel: 'Shop now',
   },
   {
     title: 'Weed Delivery Phuket',
