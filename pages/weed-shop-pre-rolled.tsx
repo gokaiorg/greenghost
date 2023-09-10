@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import { Box } from '@chakra-ui/react';
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
@@ -7,7 +6,6 @@ import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import { PreRoll } from '../components/PreRoll';
 import Head from 'next/head';
 import { MenuWeedShop } from '../components/MenuWeedShop';
-import { IconMenu } from '../components/IconMenu';
 
 const WeedShopMember: NextPage = () => {
   return (

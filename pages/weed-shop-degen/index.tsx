@@ -5,9 +5,7 @@ import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import Head from 'next/head';
 import { MenuWeedShop } from '../../components/MenuWeedShop';
-import { Box } from '@chakra-ui/react';
 import { Degen } from '../../components/Degen';
-import { IconMenu } from '../../components/IconMenu';
 
 const GhostDegenWeedShop: NextPage = () => {
   return (
