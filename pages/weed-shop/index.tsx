@@ -52,13 +52,8 @@ const WeedShop: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <Box display={'flex'} alignItems={'center'}>
-          <Box w={'70px'} mr={4} mb={4}>
-            <IconMenu />
-          </Box>
-          <HomeSectionTitle title="Degen Weed Shop - Buds Menu." />
-        </Box>
         <MenuWeedShop />
+        <HomeSectionTitle title="Buds Menu" />
         <Bud />
         <HomeFeature />
       </MainLayout>

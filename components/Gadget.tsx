@@ -1,4 +1,4 @@
-import { Box, Select } from '@chakra-ui/react';
+import { Box, Select, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import { gadgets } from '../config/gadgets';
 import { GadgetItem } from './GadgetItem';
@@ -31,7 +31,7 @@ export const Gadget = () => {
   };
 
   return (
-    <Box mt={4} mb="10">
+    <Box mb="10">
       <Box
         display={'flex'}
         alignItems={'baseline'}
@@ -44,13 +44,21 @@ export const Gadget = () => {
           display={'inline-flex'}
           mr={'auto'}
           flexWrap={'wrap'}
-          fontSize={30}
+          fontSize={26}
           fontFamily={'vt323'}
         >
           Elevate your smoking experience.
         </Box>
         <Box display={'flex'} mb={{ base: '4', lg: '0' }}>
           <Box mr={4}>
+            <Text
+              as={'label'}
+              fontFamily={'CubicFive12'}
+              fontSize={14}
+              color={'ghostVerse.grey.base'}
+            >
+              Filters
+            </Text>
             <Select
               value={sortBy}
               onChange={handleSortChange}
@@ -61,7 +69,7 @@ export const Gadget = () => {
               p={0}
               cursor={'pointer'}
               fontFamily={'vt323'}
-              fontSize={{ base: '2xl' }}
+              fontSize={24}
               _hover={{ borderColor: 'ghostVerse.green.base' }}
               _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
             >
