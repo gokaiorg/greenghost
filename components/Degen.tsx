@@ -1,4 +1,4 @@
-import { Box, Select } from '@chakra-ui/react';
+import { Box, Select, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import { degens } from '../config/degens';
 import { DegenItem } from './DegenItem';
@@ -35,7 +35,7 @@ export const Degen = () => {
   };
 
   return (
-    <Box mt={4} mb="10">
+    <Box mb="10">
       <Box
         display={'flex'}
         alignItems={'baseline'}
@@ -48,13 +48,21 @@ export const Degen = () => {
           display={'inline-flex'}
           mr={'auto'}
           flexWrap={'wrap'}
-          fontSize={30}
+          fontSize={26}
           fontFamily={'vt323'}
         >
           Concentrated weed for degen.
         </Box>
         <Box display={'flex'} mb={{ base: '4', lg: '0' }}>
           <Box mr={4}>
+            <Text
+              as={'label'}
+              fontFamily={'CubicFive12'}
+              fontSize={14}
+              color={'ghostVerse.grey.base'}
+            >
+              Filters
+            </Text>
             <Select
               value={sortBy}
               onChange={handleSortChange}
@@ -65,7 +73,7 @@ export const Degen = () => {
               p={0}
               cursor={'pointer'}
               fontFamily={'vt323'}
-              fontSize={{ base: '2xl' }}
+              fontSize={24}
               _hover={{ borderColor: 'ghostVerse.green.base' }}
               _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
               w={'fit-content'}

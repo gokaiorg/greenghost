@@ -1,4 +1,4 @@
-import { Box, Select, Checkbox } from '@chakra-ui/react';
+import { Box, Select, Checkbox, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import { products } from '../config/products';
 import { BudItem } from './BudItem';
@@ -74,14 +74,14 @@ export const Bud = () => {
   };
 
   return (
-    <Box mt={4} mb="10">
+    <Box mb="10">
       <Box
         as={'h2'}
         mb={4}
         display={'inline-flex'}
         mr={'auto'}
         flexWrap={'wrap'}
-        fontSize={30}
+        fontSize={26}
         fontFamily={'vt323'}
       >
         Buds price for 1 gram.
@@ -89,33 +89,19 @@ export const Bud = () => {
       <Box
         display={'flex'}
         width={'100%'}
-        alignItems={'baseline'}
+        alignItems={'end'}
         mb={4}
         flexDirection={{ base: 'column', lg: 'row' }}
       >
         <Box mr={4}>
-          <Select
-            value={dominanceFilter}
-            onChange={handleDominanceChange}
-            borderRadius={'0'}
-            color={'ghostVerse.green.base'}
-            borderColor={'black'}
-            outline={'none'}
-            p={0}
-            cursor={'pointer'}
-            fontFamily={'vt323'}
-            fontSize={{ base: '2xl' }}
-            _hover={{ borderColor: 'ghostVerse.green.base' }}
-            _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
-            w={'fit-content'}
+          <Text
+            as={'label'}
+            fontFamily={'CubicFive12'}
+            fontSize={14}
+            color={'ghostVerse.grey.base'}
           >
-            <option value="All">All Dominance</option>
-            <option value="Sativa">Sativa</option>
-            <option value="Indica">Indica</option>
-            <option value="Hybrid">Hybrid</option>
-          </Select>
-        </Box>
-        <Box mr={4}>
+            Filters
+          </Text>
           <Select
             value={sortBy}
             onChange={handleSortChange}
@@ -126,7 +112,7 @@ export const Bud = () => {
             p={0}
             cursor={'pointer'}
             fontFamily={'vt323'}
-            fontSize={{ base: '2xl' }}
+            fontSize={24}
             _hover={{ borderColor: 'ghostVerse.green.base' }}
             _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
             w={'fit-content'}
@@ -141,7 +127,45 @@ export const Bud = () => {
             <option value="indicaLowToHigh">Indica: Low to High</option>
           </Select>
         </Box>
+        <Box mr={4}>
+          <Text
+            as={'label'}
+            fontFamily={'CubicFive12'}
+            fontSize={14}
+            color={'ghostVerse.grey.base'}
+          >
+            Dominance
+          </Text>
+          <Select
+            value={dominanceFilter}
+            onChange={handleDominanceChange}
+            borderRadius={'0'}
+            color={'ghostVerse.green.base'}
+            borderColor={'black'}
+            outline={'none'}
+            p={0}
+            cursor={'pointer'}
+            fontFamily={'vt323'}
+            fontSize={24}
+            _hover={{ borderColor: 'ghostVerse.green.base' }}
+            _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
+            w={'fit-content'}
+          >
+            <option value="All">All Dominance</option>
+            <option value="Sativa">Sativa</option>
+            <option value="Indica">Indica</option>
+            <option value="Hybrid">Hybrid</option>
+          </Select>
+        </Box>
         <Box>
+          <Text
+            as={'label'}
+            fontFamily={'CubicFive12'}
+            fontSize={14}
+            color={'ghostVerse.grey.base'}
+          >
+            Grower
+          </Text>
           <Select
             value={growerFilter}
             onChange={handleGrowerChange}
@@ -152,7 +176,7 @@ export const Bud = () => {
             p={0}
             cursor={'pointer'}
             fontFamily={'vt323'}
-            fontSize={{ base: '2xl' }}
+            fontSize={24}
             _hover={{ borderColor: 'ghostVerse.green.base' }}
             _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
             w={'fit-content'}

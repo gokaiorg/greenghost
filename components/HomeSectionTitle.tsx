@@ -9,13 +9,13 @@ export const HomeSectionTitle: FC<HomeSectionTitleProps> = ({ title }) => {
   return (
     <Text
       as={'h1'}
-      fontSize={{ base: 'xl', md: '2xl' }}
+      fontSize={20}
       fontFamily={'CubicFive12'}
       display={'flex'}
       flexDirection={'row'}
       alignItems={'center'}
       marginRight={1}
-      marginBottom={4}
+      marginTop={4}
     >
       {title}
     </Text>
