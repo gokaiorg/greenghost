@@ -29,7 +29,7 @@ const WeedShop: NextPage = () => {
         />
         <meta
           property="og:image"
-          content="https://green.gd/green-ghost-weed-shop-menu.png"
+          content="https://green.gd/media/green-ghost-degen-weed-shop-buds-menu.webp"
         />
         <meta property="og:image:width" content="1748" />
         <meta property="og:image:height" content="2480" />
@@ -44,7 +44,7 @@ const WeedShop: NextPage = () => {
         />
         <meta
           name="twitter:image"
-          content="https://green.gd/green-ghost-weed-shop-menu.png"
+          content="https://green.gd/media/green-ghost-degen-weed-shop-buds-menu.webp"
         />
         <meta name="twitter:url" content="https://green.gd/weed-shop" />
       </Head>
