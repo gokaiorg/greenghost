@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import { Box } from '@chakra-ui/react';
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
@@ -7,20 +6,19 @@ import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import Head from 'next/head';
 import { MenuWeedShop } from '../components/MenuWeedShop';
 import { BudMember } from '../components/BudMember';
-import { IconMenu } from '../components/IconMenu';
 
 const WeedShopMember: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Degen Weed Shop - Member Only Menu.</title>
+        <title>Green Ghost - Degen Weed Shop - Member Only Menu</title>
         <meta
           name="description"
           content="Join our exclusive member shop and gain access to a wide selection of premium cannabis products at unbeatable prices. Our members enjoy special discounts and promotions on top-quality buds, pre-rolls, edibles, and more. We also offer exclusive access to limited edition strains and products, as well as personalized recommendations from our knowledgeable staff. Join us now and experience the best of the cannabis world with our exclusive member shop."
         />
         <meta
           property="og:title"
-          content="Green Ghost - Degen Weed Shop - Member Only Menu."
+          content="Green Ghost - Degen Weed Shop - Member Only Menu"
         />
         <meta
           property="og:description"
@@ -35,7 +33,7 @@ const WeedShopMember: NextPage = () => {
         <meta property="og:url" content="https://green.gd/weed-shop-member" />
         <meta
           name="twitter:title"
-          content="Green Ghost - Degen Weed Shop - Member Only Menu."
+          content="Green Ghost - Degen Weed Shop - Member Only Menu"
         />
         <meta
           name="twitter:description"
@@ -51,13 +49,8 @@ const WeedShopMember: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <Box display={'flex'} alignItems={'center'}>
-          <Box w={'70px'} mr={4} mb={4}>
-            <IconMenu />
-          </Box>
-          <HomeSectionTitle title="Degen Weed Shop - Member Only Menu." />
-        </Box>
         <MenuWeedShop />
+        <HomeSectionTitle title="Member Only Menu" />
         <BudMember />
       </MainLayout>
     </>

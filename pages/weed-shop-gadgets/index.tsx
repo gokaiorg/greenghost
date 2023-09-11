@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import { Box } from '@chakra-ui/react';
 import { MainLayout } from '../../components/MainLayout';
 import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
@@ -7,20 +6,19 @@ import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import Head from 'next/head';
 import { MenuWeedShop } from '../../components/MenuWeedShop';
 import { Gadget } from '../../components/Gadget';
-import { IconMenu } from '../../components/IconMenu';
 
 const WeedShopGadgets: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Degen Weed Shop - Gadgets Menu.</title>
+        <title>Green Ghost - Degen Weed Shop - Gadgets Menu</title>
         <meta
           name="description"
           content="Elevate your smoking experience with our premium selection of weed gadgets. From high-quality grinders to sleek bongs and rolling papers, we offer everything you need to enhance your sessions. Discover top-notch accessories designed for convenience, durability, and optimal performance. Whether you're a casual smoker or a seasoned connoisseur, our weed gadgets are crafted to meet your needs and elevate your enjoyment. Explore our collection and unlock a new level of satisfaction in your smoking rituals."
         />
         <meta
           property="og:title"
-          content="Green Ghost - Degen Weed Shop - Gadgets Menu."
+          content="Green Ghost - Degen Weed Shop - Gadgets Menu"
         />
         <meta
           property="og:description"
@@ -35,7 +33,7 @@ const WeedShopGadgets: NextPage = () => {
         <meta property="og:url" content="https://green.gd/weed-shop-gadgets" />
         <meta
           name="twitter:title"
-          content="Green Ghost - Degen Weed Shop - Gadgets Menu."
+          content="Green Ghost - Degen Weed Shop - Gadgets Menu"
         />
         <meta
           name="twitter:description"
@@ -51,13 +49,8 @@ const WeedShopGadgets: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <Box display={'flex'} alignItems={'center'}>
-          <Box w={'70px'} mr={4} mb={4}>
-            <IconMenu />
-          </Box>
-          <HomeSectionTitle title="Degen Weed Shop - Gadgets Menu." />
-        </Box>
         <MenuWeedShop />
+        <HomeSectionTitle title="Gadgets Menu" />
         <Gadget />
       </MainLayout>
     </>

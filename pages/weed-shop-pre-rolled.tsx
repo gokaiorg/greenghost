@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import { Box } from '@chakra-ui/react';
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
@@ -7,20 +6,19 @@ import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import { PreRoll } from '../components/PreRoll';
 import Head from 'next/head';
 import { MenuWeedShop } from '../components/MenuWeedShop';
-import { IconMenu } from '../components/IconMenu';
 
 const WeedShopMember: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Degen Weed Shop - Pre Rolled Menu.</title>
+        <title>Green Ghost - Degen Weed Shop - Pre Rolled Menu</title>
         <meta
           name="description"
           content="Looking for high-quality pre-rolled joints made with locally sourced, organic cannabis? Look no further than our pre-rolled shop! We offer a wide selection of pre-rolls made with only the best, all-natural ingredients. Our products are carefully crafted to ensure a consistent, high-quality experience every time. Try our pre-rolls today and taste the difference that local, organic products can make."
         />
         <meta
           property="og:title"
-          content="Green Ghost - Degen Weed Shop - Pre Rolled Menu."
+          content="Green Ghost - Degen Weed Shop - Pre Rolled Menu"
         />
         <meta
           property="og:description"
@@ -38,7 +36,7 @@ const WeedShopMember: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Ghost - Degen Weed Shop - Pre Rolled Menu."
+          content="Green Ghost - Degen Weed Shop - Pre Rolled Menu"
         />
         <meta
           name="twitter:description"
@@ -57,13 +55,8 @@ const WeedShopMember: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <Box display={'flex'} alignItems={'center'}>
-          <Box w={'70px'} mr={4} mb={4}>
-            <IconMenu />
-          </Box>
-          <HomeSectionTitle title="Degen Weed Shop - Pre Rolled Menu." />
-        </Box>
         <MenuWeedShop />
+        <HomeSectionTitle title="Pre Rolled Menu" />
         <PreRoll />
       </MainLayout>
     </>

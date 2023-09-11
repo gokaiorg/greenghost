@@ -1,4 +1,4 @@
-import { Box, Select } from '@chakra-ui/react';
+import { Box, Select, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import { products } from '../config/products';
 import { BudItem } from './BudItem';
@@ -61,14 +61,14 @@ export const BudMember = () => {
   };
 
   return (
-    <Box mt={4} mb="10">
+    <Box mb="10">
       <Box
         as={'h2'}
         mb={4}
         display={'inline-flex'}
         mr={'auto'}
         flexWrap={'wrap'}
-        fontSize={30}
+        fontSize={26}
         fontFamily={'vt323'}
       >
         Latest buds for members only. Pre-order with a minimum of 10 grams.
@@ -81,6 +81,14 @@ export const BudMember = () => {
         flexDirection={{ base: 'column', lg: 'row' }}
       >
         <Box mr={4}>
+          <Text
+            as={'label'}
+            fontFamily={'CubicFive12'}
+            fontSize={14}
+            color={'ghostVerse.grey.base'}
+          >
+            Dominance
+          </Text>
           <Select
             value={dominanceFilter}
             onChange={handleDominanceChange}
@@ -91,7 +99,7 @@ export const BudMember = () => {
             p={0}
             cursor={'pointer'}
             fontFamily={'vt323'}
-            fontSize={{ base: '2xl' }}
+            fontSize={24}
             _hover={{ borderColor: 'ghostVerse.green.base' }}
             _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
             w={'fit-content'}
@@ -103,6 +111,14 @@ export const BudMember = () => {
           </Select>
         </Box>
         <Box>
+          <Text
+            as={'label'}
+            fontFamily={'CubicFive12'}
+            fontSize={14}
+            color={'ghostVerse.grey.base'}
+          >
+            Filters
+          </Text>
           <Select
             value={sortBy}
             onChange={handleSortChange}
@@ -113,7 +129,7 @@ export const BudMember = () => {
             p={0}
             cursor={'pointer'}
             fontFamily={'vt323'}
-            fontSize={{ base: '2xl' }}
+            fontSize={24}
             _hover={{ borderColor: 'ghostVerse.green.base' }}
             _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
             w={'fit-content'}

@@ -19,15 +19,15 @@ export const StrainWeek = () => {
       <br />
       Discover the{' '}
       <Link
-        href="/weed-shop/buddy-critical"
-        title="Buddy Critical only 400 THB this week!"
+        href="/weed-shop/purple-zkittlez"
+        title="Purple Zkittlez only 300 THB this week!"
         passHref
       >
         <Box as={'span'} color={'white'}>
-          Buddy Critical
+          Purple Zkittlez
         </Box>
       </Link>{' '}
-      for only 400 THB.
+      for only 300 THB.
     </Box>
   );
 };
