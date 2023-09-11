@@ -11,14 +11,14 @@ const WeedShopEdibles: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Degen Weed Shop - Edibles Menu.</title>
+        <title>Green Ghost - Degen Weed Shop - Edibles Menu</title>
         <meta
           name="description"
           content="Discover our delicious selection of locally sourced and organic edibles. From classic brownies and gummies to unique artisanal cookies, our edibles are carefully crafted to provide a consistent and enjoyable experience. Our products are made with high-quality ingredients and are lab tested for potency and purity. Whether you're looking for a tasty way to relax or a discreet way to medicate, our edibles have got you covered. Order now and indulge in the ultimate edible experience!"
         />
         <meta
           property="og:title"
-          content="Green Ghost - Degen Weed Shop - Edibles Menu."
+          content="Green Ghost - Degen Weed Shop - Edibles Menu"
         />
         <meta
           property="og:description"
@@ -33,7 +33,7 @@ const WeedShopEdibles: NextPage = () => {
         <meta property="og:url" content="https://green.gd/weed-shop-edibles" />
         <meta
           name="twitter:title"
-          content="Green Ghost - Degen Weed Shop - Edibles Menu."
+          content="Green Ghost - Degen Weed Shop - Edibles Menu"
         />
         <meta
           name="twitter:description"
