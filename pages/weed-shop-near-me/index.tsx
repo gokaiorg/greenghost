@@ -13,14 +13,14 @@ const WeedShopNearMe: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Degen Weed Shop - Near Me.</title>
+        <title>Green Ghost - Degen Weed Shop - Near Me</title>
         <meta
           name="description"
           content="Visit Green Ghost Weed Shop near me today for the best selection of locally sourced organic cannabis products. With multiple locations in Phuket, Thailand, we offer fast and convenient delivery options as well. Browse our menu and order online now!"
         />
         <meta
           property="og:title"
-          content="Green Ghost - Degen Weed Shop - Near Me."
+          content="Green Ghost - Degen Weed Shop - Near Me"
         />
         <meta
           property="og:description"
@@ -35,7 +35,7 @@ const WeedShopNearMe: NextPage = () => {
         <meta property="og:url" content="https://green.gd/weed-shop-near-me" />
         <meta
           name="twitter:title"
-          content="Green Ghost - Degen Weed Shop - Near Me."
+          content="Green Ghost - Degen Weed Shop - Near Me"
         />
         <meta
           name="twitter:description"

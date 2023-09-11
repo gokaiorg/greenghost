@@ -11,14 +11,14 @@ const WeedShopMember: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Degen Weed Shop - Member Only Menu.</title>
+        <title>Green Ghost - Degen Weed Shop - Member Only Menu</title>
         <meta
           name="description"
           content="Join our exclusive member shop and gain access to a wide selection of premium cannabis products at unbeatable prices. Our members enjoy special discounts and promotions on top-quality buds, pre-rolls, edibles, and more. We also offer exclusive access to limited edition strains and products, as well as personalized recommendations from our knowledgeable staff. Join us now and experience the best of the cannabis world with our exclusive member shop."
         />
         <meta
           property="og:title"
-          content="Green Ghost - Degen Weed Shop - Member Only Menu."
+          content="Green Ghost - Degen Weed Shop - Member Only Menu"
         />
         <meta
           property="og:description"
@@ -33,7 +33,7 @@ const WeedShopMember: NextPage = () => {
         <meta property="og:url" content="https://green.gd/weed-shop-member" />
         <meta
           name="twitter:title"
-          content="Green Ghost - Degen Weed Shop - Member Only Menu."
+          content="Green Ghost - Degen Weed Shop - Member Only Menu"
         />
         <meta
           name="twitter:description"
