@@ -47,7 +47,7 @@ export const products: Product[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-purple-queen-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-purple-queen-cover.webp',
-      // '/media/green-ghost-degen-weed-shop-strain-purple-queen-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-purple-queen-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-purple-queen-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Purple Queen',
