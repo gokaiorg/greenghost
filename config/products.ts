@@ -24,6 +24,36 @@ export type Product = {
 
 export const products: Product[] = [
   {
+    slug: 'purple-queen',
+    name: 'Purple Queen',
+    price: 700,
+    dominance: 'Indica',
+    indica: '75',
+    sativa: '25',
+    THC: '22',
+    CBD: '1',
+    effects: 'Aroused, Giggly, Happy',
+    relieves: 'Depression, Insomnia, Lack of appetite',
+    grower: 'Ohigho',
+    growerSlug: '/ohigho',
+    environment: 'Organic Indoor',
+    harvest: '09/08/2023',
+    quantity: 34,
+    origin: 'Phuket',
+    description:
+      "Purple Queen is a captivating indica strain, born from the harmonious union of Hindu Kush and Purple Afghani cannabis varieties. With a formidable THC content of 22% and a dash of CBG at 1%, Purple Queen beckons seasoned cannabis connoisseurs to embark on a journey into relaxation and euphoria. Its entrancing effects, as recounted by Leafly patrons, are a delightful blend of giggly amusement, heightened sensuality, and an overwhelming sense of happiness. For those seeking relief from the relentless grip of depression, persistent insomnia, or a stubborn lack of appetite, Purple Queen stands as a steadfast ally. \n\n Crafted with care by Royal Queen Seeds, this strain tantalizes the palate with a unique flavor profile featuring hints of sage, subtle notes of ammonia, and a floral touch of violet. All of this is harmonized by its dominant terpene, caryophyllene, which adds to its distinct allure. \n\n Purple Queen's lineage traces back to some of the most renowned cannabis strains, blending their genetics to create a truly regal experience. It's the result of meticulous breeding, and its potency is evident in every trichome-covered bud. Whether you're looking to unwind after a long day or seeking respite from troubling ailments, Purple Queen promises an exquisite journey into the realm of relaxation and contentment. So, take a seat on your throne of tranquility, and let the Purple Queen reign over your senses, leading you into a state of joyful serenity.",
+    descSeo:
+      'Purple Queen is a captivating indica strain, born from the harmonious union of Hindu Kush and Purple Afghani cannabis varieties. With a formidable THC content of 22% and a dash of CBG at 1%, Purple Queen beckons seasoned cannabis connoisseurs to embark on a journey into relaxation and euphoria. Its entrancing effects, as recounted by Leafly patrons, are a delightful blend of giggly amusement, heightened sensuality, and an overwhelming sense of happiness. For those seeking relief from the relentless grip of depression, persistent insomnia, or a stubborn lack of appetite, Purple Queen stands as a steadfast ally.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-purple-queen-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-purple-queen-cover.webp',
+      // '/media/green-ghost-degen-weed-shop-strain-purple-queen-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-purple-queen-bud-02.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Purple Queen',
+    source: 'https://www.leafly.com/strains/purple-queen',
+  },
+  {
     slug: 'gelato-runtz',
     name: 'Gelato Runtz',
     price: 500,
