@@ -50,7 +50,12 @@ const CannabisGrower: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <Box display={'flex'} flexDirection={'column'} alignItems={'center'}>
+        <Box
+          display={'flex'}
+          flexDirection={'column'}
+          alignItems={'center'}
+          textAlign={'center'}
+        >
           <ImgGrower />
           <HomeSectionTitle title="Thailand Weed Grower Selection" />
         </Box>
@@ -68,17 +73,18 @@ const CannabisGrower: NextPage = () => {
           mt={5}
           mb={6}
           p={4}
+          lineHeight={1}
         >
           <Text
             as={'h2'}
             color={'white'}
-            fontSize={'4xl'}
+            fontSize={{ base: 30, lg: 34 }}
             fontWeight={'black'}
             mb={4}
           >
             Discover Thailand&apos;s Premier Cannabis Growers with Green Ghost!
           </Text>
-          <Box fontSize={'3xl'} fontFamily={'vt323'}>
+          <Box fontSize={{ base: 24, lg: 30 }} fontFamily={'vt323'}>
             Your quest for the finest cannabis cultivators in Thailand ends
             here, backed by the trusted selection endorsed by Green Ghost.
             We&apos;ve scoured the nation to curate a handpicked collection of

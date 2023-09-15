@@ -6,7 +6,6 @@ import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import Head from 'next/head';
-import { ImgQuestion } from '../components/ImgQuestion';
 import Image from 'next/image';
 import { Grower } from '../components/Grower';
 
@@ -69,8 +68,7 @@ const BuyWeed: NextPage = () => {
             fontWeight={'black'}
             mb={4}
           >
-            What&apos;s the inspiring story behind Green Ghost&apos;s origins
-            <ImgQuestion />
+            What&apos;s the inspiring story behind Green Ghost&apos;s origins ?
           </Text>
           <Box
             display={'flex'}
@@ -135,8 +133,7 @@ const BuyWeed: NextPage = () => {
                 mb={4}
               >
                 What sets Green Ghost apart from other coffeeshop in the
-                industry
-                <ImgQuestion />
+                industry ?
               </Text>
               <Text>
                 This collaboration has allowed us to launch a unique concept

@@ -1,5 +1,4 @@
 import { Box, Text } from '@chakra-ui/react';
-import { ImgQuestion } from './ImgQuestion';
 
 export const PreRoll = () => {
   return (
@@ -19,8 +18,7 @@ export const PreRoll = () => {
     >
       <Text as={'h2'} fontWeight={'black'} fontSize={'4xl'} marginBottom={4}>
         Looking for a convenient and hassle-free way to enjoy your favorite
-        strains
-        <ImgQuestion />
+        strains ?
       </Text>
       Look no further than Green Ghost! Our selection of pre-rolled joints
       allows you to indulge in the variety of your choice with ease. Whether
@@ -29,9 +27,8 @@ export const PreRoll = () => {
       <br />
       <br />
       <Text as={'h2'} fontWeight={'black'} fontSize={'4xl'} marginBottom={4}>
-        And the best part
-        <ImgQuestion /> Our prices are just as affordable as buying bud by the
-        gram.
+        And the best part ? Our prices are just as affordable as buying bud by
+        the gram.
       </Text>
       For example, a 0.5 gram joint of Cherry Garcia is just 150THB, while a 1
       gram joint of Fruit Spirit will only set you back 900THB. So why wait?

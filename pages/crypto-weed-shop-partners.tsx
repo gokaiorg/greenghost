@@ -4,24 +4,22 @@ import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
-import { ImgQuestion } from '../components/ImgQuestion';
 import Head from 'next/head';
 import { MenuCrypto } from '../components/MenuCrypto';
-import { IconEarn } from '../components/IconEarn';
+import { IconPartners } from '../components/IconPartners';
 
 const CryptoWeedShop: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Crypto Weed Shop - Partners.</title>
+        <title>Green Ghost - Crypto Weed Shop - Partners</title>
         <meta
           name="description"
           content="Unlock a 13% promotion on all your purchases at our crypto weed shop by holding one of our partner NFTs. As a valued partner, you'll have exclusive access to discounts and promotions on our premium selection of organic cannabis products. Join our community of partners today."
         />
         <meta
           property="og:title"
-          content="Green Ghost - Crypto Weed Shop - Partners.
-          Edibles."
+          content="Green Ghost - Crypto Weed Shop - Partners"
         />
         <meta
           property="og:description"
@@ -39,8 +37,7 @@ const CryptoWeedShop: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Ghost - Crypto Weed Shop - Partners.
-          Edibles."
+          content="Green Ghost - Crypto Weed Shop - Partners"
         />
         <meta
           name="twitter:description"
@@ -59,17 +56,21 @@ const CryptoWeedShop: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <Box display={'flex'} alignItems={'center'}>
-          <Box w={'38px'} mr={4} mb={4}>
-            <IconEarn />
-          </Box>
-          <HomeSectionTitle title="Crypto Weed Shop - Partners." />
-        </Box>
         <MenuCrypto />
+        <Box
+          display={'flex'}
+          flexDirection={'column'}
+          alignItems={'center'}
+          textAlign={'center'}
+        >
+          <Box w={{ base: '50px', lg: '100px' }} my={4}>
+            <IconPartners />
+          </Box>
+          <HomeSectionTitle title="Crypto Weed Shop - Partners" />
+        </Box>
         <Box
           as="div"
           color={'white'}
-          fontSize={{ base: '3xl' }}
           borderColor={'ghostVerse.color2.base'}
           bgColor={'ghostVerse.dark.lighter'}
           borderWidth={1}
@@ -79,28 +80,30 @@ const CryptoWeedShop: NextPage = () => {
           p={4}
           mr={'auto'}
           fontFamily={'vt323'}
+          lineHeight={1}
+          fontSize={{ base: 24, lg: 30 }}
         >
           <Text
             as={'h2'}
+            color={'white'}
+            fontSize={{ base: 30, lg: 34 }}
             fontWeight={'black'}
-            fontSize={'4xl'}
-            marginBottom={4}
+            mb={4}
           >
-            Are you from another universe in MultiversX
-            <ImgQuestion />
+            Are you from another universe in MultiversX?
           </Text>
-          We also offer privileges to our partners in cannabis, art, gaming,
-          community and of course, web3.
-          <br />
-          <br />
-          If you own an NFT from one of our partners, you can enjoy a{' '}
-          <Box as={'span'} color={'ghostVerse.blue.base'}>
-            13% discount
-          </Box>{' '}
-          on every order made at the Green Ghost cannabis store.
-          <br />
-          <br />
-          <Box display={'flex'}>
+          <Text as={'p'} mb={4}>
+            We also offer privileges to our partners in cannabis, art, gaming,
+            community and of course, web3.
+            <br />
+            <br />
+            If you own an NFT from one of our partners, you can enjoy a{' '}
+            <Text as={'span'} color={'ghostVerse.blue.base'}>
+              13% discount
+            </Text>{' '}
+            on every order made at the Green Ghost cannabis store.
+          </Text>
+          <Box display={'flex'} flexWrap={'wrap'}>
             <Box
               display={'flex'}
               justifyContent={'center'}
@@ -109,6 +112,7 @@ const CryptoWeedShop: NextPage = () => {
               color={'ghostVerse.green.base'}
               as="a"
               mx={4}
+              mb={4}
               target="_blank"
               href="https://linktr.ee/elrondbuds"
             >
@@ -131,6 +135,7 @@ const CryptoWeedShop: NextPage = () => {
               color={'ghostVerse.green.base'}
               as="a"
               mx={4}
+              mb={4}
               target="_blank"
               href="https://power.plata.network/"
             >
@@ -153,6 +158,7 @@ const CryptoWeedShop: NextPage = () => {
               color={'ghostVerse.green.base'}
               as="a"
               mx={4}
+              mb={4}
               target="_blank"
               href="https://www.instagram.com/faintart.x/"
             >
@@ -175,6 +181,7 @@ const CryptoWeedShop: NextPage = () => {
               color={'ghostVerse.green.base'}
               as="a"
               mx={4}
+              mb={4}
               target="_blank"
               href="https://linktr.ee/gccmmxxi"
             >
@@ -197,6 +204,7 @@ const CryptoWeedShop: NextPage = () => {
               color={'ghostVerse.green.base'}
               as="a"
               mx={4}
+              mb={4}
               target="_blank"
               href="https://efforteconomy.io/"
             >
@@ -219,6 +227,7 @@ const CryptoWeedShop: NextPage = () => {
               color={'ghostVerse.green.base'}
               as="a"
               mx={4}
+              mb={4}
               target="_blank"
               href="https://peerme.io/"
             >
@@ -238,9 +247,10 @@ const CryptoWeedShop: NextPage = () => {
           <br />
           <Text
             as={'h2'}
+            color={'white'}
+            fontSize={{ base: 30, lg: 34 }}
             fontWeight={'black'}
-            fontSize={'4xl'}
-            marginBottom={4}
+            mb={4}
           >
             Join us now and take advantage of these exclusive perks!
           </Text>

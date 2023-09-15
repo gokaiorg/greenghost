@@ -1,9 +1,9 @@
 import Image from 'next/image';
 
-export const IconEarn = () => {
+export const IconRelax = () => {
   return (
     <Image
-      src="/media/green-ghost-degen-weed-shop-earn.png"
+      src="/media/green-ghost-crypto-weed-shop-relax-earn.png"
       width={418}
       height={569}
       alt="Green Ghost - Crypto Weed Shop - Relax and Earn."

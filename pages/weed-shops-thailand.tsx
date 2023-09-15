@@ -56,7 +56,12 @@ const CannabisShop: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <Box display={'flex'} flexDirection={'column'} alignItems={'center'}>
+        <Box
+          display={'flex'}
+          flexDirection={'column'}
+          alignItems={'center'}
+          textAlign={'center'}
+        >
           <ImgShops />
           <HomeSectionTitle title="Thailand Weed Shops Selection." />
         </Box>
@@ -74,17 +79,18 @@ const CannabisShop: NextPage = () => {
           mt={5}
           mb={6}
           p={4}
+          lineHeight={1}
         >
           <Text
             as={'h2'}
             color={'white'}
-            fontSize={'4xl'}
+            fontSize={{ base: 30, lg: 34 }}
             fontWeight={'black'}
             mb={4}
           >
             Looking for the best cannabis shops in Thailand?
           </Text>
-          <Box fontSize={'3xl'} fontFamily={'vt323'}>
+          <Box fontSize={{ base: 24, lg: 30 }} fontFamily={'vt323'}>
             Look no further than the ones trusted by the Green Ghost. We&apos;ve
             scoured the country to find the top cannabis shops that offer the
             highest quality products and the best prices.

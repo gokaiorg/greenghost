@@ -36,6 +36,7 @@ export const MenuCrypto = () => {
     <>
       <Box
         display={'flex'}
+        mb={2}
         overflow={{ base: 'auto', md: 'none' }}
         sx={{
           '::-webkit-scrollbar': {
@@ -44,7 +45,13 @@ export const MenuCrypto = () => {
         }}
       >
         {Links.map((link) => (
-          <NavLink key={link.label} to={link.path} title={link.label}>
+          <NavLink
+            px={4}
+            py={0}
+            key={link.label}
+            to={link.path}
+            title={link.label}
+          >
             <Box w={link.imageW} mr={2}>
               <Image
                 src={link.image}
@@ -53,7 +60,7 @@ export const MenuCrypto = () => {
                 alt="Green Ghost - Degen Weed Shop - Crypto Weed Shop."
               />
             </Box>
-            {link.label}
+            <Box fontSize={{ base: 14, lg: 16 }}>{link.label}</Box>
           </NavLink>
         ))}
       </Box>

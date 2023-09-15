@@ -3,19 +3,26 @@ import { useState } from 'react';
 import { thaishops } from '../config/thaishops';
 import { ThaiShopItem } from './ThaiShopItem';
 
-type CityOption = 'All';
-('Rawai');
-('Karon');
-('Phuket Town');
-('Patong');
+type CityOption = 'All' | 'Rawai' | 'Karon' | 'Phuket Town' | 'Patong';
 
 export const ThaiShop = () => {
   const [cityFilter, setCityFilter] = useState<CityOption>('All');
+
+  // Create a Set to track unique shop IDs
+  const shopIds = new Set<string>();
 
   const filteredProducts = thaishops.filter((thaishop) => {
     if (cityFilter !== 'All' && thaishop.city !== cityFilter) {
       return false;
     }
+
+    // Check if the shop ID is already in the Set; skip duplicates
+    if (shopIds.has(thaishop.map)) {
+      return false;
+    }
+
+    // Add the shop ID to the Set
+    shopIds.add(thaishop.map);
 
     return true;
   });
@@ -70,7 +77,7 @@ export const ThaiShop = () => {
       </Box>
       <Box display={'flex'} flexWrap={'wrap'}>
         {filteredProducts.map((thaishop) => (
-          <ThaiShopItem key={thaishop.name} thaishop={thaishop} />
+          <ThaiShopItem key={thaishop.map} thaishop={thaishop} />
         ))}
       </Box>
     </Box>

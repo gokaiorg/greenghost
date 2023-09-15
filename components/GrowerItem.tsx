@@ -9,7 +9,7 @@ type GrowerItemProps = {
 
 export const GrowerItem = ({ grower }: GrowerItemProps) => {
   return (
-    <Box width={{ base: '100%', lg: '25%' }} mb={'4'} minHeight={'170px'}>
+    <Box width={{ base: '50%', lg: '25%' }} mb={'4'} minHeight={'170px'}>
       <Link href={`weed-grower/${grower.slug}`} title={grower.name} passHref>
         <Box
           h={'100%'}
@@ -39,7 +39,7 @@ export const GrowerItem = ({ grower }: GrowerItemProps) => {
               priority={false}
             />
           </Box>
-          <Box as={'h3'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
+          <Box as={'h3'} w={'100%'} fontSize={{ base: 18, md: 22 }} mt={'auto'}>
             {grower.name}
           </Box>
         </Box>
