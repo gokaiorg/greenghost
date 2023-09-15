@@ -10,7 +10,9 @@ type BudItemProps = {
 export const BudItem = ({ product }: BudItemProps) => {
   return (
     <Box
-      width={{ base: '50%', md: '33.33333%', lg: '25%', xl: '20%' }} p={0.5} lineHeight={1}
+      width={{ base: '50%', md: '33.33333%', lg: '25%', xl: '20%' }}
+      p={0.5}
+      lineHeight={1}
     >
       <Link href={`weed-shop/${product.slug}`} title={product.name} passHref>
         <Box
@@ -53,7 +55,7 @@ export const BudItem = ({ product }: BudItemProps) => {
             <Box
               as={'h2'}
               fontFamily={'CubicFive12'}
-              fontSize={{base: 16, lg: 18}}
+              fontSize={{ base: 16, lg: 18 }}
               display={'flex'}
               flexDirection={'column'}
               marginRight={1}
@@ -69,11 +71,26 @@ export const BudItem = ({ product }: BudItemProps) => {
                 padding={'0.5rem'}
               >
                 {product.price == 999 ? (
-                  <Box fontSize={{base: 14, lg: 16}} color={'ghostVerse.green.base'}>Coming Soon</Box>
+                  <Box
+                    fontSize={{ base: 14, lg: 16 }}
+                    color={'ghostVerse.green.base'}
+                  >
+                    Coming Soon
+                  </Box>
                 ) : product.quantity === 0 ? (
-                  <Box fontSize={{base: 14, lg: 16}} color={'ghostVerse.red.base'}>Sold Out</Box>
+                  <Box
+                    fontSize={{ base: 14, lg: 16 }}
+                    color={'ghostVerse.red.base'}
+                  >
+                    Sold Out
+                  </Box>
                 ) : (
-                  <Box fontSize={{base: 14, lg: 16}} color={'ghostVerse.green.base'}>{product.price} THB</Box>
+                  <Box
+                    fontSize={{ base: 14, lg: 16 }}
+                    color={'ghostVerse.green.base'}
+                  >
+                    {product.price} THB
+                  </Box>
                 )}
               </Box>
               {product.name}

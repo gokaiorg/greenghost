@@ -63,7 +63,13 @@ export const MenuWeedShop = () => {
         }}
       >
         {Links.map((link) => (
-          <NavLink px={4} py={0} key={link.label} to={link.path} title={link.label}>
+          <NavLink
+            px={4}
+            py={0}
+            key={link.label}
+            to={link.path}
+            title={link.label}
+          >
             <Box w={link.imageW} mr={2}>
               <Image
                 src={link.image}
@@ -72,7 +78,7 @@ export const MenuWeedShop = () => {
                 alt="Green Ghost - Degen Weed Shop - Weed Menu."
               />
             </Box>
-            <Box fontSize={{base: 14, lg: 16}}>{link.label}</Box>
+            <Box fontSize={{ base: 14, lg: 16 }}>{link.label}</Box>
           </NavLink>
         ))}
       </Box>
