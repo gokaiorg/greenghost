@@ -8,14 +8,14 @@ export const HomeMenu = () => {
   return (
     <Box
       display={'flex'}
-      mt={20}
+      mt={{ base: 10, lg: 20 }}
       mb={10}
       flexWrap={'wrap'}
       alignItems={'stretch'}
       mx={-2}
     >
       <Box display={'flex'} flexDir={'column'} w={'100%'} alignItems={'center'}>
-        <Box w={'200px'}>
+        <Box w={{ base: '100px', lg: '200px' }}>
           <motion.div
             animate={{
               x: [-10, 10, -10],
@@ -32,17 +32,21 @@ export const HomeMenu = () => {
         </Box>
         <Text
           as={'h3'}
-          fontSize={'4xl'}
+          fontSize={{ base: 24, lg: 34 }}
           mx={'auto'}
           fontFamily={'CubicFive12'}
-          mt={10}
-          mb={10}
+          mt={{ base: 5, lg: 10 }}
+          mb={{ base: 5, lg: 10 }}
           textAlign={'center'}
         >
           Weed Shop Menu
         </Text>
       </Box>
-      <Box width={{ base: '100%', lg: '25%' }} mb={'4'} minHeight={'170px'}>
+      <Box
+        width={{ base: '50%', lg: '25%' }}
+        mb={{ base: 2, lg: 4 }}
+        minHeight={'170px'}
+      >
         <Link href={'/weed-shop'} passHref title="Weed Shop Menu Buds">
           <Box
             h={'100%'}
@@ -51,7 +55,7 @@ export const HomeMenu = () => {
             fontFamily={'CubicFive12'}
             borderColor={'ghostVerse.grey.base'}
             borderWidth={1}
-            mx={2}
+            mx={{ base: 1, lg: 2 }}
             bgColor={'ghostVerse.dark.lighter'}
             textAlign={'center'}
             p={4}
@@ -72,13 +76,22 @@ export const HomeMenu = () => {
                 alt="Weed Shop Menu - Buds."
               />
             </Box>
-            <Box as={'h4'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
+            <Box
+              as={'h4'}
+              w={'100%'}
+              fontSize={{ base: 18, md: 22 }}
+              mt={'auto'}
+            >
               Buds
             </Box>
           </Box>
         </Link>
       </Box>
-      <Box width={{ base: '100%', lg: '25%' }} mb={'4'} minHeight={'170px'}>
+      <Box
+        width={{ base: '50%', lg: '25%' }}
+        mb={{ base: 2, lg: 4 }}
+        minHeight={'170px'}
+      >
         <Link
           href={'/weed-shop-edibles'}
           passHref
@@ -91,7 +104,7 @@ export const HomeMenu = () => {
             fontFamily={'CubicFive12'}
             borderColor={'ghostVerse.grey.base'}
             borderWidth={1}
-            mx={2}
+            mx={{ base: 1, lg: 2 }}
             bgColor={'ghostVerse.dark.lighter'}
             textAlign={'center'}
             p={4}
@@ -112,13 +125,22 @@ export const HomeMenu = () => {
                 alt="Weed Shop Menu - Edibles."
               />
             </Box>
-            <Box as={'h4'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
+            <Box
+              as={'h4'}
+              w={'100%'}
+              fontSize={{ base: 18, md: 22 }}
+              mt={'auto'}
+            >
               Edibles
             </Box>
           </Box>
         </Link>
       </Box>
-      <Box width={{ base: '100%', lg: '25%' }} mb={'4'} minHeight={'170px'}>
+      <Box
+        width={{ base: '50%', lg: '25%' }}
+        mb={{ base: 2, lg: 4 }}
+        minHeight={'170px'}
+      >
         <Link href={'/weed-shop-degen'} passHref title={'Weed Shop Menu Degen'}>
           <Box
             h={'100%'}
@@ -127,7 +149,7 @@ export const HomeMenu = () => {
             fontFamily={'CubicFive12'}
             borderColor={'ghostVerse.grey.base'}
             borderWidth={1}
-            mx={2}
+            mx={{ base: 1, lg: 2 }}
             bgColor={'ghostVerse.dark.lighter'}
             textAlign={'center'}
             p={4}
@@ -148,13 +170,22 @@ export const HomeMenu = () => {
                 alt="Weed Shop Menu - Degen."
               />
             </Box>
-            <Box as={'h4'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
+            <Box
+              as={'h4'}
+              w={'100%'}
+              fontSize={{ base: 18, md: 22 }}
+              mt={'auto'}
+            >
               Degen
             </Box>
           </Box>
         </Link>
       </Box>
-      <Box width={{ base: '100%', lg: '25%' }} mb={'4'} minHeight={'170px'}>
+      <Box
+        width={{ base: '50%', lg: '25%' }}
+        mb={{ base: 2, lg: 4 }}
+        minHeight={'170px'}
+      >
         <Link href="/weed-shop-gadgets" passHref title="Weed Shop Menu Gadgets">
           <Box
             h={'100%'}
@@ -163,7 +194,7 @@ export const HomeMenu = () => {
             fontFamily={'CubicFive12'}
             borderColor={'ghostVerse.grey.base'}
             borderWidth={1}
-            mx={2}
+            mx={{ base: 1, lg: 2 }}
             bgColor={'ghostVerse.dark.lighter'}
             textAlign={'center'}
             p={4}
@@ -184,7 +215,12 @@ export const HomeMenu = () => {
                 alt="Weed Shop Menu - Gadgets."
               />
             </Box>
-            <Box as={'h4'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
+            <Box
+              as={'h4'}
+              w={'100%'}
+              fontSize={{ base: 18, md: 22 }}
+              mt={'auto'}
+            >
               Gadgets
             </Box>
           </Box>

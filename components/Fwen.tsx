@@ -27,7 +27,7 @@ export const Fwen = () => {
       >
         <Text
           as={'h3'}
-          fontSize={'4xl'}
+          fontSize={{ base: 24, lg: 34 }}
           mx={'auto'}
           fontFamily={'CubicFive12'}
           mt={10}

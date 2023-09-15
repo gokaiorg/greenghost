@@ -45,6 +45,7 @@ export const StrainWeek = () => {
             fontWeight={'bold'}
             as={'h5'}
             fontSize={{ base: '16' }}
+            color={'ghostVerse.green.base'}
           >
             <Box w={8} h={8} mr={2}>
               <svg
@@ -88,6 +89,7 @@ export const StrainWeek = () => {
             fontWeight={'bold'}
             as={'h5'}
             fontSize={{ base: '16' }}
+            color={'ghostVerse.orange.light'}
           >
             <Box w={8} h={8} mr={2}>
               <svg
@@ -131,6 +133,7 @@ export const StrainWeek = () => {
             fontWeight={'bold'}
             as={'h5'}
             fontSize={{ base: '16' }}
+            color={'ghostVerse.orange.light'}
           >
             <Box w={8} h={8} mr={2}>
               <svg

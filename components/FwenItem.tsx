@@ -11,7 +11,7 @@ interface FwenItemProps {
 
 export const FwenItem: FC<FwenItemProps> = ({ name, fwenLogo, fwenLink }) => {
   return (
-    <Box width={{ base: '100%', lg: '25%' }} mb={'4'} minHeight={'170px'}>
+    <Box width={{ base: '50%', lg: '25%' }} mb={'4'} minHeight={'170px'}>
       <Link href={fwenLink} passHref title={`Green Ghost Fwen - ${name}`}>
         <Box
           h={'100%'}
@@ -39,7 +39,7 @@ export const FwenItem: FC<FwenItemProps> = ({ name, fwenLogo, fwenLink }) => {
               alt={`Green Ghost Fwen - ${name}`}
             />
           </Box>
-          <Box as={'h4'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
+          <Box as={'h4'} w={'100%'} fontSize={{ base: 18, md: 22 }} mt={'auto'}>
             {name}
           </Box>
         </Box>
