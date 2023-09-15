@@ -4,6 +4,7 @@ import {
   MenuButton,
   Menu,
   MenuList,
+  Checkbox,
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { products } from '../config/products';
@@ -63,7 +64,7 @@ export const PreRoll = () => {
     setDominanceFilter(event.target.value as DominanceOption);
   };
 
-    const handleShowUnavailableChange = () => {
+  const handleShowUnavailableChange = () => {
     setShowUnavailable((prevValue) => !prevValue);
   };
 
@@ -188,6 +189,18 @@ export const PreRoll = () => {
                     <option value="Hybrid">Hybrid</option>
                   </Select>
                 </Box>
+                <Checkbox
+                  ml={{ base: '4', lg: 'auto' }}
+                  my={{ base: '2', lg: '0' }}
+                  colorScheme="green"
+                  display={'none'}
+                  whiteSpace={'nowrap'}
+                  checked={showUnavailable}
+                  onChange={handleShowUnavailableChange}
+                  _checked={{ color: 'ghostVerse.green.base' }}
+                >
+                  All Buds
+                </Checkbox>
               </Box>
             </MenuList>
           </Menu>

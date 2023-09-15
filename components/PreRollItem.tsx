@@ -1,6 +1,5 @@
 import { Box } from '@chakra-ui/react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Product } from '../config/products';
 
 type PreRollItemProps = {
@@ -9,11 +8,7 @@ type PreRollItemProps = {
 
 export const PreRollItem = ({ product }: PreRollItemProps) => {
   return (
-    <Box
-      width={{ base: '100%' }}
-      p={0.5}
-      lineHeight={1}
-    >
+    <Box width={{ base: '100%' }} p={0.5} lineHeight={1}>
       <Link href={`weed-shop/${product.slug}`} title={product.name} passHref>
         <Box
           borderColor={'ghostVerse.green.base'}
@@ -35,10 +30,9 @@ export const PreRollItem = ({ product }: PreRollItemProps) => {
           }}
           transition={'all .3s'}
         >
-          
           <Box
             display={'flex'}
-            flexDirection={{base: 'column', lg: 'row'}}
+            flexDirection={{ base: 'column', lg: 'row' }}
             flex={'1'}
             alignItems={'center'}
             marginLeft={{ base: 0 }}
@@ -49,11 +43,17 @@ export const PreRollItem = ({ product }: PreRollItemProps) => {
               fontSize={{ base: 16, lg: 18 }}
               display={'flex'}
               flexDirection={'column'}
-              w={{base: '100%', lg: '25%'}}
+              w={{ base: '100%', lg: '25%' }}
             >
               {product.name}
             </Box>
-            <Box w={{base: '100%', lg: '10%'}} display={'flex'} fontFamily={'vt323'} fontSize={'2xl'} mb={2}>
+            <Box
+              w={{ base: '100%', lg: '10%' }}
+              display={'flex'}
+              fontFamily={'vt323'}
+              fontSize={'2xl'}
+              mb={2}
+            >
               {product.dominance == 'Indica' && (
                 <Box as={'h3'} color={'ghostVerse.blue.base'} marginRight={2}>
                   {product.dominance} {product.indica}%
@@ -76,7 +76,7 @@ export const PreRollItem = ({ product }: PreRollItemProps) => {
               fontSize={'2xl'}
               flexWrap={'wrap'}
               mb={2}
-              w={{base: '100%', lg: '15%'}}
+              w={{ base: '100%', lg: '15%' }}
             >
               {product.THC !== 'undefined' && (
                 <Box display={'flex'} marginRight={2} flexDirection={'row'}>
@@ -111,25 +111,21 @@ export const PreRollItem = ({ product }: PreRollItemProps) => {
               display={'flex'}
               fontFamily={'vt323'}
               fontSize={'lg'}
-              w={{base: '100%', lg: '20%'}}
+              w={{ base: '100%', lg: '20%' }}
             >
               {product.effects !== 'undefined' && (
                 <Box color={'ghostVerse.orange.light'}>{product.effects}</Box>
               )}
             </Box>
-            <Box
-                marginLeft={'auto'}
-                whiteSpace={'nowrap'}
-                padding={'0.5rem'}
-              >
+            <Box marginLeft={'auto'} whiteSpace={'nowrap'} padding={'0.5rem'}>
               <Box
                 fontFamily={'CubicFive12'}
-                    fontSize={{ base: 18, lg: 20 }}
-                    color={'ghostVerse.green.base'}
-                  >
-                    {product.price} THB
-                  </Box>
+                fontSize={{ base: 18, lg: 20 }}
+                color={'ghostVerse.green.base'}
+              >
+                {product.price} THB
               </Box>
+            </Box>
           </Box>
         </Box>
       </Link>
