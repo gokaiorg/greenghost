@@ -253,7 +253,7 @@ export const Bud = () => {
           </Menu>
         </Box>
       </Box>
-      <Box display={'flex'} flexWrap={'wrap'}>
+      <Box display={'flex'} flexWrap={'wrap'} mx={-0.5}>
         {sortedProducts.map((product) => (
           <BudItem key={product.slug} product={product} />
         ))}
