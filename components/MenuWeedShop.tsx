@@ -54,6 +54,7 @@ export const MenuWeedShop = () => {
     <>
       <Box
         display={'flex'}
+        mb={2}
         overflow={{ base: 'auto', md: 'none' }}
         sx={{
           '::-webkit-scrollbar': {
@@ -71,7 +72,7 @@ export const MenuWeedShop = () => {
                 alt="Green Ghost - Degen Weed Shop - Weed Menu."
               />
             </Box>
-            {link.label}
+            <Box fontSize={16}>{link.label}</Box>
           </NavLink>
         ))}
       </Box>

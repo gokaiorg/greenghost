@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
-import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import Head from 'next/head';
 import { MenuWeedShop } from '../components/MenuWeedShop';
 import { BudMember } from '../components/BudMember';
@@ -50,7 +49,6 @@ const WeedShopMember: NextPage = () => {
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
         <MenuWeedShop />
-        <HomeSectionTitle title="Member Only Menu" />
         <BudMember />
       </MainLayout>
     </>

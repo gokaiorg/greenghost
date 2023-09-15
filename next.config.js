@@ -53,6 +53,36 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/buddy-bud-weed',
+        destination: '/weed-grower/cosmic-temple-vibes',
+        permanent: true,
+      },
+      {
+        source: '/ohigho',
+        destination: '/weed-grower/ohigho',
+        permanent: true,
+      },
+      {
+        source: '/my-weed-solutions',
+        destination: '/weed-grower/my-weed',
+        permanent: true,
+      },
+      {
+        source: '/cosmic-temple-vibes',
+        destination: '/weed-grower/cosmic-temple-vibes',
+        permanent: true,
+      },
+      {
+        source: '/cannabis-grower-phuket',
+        destination: '/weed-grower',
+        permanent: true,
+      },
+      {
+        source: '/cannabis-shop-phuket',
+        destination: '/weed-shops-thailand',
+        permanent: true,
+      },
+      {
         source: '/space-cake-brownie',
         destination: '/weed-shop-edibles/thc-brownie',
         permanent: true,

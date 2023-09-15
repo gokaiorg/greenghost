@@ -24,6 +24,35 @@ export type Product = {
 
 export const products: Product[] = [
   {
+    slug: 'forbidden-fruit',
+    name: 'Forbidden Fruit',
+    price: 700,
+    dominance: 'Indica',
+    indica: '70',
+    sativa: '30',
+    THC: '23',
+    CBD: 'undefined',
+    effects: 'Sleepy, Relaxed, Hungry',
+    relieves: 'Stress, Anxiety, Pain',
+    grower: 'Sweed Dreams',
+    growerSlug: '/sweed-dreams',
+    environment: 'Indoor',
+    harvest: '10/14/2023',
+    quantity: 50,
+    origin: 'Krabi',
+    description:
+      "Purple Queen is a captivating indica strain, born from the harmonious union of Hindu Kush and Purple Afghani cannabis varieties. With a formidable THC content of 22% and a dash of CBG at 1%, Purple Queen beckons seasoned cannabis connoisseurs to embark on a journey into relaxation and euphoria. Its entrancing effects, as recounted by Leafly patrons, are a delightful blend of giggly amusement, heightened sensuality, and an overwhelming sense of happiness. For those seeking relief from the relentless grip of depression, persistent insomnia, or a stubborn lack of appetite, Purple Queen stands as a steadfast ally. \n\n Crafted with care by Royal Queen Seeds, this strain tantalizes the palate with a unique flavor profile featuring hints of sage, subtle notes of ammonia, and a floral touch of violet. All of this is harmonized by its dominant terpene, caryophyllene, which adds to its distinct allure. \n\n Purple Queen's lineage traces back to some of the most renowned cannabis strains, blending their genetics to create a truly regal experience. It's the result of meticulous breeding, and its potency is evident in every trichome-covered bud. Whether you're looking to unwind after a long day or seeking respite from troubling ailments, Purple Queen promises an exquisite journey into the realm of relaxation and contentment. So, take a seat on your throne of tranquility, and let the Purple Queen reign over your senses, leading you into a state of joyful serenity.",
+    descSeo:
+      'Purple Queen is a captivating indica strain, born from the harmonious union of Hindu Kush and Purple Afghani cannabis varieties. With a formidable THC content of 22% and a dash of CBG at 1%, Purple Queen beckons seasoned cannabis connoisseurs to embark on a journey into relaxation and euphoria. Its entrancing effects, as recounted by Leafly patrons, are a delightful blend of giggly amusement, heightened sensuality, and an overwhelming sense of happiness. For those seeking relief from the relentless grip of depression, persistent insomnia, or a stubborn lack of appetite, Purple Queen stands as a steadfast ally.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-cover.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Purple Queen',
+    source: 'https://www.leafly.com/strains/forbidden-fruit',
+  },
+  {
     slug: 'purple-queen',
     name: 'Purple Queen',
     price: 700,

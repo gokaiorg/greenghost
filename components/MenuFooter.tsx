@@ -27,19 +27,15 @@ export const MenuFooter = () => {
       >
         <Box m={2} color={'ghostVerse.green.base'}>
           <Link
-            title="Cannabis Shop Phuket"
-            href="/cannabis-shop-phuket"
+            title="Best Weed Shops in Thailand"
+            href="/weed-shops-thailand"
             passHref
           >
             Shops |
           </Link>
         </Box>
         <Box m={2} color={'ghostVerse.green.base'}>
-          <Link
-            title="Cannabis Grower Phuket"
-            href="/cannabis-grower-phuket"
-            passHref
-          >
+          <Link title="Weed Growers in Thailand" href="/weed-grower" passHref>
             Growers |
           </Link>
         </Box>

@@ -49,14 +49,20 @@ export default function ProductPage({ product }: ProductPageProps) {
         <meta property="og:image" content={product.images[1]} />
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="1000" />
-        <meta property="og:url" content={`https://green.gd/${product.slug}`} />
+        <meta
+          property="og:url"
+          content={`https://green.gd/weed-shop/${product.slug}`}
+        />
         <meta
           name="twitter:title"
           content={`Green Ghost - ${product.name} Strain`}
         />
         <meta name="twitter:description" content={product.descSeo} />
         <meta name="twitter:image" content={product.images[1]} />
-        <meta name="twitter:url" content={`https://green.gd/${product.slug}`} />
+        <meta
+          name="twitter:url"
+          content={`https://green.gd/weed-shop/${product.slug}`}
+        />
       </Head>
       <MainLayout>
         <HeaderMenu>
@@ -370,7 +376,11 @@ export default function ProductPage({ product }: ProductPageProps) {
                 <Box as={'h3'} mr={2}>
                   Grower
                 </Box>
-                <Link href={product.growerSlug} title={product.grower} passHref>
+                <Link
+                  href={`/weed-grower${product.growerSlug}`}
+                  title={product.grower}
+                  passHref
+                >
                   <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
                     {product.grower}
                   </Box>
@@ -384,8 +394,8 @@ export default function ProductPage({ product }: ProductPageProps) {
                   Origin
                 </Box>
                 <Link
-                  href="/cannabis-grower-phuket"
-                  title="Cannabis Grower Phuket"
+                  href="/weed-grower"
+                  title="Weed Growers in Thailand"
                   passHref
                 >
                   <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>

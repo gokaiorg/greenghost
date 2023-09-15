@@ -72,7 +72,7 @@ export const HomeMenu = () => {
                 alt="Weed Shop Menu - Buds."
               />
             </Box>
-            <Box as={'h2'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
+            <Box as={'h4'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
               Buds
             </Box>
           </Box>
@@ -112,7 +112,7 @@ export const HomeMenu = () => {
                 alt="Weed Shop Menu - Edibles."
               />
             </Box>
-            <Box as={'h2'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
+            <Box as={'h4'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
               Edibles
             </Box>
           </Box>
@@ -148,7 +148,7 @@ export const HomeMenu = () => {
                 alt="Weed Shop Menu - Degen."
               />
             </Box>
-            <Box as={'h2'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
+            <Box as={'h4'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
               Degen
             </Box>
           </Box>
@@ -184,7 +184,7 @@ export const HomeMenu = () => {
                 alt="Weed Shop Menu - Gadgets."
               />
             </Box>
-            <Box as={'h2'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
+            <Box as={'h4'} w={'100%'} fontSize={{ base: '2xl' }} mt={'auto'}>
               Gadgets
             </Box>
           </Box>

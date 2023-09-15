@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import { MainLayout } from '../../components/MainLayout';
 import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
-import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import { Bud } from '../../components/Bud';
 import Head from 'next/head';
 import { MenuWeedShop } from '../../components/MenuWeedShop';
@@ -51,7 +50,6 @@ const WeedShop: NextPage = () => {
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
         <MenuWeedShop />
-        <HomeSectionTitle title="Buds Menu" />
         <Bud />
         <HomeFeature />
       </MainLayout>

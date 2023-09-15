@@ -5,10 +5,10 @@ import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import Head from 'next/head';
 import { HomeFeature } from '../components/HomeFeatures';
 import { HomeMenu } from '../components/HomeMenu';
-import { HomeFwens } from '../components/HomeFwens';
 import { StrainWeek } from '../components/StrainWeek';
 import { Review } from '../components/Review';
 import { HomeHero } from '../components/HomeHero';
+import { Fwen } from '../components/Fwen';
 
 const Home: NextPage = () => {
   return (
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
         <HomeHero />
         <HomeMenu />
         <HomeFeature />
-        <HomeFwens />
+        <Fwen />
         <Review />
       </MainLayout>
     </>

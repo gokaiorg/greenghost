@@ -8,7 +8,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { ImgQuestion } from '../components/ImgQuestion';
 import Image from 'next/image';
-import { PhuketPartners } from '../components/PhuketPartners';
+import { Grower } from '../components/Grower';
 
 const BuyWeed: NextPage = () => {
   return (
@@ -101,20 +101,30 @@ const BuyWeed: NextPage = () => {
               <Text>
                 Green Ghost is the result of a partnership with{' '}
                 <Link
-                  href="/cannabis-grower-phuket"
-                  title="Cannabis Grower Phuket"
+                  href="/weed-grower"
+                  title="Best Weed Growers Thailand"
                   passHref
                 >
                   <Box as={'span'} color={'ghostVerse.green.base'}>
-                    best Phuket growers
+                    best weed growers in Thailand
                   </Box>
                 </Link>{' '}
-                and Gokai Labs, a digital branding and communication agency with
-                over 10 years of experience in Thailand.
+                and{' '}
+                <Link
+                  href="https://gokai.org/"
+                  title="Gokai Labs - Creative Web3 agency"
+                  passHref
+                >
+                  <Box as={'span'} color={'ghostVerse.green.base'}>
+                    Gokai Labs
+                  </Box>
+                </Link>
+                , a digital branding and communication agency with over 10 years
+                of experience in Thailand.
               </Text>
             </Box>
           </Box>
-          <PhuketPartners />
+          <Grower />
           <Box display={'flex'} flexDirection={{ base: 'column', lg: 'row' }}>
             <Box width={{ base: '100%', lg: '65%' }}>
               <Text
