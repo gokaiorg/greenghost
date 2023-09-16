@@ -75,7 +75,7 @@ export const PreRoll = () => {
         flexDirection={{ base: 'column', lg: 'row' }}
         alignItems={{ base: 'start', lg: 'center' }}
       >
-        <HomeSectionTitle title="Pre-rolled Menu" />
+        <HomeSectionTitle title="Pre-rolls Menu" />
         <Box
           ml={{ base: '0', lg: '4' }}
           display={'flex'}
@@ -92,7 +92,7 @@ export const PreRoll = () => {
             fontSize={26}
             fontFamily={'vt323'}
           >
-            Pre-Rolled on-demand. 1 gram.
+            Pre-Roll on demand. 1 gram.
           </Box>
           <Menu>
             <MenuButton w={8} h={8} color={'ghostVerse.green.base'}>
