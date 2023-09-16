@@ -20,7 +20,7 @@ export const Footer = () => {
         <SocialMediaIcons />
         <MenuFooter />
         <Box
-          fontSize="xs"
+          fontSize={{ base: 11, lg: 14 }}
           fontWeight={'bold'}
           position={'relative'}
           zIndex={1}

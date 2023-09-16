@@ -7,21 +7,21 @@ import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import Link from 'next/link';
 import Head from 'next/head';
 import { MenuCrypto } from '../components/MenuCrypto';
-import { IconEarn } from '../components/IconEarn';
 import Image from 'next/image';
+import { IconRelax } from '../components/IconRelax';
 
 const CryptoWeedShop: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Crypto Weed Shop - Relax and Earn.</title>
+        <title>Green Ghost - Crypto Weed Shop - Relax and Earn</title>
         <meta
           name="description"
           content="Discover the future of cannabis shopping with The Green Ghost - a tokenized crypto weed shop offering pre-rolled, edibles, and a wide range of flowers. Become a member with NFT ownership to receive exclusive promotions and token cashback rewards. Shop with ease and security with our innovative blockchain-based platform."
         />
         <meta
           property="og:title"
-          content="Green Ghost - Crypto Weed Shop - Relax and Earn."
+          content="Green Ghost - Crypto Weed Shop - Relax and Earn"
         />
         <meta
           property="og:description"
@@ -39,7 +39,7 @@ const CryptoWeedShop: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Ghost - Crypto Weed Shop - Relax and Earn."
+          content="Green Ghost - Crypto Weed Shop - Relax and Earn"
         />
         <meta
           name="twitter:description"
@@ -58,19 +58,23 @@ const CryptoWeedShop: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <Box display={'flex'} alignItems={'center'}>
-          <Box w={'38px'} mr={4} mb={4}>
-            <IconEarn />
-          </Box>
-          <HomeSectionTitle title="Crypto Weed Shop - Relax & Earn." />
-        </Box>
         <MenuCrypto />
+        <Box
+          display={'flex'}
+          flexDirection={'column'}
+          alignItems={'center'}
+          textAlign={'center'}
+        >
+          <Box w={{ base: '50px', lg: '100px' }} my={4}>
+            <IconRelax />
+          </Box>
+          <HomeSectionTitle title="Crypto Weed Shop - Relax & Earn" />
+        </Box>
         <Box
           display={'flex'}
           flexDirection={'column'}
           as="div"
           color={'white'}
-          fontSize={{ base: '3xl' }}
           fontFamily={'vt323'}
           borderColor={'ghostVerse.color2.base'}
           bgColor={'ghostVerse.dark.lighter'}
@@ -79,11 +83,13 @@ const CryptoWeedShop: NextPage = () => {
           mt={5}
           mb={6}
           p={4}
+          lineHeight={1}
+          fontSize={{ base: 24, lg: 30 }}
         >
           <Text
             as={'h2'}
             color={'white'}
-            fontSize={'5xl'}
+            fontSize={{ base: 30, lg: 34 }}
             fontWeight={'black'}
             mb={4}
           >
@@ -98,7 +104,7 @@ const CryptoWeedShop: NextPage = () => {
             <Box
               width={{ base: '100%', lg: '45%' }}
               mr={{ base: 0, lg: 10 }}
-              mt={4}
+              my={4}
             >
               <Image
                 src="/media/green-ghost-weed-shop-pixel-art.webp"
@@ -107,14 +113,15 @@ const CryptoWeedShop: NextPage = () => {
                 alt="Green Ghost is a part of the GhostVerse ecosystem"
               />
             </Box>
-            <Box width={{ base: '100%', lg: '55%' }}>
+            <Text as={'p'} width={{ base: '100%', lg: '55%' }}>
               By being a part of the GhostVerse ecosystem, the Green Ghost aims
               to offer a unique platform for members to access and enjoy
               cannabis-related products and services, leveraging the
               advancements of blockchain technology.
-            </Box>
+            </Text>
           </Box>
-          <Box
+          <Text
+            as={'p'}
             width={{ base: '100%' }}
             mb={'6'}
             color={'ghostVerse.blue.base'}
@@ -126,7 +133,7 @@ const CryptoWeedShop: NextPage = () => {
             can experience exclusive perks, discounts, and rewards while
             engaging with the world of crypto and cannabis in a secure and
             innovative environment.
-          </Box>
+          </Text>
           <Box
             display={'flex'}
             flexDirection={{ base: 'column', lg: 'row' }}
@@ -136,7 +143,7 @@ const CryptoWeedShop: NextPage = () => {
               <Text
                 as={'h2'}
                 fontWeight={'black'}
-                fontSize={'5xl'}
+                fontSize={{ base: 30, lg: 34 }}
                 marginBottom={4}
               >
                 How does it work?
@@ -148,9 +155,9 @@ const CryptoWeedShop: NextPage = () => {
                 title="GhostVerse DAO"
                 passHref
               >
-                <Box as={'span'} color={'ghostVerse.green.base'}>
+                <Text as={'span'} color={'ghostVerse.green.base'}>
                   GhostVerse DAO
-                </Box>
+                </Text>
               </Link>{' '}
               to increase passive income for NFT holders, and a portion of
               GhostVerse&apos;s revenue is redistributed to Green Ghost
@@ -160,14 +167,11 @@ const CryptoWeedShop: NextPage = () => {
                 title="Green Ghost cashback"
                 passHref
               >
-                <Box as={'span'} color={'ghostVerse.green.base'}>
+                <Text as={'span'} color={'ghostVerse.green.base'}>
                   cashback
-                </Box>
+                </Text>
               </Link>
-              .
-              <br />
-              <br />
-              This ensures that both the NFT holders and customers of Green
+              . This ensures that both the NFT holders and customers of Green
               Ghost benefit from the earnings generated by the GhostVerse
               ecosystem.
             </Box>
@@ -186,7 +190,7 @@ const CryptoWeedShop: NextPage = () => {
           </Box>
           <Box
             display={'flex'}
-            flexDirection={{ base: 'column', lg: 'row' }}
+            flexDirection={{ base: 'column-reverse', lg: 'row' }}
             mb={8}
           >
             <Box
@@ -205,36 +209,36 @@ const CryptoWeedShop: NextPage = () => {
               <Text
                 as={'h2'}
                 fontWeight={'black'}
-                fontSize={'5xl'}
+                fontSize={{ base: 30, lg: 34 }}
                 marginBottom={4}
               >
                 How to become a member?
               </Text>
-              Own at least 1 of our NFTs!
-              <br />
-              You need to{' '}
-              <Link
-                href="/install-xportal-app"
-                title="Install xPortal App"
-                passHref
-              >
-                <Box as={'span'} color={'ghostVerse.green.base'}>
-                  Install xPortal Wallet
-                </Box>
-              </Link>{' '}
-              and purchase an{' '}
-              <Link
-                href="https://ghostverse.org/mxghosts"
-                title="Green Ghost buy NFT"
-                passHref
-              >
-                <Box as={'span'} color={'ghostVerse.green.base'}>
-                  MxGhosts
-                </Box>
-              </Link>{' '}
-              NFT.
-              <br />
-              <br />
+              <Text as={'p'} mb={4}>
+                Own at least 1 of our NFTs!
+                <br />
+                You need to{' '}
+                <Link
+                  href="/install-xportal-app"
+                  title="Install xPortal App"
+                  passHref
+                >
+                  <Box as={'span'} color={'ghostVerse.green.base'}>
+                    Install xPortal Wallet
+                  </Box>
+                </Link>{' '}
+                and purchase an{' '}
+                <Link
+                  href="https://ghostverse.org/mxghosts"
+                  title="Green Ghost buy NFT"
+                  passHref
+                >
+                  <Box as={'span'} color={'ghostVerse.green.base'}>
+                    MxGhosts
+                  </Box>
+                </Link>{' '}
+                NFT.
+              </Text>
               <Box
                 as={'div'}
                 color={'ghostVerse.blue.base'}
@@ -257,35 +261,36 @@ const CryptoWeedShop: NextPage = () => {
                 id={'benefits'}
                 as={'h2'}
                 fontWeight={'black'}
-                fontSize={'5xl'}
+                fontSize={{ base: 30, lg: 34 }}
                 marginBottom={4}
               >
                 What are the benefits?
               </Text>
-              You get 31% off on buds and certain other products, and privileged
-              access to our new strain arrivals. You also receive cashback in{' '}
-              <Link
-                href="https://linktr.ee/elrondbuds"
-                title="Green Ghost - Elrond Buds"
-                passHref
-              >
-                <Box as={'span'} color={'ghostVerse.green.base'}>
-                  $EBUD
-                </Box>
-              </Link>
-              . You can also get discounts if you are a member of an{' '}
-              <Link
-                href="/crypto-weed-shop-partners"
-                title="Green Ghost - Crypto partners"
-                passHref
-              >
-                <Box as={'span'} color={'ghostVerse.green.base'}>
-                  NFT partner project
-                </Box>
-              </Link>
-              .
-              <br />
-              <br />
+              <Text as={'p'} mb={4}>
+                You get 31% off on buds and certain other products, and
+                privileged access to our new strain arrivals. You also receive
+                cashback in{' '}
+                <Link
+                  href="https://linktr.ee/elrondbuds"
+                  title="Green Ghost - Elrond Buds"
+                  passHref
+                >
+                  <Box as={'span'} color={'ghostVerse.green.base'}>
+                    $EBUD
+                  </Box>
+                </Link>
+                . You can also get discounts if you are a member of an{' '}
+                <Link
+                  href="/crypto-weed-shop-partners"
+                  title="Green Ghost - Crypto partners"
+                  passHref
+                >
+                  <Box as={'span'} color={'ghostVerse.green.base'}>
+                    NFT partner project
+                  </Box>
+                </Link>
+                .
+              </Text>
               <Link
                 href="https://ghostverse.org/play-and-earn"
                 title="GhostVerse MxGhosts - Play and Earn"
@@ -295,7 +300,7 @@ const CryptoWeedShop: NextPage = () => {
                   display={'inline-flex'}
                   color={'ghostVerse.green.base'}
                   borderColor={'ghostVerse.green.base'}
-                  fontSize={{ base: '3xl', md: '4xl' }}
+                  fontSize={{ base: 'xl', md: '4xl' }}
                   borderWidth={1}
                   bgColor="transparent"
                   backdropFilter={'blur(3px)'}

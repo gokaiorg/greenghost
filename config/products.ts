@@ -24,6 +24,35 @@ export type Product = {
 
 export const products: Product[] = [
   {
+    slug: 'forbidden-fruit',
+    name: 'Forbidden Fruit',
+    price: 999,
+    dominance: 'Indica',
+    indica: '70',
+    sativa: '30',
+    THC: '23',
+    CBD: 'undefined',
+    effects: 'Sleepy, Relaxed, Hungry',
+    relieves: 'Stress, Anxiety, Pain',
+    grower: 'Sweed Dreams',
+    growerSlug: '/sweed-dreams',
+    environment: 'Indoor',
+    harvest: '10/14/2023',
+    quantity: 1,
+    origin: 'Krabi',
+    description:
+      "Forbidden Fruit, a tantalizing cannabis strain, emerges from the enchanting genetic blend of Cherry Pie and Tangie. Its visual allure is evident in its dense, purple-tinged buds, complemented by dark green leaves and vibrant orange hairs. The bouquet of aromas is a harmonious fusion of Cherry Pie's sweet, musky cherry notes entwined with Tangie's bold, tropical flavors. Hints of pine, mango, and passionfruit candy add further layers to this aromatic masterpiece. \n\n Upon consumption, Forbidden Fruit unveils its potent indica characteristics that hit with precision, starting with a cerebral euphoria that settles gently into the body. This strain's deep physical relaxation and mental tranquility make it an ideal choice for alleviating minor physical discomfort and shedding the burdens of stress. Whether you seek solace after a long day or a respite from life's demands, Forbidden Fruit offers a serene escape. \n\n Forbidden Fruit is a testament to the artistry of cannabis breeding, delivering a delightful blend of flavors and effects. Its ability to soothe both body and mind makes it a cherished choice among cannabis connoisseurs seeking a moment of tranquility and relief. With its remarkable terpene profile and seductive appearance, Forbidden Fruit stands as a captivating option for those in pursuit of relaxation and respite in the world of cannabis.",
+    descSeo:
+      "Forbidden Fruit, a tantalizing cannabis strain, emerges from the enchanting genetic blend of Cherry Pie and Tangie. Its visual allure is evident in its dense, purple-tinged buds, complemented by dark green leaves and vibrant orange hairs. The bouquet of aromas is a harmonious fusion of Cherry Pie's sweet, musky cherry notes entwined with Tangie's bold, tropical flavors. Hints of pine, mango, and passionfruit candy add further layers to this aromatic masterpiece.",
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-cover.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Forbidden Fruit',
+    source: 'https://www.leafly.com/strains/forbidden-fruit',
+  },
+  {
     slug: 'purple-queen',
     name: 'Purple Queen',
     price: 700,
@@ -233,7 +262,7 @@ export const products: Product[] = [
   {
     slug: 'hulkberry',
     name: 'Hulkberry',
-    price: 300,
+    price: 999,
     dominance: 'Sativa',
     indica: '35',
     sativa: '65',
@@ -245,7 +274,7 @@ export const products: Product[] = [
     growerSlug: '/ohigho',
     environment: 'Organic Indoor',
     harvest: '09/08/2023',
-    quantity: 27,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Hulkberry, a captivating strain with a genetic makeup of 65% sativa and 35% indica, emerges as a result of expertly blending the beloved Strawberry Diesel and OG Kush varieties. This strain earns its name from the remarkable density of its buds and a delightful infusion of berry essence. The appearance is a spectacle to behold, featuring robust, minty-green popcorn-shaped buds that sport subtle undertones of dark olive. Accentuating these nugs are long, delicate orange hairs and a generous dusting of petite, luminous white trichomes, glistening like morning dew. Upon breaking apart these frosty nuggets, an exquisite bouquet of sweet and tangy citrus notes wafts forth, accompanied by an underlying diesel richness that gains prominence when the buds are ignited. This symphony of scents preludes the flavor experience, characterized by a pronounced tang of sour lemon that harmonizes with hints of zesty diesel and earthiness upon exhalation. \n\n The Hulkberry strain wields an impressive potency, boasting an average THC level of 27%, which contributes to its robust effects. The high takes hold swiftly and profoundly, initiating a surge of invigorating sensations that kindle creativity and motivation. This euphoric ascent of the mind coexists harmoniously with a gentle, calming embrace that leaves physical energy untouched. Hulkberry's formidable potency makes it a promising contender for addressing various conditions, including chronic fatigue, migraines, ADD or ADHD, depression, and mood swings. Its distinctive profile combines the best of both sativa and indica worlds, offering a dynamic yet balanced experience that has the potential to elevate and soothe, all in one enticing package. \n\n In the realm of cannabis strains, Hulkberry emerges as a beacon of potency and flavor, beckoning connoisseurs and seekers of relief alike. Its lineage, traceable to Strawberry Diesel and OG Kush, lends it a unique character that tantalizes the senses and delivers a multifaceted high. Whether you're yearning for a wellspring of creativity or a respite from various ailments, Hulkberry stands ready to unleash its green magic, offering a remarkable journey that traverses the realms of taste, aroma, and effect.",

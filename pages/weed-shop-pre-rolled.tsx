@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
-import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import { PreRoll } from '../components/PreRoll';
 import Head from 'next/head';
 import { MenuWeedShop } from '../components/MenuWeedShop';
@@ -56,7 +55,6 @@ const WeedShopMember: NextPage = () => {
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
         <MenuWeedShop />
-        <HomeSectionTitle title="Pre Rolled Menu" />
         <PreRoll />
       </MainLayout>
     </>

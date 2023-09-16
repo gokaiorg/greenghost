@@ -10,9 +10,8 @@ type BudItemProps = {
 export const BudItem = ({ product }: BudItemProps) => {
   return (
     <Box
-      width={{ base: '100%', md: '33%', lg: '25%', xl: '20%' }}
-      paddingBottom={1}
-      paddingRight={1}
+      width={{ base: '50%', md: '33.33333%', lg: '25%', xl: '20%' }}
+      p={0.5}
       lineHeight={1}
     >
       <Link href={`weed-shop/${product.slug}`} title={product.name} passHref>
@@ -21,7 +20,7 @@ export const BudItem = ({ product }: BudItemProps) => {
           borderWidth={1}
           bgColor={'ghostVerse.dark.lighter'}
           backdropFilter={'blur(3px)'}
-          p={3}
+          p={2}
           pos={'relative'}
           fontWeight={'bold'}
           fontSize={'lg'}
@@ -54,9 +53,9 @@ export const BudItem = ({ product }: BudItemProps) => {
             marginTop={{ base: 4 }}
           >
             <Box
-              as={'h3'}
-              fontSize={'lg'}
+              as={'h2'}
               fontFamily={'CubicFive12'}
+              fontSize={{ base: 16, lg: 18 }}
               display={'flex'}
               flexDirection={'column'}
               marginRight={1}
@@ -72,28 +71,43 @@ export const BudItem = ({ product }: BudItemProps) => {
                 padding={'0.5rem'}
               >
                 {product.price == 999 ? (
-                  <Box color={'ghostVerse.green.base'}>Coming Soon</Box>
+                  <Box
+                    fontSize={{ base: 14, lg: 16 }}
+                    color={'ghostVerse.green.base'}
+                  >
+                    Coming Soon
+                  </Box>
                 ) : product.quantity === 0 ? (
-                  <Box color={'ghostVerse.red.base'}>Sold Out</Box>
+                  <Box
+                    fontSize={{ base: 14, lg: 16 }}
+                    color={'ghostVerse.red.base'}
+                  >
+                    Sold Out
+                  </Box>
                 ) : (
-                  <Box color={'ghostVerse.green.base'}>{product.price} THB</Box>
+                  <Box
+                    fontSize={{ base: 14, lg: 16 }}
+                    color={'ghostVerse.green.base'}
+                  >
+                    {product.price} THB
+                  </Box>
                 )}
               </Box>
               {product.name}
             </Box>
             <Box display={'flex'} fontFamily={'vt323'} fontSize={'2xl'} mb={1}>
               {product.dominance == 'Indica' && (
-                <Box as={'h4'} color={'ghostVerse.blue.base'} marginRight={2}>
+                <Box as={'h3'} color={'ghostVerse.blue.base'} marginRight={2}>
                   {product.dominance} {product.indica}%
                 </Box>
               )}
               {product.dominance == 'Sativa' && (
-                <Box as={'h4'} color={'ghostVerse.pink.base'} marginRight={2}>
+                <Box as={'h3'} color={'ghostVerse.pink.base'} marginRight={2}>
                   {product.dominance} {product.sativa}%
                 </Box>
               )}
               {product.dominance == 'Hybrid' && (
-                <Box as={'h4'} color={'ghostVerse.orange.base'} marginRight={2}>
+                <Box as={'h3'} color={'ghostVerse.orange.base'} marginRight={2}>
                   {product.dominance}
                 </Box>
               )}
@@ -105,34 +119,6 @@ export const BudItem = ({ product }: BudItemProps) => {
               flexWrap={'wrap'}
               mb={1}
             >
-              {/* {product.sativa !== 'undefined' && (
-                <Box display={'flex'} marginRight={2} flexDirection={'row'}>
-                  Sativa
-                  <Box
-                    marginLeft={2}
-                    color={'ghostVerse.green.base'}
-                    display={'flex'}
-                    flexDirection={'row'}
-                    alignItems={'baseline'}
-                  >
-                    {product.sativa}%
-                  </Box>
-                </Box>
-              )}
-              {product.indica !== 'undefined' && (
-                <Box display={'flex'} marginRight={2} flexDirection={'row'}>
-                  Indica
-                  <Box
-                    marginLeft={2}
-                    color={'ghostVerse.green.base'}
-                    display={'flex'}
-                    flexDirection={'row'}
-                    alignItems={'baseline'}
-                  >
-                    {product.indica}%
-                  </Box>
-                </Box>
-              )} */}
               {product.THC !== 'undefined' && (
                 <Box display={'flex'} marginRight={2} flexDirection={'row'}>
                   THC

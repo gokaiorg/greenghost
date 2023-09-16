@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Box } from '@chakra-ui/react';
-import { ImgQuestion } from './ImgQuestion';
 import Link from 'next/link';
 
 type AgeVerificationPopupProps = {
@@ -71,8 +70,7 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           mt={4}
           whiteSpace={'nowrap'}
         >
-          Are you 20 or older
-          <ImgQuestion />
+          Are you 20 or older?
         </Box>
         <Box
           as={'span'}

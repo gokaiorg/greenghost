@@ -30,7 +30,7 @@ export const ReviewItem: FC<ReviewItemProps> = ({
         backdropFilter={'blur(3px)'}
       >
         <Text
-          as={'h2'}
+          as={'h4'}
           fontSize={{ base: 'xl' }}
           marginBottom={2}
           fontFamily={'CubicFive10'}

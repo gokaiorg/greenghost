@@ -17,6 +17,12 @@ const Links: Route[] = [
     imageW: '25px',
   },
   {
+    path: '/weed-shop-pre-rolled',
+    image: '/media/green-ghost-degen-weed-shop-menu-pre-rolled.png',
+    label: 'Pre-Rolled',
+    imageW: '10px',
+  },
+  {
     path: '/weed-shop-edibles',
     image: '/media/green-ghost-degen-weed-shop-menu-edibles.png',
     label: 'Edibles',
@@ -35,12 +41,6 @@ const Links: Route[] = [
     imageW: '20px',
   },
   {
-    path: '/weed-shop-pre-rolled',
-    image: '/media/green-ghost-degen-weed-shop-menu-pre-rolled.png',
-    label: 'Pre-Rolled',
-    imageW: '10px',
-  },
-  {
     path: '/weed-shop-member',
     image: '/media/green-ghost-degen-weed-shop-menu-member.png',
     label: 'Member',
@@ -54,6 +54,7 @@ export const MenuWeedShop = () => {
     <>
       <Box
         display={'flex'}
+        mb={2}
         overflow={{ base: 'auto', md: 'none' }}
         sx={{
           '::-webkit-scrollbar': {
@@ -62,7 +63,13 @@ export const MenuWeedShop = () => {
         }}
       >
         {Links.map((link) => (
-          <NavLink key={link.label} to={link.path} title={link.label}>
+          <NavLink
+            px={4}
+            py={0}
+            key={link.label}
+            to={link.path}
+            title={link.label}
+          >
             <Box w={link.imageW} mr={2}>
               <Image
                 src={link.image}
@@ -71,7 +78,7 @@ export const MenuWeedShop = () => {
                 alt="Green Ghost - Degen Weed Shop - Weed Menu."
               />
             </Box>
-            {link.label}
+            <Box fontSize={{ base: 14, lg: 16 }}>{link.label}</Box>
           </NavLink>
         ))}
       </Box>

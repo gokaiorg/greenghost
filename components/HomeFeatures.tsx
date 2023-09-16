@@ -37,7 +37,7 @@ export const HomeFeature = () => {
             }}
           >
             <Box
-              as={'h2'}
+              as={'h4'}
               fontSize={{ base: 'xl' }}
               marginBottom={2}
               display={'flex'}
@@ -86,7 +86,7 @@ export const HomeFeature = () => {
             }}
           >
             <Box
-              as={'h2'}
+              as={'h4'}
               fontSize={{ base: 'xl' }}
               marginBottom={2}
               display={'flex'}
@@ -135,7 +135,7 @@ export const HomeFeature = () => {
             }}
           >
             <Box
-              as={'h2'}
+              as={'h4'}
               fontSize={{ base: 'xl' }}
               marginBottom={2}
               display={'flex'}
