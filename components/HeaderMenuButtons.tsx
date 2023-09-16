@@ -70,7 +70,11 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = ({ enabled }) => {
           Earn
         </Box>
       </Link>
-      <Link href={'/contact-green-ghost'} title={'Contact Green ghost'} passHref>
+      <Link
+        href={'/contact-green-ghost'}
+        title={'Contact Green ghost'}
+        passHref
+      >
         <Box
           display={'flex'}
           flexDirection={'column'}
