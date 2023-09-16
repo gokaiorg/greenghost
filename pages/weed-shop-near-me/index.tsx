@@ -57,7 +57,7 @@ const WeedShopNearMe: NextPage = () => {
           alignItems={'center'}
           textAlign={'center'}
         >
-          <Box w={{base: '80px', lg: '120px'}}>
+          <Box w={{ base: '80px', lg: '120px' }}>
             <IconMap />
           </Box>
           <HomeSectionTitle title="Degen Weed Shop Near Me" />

@@ -20,10 +20,7 @@ const BuyWeed: NextPage = () => {
           name="description"
           content="Contact Green Ghost Degen to place your order for high-quality, locally-sourced cannabis products. Our knowledgeable team is dedicated to providing a safe and reliable service, with discreet and secure shipping options available. Whether you're a seasoned smoker or new to the world of cannabis, we have a wide selection of products to suit your needs. Try the fastest Phuket weed delivery."
         />
-        <meta
-          property="og:title"
-          content="Green Ghost - Contact Us"
-        />
+        <meta property="og:title" content="Green Ghost - Contact Us" />
         <meta
           property="og:description"
           content="Contact Green Ghost Degen to place your order for high-quality, locally-sourced cannabis products. Our knowledgeable team is dedicated to providing a safe and reliable service, with discreet and secure shipping options available. Whether you're a seasoned smoker or new to the world of cannabis, we have a wide selection of products to suit your needs. Try the fastest Phuket weed delivery."
@@ -38,10 +35,7 @@ const BuyWeed: NextPage = () => {
           property="og:url"
           content="https://green.gd/contact-green-ghost"
         />
-        <meta
-          name="twitter:title"
-          content="Green Ghost - Contact Us"
-        />
+        <meta name="twitter:title" content="Green Ghost - Contact Us" />
         <meta
           name="twitter:description"
           content="Contact Green Ghost Degen to place your order for high-quality, locally-sourced cannabis products. Our knowledgeable team is dedicated to providing a safe and reliable service, with discreet and secure shipping options available. Whether you're a seasoned smoker or new to the world of cannabis, we have a wide selection of products to suit your needs. Try the fastest Phuket weed delivery."
@@ -68,7 +62,13 @@ const BuyWeed: NextPage = () => {
           <ImgContact />
           <HomeSectionTitle title="Contact Green Ghost" />
         </Box>
-        <Text as={'h2'} textAlign={'center'} fontSize={{ base: '3xl' }} fontFamily={'vt323'} mb={10}>
+        <Text
+          as={'h2'}
+          textAlign={'center'}
+          fontSize={{ base: '3xl' }}
+          fontFamily={'vt323'}
+          mb={10}
+        >
           Get in touch with the Green Ghost for all your cannabis inquiries.
         </Text>
         <Box
