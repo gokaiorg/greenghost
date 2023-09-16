@@ -71,8 +71,8 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = ({ enabled }) => {
         </Box>
       </Link>
       <Link
-        href={'/contact-us-buy-weed-online'}
-        title={'Contact Us to buy weed online'}
+        href={'/contact-green-ghost'}
+        title={'Contact Us'}
         passHref
       >
         <Box
@@ -85,7 +85,7 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = ({ enabled }) => {
             color: 'ghostVerse.green.base',
           }}
           color={
-            isActive('/contact-us-buy-weed-online')
+            isActive('/contact-green-ghost')
               ? 'ghostVerse.green.base'
               : 'inherit'
           }

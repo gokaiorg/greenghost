@@ -7,18 +7,18 @@ import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
-import { Grower } from '../components/Grower';
+import { ImgAbout } from '../components/ImgAbout';
 
 const BuyWeed: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - About.</title>
+        <title>Green Ghost - About Us</title>
         <meta
           name="description"
           content="Green Ghost is the result of a partnership with best Phuket growers, and Gokai Labs, a digital branding and communication agency with over 10 years of experience in Thailand."
         />
-        <meta property="og:title" content="Green Ghost - About." />
+        <meta property="og:title" content="Green Ghost - About" />
         <meta
           property="og:description"
           content="Green Ghost is the result of a partnership with best Phuket growers, and Gokai Labs, a digital branding and communication agency with over 10 years of experience in Thailand."
@@ -30,7 +30,7 @@ const BuyWeed: NextPage = () => {
         <meta property="og:image:width" content="2400" />
         <meta property="og:image:height" content="1260" />
         <meta property="og:url" content="https://green.gd/about-green-ghost" />
-        <meta name="twitter:title" content="Green Ghost - About." />
+        <meta name="twitter:title" content="Green Ghost - About" />
         <meta
           name="twitter:description"
           content="Green Ghost is the result of a partnership with best Phuket growers, and Gokai Labs, a digital branding and communication agency with over 10 years of experience in Thailand."
@@ -45,13 +45,20 @@ const BuyWeed: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <HomeSectionTitle title="About Green Ghost - Not another coffeeshop." />
+        <Box
+          display={'flex'}
+          flexDirection={'column'}
+          alignItems={'center'}
+          textAlign={'center'}
+        >
+          <ImgAbout />
+          <HomeSectionTitle title="About Green Ghost" />
+        </Box>
         <Box
           display={'flex'}
           flexDirection={'column'}
           as="div"
           color={'white'}
-          fontSize={{ base: '3xl' }}
           fontFamily={'vt323'}
           borderColor={'ghostVerse.color2.base'}
           bgColor={'ghostVerse.dark.lighter'}
@@ -60,11 +67,13 @@ const BuyWeed: NextPage = () => {
           mt={5}
           mb={6}
           p={4}
+          lineHeight={1}
+          fontSize={{ base: 24, lg: 30 }}
         >
           <Text
             as={'h2'}
             color={'white'}
-            fontSize={{ base: '4xl' }}
+            fontSize={{ base: 30, lg: 34 }}
             fontWeight={'black'}
             mb={4}
           >
@@ -78,7 +87,7 @@ const BuyWeed: NextPage = () => {
             <Box
               width={{ base: '100%', lg: '35%' }}
               mr={{ base: 0, lg: 10 }}
-              mt={4}
+              my={4}
             >
               <Image
                 src="/green-ghost-weed-shop-growers.png"
@@ -122,13 +131,12 @@ const BuyWeed: NextPage = () => {
               </Text>
             </Box>
           </Box>
-          <Grower />
           <Box display={'flex'} flexDirection={{ base: 'column', lg: 'row' }}>
             <Box width={{ base: '100%', lg: '65%' }}>
               <Text
                 as={'h2'}
                 color={'white'}
-                fontSize={{ base: '4xl' }}
+                fontSize={{ base: 30, lg: 34 }}
                 fontWeight={'black'}
                 mb={4}
               >

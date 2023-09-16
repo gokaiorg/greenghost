@@ -51,11 +51,16 @@ const WeedShopNearMe: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <Box display={'flex'} alignItems={'center'}>
-          <Box w={'40px'} mr={4} mb={4}>
+        <Box
+          display={'flex'}
+          flexDirection={'column'}
+          alignItems={'center'}
+          textAlign={'center'}
+        >
+          <Box w={{base: '80px', lg: '120px'}}>
             <IconMap />
           </Box>
-          <HomeSectionTitle title="Degen Weed Shop - Near Me." />
+          <HomeSectionTitle title="Degen Weed Shop Near Me" />
         </Box>
         <Shop />
         <FindUsAlso />

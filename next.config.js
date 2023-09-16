@@ -53,6 +53,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/contact-us-buy-weed-online',
+        destination: '/contact-green-ghost',
+        permanent: true,
+      },
+      {
         source: '/buddy-bud-weed',
         destination: '/weed-grower/cosmic-temple-vibes',
         permanent: true,

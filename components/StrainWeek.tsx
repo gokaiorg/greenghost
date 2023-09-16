@@ -43,7 +43,7 @@ export const StrainWeek = () => {
             alignItems={'center'}
             fontFamily={'CubicFive12'}
             fontWeight={'bold'}
-            as={'h5'}
+            as={'h4'}
             fontSize={{ base: '16' }}
             color={'ghostVerse.green.base'}
           >
@@ -87,7 +87,7 @@ export const StrainWeek = () => {
             alignItems={'center'}
             fontFamily={'CubicFive12'}
             fontWeight={'bold'}
-            as={'h5'}
+            as={'h4'}
             fontSize={{ base: '16' }}
             color={'ghostVerse.orange.light'}
           >
@@ -131,7 +131,7 @@ export const StrainWeek = () => {
             alignItems={'center'}
             fontFamily={'CubicFive12'}
             fontWeight={'bold'}
-            as={'h5'}
+            as={'h4'}
             fontSize={{ base: '16' }}
             color={'ghostVerse.orange.light'}
           >

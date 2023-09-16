@@ -108,7 +108,12 @@ export const Bud = () => {
             Buds price for 1 gram.
           </Box>
           <Menu>
-            <MenuButton w={8} h={8} color={'ghostVerse.green.base'}>
+            <MenuButton
+              w={8}
+              h={8}
+              color={'ghostVerse.green.base'}
+              name={'filters'}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

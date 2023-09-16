@@ -5,7 +5,7 @@ import { ShopItem } from './ShopItem';
 export const Shop = () => {
   return (
     <Box mt={4} mb="10">
-      <Text as={'h2'} fontSize={{ base: '3xl' }} fontFamily={'vt323'} mb={10}>
+      <Text as={'h2'} textAlign={'center'} fontSize={{ base: '3xl' }} fontFamily={'vt323'} mb={10}>
         Looking for a trusted and high-quality weed shop near you?
       </Text>
       <Box display={'flex'} flexWrap={'wrap'}>

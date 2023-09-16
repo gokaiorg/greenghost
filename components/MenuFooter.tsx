@@ -25,7 +25,7 @@ export const MenuFooter = () => {
         fontSize={'2xl'}
         fontFamily={'vt323'}
       >
-        <Box m={2} color={'ghostVerse.green.base'}>
+        <Box mx={2} color={'ghostVerse.green.base'}>
           <Link
             title="Best Weed Shops in Thailand"
             href="/weed-shops-thailand"
@@ -34,17 +34,17 @@ export const MenuFooter = () => {
             Shops |
           </Link>
         </Box>
-        <Box m={2} color={'ghostVerse.green.base'}>
+        <Box mx={2} color={'ghostVerse.green.base'}>
           <Link title="Weed Growers in Thailand" href="/weed-grower" passHref>
             Growers |
           </Link>
         </Box>
-        <Box m={2} color={'ghostVerse.green.base'}>
+        <Box mx={2} color={'ghostVerse.green.base'}>
           <Link title="Weed Shop Menu" href={'/weed-shop'} passHref>
             Menu |
           </Link>
         </Box>
-        <Box m={2} color={'ghostVerse.green.base'}>
+        <Box mx={2} color={'ghostVerse.green.base'}>
           <Link
             title="Weed Delivery Phuket"
             href="/weed-delivery-phuket"
@@ -53,7 +53,7 @@ export const MenuFooter = () => {
             Delivery |
           </Link>
         </Box>
-        <Box m={2} color={'ghostVerse.green.base'}>
+        <Box mx={2} color={'ghostVerse.green.base'}>
           <Link
             title="Drive Thru Phuket"
             href="/weed-drive-thru-phuket"
@@ -62,7 +62,7 @@ export const MenuFooter = () => {
             Drive-Thru |
           </Link>
         </Box>
-        <Box m={2} color={'ghostVerse.green.base'}>
+        <Box mx={2} color={'ghostVerse.green.base'}>
           <Link
             title="Green Ghost Map Location"
             href="/weed-shop-near-me"
@@ -71,12 +71,12 @@ export const MenuFooter = () => {
             Location |
           </Link>
         </Box>
-        <Box m={2} color={'ghostVerse.green.base'}>
+        <Box mx={2} color={'ghostVerse.green.base'}>
           <Link title={'About Green Ghost'} href="/about-green-ghost" passHref>
             About |
           </Link>
         </Box>
-        <Box m={2} color={'ghostVerse.green.base'}>
+        <Box mx={2} color={'ghostVerse.green.base'}>
           <Link
             title="Contact Green Ghost"
             href={'/contact-us-buy-weed-online'}
@@ -85,7 +85,7 @@ export const MenuFooter = () => {
             Contact |
           </Link>
         </Box>
-        <Box m={2} color={'ghostVerse.green.base'}>
+        <Box mx={2} color={'ghostVerse.green.base'}>
           <Link title="Green Ghost Sitemap" href="/sitemap" passHref>
             Sitemap
           </Link>
