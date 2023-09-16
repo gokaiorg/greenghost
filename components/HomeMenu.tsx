@@ -12,7 +12,7 @@ export const HomeMenu = () => {
       mb={10}
       flexWrap={'wrap'}
       alignItems={'stretch'}
-      mx={-2}
+      mx={-1}
     >
       <Box display={'flex'} flexDir={'column'} w={'100%'} alignItems={'center'}>
         <Box w={{ base: '100px', lg: '200px' }}>
@@ -43,7 +43,7 @@ export const HomeMenu = () => {
         </Text>
       </Box>
       <Box
-        width={{ base: '50%', lg: '25%' }}
+        width={{ base: '50%', lg: '20%' }}
         mb={{ base: 2, lg: 4 }}
         minHeight={'170px'}
       >
@@ -55,7 +55,7 @@ export const HomeMenu = () => {
             fontFamily={'CubicFive12'}
             borderColor={'ghostVerse.grey.base'}
             borderWidth={1}
-            mx={{ base: 1, lg: 2 }}
+            mx={{ base: 0.5, lg: 1 }}
             bgColor={'ghostVerse.dark.lighter'}
             textAlign={'center'}
             p={4}
@@ -88,7 +88,56 @@ export const HomeMenu = () => {
         </Link>
       </Box>
       <Box
-        width={{ base: '50%', lg: '25%' }}
+        width={{ base: '50%', lg: '20%' }}
+        mb={{ base: 2, lg: 4 }}
+        minHeight={'170px'}
+      >
+        <Link
+          href={'/weed-shop-pre-rolls'}
+          passHref
+          title="Weed Shop Menu Pre Rolls"
+        >
+          <Box
+            h={'100%'}
+            fontSize={{ base: 'xl' }}
+            color={'ghostVerse.green.base'}
+            fontFamily={'CubicFive12'}
+            borderColor={'ghostVerse.grey.base'}
+            borderWidth={1}
+            mx={{ base: 0.5, lg: 1 }}
+            bgColor={'ghostVerse.dark.lighter'}
+            textAlign={'center'}
+            p={4}
+            display={'flex'}
+            justifyContent={'center'}
+            flexDirection={'column'}
+            alignItems={'center'}
+            transition={'all .3s'}
+            _hover={{
+              borderColor: 'ghostVerse.green.base',
+            }}
+          >
+            <Box w={'28px'}>
+              <Image
+                src="/media/green-ghost-degen-weed-shop-menu-pre-rolls.png"
+                width={380}
+                height={494}
+                alt="Weed Shop Menu - Pre-Rolls."
+              />
+            </Box>
+            <Box
+              as={'h4'}
+              w={'100%'}
+              fontSize={{ base: 18, md: 22 }}
+              mt={'auto'}
+            >
+              Pre-Rolls
+            </Box>
+          </Box>
+        </Link>
+      </Box>
+      <Box
+        width={{ base: '50%', lg: '20%' }}
         mb={{ base: 2, lg: 4 }}
         minHeight={'170px'}
       >
@@ -104,7 +153,7 @@ export const HomeMenu = () => {
             fontFamily={'CubicFive12'}
             borderColor={'ghostVerse.grey.base'}
             borderWidth={1}
-            mx={{ base: 1, lg: 2 }}
+            mx={{ base: 0.5, lg: 1 }}
             bgColor={'ghostVerse.dark.lighter'}
             textAlign={'center'}
             p={4}
@@ -137,7 +186,7 @@ export const HomeMenu = () => {
         </Link>
       </Box>
       <Box
-        width={{ base: '50%', lg: '25%' }}
+        width={{ base: '50%', lg: '20%' }}
         mb={{ base: 2, lg: 4 }}
         minHeight={'170px'}
       >
@@ -149,7 +198,7 @@ export const HomeMenu = () => {
             fontFamily={'CubicFive12'}
             borderColor={'ghostVerse.grey.base'}
             borderWidth={1}
-            mx={{ base: 1, lg: 2 }}
+            mx={{ base: 0.5, lg: 1 }}
             bgColor={'ghostVerse.dark.lighter'}
             textAlign={'center'}
             p={4}
@@ -182,7 +231,7 @@ export const HomeMenu = () => {
         </Link>
       </Box>
       <Box
-        width={{ base: '50%', lg: '25%' }}
+        width={{ base: '50%', lg: '20%' }}
         mb={{ base: 2, lg: 4 }}
         minHeight={'170px'}
       >
@@ -194,7 +243,7 @@ export const HomeMenu = () => {
             fontFamily={'CubicFive12'}
             borderColor={'ghostVerse.grey.base'}
             borderWidth={1}
-            mx={{ base: 1, lg: 2 }}
+            mx={{ base: 0.5, lg: 1 }}
             bgColor={'ghostVerse.dark.lighter'}
             textAlign={'center'}
             p={4}

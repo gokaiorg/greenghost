@@ -110,9 +110,9 @@ export const HomeFeature = () => {
       </Box>
       <Box width={{ base: '100%', lg: '33.333333%' }} mb={2}>
         <Link
-          href={'/contact-us-buy-weed-online'}
+          href={'/contact-green-ghost'}
           passHref
-          title={'Contact Us'}
+          title={'Contact Green ghost'}
         >
           <Box
             fontSize={{ base: 'xl' }}
