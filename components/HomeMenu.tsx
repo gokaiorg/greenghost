@@ -44,7 +44,7 @@ export const HomeMenu = () => {
       </Box>
       <Box
         width={{ base: '50%', lg: '20%' }}
-        mb={{ base: 2, lg: 4 }}
+        mb={{ base: 1, lg: 2 }}
         minHeight={'170px'}
       >
         <Link href={'/weed-shop'} passHref title="Weed Shop Menu Buds">
@@ -89,7 +89,7 @@ export const HomeMenu = () => {
       </Box>
       <Box
         width={{ base: '50%', lg: '20%' }}
-        mb={{ base: 2, lg: 4 }}
+        mb={{ base: 1, lg: 2 }}
         minHeight={'170px'}
       >
         <Link
@@ -138,7 +138,7 @@ export const HomeMenu = () => {
       </Box>
       <Box
         width={{ base: '50%', lg: '20%' }}
-        mb={{ base: 2, lg: 4 }}
+        mb={{ base: 1, lg: 2 }}
         minHeight={'170px'}
       >
         <Link
@@ -187,7 +187,7 @@ export const HomeMenu = () => {
       </Box>
       <Box
         width={{ base: '50%', lg: '20%' }}
-        mb={{ base: 2, lg: 4 }}
+        mb={{ base: 1, lg: 2 }}
         minHeight={'170px'}
       >
         <Link href={'/weed-shop-degen'} passHref title={'Weed Shop Menu Degen'}>
@@ -232,7 +232,7 @@ export const HomeMenu = () => {
       </Box>
       <Box
         width={{ base: '50%', lg: '20%' }}
-        mb={{ base: 2, lg: 4 }}
+        mb={{ base: 1, lg: 2 }}
         minHeight={'170px'}
       >
         <Link href="/weed-shop-gadgets" passHref title="Weed Shop Menu Gadgets">
