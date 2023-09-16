@@ -174,7 +174,7 @@ export const products: Product[] = [
   {
     slug: 'mandarin-zkittlez',
     name: 'Mandarin Zkittlez',
-    price: 400,
+    price: 1000,
     dominance: 'Indica',
     indica: '60',
     sativa: '40',
@@ -186,7 +186,7 @@ export const products: Product[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '11/06/2023',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Mandarin Skittlez is a hybrid cannabis strain that results from the crossing of two potent strains, Dying Breed's California Black Rosé and Ethos' Mandarin Sunset. This striking strain is characterized by its unique and beautiful purple, black, and red buds that are sure to catch anyone's attention. Its dense and resinous buds have a low leaf-to-flower ratio, making it an ideal choice for extraction. \n\n The Mandarin Skittlez strain boasts an impressive array of flavors that are sure to tantalize your taste buds. It has an intense grape, grapefruit, spice, and orange taste that is both refreshing and satisfying. Its effects are equally impressive, offering a potent high that leaves smokers feeling happy, relaxed, and euphoric. It is perfect for unwinding after a long day or for creative inspiration. \n\n Mandarin Skittlez is an excellent choice for cannabis enthusiasts who are looking for a unique strain that packs a punch. Its beautiful appearance, potent effects, and mouth-watering flavors make it a top choice in dispensaries worldwide. Whether you're a seasoned smoker or a newbie, Mandarin Skittlez is a must-try strain for its exceptional quality and amazing effects.",
