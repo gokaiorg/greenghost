@@ -59,18 +59,18 @@ export const growers: Grower[] = [
     twitter: '0',
     telegram: 'https://t.me/ohighochannel',
   },
-  {
-    slug: 'sweed-dreams',
-    name: 'Sweed Dreams',
-    description:
-      'Indoor grower in Thailand dedicated to producing exceptional cannabis flowers, their commitment to quality shines through in every strain they cultivate.',
-    logo: '/media/green-ghost-weed-grower-sweed-dreams.webp',
-    website: 'https://sweeddreamsthai.com/',
-    facebook: '0',
-    instagram: 'https://www.instagram.com/sweed.dreams.thai/',
-    twitter: 'https://twitter.com/sweeddreamsnft',
-    telegram: '0',
-  },
+  // {
+  //   slug: 'sweed-dreams',
+  //   name: 'Sweed Dreams',
+  //   description:
+  //     'Indoor grower in Thailand dedicated to producing exceptional cannabis flowers, their commitment to quality shines through in every strain they cultivate.',
+  //   logo: '/media/green-ghost-weed-grower-sweed-dreams.webp',
+  //   website: 'https://sweeddreamsthai.com/',
+  //   facebook: '0',
+  //   instagram: 'https://www.instagram.com/sweed.dreams.thai/',
+  //   twitter: 'https://twitter.com/sweeddreamsnft',
+  //   telegram: '0',
+  // },
 ];
 
 export function getGrowerBySlug(slug: string): Grower | undefined {

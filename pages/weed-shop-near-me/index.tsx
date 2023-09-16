@@ -56,8 +56,10 @@ const WeedShopNearMe: NextPage = () => {
           flexDirection={'column'}
           alignItems={'center'}
           textAlign={'center'}
+          my={4}
+          lineHeight={1}
         >
-          <Box w={{ base: '80px', lg: '120px' }}>
+          <Box w={{ base: '70px', lg: '100px' }} mb={1}>
             <IconMap />
           </Box>
           <HomeSectionTitle title="Degen Weed Shop Near Me" />

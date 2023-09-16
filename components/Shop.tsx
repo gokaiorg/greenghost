@@ -11,6 +11,7 @@ export const Shop = () => {
         fontSize={{ base: '3xl' }}
         fontFamily={'vt323'}
         mb={10}
+        lineHeight={1}
       >
         Looking for a trusted and high-quality weed shop near you?
       </Text>

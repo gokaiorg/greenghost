@@ -77,19 +77,6 @@ export default function ProductPage({ product }: ProductPageProps) {
         </Box>
         <Box display={'flex'} flexDirection={{ base: 'column', md: 'row' }}>
           <HomeSectionTitle title={`${product.name} Strain`} />
-
-          {product.quantity !== 0 && <BuyNowLink />}
-          {product.quantity === 0 && (
-            <Box
-              display={'flex'}
-              ml={'auto'}
-              fontSize={'xl'}
-              fontFamily={'CubicFive12'}
-              color="ghostVerse.red.base"
-            >
-              SOLD OUT
-            </Box>
-          )}
         </Box>
         <Swiper
           spaceBetween={10}
@@ -136,7 +123,11 @@ export default function ProductPage({ product }: ProductPageProps) {
           ))}
         </Swiper>
 
-        <Box display={'flex'} flexDirection={{ base: 'column', lg: 'row' }}>
+        <Box
+          display={'flex'}
+          flexDirection={{ base: 'column', lg: 'row' }}
+          lineHeight={1}
+        >
           <Box order={{ base: 2, lg: 1 }} marginTop={4}>
             <Box
               display={'flex'}
@@ -254,6 +245,7 @@ export default function ProductPage({ product }: ProductPageProps) {
           >
             {product.quantity !== 0 && product.price !== 999 && (
               <>
+                {product.quantity !== 0 && <BuyNowLink />}
                 <Box
                   display={'flex'}
                   justifyContent="end"
@@ -330,6 +322,18 @@ export default function ProductPage({ product }: ProductPageProps) {
                   </Box>
                 </Link>
               </>
+            )}
+
+            {product.quantity === 0 && (
+              <Box
+                display={'flex'}
+                ml={'auto'}
+                fontSize={'xl'}
+                fontFamily={'CubicFive12'}
+                color="ghostVerse.red.base"
+              >
+                SOLD OUT
+              </Box>
             )}
 
             {product.price === 999 && (
@@ -442,6 +446,7 @@ export default function ProductPage({ product }: ProductPageProps) {
           fontSize={'3xl'}
           fontFamily={'vt323'}
           whiteSpace="pre-line"
+          lineHeight={1}
         >
           {product.description}
           {product.source !== 'undefined' && (

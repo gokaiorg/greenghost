@@ -82,7 +82,7 @@ export const StrainWeek = () => {
             </Link>{' '}
             for only 300 THB.
           </Text>
-          <Text
+          {/* <Text
             display={'flex'}
             alignItems={'center'}
             fontFamily={'CubicFive12'}
@@ -164,7 +164,7 @@ export const StrainWeek = () => {
               </Box>
             </Link>{' '}
             strain now.
-          </Text>
+          </Text> */}
         </Box>
       )}
     </>

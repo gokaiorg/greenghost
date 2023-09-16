@@ -61,6 +61,7 @@ const CannabisShop: NextPage = () => {
           flexDirection={'column'}
           alignItems={'center'}
           textAlign={'center'}
+          mt={4}
         >
           <ImgShops />
           <HomeSectionTitle title="Thailand Weed Shops Selection." />

@@ -55,6 +55,7 @@ const CannabisGrower: NextPage = () => {
           flexDirection={'column'}
           alignItems={'center'}
           textAlign={'center'}
+          mt={4}
         >
           <ImgGrower />
           <HomeSectionTitle title="Thailand Weed Grower Selection" />

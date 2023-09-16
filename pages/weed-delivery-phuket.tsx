@@ -8,19 +8,20 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
 import { WeedDeliveryFeature } from '../components/WeedDeliveryFeature';
+import { ImgDelivery } from '../components/ImgDelivery';
 
 const WeedDelivery: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Weed Delivery Phuket - Buy Weed In Phuket</title>
+        <title>Green Ghost - Weed Delivery Phuket</title>
         <meta
           name="description"
           content="Discover Green Ghost, the premier weed delivery service in Phuket. Buy high-quality weed products and enjoy convenient, reliable delivery right to your doorstep. Explore our wide selection and experience the best of Phuket's cannabis scene with Green Ghost."
         />
         <meta
           property="og:title"
-          content="Green Ghost - Weed Delivery Phuket - Buy Weed In Phuket"
+          content="Green Ghost - Weed Delivery Phuket"
         />
         <meta
           property="og:description"
@@ -38,7 +39,7 @@ const WeedDelivery: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Ghost - Weed Delivery Phuket - Buy Weed In Phuket"
+          content="Green Ghost - Weed Delivery Phuket"
         />
         <meta
           name="twitter:description"
@@ -57,8 +58,25 @@ const WeedDelivery: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <HomeSectionTitle title="Weed Delivery Phuket - Buy weed in Phuket." />
-        <Text as={'h2'} fontSize={{ base: '3xl' }} fontFamily={'vt323'} mb={10}>
+        <Box
+          display={'flex'}
+          flexDirection={'column'}
+          alignItems={'center'}
+          textAlign={'center'}
+          my={4}
+          lineHeight={1}
+        >
+          <ImgDelivery />
+          <HomeSectionTitle title="Weed Delivery Phuket" />
+        </Box>
+        <Text
+          as={'h2'}
+          textAlign={'center'}
+          lineHeight={1}
+          fontSize={{ base: '3xl' }}
+          fontFamily={'vt323'}
+          mb={10}
+        >
           To enjoy our weed delivery service in Phuket, simply follow these
           steps:
         </Text>

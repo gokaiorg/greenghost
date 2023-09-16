@@ -58,6 +58,8 @@ const BuyWeed: NextPage = () => {
           flexDirection={'column'}
           alignItems={'center'}
           textAlign={'center'}
+          my={4}
+          lineHeight={1}
         >
           <ImgContact />
           <HomeSectionTitle title="Contact Green Ghost" />
@@ -68,19 +70,16 @@ const BuyWeed: NextPage = () => {
           fontSize={{ base: '3xl' }}
           fontFamily={'vt323'}
           mb={10}
+          lineHeight={1}
         >
           Get in touch with the Green Ghost for all your cannabis inquiries.
         </Text>
         <Box
           display={'flex'}
-          flexDirection={{ base: 'column', lg: 'row' }}
+          flexDirection={{ base: 'column-reverse', lg: 'row' }}
           mb={10}
         >
-          <Box
-            width={{ base: '100%', lg: '35%' }}
-            mr={{ base: 0, lg: 10 }}
-            mt={4}
-          >
+          <Box width={{ base: '100%', lg: '35%' }} mr={{ base: 0, lg: 10 }}>
             <Image
               src="/green-ghost-weed-shop-buy-online.png"
               width={500}
@@ -88,20 +87,19 @@ const BuyWeed: NextPage = () => {
               alt="Contact us - Buy weed online."
             />
           </Box>
-          <Box width={{ base: '100%', lg: '65%' }}>
+          <Box width={{ base: '100%', lg: '65%' }} mb={10}>
             <Box display={'flex'} flexDirection={'column'}>
               <Text
                 as={'h3'}
                 color={'white'}
-                fontSize={{ base: '2xl' }}
+                fontSize={{ base: 'xl' }}
                 fontFamily={'CubicFive12'}
                 borderColor={'ghostVerse.color2.base'}
                 bgColor={'ghostVerse.dark.lighter'}
                 borderWidth={1}
                 backdropFilter={'blur(3px)'}
-                mt={5}
                 mb={6}
-                p={4}
+                p={2}
                 mr={'auto'}
               >
                 Call us
@@ -110,12 +108,12 @@ const BuyWeed: NextPage = () => {
                 display={'inline-flex'}
                 color={'ghostVerse.green.base'}
                 borderColor={'ghostVerse.green.base'}
-                fontSize={{ base: '5xl' }}
+                fontSize={{ base: '4xl' }}
                 borderWidth={1}
                 whiteSpace={'nowrap'}
                 bgColor={'ghostVerse.dark.lighter'}
                 backdropFilter={'blur(3px)'}
-                py={2}
+                py={1}
                 px={6}
                 mb={2}
                 mr={'auto'}
@@ -130,7 +128,7 @@ const BuyWeed: NextPage = () => {
               <Text
                 as={'h3'}
                 color={'white'}
-                fontSize={{ base: '2xl' }}
+                fontSize={{ base: 'xl' }}
                 fontFamily={'CubicFive12'}
                 borderColor={'ghostVerse.color2.base'}
                 bgColor={'ghostVerse.dark.lighter'}
@@ -138,7 +136,7 @@ const BuyWeed: NextPage = () => {
                 backdropFilter={'blur(3px)'}
                 mt={5}
                 mb={6}
-                p={4}
+                p={2}
                 mr={'auto'}
               >
                 Text us
