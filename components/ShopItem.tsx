@@ -24,9 +24,9 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
           flexDirection={{ base: 'column', lg: 'row' }}
         >
           <Text
-            as={'h3'}
+            as={'h2'}
             color={'white'}
-            fontSize={{ base: '2xl' }}
+            fontSize={{ base: 20, lg: 26 }}
             fontFamily={'CubicFive12'}
             borderColor={'ghostVerse.color2.base'}
             bgColor={'ghostVerse.dark.lighter'}
@@ -60,6 +60,7 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
                   clipRule="evenodd"
                 />
               </svg>
+              <Box ml={2}>Gallery</Box>
             </Box>
           </Link>
         </Box>

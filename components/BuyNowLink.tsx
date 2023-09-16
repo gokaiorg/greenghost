@@ -1,25 +1,26 @@
-import { Box, Text } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 import Link from 'next/link';
 
 export const BuyNowLink = () => {
   return (
-    <Box ml={'auto'} display={'flex'}>
+    <>
       <Link
-        href={'/contact-us-buy-weed-online'}
+        href={'/weed-delivery-phuket'}
         title={'Contact Us to buy weed online'}
         passHref
       >
         <Text
+          ml={'auto'}
           color={'ghostVerse.green.base'}
           borderColor={'ghostVerse.green.base'}
-          fontSize={20}
+          fontSize={18}
           borderWidth={1}
           bgColor={'ghostVerse.dark.lighter'}
           backdropFilter={'blur(3px)'}
-          py={2}
-          px={6}
+          py={1}
+          px={3}
           mb={4}
-          display={'flex'}
+          display={'block'}
           width={'fit-content'}
           _hover={{
             bgColor: 'ghostVerse.green.base',
@@ -29,6 +30,6 @@ export const BuyNowLink = () => {
           Buy Now
         </Text>
       </Link>
-    </Box>
+    </>
   );
 };

@@ -56,12 +56,27 @@ const WeedDriveThru: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <HomeSectionTitle title="Weed Drive Thru Phuket - Fast and discreet." />
-        <Text as={'h2'} fontSize={{ base: '3xl' }} fontFamily={'vt323'} mb={10}>
-          Simply drive up, explore our wide selection of high-quality strains,
-          edibles, and accessories, place your order with our friendly staff at
-          least 30mn before, and receive your products right at your vehicle
-          window.
+        <Box
+          display={'flex'}
+          flexDirection={'column'}
+          alignItems={'center'}
+          textAlign={'center'}
+          my={4}
+          lineHeight={1}
+        >
+          <HomeSectionTitle title="Weed Drive Thru Phuket" />
+        </Box>
+        <Text
+          lineHeight={1}
+          as={'h2'}
+          fontSize={{ base: '3xl' }}
+          fontFamily={'vt323'}
+          mb={10}
+        >
+          Fast and discreet. Simply drive up, explore our wide selection of
+          high-quality strains, edibles, and accessories, place your order with
+          our friendly staff at least 30mn before, and receive your products
+          right at your vehicle window.
         </Text>
         <Box
           display={'flex'}
@@ -227,6 +242,7 @@ const WeedDriveThru: NextPage = () => {
           width={'fit-content'}
           flexDirection={'column'}
           fontFamily={'vt323'}
+          lineHeight={1}
         >
           With our efficient and discreet service, you can enjoy a convenient
           and safe way to access top-notch cannabis products in Phuket. Discover

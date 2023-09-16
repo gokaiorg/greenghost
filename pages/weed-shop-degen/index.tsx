@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import { MainLayout } from '../../components/MainLayout';
 import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
-import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import Head from 'next/head';
 import { MenuWeedShop } from '../../components/MenuWeedShop';
 import { Degen } from '../../components/Degen';
@@ -50,7 +49,6 @@ const GhostDegenWeedShop: NextPage = () => {
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
         <MenuWeedShop />
-        <HomeSectionTitle title="Degen Menu" />
         <Degen />
       </MainLayout>
     </>

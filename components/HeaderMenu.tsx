@@ -10,7 +10,7 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
       display={'flex'}
       alignItems={'center'}
       flexWrap={'wrap'}
-      py={{ base: '4', md: '9' }}
+      py={{ base: '2', md: '4' }}
     >
       <Logo />
       {children}

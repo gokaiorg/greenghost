@@ -6,7 +6,7 @@ export const IconEarn = () => {
       src="/media/green-ghost-degen-weed-shop-earn.png"
       width={418}
       height={569}
-      alt="Green Ghost - Degen Weed Shop - Relax and Earn."
+      alt="Green Ghost - Crypto Weed Shop - Relax and Earn."
     />
   );
 };

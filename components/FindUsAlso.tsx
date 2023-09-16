@@ -24,7 +24,7 @@ export const FindUsAlso = () => {
         fontSize={'3xl'}
         fontFamily={'vt323'}
       >
-        <Box m={4} color={'ghostVerse.green.base'}>
+        <Box m={2} color={'ghostVerse.green.base'}>
           <Link
             title={'Find Us on Trip Advisor'}
             href={
@@ -35,7 +35,7 @@ export const FindUsAlso = () => {
             Trip Advisor
           </Link>
         </Box>
-        <Box m={4} color={'ghostVerse.green.base'}>
+        <Box m={2} color={'ghostVerse.green.base'}>
           <Link
             title={'Find Us on Weed in th'}
             href={'https://weed.th/shop/fe835e3b-d043-4672-af43-8cc039aa013b'}
@@ -44,7 +44,7 @@ export const FindUsAlso = () => {
             WEED.TH Karon
           </Link>
         </Box>
-        <Box m={4} color={'ghostVerse.green.base'}>
+        <Box m={2} color={'ghostVerse.green.base'}>
           <Link
             title={'Find Us on Weed in th'}
             href={'https://weed.th/shop/0d9dde2a-13bd-4167-b063-577af34971e8'}
@@ -53,7 +53,7 @@ export const FindUsAlso = () => {
             WEED.TH Phuket
           </Link>
         </Box>
-        <Box m={4} color={'ghostVerse.green.base'}>
+        <Box m={2} color={'ghostVerse.green.base'}>
           <Link
             title={'Find Us on Weed in th'}
             href={'https://weed.th/shop/be232698-0464-4352-bd70-15ea51257870'}
@@ -62,7 +62,7 @@ export const FindUsAlso = () => {
             WEED.TH Rawai
           </Link>
         </Box>
-        <Box m={4} color={'ghostVerse.green.base'}>
+        <Box m={2} color={'ghostVerse.green.base'}>
           <Link
             title={'Find Us on Weeddee'}
             href={'https://thaiweeddee.com/listing/green-ghost/'}
@@ -71,7 +71,7 @@ export const FindUsAlso = () => {
             Weeddee
           </Link>
         </Box>
-        <Box m={4} color={'ghostVerse.green.base'}>
+        <Box m={2} color={'ghostVerse.green.base'}>
           <Link
             title={'Find Us on Smoking Skunk'}
             href={
@@ -82,7 +82,7 @@ export const FindUsAlso = () => {
             Smoking Skunk
           </Link>
         </Box>
-        <Box m={4} color={'ghostVerse.green.base'}>
+        <Box m={2} color={'ghostVerse.green.base'}>
           <Link
             title={'Find Us on ThaiWeedGuide'}
             href={
@@ -93,7 +93,7 @@ export const FindUsAlso = () => {
             ThaiWeedGuide
           </Link>
         </Box>
-        <Box m={4} color={'ghostVerse.green.base'}>
+        <Box m={2} color={'ghostVerse.green.base'}>
           <Link
             title={'Find Us on WeedHub'}
             href={'https://weedhub.asia/listing/green-ghost/'}
@@ -102,7 +102,7 @@ export const FindUsAlso = () => {
             WeedHub
           </Link>
         </Box>
-        <Box m={4} color={'ghostVerse.green.base'}>
+        <Box m={2} color={'ghostVerse.green.base'}>
           <Link
             title={'Find Us on Thailand Weed'}
             href={
@@ -113,7 +113,7 @@ export const FindUsAlso = () => {
             Thailand Weed
           </Link>
         </Box>
-        <Box m={4} color={'ghostVerse.green.base'}>
+        <Box m={2} color={'ghostVerse.green.base'}>
           <Link
             title={'Find Us on High Thailand'}
             href={'https://www.highthailand.com/location/green-ghost/'}

@@ -14,8 +14,6 @@ export const HomeSectionTitle: FC<HomeSectionTitleProps> = ({ title }) => {
       display={'flex'}
       flexDirection={'row'}
       alignItems={'center'}
-      marginRight={1}
-      marginTop={4}
     >
       {title}
     </Text>

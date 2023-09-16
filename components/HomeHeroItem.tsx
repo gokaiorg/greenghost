@@ -24,7 +24,12 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
 }) => {
   return (
     <>
-      <Box position={'relative'} w="100%" h={{ base: '600px' }}>
+      <Box
+        mt={{ base: 4, lg: 0 }}
+        position={'relative'}
+        w="100%"
+        h={{ base: '350px', lg: '600px' }}
+      >
         <Image
           src={image}
           alt={imageAlt}
@@ -47,20 +52,20 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
         fontWeight={'black'}
         color={'white'}
         fontFamily={'vt323'}
-        px={10}
+        px={{ base: 5, md: 10 }}
         bgColor={'ghostVerse.dark.ultralight'}
         backdropFilter={'blur(3px)'}
       >
         <Text
           as={'h2'}
-          fontSize={{ base: '3xl', md: '6xl' }}
+          fontSize={{ base: 24, lg: 48 }}
           marginBottom={4}
           fontFamily={'CubicFive12'}
           color={'ghostVerse.green.base'}
         >
           {title}
         </Text>
-        <Text as={'p'} fontSize={{ base: '3xl', md: '4xl' }}>
+        <Text as={'p'} fontSize={{ base: 26, md: 44 }} lineHeight={1}>
           {description}
         </Text>
         <Link href={link} title={linkTitle} passHref>
@@ -68,11 +73,11 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
             display={'inline-flex'}
             color={'white'}
             borderColor={'white'}
-            fontSize={{ base: '3xl', md: '4xl' }}
+            fontSize={{ base: 'xl', md: '4xl' }}
             borderWidth={1}
             bgColor="transparent"
             backdropFilter={'blur(3px)'}
-            p={6}
+            p={{ base: 4, md: 6 }}
             mt={10}
             mx={'auto'}
             fontFamily={'CubicFive10'}

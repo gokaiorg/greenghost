@@ -62,7 +62,7 @@ export const SocialMediaIcons = () => {
           <SocialIcon
             url="https://www.instagram.com/greenghostdegen"
             bgColor={'#4cfd27'}
-            style={{ width: 60, height: 60 }}
+            style={{ width: 40, height: 40 }}
             title="Follow Us on Instagram"
           />
         </Box>
@@ -70,7 +70,7 @@ export const SocialMediaIcons = () => {
           <SocialIcon
             url="https://www.facebook.com/greenghostdegen"
             bgColor={'#4cfd27'}
-            style={{ width: 60, height: 60 }}
+            style={{ width: 40, height: 40 }}
             title="Follow Us on Facebook"
           />
         </Box>
@@ -78,7 +78,7 @@ export const SocialMediaIcons = () => {
           <SocialIcon
             url="https://www.tiktok.com/@greenghostdegen"
             bgColor={'#4cfd27'}
-            style={{ width: 60, height: 60 }}
+            style={{ width: 40, height: 40 }}
             title="Follow Us on TikTok"
           />
         </Box>
@@ -86,7 +86,7 @@ export const SocialMediaIcons = () => {
           <SocialIcon
             url="https://t.me/greenghostdegen"
             bgColor={'#4cfd27'}
-            style={{ width: 60, height: 60 }}
+            style={{ width: 40, height: 40 }}
             title="Follow Us on Telegram"
           />
         </Box>
@@ -94,7 +94,7 @@ export const SocialMediaIcons = () => {
           <SocialIcon
             url="https://www.reddit.com/r/greenghostdegen"
             bgColor={'#4cfd27'}
-            style={{ width: 60, height: 60 }}
+            style={{ width: 40, height: 40 }}
             title="Join Us on Reddit"
           />
         </Box>
@@ -102,7 +102,7 @@ export const SocialMediaIcons = () => {
           <SocialIcon
             url="https://www.linkedin.com/company/green-ghost"
             bgColor={'#4cfd27'}
-            style={{ width: 60, height: 60 }}
+            style={{ width: 40, height: 40 }}
             title="Join Us on Linkedin"
           />
         </Box>
@@ -110,7 +110,7 @@ export const SocialMediaIcons = () => {
           <SocialIcon
             url="https://medium.com/@GokaiLabs"
             bgColor={'#4cfd27'}
-            style={{ width: 60, height: 60 }}
+            style={{ width: 40, height: 40 }}
             title="Follow Us on Medium"
           />
         </Box>
@@ -118,7 +118,7 @@ export const SocialMediaIcons = () => {
           <SocialIcon
             url="https://twitter.com/GokaiLabs"
             bgColor={'#4cfd27'}
-            style={{ width: 60, height: 60 }}
+            style={{ width: 40, height: 40 }}
             title="Follow Us on Twitter"
           />
         </Box>
@@ -126,7 +126,7 @@ export const SocialMediaIcons = () => {
           <SocialIcon
             url="https://discord.gg/tXSeJfVVnH"
             bgColor={'#4cfd27'}
-            style={{ width: 60, height: 60 }}
+            style={{ width: 40, height: 40 }}
             title="Join Us on Discord"
           />
         </Box>

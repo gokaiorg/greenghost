@@ -49,14 +49,20 @@ export default function ProductPage({ product }: ProductPageProps) {
         <meta property="og:image" content={product.images[1]} />
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="1000" />
-        <meta property="og:url" content={`https://green.gd/${product.slug}`} />
+        <meta
+          property="og:url"
+          content={`https://green.gd/weed-shop/${product.slug}`}
+        />
         <meta
           name="twitter:title"
           content={`Green Ghost - ${product.name} Strain`}
         />
         <meta name="twitter:description" content={product.descSeo} />
         <meta name="twitter:image" content={product.images[1]} />
-        <meta name="twitter:url" content={`https://green.gd/${product.slug}`} />
+        <meta
+          name="twitter:url"
+          content={`https://green.gd/weed-shop/${product.slug}`}
+        />
       </Head>
       <MainLayout>
         <HeaderMenu>
@@ -71,19 +77,6 @@ export default function ProductPage({ product }: ProductPageProps) {
         </Box>
         <Box display={'flex'} flexDirection={{ base: 'column', md: 'row' }}>
           <HomeSectionTitle title={`${product.name} Strain`} />
-
-          {product.quantity !== 0 && <BuyNowLink />}
-          {product.quantity === 0 && (
-            <Box
-              display={'flex'}
-              ml={'auto'}
-              fontSize={'xl'}
-              fontFamily={'CubicFive12'}
-              color="ghostVerse.red.base"
-            >
-              SOLD OUT
-            </Box>
-          )}
         </Box>
         <Swiper
           spaceBetween={10}
@@ -130,7 +123,11 @@ export default function ProductPage({ product }: ProductPageProps) {
           ))}
         </Swiper>
 
-        <Box display={'flex'} flexDirection={{ base: 'column', lg: 'row' }}>
+        <Box
+          display={'flex'}
+          flexDirection={{ base: 'column', lg: 'row' }}
+          lineHeight={1}
+        >
           <Box order={{ base: 2, lg: 1 }} marginTop={4}>
             <Box
               display={'flex'}
@@ -248,6 +245,7 @@ export default function ProductPage({ product }: ProductPageProps) {
           >
             {product.quantity !== 0 && product.price !== 999 && (
               <>
+                {product.quantity !== 0 && <BuyNowLink />}
                 <Box
                   display={'flex'}
                   justifyContent="end"
@@ -326,6 +324,18 @@ export default function ProductPage({ product }: ProductPageProps) {
               </>
             )}
 
+            {product.quantity === 0 && (
+              <Box
+                display={'flex'}
+                ml={'auto'}
+                fontSize={'xl'}
+                fontFamily={'CubicFive12'}
+                color="ghostVerse.red.base"
+              >
+                SOLD OUT
+              </Box>
+            )}
+
             {product.price === 999 && (
               <Link
                 href="/crypto-weed-shop-relax-and-earn"
@@ -370,7 +380,11 @@ export default function ProductPage({ product }: ProductPageProps) {
                 <Box as={'h3'} mr={2}>
                   Grower
                 </Box>
-                <Link href={product.growerSlug} title={product.grower} passHref>
+                <Link
+                  href={`/weed-grower${product.growerSlug}`}
+                  title={product.grower}
+                  passHref
+                >
                   <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
                     {product.grower}
                   </Box>
@@ -384,8 +398,8 @@ export default function ProductPage({ product }: ProductPageProps) {
                   Origin
                 </Box>
                 <Link
-                  href="/cannabis-grower-phuket"
-                  title="Cannabis Grower Phuket"
+                  href="/weed-grower"
+                  title="Weed Growers in Thailand"
                   passHref
                 >
                   <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
@@ -432,6 +446,7 @@ export default function ProductPage({ product }: ProductPageProps) {
           fontSize={'3xl'}
           fontFamily={'vt323'}
           whiteSpace="pre-line"
+          lineHeight={1}
         >
           {product.description}
           {product.source !== 'undefined' && (
