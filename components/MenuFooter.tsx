@@ -79,7 +79,7 @@ export const MenuFooter = () => {
         <Box mx={2} color={'ghostVerse.green.base'}>
           <Link
             title="Contact Green Ghost"
-            href={'/contact-us-buy-weed-online'}
+            href={'/contact-green-ghost'}
             passHref
           >
             Contact |
