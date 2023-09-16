@@ -143,8 +143,8 @@ const WeedDelivery: NextPage = () => {
             mb={2}
           >
             <Link
-              href={'/contact-us-buy-weed-online'}
-              title={'Contact Us'}
+              href={'/contact-green-ghost'}
+              title={'Contact Green Ghost'}
               passHref
             >
               <Text

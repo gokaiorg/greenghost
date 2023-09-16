@@ -17,9 +17,9 @@ const Links: Route[] = [
     imageW: '25px',
   },
   {
-    path: '/weed-shop-pre-rolled',
-    image: '/media/green-ghost-degen-weed-shop-menu-pre-rolled.png',
-    label: 'Pre-Rolled',
+    path: '/weed-shop-pre-rolls',
+    image: '/media/green-ghost-degen-weed-shop-menu-pre-rolls.png',
+    label: 'Pre-Rolls',
     imageW: '10px',
   },
   {

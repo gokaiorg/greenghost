@@ -53,6 +53,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/weed-shop-pre-rolled',
+        destination: '/weed-shop-pre-rolls',
+        permanent: true,
+      },
+      {
         source: '/contact-us-buy-weed-online',
         destination: '/contact-green-ghost',
         permanent: true,
