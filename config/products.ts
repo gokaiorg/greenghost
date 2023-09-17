@@ -26,7 +26,7 @@ export const products: Product[] = [
   {
     slug: 'forbidden-fruit',
     name: 'Forbidden Fruit',
-    price: 999,
+    price: 700,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -38,16 +38,17 @@ export const products: Product[] = [
     growerSlug: '/sweed-dreams',
     environment: 'Indoor',
     harvest: '10/14/2023',
-    quantity: 1,
+    quantity: 50,
     origin: 'Krabi',
     description:
       "Forbidden Fruit, a tantalizing cannabis strain, emerges from the enchanting genetic blend of Cherry Pie and Tangie. Its visual allure is evident in its dense, purple-tinged buds, complemented by dark green leaves and vibrant orange hairs. The bouquet of aromas is a harmonious fusion of Cherry Pie's sweet, musky cherry notes entwined with Tangie's bold, tropical flavors. Hints of pine, mango, and passionfruit candy add further layers to this aromatic masterpiece. \n\n Upon consumption, Forbidden Fruit unveils its potent indica characteristics that hit with precision, starting with a cerebral euphoria that settles gently into the body. This strain's deep physical relaxation and mental tranquility make it an ideal choice for alleviating minor physical discomfort and shedding the burdens of stress. Whether you seek solace after a long day or a respite from life's demands, Forbidden Fruit offers a serene escape. \n\n Forbidden Fruit is a testament to the artistry of cannabis breeding, delivering a delightful blend of flavors and effects. Its ability to soothe both body and mind makes it a cherished choice among cannabis connoisseurs seeking a moment of tranquility and relief. With its remarkable terpene profile and seductive appearance, Forbidden Fruit stands as a captivating option for those in pursuit of relaxation and respite in the world of cannabis.",
     descSeo:
       "Forbidden Fruit, a tantalizing cannabis strain, emerges from the enchanting genetic blend of Cherry Pie and Tangie. Its visual allure is evident in its dense, purple-tinged buds, complemented by dark green leaves and vibrant orange hairs. The bouquet of aromas is a harmonious fusion of Cherry Pie's sweet, musky cherry notes entwined with Tangie's bold, tropical flavors. Hints of pine, mango, and passionfruit candy add further layers to this aromatic masterpiece.",
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Forbidden Fruit',
     source: 'https://www.leafly.com/strains/forbidden-fruit',
@@ -66,7 +67,7 @@ export const products: Product[] = [
     grower: 'Ohigho',
     growerSlug: '/ohigho',
     environment: 'Organic Indoor',
-    harvest: '09/08/2023',
+    harvest: '22/07/2023',
     quantity: 34,
     origin: 'Phuket',
     description:
@@ -85,7 +86,7 @@ export const products: Product[] = [
   {
     slug: 'gelato-runtz',
     name: 'Gelato Runtz',
-    price: 500,
+    price: 400,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -145,7 +146,7 @@ export const products: Product[] = [
   {
     slug: 'white-widow',
     name: 'White Widow',
-    price: 500,
+    price: 600,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -170,35 +171,6 @@ export const products: Product[] = [
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain White Widow',
     source: 'https://www.leafly.com/strains/white-widow',
-  },
-  {
-    slug: 'mandarin-zkittlez',
-    name: 'Mandarin Zkittlez',
-    price: 1000,
-    dominance: 'Indica',
-    indica: '60',
-    sativa: '40',
-    THC: '24',
-    CBD: 'undefined',
-    effects: 'Sleepy, Hungry, Euphoric',
-    relieves: 'Anxiety, Cramps, Lack of appetite',
-    grower: 'My Weed Solutions',
-    growerSlug: '/my-weed-solutions',
-    environment: 'Organic Indoor',
-    harvest: '11/06/2023',
-    quantity: 0,
-    origin: 'Phuket',
-    description:
-      "Mandarin Skittlez is a hybrid cannabis strain that results from the crossing of two potent strains, Dying Breed's California Black Rosé and Ethos' Mandarin Sunset. This striking strain is characterized by its unique and beautiful purple, black, and red buds that are sure to catch anyone's attention. Its dense and resinous buds have a low leaf-to-flower ratio, making it an ideal choice for extraction. \n\n The Mandarin Skittlez strain boasts an impressive array of flavors that are sure to tantalize your taste buds. It has an intense grape, grapefruit, spice, and orange taste that is both refreshing and satisfying. Its effects are equally impressive, offering a potent high that leaves smokers feeling happy, relaxed, and euphoric. It is perfect for unwinding after a long day or for creative inspiration. \n\n Mandarin Skittlez is an excellent choice for cannabis enthusiasts who are looking for a unique strain that packs a punch. Its beautiful appearance, potent effects, and mouth-watering flavors make it a top choice in dispensaries worldwide. Whether you're a seasoned smoker or a newbie, Mandarin Skittlez is a must-try strain for its exceptional quality and amazing effects.",
-    descSeo:
-      "Mandarin Skittlez is a hybrid cannabis strain that results from the crossing of two potent strains, Dying Breed's California Black Rosé and Ethos' Mandarin Sunset. This striking strain is characterized by its unique and beautiful purple, black, and red buds that are sure to catch anyone's attention. Its dense and resinous buds have a low leaf-to-flower ratio, making it an ideal choice for extraction.",
-    images: [
-      '/media/green-ghost-degen-weed-shop-strain-mandarin-zkittlez-bud-01.webp',
-      '/media/green-ghost-degen-weed-shop-strain-mandarin-zkittlez-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-mandarin-zkittlez-qr-code.webp',
-    ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Mandarin Zkittlez',
-    source: 'https://www.leafly.com/strains/mandarin-zkittlez',
   },
   {
     slug: 'amnesia-haze',
@@ -233,7 +205,7 @@ export const products: Product[] = [
   {
     slug: 'green-gelato',
     name: 'Green Gelato',
-    price: 400,
+    price: 500,
     dominance: 'Indica',
     indica: '55',
     sativa: '45',
@@ -244,7 +216,7 @@ export const products: Product[] = [
     grower: 'Ohigho',
     growerSlug: '/ohigho',
     environment: 'Organic Indoor',
-    harvest: '09/08/2023',
+    harvest: '22/07/2023',
     quantity: 32,
     origin: 'Phuket',
     description:
@@ -258,36 +230,6 @@ export const products: Product[] = [
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Green Gelato',
     source: 'https://www.leafly.com/strains/green-gelato',
-  },
-  {
-    slug: 'hulkberry',
-    name: 'Hulkberry',
-    price: 999,
-    dominance: 'Sativa',
-    indica: '35',
-    sativa: '65',
-    THC: '27',
-    CBD: 'undefined',
-    effects: 'Creative, Euphoria, Uplifting',
-    relieves: 'Fatigue, Headaches, Migraines',
-    grower: 'Ohigho',
-    growerSlug: '/ohigho',
-    environment: 'Organic Indoor',
-    harvest: '09/08/2023',
-    quantity: 0,
-    origin: 'Phuket',
-    description:
-      "Hulkberry, a captivating strain with a genetic makeup of 65% sativa and 35% indica, emerges as a result of expertly blending the beloved Strawberry Diesel and OG Kush varieties. This strain earns its name from the remarkable density of its buds and a delightful infusion of berry essence. The appearance is a spectacle to behold, featuring robust, minty-green popcorn-shaped buds that sport subtle undertones of dark olive. Accentuating these nugs are long, delicate orange hairs and a generous dusting of petite, luminous white trichomes, glistening like morning dew. Upon breaking apart these frosty nuggets, an exquisite bouquet of sweet and tangy citrus notes wafts forth, accompanied by an underlying diesel richness that gains prominence when the buds are ignited. This symphony of scents preludes the flavor experience, characterized by a pronounced tang of sour lemon that harmonizes with hints of zesty diesel and earthiness upon exhalation. \n\n The Hulkberry strain wields an impressive potency, boasting an average THC level of 27%, which contributes to its robust effects. The high takes hold swiftly and profoundly, initiating a surge of invigorating sensations that kindle creativity and motivation. This euphoric ascent of the mind coexists harmoniously with a gentle, calming embrace that leaves physical energy untouched. Hulkberry's formidable potency makes it a promising contender for addressing various conditions, including chronic fatigue, migraines, ADD or ADHD, depression, and mood swings. Its distinctive profile combines the best of both sativa and indica worlds, offering a dynamic yet balanced experience that has the potential to elevate and soothe, all in one enticing package. \n\n In the realm of cannabis strains, Hulkberry emerges as a beacon of potency and flavor, beckoning connoisseurs and seekers of relief alike. Its lineage, traceable to Strawberry Diesel and OG Kush, lends it a unique character that tantalizes the senses and delivers a multifaceted high. Whether you're yearning for a wellspring of creativity or a respite from various ailments, Hulkberry stands ready to unleash its green magic, offering a remarkable journey that traverses the realms of taste, aroma, and effect.",
-    descSeo:
-      'Hulkberry, a captivating strain with a genetic makeup of 65% sativa and 35% indica, emerges as a result of expertly blending the beloved Strawberry Diesel and OG Kush varieties. This strain earns its name from the remarkable density of its buds and a delightful infusion of berry essence. The appearance is a spectacle to behold, featuring robust, minty-green popcorn-shaped buds that sport subtle undertones of dark olive. Accentuating these nugs are long, delicate orange hairs and a generous dusting of petite, luminous white trichomes, glistening like morning dew. Upon breaking apart these frosty nuggets, an exquisite bouquet of sweet and tangy citrus notes wafts forth, accompanied by an underlying diesel richness that gains prominence when the buds are ignited.',
-    images: [
-      '/media/green-ghost-degen-weed-shop-strain-hulkberry-bud-01.webp',
-      '/media/green-ghost-degen-weed-shop-strain-hulkberry-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-hulkberry-qr-code.webp',
-    ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Hulkberry',
-    source:
-      'https://www.allbud.com/marijuana-strains/sativa-dominant-hybrid/hulkberry',
   },
   {
     slug: 'buddy-critical',
@@ -349,9 +291,39 @@ export const products: Product[] = [
     source: 'https://www.leafly.com/strains/bruce-banner',
   },
   {
+    slug: 'hulkberry',
+    name: 'Hulkberry',
+    price: 999,
+    dominance: 'Sativa',
+    indica: '35',
+    sativa: '65',
+    THC: '27',
+    CBD: 'undefined',
+    effects: 'Creative, Euphoria, Uplifting',
+    relieves: 'Fatigue, Headaches, Migraines',
+    grower: 'Ohigho',
+    growerSlug: '/ohigho',
+    environment: 'Organic Indoor',
+    harvest: '22/07/2023',
+    quantity: 50,
+    origin: 'Phuket',
+    description:
+      "Hulkberry, a captivating strain with a genetic makeup of 65% sativa and 35% indica, emerges as a result of expertly blending the beloved Strawberry Diesel and OG Kush varieties. This strain earns its name from the remarkable density of its buds and a delightful infusion of berry essence. The appearance is a spectacle to behold, featuring robust, minty-green popcorn-shaped buds that sport subtle undertones of dark olive. Accentuating these nugs are long, delicate orange hairs and a generous dusting of petite, luminous white trichomes, glistening like morning dew. Upon breaking apart these frosty nuggets, an exquisite bouquet of sweet and tangy citrus notes wafts forth, accompanied by an underlying diesel richness that gains prominence when the buds are ignited. This symphony of scents preludes the flavor experience, characterized by a pronounced tang of sour lemon that harmonizes with hints of zesty diesel and earthiness upon exhalation. \n\n The Hulkberry strain wields an impressive potency, boasting an average THC level of 27%, which contributes to its robust effects. The high takes hold swiftly and profoundly, initiating a surge of invigorating sensations that kindle creativity and motivation. This euphoric ascent of the mind coexists harmoniously with a gentle, calming embrace that leaves physical energy untouched. Hulkberry's formidable potency makes it a promising contender for addressing various conditions, including chronic fatigue, migraines, ADD or ADHD, depression, and mood swings. Its distinctive profile combines the best of both sativa and indica worlds, offering a dynamic yet balanced experience that has the potential to elevate and soothe, all in one enticing package. \n\n In the realm of cannabis strains, Hulkberry emerges as a beacon of potency and flavor, beckoning connoisseurs and seekers of relief alike. Its lineage, traceable to Strawberry Diesel and OG Kush, lends it a unique character that tantalizes the senses and delivers a multifaceted high. Whether you're yearning for a wellspring of creativity or a respite from various ailments, Hulkberry stands ready to unleash its green magic, offering a remarkable journey that traverses the realms of taste, aroma, and effect.",
+    descSeo:
+      'Hulkberry, a captivating strain with a genetic makeup of 65% sativa and 35% indica, emerges as a result of expertly blending the beloved Strawberry Diesel and OG Kush varieties. This strain earns its name from the remarkable density of its buds and a delightful infusion of berry essence. The appearance is a spectacle to behold, featuring robust, minty-green popcorn-shaped buds that sport subtle undertones of dark olive. Accentuating these nugs are long, delicate orange hairs and a generous dusting of petite, luminous white trichomes, glistening like morning dew. Upon breaking apart these frosty nuggets, an exquisite bouquet of sweet and tangy citrus notes wafts forth, accompanied by an underlying diesel richness that gains prominence when the buds are ignited.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-hulkberry-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-hulkberry-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-hulkberry-qr-code.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Hulkberry',
+    source:
+      'https://www.allbud.com/marijuana-strains/sativa-dominant-hybrid/hulkberry',
+  },
+  {
     slug: 'mango-gelato',
     name: 'Mango Gelato',
-    price: 999,
+    price: 1000,
     dominance: 'Indica',
     indica: '60',
     sativa: '40',
@@ -363,7 +335,7 @@ export const products: Product[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/06/2023',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Mango Gelato is an exceptional hybrid strain resulting from the cross between two distinct cannabis varieties. One of its parents is Green Gelato, a slightly indica-dominant hybrid known for its vigorous growth and excellent response to pruning and training techniques. With medium-tall plants and a high flower to leaf ratio, Mango Gelato benefits from topping, fimming, LST, and other methods that promote maximum yield. The flowers form in tight clusters, showcasing their small to medium size, and with cooler nighttime temperatures, the buds can display beautiful lavender and purple hues. \n\n The other parent, Somango, is a fruity indica strain bred from the famous Jack Herer, Super Skunk, and Big Skunk Korean. Previously known as Soma #5, it was renamed after its delightful mango aroma. Despite its indica dominance, Somango surprises with uplifting and cerebrally-focused effects. It induces a clear-headed and functional euphoria, making it a favorite among creative individuals who seek enhanced focus and productivity. \n\n The combination of Green Gelato and Somango genetics in Mango Gelato produces a unique and captivating experience. It showcases the best of both worlds, with Green Gelato contributing to its growth structure and flower development, while Somango adds a fruity twist to the aroma and delivers uplifting effects. Mango Gelato is a versatile strain that offers the potential for bountiful yields and a pleasurable high, making it a delightful choice for cannabis enthusiasts looking for a well-rounded experience.',
@@ -494,9 +466,38 @@ export const products: Product[] = [
     source: 'https://www.leafly.com/strains/tangerine-dream',
   },
   {
+    slug: 'mandarin-zkittlez',
+    name: 'Mandarin Zkittlez',
+    price: 1000,
+    dominance: 'Indica',
+    indica: '60',
+    sativa: '40',
+    THC: '24',
+    CBD: 'undefined',
+    effects: 'Sleepy, Hungry, Euphoric',
+    relieves: 'Anxiety, Cramps, Lack of appetite',
+    grower: 'Unknown',
+    growerSlug: '/my-weed-solutions',
+    environment: 'Organic Indoor',
+    harvest: '11/06/2023',
+    quantity: 0,
+    origin: 'Phuket',
+    description:
+      "Mandarin Skittlez is a hybrid cannabis strain that results from the crossing of two potent strains, Dying Breed's California Black Rosé and Ethos' Mandarin Sunset. This striking strain is characterized by its unique and beautiful purple, black, and red buds that are sure to catch anyone's attention. Its dense and resinous buds have a low leaf-to-flower ratio, making it an ideal choice for extraction. \n\n The Mandarin Skittlez strain boasts an impressive array of flavors that are sure to tantalize your taste buds. It has an intense grape, grapefruit, spice, and orange taste that is both refreshing and satisfying. Its effects are equally impressive, offering a potent high that leaves smokers feeling happy, relaxed, and euphoric. It is perfect for unwinding after a long day or for creative inspiration. \n\n Mandarin Skittlez is an excellent choice for cannabis enthusiasts who are looking for a unique strain that packs a punch. Its beautiful appearance, potent effects, and mouth-watering flavors make it a top choice in dispensaries worldwide. Whether you're a seasoned smoker or a newbie, Mandarin Skittlez is a must-try strain for its exceptional quality and amazing effects.",
+    descSeo:
+      "Mandarin Skittlez is a hybrid cannabis strain that results from the crossing of two potent strains, Dying Breed's California Black Rosé and Ethos' Mandarin Sunset. This striking strain is characterized by its unique and beautiful purple, black, and red buds that are sure to catch anyone's attention. Its dense and resinous buds have a low leaf-to-flower ratio, making it an ideal choice for extraction.",
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-mandarin-zkittlez-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mandarin-zkittlez-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mandarin-zkittlez-qr-code.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Mandarin Zkittlez',
+    source: 'https://www.leafly.com/strains/mandarin-zkittlez',
+  },
+  {
     slug: 'wedding-cake',
     name: 'Wedding Cake',
-    price: 999,
+    price: 1000,
     dominance: 'Indica',
     indica: '60',
     sativa: '40',
@@ -508,7 +509,7 @@ export const products: Product[] = [
     growerSlug: '/cosmic-temple-vibes',
     environment: 'Organic Indoor',
     harvest: '22/06/2023',
-    quantity: 20,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Wedding Cake, also known as Pink Cookies, is a captivating hybrid strain with dominant indica genetics. Its lineage is a combination of Triangle Kush and Animal Mints, resulting in an exceptional aroma of sweetness and a flavor that blends the best of cookies and cherry pie. \n\n This strain acts as both a calming agent and an appetite stimulator, making it particularly beneficial for patients dealing with depression-associated syndromes, fibromyalgia, multiple sclerosis (MS), and related symptoms. \n\n While it may have sedative properties, it effectively soothes nerves and helps manage anxiety-related symptoms. It's worth noting that dry eyes and mouth are common side effects, while maintaining focus and energy levels remains relatively unaffected. Grown indoors, Wedding Cake boasts a THC level of 25-27%. Its appearance is reminiscent of pine trees, characterized by dense and frosty dark green leaves. The buds are adorned with vibrant orange hairs, contributing to its overall appeal. Renowned for its sugary taste and high potency, Wedding Cake has become a favorite among cannabis enthusiasts.",
@@ -525,7 +526,7 @@ export const products: Product[] = [
   {
     slug: 'critical-plus-20',
     name: 'Critical Plus 2.0',
-    price: 999,
+    price: 1000,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -537,7 +538,7 @@ export const products: Product[] = [
     growerSlug: '/cosmic-temple-vibes',
     environment: 'Organic Indoor',
     harvest: '22/06/2023',
-    quantity: 20,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Critical Plus 2.0, a remarkable offspring of the renowned Dinafem Seeds original strain, Critical Plus, takes its genetics to new depths. This hybrid is cherished for its rapid flowering time and invigorating lemon fragrance, making it an ideal choice for novice growers seeking a profoundly relaxing experience and bountiful harvests. \n\n The aroma of Critical Plus 2.0 is notably intense, emanating pungent hints of lemon, incense, and exotic wood. To counter its robust scent, Dinafem recommends the use of a potent carbon filter during the flowering stage. With its deep relaxation properties and stress-relieving effects, Critical Plus 2.0 truly delivers a serene experience.',
@@ -554,7 +555,7 @@ export const products: Product[] = [
   {
     slug: 'mimosa-evo',
     name: 'Mimosa Evo',
-    price: 999,
+    price: 1000,
     dominance: 'Indica',
     indica: '60',
     sativa: '40',
@@ -566,7 +567,7 @@ export const products: Product[] = [
     growerSlug: '/cosmic-temple-vibes',
     environment: 'Organic Indoor',
     harvest: '07/06/2023',
-    quantity: 20,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Mimosa Evo is an extraordinary cannabis strain that packs a punch with its potent effects. Known for its long-lasting and electrifying euphoria, this strain is not for the faint of heart. With THC levels reaching up to 24%, it's best suited for experienced users who can fully embrace its psychedelic buzz. Despite its potential to grow tall outdoors, Mimosa Evo can be easily managed in limited spaces, making it adaptable for indoor cultivation. With its genetic background of Purple Punch and Mimosa, this strain exhibits stable characteristics and emits a luxurious and tangy aroma of citrus fruits. \n\n Strap yourself in for a wild ride with Mimosa Evo's aroma, flavor, and effect. While many strains claim to produce euphoria, Mimosa Evo takes it to another level, delivering an invigorating high. Its strong and refreshing citrus aroma, coupled with a sweet and citrusy flavor with hints of berries, creates a delightful sensory experience. However, novice smokers should approach with caution as Mimosa Evo's potency can easily overwhelm those with a lower THC tolerance. \n\n Mimosa Evo is a great performer when it comes to cultivation. As a 60% indica-dominant hybrid, it displays typical indica growth characteristics indoors, with moderate heights and bushy plants. Outdoors, it may stretch a bit more but remains compact and can develop beautiful purple or blue hues in cooler temperatures. The flowering phase lasts around 10-11 weeks, culminating in big, dense purple flowers coated in sticky white resin. Expect average yields of approximately 700g/m² when growing Mimosa Evo indoors.",
@@ -876,7 +877,7 @@ export const products: Product[] = [
   {
     slug: 'dosidos',
     name: 'Dosidos',
-    price: 999,
+    price: 1000,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -888,7 +889,7 @@ export const products: Product[] = [
     growerSlug: '/cosmic-temple-vibes',
     environment: 'Organic Indoor',
     harvest: '08/04/2023',
-    quantity: 1,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Dosidos, an indica-dominant hybrid strain, goes by various names like Dosi Doe, Do-Si-Dos, and Dosi. This remarkable strain shares similarities with its parent, OGKB, a phenotype of the popular Girl Scout Cookies strain. Dosidos stands out with its vibrant lime green and lavender leaves, adorned with glistening trichomes and bright pistils. Its aroma is a delightful blend of pungent sweetness, earthiness, and a hint of floral funkiness. With the inclusion of Face Off OG genetics, Dosidos delivers a potent, sedative-leaning body effect, complementing its classic OG scent. \n\n Prepare to be captivated by Dosidos, an indica-dominant hybrid that boasts eye-catching features. Its lime green and lavender leaves, adorned with shimmering trichomes and vibrant pistils, create a visually stunning display. The aroma of Dosidos is a harmonious fusion of pungent sweetness, earthy tones, and a subtle floral undertone. This strain's genetics, including the renowned Face Off OG, contribute to its impressive medical-grade body effects. From the initial toke, Dosidos delivers a powerful and euphoric buzz that gradually eases into a soothing, full-body relaxation. Indulge in Dosidos and experience its tranquilizing effects that radiate throughout. \n\n Let Dosidos take you on a sensory journey with its striking appearance and captivating aroma. This indica-dominant hybrid, also known as Dosi Doe, Do-Si-Dos, or simply Dosi, inherits its qualities from OGKB, a distinguished phenotype of the beloved Girl Scout Cookies strain. Feast your eyes on Dosidos' lime green and lavender leaves, adorned with a dazzling display of trichomes and vibrant pistils. Its aroma is a delightful blend of pungent sweetness, earthiness, and a touch of floral funk. With the added genetics of Face Off OG, Dosidos offers a remarkable body effect that leans toward the sedative side. Embrace the stoney, in-your-face buzz that gradually melts into a profound state of relaxation, leaving you beautifully at ease. Limonene takes the lead as the dominant terpene in Dosidos, enhancing its aromatic and therapeutic profile.",
@@ -905,7 +906,7 @@ export const products: Product[] = [
   {
     slug: 'sherbert',
     name: 'Sherbert',
-    price: 999,
+    price: 1000,
     dominance: 'Indica',
     indica: '85',
     sativa: '15',
@@ -917,7 +918,7 @@ export const products: Product[] = [
     growerSlug: '/cosmic-temple-vibes',
     environment: 'Organic Indoor',
     harvest: '08/04/2023',
-    quantity: 1,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Embark on a sensory journey with Sherbert, an enchanting indica-dominant hybrid. Born from the crossbreeding of Girl Scout Cookies and Pink Panties, this strain offers a captivating blend of effects. Experience a surge of cerebral energy and a carefree state of mind, enhanced by its full-bodied potency. With a THC level reaching 18%, Sherbert is best suited for experienced enthusiasts seeking solace from stress, tension, and mood disorders. \n\n Indulge in the delightful flavor profile of Sherbert. Enjoy the harmonious notes of skunky citrus, sweet berry, and candy dancing on your palate. While the average price per gram is around $20, it may vary based on your location. Sherbert's appearance is equally remarkable, featuring oblong, fluffy nugs adorned with a lush coat of trichomes and dark amber hairs. Bred intentionally by Mr. Sherbinski, this strain inherits the genetic lineage of its parent strain, Girl Scout Cookies. \n\n Sherbert, an extraordinary cannabis strain, offers a sensory symphony. Its indica-dominant nature delivers a euphoric and carefree relaxation, complemented by a cerebral uplift. With a THC level of 18%, Sherbert is favored by medical marijuana patients seeking relief from stress, tension, and mood disorders. Delight in its delectable flavor profile, featuring skunky citrus, sweet berry, and candy undertones. Cultivated with utmost care, Sherbert's appearance showcases oblong, fluffy nugs blanketed in trichomes and accentuated by dark amber hairs. Bred by Mr. Sherbinski, Sherbert pays homage to its parent strain, Girl Scout Cookies.",
@@ -934,7 +935,7 @@ export const products: Product[] = [
   {
     slug: 'skunk',
     name: 'Skunk',
-    price: 999,
+    price: 1000,
     dominance: 'Indica',
     indica: '65',
     sativa: '35',
@@ -946,7 +947,7 @@ export const products: Product[] = [
     growerSlug: '/cosmic-temple-vibes',
     environment: 'Organic Indoor',
     harvest: '08/04/2023',
-    quantity: 1,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Skunk #1, a legendary hybrid strain, has left an indelible mark on the cannabis world since its inception in the late 1970s. Created by Sacred Seed Co., it is the proud parent of numerous Skunk crosses. This groundbreaking variety was meticulously bred through a multi-generational process, combining Afghani, Acapulco Gold, and Colombian Gold genetics. Skunk #1 became the genetic foundation for countless cannabis hybrids, shaping the industry on a global scale. \n\n Born from the diligent work of breeders like Sensi Seeds, Dutch Passion, Flying Dutchmen, Nirvana Seeds, and Royal Queen Seeds, Skunk #1's legacy grew even further. The strain's name accurately reflects its distinct aroma, characterized by a pungent skunkiness and subtle earthy undertones. Beyond its fragrance, Skunk #1 offers a high-energy buzz that fuels creativity and inspires a sense of elevated thought. Experience the blissful relief as stress fades away and appetite returns under the influence of Skunk #1's potent effects. \n\n Skunk #1, a groundbreaking hybrid strain, has captivated cannabis enthusiasts worldwide. Crafted by Sacred Seed Co. through an intricate breeding process, this strain brings together the best genetics from Afghani, Acapulco Gold, and Colombian Gold. Its influence spread through renowned breeders such as Sensi Seeds, Dutch Passion, Flying Dutchmen, Nirvana Seeds, and Royal Queen Seeds. When indulging in Skunk #1, expect a distinctive aroma of sour skunkiness mingled with earthy hints. Immerse yourself in its high-energy buzz, unlocking boundless creativity and finding solace as stress melts away and appetite is rekindled.",
@@ -1004,7 +1005,7 @@ export const products: Product[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/06/2023',
-    quantity: 1,
+    quantity: 50,
     origin: 'Phuket',
     description:
       'Amnesia is a highly sought-after Sativa-dominant marijuana strain renowned for its potent effects. With a THC level of up to 24 percent, it offers a strong and uplifting buzz. This strain has a flowering period of 10 to 11 weeks and rewards growers with a bountiful yield. Its genetic lineage can be traced back to the legendary strains Cinderella 99, Jack Herer, and Skunk. The delightful earthy flavors and citrusy aroma, reminiscent of lemons and oranges, make Amnesia an enjoyable sensory experience. \n\n Originating from Jamaican Landrace and South Asian strains, Amnesia has gained recognition in the cannabis community. It claimed the first prize in the Cannabis Cup 2014 and the Sativa Cup 2012, solidifying its reputation. Coffee shops in Amsterdam have embraced its popularity, making it widely available. The lime and dark green buds of Amnesia possess a visually appealing appearance, adorned with abundant trichomes and fine hairs. Prepare for a powerful and rapid onset of effects, as Amnesia hits you intensely within 10 to 15 minutes of consumption. \n\n Beyond its invigorating properties, Amnesia is a versatile strain with medicinal benefits. It effectively combats lethargy, providing a boost of energy and enhancing productivity. Patients suffering from depression, anxiety, and stress find relief in its therapeutic qualities. Moreover, Amnesia is known to alleviate nausea and migraine symptoms. If you seek an exceptional strain that offers both recreational enjoyment and medicinal value, Amnesia is a remarkable choice.',
@@ -1021,7 +1022,7 @@ export const products: Product[] = [
   {
     slug: 'sorbet-4',
     name: 'Sorbet #4',
-    price: 999,
+    price: 1000,
     dominance: 'Indica',
     indica: '60',
     sativa: '40',
@@ -1033,7 +1034,7 @@ export const products: Product[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/06/2023',
-    quantity: 1,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Sorbet#4 is the exceptional outcome of blending two renowned genetic strains. This variety thrives with vigorous growth, displaying robust plants that develop abundantly with multiple secondary branches. However, its exuberance requires careful control to maintain its desired form. \n\n With its elongated and resinous buds, Sorbet#4 offers a unique appeal and earns its place as a cherished addition to any garden. After approximately 9 weeks of flowering, these buds are ready to be harvested. The remarkable productivity of Sorbet#4 ensures a yield of over 500g per square meter, making it a highly rewarding cultivar. \n\n Indulge in the delightful combination of fruity and creamy flavors that Sorbet#4 delivers. This strain offers a harmonious blend of relaxation for the body and euphoria for the mind. It provides the perfect invitation to unwind and enjoy a tranquil time in the company of good friends or loved ones.',
@@ -1050,7 +1051,7 @@ export const products: Product[] = [
   {
     slug: 'bubble-mango',
     name: 'Bubble Mango',
-    price: 999,
+    price: 1000,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -1062,7 +1063,7 @@ export const products: Product[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/06/2023',
-    quantity: 1,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Bubble Mango is an exquisite hybrid strain created by crossing two renowned cannabis varieties. The first parent, Bubble Gum, is a popular indica-dominant hybrid known for its body-numbing effects and pleasant aroma. It delivers a soothing high that melts away pain while providing a mildly stimulating mental state. The second parent, Somango, is a fruity indica strain bred from the legendary Jack Herer, Super Skunk, and Big Skunk Korean. It offers an uplifting and cerebrally-focused experience, enhancing creativity and productivity. \n\n The combination of Bubble Gum and Somango genetics in Bubble Mango results in a unique blend of effects. Users can expect a body-relaxing experience that helps alleviate pain and tension, while the mind remains clear and focused. The aroma of Bubble Mango is a delightful fusion of fruity mango notes from the Somango parent and the sweet, bubblegum-like scent from Bubble Gum. This strain is a perfect choice for those seeking a balanced high that promotes both relaxation and mental clarity. \n\n Bubble Mango's genetic lineage and thoughtful breeding have created a strain that offers the best of both worlds. Its indica-dominant nature provides physical relief, while the uplifting qualities of its sativa genetics stimulate creativity and focus. Whether you're looking for relaxation, pain relief, or a boost in productivity, Bubble Mango is a versatile strain that can cater to a variety of preferences. Try it for yourself and enjoy the harmonious blend of flavors and effects it has to offer.",
@@ -1079,7 +1080,7 @@ export const products: Product[] = [
   {
     slug: 'bubble-zkittlez',
     name: 'Bubble Zkittlez',
-    price: 999,
+    price: 1000,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -1091,7 +1092,7 @@ export const products: Product[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/06/2023',
-    quantity: 1,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Bubble Zkittlez is an exceptional hybrid strain that brings together the best of both worlds. Born from a cross of Bubble Gum and Sweet Zkittlez, this delightful blend offers a unique and captivating experience. Bubble Gum, known for its indica-dominant traits, delivers a body-numbing high that soothes pain while keeping the mind stimulated. On the other hand, Sweet Zkittlez, with its indica dominance and sweet flavor profile, provides a relaxing high that doesn't induce immediate sleepiness. \n\n The result is Bubble Zkittlez, a strain that harmoniously combines the soothing effects of Bubble Gum with the flavorful sweetness of Sweet Zkittlez. Prepare to indulge in its tantalizing taste, as Bubble Zkittlez delights the palate with a blend of fruity sweetness and hints of bubblegum. This makes it a perfect choice for those laid-back evenings with friends, where you can unwind and enjoy the company without feeling overly drowsy. \n\n Whether you're seeking relief from physical discomfort or simply want to relax without losing your focus, Bubble Zkittlez offers a balanced and enjoyable experience. Embrace its harmonious blend of flavors and effects, and let Bubble Zkittlez elevate your relaxation sessions to new heights.",

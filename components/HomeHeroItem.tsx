@@ -54,7 +54,6 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
         fontFamily={'vt323'}
         px={{ base: 5, md: 10 }}
         bgColor={'ghostVerse.dark.ultralight'}
-        backdropFilter={'blur(3px)'}
       >
         <Text
           as={'h2'}
