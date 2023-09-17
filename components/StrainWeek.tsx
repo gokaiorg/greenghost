@@ -43,7 +43,7 @@ export const StrainWeek = () => {
             alignItems={'center'}
             fontFamily={'CubicFive12'}
             fontWeight={'bold'}
-            as={'h4'}
+            as={'h2'}
             fontSize={{ base: '16' }}
             color={'ghostVerse.green.base'}
           >
@@ -82,12 +82,56 @@ export const StrainWeek = () => {
             </Link>{' '}
             for only 300 THB.
           </Text>
-          {/* <Text
+          <Text
             display={'flex'}
             alignItems={'center'}
             fontFamily={'CubicFive12'}
             fontWeight={'bold'}
-            as={'h4'}
+            as={'h2'}
+            fontSize={{ base: '16' }}
+            color={'ghostVerse.orange.light'}
+          >
+            <Box w={8} h={8} mr={2}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                />
+              </svg>
+            </Box>
+            New strain!
+          </Text>
+          <Text
+            mb={4}
+            fontFamily={'vt323'}
+            fontSize={{ base: '24' }}
+            lineHeight={1}
+          >
+            Let&apos;s try our new{' '}
+            <Link
+              href="/weed-shop/forbidden-fruit"
+              title="New weed Strain - Forbidden fruit!"
+              passHref
+            >
+              <Box as={'span'} color={'ghostVerse.blue.base'}>
+                Forbidden Fruit
+              </Box>
+            </Link>{' '}
+            strain now.
+          </Text>
+          <Text
+            display={'flex'}
+            alignItems={'center'}
+            fontFamily={'CubicFive12'}
+            fontWeight={'bold'}
+            as={'h2'}
             fontSize={{ base: '16' }}
             color={'ghostVerse.orange.light'}
           >
@@ -131,9 +175,9 @@ export const StrainWeek = () => {
             alignItems={'center'}
             fontFamily={'CubicFive12'}
             fontWeight={'bold'}
-            as={'h4'}
+            as={'h2'}
             fontSize={{ base: '16' }}
-            color={'ghostVerse.orange.light'}
+            color={'ghostVerse.red.base'}
           >
             <Box w={8} h={8} mr={2}>
               <svg
@@ -146,25 +190,30 @@ export const StrainWeek = () => {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                  d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
                 />
               </svg>
             </Box>
-            New strain!
+            Sold Out!
           </Text>
-          <Text fontFamily={'vt323'} fontSize={{ base: '24' }} lineHeight={1}>
-            Let&apos;s try our new{' '}
+          <Text
+            mb={4}
+            fontFamily={'vt323'}
+            fontSize={{ base: '24' }}
+            lineHeight={1}
+          >
+            Say goodbye to the{' '}
             <Link
-              href="/weed-shop/forbidden-fruit"
-              title="New weed Strain - Forbidden fruit!"
+              href="/weed-shop/mandarin-zkittlez"
+              title="Mandarin Zkittlez - Sold Out!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Forbidden Fruit
+                Mandarin Zkittlez
               </Box>
-            </Link>{' '}
-            strain now.
-          </Text> */}
+            </Link>
+            . We&apos;ll miss you.
+          </Text>
         </Box>
       )}
     </>
