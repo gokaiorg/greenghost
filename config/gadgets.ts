@@ -16,7 +16,7 @@ export const gadgets: Gadget[] = [
     name: 'Metal Grinder',
     price: 200,
     packaging: '50x17mm, 2-layer',
-    quantity: 5,
+    quantity: 2,
     description:
       'The perfect tool for herb enthusiasts. With its compact size of 50x17mm and two layers, this grinder offers convenience and efficiency. Crafted from high-quality metal, it guarantees durability and longevity. Say goodbye to manual grinding and embrace the effortless process provided by this sleek and reliable tool.',
     descSeo:
@@ -35,7 +35,7 @@ export const gadgets: Gadget[] = [
     name: 'Wood Grinder',
     price: 300,
     packaging: '68x28mm, 2-layer',
-    quantity: 2,
+    quantity: 0,
     description:
       'The perfect combination of functionality and style with our wood grinder. Measuring 68x28mm, this 2-layer grinder is compact yet efficient. Its durable wooden construction ensures longevity, while the sharp teeth effortlessly grind your herbs to perfection. Experience convenience and enjoy the natural beauty of wood with this essential tool for herb enthusiasts.',
     descSeo:

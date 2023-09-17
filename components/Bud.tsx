@@ -17,6 +17,7 @@ type GrowerOption = 'All';
 ('Cosmic Temple Vibes');
 ('My Weed Solutions');
 ('Ohigho');
+('Sweed dreams');
 
 export const Bud = () => {
   const [sortBy, setSortBy] = useState('priceLowToHigh');
@@ -239,6 +240,7 @@ export const Bud = () => {
                     </option>
                     <option value="My Weed Solutions">My Weed Solutions</option>
                     <option value="Ohigho">Ohigho</option>
+                    <option value="Sweed Dreams">Sweed Dreams</option>
                   </Select>
                 </Box>
                 <Checkbox
