@@ -77,7 +77,7 @@ const BuyWeed: NextPage = () => {
             fontWeight={'black'}
             mb={4}
           >
-            What&apos;s the inspiring story behind Green Ghost&apos;s origins ?
+            What&apos;s the inspiring story behind Green Ghost&apos;s origins?
           </Text>
           <Box
             display={'flex'}
@@ -105,6 +105,15 @@ const BuyWeed: NextPage = () => {
                 for high-quality weed growth in the world.
               </Text>
               <br />
+              <Text
+                as={'h2'}
+                color={'white'}
+                fontSize={{ base: 30, lg: 34 }}
+                fontWeight={'black'}
+                mb={4}
+              >
+                How the Green Ghost works?
+              </Text>
               <Text>
                 Green Ghost is the result of a partnership with{' '}
                 <Link

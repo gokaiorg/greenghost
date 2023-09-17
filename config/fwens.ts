@@ -14,9 +14,9 @@ export const fwen = [
     fwenLogo: '/media/green-ghost-weed-grower-ohigho.webp',
     fwenLink: 'https://www.instagram.com/ohigho_/',
   },
-  // {
-  //   name: 'Sweed Dreams',
-  //   fwenLogo: '/media/green-ghost-weed-grower-sweed-dreams.webp',
-  //   fwenLink: 'https://sweeddreamsthai.com/',
-  // },
+  {
+    name: 'Sweed Dreams',
+    fwenLogo: '/media/green-ghost-weed-grower-sweed-dreams.webp',
+    fwenLink: 'https://sweeddreamsthai.com/',
+  },
 ];
