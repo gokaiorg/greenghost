@@ -221,6 +221,16 @@ export const StrainWeek = () => {
               <Box as={'span'} color={'ghostVerse.blue.base'}>
                 Tangerine Dream
               </Box>
+            </Link>
+            ,{' '}
+            <Link
+              href="/weed-shop/amnesia-haze"
+              title="Amnesia Haze - Sold Out!"
+              passHref
+            >
+              <Box as={'span'} color={'ghostVerse.blue.base'}>
+                Amnesia Haze
+              </Box>
             </Link>{' '}
             &{' '}
             <Link
