@@ -46,11 +46,17 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
         <meta property="og:image" content={gadget.images[1]} />
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="1000" />
-        <meta property="og:url" content={`https://green.gd/${gadget.slug}`} />
+        <meta
+          property="og:url"
+          content={`https://green.gd/weed-shop-gadgets/${gadget.slug}`}
+        />
         <meta name="twitter:title" content={`Green Ghost - ${gadget.name}`} />
         <meta name="twitter:description" content={gadget.descSeo} />
         <meta name="twitter:image" content={gadget.images[1]} />
-        <meta name="twitter:url" content={`https://green.gd/${gadget.slug}`} />
+        <meta
+          name="twitter:url"
+          content={`https://green.gd/weed-shop-gadgets/${gadget.slug}`}
+        />
       </Head>
       <MainLayout>
         <HeaderMenu>
@@ -63,10 +69,7 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
         >
           {'< back'}
         </Box>
-        <Box display={'flex'} flexDirection={{ base: 'column', md: 'row' }}>
-          <HomeSectionTitle title={`${gadget.name}`} />
-          <BuyNowLink />
-        </Box>
+        <HomeSectionTitle title={`${gadget.name}`} />
         <Swiper
           spaceBetween={10}
           slidesPerView={'auto'}
@@ -111,7 +114,11 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
             </SwiperSlide>
           ))}
         </Swiper>
-        <Box display={'flex'} flexDirection={{ base: 'column', lg: 'row' }}>
+        <Box
+          display={'flex'}
+          flexDirection={{ base: 'column', lg: 'row' }}
+          lineHeight={1}
+        >
           <Box order={{ base: 2, lg: 1 }} marginTop={4}>
             <Box
               display={'flex'}
@@ -132,6 +139,7 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
           >
             {gadget.quantity !== 0 && gadget.price !== 999 && (
               <>
+                <BuyNowLink />
                 <Box
                   display={'flex'}
                   justifyContent="end"
@@ -151,7 +159,7 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
                 fontFamily={'CubicFive12'}
                 color="ghostVerse.red.base"
               >
-                ON ORDER
+                Sold Out
               </Box>
             )}
             <Box display={'flex'} justifyContent="end">
@@ -171,16 +179,17 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
             >
               <Box
                 display={'flex'}
+                fontFamily={'CubicFive12'}
                 justifyContent="end"
                 mb={2}
-                fontSize={'xl'}
+                fontSize={16}
                 color="ghostVerse.grey.lighter"
                 _hover={{
                   color: 'ghostVerse.green.base',
                 }}
               >
                 <Box>member</Box>
-                <Box fontFamily={'CubicFive12'} display={'flex'} ml={4}>
+                <Box display={'flex'} ml={4}>
                   {(gadget.price * 0.69).toFixed(0)} THB
                 </Box>
               </Box>
@@ -201,6 +210,7 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
           fontSize={'3xl'}
           fontFamily={'vt323'}
           whiteSpace="pre-line"
+          lineHeight={1}
         >
           {gadget.description}
         </Box>

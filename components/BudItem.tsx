@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Product } from '../config/products';
@@ -52,7 +52,7 @@ export const BudItem = ({ product }: BudItemProps) => {
             marginLeft={{ base: 0 }}
             marginTop={{ base: 4 }}
           >
-            <Box
+            <Text
               as={'h2'}
               fontFamily={'CubicFive12'}
               fontSize={{ base: 16, lg: 18 }}
@@ -94,7 +94,7 @@ export const BudItem = ({ product }: BudItemProps) => {
                 )}
               </Box>
               {product.name}
-            </Box>
+            </Text>
             <Box display={'flex'} fontFamily={'vt323'} fontSize={'2xl'} mb={1}>
               {product.dominance == 'Indica' && (
                 <Box as={'h3'} color={'ghostVerse.blue.base'} marginRight={2}>

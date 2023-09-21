@@ -47,14 +47,20 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
         <meta property="og:image" content={edible.images[1]} />
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="1000" />
-        <meta property="og:url" content={`https://green.gd/${edible.slug}`} />
+        <meta
+          property="og:url"
+          content={`https://green.gd/weed-shop-edibles/${edible.slug}`}
+        />
         <meta
           name="twitter:title"
           content={`Green Ghost - ${edible.name} Edible`}
         />
         <meta name="twitter:description" content={edible.descSeo} />
         <meta name="twitter:image" content={edible.images[1]} />
-        <meta name="twitter:url" content={`https://green.gd/${edible.slug}`} />
+        <meta
+          name="twitter:url"
+          content={`https://green.gd/weed-shop-edibles/${edible.slug}`}
+        />
       </Head>
       <MainLayout>
         <HeaderMenu>

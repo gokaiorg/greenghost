@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Gadget } from '../config/gadgets';
@@ -10,9 +10,8 @@ type GadgetItemProps = {
 export const GadgetItem = ({ gadget }: GadgetItemProps) => {
   return (
     <Box
-      width={{ base: '100%', md: '50%', lg: '25%' }}
-      paddingBottom={1}
-      paddingRight={1}
+      width={{ base: '50%', md: '33.33333%', lg: '25%' }}
+      p={0.5}
       lineHeight={1}
     >
       <Link
@@ -25,7 +24,8 @@ export const GadgetItem = ({ gadget }: GadgetItemProps) => {
           borderWidth={1}
           bgColor={'ghostVerse.dark.lighter'}
           backdropFilter={'blur(3px)'}
-          p={3}
+          p={2}
+          pos={'relative'}
           fontWeight={'bold'}
           fontSize={'lg'}
           color="ghostVerse.gray.base"
@@ -56,40 +56,58 @@ export const GadgetItem = ({ gadget }: GadgetItemProps) => {
             marginLeft={{ base: 0 }}
             marginTop={{ base: 4 }}
           >
-            <Box
-              as={'h3'}
-              fontSize={'xl'}
+            <Text
+              as={'h2'}
               fontFamily={'CubicFive12'}
+              fontSize={{ base: 16, lg: 18 }}
               display={'flex'}
               flexDirection={'column'}
               marginRight={1}
             >
-              {gadget.price !== 999 && (
-                <Box
-                  marginLeft={'auto'}
-                  color={'ghostVerse.green.base'}
-                  whiteSpace={'nowrap'}
-                  mb={2}
-                  position={'absolute'}
-                  right={0}
-                  top={'25px'}
-                  background={'black'}
-                  padding={'0.5rem'}
-                >
-                  {gadget.price} THB
-                </Box>
-              )}
+              <Box
+                marginLeft={'auto'}
+                whiteSpace={'nowrap'}
+                mb={2}
+                position={'absolute'}
+                right={0}
+                top={4}
+                background={'black'}
+                padding={'0.5rem'}
+              >
+                {gadget.price == 999 ? (
+                  <Box
+                    fontSize={{ base: 14, lg: 16 }}
+                    color={'ghostVerse.green.base'}
+                  >
+                    Coming Soon
+                  </Box>
+                ) : gadget.quantity === 0 ? (
+                  <Box
+                    fontSize={{ base: 14, lg: 16 }}
+                    color={'ghostVerse.red.base'}
+                  >
+                    Sold Out
+                  </Box>
+                ) : (
+                  <Box
+                    fontSize={{ base: 14, lg: 16 }}
+                    color={'ghostVerse.green.base'}
+                  >
+                    {gadget.price} THB
+                  </Box>
+                )}
+              </Box>
               {gadget.name}
-            </Box>
-          </Box>
-          <Box
-            display={'flex'}
-            fontFamily={'vt323'}
-            fontSize={'3xl'}
-            flexDirection={'column'}
-          >
-            <Box as={'h4'} color={'ghostVerse.blue.base'} marginRight={4}>
-              {gadget.packaging}
+            </Text>
+            <Box
+              display={'flex'}
+              fontFamily={'vt323'}
+              fontSize={'3xl'}
+              flexDirection={'column'}
+            >
+              <Box as={'h4'} color={'ghostVerse.blue.base'} marginRight={4}>
+                {gadget.packaging}
+              </Box>
             </Box>
           </Box>
         </Box>

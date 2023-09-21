@@ -8,8 +8,8 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { SocialContactIcons } from '../components/SocialContactIcons';
 import Image from 'next/image';
-import { FindUsAlso } from '../components/FindUsAlso';
 import { ImgContact } from '../components/ImgContact';
+import { Find } from '../components/Find';
 
 const BuyWeed: NextPage = () => {
   return (
@@ -145,7 +145,7 @@ const BuyWeed: NextPage = () => {
             </Box>
           </Box>
         </Box>
-        <FindUsAlso />
+        <Find />
       </MainLayout>
     </>
   );
