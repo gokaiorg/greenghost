@@ -49,6 +49,23 @@ export const gadgets: Gadget[] = [
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Wood Grinder',
   },
+  {
+    slug: 'wizman-rolling-papers',
+    name: 'Wizman Rolling Papers',
+    price: 150,
+    packaging: '32 Leaves, 107*44 mm',
+    quantity: 30,
+    description:
+      "Elevate your rolling game with our exclusive King Size Slim Rolling Papers, each measuring a generous 107*44 mm. Inside every box, you'll find 15 packs, with each pack containing 32 ultra-thin translucent rolling papers and 32 tips. \n\n But that's not all. Our all-in-one package also includes a convenient tray and grinder, making your smoking experience even more enjoyable. Crafted by Asia 420 United and illustrated by Mr. Rin, this product pays homage to Asia's cannabis heritage. \n\n What sets our rolling papers apart is their natural, additive-free composition. We believe in providing you with a clean, unadulterated smoking experience that lets the true flavors shine. Join us as we unite Asian 420 enthusiasts and advocate for medical cannabis legalization. Together, we're exploring new possibilities and striving for a greener, more peaceful world.",
+    descSeo:
+      "Elevate your rolling game with our exclusive King Size Slim Rolling Papers, each measuring a generous 107*44 mm. Inside every box, you'll find 15 packs, with each pack containing 32 ultra-thin translucent rolling papers and 32 tips.",
+    images: [
+      '/media/green-ghost-degen-weed-shop-menu-gadget-wizman-rolling-paper-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-wizman-rolling-paper-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-wizman-rolling-paper-01.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Wizman Rolling Paper',
+  },
 ];
 
 export function getGadgetBySlug(slug: string): Gadget | undefined {

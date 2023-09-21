@@ -106,6 +106,50 @@ export const StrainWeek = () => {
                 />
               </svg>
             </Box>
+            New Gadget!
+          </Text>
+          <Text
+            mb={4}
+            fontFamily={'vt323'}
+            fontSize={{ base: '24' }}
+            lineHeight={1}
+          >
+            Roll your best joints with{' '}
+            <Link
+              href="/weed-shop-gadgets/wizman-rolling-papers"
+              title="New weed Gadget - Wizman Rolling Paper!"
+              passHref
+            >
+              <Box as={'span'} color={'ghostVerse.blue.base'}>
+                Wizman Rolling Papers
+              </Box>
+            </Link>{' '}
+            today.
+          </Text>
+          <Text
+            display={'flex'}
+            alignItems={'center'}
+            fontFamily={'CubicFive12'}
+            fontWeight={'bold'}
+            as={'h2'}
+            fontSize={{ base: '16' }}
+            color={'ghostVerse.orange.light'}
+          >
+            <Box w={8} h={8} mr={2}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                />
+              </svg>
+            </Box>
             New strain!
           </Text>
           <Text
@@ -170,7 +214,7 @@ export const StrainWeek = () => {
             </Link>{' '}
             strains at Green ghost.
           </Text>
-          <Text
+          {/* <Text
             display={'flex'}
             alignItems={'center'}
             fontFamily={'CubicFive12'}
@@ -243,7 +287,7 @@ export const StrainWeek = () => {
               </Box>
             </Link>
             . We&apos;ll miss you.
-          </Text>
+          </Text> */}
         </Box>
       )}
     </>

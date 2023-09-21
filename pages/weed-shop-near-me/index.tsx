@@ -7,7 +7,7 @@ import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import Head from 'next/head';
 import { IconMap } from '../../components/IconMap';
 import { Shop } from '../../components/Shop';
-import { FindUsAlso } from '../../components/FindUsAlso';
+import { Find } from '../../components/Find';
 
 const WeedShopNearMe: NextPage = () => {
   return (
@@ -65,7 +65,7 @@ const WeedShopNearMe: NextPage = () => {
           <HomeSectionTitle title="Degen Weed Shop Near Me" />
         </Box>
         <Shop />
-        <FindUsAlso />
+        <Find />
       </MainLayout>
     </>
   );

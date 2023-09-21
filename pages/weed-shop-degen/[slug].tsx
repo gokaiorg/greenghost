@@ -45,11 +45,17 @@ export default function DegensPage({ degen }: DegensPageProps) {
         <meta property="og:image" content={degen.images[1]} />
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="1000" />
-        <meta property="og:url" content={`https://green.gd/${degen.slug}`} />
+        <meta
+          property="og:url"
+          content={`https://green.gd/weed-shop-degen/${degen.slug}`}
+        />
         <meta name="twitter:title" content={`Green Ghost - ${degen.name}`} />
         <meta name="twitter:description" content={degen.descSeo} />
         <meta name="twitter:image" content={degen.images[1]} />
-        <meta name="twitter:url" content={`https://green.gd/${degen.slug}`} />
+        <meta
+          name="twitter:url"
+          content={`https://green.gd/weed-shop-degen/${degen.slug}`}
+        />
       </Head>
       <MainLayout>
         <HeaderMenu>
