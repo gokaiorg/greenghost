@@ -62,7 +62,7 @@ export const gadgets: Gadget[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-menu-gadget-wizman-rolling-paper-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-wizman-rolling-paper-01.webp',
-      '/media/green-ghost-degen-weed-shop-menu-gadget-wizman-rolling-paper-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-wizman-rolling-paper-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Wizman Rolling Paper',
   },
