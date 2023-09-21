@@ -19,4 +19,9 @@ export const fwen = [
     fwenLogo: '/media/green-ghost-weed-grower-sweed-dreams.webp',
     fwenLink: 'https://sweeddreamsthai.com/',
   },
+  {
+    name: 'Phuket High Times',
+    fwenLogo: '/media/green-ghost-phuket-high-times.webp',
+    fwenLink: 'https://phukethightimes.com/',
+  },
 ];

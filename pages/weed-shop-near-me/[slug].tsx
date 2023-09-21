@@ -14,7 +14,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 
 import Image from 'next/image';
-import { FindUsAlso } from '../../components/FindUsAlso';
+import { Find } from '../../components/Find';
 
 interface ShopPageProps {
   shop: Shop;
@@ -91,7 +91,7 @@ export default function ShopPage({ shop }: ShopPageProps) {
         >
           {shop.description}
         </Box>
-        <FindUsAlso />
+        <Find />
       </MainLayout>
     </>
   );

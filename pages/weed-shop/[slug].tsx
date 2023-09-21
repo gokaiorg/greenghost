@@ -273,16 +273,17 @@ export default function ProductPage({ product }: ProductPageProps) {
                 >
                   <Box
                     display={'flex'}
+                    fontFamily={'CubicFive12'}
                     justifyContent="end"
                     mb={2}
-                    fontSize={'xl'}
+                    fontSize={16}
                     color="ghostVerse.grey.lighter"
                     _hover={{
                       color: 'ghostVerse.green.base',
                     }}
                   >
                     <Box>member</Box>
-                    <Box fontFamily={'CubicFive12'} display={'flex'} ml={4}>
+                    <Box display={'flex'} ml={4}>
                       {(product.price * 0.69).toFixed(0)} THB
                     </Box>
                   </Box>
@@ -306,16 +307,17 @@ export default function ProductPage({ product }: ProductPageProps) {
                 >
                   <Box
                     display={'flex'}
+                    fontFamily={'CubicFive12'}
                     justifyContent="end"
                     mb={2}
-                    fontSize={'xl'}
+                    fontSize={16}
                     color="ghostVerse.grey.lighter"
                     _hover={{
                       color: 'ghostVerse.green.base',
                     }}
                   >
                     <Box>member</Box>
-                    <Box fontFamily={'CubicFive12'} display={'flex'} ml={4}>
+                    <Box display={'flex'} ml={4}>
                       {((product.price * 10 - product.price) * 0.69).toFixed(0)}{' '}
                       THB
                     </Box>
