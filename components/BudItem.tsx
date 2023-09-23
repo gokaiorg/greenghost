@@ -2,12 +2,18 @@ import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Product } from '../config/products';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
+
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
 
 type BudItemProps = {
   product: Product;
 };
 
 export const BudItem = ({ product }: BudItemProps) => {
+  SwiperCore.use([Autoplay]);
   return (
     <Box
       width={{ base: '50%', md: '33.33333%', lg: '25%', xl: '20%' }}
@@ -29,13 +35,48 @@ export const BudItem = ({ product }: BudItemProps) => {
           flexDirection={{ base: 'column' }}
           height={'100%'}
           whiteSpace={{ base: 'normal' }}
+          position={'relative'}
           _hover={{
             bgColor: 'rgba(109, 208, 246, 0.1)',
             backdropFilter: 'blur(3px)',
           }}
           transition={'all .3s'}
         >
-          <Box width={{ base: 'full' }} height={{ base: 'auto' }}>
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={'auto'}
+            loop
+            autoplay={{
+              delay: 10000,
+              pauseOnMouseEnter: true,
+              disableOnInteraction: false,
+            }}
+            effect={'coverflow'}
+            coverflowEffect={{
+              rotate: 25,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            modules={[EffectCoverflow]}
+            initialSlide={1}
+          >
+            {product.images.map(
+              (image, index) =>
+                index !== 2 && (
+                  <SwiperSlide key={index}>
+                    <Image
+                      src={image}
+                      width={500}
+                      height={500}
+                      alt={product.imgDesc}
+                    />
+                  </SwiperSlide>
+                )
+            )}
+          </Swiper>
+          {/* <Box width={{ base: 'full' }} height={{ base: 'auto' }}>
             <Image
               src={product.images[1]}
               alt={product.imgDesc}
@@ -44,7 +85,7 @@ export const BudItem = ({ product }: BudItemProps) => {
               title={product.imgDesc}
               priority={false}
             />
-          </Box>
+          </Box> */}
           <Box
             display={'flex'}
             flexDirection={'column'}
@@ -65,6 +106,7 @@ export const BudItem = ({ product }: BudItemProps) => {
                 whiteSpace={'nowrap'}
                 mb={2}
                 position={'absolute'}
+                zIndex={1}
                 right={0}
                 top={4}
                 background={'black'}

@@ -37,6 +37,7 @@ export const Gadget = () => {
         display={'flex'}
         flexDirection={{ base: 'column', lg: 'row' }}
         alignItems={{ base: 'start', lg: 'center' }}
+        lineHeight={1}
       >
         <HomeSectionTitle title="Gadgets Menu" />
         <Box

@@ -88,6 +88,7 @@ export const Bud = () => {
         display={'flex'}
         flexDirection={{ base: 'column', lg: 'row' }}
         alignItems={{ base: 'start', lg: 'center' }}
+        lineHeight={1}
       >
         <HomeSectionTitle title="Buds Menu" />
         <Box

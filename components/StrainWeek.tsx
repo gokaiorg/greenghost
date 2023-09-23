@@ -72,12 +72,12 @@ export const StrainWeek = () => {
           >
             Discover the{' '}
             <Link
-              href="/weed-shop/bruce-banner"
-              title="Bruce Banner only 300 THB this week!"
+              href="/weed-shop/green-gelato"
+              title="Green Gelato only 300 THB this week!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Bruce Banner
+                Green Gelato
               </Box>
             </Link>{' '}
             for only 300 THB.
