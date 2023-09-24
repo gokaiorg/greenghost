@@ -1,27 +1,15 @@
 import { Box, Select, MenuButton, Menu, MenuList } from '@chakra-ui/react';
 import { useState } from 'react';
-import { products } from '../config/products';
-import { BudItem } from './BudItem';
-import { HomeSectionTitle } from './HomeSectionTitle';
+import { gadgets } from '../../config/gadgets';
+import { GadgetItem } from './GadgetItem';
+import { HomeSectionTitle } from '../HomeSectionTitle';
 
-type DominanceOption = 'All' | 'Sativa' | 'Indica' | 'Hybrid';
-
-export const BudMember = () => {
+export const Gadget = () => {
   const [sortBy, setSortBy] = useState('priceLowToHigh');
   const [showUnavailable] = useState(false);
-  const [dominanceFilter, setDominanceFilter] =
-    useState<DominanceOption>('All');
 
-  const filteredProducts = products.filter((product) => {
-    if (!showUnavailable && product.quantity === 0) {
-      return false;
-    }
-
-    if (dominanceFilter !== 'All' && product.dominance !== dominanceFilter) {
-      return false;
-    }
-
-    if (product.price !== 999) {
+  const filteredProducts = gadgets.filter((gadget) => {
+    if (!showUnavailable && gadget.price === 999) {
       return false;
     }
 
@@ -30,18 +18,10 @@ export const BudMember = () => {
 
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     switch (sortBy) {
-      case 'THCHighToLow':
-        return Number(b.THC) - Number(a.THC);
-      case 'THCLowToHigh':
-        return Number(a.THC) - Number(b.THC);
-      case 'sativaHighToLow':
-        return Number(b.sativa) - Number(a.sativa);
-      case 'sativaLowToHigh':
-        return Number(a.sativa) - Number(b.sativa);
-      case 'indicaHighToLow':
-        return Number(b.indica) - Number(a.indica);
-      case 'indicaLowToHigh':
-        return Number(a.indica) - Number(b.indica);
+      case 'priceLowToHigh':
+        return Number(a.price) - Number(b.price);
+      case 'priceHighToLow':
+        return Number(b.price) - Number(a.price);
       default:
         return 0;
     }
@@ -49,12 +29,6 @@ export const BudMember = () => {
 
   const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSortBy(event.target.value);
-  };
-
-  const handleDominanceChange = (
-    event: React.ChangeEvent<HTMLSelectElement>
-  ) => {
-    setDominanceFilter(event.target.value as DominanceOption);
   };
 
   return (
@@ -65,7 +39,7 @@ export const BudMember = () => {
         alignItems={{ base: 'start', lg: 'center' }}
         lineHeight={1}
       >
-        <HomeSectionTitle title="Member Only Menu" />
+        <HomeSectionTitle title="Gadgets Menu" />
         <Box
           ml={{ base: '0', lg: '4' }}
           display={'flex'}
@@ -82,7 +56,7 @@ export const BudMember = () => {
             fontSize={26}
             fontFamily={'vt323'}
           >
-            Pre-order with a minimum of 10 grams.
+            Elevate your smoking experience.
           </Box>
           <Menu>
             <MenuButton w={8} h={8} color={'ghostVerse.green.base'}>
@@ -90,7 +64,7 @@ export const BudMember = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
               >
                 <path
@@ -138,43 +112,8 @@ export const BudMember = () => {
                     _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
                     w={{ base: '100%', lg: 'fit-content' }}
                   >
-                    <option value="THCHighToLow">THC: High to Low</option>
-                    <option value="THCLowToHigh">THC: Low to High</option>
-                    <option value="sativaHighToLow">Sativa: High to Low</option>
-                    <option value="sativaLowToHigh">Sativa: Low to High</option>
-                    <option value="indicaHighToLow">Indica: High to Low</option>
-                    <option value="indicaLowToHigh">Indica: Low to High</option>
-                  </Select>
-                </Box>
-                <Box w={'full'} mr={{ base: '0', lg: '4' }}>
-                  <Box
-                    fontFamily={'CubicFive12'}
-                    fontSize={14}
-                    color={'ghostVerse.grey.base'}
-                    display={'none'}
-                  >
-                    <label htmlFor={'dominance'}>Dominance</label>
-                  </Box>
-                  <Select
-                    id={'dominance'}
-                    value={dominanceFilter}
-                    onChange={handleDominanceChange}
-                    borderRadius={'0'}
-                    color={'ghostVerse.green.base'}
-                    borderColor={'black'}
-                    outline={'none'}
-                    p={0}
-                    cursor={'pointer'}
-                    fontFamily={'vt323'}
-                    fontSize={24}
-                    _hover={{ borderColor: 'ghostVerse.green.base' }}
-                    _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
-                    w={{ base: '100%', lg: 'fit-content' }}
-                  >
-                    <option value="All">All Dominance</option>
-                    <option value="Sativa">Sativa</option>
-                    <option value="Indica">Indica</option>
-                    <option value="Hybrid">Hybrid</option>
+                    <option value="priceLowToHigh">Price: Low to High</option>
+                    <option value="priceHighToLow">Price: High to Low</option>
                   </Select>
                 </Box>
               </Box>
@@ -184,8 +123,8 @@ export const BudMember = () => {
       </Box>
 
       <Box display={'flex'} flexWrap={'wrap'}>
-        {sortedProducts.map((product) => (
-          <BudItem key={product.slug} product={product} />
+        {sortedProducts.map((gadget) => (
+          <GadgetItem key={gadget.slug} gadget={gadget} />
         ))}
       </Box>
     </Box>

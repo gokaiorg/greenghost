@@ -38,7 +38,7 @@ export const products: Product[] = [
     growerSlug: '/sweed-dreams',
     environment: 'Indoor',
     harvest: '10/14/2023',
-    quantity: 50,
+    quantity: 43,
     origin: 'Krabi',
     description:
       "Forbidden Fruit, a tantalizing cannabis strain, emerges from the enchanting genetic blend of Cherry Pie and Tangie. Its visual allure is evident in its dense, purple-tinged buds, complemented by dark green leaves and vibrant orange hairs. The bouquet of aromas is a harmonious fusion of Cherry Pie's sweet, musky cherry notes entwined with Tangie's bold, tropical flavors. Hints of pine, mango, and passionfruit candy add further layers to this aromatic masterpiece. \n\n Upon consumption, Forbidden Fruit unveils its potent indica characteristics that hit with precision, starting with a cerebral euphoria that settles gently into the body. This strain's deep physical relaxation and mental tranquility make it an ideal choice for alleviating minor physical discomfort and shedding the burdens of stress. Whether you seek solace after a long day or a respite from life's demands, Forbidden Fruit offers a serene escape. \n\n Forbidden Fruit is a testament to the artistry of cannabis breeding, delivering a delightful blend of flavors and effects. Its ability to soothe both body and mind makes it a cherished choice among cannabis connoisseurs seeking a moment of tranquility and relief. With its remarkable terpene profile and seductive appearance, Forbidden Fruit stands as a captivating option for those in pursuit of relaxation and respite in the world of cannabis.",
@@ -1014,7 +1014,7 @@ export const products: Product[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-amnesia-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-amnesia-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-amnesia-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-amnesia-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Amnesia',
     source: 'https://www.leafly.com/strains/amnesia',

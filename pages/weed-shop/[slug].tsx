@@ -9,7 +9,7 @@ import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import { Box } from '@chakra-ui/react';
-import { BuyNowLink } from '../../components/BuyNowLink';
+import { BuyNowLink } from '../../components/shop/BuyNowLink';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
 
@@ -290,14 +290,14 @@ export default function ProductPage({ product }: ProductPageProps) {
                 </Link>
 
                 <Box display={'flex'} justifyContent="end">
-                  <Box as={'h3'}>10G</Box>
+                  <Box as={'h3'}>5G</Box>
                   <Box
                     fontFamily={'CubicFive12'}
                     display={'flex'}
                     color={'ghostVerse.green.base'}
                     ml={4}
                   >
-                    {(product.price * 10 - product.price).toFixed(0)} THB
+                    {(product.price * 5 - product.price).toFixed(0)} THB
                   </Box>
                 </Box>
                 <Link
@@ -318,7 +318,7 @@ export default function ProductPage({ product }: ProductPageProps) {
                   >
                     <Box>member</Box>
                     <Box display={'flex'} ml={4}>
-                      {((product.price * 10 - product.price) * 0.69).toFixed(0)}{' '}
+                      {((product.price * 5 - product.price) * 0.69).toFixed(0)}{' '}
                       THB
                     </Box>
                   </Box>

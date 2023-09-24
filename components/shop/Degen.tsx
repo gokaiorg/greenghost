@@ -1,15 +1,15 @@
 import { Box, Select, MenuButton, Menu, MenuList } from '@chakra-ui/react';
 import { useState } from 'react';
-import { gadgets } from '../config/gadgets';
-import { GadgetItem } from './GadgetItem';
-import { HomeSectionTitle } from './HomeSectionTitle';
+import { degens } from '../../config/degens';
+import { DegenItem } from './DegenItem';
+import { HomeSectionTitle } from '../HomeSectionTitle';
 
-export const Gadget = () => {
+export const Degen = () => {
   const [sortBy, setSortBy] = useState('priceLowToHigh');
   const [showUnavailable] = useState(false);
 
-  const filteredProducts = gadgets.filter((gadget) => {
-    if (!showUnavailable && gadget.price === 999) {
+  const filteredProducts = degens.filter((degen) => {
+    if (!showUnavailable && degen.price === 999) {
       return false;
     }
 
@@ -22,6 +22,10 @@ export const Gadget = () => {
         return Number(a.price) - Number(b.price);
       case 'priceHighToLow':
         return Number(b.price) - Number(a.price);
+      case 'THCHighToLow':
+        return Number(b.THC) - Number(a.THC);
+      case 'THCLowToHigh':
+        return Number(a.THC) - Number(b.THC);
       default:
         return 0;
     }
@@ -39,7 +43,7 @@ export const Gadget = () => {
         alignItems={{ base: 'start', lg: 'center' }}
         lineHeight={1}
       >
-        <HomeSectionTitle title="Gadgets Menu" />
+        <HomeSectionTitle title="Degen Menu" />
         <Box
           ml={{ base: '0', lg: '4' }}
           display={'flex'}
@@ -56,7 +60,7 @@ export const Gadget = () => {
             fontSize={26}
             fontFamily={'vt323'}
           >
-            Elevate your smoking experience.
+            Concentrated weed for degen.
           </Box>
           <Menu>
             <MenuButton w={8} h={8} color={'ghostVerse.green.base'}>
@@ -64,7 +68,7 @@ export const Gadget = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
               >
                 <path
@@ -114,6 +118,8 @@ export const Gadget = () => {
                   >
                     <option value="priceLowToHigh">Price: Low to High</option>
                     <option value="priceHighToLow">Price: High to Low</option>
+                    <option value="THCHighToLow">THC: High to Low</option>
+                    <option value="THCLowToHigh">THC: Low to High</option>
                   </Select>
                 </Box>
               </Box>
@@ -123,8 +129,8 @@ export const Gadget = () => {
       </Box>
 
       <Box display={'flex'} flexWrap={'wrap'}>
-        {sortedProducts.map((gadget) => (
-          <GadgetItem key={gadget.slug} gadget={gadget} />
+        {sortedProducts.map((degen) => (
+          <DegenItem key={degen.slug} degen={degen} />
         ))}
       </Box>
     </Box>

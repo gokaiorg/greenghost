@@ -1,7 +1,7 @@
 import NextLink from 'next/link';
 import { Box } from '@chakra-ui/react';
-import { ImgEarth } from './ImgEarth';
-import { ImgG } from './ImgG';
+import { ImgEarth } from './media/ImgEarth';
+import { ImgG } from './media/ImgG';
 
 export const Logo = () => {
   return (

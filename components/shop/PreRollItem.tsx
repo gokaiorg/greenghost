@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import Link from 'next/link';
-import { Product } from '../config/products';
+import { Product } from '../../config/products';
 
 type PreRollItemProps = {
   product: Product;

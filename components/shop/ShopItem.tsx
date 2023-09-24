@@ -1,10 +1,10 @@
 import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
-import { Shop } from '../config/shops';
-import { IconShop } from './IconShop';
-import { IconClock } from './IconClock';
-import { IconPin } from './IconPin';
-import { IconsReview } from './IconsReview';
+import { Shop } from '../../config/shops';
+import { IconShop } from './../media/IconShop';
+import { IconClock } from './../media/IconClock';
+import { IconPin } from './../media/IconPin';
+import { IconsReview } from './../media/IconsReview';
 
 type ShopItemProps = {
   shop: Shop;

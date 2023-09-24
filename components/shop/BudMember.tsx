@@ -1,15 +1,29 @@
 import { Box, Select, MenuButton, Menu, MenuList } from '@chakra-ui/react';
 import { useState } from 'react';
-import { degens } from '../config/degens';
-import { DegenItem } from './DegenItem';
-import { HomeSectionTitle } from './HomeSectionTitle';
+import { products } from '../../config/products';
+import { BudItem } from './BudItem';
+import { HomeSectionTitle } from '../HomeSectionTitle';
+// import { useCart } from '../cart/cartFunctions';
 
-export const Degen = () => {
+type DominanceOption = 'All' | 'Sativa' | 'Indica' | 'Hybrid';
+
+export const BudMember = () => {
   const [sortBy, setSortBy] = useState('priceLowToHigh');
   const [showUnavailable] = useState(false);
+  const [dominanceFilter, setDominanceFilter] =
+    useState<DominanceOption>('All');
+  // const { addToCart } = useCart();
 
-  const filteredProducts = degens.filter((degen) => {
-    if (!showUnavailable && degen.price === 999) {
+  const filteredProducts = products.filter((product) => {
+    if (!showUnavailable && product.quantity === 0) {
+      return false;
+    }
+
+    if (dominanceFilter !== 'All' && product.dominance !== dominanceFilter) {
+      return false;
+    }
+
+    if (product.price !== 999) {
       return false;
     }
 
@@ -18,14 +32,18 @@ export const Degen = () => {
 
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     switch (sortBy) {
-      case 'priceLowToHigh':
-        return Number(a.price) - Number(b.price);
-      case 'priceHighToLow':
-        return Number(b.price) - Number(a.price);
       case 'THCHighToLow':
         return Number(b.THC) - Number(a.THC);
       case 'THCLowToHigh':
         return Number(a.THC) - Number(b.THC);
+      case 'sativaHighToLow':
+        return Number(b.sativa) - Number(a.sativa);
+      case 'sativaLowToHigh':
+        return Number(a.sativa) - Number(b.sativa);
+      case 'indicaHighToLow':
+        return Number(b.indica) - Number(a.indica);
+      case 'indicaLowToHigh':
+        return Number(a.indica) - Number(b.indica);
       default:
         return 0;
     }
@@ -33,6 +51,12 @@ export const Degen = () => {
 
   const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSortBy(event.target.value);
+  };
+
+  const handleDominanceChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    setDominanceFilter(event.target.value as DominanceOption);
   };
 
   return (
@@ -43,7 +67,7 @@ export const Degen = () => {
         alignItems={{ base: 'start', lg: 'center' }}
         lineHeight={1}
       >
-        <HomeSectionTitle title="Degen Menu" />
+        <HomeSectionTitle title="Member Only Menu" />
         <Box
           ml={{ base: '0', lg: '4' }}
           display={'flex'}
@@ -60,7 +84,7 @@ export const Degen = () => {
             fontSize={26}
             fontFamily={'vt323'}
           >
-            Concentrated weed for degen.
+            Pre-order with a minimum of 10 grams.
           </Box>
           <Menu>
             <MenuButton w={8} h={8} color={'ghostVerse.green.base'}>
@@ -68,7 +92,7 @@ export const Degen = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
               >
                 <path
@@ -116,10 +140,43 @@ export const Degen = () => {
                     _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
                     w={{ base: '100%', lg: 'fit-content' }}
                   >
-                    <option value="priceLowToHigh">Price: Low to High</option>
-                    <option value="priceHighToLow">Price: High to Low</option>
                     <option value="THCHighToLow">THC: High to Low</option>
                     <option value="THCLowToHigh">THC: Low to High</option>
+                    <option value="sativaHighToLow">Sativa: High to Low</option>
+                    <option value="sativaLowToHigh">Sativa: Low to High</option>
+                    <option value="indicaHighToLow">Indica: High to Low</option>
+                    <option value="indicaLowToHigh">Indica: Low to High</option>
+                  </Select>
+                </Box>
+                <Box w={'full'} mr={{ base: '0', lg: '4' }}>
+                  <Box
+                    fontFamily={'CubicFive12'}
+                    fontSize={14}
+                    color={'ghostVerse.grey.base'}
+                    display={'none'}
+                  >
+                    <label htmlFor={'dominance'}>Dominance</label>
+                  </Box>
+                  <Select
+                    id={'dominance'}
+                    value={dominanceFilter}
+                    onChange={handleDominanceChange}
+                    borderRadius={'0'}
+                    color={'ghostVerse.green.base'}
+                    borderColor={'black'}
+                    outline={'none'}
+                    p={0}
+                    cursor={'pointer'}
+                    fontFamily={'vt323'}
+                    fontSize={24}
+                    _hover={{ borderColor: 'ghostVerse.green.base' }}
+                    _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
+                    w={{ base: '100%', lg: 'fit-content' }}
+                  >
+                    <option value="All">All Dominance</option>
+                    <option value="Sativa">Sativa</option>
+                    <option value="Indica">Indica</option>
+                    <option value="Hybrid">Hybrid</option>
                   </Select>
                 </Box>
               </Box>
@@ -129,8 +186,8 @@ export const Degen = () => {
       </Box>
 
       <Box display={'flex'} flexWrap={'wrap'}>
-        {sortedProducts.map((degen) => (
-          <DegenItem key={degen.slug} degen={degen} />
+        {sortedProducts.map((product) => (
+          <BudItem key={product.slug} product={product} />
         ))}
       </Box>
     </Box>

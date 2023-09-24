@@ -8,7 +8,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { MenuCrypto } from '../components/MenuCrypto';
 import Image from 'next/image';
-import { IconRelax } from '../components/IconRelax';
+import { IconRelax } from '../components/media/IconRelax';
 
 const CryptoWeedShop: NextPage = () => {
   return (

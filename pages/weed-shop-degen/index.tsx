@@ -4,7 +4,7 @@ import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
 import Head from 'next/head';
 import { MenuWeedShop } from '../../components/MenuWeedShop';
-import { Degen } from '../../components/Degen';
+import { Degen } from '../../components/shop/Degen';
 
 const GhostDegenWeedShop: NextPage = () => {
   return (

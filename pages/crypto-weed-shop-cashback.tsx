@@ -8,7 +8,7 @@ import Head from 'next/head';
 import { MenuCrypto } from '../components/MenuCrypto';
 import Link from 'next/link';
 import Image from 'next/image';
-import { IconCashback } from '../components/IconCashback';
+import { IconCashback } from '../components/media/IconCashback';
 
 const CryptoWeedShop: NextPage = () => {
   return (

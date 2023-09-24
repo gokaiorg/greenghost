@@ -1,19 +1,31 @@
+// BudItem.tsx
 import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Product } from '../config/products';
+import { Product } from '../../config/products';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 
+// import { useCart } from '../cart/cartFunctions';
+
 type BudItemProps = {
   product: Product;
+  // addToCart: (product: Product) => void; // Remove this line
 };
 
 export const BudItem = ({ product }: BudItemProps) => {
   SwiperCore.use([Autoplay]);
+
+  // const { addToCart } = useCart(); // Get the addToCart function from the custom hook
+
+  // const handleAddToCart = () => {
+  //   // Call the addToCart function when the "Add to Cart" button is clicked
+  //   addToCart(product);
+  //   console.log('Adding to cart:', product);
+  // };
   return (
     <Box
       width={{ base: '50%', md: '33.33333%', lg: '25%', xl: '20%' }}
@@ -203,6 +215,7 @@ export const BudItem = ({ product }: BudItemProps) => {
           </Box>
         </Box>
       </Link>
+      {/* <button onClick={handleAddToCart}>Add to Cart</button> */}
     </Box>
   );
 };

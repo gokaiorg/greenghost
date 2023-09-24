@@ -8,7 +8,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { SocialContactIcons } from '../components/SocialContactIcons';
 import Image from 'next/image';
-import { ImgContact } from '../components/ImgContact';
+import { ImgContact } from '../components/media/ImgContact';
 import { Find } from '../components/Find';
 
 const BuyWeed: NextPage = () => {

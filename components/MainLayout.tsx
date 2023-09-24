@@ -4,6 +4,7 @@ import { MetaHead, MetaHeadProps } from './MetaHead';
 import { Footer } from './Footer';
 import AgeVerificationPopup from '../components/AgeVerificationPopup';
 import Script from 'next/script';
+// import Cart from './cart/Cart';
 
 export const MainLayout: FC<PropsWithChildren<MetaHeadProps>> = ({
   children,
@@ -64,6 +65,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         mb={5}
       >
         <Container maxW="container.xl" px={2}>
+          {/* <Cart /> */}
           <Box>{children}</Box>
         </Container>
       </Box>

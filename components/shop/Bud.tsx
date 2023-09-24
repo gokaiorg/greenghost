@@ -7,9 +7,9 @@ import {
   MenuList,
 } from '@chakra-ui/react';
 import { useState } from 'react';
-import { products } from '../config/products';
+import { products } from '../../config/products';
 import { BudItem } from './BudItem';
-import { HomeSectionTitle } from './HomeSectionTitle';
+import { HomeSectionTitle } from '../HomeSectionTitle';
 
 type DominanceOption = 'All' | 'Sativa' | 'Indica' | 'Hybrid';
 type GrowerOption = 'All';
@@ -120,7 +120,7 @@ export const Bud = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
               >
                 <path
