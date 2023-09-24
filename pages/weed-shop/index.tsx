@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import { MainLayout } from '../../components/MainLayout';
 import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
-import { Bud } from '../../components/Bud';
+import { Bud } from '../../components/shop/Bud';
 import Head from 'next/head';
 import { MenuWeedShop } from '../../components/MenuWeedShop';
 import { HomeFeature } from '../../components/HomeFeatures';

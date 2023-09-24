@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
-import { PreRoll } from '../components/PreRoll';
+import { PreRoll } from '../components/shop/PreRoll';
 import Head from 'next/head';
 import { MenuWeedShop } from '../components/MenuWeedShop';
 

@@ -1,7 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Gadget } from '../config/gadgets';
+import { Gadget } from '../../config/gadgets';
 
 type GadgetItemProps = {
   gadget: Gadget;

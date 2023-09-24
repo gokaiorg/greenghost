@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import Link from 'next/link';
-import { Product } from '../config/products';
+import { Product } from '../../config/products';
 
 type PreRollItemProps = {
   product: Product;
@@ -34,6 +34,7 @@ export const PreRollItem = ({ product }: PreRollItemProps) => {
             display={'flex'}
             flexDirection={{ base: 'column', lg: 'row' }}
             flex={'1'}
+            pos={'relative'}
             alignItems={'center'}
             marginLeft={{ base: 0 }}
           >
@@ -52,7 +53,7 @@ export const PreRollItem = ({ product }: PreRollItemProps) => {
               display={'flex'}
               fontFamily={'vt323'}
               fontSize={'2xl'}
-              mb={2}
+              mb={1}
             >
               {product.dominance == 'Indica' && (
                 <Box as={'h3'} color={'ghostVerse.blue.base'} marginRight={2}>
@@ -75,7 +76,7 @@ export const PreRollItem = ({ product }: PreRollItemProps) => {
               fontFamily={'vt323'}
               fontSize={'2xl'}
               flexWrap={'wrap'}
-              mb={2}
+              mb={1}
               w={{ base: '100%', lg: '15%' }}
             >
               {product.THC !== 'undefined' && (
@@ -117,7 +118,13 @@ export const PreRollItem = ({ product }: PreRollItemProps) => {
                 <Box color={'ghostVerse.orange.light'}>{product.effects}</Box>
               )}
             </Box>
-            <Box marginLeft={'auto'} whiteSpace={'nowrap'} padding={'0.5rem'}>
+            <Box
+              pos={'absolute'}
+              top={{ base: 0, lg: 1 }}
+              right={0}
+              marginLeft={'auto'}
+              whiteSpace={'nowrap'}
+            >
               <Box
                 fontFamily={'CubicFive12'}
                 fontSize={{ base: 18, lg: 20 }}

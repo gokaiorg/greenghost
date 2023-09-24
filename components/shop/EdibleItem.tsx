@@ -1,13 +1,13 @@
 import { Box } from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Degen } from '../config/degens';
+import { Edible } from '../../config/edibles';
 
-type DegenItemProps = {
-  degen: Degen;
+type EdibleItemProps = {
+  edible: Edible;
 };
 
-export const DegenItem = ({ degen }: DegenItemProps) => {
+export const EdibleItem = ({ edible }: EdibleItemProps) => {
   return (
     <Box
       width={{ base: '100%', md: '50%', lg: '25%' }}
@@ -15,7 +15,11 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
       paddingRight={1}
       lineHeight={1}
     >
-      <Link href={`weed-shop-degen/${degen.slug}`} title={degen.name} passHref>
+      <Link
+        href={`weed-shop-edibles/${edible.slug}`}
+        title={edible.name}
+        passHref
+      >
         <Box
           borderColor={'ghostVerse.green.base'}
           borderWidth={1}
@@ -37,11 +41,11 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
         >
           <Box width={{ base: 'full' }} height={{ base: 'auto' }}>
             <Image
-              src={degen.images[1]}
-              alt={degen.imgDesc}
+              src={edible.images[1]}
+              alt={edible.imgDesc}
               width={700}
               height={700}
-              title={degen.imgDesc}
+              title={edible.imgDesc}
               priority={false}
             />
           </Box>
@@ -60,7 +64,7 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
               flexDirection={'column'}
               marginRight={1}
             >
-              {degen.price !== 999 && (
+              {edible.price !== 999 && (
                 <Box
                   marginLeft={'auto'}
                   color={'ghostVerse.green.base'}
@@ -72,18 +76,19 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
                   background={'black'}
                   padding={'0.5rem'}
                 >
-                  {degen.price} THB
+                  {edible.price} THB
                 </Box>
               )}
-              {degen.name}
+              {edible.name}
             </Box>
             <Box
               display={'flex'}
               fontFamily={'vt323'}
               fontSize={'3xl'}
-              flexWrap={'wrap'}
+              flexDirection={'column'}
+              mb={4}
             >
-              {degen.THC !== 'undefined' && (
+              {edible.THC !== 'undefined' && (
                 <Box display={'flex'} marginRight={2} flexDirection={'row'}>
                   THC
                   <Box
@@ -93,11 +98,11 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
                     flexDirection={'row'}
                     alignItems={'baseline'}
                   >
-                    {degen.THC}
+                    {edible.THC}
                   </Box>
                 </Box>
               )}
-              {degen.CBD !== 'undefined' && (
+              {edible.CBD !== 'undefined' && (
                 <Box display={'flex'} marginRight={2} flexDirection={'row'}>
                   CBD
                   <Box
@@ -107,8 +112,27 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
                     flexDirection={'row'}
                     alignItems={'baseline'}
                   >
-                    {degen.CBD}
+                    {edible.CBD}
                   </Box>
+                </Box>
+              )}
+            </Box>
+            <Box
+              display={'flex'}
+              fontFamily={'vt323'}
+              fontSize={'3xl'}
+              mx={'auto'}
+              mt={'auto'}
+            >
+              {edible.effects !== 'undefined' && (
+                <Box
+                  display={'flex'}
+                  textAlign={'center'}
+                  flexDirection={'column'}
+                  fontSize={'2xl'}
+                >
+                  Feelings
+                  <Box color={'ghostVerse.green.base'}>{edible.effects}</Box>
                 </Box>
               )}
             </Box>

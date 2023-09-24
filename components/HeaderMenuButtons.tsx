@@ -3,11 +3,11 @@ import { FC } from 'react';
 import { LoginModalButton } from './core/LoginModalButton';
 import { UserAvatar } from './UserAvatar';
 import { useRouter } from 'next/router';
-import { IconMenu } from './IconMenu';
+import { IconMenu } from './media/IconMenu';
 import Link from 'next/link';
-import { IconMap } from './IconMap';
-import { IconChat } from './IconChat';
-import { IconEarn } from './IconEarn';
+import { IconMap } from './media/IconMap';
+import { IconChat } from './media/IconChat';
+import { IconEarn } from './media/IconEarn';
 
 interface HeaderMenuButtonsProps {
   enabled: string[];

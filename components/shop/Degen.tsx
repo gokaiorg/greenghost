@@ -1,15 +1,15 @@
-import { Box, MenuButton, Menu, MenuList, Select } from '@chakra-ui/react';
+import { Box, Select, MenuButton, Menu, MenuList } from '@chakra-ui/react';
 import { useState } from 'react';
-import { edibles } from '../config/edibles';
-import { EdibleItem } from './EdibleItem';
-import { HomeSectionTitle } from './HomeSectionTitle';
+import { degens } from '../../config/degens';
+import { DegenItem } from './DegenItem';
+import { HomeSectionTitle } from '../HomeSectionTitle';
 
-export const Edible = () => {
+export const Degen = () => {
   const [sortBy, setSortBy] = useState('priceLowToHigh');
   const [showUnavailable] = useState(false);
 
-  const filteredProducts = edibles.filter((edible) => {
-    if (!showUnavailable && edible.price === 999) {
+  const filteredProducts = degens.filter((degen) => {
+    if (!showUnavailable && degen.price === 999) {
       return false;
     }
 
@@ -41,8 +41,9 @@ export const Edible = () => {
         display={'flex'}
         flexDirection={{ base: 'column', lg: 'row' }}
         alignItems={{ base: 'start', lg: 'center' }}
+        lineHeight={1}
       >
-        <HomeSectionTitle title="Edibles Menu" />
+        <HomeSectionTitle title="Degen Menu" />
         <Box
           ml={{ base: '0', lg: '4' }}
           display={'flex'}
@@ -59,7 +60,7 @@ export const Edible = () => {
             fontSize={26}
             fontFamily={'vt323'}
           >
-            Edibles price per serving.
+            Concentrated weed for degen.
           </Box>
           <Menu>
             <MenuButton w={8} h={8} color={'ghostVerse.green.base'}>
@@ -67,7 +68,7 @@ export const Edible = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
               >
                 <path
@@ -119,10 +120,6 @@ export const Edible = () => {
                     <option value="priceHighToLow">Price: High to Low</option>
                     <option value="THCHighToLow">THC: High to Low</option>
                     <option value="THCLowToHigh">THC: Low to High</option>
-                    <option value="sativaHighToLow">Sativa: High to Low</option>
-                    <option value="sativaLowToHigh">Sativa: Low to High</option>
-                    <option value="indicaHighToLow">Indica: High to Low</option>
-                    <option value="indicaLowToHigh">Indica: Low to High</option>
                   </Select>
                 </Box>
               </Box>
@@ -130,9 +127,10 @@ export const Edible = () => {
           </Menu>
         </Box>
       </Box>
+
       <Box display={'flex'} flexWrap={'wrap'}>
-        {sortedProducts.map((edible) => (
-          <EdibleItem key={edible.slug} edible={edible} />
+        {sortedProducts.map((degen) => (
+          <DegenItem key={degen.slug} degen={degen} />
         ))}
       </Box>
     </Box>

@@ -6,7 +6,7 @@ import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import Head from 'next/head';
 import { MenuCrypto } from '../components/MenuCrypto';
-import { IconPartners } from '../components/IconPartners';
+import { IconPartners } from '../components/media/IconPartners';
 
 const CryptoWeedShop: NextPage = () => {
   return (

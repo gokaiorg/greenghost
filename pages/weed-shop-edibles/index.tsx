@@ -4,7 +4,7 @@ import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
 import Head from 'next/head';
 import { MenuWeedShop } from '../../components/MenuWeedShop';
-import { Edible } from '../../components/Edible';
+import { Edible } from '../../components/shop/Edible';
 
 const WeedShopEdibles: NextPage = () => {
   return (

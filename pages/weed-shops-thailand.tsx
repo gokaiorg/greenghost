@@ -5,7 +5,7 @@ import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import Head from 'next/head';
-import { ImgShops } from '../components/ImgShops';
+import { ImgShops } from '../components/media/ImgShops';
 import { ThaiShop } from '../components/ThaiShop';
 
 const CannabisShop: NextPage = () => {

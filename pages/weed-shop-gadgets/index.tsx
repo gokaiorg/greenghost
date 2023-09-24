@@ -4,7 +4,7 @@ import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
 import Head from 'next/head';
 import { MenuWeedShop } from '../../components/MenuWeedShop';
-import { Gadget } from '../../components/Gadget';
+import { Gadget } from '../../components/shop/Gadget';
 
 const WeedShopGadgets: NextPage = () => {
   return (

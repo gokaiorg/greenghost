@@ -1,15 +1,15 @@
 import { Box, Select, MenuButton, Menu, MenuList } from '@chakra-ui/react';
 import { useState } from 'react';
-import { degens } from '../config/degens';
-import { DegenItem } from './DegenItem';
-import { HomeSectionTitle } from './HomeSectionTitle';
+import { gadgets } from '../../config/gadgets';
+import { GadgetItem } from './GadgetItem';
+import { HomeSectionTitle } from '../HomeSectionTitle';
 
-export const Degen = () => {
+export const Gadget = () => {
   const [sortBy, setSortBy] = useState('priceLowToHigh');
   const [showUnavailable] = useState(false);
 
-  const filteredProducts = degens.filter((degen) => {
-    if (!showUnavailable && degen.price === 999) {
+  const filteredProducts = gadgets.filter((gadget) => {
+    if (!showUnavailable && gadget.price === 999) {
       return false;
     }
 
@@ -22,10 +22,6 @@ export const Degen = () => {
         return Number(a.price) - Number(b.price);
       case 'priceHighToLow':
         return Number(b.price) - Number(a.price);
-      case 'THCHighToLow':
-        return Number(b.THC) - Number(a.THC);
-      case 'THCLowToHigh':
-        return Number(a.THC) - Number(b.THC);
       default:
         return 0;
     }
@@ -41,8 +37,9 @@ export const Degen = () => {
         display={'flex'}
         flexDirection={{ base: 'column', lg: 'row' }}
         alignItems={{ base: 'start', lg: 'center' }}
+        lineHeight={1}
       >
-        <HomeSectionTitle title="Degen Menu" />
+        <HomeSectionTitle title="Gadgets Menu" />
         <Box
           ml={{ base: '0', lg: '4' }}
           display={'flex'}
@@ -59,7 +56,7 @@ export const Degen = () => {
             fontSize={26}
             fontFamily={'vt323'}
           >
-            Concentrated weed for degen.
+            Elevate your smoking experience.
           </Box>
           <Menu>
             <MenuButton w={8} h={8} color={'ghostVerse.green.base'}>
@@ -67,7 +64,7 @@ export const Degen = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
               >
                 <path
@@ -117,8 +114,6 @@ export const Degen = () => {
                   >
                     <option value="priceLowToHigh">Price: Low to High</option>
                     <option value="priceHighToLow">Price: High to Low</option>
-                    <option value="THCHighToLow">THC: High to Low</option>
-                    <option value="THCLowToHigh">THC: Low to High</option>
                   </Select>
                 </Box>
               </Box>
@@ -128,8 +123,8 @@ export const Degen = () => {
       </Box>
 
       <Box display={'flex'} flexWrap={'wrap'}>
-        {sortedProducts.map((degen) => (
-          <DegenItem key={degen.slug} degen={degen} />
+        {sortedProducts.map((gadget) => (
+          <GadgetItem key={gadget.slug} gadget={gadget} />
         ))}
       </Box>
     </Box>

@@ -1,30 +1,15 @@
-import {
-  Box,
-  Select,
-  MenuButton,
-  Menu,
-  MenuList,
-  Checkbox,
-} from '@chakra-ui/react';
+import { Box, MenuButton, Menu, MenuList, Select } from '@chakra-ui/react';
 import { useState } from 'react';
-import { products } from '../config/products';
-import { PreRollItem } from './PreRollItem';
-import { HomeSectionTitle } from './HomeSectionTitle';
+import { edibles } from '../../config/edibles';
+import { EdibleItem } from './EdibleItem';
+import { HomeSectionTitle } from './../HomeSectionTitle';
 
-type DominanceOption = 'All' | 'Sativa' | 'Indica' | 'Hybrid';
-
-export const PreRoll = () => {
+export const Edible = () => {
   const [sortBy, setSortBy] = useState('priceLowToHigh');
-  const [showUnavailable, setShowUnavailable] = useState(false);
-  const [dominanceFilter, setDominanceFilter] =
-    useState<DominanceOption>('All');
+  const [showUnavailable] = useState(false);
 
-  const filteredProducts = products.filter((product) => {
-    if (!showUnavailable && (product.quantity === 0 || product.price === 999)) {
-      return false;
-    }
-
-    if (dominanceFilter !== 'All' && product.dominance !== dominanceFilter) {
+  const filteredProducts = edibles.filter((edible) => {
+    if (!showUnavailable && edible.price === 999) {
       return false;
     }
 
@@ -41,14 +26,6 @@ export const PreRoll = () => {
         return Number(b.THC) - Number(a.THC);
       case 'THCLowToHigh':
         return Number(a.THC) - Number(b.THC);
-      case 'sativaHighToLow':
-        return Number(b.sativa) - Number(a.sativa);
-      case 'sativaLowToHigh':
-        return Number(a.sativa) - Number(b.sativa);
-      case 'indicaHighToLow':
-        return Number(b.indica) - Number(a.indica);
-      case 'indicaLowToHigh':
-        return Number(a.indica) - Number(b.indica);
       default:
         return 0;
     }
@@ -58,24 +35,15 @@ export const PreRoll = () => {
     setSortBy(event.target.value);
   };
 
-  const handleDominanceChange = (
-    event: React.ChangeEvent<HTMLSelectElement>
-  ) => {
-    setDominanceFilter(event.target.value as DominanceOption);
-  };
-
-  const handleShowUnavailableChange = () => {
-    setShowUnavailable((prevValue) => !prevValue);
-  };
-
   return (
     <Box mb="10">
       <Box
         display={'flex'}
         flexDirection={{ base: 'column', lg: 'row' }}
         alignItems={{ base: 'start', lg: 'center' }}
+        lineHeight={1}
       >
-        <HomeSectionTitle title="Pre-rolls Menu" />
+        <HomeSectionTitle title="Edibles Menu" />
         <Box
           ml={{ base: '0', lg: '4' }}
           display={'flex'}
@@ -92,7 +60,7 @@ export const PreRoll = () => {
             fontSize={26}
             fontFamily={'vt323'}
           >
-            Pre-Roll on demand. 1 gram.
+            Edibles price per serving.
           </Box>
           <Menu>
             <MenuButton w={8} h={8} color={'ghostVerse.green.base'}>
@@ -100,7 +68,7 @@ export const PreRoll = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
               >
                 <path
@@ -158,57 +126,14 @@ export const PreRoll = () => {
                     <option value="indicaLowToHigh">Indica: Low to High</option>
                   </Select>
                 </Box>
-                <Box w={'full'} mr={{ base: '0', lg: '4' }}>
-                  <Box
-                    fontFamily={'CubicFive12'}
-                    fontSize={14}
-                    color={'ghostVerse.grey.base'}
-                    display={'none'}
-                  >
-                    <label htmlFor={'dominance'}>Dominance</label>
-                  </Box>
-                  <Select
-                    id={'dominance'}
-                    value={dominanceFilter}
-                    onChange={handleDominanceChange}
-                    borderRadius={'0'}
-                    color={'ghostVerse.green.base'}
-                    borderColor={'black'}
-                    outline={'none'}
-                    p={0}
-                    cursor={'pointer'}
-                    fontFamily={'vt323'}
-                    fontSize={24}
-                    _hover={{ borderColor: 'ghostVerse.green.base' }}
-                    _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
-                    w={{ base: '100%', lg: 'fit-content' }}
-                  >
-                    <option value="All">All Dominance</option>
-                    <option value="Sativa">Sativa</option>
-                    <option value="Indica">Indica</option>
-                    <option value="Hybrid">Hybrid</option>
-                  </Select>
-                </Box>
-                <Checkbox
-                  ml={{ base: '4', lg: 'auto' }}
-                  my={{ base: '2', lg: '0' }}
-                  colorScheme="green"
-                  display={'none'}
-                  whiteSpace={'nowrap'}
-                  checked={showUnavailable}
-                  onChange={handleShowUnavailableChange}
-                  _checked={{ color: 'ghostVerse.green.base' }}
-                >
-                  All Buds
-                </Checkbox>
               </Box>
             </MenuList>
           </Menu>
         </Box>
       </Box>
-      <Box display={'flex'} flexWrap={'wrap'} mx={-0.5}>
-        {sortedProducts.map((product) => (
-          <PreRollItem key={product.slug} product={product} />
+      <Box display={'flex'} flexWrap={'wrap'}>
+        {sortedProducts.map((edible) => (
+          <EdibleItem key={edible.slug} edible={edible} />
         ))}
       </Box>
     </Box>

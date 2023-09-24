@@ -9,7 +9,7 @@ import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import { Box } from '@chakra-ui/react';
-import { BuyNowLink } from '../../components/BuyNowLink';
+import { BuyNowLink } from '../../components/shop/BuyNowLink';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
 

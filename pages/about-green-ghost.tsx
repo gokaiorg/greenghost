@@ -7,7 +7,7 @@ import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
-import { ImgAbout } from '../components/ImgAbout';
+import { ImgAbout } from '../components/media/ImgAbout';
 
 const BuyWeed: NextPage = () => {
   return (
