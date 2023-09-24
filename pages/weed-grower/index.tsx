@@ -5,7 +5,7 @@ import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import Head from 'next/head';
-import { ImgGrower } from '../../components/ImgGrower';
+import { ImgGrower } from '../../components/media/ImgGrower';
 import { Grower } from '../../components/Grower';
 
 const CannabisGrower: NextPage = () => {

@@ -1,8 +1,9 @@
 import { Box, Select, MenuButton, Menu, MenuList } from '@chakra-ui/react';
 import { useState } from 'react';
-import { products } from '../config/products';
+import { products } from '../../config/products';
 import { BudItem } from './BudItem';
-import { HomeSectionTitle } from './HomeSectionTitle';
+import { HomeSectionTitle } from '../HomeSectionTitle';
+// import { useCart } from '../cart/cartFunctions';
 
 type DominanceOption = 'All' | 'Sativa' | 'Indica' | 'Hybrid';
 
@@ -11,6 +12,7 @@ export const BudMember = () => {
   const [showUnavailable] = useState(false);
   const [dominanceFilter, setDominanceFilter] =
     useState<DominanceOption>('All');
+  // const { addToCart } = useCart();
 
   const filteredProducts = products.filter((product) => {
     if (!showUnavailable && product.quantity === 0) {
@@ -63,6 +65,7 @@ export const BudMember = () => {
         display={'flex'}
         flexDirection={{ base: 'column', lg: 'row' }}
         alignItems={{ base: 'start', lg: 'center' }}
+        lineHeight={1}
       >
         <HomeSectionTitle title="Member Only Menu" />
         <Box
@@ -89,7 +92,7 @@ export const BudMember = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
               >
                 <path

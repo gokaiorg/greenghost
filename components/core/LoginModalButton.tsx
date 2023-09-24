@@ -18,7 +18,7 @@ import { LoginComponent } from './LoginComponent';
 import { useEffectOnlyOnUpdate } from '../../hooks/useEffectOnlyOnUpdate';
 import { getSigningDeviceName } from '../../utils/getSigningDeviceName';
 import { useLogin, useLoginInfo } from '@useelven/core';
-import { IconLogin } from '../IconLogin';
+import { IconLogin } from '../media/IconLogin';
 
 interface LoginModalButtonProps {
   onClose?: () => void;

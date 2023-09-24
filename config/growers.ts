@@ -68,7 +68,7 @@ export const growers: Grower[] = [
     website: 'https://sweeddreamsthai.com/',
     facebook: '0',
     instagram: 'https://www.instagram.com/sweed.dreams.thai/',
-    twitter: 'https://twitter.com/sweeddreamsnft',
+    twitter: 'https://twitter.com/Sweed_DreamsNFT',
     telegram: '0',
   },
 ];

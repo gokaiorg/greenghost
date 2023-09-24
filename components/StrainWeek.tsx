@@ -52,7 +52,7 @@ export const StrainWeek = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
               >
                 <path
@@ -72,12 +72,12 @@ export const StrainWeek = () => {
           >
             Discover the{' '}
             <Link
-              href="/weed-shop/bruce-banner"
-              title="Bruce Banner only 300 THB this week!"
+              href="/weed-shop/green-gelato"
+              title="Green Gelato only 300 THB this week!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Bruce Banner
+                Green Gelato
               </Box>
             </Link>{' '}
             for only 300 THB.
@@ -96,7 +96,7 @@ export const StrainWeek = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
               >
                 <path
@@ -140,7 +140,7 @@ export const StrainWeek = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
               >
                 <path
@@ -170,7 +170,7 @@ export const StrainWeek = () => {
             </Link>{' '}
             strain now.
           </Text>
-          <Text
+          {/* <Text
             display={'flex'}
             alignItems={'center'}
             fontFamily={'CubicFive12'}
@@ -184,7 +184,7 @@ export const StrainWeek = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
               >
                 <path
@@ -213,8 +213,8 @@ export const StrainWeek = () => {
               </Box>
             </Link>{' '}
             strains at Green ghost.
-          </Text>
-          {/* <Text
+          </Text> */}
+          <Text
             display={'flex'}
             alignItems={'center'}
             fontFamily={'CubicFive12'}
@@ -228,7 +228,7 @@ export const StrainWeek = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
               >
                 <path
@@ -248,46 +248,16 @@ export const StrainWeek = () => {
           >
             Say goodbye to the{' '}
             <Link
-              href="/weed-shop/mandarin-zkittlez"
-              title="Mandarin Zkittlez - Sold Out!"
+              href="/weed-shop/bruce-banner"
+              title="Bruce Banner - Sold Out!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Mandarin Zkittlez
-              </Box>
-            </Link>
-            ,{' '}
-            <Link
-              href="/weed-shop/tangerine-dream"
-              title="Tangerine Dream - Sold Out!"
-              passHref
-            >
-              <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Tangerine Dream
-              </Box>
-            </Link>
-            ,{' '}
-            <Link
-              href="/weed-shop/amnesia-haze"
-              title="Amnesia Haze - Sold Out!"
-              passHref
-            >
-              <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Amnesia Haze
-              </Box>
-            </Link>{' '}
-            &{' '}
-            <Link
-              href="/weed-shop/gelato-runtz"
-              title="Gelato Runtz - Sold Out!"
-              passHref
-            >
-              <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Gelato Runtz
+                Bruce Banner
               </Box>
             </Link>
             . We&apos;ll miss you.
-          </Text> */}
+          </Text>
         </Box>
       )}
     </>

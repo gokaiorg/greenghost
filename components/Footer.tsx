@@ -1,7 +1,7 @@
 import { Container, Box, Text } from '@chakra-ui/react';
 import { SocialMediaIcons } from './SocialMediaIcons';
 import { MenuFooter } from './MenuFooter';
-import { ImgGhostverse } from './ImgGhostverse';
+import { ImgGhostverse } from './media/ImgGhostverse';
 
 export const Footer = () => {
   return (

@@ -8,7 +8,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
 import { WeedDeliveryFeature } from '../components/WeedDeliveryFeature';
-import { ImgDelivery } from '../components/ImgDelivery';
+import { ImgDelivery } from '../components/media/ImgDelivery';
 
 const WeedDelivery: NextPage = () => {
   return (

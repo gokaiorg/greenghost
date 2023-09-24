@@ -2,7 +2,7 @@ import { Box, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { IconMenu } from './IconMenu';
+import { IconMenu } from './media/IconMenu';
 
 export const HomeMenu = () => {
   return (
