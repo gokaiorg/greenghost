@@ -72,12 +72,12 @@ export const StrainWeek = () => {
           >
             Discover the{' '}
             <Link
-              href="/weed-shop/green-gelato"
-              title="Green Gelato only 300 THB this week!"
+              href="/weed-shop/purple-queen"
+              title="Purple Queen only 300 THB this week!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Green Gelato
+                Purple Queen
               </Box>
             </Link>{' '}
             for only 300 THB.
@@ -248,12 +248,12 @@ export const StrainWeek = () => {
           >
             Say goodbye to the{' '}
             <Link
-              href="/weed-shop/bruce-banner"
-              title="Bruce Banner - Sold Out!"
+              href="/weed-shop/green-gelato"
+              title="Green gelato - Sold Out!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Bruce Banner
+                Green Gelato
               </Box>
             </Link>
             . We&apos;ll miss you.
