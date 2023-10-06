@@ -202,6 +202,36 @@ export const products: Product[] = [
       'https://www.allbud.com/marijuana-strains/sativa-dominant-hybrid/hulkberry',
   },
   {
+    slug: 'royal-runtz',
+    name: 'Royal Runtz',
+    price: 999,
+    dominance: 'Hybrid',
+    indica: '50',
+    sativa: '50',
+    THC: '27',
+    CBD: 'undefined',
+    effects: 'Creative, Uplifting, Euphoric',
+    relieves: 'Pain, Insomnia, Stress',
+    grower: 'Ohigho',
+    growerSlug: '/ohigho',
+    environment: 'Organic Indoor',
+    harvest: '22/07/2023',
+    quantity: 50,
+    origin: 'Phuket',
+    description:
+      "Royal Runtz stands as a remarkable hybrid cannabis strain resulting from the intricate genetics of Gelato and Zkittlez. This distinguished USA-bred variety boasts an unparalleled blend of flavors and fragrances that truly set it apart in the world of cannabis. With an impressive THC content of 27%, Royal Runtz is primarily recommended for experienced cannabis enthusiasts who seek a robust and potent high. \n\n As attested by Leafly customers, its effects include profound happiness, relaxation, and euphoria. Moreover, many medical marijuana patients turn to Royal Runtz to alleviate symptoms associated with pain, insomnia, and loss of appetite. Crafted by the esteemed Royal Queen Seeds, this strain entices connoisseurs with its delightful flavor profile, encompassing sweet, fruity, and citrusy notes. \n\n The dominant terpene, limonene, not only enhances mood but also possesses anti-inflammatory properties. On average, Royal Runtz commands a price range of $50-$70 per eighth, reflecting its rarity and high demand. Its dense and frosty buds, adorned with vibrant orange hairs and hints of purple, are a sight to behold. The strain's aroma is a delightful fusion of sweetness, fruitiness, with subtle undertones of cream and candy.",
+    descSeo:
+      'Royal Runtz stands as a remarkable hybrid cannabis strain resulting from the intricate genetics of Gelato and Zkittlez. This distinguished USA-bred variety boasts an unparalleled blend of flavors and fragrances that truly set it apart in the world of cannabis. With an impressive THC content of 27%, Royal Runtz is primarily recommended for experienced cannabis enthusiasts who seek a robust and potent high.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-royal-runtz-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-royal-runtz-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-royal-runtz-cover.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Royal Runtz',
+    source:
+      'https://www.leafly.com/strains/royal-runtz',
+  },
+  {
     slug: 'buddy-critical',
     name: 'Buddy Critical',
     price: 400,
@@ -351,7 +381,7 @@ export const products: Product[] = [
   {
     slug: 'amnesia-haze',
     name: 'Amnesia Haze',
-    price: 999,
+    price: 1000,
     dominance: 'Sativa',
     indica: '20',
     sativa: '80',
@@ -363,7 +393,7 @@ export const products: Product[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '10/08/2023',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Amnesia Haze is a unique sativa-dominant hybrid born from the crossbreeding of Jamaican and Laotian sativas with Afghan Hawaiian indica. With a sativa to indica ratio of 80:20, it's an ideal strain for daytime use and clear thinking. Boasting potent THC levels of over 22%, it offers relief from anxiety, depression, fatigue, ADHD, migraines, mood swings, and physical pain. However, its lower CBD content makes it less suitable for conditions treated with CBD, such as epilepsy. \n\n Prepare for a creative and euphoric high with Amnesia Haze, accompanied by a delightful boost in mood and a tendency to induce laughter. Its taste is reminiscent of fresh, fruity hash, complemented by a sweet and earthy aroma with subtle hints of spicy pepper. The buds are light green with darker brown strands, generously coated in trichomes, providing a visually appealing appearance. \n\n While Amnesia Haze is more prevalent in parts of Europe, it can also be found in select dispensaries across the United States, including Colorado, California, Washington State, Oregon, and Michigan. It's a strain that can cause dry mouth and red eyes, and some users have reported occasional experiences of paranoia and dizziness. Embraced by cannabis enthusiasts, Amnesia Haze has also gained popularity in the beautiful region of British Columbia.",
@@ -964,7 +994,7 @@ export const products: Product[] = [
   {
     slug: 'jack-herer',
     name: 'Jack Herer',
-    price: 999,
+    price: 1000,
     dominance: 'Sativa',
     indica: '20',
     sativa: '80',
@@ -976,7 +1006,7 @@ export const products: Product[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '11/06/2023',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Jack Herer, also known as "JH," "The Jack," "Premium Jack," and "Platinum Jack" is a sativa-dominant hybrid marijuana strain named after the marijuana activist and author of The Emperor Wears No Clothes. \n\n Jack Herer is a balanced hybrid strain with a high THC content that produces a mixed head and body effect. It\'s known to provide a sense of relaxation and is often enjoyed in the evening to ease stress. \n\n Jack Herer was first created in the Netherlands in the mid-1990s and was later distributed by Dutch pharmacies as a recognized medical-grade strain. Its spicy, pine-scented aroma has won numerous awards for its quality and potency.',
@@ -1342,7 +1372,7 @@ export const products: Product[] = [
   {
     slug: 'banana-daddy',
     name: 'Banana Daddy',
-    price: 999,
+    price: 1000,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
