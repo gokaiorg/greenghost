@@ -38,7 +38,7 @@ export const StrainWeek = () => {
           >
             x
           </Button>
-          <Text
+          {/* <Text
             display={'flex'}
             alignItems={'center'}
             fontFamily={'CubicFive12'}
@@ -81,6 +81,70 @@ export const StrainWeek = () => {
               </Box>
             </Link>{' '}
             for only 300 THB.
+          </Text> */}
+          <Text
+            display={'flex'}
+            alignItems={'center'}
+            fontFamily={'CubicFive12'}
+            fontWeight={'bold'}
+            as={'h2'}
+            fontSize={{ base: '16' }}
+            color={'ghostVerse.orange.light'}
+          >
+            <Box w={8} h={8} mr={2}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                />
+              </svg>
+            </Box>
+            New strains
+          </Text>
+          <Text
+            mb={4}
+            fontFamily={'vt323'}
+            fontSize={{ base: '24' }}
+            lineHeight={1}
+          >
+            Try our new{' '}
+            <Link
+              href="/weed-shop/pink-sunset"
+              title="New weed Strain - Pink Sunset!"
+              passHref
+            >
+              <Box as={'span'} color={'ghostVerse.blue.base'}>
+                Pink Sunset
+              </Box>
+            </Link>
+            ,{' '}
+            <Link
+              href="/weed-shop/amnesia"
+              title="New weed Strain - Amnesia!"
+              passHref
+            >
+              <Box as={'span'} color={'ghostVerse.blue.base'}>
+                Amnesia
+              </Box>
+            </Link>{' '}
+            and{' '}
+            <Link
+              href="/weed-shop/royal-runtz"
+              title="New weed Strain - Royal Runtz!"
+              passHref
+            >
+              <Box as={'span'} color={'ghostVerse.blue.base'}>
+                Royal Runtz
+              </Box>
+            </Link>{' '}
+            strains now!
           </Text>
           <Text
             display={'flex'}
@@ -106,7 +170,7 @@ export const StrainWeek = () => {
                 />
               </svg>
             </Box>
-            New Gadget!
+            New Gadget
           </Text>
           <Text
             mb={4}
@@ -124,51 +188,7 @@ export const StrainWeek = () => {
                 Wizman Rolling Papers
               </Box>
             </Link>{' '}
-            today.
-          </Text>
-          <Text
-            display={'flex'}
-            alignItems={'center'}
-            fontFamily={'CubicFive12'}
-            fontWeight={'bold'}
-            as={'h2'}
-            fontSize={{ base: '16' }}
-            color={'ghostVerse.orange.light'}
-          >
-            <Box w={8} h={8} mr={2}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
-                />
-              </svg>
-            </Box>
-            New strain!
-          </Text>
-          <Text
-            mb={4}
-            fontFamily={'vt323'}
-            fontSize={{ base: '24' }}
-            lineHeight={1}
-          >
-            Let&apos;s try our new{' '}
-            <Link
-              href="/weed-shop/forbidden-fruit"
-              title="New weed Strain - Forbidden fruit!"
-              passHref
-            >
-              <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Forbidden Fruit
-              </Box>
-            </Link>{' '}
-            strain now.
+            today!
           </Text>
           {/* <Text
             display={'flex'}
@@ -238,7 +258,7 @@ export const StrainWeek = () => {
                 />
               </svg>
             </Box>
-            Sold Out!
+            Sold Out
           </Text>
           <Text
             mb={4}
@@ -248,25 +268,25 @@ export const StrainWeek = () => {
           >
             Say goodbye to the{' '}
             <Link
-              href="/weed-shop/green-gelato"
-              title="Green gelato - Sold Out!"
+              href="/weed-shop/buddy-critical"
+              title="Buddy Critical - Sold Out!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Green Gelato
+                Buddy Critical
               </Box>
             </Link>{' '}
             and{' '}
             <Link
-              href="/weed-shop/hulkberry"
-              title="Hulkberry - Sold Out!"
+              href="/weed-shop/purple-zkittlez"
+              title="Purple Zkittlez - Sold Out!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Hulkberry
+                Purple Zkittlez
               </Box>
             </Link>
-            . We&apos;ll miss you.
+            . We&apos;ll miss you...
           </Text>
         </Box>
       )}
