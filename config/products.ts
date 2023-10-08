@@ -47,7 +47,7 @@ export const products: Product[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-royal-runtz-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-royal-runtz-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-royal-runtz-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-royal-runtz-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-royal-runtz-bud-02.webp',
       '/media/green-ghost-degen-weed-shop-strain-royal-runtz-bud-03.webp',
     ],
@@ -355,7 +355,7 @@ export const products: Product[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-pink-sunset-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-pink-sunset-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-pink-sunset-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-pink-sunset-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-pink-sunset-bud-02.webp',
       '/media/green-ghost-degen-weed-shop-strain-pink-sunset-bud-03.webp',
     ],
