@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from 'swiper';
 // import { Pagination } from 'swiper/modules';
 
-
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -62,7 +61,7 @@ export const BudItem = ({ product }: BudItemProps) => {
             slidesPerView={'auto'}
             loop
             autoplay={{
-              delay: 10000,
+              delay: 4000,
               pauseOnMouseEnter: true,
               disableOnInteraction: false,
             }}
@@ -77,10 +76,12 @@ export const BudItem = ({ product }: BudItemProps) => {
             modules={[EffectCoverflow, Pagination]}
             pagination={{ clickable: true }}
             initialSlide={1}
-            style={{
-              "--swiper-pagination-color" : "#4cfd27",
-              "--swiper-pagination-bullet-inactive-color": "#fff",
-            } as React.CSSProperties}
+            style={
+              {
+                '--swiper-pagination-color': '#4cfd27',
+                '--swiper-pagination-bullet-inactive-color': '#fff',
+              } as React.CSSProperties
+            }
           >
             {product.images.map(
               (image, index) =>

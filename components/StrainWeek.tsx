@@ -106,7 +106,7 @@ export const StrainWeek = () => {
                 />
               </svg>
             </Box>
-            New strains!
+            New strains
           </Text>
           <Text
             mb={4}
@@ -114,7 +114,7 @@ export const StrainWeek = () => {
             fontSize={{ base: '24' }}
             lineHeight={1}
           >
-            Let&apos;s try our new{' '}
+            Try our new{' '}
             <Link
               href="/weed-shop/pink-sunset"
               title="New weed Strain - Pink Sunset!"
@@ -144,7 +144,7 @@ export const StrainWeek = () => {
                 Royal Runtz
               </Box>
             </Link>{' '}
-            strains now.
+            strains now!
           </Text>
           <Text
             display={'flex'}
@@ -170,7 +170,7 @@ export const StrainWeek = () => {
                 />
               </svg>
             </Box>
-            New Gadget!
+            New Gadget
           </Text>
           <Text
             mb={4}
@@ -188,7 +188,7 @@ export const StrainWeek = () => {
                 Wizman Rolling Papers
               </Box>
             </Link>{' '}
-            today.
+            today!
           </Text>
           {/* <Text
             display={'flex'}
@@ -258,7 +258,7 @@ export const StrainWeek = () => {
                 />
               </svg>
             </Box>
-            Sold Out!
+            Sold Out
           </Text>
           <Text
             mb={4}
@@ -286,7 +286,7 @@ export const StrainWeek = () => {
                 Purple Zkittlez
               </Box>
             </Link>
-            . We&apos;ll miss you.
+            . We&apos;ll miss you...
           </Text>
         </Box>
       )}
