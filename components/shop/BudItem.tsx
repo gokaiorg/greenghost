@@ -4,10 +4,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Product } from '../../config/products';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
+import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from 'swiper';
+// import { Pagination } from 'swiper/modules';
+
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
 
 // import { useCart } from '../cart/cartFunctions';
 
@@ -71,8 +74,13 @@ export const BudItem = ({ product }: BudItemProps) => {
               modifier: 1,
               slideShadows: true,
             }}
-            modules={[EffectCoverflow]}
+            modules={[EffectCoverflow, Pagination]}
+            pagination={{ clickable: true }}
             initialSlide={1}
+            style={{
+              "--swiper-pagination-color" : "#4cfd27",
+              "--swiper-pagination-bullet-inactive-color": "#fff",
+            } as React.CSSProperties}
           >
             {product.images.map(
               (image, index) =>
