@@ -1,5 +1,5 @@
 import { Box, Text } from '@chakra-ui/react';
-import { shops } from '../../config/shops';
+import { shops } from '../config/shops';
 import { ShopItem } from './ShopItem';
 
 export const Shop = () => {

@@ -1,10 +1,10 @@
 import { Container, Box } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 import React, { FC, PropsWithChildren } from 'react';
 import { MetaHead, MetaHeadProps } from './MetaHead';
 import { Footer } from './Footer';
 import AgeVerificationPopup from '../components/AgeVerificationPopup';
 import Script from 'next/script';
-// import Cart from './cart/Cart';
 
 export const MainLayout: FC<PropsWithChildren<MetaHeadProps>> = ({
   children,
@@ -16,6 +16,11 @@ export const MainLayout: FC<PropsWithChildren<MetaHeadProps>> = ({
   const handleVerify = () => {
     console.log('User verified age.');
   };
+
+  const router = useRouter();
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>

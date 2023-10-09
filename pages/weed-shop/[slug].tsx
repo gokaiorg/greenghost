@@ -1,36 +1,34 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
-
-import { useRouter } from 'next/router';
-import { getProducts, Product } from '../../config/products';
-
+import { getBuds, Bud } from '../../config/buds';
 import { MainLayout } from '../../components/MainLayout';
 import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../../components/HomeSectionTitle';
-import { Box } from '@chakra-ui/react';
-import { BuyNowLink } from '../../components/shop/BuyNowLink';
+import { Box, Text } from '@chakra-ui/react';
+import { BuyNowLink } from '../../components/shop/elements/BuyNowLink';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
-
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-
 import Image from 'next/image';
 import Link from 'next/link';
+import BoxInfoProduct from '../../components/box/BoxInfoProduct';
+import BoxDescription from '../../components/box/BoxDescription';
+import BoxInfoGrow from '../../components/box/BoxInfoGrow';
+import BoxInfoLeft from '../../components/box/BoxInfoLeft';
+import BoxInfoRight from '../../components/box/BoxInfoRight';
+import BoxInfoLabel from '../../components/box/BoxInfoLabel';
+import { BoxInfoLabelTitle } from '../../components/box/BoxInfoLabelTitle';
+import BoxInfoMemberPrice from '../../components/box/BoxInfoMemberPrice';
+import BoxInfoQuantity from '../../components/box/BoxInfoQuantity';
 
-interface ProductPageProps {
-  product: Product;
+interface BudPageProps {
+  bud: Bud;
 }
 
-export default function ProductPage({ product }: ProductPageProps) {
-  const router = useRouter();
-
+export default function BudPage({ bud }: BudPageProps) {
   SwiperCore.use([Autoplay]);
-
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  }
 
   const handleBack = () => {
     window.history.back();
@@ -39,29 +37,29 @@ export default function ProductPage({ product }: ProductPageProps) {
   return (
     <>
       <Head>
-        <title>Green Ghost - {product.name} Strain</title>
-        <meta name="description" content={product.descSeo} />
+        <title>Green Ghost - {bud.name} Strain</title>
+        <meta name="description" content={bud.descSeo} />
         <meta
           property="og:title"
-          content={`Green Ghost - ${product.name} Strain`}
+          content={`Green Ghost - ${bud.name} Strain`}
         />
-        <meta property="og:description" content={product.descSeo} />
-        <meta property="og:image" content={product.images[1]} />
+        <meta property="og:description" content={bud.descSeo} />
+        <meta property="og:image" content={bud.images[1]} />
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="1000" />
         <meta
           property="og:url"
-          content={`https://green.gd/weed-shop/${product.slug}`}
+          content={`https://green.gd/weed-shop/${bud.slug}`}
         />
         <meta
           name="twitter:title"
-          content={`Green Ghost - ${product.name} Strain`}
+          content={`Green Ghost - ${bud.name} Strain`}
         />
-        <meta name="twitter:description" content={product.descSeo} />
-        <meta name="twitter:image" content={product.images[1]} />
+        <meta name="twitter:description" content={bud.descSeo} />
+        <meta name="twitter:image" content={bud.images[1]} />
         <meta
           name="twitter:url"
-          content={`https://green.gd/weed-shop/${product.slug}`}
+          content={`https://green.gd/weed-shop/${bud.slug}`}
         />
       </Head>
       <MainLayout>
@@ -75,9 +73,7 @@ export default function ProductPage({ product }: ProductPageProps) {
         >
           {'< back'}
         </Box>
-        <Box display={'flex'} flexDirection={{ base: 'column', md: 'row' }}>
-          <HomeSectionTitle title={`${product.name} Strain`} />
-        </Box>
+        <HomeSectionTitle title={`${bud.name} Strain`} />
         <Swiper
           spaceBetween={10}
           slidesPerView={'auto'}
@@ -111,222 +107,87 @@ export default function ProductPage({ product }: ProductPageProps) {
           }}
           modules={[EffectCoverflow]}
         >
-          {product.images.map((image, index) => (
+          {bud.images.map((image, index) => (
             <SwiperSlide key={index}>
-              <Image
-                src={image}
-                width={500}
-                height={500}
-                alt={product.imgDesc}
-              />
+              <Image src={image} width={500} height={500} alt={bud.imgDesc} />
             </SwiperSlide>
           ))}
+          <BuyNowLink />
         </Swiper>
-
-        <Box
-          display={'flex'}
-          flexDirection={{ base: 'column', lg: 'row' }}
-          lineHeight={1}
-        >
-          <Box order={{ base: 2, lg: 1 }} marginTop={4}>
-            <Box
-              display={'flex'}
-              flexDirection={{ base: 'column' }}
-              fontSize={'3xl'}
-              fontFamily={'vt323'}
-            >
-              <Box>
-                {product.dominance == 'Indica' && (
-                  <Box as={'h2'} color={'ghostVerse.blue.base'} marginRight={4}>
-                    {product.dominance}
-                  </Box>
-                )}
-                {product.dominance == 'Sativa' && (
-                  <Box as={'h2'} color={'ghostVerse.pink.base'} marginRight={4}>
-                    {product.dominance}
-                  </Box>
-                )}
-                {product.dominance == 'Hybrid' && (
-                  <Box
-                    as={'h2'}
-                    color={'ghostVerse.orange.base'}
-                    marginRight={4}
-                  >
-                    {product.dominance}
-                  </Box>
-                )}
-              </Box>
-              <Box display={'flex'}>
-                <Box marginRight={4} display={'flex'}>
-                  Indica
-                  <Box
-                    color={'ghostVerse.green.base'}
-                    display={'flex'}
-                    alignItems={'baseline'}
-                    marginLeft={2}
-                  >
-                    {product.indica}%
-                  </Box>
-                </Box>
-                <Box marginRight={4} display={'flex'}>
-                  Sativa
-                  <Box
-                    color={'ghostVerse.green.base'}
-                    display={'flex'}
-                    alignItems={'baseline'}
-                    marginLeft={2}
-                  >
-                    {product.sativa}%
-                  </Box>
-                </Box>
-              </Box>
-              <Box display={'flex'}>
-                <Box marginRight={4} display={'flex'}>
-                  THC
-                  <Box
-                    color={'ghostVerse.green.base'}
-                    display={'flex'}
-                    alignItems={'baseline'}
-                    marginLeft={2}
-                  >
-                    {product.THC}%
-                  </Box>
-                </Box>
-                {product.CBD !== 'undefined' && (
-                  <Box marginRight={4} display={'flex'}>
-                    CBD
-                    <Box
-                      color={'ghostVerse.green.base'}
-                      display={'flex'}
-                      alignItems={'baseline'}
-                      marginLeft={2}
-                    >
-                      {product.CBD}%
-                    </Box>
-                  </Box>
-                )}
-              </Box>
-            </Box>
-            <Box
-              display={'flex'}
-              flexDirection={{ base: 'column', md: 'row' }}
-              fontSize={'3xl'}
-              fontFamily={'vt323'}
-            >
-              <Box marginRight={4}>
-                <Box as={'h2'} color={'ghostVerse.green.base'}>
-                  Feelings
-                </Box>
-              </Box>
-              {product.effects}
-            </Box>
-            {product.relieves !== 'undefined' && (
-              <Box
-                display={'flex'}
-                flexDirection={{ base: 'column', md: 'row' }}
-                fontSize={'3xl'}
-                marginBottom={4}
-                fontFamily={'vt323'}
-              >
-                <Box marginRight={4}>
-                  <Box as={'h2'} color={'ghostVerse.green.base'}>
-                    Relieves
-                  </Box>
-                </Box>
-                {product.relieves}
+        <BoxInfoProduct>
+          <BoxInfoLeft>
+            {bud.dominance == 'Indica' && (
+              <Box as={'h2'} color={'ghostVerse.blue.base'} marginRight={4}>
+                {bud.dominance} {bud.indica}%
               </Box>
             )}
-          </Box>
-          <Box
-            order={{ base: 1, lg: 2 }}
-            marginTop={6}
-            marginLeft={'auto'}
-            fontSize={'2xl'}
-          >
-            {product.quantity !== 0 && product.price !== 999 && (
+            {bud.dominance == 'Sativa' && (
+              <Box as={'h2'} color={'ghostVerse.pink.base'} marginRight={4}>
+                {bud.dominance} {bud.sativa}%
+              </Box>
+            )}
+            {bud.dominance == 'Hybrid' && (
+              <Box as={'h2'} color={'ghostVerse.orange.base'} marginRight={4}>
+                {bud.dominance}
+              </Box>
+            )}
+            <Box display={'flex'}>
+              <BoxInfoLabel>
+                <BoxInfoLabelTitle title="THC" />
+                <Text color={'ghostVerse.green.base'}>{bud.THC}%</Text>
+              </BoxInfoLabel>
+              {bud.CBD !== 'undefined' && (
+                <BoxInfoLabel>
+                  <BoxInfoLabelTitle title="CBD" />
+                  <Text color={'ghostVerse.green.base'}>{bud.CBD}%</Text>
+                </BoxInfoLabel>
+              )}
+            </Box>
+            <BoxInfoLabel>
+              <BoxInfoLabelTitle title="Feelings" />
+              <Text color={'ghostVerse.grey.base'}>{bud.effects}</Text>
+            </BoxInfoLabel>
+            {bud.relieves !== 'undefined' && (
+              <BoxInfoLabel>
+                <BoxInfoLabelTitle title="Relieves" />
+                <Text color={'ghostVerse.grey.base'}>{bud.relieves}</Text>
+              </BoxInfoLabel>
+            )}
+          </BoxInfoLeft>
+          <BoxInfoRight>
+            {bud.quantity !== 0 && bud.price !== 999 && (
               <>
-                {product.quantity !== 0 && <BuyNowLink />}
-                <Box
-                  display={'flex'}
-                  justifyContent="end"
-                  fontSize={'xl'}
-                  color="ghostVerse.red.base"
-                  fontFamily={'CubicFive12'}
-                >
-                  {product.quantity} grams left
-                </Box>
-                <Box display={'flex'} justifyContent="end">
-                  <Box as={'h3'}>1G</Box>
-                  <Box
-                    fontFamily={'CubicFive12'}
-                    display={'flex'}
+                <BoxInfoLabel>
+                  <BoxInfoLabelTitle title="1G" />
+                  <Text
                     color={'ghostVerse.green.base'}
-                    ml={4}
-                  >
-                    {product.price} THB
-                  </Box>
-                </Box>
-                <Link
-                  href="/crypto-weed-shop-relax-and-earn"
-                  title="Crypto Weed Shop Relax And Earn"
-                  passHref
-                >
-                  <Box
-                    display={'flex'}
                     fontFamily={'CubicFive12'}
-                    justifyContent="end"
-                    mb={2}
-                    fontSize={16}
-                    color="ghostVerse.grey.lighter"
-                    _hover={{
-                      color: 'ghostVerse.green.base',
-                    }}
+                    fontSize={20}
                   >
-                    <Box>member</Box>
-                    <Box display={'flex'} ml={4}>
-                      {(product.price * 0.69).toFixed(0)} THB
-                    </Box>
-                  </Box>
-                </Link>
-
-                <Box display={'flex'} justifyContent="end">
-                  <Box as={'h3'}>5G</Box>
-                  <Box
-                    fontFamily={'CubicFive12'}
-                    display={'flex'}
+                    {bud.price} THB
+                  </Text>
+                </BoxInfoLabel>
+                <BoxInfoMemberPrice>
+                  {(bud.price * 0.69).toFixed(0)} THB
+                </BoxInfoMemberPrice>
+                <BoxInfoLabel>
+                  <BoxInfoLabelTitle title="5G" />
+                  <Text
                     color={'ghostVerse.green.base'}
-                    ml={4}
-                  >
-                    {(product.price * 5 - product.price).toFixed(0)} THB
-                  </Box>
-                </Box>
-                <Link
-                  href="/crypto-weed-shop-relax-and-earn"
-                  title="Crypto Weed Shop Relax And Earn"
-                  passHref
-                >
-                  <Box
-                    display={'flex'}
                     fontFamily={'CubicFive12'}
-                    justifyContent="end"
-                    mb={2}
-                    fontSize={16}
-                    color="ghostVerse.grey.lighter"
-                    _hover={{
-                      color: 'ghostVerse.green.base',
-                    }}
+                    fontSize={20}
                   >
-                    <Box>member</Box>
-                    <Box display={'flex'} ml={4}>
-                      {((product.price * 5 - product.price) * 0.69).toFixed(0)}{' '}
-                      THB
-                    </Box>
-                  </Box>
-                </Link>
+                    {(bud.price * 5 - bud.price).toFixed(0)} THB
+                  </Text>
+                </BoxInfoLabel>
+                <BoxInfoMemberPrice>
+                  {((bud.price * 5 - bud.price) * 0.69).toFixed(0)} THB
+                </BoxInfoMemberPrice>
+                <BoxInfoQuantity>{bud.quantity} grams left</BoxInfoQuantity>
               </>
             )}
 
-            {product.quantity === 0 && (
+            {bud.quantity === 0 && (
               <Box
                 display={'flex'}
                 ml={'auto'}
@@ -338,120 +199,62 @@ export default function ProductPage({ product }: ProductPageProps) {
               </Box>
             )}
 
-            {product.price === 999 && (
+            {bud.price === 999 && (
+              <BoxInfoMemberPrice>Member Only</BoxInfoMemberPrice>
+            )}
+          </BoxInfoRight>
+        </BoxInfoProduct>
+        {bud.price !== 999 && bud.grower !== 'Unknown' && (
+          <BoxInfoGrow>
+            <Box display={'flex'} flexDirection={{ base: 'column', xl: 'row' }}>
+              <Box as={'h3'} mr={2}>
+                Grower
+              </Box>
               <Link
-                href="/crypto-weed-shop-relax-and-earn"
-                title="Crypto Weed Shop Relax And Earn"
+                href={`/weed-grower${bud.growerSlug}`}
+                title={bud.grower}
                 passHref
               >
-                <Box
-                  display={'flex'}
-                  justifyContent="end"
-                  fontSize={'xl'}
-                  fontFamily={'CubicFive12'}
-                  color="ghostVerse.red.base"
-                  _hover={{
-                    color: 'ghostVerse.green.base',
-                  }}
-                >
-                  MEMBER ONLY
+                <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
+                  {bud.grower}
                 </Box>
               </Link>
-            )}
-          </Box>
-        </Box>
-        {product.price !== 999 && product.grower !== 'Unknown' && (
-          <>
-            <Box
-              display={'flex'}
-              borderColor={'ghostVerse.color2.base'}
-              bgColor={'ghostVerse.dark.lighter'}
-              borderWidth={1}
-              backdropFilter={'blur(3px)'}
-              width="full"
-              p={4}
-              flexDirection={{ base: 'column', md: 'row' }}
-              my={5}
-              fontFamily={'CubicFive12'}
-              justifyContent={'center'}
-            >
-              <Box
-                display={'flex'}
-                flexDirection={{ base: 'column', xl: 'row' }}
-              >
-                <Box as={'h3'} mr={2}>
-                  Grower
-                </Box>
-                <Link
-                  href={`/weed-grower${product.growerSlug}`}
-                  title={product.grower}
-                  passHref
-                >
-                  <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
-                    {product.grower}
-                  </Box>
-                </Link>
+            </Box>
+            <Box display={'flex'} flexDirection={{ base: 'column', xl: 'row' }}>
+              <Box as={'h3'} mr={2}>
+                Origin
               </Box>
-              <Box
-                display={'flex'}
-                flexDirection={{ base: 'column', xl: 'row' }}
+              <Link
+                href="/weed-grower"
+                title="Weed Growers in Thailand"
+                passHref
               >
-                <Box as={'h3'} mr={2}>
-                  Origin
-                </Box>
-                <Link
-                  href="/weed-grower"
-                  title="Weed Growers in Thailand"
-                  passHref
-                >
-                  <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
-                    {product.origin}
-                  </Box>
-                </Link>
-              </Box>
-              <Box
-                display={'flex'}
-                flexDirection={{ base: 'column', xl: 'row' }}
-              >
-                <Box as={'h3'} mr={2}>
-                  Environment
-                </Box>
                 <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
-                  {product.environment}
+                  {bud.origin}
                 </Box>
+              </Link>
+            </Box>
+            <Box display={'flex'} flexDirection={{ base: 'column', xl: 'row' }}>
+              <Box as={'h3'} mr={2}>
+                Environment
               </Box>
-              <Box
-                display={'flex'}
-                flexDirection={{ base: 'column', xl: 'row' }}
-              >
-                <Box as={'h3'} mr={2}>
-                  Harvest
-                </Box>
-                <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
-                  {product.harvest}
-                </Box>
+              <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
+                {bud.environment}
               </Box>
             </Box>
-          </>
+            <Box display={'flex'} flexDirection={{ base: 'column', xl: 'row' }}>
+              <Box as={'h3'} mr={2}>
+                Harvest
+              </Box>
+              <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
+                {bud.harvest}
+              </Box>
+            </Box>
+          </BoxInfoGrow>
         )}
-        <Box
-          borderColor={'ghostVerse.color2.base'}
-          bgColor={'ghostVerse.dark.lighter'}
-          borderWidth={1}
-          backdropFilter={'blur(3px)'}
-          width="full"
-          p={4}
-          my={4}
-          mb={10}
-          display={'inline-flex'}
-          flexDirection={'column'}
-          fontSize={'3xl'}
-          fontFamily={'vt323'}
-          whiteSpace="pre-line"
-          lineHeight={1}
-        >
-          {product.description}
-          {product.source !== 'undefined' && (
+        <BoxDescription>
+          {bud.description}
+          {bud.source !== 'undefined' && (
             <Box
               display={'flex'}
               flexDirection={'column'}
@@ -459,12 +262,12 @@ export default function ProductPage({ product }: ProductPageProps) {
               as="a"
               mr={4}
               target="_blank"
-              href={product.source}
+              href={bud.source}
             >
               Source
             </Box>
           )}
-        </Box>
+        </BoxDescription>
       </MainLayout>
     </>
   );
@@ -472,22 +275,22 @@ export default function ProductPage({ product }: ProductPageProps) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   //console.log('Generating paths...');
-  const products = getProducts();
+  const buds = getBuds();
 
-  const paths = products.map((product) => ({
-    params: { slug: product.slug },
+  const paths = buds.map((bud) => ({
+    params: { slug: bud.slug },
   }));
 
   return { paths, fallback: true };
 };
 
-export const getStaticProps: GetStaticProps<ProductPageProps> = async ({
+export const getStaticProps: GetStaticProps<BudPageProps> = async ({
   params,
 }) => {
-  const products = getProducts();
-  const product = products.find((p) => p.slug === params?.slug);
+  const buds = getBuds();
+  const bud = buds.find((p) => p.slug === params?.slug);
 
-  if (!product) {
+  if (!bud) {
     return {
       notFound: true,
     };
@@ -495,7 +298,7 @@ export const getStaticProps: GetStaticProps<ProductPageProps> = async ({
 
   return {
     props: {
-      product,
+      bud,
     },
     revalidate: 60 * 60, // 1 hour
   };

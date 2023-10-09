@@ -1,5 +1,5 @@
 import { Box } from '@chakra-ui/react';
-import NavLink from './NavLink';
+import NavLink from '../../NavLink';
 import Image from 'next/image';
 
 type Route = {
@@ -14,37 +14,37 @@ const Links: Route[] = [
     path: '/weed-shop',
     image: '/media/green-ghost-degen-weed-shop-menu-buds.png',
     label: 'Buds',
-    imageW: '25px',
+    imageW: '20px',
   },
   {
     path: '/weed-shop-pre-rolls',
     image: '/media/green-ghost-degen-weed-shop-menu-pre-rolls.png',
     label: 'Pre-Rolls',
-    imageW: '10px',
+    imageW: '8px',
   },
   {
     path: '/weed-shop-edibles',
     image: '/media/green-ghost-degen-weed-shop-menu-edibles.png',
     label: 'Edibles',
-    imageW: '20px',
+    imageW: '18px',
   },
   {
     path: '/weed-shop-degen',
     image: '/media/green-ghost-degen-weed-shop-menu-degen.png',
     label: 'Degen',
-    imageW: '10px',
+    imageW: '7px',
   },
   {
     path: '/weed-shop-gadgets',
     image: '/media/green-ghost-degen-weed-shop-menu-gadgets.webp',
     label: 'Gadgets',
-    imageW: '20px',
+    imageW: '14px',
   },
   {
     path: '/weed-shop-member',
     image: '/media/green-ghost-degen-weed-shop-menu-member.png',
     label: 'Member',
-    imageW: '25px',
+    imageW: '20px',
   },
 ];
 
@@ -73,12 +73,12 @@ export const MenuWeedShop = () => {
             <Box w={link.imageW} mr={2}>
               <Image
                 src={link.image}
-                width={50}
-                height={50}
+                width={20}
+                height={20}
                 alt="Green Ghost - Degen Weed Shop - Weed Menu."
               />
             </Box>
-            <Box fontSize={{ base: 14, lg: 16 }}>{link.label}</Box>
+            <Box fontSize={{ base: 16 }}>{link.label}</Box>
           </NavLink>
         ))}
       </Box>

@@ -1,35 +1,18 @@
 import { Box } from '@chakra-ui/react';
 import Link from 'next/link';
-import { Product } from '../../config/products';
+import { Bud } from '../../config/buds';
+import BoxItemShop from './elements/BoxItemShop';
+import BoxItemTitleShop from './elements/BoxItemTitleShop';
 
 type PreRollItemProps = {
-  product: Product;
+  bud: Bud;
 };
 
-export const PreRollItem = ({ product }: PreRollItemProps) => {
+export const PreRollItem = ({ bud }: PreRollItemProps) => {
   return (
-    <Box width={{ base: '100%' }} p={0.5} lineHeight={1}>
-      <Link href={`weed-shop/${product.slug}`} title={product.name} passHref>
-        <Box
-          borderColor={'ghostVerse.green.base'}
-          borderWidth={1}
-          bgColor={'ghostVerse.dark.lighter'}
-          backdropFilter={'blur(3px)'}
-          p={2}
-          pos={'relative'}
-          fontWeight={'bold'}
-          fontSize={'lg'}
-          color="ghostVerse.gray.base"
-          display={'flex'}
-          flexDirection={{ base: 'column' }}
-          height={'100%'}
-          whiteSpace={{ base: 'normal' }}
-          _hover={{
-            bgColor: 'rgba(109, 208, 246, 0.1)',
-            backdropFilter: 'blur(3px)',
-          }}
-          transition={'all .3s'}
-        >
+    <Box width={{ base: '100%' }} p={0} mb={1} lineHeight={1}>
+      <Link href={`weed-shop/${bud.slug}`} title={bud.name} passHref>
+        <BoxItemShop>
           <Box
             display={'flex'}
             flexDirection={{ base: 'column', lg: 'row' }}
@@ -37,16 +20,10 @@ export const PreRollItem = ({ product }: PreRollItemProps) => {
             pos={'relative'}
             alignItems={'center'}
             marginLeft={{ base: 0 }}
+            p={1}
           >
-            <Box
-              as={'h2'}
-              fontFamily={'CubicFive12'}
-              fontSize={{ base: 16, lg: 18 }}
-              display={'flex'}
-              flexDirection={'column'}
-              w={{ base: '100%', lg: '25%' }}
-            >
-              {product.name}
+            <Box w={{ base: '100%', lg: '25%' }}>
+              <BoxItemTitleShop>{bud.name}</BoxItemTitleShop>
             </Box>
             <Box
               w={{ base: '100%', lg: '10%' }}
@@ -55,19 +32,19 @@ export const PreRollItem = ({ product }: PreRollItemProps) => {
               fontSize={'2xl'}
               mb={1}
             >
-              {product.dominance == 'Indica' && (
+              {bud.dominance == 'Indica' && (
                 <Box as={'h3'} color={'ghostVerse.blue.base'} marginRight={2}>
-                  {product.dominance} {product.indica}%
+                  {bud.dominance} {bud.indica}%
                 </Box>
               )}
-              {product.dominance == 'Sativa' && (
+              {bud.dominance == 'Sativa' && (
                 <Box as={'h3'} color={'ghostVerse.pink.base'} marginRight={2}>
-                  {product.dominance} {product.sativa}%
+                  {bud.dominance} {bud.sativa}%
                 </Box>
               )}
-              {product.dominance == 'Hybrid' && (
+              {bud.dominance == 'Hybrid' && (
                 <Box as={'h3'} color={'ghostVerse.orange.base'} marginRight={2}>
-                  {product.dominance}
+                  {bud.dominance}
                 </Box>
               )}
             </Box>
@@ -79,7 +56,7 @@ export const PreRollItem = ({ product }: PreRollItemProps) => {
               mb={1}
               w={{ base: '100%', lg: '15%' }}
             >
-              {product.THC !== 'undefined' && (
+              {bud.THC !== 'undefined' && (
                 <Box display={'flex'} marginRight={2} flexDirection={'row'}>
                   THC
                   <Box
@@ -89,11 +66,11 @@ export const PreRollItem = ({ product }: PreRollItemProps) => {
                     flexDirection={'row'}
                     alignItems={'baseline'}
                   >
-                    {product.THC}%
+                    {bud.THC}%
                   </Box>
                 </Box>
               )}
-              {product.CBD !== 'undefined' && (
+              {bud.CBD !== 'undefined' && (
                 <Box display={'flex'} marginRight={2} flexDirection={'row'}>
                   CBD
                   <Box
@@ -103,38 +80,32 @@ export const PreRollItem = ({ product }: PreRollItemProps) => {
                     flexDirection={'row'}
                     alignItems={'baseline'}
                   >
-                    {product.CBD}%
+                    {bud.CBD}%
                   </Box>
                 </Box>
               )}
             </Box>
-            <Box
-              display={'flex'}
-              fontFamily={'vt323'}
-              fontSize={'lg'}
-              w={{ base: '100%', lg: '20%' }}
-            >
-              {product.effects !== 'undefined' && (
-                <Box color={'ghostVerse.orange.light'}>{product.effects}</Box>
-              )}
-            </Box>
-            <Box
-              pos={'absolute'}
-              top={{ base: 0, lg: 1 }}
-              right={0}
-              marginLeft={'auto'}
-              whiteSpace={'nowrap'}
-            >
+            {bud.effects !== 'undefined' && (
+              <Box
+                display={'flex'}
+                fontFamily={'vt323'}
+                fontSize={'lg'}
+                color={'ghostVerse.grey.base'}
+              >
+                {bud.effects}
+              </Box>
+            )}
+            <Box marginLeft={'auto'} whiteSpace={'nowrap'}>
               <Box
                 fontFamily={'CubicFive12'}
                 fontSize={{ base: 18, lg: 20 }}
                 color={'ghostVerse.green.base'}
               >
-                {product.price} THB
+                {bud.price} THB
               </Box>
             </Box>
           </Box>
-        </Box>
+        </BoxItemShop>
       </Link>
     </Box>
   );

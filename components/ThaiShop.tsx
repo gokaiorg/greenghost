@@ -42,7 +42,7 @@ export const ThaiShop = () => {
         alignItems={{ base: 'start', lg: 'center' }}
         flexDirection={{ base: 'column', lg: 'row' }}
       >
-        <Box w={'full'} mr={{ base: '0', lg: '4' }}>
+        <Box w={'full'} mb={{ base: '2' }}>
           <Box
             fontFamily={'CubicFive12'}
             fontSize={14}
@@ -65,7 +65,7 @@ export const ThaiShop = () => {
             fontSize={24}
             _hover={{ borderColor: 'ghostVerse.green.base' }}
             _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
-            w={{ base: '100%', lg: 'fit-content' }}
+            w={{ base: '100%' }}
           >
             <option value="All">Thailand</option>
             <option value="Karon">Karon</option>

@@ -15,14 +15,34 @@ export type Degen = {
 
 export const degens: Degen[] = [
   {
-    slug: 'hash',
-    name: 'Hash',
-    price: 1000,
+    slug: 'bubble-hash',
+    name: 'Bubble Hash',
+    price: 1200,
     packaging: '1g',
     THC: '45% - 400mg/g',
     CBD: '1% - 10mg/g',
     ingretiens: 'Kief, Oil',
     quantity: 0,
+    description:
+      'Experience the rich and aromatic world of hash with our carefully curated selection. Our hash is sourced from premium cannabis strains and meticulously processed to ensure the highest quality. With its distinctive texture and potent effects, our hash offers a truly authentic and traditional cannabis experience. Explore the depths of flavor and relaxation that our hash has to offer and elevate your cannabis journey to new heights.',
+    descSeo:
+      'Experience the rich and aromatic world of hash with our carefully curated selection. Our hash is sourced from premium cannabis strains and meticulously processed to ensure the highest quality. With its distinctive texture and potent effects, our hash offers a truly authentic and traditional cannabis experience. Explore the depths of flavor and relaxation that our hash has to offer and elevate your cannabis journey to new heights.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-menu-degen-hash-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-degen-hash-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-degen-hash-qr-code.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Hash',
+  },
+  {
+    slug: 'pollen-hash',
+    name: 'Pollen Hash',
+    price: 800,
+    packaging: '1g',
+    THC: '45% - 400mg/g',
+    CBD: '1% - 10mg/g',
+    ingretiens: 'Kief, Oil',
+    quantity: 5,
     description:
       'Experience the rich and aromatic world of hash with our carefully curated selection. Our hash is sourced from premium cannabis strains and meticulously processed to ensure the highest quality. With its distinctive texture and potent effects, our hash offers a truly authentic and traditional cannabis experience. Explore the depths of flavor and relaxation that our hash has to offer and elevate your cannabis journey to new heights.',
     descSeo:
