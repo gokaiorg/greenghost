@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { Bud } from '../../config/buds';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from 'swiper';
-
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';

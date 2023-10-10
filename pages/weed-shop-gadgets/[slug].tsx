@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { getGadgets, Gadget } from '../../config/gadgets';
 import { MainLayout } from '../../components/MainLayout';
@@ -25,6 +26,12 @@ interface GadgetsPageProps {
 }
 
 export default function GadgetsPage({ gadget }: GadgetsPageProps) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
+
   SwiperCore.use([Autoplay]);
 
   const handleBack = () => {

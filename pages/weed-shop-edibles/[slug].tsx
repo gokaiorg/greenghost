@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { getEdibles, Edible } from '../../config/edibles';
 import { MainLayout } from '../../components/MainLayout';
@@ -25,6 +26,12 @@ interface EdiblesPageProps {
 }
 
 export default function EdiblesPage({ edible }: EdiblesPageProps) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
+
   SwiperCore.use([Autoplay]);
 
   const handleBack = () => {

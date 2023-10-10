@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { getBuds, Bud } from '../../config/buds';
 import { MainLayout } from '../../components/MainLayout';
@@ -28,6 +29,12 @@ interface BudPageProps {
 }
 
 export default function BudPage({ bud }: BudPageProps) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
+
   SwiperCore.use([Autoplay]);
 
   const handleBack = () => {

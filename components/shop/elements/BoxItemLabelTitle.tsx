@@ -1,11 +1,11 @@
 import { Text } from '@chakra-ui/react';
 import { FC } from 'react';
 
-interface BoxInfoLabelTitleProps {
+interface BoxItemLabelTitleProps {
   title: string;
 }
 
-export const BoxInfoLabelTitle: FC<BoxInfoLabelTitleProps> = ({ title }) => {
+export const BoxItemLabelTitle: FC<BoxItemLabelTitleProps> = ({ title }) => {
   return (
     <Text as={'h3'} mr={4}>
       {title}
