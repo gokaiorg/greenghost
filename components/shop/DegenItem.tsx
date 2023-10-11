@@ -2,6 +2,11 @@ import { Box } from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Degen } from '../../config/degens';
+import BoxItemShop from './elements/BoxItemShop';
+import BoxItemDescShop from './elements/BoxItemDescShop';
+import BoxItemTitleShop from './elements/BoxItemTitleShop';
+import BoxItemPriceShop from './elements/BoxItemPriceShop';
+import BoxItemList from './elements/BoxItemList';
 
 type DegenItemProps = {
   degen: Degen;
@@ -9,32 +14,9 @@ type DegenItemProps = {
 
 export const DegenItem = ({ degen }: DegenItemProps) => {
   return (
-    <Box
-      width={{ base: '100%', md: '50%', lg: '25%' }}
-      paddingBottom={1}
-      paddingRight={1}
-      lineHeight={1}
-    >
+    <BoxItemList>
       <Link href={`weed-shop-degen/${degen.slug}`} title={degen.name} passHref>
-        <Box
-          borderColor={'ghostVerse.green.base'}
-          borderWidth={1}
-          bgColor={'ghostVerse.dark.lighter'}
-          backdropFilter={'blur(3px)'}
-          p={3}
-          fontWeight={'bold'}
-          fontSize={'lg'}
-          color="ghostVerse.gray.base"
-          display={'flex'}
-          flexDirection={{ base: 'column' }}
-          height={'100%'}
-          whiteSpace={{ base: 'normal' }}
-          _hover={{
-            bgColor: 'rgba(109, 208, 246, 0.1)',
-            backdropFilter: 'blur(3px)',
-          }}
-          transition={'all .3s'}
-        >
+        <BoxItemShop>
           <Box width={{ base: 'full' }} height={{ base: 'auto' }}>
             <Image
               src={degen.images[1]}
@@ -45,38 +27,13 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
               priority={false}
             />
           </Box>
-          <Box
-            display={'flex'}
-            flexDirection={'column'}
-            flex={'1'}
-            marginLeft={{ base: 0 }}
-            marginTop={{ base: 4 }}
-          >
-            <Box
-              as={'h3'}
-              fontSize={'xl'}
-              fontFamily={'CubicFive12'}
-              display={'flex'}
-              flexDirection={'column'}
-              marginRight={1}
-            >
+          <BoxItemDescShop>
+            <BoxItemTitleShop>
               {degen.price !== 999 && (
-                <Box
-                  marginLeft={'auto'}
-                  color={'ghostVerse.green.base'}
-                  whiteSpace={'nowrap'}
-                  mb={2}
-                  position={'absolute'}
-                  right={0}
-                  top={'25px'}
-                  background={'black'}
-                  padding={'0.5rem'}
-                >
-                  {degen.price} THB
-                </Box>
+                <BoxItemPriceShop>{degen.price} THB</BoxItemPriceShop>
               )}
               {degen.name}
-            </Box>
+            </BoxItemTitleShop>
             <Box
               display={'flex'}
               fontFamily={'vt323'}
@@ -112,9 +69,9 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
                 </Box>
               )}
             </Box>
-          </Box>
-        </Box>
+          </BoxItemDescShop>
+        </BoxItemShop>
       </Link>
-    </Box>
+    </BoxItemList>
   );
 };

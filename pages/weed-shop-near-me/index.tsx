@@ -6,7 +6,7 @@ import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import Head from 'next/head';
 import { IconMap } from '../../components/media/IconMap';
-import { Shop } from '../../components/shop/Shop';
+import { Shop } from '../../components/Shop';
 import { Find } from '../../components/Find';
 
 const WeedShopNearMe: NextPage = () => {

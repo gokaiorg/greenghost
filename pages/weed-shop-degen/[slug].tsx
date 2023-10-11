@@ -1,22 +1,25 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import Head from 'next/head';
-
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 import { getDegens, Degen } from '../../config/degens';
-
 import { MainLayout } from '../../components/MainLayout';
 import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../../components/HomeSectionTitle';
-import { Box } from '@chakra-ui/react';
-import { BuyNowLink } from '../../components/shop/BuyNowLink';
+import { Box, Text } from '@chakra-ui/react';
+import { BuyNowLink } from '../../components/shop/elements/BuyNowLink';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
-
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-
 import Image from 'next/image';
+import BoxInfoProduct from '../../components/box/BoxInfoProduct';
+import BoxDescription from '../../components/box/BoxDescription';
+import BoxInfoLeft from '../../components/box/BoxInfoLeft';
+import BoxInfoRight from '../../components/box/BoxInfoRight';
+import BoxInfoLabel from '../../components/box/BoxInfoLabel';
+import { BoxInfoLabelTitle } from '../../components/box/BoxInfoLabelTitle';
+import BoxInfoQuantity from '../../components/box/BoxInfoQuantity';
 
 interface DegensPageProps {
   degen: Degen;
@@ -25,11 +28,11 @@ interface DegensPageProps {
 export default function DegensPage({ degen }: DegensPageProps) {
   const router = useRouter();
 
-  SwiperCore.use([Autoplay]);
-
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
+
+  SwiperCore.use([Autoplay]);
 
   const handleBack = () => {
     window.history.back();
@@ -68,10 +71,7 @@ export default function DegensPage({ degen }: DegensPageProps) {
         >
           {'< back'}
         </Box>
-        <Box display={'flex'} flexDirection={{ base: 'column', md: 'row' }}>
-          <HomeSectionTitle title={`${degen.name}`} />
-          <BuyNowLink />
-        </Box>
+        <HomeSectionTitle title={`${degen.name}`} />
         <Swiper
           spaceBetween={10}
           slidesPerView={'auto'}
@@ -110,142 +110,53 @@ export default function DegensPage({ degen }: DegensPageProps) {
               <Image src={image} width={500} height={500} alt={degen.imgDesc} />
             </SwiperSlide>
           ))}
+          <BuyNowLink />
         </Swiper>
-        <Box display={'flex'} flexDirection={{ base: 'column', lg: 'row' }}>
-          <Box order={{ base: 2, lg: 1 }} marginTop={4}>
-            <Box
-              display={'flex'}
-              flexDirection={{ base: 'column' }}
-              fontSize={'3xl'}
-              fontFamily={'vt323'}
-            >
-              <Box as={'h2'} color={'ghostVerse.blue.base'} marginRight={4}>
-                {degen.packaging}
-              </Box>
-              <Box display={'flex'}>
-                <Box marginRight={4} display={'flex'}>
-                  THC
-                  <Box
-                    color={'ghostVerse.green.base'}
-                    display={'flex'}
-                    alignItems={'baseline'}
-                    marginLeft={2}
-                  >
-                    {degen.THC}
-                  </Box>
-                </Box>
-                {degen.CBD !== 'undefined' && (
-                  <Box marginRight={4} display={'flex'}>
-                    CBD
-                    <Box
-                      color={'ghostVerse.green.base'}
-                      display={'flex'}
-                      alignItems={'baseline'}
-                      marginLeft={2}
-                    >
-                      {degen.CBD}
-                    </Box>
-                  </Box>
-                )}
-              </Box>
+        <BoxInfoProduct>
+          <BoxInfoLeft>
+            <Text as={'h2'} color={'ghostVerse.blue.base'} marginRight={4}>
+              {degen.packaging}
+            </Text>
+            <Box display={'flex'}>
+              <BoxInfoLabel>
+                <BoxInfoLabelTitle title="THC" />
+                <Text color={'ghostVerse.green.base'}>{degen.THC}</Text>
+              </BoxInfoLabel>
+              {degen.CBD !== 'undefined' && (
+                <BoxInfoLabel>
+                  <BoxInfoLabelTitle title="CBD" />
+                  <Text color={'ghostVerse.green.base'}>{degen.CBD}</Text>
+                </BoxInfoLabel>
+              )}
             </Box>
             {degen.ingretiens !== 'undefined' && (
-              <Box
-                display={'flex'}
-                flexDirection={{ base: 'column', md: 'row' }}
-                fontSize={'3xl'}
-                marginBottom={4}
-                fontFamily={'vt323'}
-              >
-                <Box marginRight={4}>
-                  <Box as={'h2'} color={'ghostVerse.green.base'}>
-                    Ingretiens
-                  </Box>
-                </Box>
-                {degen.ingretiens}
-              </Box>
+              <BoxInfoLabel>
+                <BoxInfoLabelTitle title="Ingretiens" />
+                <Text color={'ghostVerse.grey.base'}>{degen.ingretiens}</Text>
+              </BoxInfoLabel>
             )}
-          </Box>
-          <Box
-            order={{ base: 1, lg: 2 }}
-            marginTop={6}
-            marginLeft={'auto'}
-            fontSize={'2xl'}
-          >
+          </BoxInfoLeft>
+          <BoxInfoRight>
+            <BoxInfoLabel>
+              <Text
+                color={'ghostVerse.green.base'}
+                fontFamily={'CubicFive12'}
+                fontSize={20}
+              >
+                {degen.price} THB
+              </Text>
+            </BoxInfoLabel>
             {degen.quantity !== 0 && degen.price !== 999 && (
               <>
-                <Box
-                  display={'flex'}
-                  justifyContent="end"
-                  fontSize={'xl'}
-                  color="ghostVerse.red.base"
-                  fontFamily={'CubicFive12'}
-                >
-                  {degen.quantity} in stock
-                </Box>
+                <BoxInfoQuantity>{degen.quantity} in stock</BoxInfoQuantity>
               </>
             )}
             {degen.quantity === 0 && (
-              <Box
-                display={'flex'}
-                fontSize={'xl'}
-                justifyContent="end"
-                fontFamily={'CubicFive12'}
-                color="ghostVerse.red.base"
-              >
-                ON ORDER
-              </Box>
+              <BoxInfoQuantity>ON ORDER</BoxInfoQuantity>
             )}
-            <Box display={'flex'} justifyContent="end">
-              <Box
-                fontFamily={'CubicFive12'}
-                display={'flex'}
-                color={'ghostVerse.green.base'}
-                ml={4}
-              >
-                {degen.price} THB
-              </Box>
-            </Box>
-            {/* <Link
-              href="/crypto-weed-shop-relax-and-earn"
-              title="Crypto Weed Shop Relax And Earn"
-              passHref
-            >
-              <Box
-                display={'flex'}
-                justifyContent="end"
-                mb={2}
-                fontSize={'xl'}
-                color="ghostVerse.grey.lighter"
-                _hover={{
-                  color: 'ghostVerse.green.base',
-                }}
-              >
-                <Box>member</Box>
-                <Box fontFamily={'CubicFive12'} display={'flex'} ml={4}>
-                  {(degen.price * 0.69).toFixed(0)} THB
-                </Box>
-              </Box>
-            </Link> */}
-          </Box>
-        </Box>
-        <Box
-          borderColor={'ghostVerse.color2.base'}
-          bgColor={'ghostVerse.dark.lighter'}
-          borderWidth={1}
-          backdropFilter={'blur(3px)'}
-          width="full"
-          p={4}
-          my={4}
-          mb={10}
-          display={'inline-flex'}
-          flexDirection={'column'}
-          fontSize={'3xl'}
-          fontFamily={'vt323'}
-          whiteSpace="pre-line"
-        >
-          {degen.description}
-        </Box>
+          </BoxInfoRight>
+        </BoxInfoProduct>
+        <BoxDescription>{degen.description}</BoxDescription>
       </MainLayout>
     </>
   );

@@ -11,10 +11,15 @@ export const BuyNowLink = () => {
       >
         <Text
           ml={'auto'}
+          pos={'absolute'}
+          left={2}
+          bottom={2}
+          zIndex={2}
           color={'ghostVerse.green.base'}
           borderColor={'ghostVerse.green.base'}
           fontSize={18}
           borderWidth={1}
+          borderRadius={'full'}
           bgColor={'ghostVerse.dark.lighter'}
           backdropFilter={'blur(3px)'}
           py={1}

@@ -1,23 +1,25 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import Head from 'next/head';
-
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 import { getGadgets, Gadget } from '../../config/gadgets';
-
 import { MainLayout } from '../../components/MainLayout';
 import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../../components/HomeSectionTitle';
-import { Box } from '@chakra-ui/react';
-import { BuyNowLink } from '../../components/shop/BuyNowLink';
+import { Box, Text } from '@chakra-ui/react';
+import { BuyNowLink } from '../../components/shop/elements/BuyNowLink';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
-
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-
 import Image from 'next/image';
-import Link from 'next/link';
+import BoxInfoProduct from '../../components/box/BoxInfoProduct';
+import BoxDescription from '../../components/box/BoxDescription';
+import BoxInfoLeft from '../../components/box/BoxInfoLeft';
+import BoxInfoRight from '../../components/box/BoxInfoRight';
+import BoxInfoMemberPrice from '../../components/box/BoxInfoMemberPrice';
+import BoxInfoLabel from '../../components/box/BoxInfoLabel';
+import BoxInfoQuantity from '../../components/box/BoxInfoQuantity';
 
 interface GadgetsPageProps {
   gadget: Gadget;
@@ -26,11 +28,11 @@ interface GadgetsPageProps {
 export default function GadgetsPage({ gadget }: GadgetsPageProps) {
   const router = useRouter();
 
-  SwiperCore.use([Autoplay]);
-
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
+
+  SwiperCore.use([Autoplay]);
 
   const handleBack = () => {
     window.history.back();
@@ -113,107 +115,36 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
               />
             </SwiperSlide>
           ))}
+          <BuyNowLink />
         </Swiper>
-        <Box
-          display={'flex'}
-          flexDirection={{ base: 'column', lg: 'row' }}
-          lineHeight={1}
-        >
-          <Box order={{ base: 2, lg: 1 }} marginTop={4}>
-            <Box
-              display={'flex'}
-              flexDirection={{ base: 'column' }}
-              fontSize={'3xl'}
-              fontFamily={'vt323'}
-            >
-              <Box as={'h2'} color={'ghostVerse.blue.base'} marginRight={4}>
-                {gadget.packaging}
-              </Box>
+        <BoxInfoProduct>
+          <BoxInfoLeft>
+            <Box as={'h2'} color={'ghostVerse.blue.base'} marginRight={4}>
+              {gadget.packaging}
             </Box>
-          </Box>
-          <Box
-            order={{ base: 1, lg: 2 }}
-            marginTop={6}
-            marginLeft={'auto'}
-            fontSize={'2xl'}
-          >
-            {gadget.quantity !== 0 && gadget.price !== 999 && (
-              <>
-                <BuyNowLink />
-                <Box
-                  display={'flex'}
-                  justifyContent="end"
-                  fontSize={'xl'}
-                  color="ghostVerse.red.base"
-                  fontFamily={'CubicFive12'}
-                >
-                  {gadget.quantity} in stock
-                </Box>
-              </>
-            )}
-            {gadget.quantity === 0 && (
-              <Box
-                display={'flex'}
-                fontSize={'xl'}
-                justifyContent="end"
-                fontFamily={'CubicFive12'}
-                color="ghostVerse.red.base"
-              >
-                Sold Out
-              </Box>
-            )}
-            <Box display={'flex'} justifyContent="end">
-              <Box
-                fontFamily={'CubicFive12'}
-                display={'flex'}
+          </BoxInfoLeft>
+          <BoxInfoRight>
+            <BoxInfoLabel>
+              <Text
                 color={'ghostVerse.green.base'}
-                ml={4}
+                fontFamily={'CubicFive12'}
+                fontSize={20}
               >
                 {gadget.price} THB
-              </Box>
-            </Box>
-            <Link
-              href="/crypto-weed-shop-relax-and-earn"
-              title="Crypto Weed Shop Relax And Earn"
-              passHref
-            >
-              <Box
-                display={'flex'}
-                fontFamily={'CubicFive12'}
-                justifyContent="end"
-                mb={2}
-                fontSize={16}
-                color="ghostVerse.grey.lighter"
-                _hover={{
-                  color: 'ghostVerse.green.base',
-                }}
-              >
-                <Box>member</Box>
-                <Box display={'flex'} ml={4}>
-                  {(gadget.price * 0.69).toFixed(0)} THB
-                </Box>
-              </Box>
-            </Link>
-          </Box>
-        </Box>
-        <Box
-          borderColor={'ghostVerse.color2.base'}
-          bgColor={'ghostVerse.dark.lighter'}
-          borderWidth={1}
-          backdropFilter={'blur(3px)'}
-          width="full"
-          p={4}
-          my={4}
-          mb={10}
-          display={'inline-flex'}
-          flexDirection={'column'}
-          fontSize={'3xl'}
-          fontFamily={'vt323'}
-          whiteSpace="pre-line"
-          lineHeight={1}
-        >
-          {gadget.description}
-        </Box>
+              </Text>
+            </BoxInfoLabel>
+            <BoxInfoMemberPrice>
+              {(gadget.price * 0.69).toFixed(0)} THB
+            </BoxInfoMemberPrice>
+            {gadget.quantity !== 0 && gadget.price !== 999 && (
+              <BoxInfoQuantity>{gadget.quantity} in stock</BoxInfoQuantity>
+            )}
+            {gadget.quantity === 0 && (
+              <BoxInfoQuantity>Sold Out</BoxInfoQuantity>
+            )}
+          </BoxInfoRight>
+        </BoxInfoProduct>
+        <BoxDescription>{gadget.description}</BoxDescription>
       </MainLayout>
     </>
   );
