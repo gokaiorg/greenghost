@@ -1,4 +1,4 @@
-export type Product = {
+export type Bud = {
   slug: string;
   name: string;
   dominance: string;
@@ -22,7 +22,7 @@ export type Product = {
   quantity: number;
 };
 
-export const products: Product[] = [
+export const buds: Bud[] = [
   {
     slug: 'royal-runtz',
     name: 'Royal Runtz',
@@ -943,8 +943,7 @@ export const products: Product[] = [
       '/media/green-ghost-degen-weed-shop-strain-c-vibez-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain C-Vibez',
-    source:
-      'https://www.leafly.com/brands/dutch-passion/products/dutch-passion-c-vibez',
+    source: 'undefined',
   },
   {
     slug: 'fruit-spirit',
@@ -1438,8 +1437,7 @@ export const products: Product[] = [
       '/media/green-ghost-degen-weed-shop-strain-moon-fruit-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Moon Fruit',
-    source:
-      'https://www.leafly.com/brands/gardeners/products/gardeners-moonfruit-flower',
+    source: 'undefined',
   },
   {
     slug: 'orange-velvet',
@@ -1642,19 +1640,18 @@ export const products: Product[] = [
       '/media/green-ghost-degen-weed-shop-strain-snoop-punch-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Snoop Punch',
-    source:
-      'https://www.leafly.com/brands/elev8-seeds/products/elev8-seeds-snoops-punch-hybrid',
+    source: 'undefined',
   },
 ];
 
-export function getProductBySlug(slug: string): Product | undefined {
-  return products.find((product) => product.slug === slug);
+export function getBudBySlug(slug: string): Bud | undefined {
+  return buds.find((bud) => bud.slug === slug);
 }
 
-export function getProducts(): Product[] {
-  return products;
+export function getBuds(): Bud[] {
+  return buds;
 }
 
-export function getProductImageUrls(product: Product): string[] {
-  return product.images.map((image) => `/media/${image}`);
+export function getBudImageUrls(bud: Bud): string[] {
+  return bud.images.map((image) => `/media/${image}`);
 }

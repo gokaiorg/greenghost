@@ -1,61 +1,30 @@
 // BudItem.tsx
-import { Box, Text } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Product } from '../../config/products';
+import { Bud } from '../../config/buds';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from 'swiper';
-// import { Pagination } from 'swiper/modules';
-
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-
-// import { useCart } from '../cart/cartFunctions';
+import BoxItemShop from './elements/BoxItemShop';
+import BoxItemTitleShop from './elements/BoxItemTitleShop';
+import BoxItemDescShop from './elements/BoxItemDescShop';
+import BoxItemPriceShop from './elements/BoxItemPriceShop';
+import BoxItemList from './elements/BoxItemList';
 
 type BudItemProps = {
-  product: Product;
-  // addToCart: (product: Product) => void; // Remove this line
+  bud: Bud;
 };
 
-export const BudItem = ({ product }: BudItemProps) => {
+export const BudItem = ({ bud }: BudItemProps) => {
   SwiperCore.use([Autoplay]);
 
-  // const { addToCart } = useCart(); // Get the addToCart function from the custom hook
-
-  // const handleAddToCart = () => {
-  //   // Call the addToCart function when the "Add to Cart" button is clicked
-  //   addToCart(product);
-  //   console.log('Adding to cart:', product);
-  // };
   return (
-    <Box
-      width={{ base: '50%', md: '33.33333%', lg: '25%', xl: '20%' }}
-      p={0.5}
-      lineHeight={1}
-    >
-      <Link href={`weed-shop/${product.slug}`} title={product.name} passHref>
-        <Box
-          borderColor={'ghostVerse.green.base'}
-          borderWidth={1}
-          bgColor={'ghostVerse.dark.lighter'}
-          backdropFilter={'blur(3px)'}
-          p={2}
-          pos={'relative'}
-          fontWeight={'bold'}
-          fontSize={'lg'}
-          color="ghostVerse.gray.base"
-          display={'flex'}
-          flexDirection={{ base: 'column' }}
-          height={'100%'}
-          whiteSpace={{ base: 'normal' }}
-          position={'relative'}
-          _hover={{
-            bgColor: 'rgba(109, 208, 246, 0.1)',
-            backdropFilter: 'blur(3px)',
-          }}
-          transition={'all .3s'}
-        >
+    <BoxItemList>
+      <Link href={`weed-shop/${bud.slug}`} title={bud.name} passHref>
+        <BoxItemShop>
           <Swiper
             spaceBetween={10}
             slidesPerView={'auto'}
@@ -83,7 +52,7 @@ export const BudItem = ({ product }: BudItemProps) => {
               } as React.CSSProperties
             }
           >
-            {product.images.map(
+            {bud.images.map(
               (image, index) =>
                 index !== 2 && (
                   <SwiperSlide key={index}>
@@ -91,56 +60,23 @@ export const BudItem = ({ product }: BudItemProps) => {
                       src={image}
                       width={500}
                       height={500}
-                      alt={product.imgDesc}
+                      alt={bud.imgDesc}
                     />
                   </SwiperSlide>
                 )
             )}
           </Swiper>
-          {/* <Box width={{ base: 'full' }} height={{ base: 'auto' }}>
-            <Image
-              src={product.images[1]}
-              alt={product.imgDesc}
-              width={700}
-              height={700}
-              title={product.imgDesc}
-              priority={false}
-            />
-          </Box> */}
-          <Box
-            display={'flex'}
-            flexDirection={'column'}
-            flex={'1'}
-            marginLeft={{ base: 0 }}
-            marginTop={{ base: 4 }}
-          >
-            <Text
-              as={'h2'}
-              fontFamily={'CubicFive12'}
-              fontSize={{ base: 16, lg: 18 }}
-              display={'flex'}
-              flexDirection={'column'}
-              marginRight={1}
-            >
-              <Box
-                marginLeft={'auto'}
-                whiteSpace={'nowrap'}
-                mb={2}
-                position={'absolute'}
-                zIndex={1}
-                right={0}
-                top={4}
-                background={'black'}
-                padding={'0.5rem'}
-              >
-                {product.price == 999 ? (
+          <BoxItemDescShop>
+            <BoxItemTitleShop>
+              <BoxItemPriceShop>
+                {bud.price == 999 ? (
                   <Box
                     fontSize={{ base: 14, lg: 16 }}
                     color={'ghostVerse.green.base'}
                   >
                     Coming Soon
                   </Box>
-                ) : product.quantity === 0 ? (
+                ) : bud.quantity === 0 ? (
                   <Box
                     fontSize={{ base: 14, lg: 16 }}
                     color={'ghostVerse.red.base'}
@@ -152,26 +88,26 @@ export const BudItem = ({ product }: BudItemProps) => {
                     fontSize={{ base: 14, lg: 16 }}
                     color={'ghostVerse.green.base'}
                   >
-                    {product.price} THB
+                    {bud.price} THB
                   </Box>
                 )}
-              </Box>
-              {product.name}
-            </Text>
+              </BoxItemPriceShop>
+              {bud.name}
+            </BoxItemTitleShop>
             <Box display={'flex'} fontFamily={'vt323'} fontSize={'2xl'} mb={1}>
-              {product.dominance == 'Indica' && (
+              {bud.dominance == 'Indica' && (
                 <Box as={'h3'} color={'ghostVerse.blue.base'} marginRight={2}>
-                  {product.dominance} {product.indica}%
+                  {bud.dominance} {bud.indica}%
                 </Box>
               )}
-              {product.dominance == 'Sativa' && (
+              {bud.dominance == 'Sativa' && (
                 <Box as={'h3'} color={'ghostVerse.pink.base'} marginRight={2}>
-                  {product.dominance} {product.sativa}%
+                  {bud.dominance} {bud.sativa}%
                 </Box>
               )}
-              {product.dominance == 'Hybrid' && (
+              {bud.dominance == 'Hybrid' && (
                 <Box as={'h3'} color={'ghostVerse.orange.base'} marginRight={2}>
-                  {product.dominance}
+                  {bud.dominance}
                 </Box>
               )}
             </Box>
@@ -182,7 +118,7 @@ export const BudItem = ({ product }: BudItemProps) => {
               flexWrap={'wrap'}
               mb={1}
             >
-              {product.THC !== 'undefined' && (
+              {bud.THC !== 'undefined' && (
                 <Box display={'flex'} marginRight={2} flexDirection={'row'}>
                   THC
                   <Box
@@ -192,11 +128,11 @@ export const BudItem = ({ product }: BudItemProps) => {
                     flexDirection={'row'}
                     alignItems={'baseline'}
                   >
-                    {product.THC}%
+                    {bud.THC}%
                   </Box>
                 </Box>
               )}
-              {product.CBD !== 'undefined' && (
+              {bud.CBD !== 'undefined' && (
                 <Box display={'flex'} marginRight={2} flexDirection={'row'}>
                   CBD
                   <Box
@@ -206,25 +142,25 @@ export const BudItem = ({ product }: BudItemProps) => {
                     flexDirection={'row'}
                     alignItems={'baseline'}
                   >
-                    {product.CBD}%
+                    {bud.CBD}%
                   </Box>
                 </Box>
               )}
             </Box>
-            <Box
-              display={'flex'}
-              fontFamily={'vt323'}
-              fontSize={'lg'}
-              mt={'auto'}
-            >
-              {product.effects !== 'undefined' && (
-                <Box color={'ghostVerse.orange.light'}>{product.effects}</Box>
-              )}
-            </Box>
-          </Box>
-        </Box>
+            {bud.effects !== 'undefined' && (
+              <Box
+                display={'flex'}
+                fontFamily={'vt323'}
+                fontSize={'lg'}
+                mt={'auto'}
+                color={'ghostVerse.grey.base'}
+              >
+                {bud.effects}
+              </Box>
+            )}
+          </BoxItemDescShop>
+        </BoxItemShop>
       </Link>
-      {/* <button onClick={handleAddToCart}>Add to Cart</button> */}
-    </Box>
+    </BoxItemList>
   );
 };

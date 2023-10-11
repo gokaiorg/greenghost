@@ -3,7 +3,7 @@ import { MainLayout } from '../../components/MainLayout';
 import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
 import Head from 'next/head';
-import { MenuWeedShop } from '../../components/MenuWeedShop';
+import { MenuWeedShop } from '../../components/shop/elements/MenuWeedShop';
 import { Gadget } from '../../components/shop/Gadget';
 
 const WeedShopGadgets: NextPage = () => {

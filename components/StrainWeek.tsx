@@ -15,7 +15,6 @@ export const StrainWeek = () => {
           color={'white'}
           maxW={'360px'}
           fontFamily={'vt323'}
-          borderColor={'ghostVerse.blue.base'}
           p={4}
           m={2}
           pos={'fixed'}
@@ -23,7 +22,6 @@ export const StrainWeek = () => {
           bottom={0}
           right={0}
           bgColor={'ghostVerse.dark.lighter'}
-          borderWidth={1}
           backdropFilter={'blur(3px)'}
         >
           <Button
