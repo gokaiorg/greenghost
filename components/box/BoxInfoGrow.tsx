@@ -14,7 +14,7 @@ const BoxInfoGrow: FC<BoxProps> = ({ children }) => {
       width="full"
       p={4}
       flexDirection={{ base: 'column', md: 'row' }}
-      my={5}
+      mb={4}
       fontFamily={'CubicFive12'}
       justifyContent={'center'}
     >

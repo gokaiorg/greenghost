@@ -142,6 +142,7 @@ export const PreRoll = () => {
       <Box display={'flex'} flexWrap={'wrap'} mx={-0.5}>
         {sortedBuds.map((bud) => (
           <PreRollItem key={bud.slug} bud={bud} />
+          // Use 'bud.slug' to access the slug property
         ))}
       </Box>
     </Box>

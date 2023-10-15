@@ -122,12 +122,12 @@ export default function DegensPage({ degen }: DegensPageProps) {
                 <BoxInfoLabelTitle title="THC" />
                 <Text color={'ghostVerse.green.base'}>{degen.THC}</Text>
               </BoxInfoLabel>
-              {degen.CBD !== 'undefined' && (
+              {/* {degen.CBD !== 'undefined' && (
                 <BoxInfoLabel>
                   <BoxInfoLabelTitle title="CBD" />
                   <Text color={'ghostVerse.green.base'}>{degen.CBD}</Text>
                 </BoxInfoLabel>
-              )}
+              )} */}
             </Box>
             {degen.ingretiens !== 'undefined' && (
               <BoxInfoLabel>

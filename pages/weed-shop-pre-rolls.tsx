@@ -6,7 +6,7 @@ import { PreRoll } from '../components/shop/PreRoll';
 import Head from 'next/head';
 import { MenuWeedShop } from '../components/shop/elements/MenuWeedShop';
 
-const WeedShopMember: NextPage = () => {
+const WeedShopPreRolls: NextPage = () => {
   return (
     <>
       <Head>
@@ -61,4 +61,4 @@ const WeedShopMember: NextPage = () => {
   );
 };
 
-export default WeedShopMember;
+export default WeedShopPreRolls;

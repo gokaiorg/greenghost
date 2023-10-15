@@ -141,7 +141,9 @@ export default function BudPage({ bud }: BudPageProps) {
             <Box display={'flex'}>
               <BoxInfoLabel>
                 <BoxInfoLabelTitle title="THC" />
-                <Text color={'ghostVerse.green.base'}>{bud.THC}%</Text>
+                <Text color={'ghostVerse.green.base'} mr={4}>
+                  {bud.THC}%
+                </Text>
               </BoxInfoLabel>
               {bud.CBD !== 'undefined' && (
                 <BoxInfoLabel>
@@ -175,6 +177,8 @@ export default function BudPage({ bud }: BudPageProps) {
                   </Text>
                 </BoxInfoLabel>
                 <BoxInfoMemberPrice>
+                  {' '}
+                  <Box mr={2}>member</Box>
                   {(bud.price * 0.69).toFixed(0)} THB
                 </BoxInfoMemberPrice>
                 <BoxInfoLabel>
@@ -188,6 +192,8 @@ export default function BudPage({ bud }: BudPageProps) {
                   </Text>
                 </BoxInfoLabel>
                 <BoxInfoMemberPrice>
+                  {' '}
+                  <Box mr={2}>member</Box>
                   {((bud.price * 5 - bud.price) * 0.69).toFixed(0)} THB
                 </BoxInfoMemberPrice>
                 <BoxInfoQuantity>{bud.quantity} grams left</BoxInfoQuantity>
@@ -207,7 +213,16 @@ export default function BudPage({ bud }: BudPageProps) {
             )}
 
             {bud.price === 999 && (
-              <BoxInfoMemberPrice>Member Only</BoxInfoMemberPrice>
+              <Text
+                display={'flex'}
+                fontFamily={'CubicFive12'}
+                justifyContent="end"
+                fontSize={14}
+                color="ghostVerse.green.base"
+              >
+                Coming soon
+              </Text>
+              // <BoxInfoMemberPrice>Member Only</BoxInfoMemberPrice>
             )}
           </BoxInfoRight>
         </BoxInfoProduct>

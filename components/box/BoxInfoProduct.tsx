@@ -12,6 +12,7 @@ const BoxInfoProduct: FC<BoxProps> = ({ children }) => {
       flexDirection={{ base: 'column', md: 'row' }}
       alignItems={'start'}
       lineHeight={1}
+      mb={4}
     >
       {children}
     </Box>

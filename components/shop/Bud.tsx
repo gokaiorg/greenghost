@@ -1,3 +1,4 @@
+// Bud.tsx
 import { Box, Select, Checkbox } from '@chakra-ui/react';
 import { useState } from 'react';
 import { buds } from '../../config/buds';
