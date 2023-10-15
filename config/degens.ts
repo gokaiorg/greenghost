@@ -33,7 +33,7 @@ export const degens: Degen[] = [
       '/media/green-ghost-degen-weed-shop-menu-degen-bubble-hash-cover.webp',
       '/media/green-ghost-degen-weed-shop-menu-degen-bubble-hash-photo-02.webp',
     ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Hash',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Bubble Hash',
   },
   {
     slug: 'pollen-hash',
@@ -54,7 +54,7 @@ export const degens: Degen[] = [
       '/media/green-ghost-degen-weed-shop-menu-degen-pollen-hash-cover.webp',
       '/media/green-ghost-degen-weed-shop-menu-degen-pollen-hash-photo-02.webp',
     ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Hash',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Pollen Hash',
   },
   {
     slug: 'pure-kief',
