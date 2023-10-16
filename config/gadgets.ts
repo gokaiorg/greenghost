@@ -31,7 +31,7 @@ export const gadgets: Gadget[] = [
     imgDesc: 'Green Ghost - Degen Weed Shop - Metal Grinder',
   },
   {
-    slug: 'small-metal-grinder-50mm-2-layer',
+    slug: 'small-metal-grinder',
     name: 'Small Metal Grinder',
     price: 150,
     packaging: '40x25mm, 2-layer',
