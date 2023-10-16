@@ -131,6 +131,16 @@ export const StrainWeek = () => {
               <Box as={'span'} color={'ghostVerse.blue.base'}>
                 Amnesia
               </Box>
+            </Link>
+            ,{' '}
+            <Link
+              href="/weed-shop/sweet-zkittlez"
+              title="New weed Strain - Sweet Zkittlez!"
+              passHref
+            >
+              <Box as={'span'} color={'ghostVerse.blue.base'}>
+                Sweet Zkittlez
+              </Box>
             </Link>{' '}
             and{' '}
             <Link
@@ -168,7 +178,7 @@ export const StrainWeek = () => {
                 />
               </svg>
             </Box>
-            New Gadget
+            New Gadgets
           </Text>
           <Text
             mb={4}
@@ -176,14 +186,34 @@ export const StrainWeek = () => {
             fontSize={{ base: '24' }}
             lineHeight={1}
           >
-            Roll your best joints with{' '}
+            Elevate your experience with{' '}
             <Link
-              href="/weed-shop-gadgets/wizman-rolling-papers"
-              title="New weed Gadget - Wizman Rolling Paper!"
+              href="/weed-shop-gadgets/slimjim-rolling-papers"
+              title="New weed Gadget - SlimJim Rolling Paper!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Wizman Rolling Papers
+                SlimJim Rolling Papers
+              </Box>
+            </Link>
+            ,{' '}
+            <Link
+              href="/weed-shop-gadgets/small-metal-grinder"
+              title="New weed Gadget - Small Metal Grinder!"
+              passHref
+            >
+              <Box as={'span'} color={'ghostVerse.blue.base'}>
+                Small Metal Grinder
+              </Box>
+            </Link>{' '}
+            and{' '}
+            <Link
+              href="/weed-shop-gadgets/classic-ice-bong"
+              title="New weed Gadget - Classic Ice Bong!"
+              passHref
+            >
+              <Box as={'span'} color={'ghostVerse.blue.base'}>
+                Classic Ice Bong
               </Box>
             </Link>{' '}
             today!

@@ -12,7 +12,6 @@ const BoxDescription: FC<BoxProps> = ({ children }) => {
       backdropFilter={'blur(3px)'}
       width="full"
       p={4}
-      my={4}
       mb={10}
       display={'inline-flex'}
       flexDirection={'column'}

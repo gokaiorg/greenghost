@@ -17,7 +17,6 @@ import BoxInfoProduct from '../../components/box/BoxInfoProduct';
 import BoxDescription from '../../components/box/BoxDescription';
 import BoxInfoLeft from '../../components/box/BoxInfoLeft';
 import BoxInfoRight from '../../components/box/BoxInfoRight';
-import BoxInfoMemberPrice from '../../components/box/BoxInfoMemberPrice';
 import BoxInfoLabel from '../../components/box/BoxInfoLabel';
 import BoxInfoQuantity from '../../components/box/BoxInfoQuantity';
 
@@ -133,9 +132,6 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
                 {gadget.price} THB
               </Text>
             </BoxInfoLabel>
-            <BoxInfoMemberPrice>
-              {(gadget.price * 0.69).toFixed(0)} THB
-            </BoxInfoMemberPrice>
             {gadget.quantity !== 0 && gadget.price !== 999 && (
               <BoxInfoQuantity>{gadget.quantity} in stock</BoxInfoQuantity>
             )}

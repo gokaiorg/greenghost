@@ -7,6 +7,7 @@ import BoxItemDescShop from './elements/BoxItemDescShop';
 import BoxItemTitleShop from './elements/BoxItemTitleShop';
 import BoxItemPriceShop from './elements/BoxItemPriceShop';
 import BoxItemList from './elements/BoxItemList';
+import ButtonAddCart from './elements/ButtonAddCart';
 
 type EdibleItemProps = {
   edible: Edible;
@@ -21,7 +22,11 @@ export const EdibleItem = ({ edible }: EdibleItemProps) => {
         passHref
       >
         <BoxItemShop>
-          <Box width={{ base: 'full' }} height={{ base: 'auto' }}>
+          <Box
+            width={{ base: 'full' }}
+            height={{ base: 'auto' }}
+            pos={'relative'}
+          >
             <Image
               src={edible.images[1]}
               alt={edible.imgDesc}
@@ -30,6 +35,7 @@ export const EdibleItem = ({ edible }: EdibleItemProps) => {
               title={edible.imgDesc}
               priority={false}
             />
+            <ButtonAddCart>Buy</ButtonAddCart>
           </Box>
           <BoxItemDescShop>
             <BoxItemTitleShop>
@@ -38,13 +44,8 @@ export const EdibleItem = ({ edible }: EdibleItemProps) => {
               )}
               {edible.name}
             </BoxItemTitleShop>
-            <Box
-              display={'flex'}
-              fontFamily={'vt323'}
-              fontSize={'3xl'}
-              flexDirection={'column'}
-              mb={4}
-            >
+
+            <Box display={'flex'} fontFamily={'vt323'} fontSize={'2xl'} mb={1}>
               {edible.THC !== 'undefined' && (
                 <Box display={'flex'} marginRight={2} flexDirection={'row'}>
                   THC
@@ -59,40 +60,19 @@ export const EdibleItem = ({ edible }: EdibleItemProps) => {
                   </Box>
                 </Box>
               )}
-              {edible.CBD !== 'undefined' && (
-                <Box display={'flex'} marginRight={2} flexDirection={'row'}>
-                  CBD
-                  <Box
-                    marginLeft={2}
-                    color={'ghostVerse.green.base'}
-                    display={'flex'}
-                    flexDirection={'row'}
-                    alignItems={'baseline'}
-                  >
-                    {edible.CBD}
-                  </Box>
-                </Box>
-              )}
             </Box>
-            <Box
-              display={'flex'}
-              fontFamily={'vt323'}
-              fontSize={'3xl'}
-              mx={'auto'}
-              mt={'auto'}
-            >
-              {edible.effects !== 'undefined' && (
-                <Box
-                  display={'flex'}
-                  textAlign={'center'}
-                  flexDirection={'column'}
-                  fontSize={'2xl'}
-                >
-                  Feelings
-                  <Box color={'ghostVerse.green.base'}>{edible.effects}</Box>
-                </Box>
-              )}
-            </Box>
+
+            {edible.effects !== 'undefined' && (
+              <Box
+                display={'flex'}
+                fontFamily={'vt323'}
+                fontSize={'lg'}
+                mt={'auto'}
+                color={'ghostVerse.grey.base'}
+              >
+                {edible.effects}
+              </Box>
+            )}
           </BoxItemDescShop>
         </BoxItemShop>
       </Link>

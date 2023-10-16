@@ -13,6 +13,7 @@ import BoxItemTitleShop from './elements/BoxItemTitleShop';
 import BoxItemDescShop from './elements/BoxItemDescShop';
 import BoxItemPriceShop from './elements/BoxItemPriceShop';
 import BoxItemList from './elements/BoxItemList';
+import ButtonAddCart from './elements/ButtonAddCart';
 
 type BudItemProps = {
   bud: Bud;
@@ -65,6 +66,7 @@ export const BudItem = ({ bud }: BudItemProps) => {
                   </SwiperSlide>
                 )
             )}
+            <ButtonAddCart>Buy</ButtonAddCart>
           </Swiper>
           <BoxItemDescShop>
             <BoxItemTitleShop>
@@ -94,6 +96,7 @@ export const BudItem = ({ bud }: BudItemProps) => {
               </BoxItemPriceShop>
               {bud.name}
             </BoxItemTitleShop>
+
             <Box display={'flex'} fontFamily={'vt323'} fontSize={'2xl'} mb={1}>
               {bud.dominance == 'Indica' && (
                 <Box as={'h3'} color={'ghostVerse.blue.base'} marginRight={2}>
@@ -110,43 +113,31 @@ export const BudItem = ({ bud }: BudItemProps) => {
                   {bud.dominance}
                 </Box>
               )}
-            </Box>
-            <Box
-              display={'flex'}
-              fontFamily={'vt323'}
-              fontSize={'2xl'}
-              flexWrap={'wrap'}
-              mb={1}
-            >
-              {bud.THC !== 'undefined' && (
-                <Box display={'flex'} marginRight={2} flexDirection={'row'}>
-                  THC
-                  <Box
-                    marginLeft={2}
-                    color={'ghostVerse.green.base'}
-                    display={'flex'}
-                    flexDirection={'row'}
-                    alignItems={'baseline'}
-                  >
-                    {bud.THC}%
+              <Box
+                display={'flex'}
+                fontFamily={'vt323'}
+                fontSize={'2xl'}
+                flexWrap={'wrap'}
+                mb={1}
+                ml={'auto'}
+              >
+                {bud.THC !== 'undefined' && (
+                  <Box display={'flex'} marginRight={2} flexDirection={'row'}>
+                    THC
+                    <Box
+                      marginLeft={2}
+                      color={'ghostVerse.green.base'}
+                      display={'flex'}
+                      flexDirection={'row'}
+                      alignItems={'baseline'}
+                    >
+                      {bud.THC}%
+                    </Box>
                   </Box>
-                </Box>
-              )}
-              {bud.CBD !== 'undefined' && (
-                <Box display={'flex'} marginRight={2} flexDirection={'row'}>
-                  CBD
-                  <Box
-                    marginLeft={2}
-                    color={'ghostVerse.green.base'}
-                    display={'flex'}
-                    flexDirection={'row'}
-                    alignItems={'baseline'}
-                  >
-                    {bud.CBD}%
-                  </Box>
-                </Box>
-              )}
+                )}
+              </Box>
             </Box>
+
             {bud.effects !== 'undefined' && (
               <Box
                 display={'flex'}

@@ -7,6 +7,7 @@ import BoxItemDescShop from './elements/BoxItemDescShop';
 import BoxItemTitleShop from './elements/BoxItemTitleShop';
 import BoxItemPriceShop from './elements/BoxItemPriceShop';
 import BoxItemList from './elements/BoxItemList';
+import ButtonAddCart from './elements/ButtonAddCart';
 
 type GadgetItemProps = {
   gadget: Gadget;
@@ -21,7 +22,11 @@ export const GadgetItem = ({ gadget }: GadgetItemProps) => {
         passHref
       >
         <BoxItemShop>
-          <Box width={{ base: 'full' }} height={{ base: 'auto' }}>
+          <Box
+            width={{ base: 'full' }}
+            height={{ base: 'auto' }}
+            pos={'relative'}
+          >
             <Image
               src={gadget.images[1]}
               alt={gadget.imgDesc}
@@ -30,6 +35,7 @@ export const GadgetItem = ({ gadget }: GadgetItemProps) => {
               title={gadget.imgDesc}
               priority={false}
             />
+            <ButtonAddCart>Buy</ButtonAddCart>
           </Box>
           <BoxItemDescShop>
             <BoxItemTitleShop>
@@ -61,9 +67,10 @@ export const GadgetItem = ({ gadget }: GadgetItemProps) => {
             </BoxItemTitleShop>
             <Box
               display={'flex'}
-              fontFamily={'vt323'}
-              fontSize={'3xl'}
               flexDirection={'column'}
+              fontFamily={'vt323'}
+              fontSize={'2xl'}
+              mb={1}
             >
               <Box as={'h4'} color={'ghostVerse.blue.base'} marginRight={4}>
                 {gadget.packaging}

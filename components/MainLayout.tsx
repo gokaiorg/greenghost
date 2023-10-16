@@ -70,7 +70,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         mb={5}
       >
         <Container maxW="container.xl" px={2}>
-          {/* <Cart /> */}
           <Box>{children}</Box>
         </Container>
       </Box>

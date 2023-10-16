@@ -40,12 +40,12 @@ const Links: Route[] = [
     label: 'Gadgets',
     imageW: '14px',
   },
-  {
-    path: '/weed-shop-member',
-    image: '/media/green-ghost-degen-weed-shop-menu-member.png',
-    label: 'Member',
-    imageW: '20px',
-  },
+  // {
+  //   path: '/weed-shop-member',
+  //   image: '/media/green-ghost-degen-weed-shop-menu-member.png',
+  //   label: 'Member',
+  //   imageW: '20px',
+  // },
 ];
 
 // Take note on how I implement these type, to be able to correctly pass the props

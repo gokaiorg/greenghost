@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
@@ -11,6 +12,15 @@ import { WeedDeliveryFeature } from '../components/WeedDeliveryFeature';
 import { ImgDelivery } from '../components/media/ImgDelivery';
 
 const WeedDelivery: NextPage = () => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
+
+  const handleBack = () => {
+    window.history.back();
+  };
   return (
     <>
       <Head>
@@ -58,6 +68,13 @@ const WeedDelivery: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
+        <Box
+          cursor={'pointer'}
+          color={'ghostVerse.green.base'}
+          onClick={handleBack}
+        >
+          {'< back'}
+        </Box>
         <Box
           display={'flex'}
           flexDirection={'column'}
