@@ -31,6 +31,57 @@ export const gadgets: Gadget[] = [
     imgDesc: 'Green Ghost - Degen Weed Shop - Metal Grinder',
   },
   {
+    slug: 'small-metal-grinder-50mm-2-layer',
+    name: 'Small Metal Grinder',
+    price: 150,
+    packaging: '40x25mm, 2-layer',
+    quantity: 3,
+    description:
+      'Elevate your herb preparation game with our Small Metal Grinder. Crafted from robust aluminum, this compact powerhouse measures 40mm in width and 25mm in height. Designed for durability and efficiency, this grinder ensures a consistently smooth grind for your favorite herbs. Get ready to enjoy a finely tuned experience with our Small Metal Grinder, the perfect companion for your smoking adventures.',
+    descSeo:
+      'Elevate your herb preparation game with our Small Metal Grinder. Crafted from robust aluminum, this compact powerhouse measures 40mm in width and 25mm in height. Designed for durability and efficiency, this grinder ensures a consistently smooth grind for your favorite herbs. Get ready to enjoy a finely tuned experience with our Small Metal Grinder, the perfect companion for your smoking adventures.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-menu-gadget-small-metal-grinder-02.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-small-metal-grinder-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-small-metal-grinder-01.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Small Metal Grinder',
+  },
+  {
+    slug: 'classic-ice-bong',
+    name: 'Classic Ice Bong',
+    price: 600,
+    packaging: '25cm high',
+    quantity: 4,
+    description:
+      'Embrace the timeless elegance of the Classic Ice Bong. Standing tall at 250mm and weighing a solid 370g, this bong is a symbol of sophistication and function. Crafted for those who appreciate tradition, it promises a cool, smooth, and refreshing smoking experience. With its sturdy build and striking design, the Classic Ice Bong is your gateway to elevated indulgence, redefining the art of smoking.',
+    descSeo:
+      'Embrace the timeless elegance of the Classic Ice Bong. Standing tall at 250mm and weighing a solid 370g, this bong is a symbol of sophistication and function. Crafted for those who appreciate tradition, it promises a cool, smooth, and refreshing smoking experience. With its sturdy build and striking design, the Classic Ice Bong is your gateway to elevated indulgence, redefining the art of smoking.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-menu-gadget-classic-ice-bong-02.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-classic-ice-bong-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-classic-ice-bong-03.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Classic Ice Bong',
+  },
+  {
+    slug: 'clipper-lighter',
+    name: 'Clipper Lighter',
+    price: 35,
+    packaging: 'Reusable',
+    quantity: 22,
+    description:
+      'Introducing the Clipper Lighter - your eco-friendly, reusable firestarter with a remarkable service life of over 3,000 uses. Crafted to last, this versatile lighter not only reduces waste but also ignites your flame with unmatched reliability. With a commitment to sustainability and quality, the Clipper Lighter is your trusted companion for endless, hassle-free lighting, and an environmentally-conscious choice.',
+    descSeo:
+      'Introducing the Clipper Lighter - your eco-friendly, reusable firestarter with a remarkable service life of over 3,000 uses. Crafted to last, this versatile lighter not only reduces waste but also ignites your flame with unmatched reliability. With a commitment to sustainability and quality, the Clipper Lighter is your trusted companion for endless, hassle-free lighting, and an environmentally-conscious choice.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-menu-gadget-clipper-lighter-02.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-clipper-lighter-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-clipper-lighter-01.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Clipper Lighter',
+  },
+  {
     slug: 'wood-grinder-68mm-2-layer',
     name: 'Wood Grinder',
     price: 300,
@@ -73,9 +124,9 @@ export const gadgets: Gadget[] = [
     packaging: '20 Leaves, Slim size',
     quantity: 27,
     description:
-      "Elevate your smoking experience with SlimJim Rolling Papers. Featuring a sleek and slender design, these Slim papers offer 20 leaves of pure delight for your smoking pleasure. Crafted for connoisseurs who appreciate the finer things, these papers deliver a smooth and stylish smoking experience. Upgrade your smoking game with SlimJim, your go-to choice for slim-sized rolling papers that enhance every puff.",
+      'Elevate your smoking experience with SlimJim Rolling Papers. Featuring a sleek and slender design, these Slim papers offer 20 leaves of pure delight for your smoking pleasure. Crafted for connoisseurs who appreciate the finer things, these papers deliver a smooth and stylish smoking experience. Upgrade your smoking game with SlimJim, your go-to choice for slim-sized rolling papers that enhance every puff.',
     descSeo:
-      "Elevate your smoking experience with SlimJim Rolling Papers. Featuring a sleek and slender design, these Slim papers offer 20 leaves of pure delight for your smoking pleasure. Crafted for connoisseurs who appreciate the finer things, these papers deliver a smooth and stylish smoking experience. Upgrade your smoking game with SlimJim, your go-to choice for slim-sized rolling papers that enhance every puff.",
+      'Elevate your smoking experience with SlimJim Rolling Papers. Featuring a sleek and slender design, these Slim papers offer 20 leaves of pure delight for your smoking pleasure. Crafted for connoisseurs who appreciate the finer things, these papers deliver a smooth and stylish smoking experience. Upgrade your smoking game with SlimJim, your go-to choice for slim-sized rolling papers that enhance every puff.',
     images: [
       '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-02.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-01.webp',
@@ -90,9 +141,9 @@ export const gadgets: Gadget[] = [
     packaging: '32 Leaves, Unbleached',
     quantity: 29,
     description:
-      "Experience the pinnacle of smoking sophistication with SlimJim Rolling Papers and Tips. This all-in-one package includes 32 unbleached skins and 32 roaches for an eco-conscious smoking experience. Crafted with precision, these slender papers and perfectly-sized tips offer the discerning smoker the ultimate in convenience and eco-friendly indulgence. Elevate your sessions with SlimJim, where unbleached quality meets a comprehensive smoking solution, delivering 32 times the pleasure.",
+      'Experience the pinnacle of smoking sophistication with SlimJim Rolling Papers and Tips. This all-in-one package includes 32 unbleached skins and 32 roaches for an eco-conscious smoking experience. Crafted with precision, these slender papers and perfectly-sized tips offer the discerning smoker the ultimate in convenience and eco-friendly indulgence. Elevate your sessions with SlimJim, where unbleached quality meets a comprehensive smoking solution, delivering 32 times the pleasure.',
     descSeo:
-      "Experience the pinnacle of smoking sophistication with SlimJim Rolling Papers and Tips. This all-in-one package includes 32 unbleached skins and 32 roaches for an eco-conscious smoking experience. Crafted with precision, these slender papers and perfectly-sized tips offer the discerning smoker the ultimate in convenience and eco-friendly indulgence. Elevate your sessions with SlimJim, where unbleached quality meets a comprehensive smoking solution, delivering 32 times the pleasure.",
+      'Experience the pinnacle of smoking sophistication with SlimJim Rolling Papers and Tips. This all-in-one package includes 32 unbleached skins and 32 roaches for an eco-conscious smoking experience. Crafted with precision, these slender papers and perfectly-sized tips offer the discerning smoker the ultimate in convenience and eco-friendly indulgence. Elevate your sessions with SlimJim, where unbleached quality meets a comprehensive smoking solution, delivering 32 times the pleasure.',
     images: [
       '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-tips-02.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-tips-01.webp',
