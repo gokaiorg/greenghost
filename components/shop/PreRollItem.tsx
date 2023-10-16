@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import { Bud } from '../../config/buds';
 import BoxItemShop from './elements/BoxItemShop';
@@ -10,7 +10,7 @@ type PreRollItemProps = {
 
 export const PreRollItem = ({ bud }: PreRollItemProps) => {
   return (
-    <Box width={{ base: '100%' }} p={0} mb={1} lineHeight={1}>
+    <Box width={{ base: '100%' }} p={0} mb={1} lineHeight={1} pos={'relative'}>
       <Link href={`weed-shop/${bud.slug}`} title={bud.name} passHref>
         <BoxItemShop>
           <Box
@@ -22,80 +22,102 @@ export const PreRollItem = ({ bud }: PreRollItemProps) => {
             marginLeft={{ base: 0 }}
             p={1}
           >
-            <Box w={{ base: '100%', lg: '25%' }}>
+            <Box display={'flex'} w={{ base: '100%', lg: '20%' }}>
               <BoxItemTitleShop>{bud.name}</BoxItemTitleShop>
+              <Box
+                marginLeft={'auto'}
+                whiteSpace={'nowrap'}
+                display={{ base: 'block', md: 'none' }}
+              >
+                <Box
+                  fontFamily={'CubicFive12'}
+                  fontSize={{ base: 18, lg: 20 }}
+                  color={'ghostVerse.green.base'}
+                >
+                  {bud.price} THB
+                </Box>
+              </Box>
             </Box>
             <Box
-              w={{ base: '100%', lg: '10%' }}
+              w={{ base: '100%', lg: '30%' }}
               display={'flex'}
               fontFamily={'vt323'}
               fontSize={'2xl'}
-              mb={1}
             >
               {bud.dominance == 'Indica' && (
-                <Box as={'h3'} color={'ghostVerse.blue.base'} marginRight={2}>
+                <Text
+                  display={'flex'}
+                  whiteSpace={'nowrap'}
+                  as={'h3'}
+                  color={'ghostVerse.blue.base'}
+                  w={'30%'}
+                >
                   {bud.dominance} {bud.indica}%
-                </Box>
+                </Text>
               )}
               {bud.dominance == 'Sativa' && (
-                <Box as={'h3'} color={'ghostVerse.pink.base'} marginRight={2}>
+                <Text
+                  display={'flex'}
+                  whiteSpace={'nowrap'}
+                  as={'h3'}
+                  color={'ghostVerse.pink.base'}
+                  w={'30%'}
+                >
                   {bud.dominance} {bud.sativa}%
-                </Box>
+                </Text>
               )}
               {bud.dominance == 'Hybrid' && (
-                <Box as={'h3'} color={'ghostVerse.orange.base'} marginRight={2}>
+                <Text
+                  display={'flex'}
+                  whiteSpace={'nowrap'}
+                  as={'h3'}
+                  color={'ghostVerse.orange.base'}
+                  w={'30%'}
+                >
                   {bud.dominance}
-                </Box>
+                </Text>
               )}
-            </Box>
-            <Box
-              display={'flex'}
-              fontFamily={'vt323'}
-              fontSize={'2xl'}
-              flexWrap={'wrap'}
-              mb={1}
-              w={{ base: '100%', lg: '15%' }}
-            >
-              {bud.THC !== 'undefined' && (
-                <Box display={'flex'} marginRight={2} flexDirection={'row'}>
-                  THC
-                  <Box
-                    marginLeft={2}
-                    color={'ghostVerse.green.base'}
-                    display={'flex'}
-                    flexDirection={'row'}
-                    alignItems={'baseline'}
-                  >
-                    {bud.THC}%
+              <Box
+                display={'flex'}
+                fontFamily={'vt323'}
+                fontSize={'2xl'}
+                flexWrap={'wrap'}
+                mb={1}
+                mr={{ base: 4, md: 'auto' }}
+              >
+                {bud.THC !== 'undefined' && (
+                  <Box display={'flex'} mr={2} flexDirection={'row'}>
+                    THC
+                    <Text
+                      marginLeft={2}
+                      color={'ghostVerse.green.base'}
+                      display={'flex'}
+                      flexDirection={'row'}
+                      alignItems={'baseline'}
+                    >
+                      {bud.THC}%
+                    </Text>
                   </Box>
-                </Box>
-              )}
-              {bud.CBD !== 'undefined' && (
-                <Box display={'flex'} marginRight={2} flexDirection={'row'}>
-                  CBD
-                  <Box
-                    marginLeft={2}
-                    color={'ghostVerse.green.base'}
-                    display={'flex'}
-                    flexDirection={'row'}
-                    alignItems={'baseline'}
-                  >
-                    {bud.CBD}%
-                  </Box>
-                </Box>
-              )}
+                )}
+              </Box>
             </Box>
+
             {bud.effects !== 'undefined' && (
               <Box
                 display={'flex'}
                 fontFamily={'vt323'}
                 fontSize={'lg'}
                 color={'ghostVerse.grey.base'}
+                w={{ base: '100%', lg: '30%' }}
               >
                 {bud.effects}
               </Box>
             )}
-            <Box marginLeft={'auto'} whiteSpace={'nowrap'}>
+            <Box
+              marginLeft={'auto'}
+              whiteSpace={'nowrap'}
+              display={{ base: 'none', md: 'block' }}
+            >
               <Box
                 fontFamily={'CubicFive12'}
                 fontSize={{ base: 18, lg: 20 }}

@@ -32,7 +32,7 @@ export const BuyNowLink = () => {
             color: 'black',
           }}
         >
-          Buy Now
+          Buy
         </Text>
       </Link>
     </>

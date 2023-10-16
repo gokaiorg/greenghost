@@ -53,6 +53,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/weed-shop-degen/hash',
+        destination: '/weed-shop-degen/bubble-hash',
+        permanent: true,
+      },
+      {
         source: '/weed-shop-pre-rolled',
         destination: '/weed-shop-pre-rolls',
         permanent: true,

@@ -7,6 +7,7 @@ import BoxItemDescShop from './elements/BoxItemDescShop';
 import BoxItemTitleShop from './elements/BoxItemTitleShop';
 import BoxItemPriceShop from './elements/BoxItemPriceShop';
 import BoxItemList from './elements/BoxItemList';
+import ButtonAddCart from './elements/ButtonAddCart';
 
 type DegenItemProps = {
   degen: Degen;
@@ -17,7 +18,11 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
     <BoxItemList>
       <Link href={`weed-shop-degen/${degen.slug}`} title={degen.name} passHref>
         <BoxItemShop>
-          <Box width={{ base: 'full' }} height={{ base: 'auto' }}>
+          <Box
+            width={{ base: 'full' }}
+            height={{ base: 'auto' }}
+            pos={'relative'}
+          >
             <Image
               src={degen.images[1]}
               alt={degen.imgDesc}
@@ -26,6 +31,7 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
               title={degen.imgDesc}
               priority={false}
             />
+            <ButtonAddCart>Buy</ButtonAddCart>
           </Box>
           <BoxItemDescShop>
             <BoxItemTitleShop>
@@ -36,9 +42,10 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
             </BoxItemTitleShop>
             <Box
               display={'flex'}
+              flexDirection={'column'}
               fontFamily={'vt323'}
-              fontSize={'3xl'}
-              flexWrap={'wrap'}
+              fontSize={'2xl'}
+              mb={1}
             >
               {degen.THC !== 'undefined' && (
                 <Box display={'flex'} marginRight={2} flexDirection={'row'}>
@@ -51,20 +58,6 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
                     alignItems={'baseline'}
                   >
                     {degen.THC}
-                  </Box>
-                </Box>
-              )}
-              {degen.CBD !== 'undefined' && (
-                <Box display={'flex'} marginRight={2} flexDirection={'row'}>
-                  CBD
-                  <Box
-                    marginLeft={2}
-                    color={'ghostVerse.green.base'}
-                    display={'flex'}
-                    flexDirection={'row'}
-                    alignItems={'baseline'}
-                  >
-                    {degen.CBD}
                   </Box>
                 </Box>
               )}

@@ -23,7 +23,6 @@ const BoxInfoMemberPrice: FC<BoxProps> = ({ children }) => {
           color: 'ghostVerse.green.base',
         }}
       >
-        <Box>member</Box>
         <Box display={'flex'} ml={4}>
           {children}
         </Box>

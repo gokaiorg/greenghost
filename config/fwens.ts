@@ -24,4 +24,9 @@ export const fwen = [
     fwenLogo: '/media/green-ghost-phuket-high-times.webp',
     fwenLink: 'https://phukethightimes.com/',
   },
+  {
+    name: 'SlimJim',
+    fwenLogo: '/media/green-ghost-slimjim.webp',
+    fwenLink: 'https://slimjim.in/',
+  },
 ];
