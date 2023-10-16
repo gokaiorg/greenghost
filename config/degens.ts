@@ -30,7 +30,7 @@ export const degens: Degen[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-menu-degen-bubble-hash-photo-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-degen-bubble-hash-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-degen-bubble-hash-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-degen-bubble-hash-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-menu-degen-bubble-hash-photo-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Bubble Hash',
@@ -51,7 +51,7 @@ export const degens: Degen[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-menu-degen-pollen-hash-photo-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-degen-pollen-hash-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-degen-pollen-hash-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-degen-pollen-hash-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-menu-degen-pollen-hash-photo-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Pollen Hash',

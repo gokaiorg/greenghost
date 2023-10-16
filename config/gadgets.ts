@@ -43,7 +43,7 @@ export const gadgets: Gadget[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-menu-gadget-small-metal-grinder-02.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-small-metal-grinder-01.webp',
-      '/media/green-ghost-degen-weed-shop-menu-gadget-small-metal-grinder-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-small-metal-grinder-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Small Metal Grinder',
   },
@@ -60,6 +60,7 @@ export const gadgets: Gadget[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-menu-gadget-classic-ice-bong-02.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-classic-ice-bong-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-classic-ice-bong-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-classic-ice-bong-03.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Classic Ice Bong',
@@ -77,7 +78,7 @@ export const gadgets: Gadget[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-menu-gadget-clipper-lighter-02.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-clipper-lighter-01.webp',
-      '/media/green-ghost-degen-weed-shop-menu-gadget-clipper-lighter-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-clipper-lighter-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Clipper Lighter',
   },
@@ -111,7 +112,7 @@ export const gadgets: Gadget[] = [
     descSeo:
       "Elevate your rolling game with our exclusive King Size Slim Rolling Papers, each measuring a generous 107*44 mm. Inside every box, you'll find 15 packs, with each pack containing 32 ultra-thin translucent rolling papers and 32 tips.",
     images: [
-      '/media/green-ghost-degen-weed-shop-menu-gadget-wizman-rolling-paper-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-wizman-rolling-paper-02.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-wizman-rolling-paper-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-wizman-rolling-paper-qr-code.webp',
     ],
@@ -130,7 +131,7 @@ export const gadgets: Gadget[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-02.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-01.webp',
-      '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - SlimJim Rolling Paper',
   },
@@ -147,7 +148,7 @@ export const gadgets: Gadget[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-tips-02.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-tips-01.webp',
-      '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-tips-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-tips-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - SlimJim Rolling Paper + Tips',
   },
