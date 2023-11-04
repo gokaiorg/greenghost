@@ -1,4 +1,5 @@
 // BudItem.tsx
+import React from 'react';
 import { Box } from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';

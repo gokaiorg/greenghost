@@ -24,37 +24,6 @@ export type Bud = {
 
 export const buds: Bud[] = [
   {
-    slug: 'royal-runtz',
-    name: 'Royal Runtz',
-    price: 400,
-    dominance: 'Hybrid',
-    indica: '50',
-    sativa: '50',
-    THC: '27',
-    CBD: 'undefined',
-    effects: 'Creative, Uplifting, Euphoric',
-    relieves: 'Pain, Insomnia, Stress',
-    grower: 'Ohigho',
-    growerSlug: '/ohigho',
-    environment: 'Organic Indoor',
-    harvest: '22/07/2023',
-    quantity: 50,
-    origin: 'Phuket',
-    description:
-      "Royal Runtz stands as a remarkable hybrid cannabis strain resulting from the intricate genetics of Gelato and Zkittlez. This distinguished USA-bred variety boasts an unparalleled blend of flavors and fragrances that truly set it apart in the world of cannabis. With an impressive THC content of 27%, Royal Runtz is primarily recommended for experienced cannabis enthusiasts who seek a robust and potent high. \n\n As attested by Leafly customers, its effects include profound happiness, relaxation, and euphoria. Moreover, many medical marijuana patients turn to Royal Runtz to alleviate symptoms associated with pain, insomnia, and loss of appetite. Crafted by the esteemed Royal Queen Seeds, this strain entices connoisseurs with its delightful flavor profile, encompassing sweet, fruity, and citrusy notes. \n\n The dominant terpene, limonene, not only enhances mood but also possesses anti-inflammatory properties. On average, Royal Runtz commands a price range of $50-$70 per eighth, reflecting its rarity and high demand. Its dense and frosty buds, adorned with vibrant orange hairs and hints of purple, are a sight to behold. The strain's aroma is a delightful fusion of sweetness, fruitiness, with subtle undertones of cream and candy.",
-    descSeo:
-      'Royal Runtz stands as a remarkable hybrid cannabis strain resulting from the intricate genetics of Gelato and Zkittlez. This distinguished USA-bred variety boasts an unparalleled blend of flavors and fragrances that truly set it apart in the world of cannabis. With an impressive THC content of 27%, Royal Runtz is primarily recommended for experienced cannabis enthusiasts who seek a robust and potent high.',
-    images: [
-      '/media/green-ghost-degen-weed-shop-strain-royal-runtz-bud-01.webp',
-      '/media/green-ghost-degen-weed-shop-strain-royal-runtz-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-royal-runtz-qr-code.webp',
-      '/media/green-ghost-degen-weed-shop-strain-royal-runtz-bud-02.webp',
-      '/media/green-ghost-degen-weed-shop-strain-royal-runtz-bud-03.webp',
-    ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Royal Runtz',
-    source: 'https://www.leafly.com/strains/royal-runtz',
-  },
-  {
     slug: 'amnesia',
     name: 'Amnesia',
     price: 300,
@@ -84,6 +53,37 @@ export const buds: Bud[] = [
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Amnesia',
     source: 'https://www.leafly.com/strains/amnesia',
+  },
+  {
+    slug: 'royal-runtz',
+    name: 'Royal Runtz',
+    price: 300,
+    dominance: 'Hybrid',
+    indica: '50',
+    sativa: '50',
+    THC: '27',
+    CBD: 'undefined',
+    effects: 'Creative, Uplifting, Euphoric',
+    relieves: 'Pain, Insomnia, Stress',
+    grower: 'Ohigho',
+    growerSlug: '/ohigho',
+    environment: 'Organic Indoor',
+    harvest: '22/07/2023',
+    quantity: 40,
+    origin: 'Phuket',
+    description:
+      "Royal Runtz stands as a remarkable hybrid cannabis strain resulting from the intricate genetics of Gelato and Zkittlez. This distinguished USA-bred variety boasts an unparalleled blend of flavors and fragrances that truly set it apart in the world of cannabis. With an impressive THC content of 27%, Royal Runtz is primarily recommended for experienced cannabis enthusiasts who seek a robust and potent high. \n\n As attested by Leafly customers, its effects include profound happiness, relaxation, and euphoria. Moreover, many medical marijuana patients turn to Royal Runtz to alleviate symptoms associated with pain, insomnia, and loss of appetite. Crafted by the esteemed Royal Queen Seeds, this strain entices connoisseurs with its delightful flavor profile, encompassing sweet, fruity, and citrusy notes. \n\n The dominant terpene, limonene, not only enhances mood but also possesses anti-inflammatory properties. On average, Royal Runtz commands a price range of $50-$70 per eighth, reflecting its rarity and high demand. Its dense and frosty buds, adorned with vibrant orange hairs and hints of purple, are a sight to behold. The strain's aroma is a delightful fusion of sweetness, fruitiness, with subtle undertones of cream and candy.",
+    descSeo:
+      'Royal Runtz stands as a remarkable hybrid cannabis strain resulting from the intricate genetics of Gelato and Zkittlez. This distinguished USA-bred variety boasts an unparalleled blend of flavors and fragrances that truly set it apart in the world of cannabis. With an impressive THC content of 27%, Royal Runtz is primarily recommended for experienced cannabis enthusiasts who seek a robust and potent high.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-royal-runtz-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-royal-runtz-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-royal-runtz-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-royal-runtz-bud-02.webp',
+      '/media/green-ghost-degen-weed-shop-strain-royal-runtz-bud-03.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Royal Runtz',
+    source: 'https://www.leafly.com/strains/royal-runtz',
   },
   {
     slug: 'banana-daddy',
@@ -240,7 +240,7 @@ export const buds: Bud[] = [
   {
     slug: 'green-gelato',
     name: 'Green Gelato',
-    price: 500,
+    price: 400,
     dominance: 'Indica',
     indica: '55',
     sativa: '45',
@@ -334,7 +334,7 @@ export const buds: Bud[] = [
   {
     slug: 'pink-sunset',
     name: 'Pink Sunset',
-    price: 200,
+    price: 1000,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -346,7 +346,7 @@ export const buds: Bud[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/06/2023',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Pink Sunset is a remarkable hybrid strain that combines the best traits of its parent strains, Critical Plus and Bubble Gum. Critical Plus, a cross between Skunk and Big Bud, is known for its fast growth and high yields. It has gained recognition in cannabis competitions, including winning the first Highlife Cup in Barcelona. Buddy Critical inherits the pungent and citrusy flavors of Critical Plus, accompanied by a subtle diesel and nutty undertone. With the addition of Bubble Gum genetics, this strain offers a relaxing and pain-relieving experience while keeping the mind pleasantly stimulated. \n\n Bred by Dinafem Seeds, Buddy Critical exemplifies the expertise and dedication of its breeders. The careful selection and combination of Critical Plus and Bubble Gum have resulted in a strain that offers a well-balanced and enjoyable experience. The body-numbing effects of Bubble Gum are complemented by the uplifting and euphoric qualities of Critical Plus. This combination makes Buddy Critical a popular choice among cannabis enthusiasts seeking relaxation and pain relief without sacrificing mental clarity. \n\n The precise genetic lineage of Bubble Gum, one of Buddy Critical's parent strains, remains somewhat mysterious. It is believed to be derived from an unknown cross of Indiana Bubble Gum. What is known, however, is the exceptional body-numbing high that Bubble Gum delivers. Users often experience a sense of pain relief and relaxation, accompanied by a gentle mental stimulation. Buddy Critical takes these desirable qualities and enhances them with the addition of Critical Plus genetics, resulting in a well-rounded and satisfying cannabis strain that appeals to a wide range of users.",
