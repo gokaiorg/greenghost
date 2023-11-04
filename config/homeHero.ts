@@ -1,7 +1,7 @@
 export const homehero = [
   {
     title: 'The 2nd Phuket Cannabis Cup',
-    image: '/media/green-ghost-phuket-cannabis-cup-2023.webp',
+    image: '/media/green-ghost-the-second-phuket-cannabis-cup.webp',
     imageAlt: 'Green Ghost Phuket Cannabis Cup',
     description:
       'Help us win the Best Dispensaries in Thailand contest by voting for Green Ghost Degen Weed Shop today!',

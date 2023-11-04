@@ -119,26 +119,70 @@ const CannabisCup: NextPage = () => {
           alignItems={'stretch'}
           mb={20}
         >
-          <Box width={{ base: '50%' }}>
+          <Box width={{ base: '100%', lg: '50%' }}>
             <Image
-              src="/media/green-ghost-phuket-cannabis-cup-2023.webp"
+              src="/media/green-ghost-the-second-phuket-cannabis-cup.webp"
               width={1264}
               height={600}
               alt="Green Ghost - Phuket Cannabis Cup 2023"
             />
           </Box>
-          <Text
-            width={{ base: '50%' }}
-            as={'h3'}
-            fontSize={{ base: 24, lg: 30 }}
-            fontFamily={'vt323'}
-            px={4}
+          <Box
+            width={{ base: '100%', lg: '50%' }}
+            px={5}
+            py={{ base: 5, lg: 0 }}
             display={'flex'}
             flexDirection={'column'}
-            transition={'all .3s'}
+            fontFamily={'vt323'}
+            lineHeight={1}
           >
-            December 1st – 2nd, Blue Tree Water Park, Thalang
-          </Text>
+            <Text
+              as={'h3'}
+              fontSize={{ base: 24, lg: 30 }}
+              mb={2}
+              _hover={{
+                color: 'ghostVerse.green.base',
+              }}
+            >
+              <Link
+                href="https://www.phuketcannabisassociation.com/news/the-2nd-phuket-cannabis-cup.php"
+                title="Green Ghost - The 2nd Phuket Cannabis Cup"
+                passHref
+              >
+                December 1st – 2nd, Blue Tree Water Park, Thalang
+              </Link>
+            </Text>
+            <Text
+              as={'p'}
+              mb={2}
+              fontSize={{ base: 20, lg: 26 }}
+              display={'flex'}
+              flexDirection={'column'}
+            >
+              <Box my={2}>
+                <Link
+                  href="https://megatix.in.th/events/the-2nd-phuket-cannabis-cup?aid=PCA"
+                  title="Green Ghost - Buy Ticket on Megatix - Phuket Cannabis Cup"
+                  passHref
+                >
+                  <Text as={'span'} color={'ghostVerse.green.base'}>
+                    Buy Ticket on Megatix
+                  </Text>
+                </Link>
+              </Box>
+              <Box my={2}>
+                <Link
+                  href="https://weed.th/events/the-2nd-phuket-cannabis-cup"
+                  title="Green Ghost - Buy Ticket on Weed TH - Phuket Cannabis Cup"
+                  passHref
+                >
+                  <Text as={'span'} color={'ghostVerse.green.base'}>
+                    Buy Ticket on Weed TH
+                  </Text>
+                </Link>
+              </Box>
+            </Text>
+          </Box>
         </Box>
         <Text
           as={'h2'}
@@ -157,26 +201,269 @@ const CannabisCup: NextPage = () => {
           width={{ base: '100%' }}
           mb={20}
         >
-          <Box width={{ base: '50%' }}>
+          <Box width={{ base: '100%', lg: '50%' }}>
             <Image
-              src="/media/green-ghost-phuket-cannabis-cup-2022.webp"
+              src="/media/green-ghost-the-first-phuket-cannabis-cup.webp"
               width={1264}
               height={600}
-              alt="Green Ghost - Phuket Cannabis Cup 2022"
+              alt="Green Ghost - The 1st Phuket Cannabis Cup"
             />
           </Box>
-          <Text
-            width={{ base: '50%' }}
-            as={'h3'}
-            fontSize={{ base: 24, lg: 30 }}
-            fontFamily={'vt323'}
-            px={4}
+          <Box
+            width={{ base: '100%', lg: '50%' }}
+            px={5}
+            py={{ base: 5, lg: 0 }}
             display={'flex'}
             flexDirection={'column'}
-            transition={'all .3s'}
+            fontFamily={'vt323'}
+            lineHeight={1}
           >
-            March 25th, Pramookkoo Resort, Kata Beach
-          </Text>
+            <Text
+              as={'h3'}
+              fontSize={{ base: 24, lg: 30 }}
+              _hover={{
+                color: 'ghostVerse.green.base',
+              }}
+            >
+              <Link
+                href="https://www.phuketcannabisassociation.com/news/the-1st-phuket-cannabis-cup.php"
+                title="Green Ghost - The 1st Phuket Cannabis Cup"
+                passHref
+              >
+                {' '}
+                March 25th, Pramookkoo Resort, Kata Beach
+              </Link>
+            </Text>
+            <Text
+              as={'h4'}
+              my={2}
+              color={'ghostVerse.blue.base'}
+              fontSize={{ base: 20, lg: 26 }}
+            >
+              Greenhouse
+            </Text>
+            <Text
+              as={'p'}
+              mb={2}
+              fontSize={{ base: 20, lg: 26 }}
+              display={'flex'}
+              flexDirection={'column'}
+            >
+              <Text
+                as={'span'}
+                fontFamily={'CubicFive12'}
+                fontSize={14}
+                color="ghostVerse.grey.base"
+              >
+                Winner
+              </Text>
+              <Box>
+                <Link
+                  href="https://mjbfarm.com/"
+                  title="Green Ghost - MJB FARM - Phuket Cannabis Cup"
+                  passHref
+                >
+                  <Text as={'span'} color={'ghostVerse.green.base'}>
+                    MJB
+                  </Text>
+                </Link>{' '}
+                - Strain GDP X LEMON TREE
+              </Box>
+            </Text>
+            <Text
+              as={'p'}
+              mb={2}
+              fontSize={{ base: 20, lg: 26 }}
+              display={'flex'}
+              flexDirection={'column'}
+            >
+              <Text
+                as={'span'}
+                fontFamily={'CubicFive12'}
+                fontSize={14}
+                color="ghostVerse.grey.base"
+              >
+                Runner-up
+              </Text>
+              <Box>
+                <Link
+                  href="https://thaigreenlab.com/"
+                  title="Green Ghost - GreenLab - Phuket Cannabis Cup"
+                  passHref
+                >
+                  <Text as={'span'} color={'ghostVerse.green.base'}>
+                    GREENLAB
+                  </Text>
+                </Link>{' '}
+                - Strain MANGO STICKY RICE
+              </Box>
+            </Text>
+            <Text
+              as={'h4'}
+              my={2}
+              color={'ghostVerse.blue.base'}
+              fontSize={{ base: 20, lg: 26 }}
+            >
+              {' indoor hybrid '}
+            </Text>
+            <Text
+              as={'p'}
+              mb={2}
+              fontSize={{ base: 20, lg: 26 }}
+              display={'flex'}
+              flexDirection={'column'}
+            >
+              <Text
+                as={'span'}
+                fontFamily={'CubicFive12'}
+                fontSize={14}
+                color="ghostVerse.grey.base"
+              >
+                Winner
+              </Text>
+              <Box>
+                <Link
+                  href="https://www.instagram.com/wonderfarm.th/"
+                  title="Green Ghost - WONDER FARM - Phuket Cannabis Cup"
+                  passHref
+                >
+                  <Text as={'span'} color={'ghostVerse.green.base'}>
+                    WONDER FARM
+                  </Text>
+                </Link>{' '}
+                - Strain DREAM FACTORY
+              </Box>
+            </Text>
+            <Text
+              as={'p'}
+              mb={2}
+              fontSize={{ base: 20, lg: 26 }}
+              display={'flex'}
+              flexDirection={'column'}
+            >
+              <Text
+                as={'span'}
+                fontFamily={'CubicFive12'}
+                fontSize={14}
+                color="ghostVerse.grey.base"
+              >
+                Runner-up
+              </Text>
+              <Box>
+                <Text as={'span'}>MOUNTAIN GROW</Text> - Strain OREO COOKIES
+              </Box>
+            </Text>
+            <Text
+              as={'h4'}
+              my={2}
+              color={'ghostVerse.blue.base'}
+              fontSize={{ base: 20, lg: 26 }}
+            >
+              {' indoor Sativa 70%+ '}
+            </Text>
+            <Text
+              as={'p'}
+              mb={2}
+              fontSize={{ base: 20, lg: 26 }}
+              display={'flex'}
+              flexDirection={'column'}
+            >
+              <Text
+                as={'span'}
+                fontFamily={'CubicFive12'}
+                fontSize={14}
+                color="ghostVerse.grey.base"
+              >
+                Winner
+              </Text>
+              <Box>
+                <Link
+                  href="https://www.facebook.com/candyztermtemphuket"
+                  title="Green Ghost - CANDY TERMTEMZ - Phuket Cannabis Cup"
+                  passHref
+                >
+                  <Text as={'span'} color={'ghostVerse.green.base'}>
+                    CANDY TERMTEMZ
+                  </Text>
+                </Link>{' '}
+                - Strain APPLE JELLY
+              </Box>
+            </Text>
+            <Text
+              as={'p'}
+              mb={2}
+              fontSize={{ base: 20, lg: 26 }}
+              display={'flex'}
+              flexDirection={'column'}
+            >
+              <Text
+                as={'span'}
+                fontFamily={'CubicFive12'}
+                fontSize={14}
+                color="ghostVerse.grey.base"
+              >
+                Runner-up
+              </Text>
+              <Box>
+                <Text as={'span'}>UNDERGROUND GROWER</Text> - Strain SSY7
+              </Box>
+            </Text>
+            <Text
+              as={'h4'}
+              my={2}
+              color={'ghostVerse.blue.base'}
+              fontSize={{ base: 20, lg: 26 }}
+            >
+              {' indoor Indica 70%+ '}
+            </Text>
+            <Text
+              as={'p'}
+              mb={2}
+              fontSize={{ base: 20, lg: 26 }}
+              display={'flex'}
+              flexDirection={'column'}
+            >
+              <Text
+                as={'span'}
+                fontFamily={'CubicFive12'}
+                fontSize={14}
+                color="ghostVerse.grey.base"
+              >
+                Winner
+              </Text>
+              <Box>
+                <Text as={'span'}>PB BIOMED</Text> - Strain BISCOTTI MINTS
+              </Box>
+            </Text>
+            <Text
+              as={'p'}
+              mb={2}
+              fontSize={{ base: 20, lg: 26 }}
+              display={'flex'}
+              flexDirection={'column'}
+            >
+              <Text
+                as={'span'}
+                fontFamily={'CubicFive12'}
+                fontSize={14}
+                color="ghostVerse.grey.base"
+              >
+                Runner-up
+              </Text>
+              <Box>
+                <Link
+                  href="https://www.taratera.com/"
+                  title="Green Ghost - กัญชาตราหมาดาว - Phuket Cannabis Cup"
+                  passHref
+                >
+                  <Text as={'span'} color={'ghostVerse.green.base'}>
+                    กัญชาตราหมาดาว
+                  </Text>
+                </Link>{' '}
+                - Strain DA FUNK
+              </Box>
+            </Text>
+          </Box>
         </Box>
         <Find />
       </MainLayout>
