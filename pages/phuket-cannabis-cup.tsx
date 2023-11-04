@@ -27,16 +27,16 @@ const CannabisCup: NextPage = () => {
         <title>Green Ghost - Phuket Cannabis Cup</title>
         <meta
           name="description"
-          content="Discover Green Ghost, the premier weed delivery service in Phuket. Buy high-quality weed products and enjoy convenient, reliable delivery right to your doorstep. Explore our wide selection and experience the best of Phuket's cannabis scene with Green Ghost."
+          content="Green Ghost Degen Weed Shop present a comprehensive guide to the upcoming Phuket Cannabis Cup! This page includes information about the event's schedule, location, and prize categories. It also includes a list of all the strains that win the Phulet cannabis cup in the greenhouse, indoor sativa, indica, and hybrid categories. Whether you're a cannabis connoisseur or just a curious spectator, be sure to check out Green Ghost's Phuket Cannabis Cup to learn everything you need to know about the event."
         />
         <meta property="og:title" content="Green Ghost - Phuket Cannabis Cup" />
         <meta
           property="og:description"
-          content="Discover Green Ghost, the premier weed delivery service in Phuket. Buy high-quality weed products and enjoy convenient, reliable delivery right to your doorstep. Explore our wide selection and experience the best of Phuket's cannabis scene with Green Ghost."
+          content="Green Ghost Degen Weed Shop present a comprehensive guide to the upcoming Phuket Cannabis Cup! This page includes information about the event's schedule, location, and prize categories. It also includes a list of all the strains that win the Phulet cannabis cup in the greenhouse, indoor sativa, indica, and hybrid categories. Whether you're a cannabis connoisseur or just a curious spectator, be sure to check out Green Ghost's Phuket Cannabis Cup to learn everything you need to know about the event."
         />
         <meta
           property="og:image"
-          content="https://green.gd/green-ghost-degen-weed-shop.png"
+          content="https://green.gd/green-ghost-the-second-phuket-cannabis-cup.webp"
         />
         <meta property="og:image:width" content="2400" />
         <meta property="og:image:height" content="1260" />
@@ -50,11 +50,11 @@ const CannabisCup: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Discover Green Ghost, the premier weed delivery service in Phuket. Buy high-quality weed products and enjoy convenient, reliable delivery right to your doorstep. Explore our wide selection and experience the best of Phuket's cannabis scene with Green Ghost."
+          content="Green Ghost Degen Weed Shop present a comprehensive guide to the upcoming Phuket Cannabis Cup! This page includes information about the event's schedule, location, and prize categories. It also includes a list of all the strains that win the Phulet cannabis cup in the greenhouse, indoor sativa, indica, and hybrid categories. Whether you're a cannabis connoisseur or just a curious spectator, be sure to check out Green Ghost's Phuket Cannabis Cup to learn everything you need to know about the event."
         />
         <meta
           name="twitter:image"
-          content="https://green.gd/green-ghost-degen-weed-shop.png"
+          content="https://green.gd/green-ghost-the-second-phuket-cannabis-cup.webp"
         />
         <meta
           name="twitter:url"
