@@ -293,7 +293,8 @@ export const StrainWeek = () => {
               <Box as={'span'} color={'ghostVerse.blue.base'}>
                 Pink Sunset
               </Box>
-            </Link>{' '}And{' '}
+            </Link>{' '}
+            And{' '}
             <Link
               href="/weed-shop/white-widow"
               title="Strain Sold Out - White Widow!"
