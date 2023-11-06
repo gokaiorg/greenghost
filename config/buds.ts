@@ -147,7 +147,7 @@ export const buds: Bud[] = [
   {
     slug: 'purple-queen',
     name: 'Purple Queen',
-    price: 600,
+    price: 500,
     dominance: 'Indica',
     indica: '75',
     sativa: '25',
@@ -395,7 +395,7 @@ export const buds: Bud[] = [
   {
     slug: 'white-widow',
     name: 'White Widow',
-    price: 500,
+    price: 1000,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -407,7 +407,7 @@ export const buds: Bud[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '18/06/2023',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'White Widow is undeniably one of the most renowned strains globally, originating from the Netherlands and meticulously bred by Green House Seeds. \n\n This well-balanced hybrid is the result of crossing a Brazilian sativa landrace with a resin-rich South Indian indica. \n\n Since its inception in the 1990s, White Widow has become a staple on the menu of Dutch coffee shops. Its distinctive buds are adorned with a glistening layer of crystal resin, serving as a forewarning of its potent effects. Upon consumption, a surge of euphoria and energy quickly takes hold, invigorating both conversation and creativity. The genetic legacy of White Widow has paved the way for other legendary strains like White Russian, White Rhino, and Blue Widow.',
