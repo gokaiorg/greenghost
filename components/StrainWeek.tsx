@@ -119,7 +119,7 @@ export const StrainWeek = () => {
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Mommy&apos;s Milk
+                Mommy's Milk
               </Box>
             </Link>{' '}
             strains now!
