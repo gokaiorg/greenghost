@@ -114,32 +114,12 @@ export const StrainWeek = () => {
           >
             Try our new{' '}
             <Link
-              href="/weed-shop/amnesia"
-              title="New weed Strain - Amnesia!"
+              href="/weed-shop/mommys-milk"
+              title="New weed Strain - Mommy's Milk!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Amnesia
-              </Box>
-            </Link>
-            ,{' '}
-            <Link
-              href="/weed-shop/sweet-zkittlez"
-              title="New weed Strain - Sweet Zkittlez!"
-              passHref
-            >
-              <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Sweet Zkittlez
-              </Box>
-            </Link>{' '}
-            and{' '}
-            <Link
-              href="/weed-shop/royal-runtz"
-              title="New weed Strain - Royal Runtz!"
-              passHref
-            >
-              <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Royal Runtz
+                Mommy's Milk
               </Box>
             </Link>{' '}
             strains now!
@@ -285,6 +265,16 @@ export const StrainWeek = () => {
             lineHeight={1}
           >
             Say goodbye to the{' '}
+            <Link
+              href="/weed-shop/forbidden-fruit"
+              title="Strain Sold Out - Fordidden Fruit!"
+              passHref
+            >
+              <Box as={'span'} color={'ghostVerse.blue.base'}>
+                Fordidden Fruit
+              </Box>
+            </Link>
+            ,{' '}
             <Link
               href="/weed-shop/pink-sunset"
               title="Strain Sold Out - Pink Sunset!"
