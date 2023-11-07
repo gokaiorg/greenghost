@@ -88,7 +88,7 @@ export const buds: Bud[] = [
   {
     slug: 'banana-daddy',
     name: 'Banana Daddy',
-    price: 999,
+    price: 1000,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -100,7 +100,7 @@ export const buds: Bud[] = [
     growerSlug: '/unknown',
     environment: 'Organic Indoor',
     harvest: '03/10/2023',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "With Banana Daddy, Ethos Genetics has successfully combined two fruity strains, Granddaddy Purp and Banana Hammock R1, to create an exceptional cannabis strain. The result is a visually stunning plant with large, dense, and dark purple buds that emit a delightful aroma of bubblegum and gas. \n\n Despite its high THC content, Banana Daddy provides a mellow, giggly high that is perfect for unwinding in the evening. This strain's relaxing effects are ideal for socializing and having fun with friends. \n\n If you're a fan of fruity strains and looking for a new strain to add to your collection, Banana Daddy is definitely worth trying. This strain is sure to impress with its unique terpene profile and relaxing effects. So, grab some Banana Daddy and enjoy a mellow evening with friends.",
@@ -117,7 +117,7 @@ export const buds: Bud[] = [
   {
     slug: 'amnesia-haze',
     name: 'Amnesia Haze',
-    price: 999,
+    price: 1000,
     dominance: 'Sativa',
     indica: '20',
     sativa: '80',
@@ -129,7 +129,7 @@ export const buds: Bud[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '10/08/2023',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Amnesia Haze is a unique sativa-dominant hybrid born from the crossbreeding of Jamaican and Laotian sativas with Afghan Hawaiian indica. With a sativa to indica ratio of 80:20, it's an ideal strain for daytime use and clear thinking. Boasting potent THC levels of over 22%, it offers relief from anxiety, depression, fatigue, ADHD, migraines, mood swings, and physical pain. However, its lower CBD content makes it less suitable for conditions treated with CBD, such as epilepsy. \n\n Prepare for a creative and euphoric high with Amnesia Haze, accompanied by a delightful boost in mood and a tendency to induce laughter. Its taste is reminiscent of fresh, fruity hash, complemented by a sweet and earthy aroma with subtle hints of spicy pepper. The buds are light green with darker brown strands, generously coated in trichomes, providing a visually appealing appearance. \n\n While Amnesia Haze is more prevalent in parts of Europe, it can also be found in select dispensaries across the United States, including Colorado, California, Washington State, Oregon, and Michigan. It's a strain that can cause dry mouth and red eyes, and some users have reported occasional experiences of paranoia and dizziness. Embraced by cannabis enthusiasts, Amnesia Haze has also gained popularity in the beautiful region of British Columbia.",
@@ -207,9 +207,38 @@ export const buds: Bud[] = [
     source: 'https://www.leafly.com/strains/gelato-runtz',
   },
   {
+    slug: 'mommys-milk',
+    name: 'Mommy’s Milk',
+    price: 999,
+    dominance: 'Sativa',
+    indica: '40',
+    sativa: '60',
+    THC: '23',
+    CBD: 'undefined',
+    effects: 'Uplifted, Creative, Focused',
+    relieves: 'Stress, Anxiety, Depression',
+    grower: 'Sweed Dreams',
+    growerSlug: '/sweed-dreams',
+    environment: 'Indoor',
+    harvest: '12/10/2023',
+    quantity: 50,
+    origin: 'Krabi',
+    description:
+      "Mommy's Milk is a sativa-dominant hybrid strain from Exotic Genetix. It is a cross between the potent sativa-dominant hybrid Bahama Mama and the hybrid strain Cereal Milk. Mommy's Milk is known for its delicious flavor and aroma, which are often described as sweet and milky with hints of vanilla, honey, and citrus. It produces a buzzy and uplifting high that is perfect for daytime use. This strain can help to improve mood, focus, and creativity. It can also be used to relieve stress, anxiety, and depression. \n\n Mommy's Milk plants produce dense, sticky buds that are covered in trichomes. The buds are typically light green in color with orange and purple pistils. Mommy's Milk is a relatively easy strain to grow, making it a good choice for both beginners and experienced growers. It can be grown indoors or outdoors, but it prefers a warm and sunny climate. Mommy's Milk plants flower for 8-9 weeks and can produce high yields. \n\n Overall, Mommy's Milk is a great strain for both recreational and medical users. It offers a delicious flavor, a potent high, and a variety of potential medical benefits. If you are looking for a sativa-dominant hybrid that can help you to feel uplifted, creative, and focused, then Mommy's Milk is a great choice.",
+    descSeo:
+      "Mommy's Milk is a sativa-dominant hybrid strain from Exotic Genetix. It is a cross between the potent sativa-dominant hybrid Bahama Mama and the hybrid strain Cereal Milk. Mommy's Milk is known for its delicious flavor and aroma, which are often described as sweet and milky with hints of vanilla, honey, and citrus. It produces a buzzy and uplifting high that is perfect for daytime use. This strain can help to improve mood, focus, and creativity. It can also be used to relieve stress, anxiety, and depression.",
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-mommys-milk-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mommys-milk-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mommys-milk-cover.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Mommy’s Milk',
+    source: 'https://www.exoticgenetix.com/product/mommys-milk/',
+  },
+  {
     slug: 'forbidden-fruit',
     name: 'Forbidden Fruit',
-    price: 700,
+    price: 999,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -221,7 +250,7 @@ export const buds: Bud[] = [
     growerSlug: '/sweed-dreams',
     environment: 'Indoor',
     harvest: '10/14/2023',
-    quantity: 33,
+    quantity: 50,
     origin: 'Krabi',
     description:
       "Forbidden Fruit, a tantalizing cannabis strain, emerges from the enchanting genetic blend of Cherry Pie and Tangie. Its visual allure is evident in its dense, purple-tinged buds, complemented by dark green leaves and vibrant orange hairs. The bouquet of aromas is a harmonious fusion of Cherry Pie's sweet, musky cherry notes entwined with Tangie's bold, tropical flavors. Hints of pine, mango, and passionfruit candy add further layers to this aromatic masterpiece. \n\n Upon consumption, Forbidden Fruit unveils its potent indica characteristics that hit with precision, starting with a cerebral euphoria that settles gently into the body. This strain's deep physical relaxation and mental tranquility make it an ideal choice for alleviating minor physical discomfort and shedding the burdens of stress. Whether you seek solace after a long day or a respite from life's demands, Forbidden Fruit offers a serene escape. \n\n Forbidden Fruit is a testament to the artistry of cannabis breeding, delivering a delightful blend of flavors and effects. Its ability to soothe both body and mind makes it a cherished choice among cannabis connoisseurs seeking a moment of tranquility and relief. With its remarkable terpene profile and seductive appearance, Forbidden Fruit stands as a captivating option for those in pursuit of relaxation and respite in the world of cannabis.",
@@ -1094,7 +1123,7 @@ export const buds: Bud[] = [
   {
     slug: 'jack-herer',
     name: 'Jack Herer',
-    price: 999,
+    price: 1000,
     dominance: 'Sativa',
     indica: '20',
     sativa: '80',
@@ -1106,7 +1135,7 @@ export const buds: Bud[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     harvest: '11/06/2023',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Jack Herer, also known as "JH," "The Jack," "Premium Jack," and "Platinum Jack" is a sativa-dominant hybrid marijuana strain named after the marijuana activist and author of The Emperor Wears No Clothes. \n\n Jack Herer is a balanced hybrid strain with a high THC content that produces a mixed head and body effect. It\'s known to provide a sense of relaxation and is often enjoyed in the evening to ease stress. \n\n Jack Herer was first created in the Netherlands in the mid-1990s and was later distributed by Dutch pharmacies as a recognized medical-grade strain. Its spicy, pine-scented aroma has won numerous awards for its quality and potency.',
