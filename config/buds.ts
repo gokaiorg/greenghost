@@ -208,7 +208,7 @@ export const buds: Bud[] = [
   },
   {
     slug: 'mommys-milk',
-    name: 'Mommy&apos;s Milk',
+    name: "Mommy's Milk",
     price: 999,
     dominance: 'Sativa',
     indica: '40',
@@ -230,7 +230,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-mommys-milk-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-mommys-milk-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-mommys-milk-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mommys-milk-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Mommy&apos;s Milk',
     source: 'https://www.exoticgenetix.com/product/mommys-milk/',
