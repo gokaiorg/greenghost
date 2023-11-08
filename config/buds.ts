@@ -209,7 +209,7 @@ export const buds: Bud[] = [
   {
     slug: 'mommys-milk',
     name: "Mommy's Milk",
-    price: 999,
+    price: 700,
     dominance: 'Sativa',
     indica: '40',
     sativa: '60',
@@ -221,16 +221,18 @@ export const buds: Bud[] = [
     growerSlug: '/sweed-dreams',
     environment: 'Indoor',
     harvest: '12/10/2023',
-    quantity: 50,
+    quantity: 45,
     origin: 'Krabi',
     description:
       "Mommy's Milk is a sativa-dominant hybrid strain from Exotic Genetix. It is a cross between the potent sativa-dominant hybrid Bahama Mama and the hybrid strain Cereal Milk. Mommy's Milk is known for its delicious flavor and aroma, which are often described as sweet and milky with hints of vanilla, honey, and citrus. It produces a buzzy and uplifting high that is perfect for daytime use. This strain can help to improve mood, focus, and creativity. It can also be used to relieve stress, anxiety, and depression. \n\n Mommy's Milk plants produce dense, sticky buds that are covered in trichomes. The buds are typically light green in color with orange and purple pistils. Mommy's Milk is a relatively easy strain to grow, making it a good choice for both beginners and experienced growers. It can be grown indoors or outdoors, but it prefers a warm and sunny climate. Mommy's Milk plants flower for 8-9 weeks and can produce high yields. \n\n Overall, Mommy's Milk is a great strain for both recreational and medical users. It offers a delicious flavor, a potent high, and a variety of potential medical benefits. If you are looking for a sativa-dominant hybrid that can help you to feel uplifted, creative, and focused, then Mommy's Milk is a great choice.",
     descSeo:
       "Mommy's Milk is a sativa-dominant hybrid strain from Exotic Genetix. It is a cross between the potent sativa-dominant hybrid Bahama Mama and the hybrid strain Cereal Milk. Mommy's Milk is known for its delicious flavor and aroma, which are often described as sweet and milky with hints of vanilla, honey, and citrus. It produces a buzzy and uplifting high that is perfect for daytime use. This strain can help to improve mood, focus, and creativity. It can also be used to relieve stress, anxiety, and depression.",
     images: [
-      '/media/green-ghost-degen-weed-shop-strain-mommys-milk-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mommys-milk-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-mommys-milk-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-mommys-milk-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mommys-milk-bud-02.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mommys-milk-bud-03.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Mommy&apos;s Milk',
     source: 'https://www.exoticgenetix.com/product/mommys-milk/',
