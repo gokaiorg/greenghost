@@ -47,7 +47,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-cbd-auto-tune-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-cbd-auto-tune-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-cbd-auto-tune-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-cbd-auto-tune-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain CBD Auto Tune',
     source: 'undefined',
@@ -76,7 +76,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-phantom-cookies-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-phantom-cookies-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-phantom-cookies-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-phantom-cookies-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Phantom Cookies',
     source: 'https://www.leafly.com/strains/phantom-cookies',
@@ -105,7 +105,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-bubble-zkittlez-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-bubble-zkittlez-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-bubble-zkittlez-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-bubble-zkittlez-qr-code.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Bubble Zkittlez',
     source: 'undefined',
