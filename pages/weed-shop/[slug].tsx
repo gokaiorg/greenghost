@@ -145,7 +145,7 @@ export default function BudPage({ bud }: BudPageProps) {
                   {bud.THC}%
                 </Text>
               </BoxInfoLabel>
-              {bud.CBD !== 'undefined' && (
+              {bud.CBD !== '0' && (
                 <BoxInfoLabel>
                   <BoxInfoLabelTitle title="CBD" />
                   <Text color={'ghostVerse.green.base'}>{bud.CBD}%</Text>

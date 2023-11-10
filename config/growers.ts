@@ -71,6 +71,18 @@ export const growers: Grower[] = [
     twitter: 'https://twitter.com/Sweed_DreamsNFT',
     telegram: '0',
   },
+  {
+    slug: 'cbd-cannabiz-farm',
+    name: 'CBD Cannabiz farm',
+    description:
+      'Real professional farmers who love and understand the nature of trees well with more than 50 years of experience in agricultural business.',
+    logo: '/media/green-ghost-weed-grower-cbd-cannabiz-farm.webp',
+    website: 'https://www.cbdcannabizfarm.com',
+    facebook: 'https://www.facebook.com/cbdcannabiz/',
+    instagram: '0',
+    twitter: '0',
+    telegram: '0',
+  },
 ];
 
 export function getGrowerBySlug(slug: string): Grower | undefined {
