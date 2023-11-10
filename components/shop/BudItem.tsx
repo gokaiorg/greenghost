@@ -122,7 +122,7 @@ export const BudItem = ({ bud }: BudItemProps) => {
                 mb={1}
                 ml={'auto'}
               >
-                {bud.THC !== 'undefined' && (
+                {bud.THC >= bud.CBD && (
                   <Box display={'flex'} marginRight={2} flexDirection={'row'}>
                     THC
                     <Box
@@ -133,6 +133,20 @@ export const BudItem = ({ bud }: BudItemProps) => {
                       alignItems={'baseline'}
                     >
                       {bud.THC}%
+                    </Box>
+                  </Box>
+                )}
+                {bud.THC <= bud.CBD && bud.CBD !== '0' && (
+                  <Box display={'flex'} marginRight={2} flexDirection={'row'}>
+                    CBD
+                    <Box
+                      marginLeft={2}
+                      color={'ghostVerse.green.base'}
+                      display={'flex'}
+                      flexDirection={'row'}
+                      alignItems={'baseline'}
+                    >
+                      {bud.CBD}%
                     </Box>
                   </Box>
                 )}
