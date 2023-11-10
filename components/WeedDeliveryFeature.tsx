@@ -90,7 +90,7 @@ export const WeedDeliveryFeature = () => {
             />
           </svg>
         </Box>
-        Everyday from 10am to midnight
+        Everyday day from 8am to 2am
       </Text>
     </Box>
   );
