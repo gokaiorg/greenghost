@@ -16,7 +16,7 @@ export const shops: Shop[] = [
   {
     slug: 'karon',
     name: 'Degen Weed Shop in Karon',
-    hours: 'Monday/Sunday 14h-00h.',
+    hours: 'Monday/Saturday 10h-00h.',
     address: '452 Patak Road, Karon, Mueang Phuket District, Phuket 83100',
     addresLink: 'https://goo.gl/maps/2mrscgVuBc73KRot8',
     reviewLink: 'https://g.page/r/CcPCrFf7RfRNEBM/review',
@@ -56,15 +56,15 @@ export const shops: Shop[] = [
   {
     slug: 'rawai',
     name: 'Degen Weed Shop in Rawai',
-    hours: 'Monday/Sunday 16h-00h. Close on Saturday.',
-    address: '69/53 Soi Saiyuan, Rawai, Mueang Phuket District, Phuket 83100',
+    hours: 'Monday/Sunday. 8h-2h',
+    address: '12/16 Soi Nam Jai, Rawai, Mueang Phuket District, Phuket 83100',
     addresLink: 'https://goo.gl/maps/NRJB7PM1DsQSCHXW8',
     reviewLink: 'https://g.page/r/CZ-x7RFAO5t4EBE/review',
-    details: 'My Weed Partner Shop. Same awesome weed. Rooftop ...',
+    details: 'Member HQ. Delivery. Drive-Thru ...',
     description:
-      "your cannabis sanctuary in the heart of Rawai's lively Soi Saiyuan. Nestled amidst the bustling nightlife of lady bars and just a stone's throw away from the pristine shores of Nai Harn Beach, our shop offers a unique and elevated cannabis experience. \n\n At Green Ghost Degen in Rawai, we specialize in providing an extensive selection of cannabis products, from premium buds to exclusive strains. But what sets us apart is our rooftop oasis, a haven for stoners looking to enjoy their cannabis with panoramic views of the Rawai landscape. \n\n After exploring the vibrant nightlife of Soi Saiyuan, unwind with us on our rooftop, where you can savor your favorite cannabis products in a relaxed and picturesque setting. It's the perfect spot to connect with friends, take in the beautiful surroundings, and elevate your experience to new heights. \n\n Our knowledgeable and friendly staff are here to guide you through our carefully curated offerings, ensuring you find the perfect match for your cannabis preferences. And for those who seek the convenience of delivery or pick-up, we've got you covered. \n\n Green Ghost Degen Weed Shop is not just a destination; it's an experience. We invite you to immerse yourself in the Rawai lifestyle, where tradition meets modernity. Whether you're a seasoned connoisseur or new to the world of cannabis, our shop in Soi Saiyuan is your gateway to an unforgettable journey. \n\n Join us at Green Ghost Degen Weed Shop in Rawai, where we combine the excitement of the nightlife, the tranquility of the beach, and the joy of cannabis on our rooftop.",
+      "Welcome to the exclusive realm of Green Ghost Degen Weed Shop in Rawai, an avant-garde cannabis destination like no other. Our sanctuary, reserved solely for esteemed members, transcends traditional dispensary experiences. Say goodbye to in-store shopping hassles; at Green Ghost Degen, we redefine convenience through our seamless delivery and drive-thru services. \n\n As a member, you'll unlock a curated selection of top-tier cannabis products, carefully curated to meet the diverse preferences of our distinguished clientele. Embrace the discreet charm of our drive-thru, where efficiency meets luxury, ensuring you get what you need without leaving the comfort of your vehicle. \n\n Green Ghost Degen Weed Shop in Rawai isn't just a dispensary; it's a lifestyle crafted for those who value both exclusivity and efficiency. Join us on a journey where quality, discretion, and convenience converge, setting a new standard for cannabis indulgence in Rawai.",
     descSeo:
-      "your cannabis sanctuary in the heart of Rawai's lively Soi Saiyuan. Nestled amidst the bustling nightlife of lady bars and just a stone's throw away from the pristine shores of Nai Harn Beach, our shop offers a unique and elevated cannabis experience.",
+      'Welcome to the exclusive realm of Green Ghost Degen Weed Shop in Rawai, an avant-garde cannabis destination like no other. Our sanctuary, reserved solely for esteemed members, transcends traditional dispensary experiences. Say goodbye to in-store shopping hassles; at Green Ghost Degen, we redefine convenience through our seamless delivery and drive-thru services.',
     mapLink:
       'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15811.90431127206!2d98.3203122!3d7.7923573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaa82f76285212d49%3A0x789b3b4011edb19f!2sGreen%20Ghost%20%7C%20Degen%20Weed%20Shop%20Rawai!5e0!3m2!1sen!2sth!4v1682822659232!5m2!1sen!2sth',
     images: [

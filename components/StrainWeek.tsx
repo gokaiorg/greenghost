@@ -121,6 +121,36 @@ export const StrainWeek = () => {
               <Box as={'span'} color={'ghostVerse.blue.base'}>
                 {"Mommy's Milk"}
               </Box>
+            </Link>
+            ,{' '}
+            <Link
+              href="/weed-shop/bubble-zkittlez"
+              title="New weed Strain - Bubble Zkittlez!"
+              passHref
+            >
+              <Box as={'span'} color={'ghostVerse.blue.base'}>
+                {'Bubble Zkittlez'}
+              </Box>
+            </Link>
+            ,{' '}
+            <Link
+              href="/weed-shop/phantom-cookies"
+              title="New weed Strain - Phantom Cookies!"
+              passHref
+            >
+              <Box as={'span'} color={'ghostVerse.blue.base'}>
+                {'Phantom Cookies'}
+              </Box>
+            </Link>{' '}
+            and{' '}
+            <Link
+              href="/weed-shop/cbd-auto-tune"
+              title="New weed Strain - CBD Auto Tune!"
+              passHref
+            >
+              <Box as={'span'} color={'ghostVerse.blue.base'}>
+                {'CBD Auto Tune'}
+              </Box>
             </Link>{' '}
             strains now!
           </Text>
