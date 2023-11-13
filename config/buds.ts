@@ -92,7 +92,7 @@ export const buds: Bud[] = [
     CBD: '0',
     effects: 'Euphoric, Uplifted, Talktative',
     relieves: 'Stress, Lack of appetite, Cramps',
-    grower: 'Unknown',
+    grower: 'Buddy Bud Weed',
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/10/2023',

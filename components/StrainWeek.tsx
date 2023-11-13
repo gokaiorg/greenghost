@@ -133,15 +133,6 @@ export const StrainWeek = () => {
               </Box>
             </Link>
             ,{' '}
-            <Link
-              href="/weed-shop/phantom-cookies"
-              title="New weed Strain - Phantom Cookies!"
-              passHref
-            >
-              <Box as={'span'} color={'ghostVerse.blue.base'}>
-                {'Phantom Cookies'}
-              </Box>
-            </Link>{' '}
             and{' '}
             <Link
               href="/weed-shop/cbd-auto-tune"
