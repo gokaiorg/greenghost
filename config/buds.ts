@@ -26,7 +26,7 @@ export const buds: Bud[] = [
   {
     slug: 'cbd-auto-tune',
     name: 'CBD Auto tune',
-    price: 999,
+    price: 200,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -55,7 +55,7 @@ export const buds: Bud[] = [
   {
     slug: 'phantom-cookies',
     name: 'Phantom Cookies',
-    price: 999,
+    price: 1000,
     dominance: 'Sativa',
     indica: '30',
     sativa: '70',
@@ -67,7 +67,7 @@ export const buds: Bud[] = [
     growerSlug: '/cbd-cannabiz-farm',
     environment: 'Indoor',
     harvest: '23/10/2023',
-    quantity: 42,
+    quantity: 0,
     origin: 'Surat Thani',
     description:
       "Step into the enchanting world of Phantom Cookies, a sativa-dominant hybrid hailing from the hills of Northern California. This exquisite strain is a product of the harmonious union between the flavorful Cherry Pie and the resin-rich Granddaddy Purple, resulting in a cannabis masterpiece. \n\n Phantom Cookies mesmerizes with its buds adorned in a tapestry of green and purple hues, delicately coated with a crystalline layer of trichomes. Electric orange hairs sprout from this cannabis canvas, creating a visually stunning and potent package. \n\n Engage your senses with Phantom Cookies' intricate aroma, where earthiness and roasted nuts intertwine with sweeter notes of grape and berry. The fragrance sets the stage for what comes next—a symphony of effects that starts with a euphoric surge, awakening the mind to new realms of creativity and happiness.",
@@ -84,7 +84,7 @@ export const buds: Bud[] = [
   {
     slug: 'bubble-zkittlez',
     name: 'Bubble Zkittlez',
-    price: 999,
+    price: 400,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -418,7 +418,7 @@ export const buds: Bud[] = [
   {
     slug: 'sweet-zkittlez',
     name: 'Sweet Zkittlez',
-    price: 600,
+    price: 999,
     dominance: 'Indica',
     indica: '80',
     sativa: '20',
