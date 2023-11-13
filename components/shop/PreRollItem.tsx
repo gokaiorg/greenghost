@@ -85,10 +85,10 @@ export const PreRollItem = ({ bud }: PreRollItemProps) => {
                 mb={1}
                 mr={{ base: 4, md: 'auto' }}
               >
-                {bud.THC !== 'undefined' && (
-                  <Box display={'flex'} mr={2} flexDirection={'row'}>
+                {bud.THC >= bud.CBD && (
+                  <Box display={'flex'} marginRight={2} flexDirection={'row'}>
                     THC
-                    <Text
+                    <Box
                       marginLeft={2}
                       color={'ghostVerse.green.base'}
                       display={'flex'}
@@ -96,7 +96,21 @@ export const PreRollItem = ({ bud }: PreRollItemProps) => {
                       alignItems={'baseline'}
                     >
                       {bud.THC}%
-                    </Text>
+                    </Box>
+                  </Box>
+                )}
+                {bud.THC <= bud.CBD && bud.CBD !== '0' && (
+                  <Box display={'flex'} marginRight={2} flexDirection={'row'}>
+                    CBD
+                    <Box
+                      marginLeft={2}
+                      color={'ghostVerse.green.base'}
+                      display={'flex'}
+                      flexDirection={'row'}
+                      alignItems={'baseline'}
+                    >
+                      {bud.CBD}%
+                    </Box>
                   </Box>
                 )}
               </Box>
