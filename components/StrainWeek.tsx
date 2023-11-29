@@ -132,8 +132,7 @@ export const StrainWeek = () => {
                 {'Bubble Zkittlez'}
               </Box>
             </Link>
-            ,{' '}
-            and{' '}
+            , and{' '}
             <Link
               href="/weed-shop/cbd-auto-tune"
               title="New weed Strain - CBD Auto Tune!"
@@ -287,22 +286,12 @@ export const StrainWeek = () => {
           >
             Say goodbye to the{' '}
             <Link
-              href="/weed-shop/pink-sunset"
-              title="Strain Sold Out - Pink Sunset!"
+              href="/weed-shop/amnesia"
+              title="Strain Sold Out - Amnesia!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Pink Sunset
-              </Box>
-            </Link>{' '}
-            And{' '}
-            <Link
-              href="/weed-shop/white-widow"
-              title="Strain Sold Out - White Widow!"
-              passHref
-            >
-              <Box as={'span'} color={'ghostVerse.blue.base'}>
-                White Widow
+                Amnesia
               </Box>
             </Link>
             . We&apos;ll miss you...
