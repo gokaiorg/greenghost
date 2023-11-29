@@ -144,7 +144,7 @@ export const buds: Bud[] = [
   {
     slug: 'green-gelato',
     name: 'Green Gelato',
-    price: 500,
+    price: 400,
     dominance: 'Indica',
     indica: '55',
     sativa: '45',
@@ -175,7 +175,7 @@ export const buds: Bud[] = [
   {
     slug: 'amnesia',
     name: 'Amnesia',
-    price: 300,
+    price: 999,
     dominance: 'Sativa',
     indica: '30',
     sativa: '70',
@@ -265,7 +265,7 @@ export const buds: Bud[] = [
   {
     slug: 'gelato-runtz',
     name: 'Gelato Runtz',
-    price: 600,
+    price: 500,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -296,7 +296,7 @@ export const buds: Bud[] = [
   {
     slug: 'purple-queen',
     name: 'Purple Queen',
-    price: 500,
+    price: 400,
     dominance: 'Indica',
     indica: '75',
     sativa: '25',
@@ -449,7 +449,7 @@ export const buds: Bud[] = [
   {
     slug: 'hulkberry',
     name: 'Hulkberry',
-    price: 400,
+    price: 300,
     dominance: 'Sativa',
     indica: '35',
     sativa: '65',
