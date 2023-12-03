@@ -91,7 +91,8 @@ const CannabisCup: NextPage = () => {
           fontSize={{ base: 24, lg: 30 }}
           mb={10}
         >
-          Green Ghost voted 30th best weed shop in Thailand out of almost 640 participants!
+          Green Ghost voted 30th best weed shop in Thailand out of almost 640
+          participants!
           <br />
           <Link
             href="https://weed.th/best-dispensaries-in-thailand"

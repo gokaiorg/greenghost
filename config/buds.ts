@@ -357,7 +357,7 @@ export const buds: Bud[] = [
   },
   {
     slug: 'next-level',
-    name: "Next Level",
+    name: 'Next Level',
     price: 700,
     dominance: 'Sativa',
     indica: '40',
@@ -375,7 +375,7 @@ export const buds: Bud[] = [
     description:
       "Emerging from the esteemed lineage of Kushco OG and Scotty2hotty, Next Level is a sativa-dominant hybrid strain that elevates the cannabis experience to new heights. With a 60% sativa and 40% indica balance, Next Level delivers a potent cerebral high accompanied by a soothing indica undercurrent, making it a versatile strain suitable for both daytime focus and nighttime relaxation. \n\n Bred by the renowned Exotic Genetix, Next Level boasts an impressive THC content that typically ranges between 22% and 27%, making it a strain best suited for experienced cannabis consumers. Its terpene profile is dominated by myrcene, the terpene responsible for the strain's relaxing properties, while hints of caryophyllene and limonene contribute to its overall flavor profile and therapeutic effects. \n\n Upon consumption, Next Level swiftly ushers in a wave of cerebral invigoration, sharpening mental clarity, enhancing creativity, and fostering a sense of euphoria. The indica influence, however, gently counterbalances the sativa effects, providing a soothing undercurrent of relaxation that eases tension and promotes calmness. This unique blend of effects makes Next Level a well-rounded strain, suitable for a variety of activities, from engaging in creative pursuits to enjoying social gatherings or simply unwinding after a long day.",
     descSeo:
-      "Emerging from the esteemed lineage of Kushco OG and Scotty2hotty, Next Level is a sativa-dominant hybrid strain that elevates the cannabis experience to new heights. With a 60% sativa and 40% indica balance, Next Level delivers a potent cerebral high accompanied by a soothing indica undercurrent, making it a versatile strain suitable for both daytime focus and nighttime relaxation.",
+      'Emerging from the esteemed lineage of Kushco OG and Scotty2hotty, Next Level is a sativa-dominant hybrid strain that elevates the cannabis experience to new heights. With a 60% sativa and 40% indica balance, Next Level delivers a potent cerebral high accompanied by a soothing indica undercurrent, making it a versatile strain suitable for both daytime focus and nighttime relaxation.',
     images: [
       '/media/green-ghost-degen-weed-shop-strain-next-level-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-next-level-cover.webp',
@@ -383,7 +383,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-next-level-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-next-level-cover.webp',
     ],
-    imgDesc: "Green Ghost - Degen Weed Shop - Strain Next Level",
+    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Next Level',
     source: 'https://www.leafly.com/strains/next-level',
   },
   {
@@ -466,7 +466,7 @@ export const buds: Bud[] = [
     description:
       "Emerging from the fusion of Biscotti and Rainbow Chip, Scotty 2 Hotty is an indica-dominant hybrid strain that delivers a potent blend of relaxation and euphoria. With its tightly-packed olive and fern green buds, Scotty 2 Hotty embodies the essence of its Cookies family lineage, offering a rich aroma and a captivating flavor profile. \n\n The effects of Scotty 2 Hotty are as diverse as its terpene profile. Its indica dominance shines through in its ability to induce a state of deep relaxation, easing tension and promoting a sense of tranquility. Simultaneously, the strain's sativa influence sparks a surge of euphoria, uplifting the mood and fostering a sense of well-being. \n\n Scotty 2 Hotty's terpene profile, dominated by caryophyllene, contributes significantly to its effects. Caryophyllene, known for its anti-inflammatory and analgesic properties, enhances the strain's relaxing effects while also alleviating pain. The presence of myrcene, a terpene associated with sedation, further complements the strain's indica-leaning effects.",
     descSeo:
-      "Emerging from the fusion of Biscotti and Rainbow Chip, Scotty 2 Hotty is an indica-dominant hybrid strain that delivers a potent blend of relaxation and euphoria. With its tightly-packed olive and fern green buds, Scotty 2 Hotty embodies the essence of its Cookies family lineage, offering a rich aroma and a captivating flavor profile.",
+      'Emerging from the fusion of Biscotti and Rainbow Chip, Scotty 2 Hotty is an indica-dominant hybrid strain that delivers a potent blend of relaxation and euphoria. With its tightly-packed olive and fern green buds, Scotty 2 Hotty embodies the essence of its Cookies family lineage, offering a rich aroma and a captivating flavor profile.',
     images: [
       '/media/green-ghost-degen-weed-shop-strain-scotty-2-hotty-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-scotty-2-hotty-cover.webp',
