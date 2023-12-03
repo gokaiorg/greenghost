@@ -119,7 +119,7 @@ export const StrainWeek = () => {
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                {"Next Level"}
+                {'Next Level'}
               </Box>
             </Link>
             ,{' '}
@@ -291,7 +291,7 @@ export const StrainWeek = () => {
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Mommy's Milk
+                {"Mommy's Milk"}
               </Box>
             </Link>
             . We&apos;ll miss you...
