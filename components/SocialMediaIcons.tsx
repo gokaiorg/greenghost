@@ -116,7 +116,7 @@ export const SocialMediaIcons = () => {
         </Box>
         <Box bgColor={'black'} borderRadius={'100%'}>
           <SocialIcon
-            url="https://twitter.com/GokaiLabs"
+            url="https://twitter.com/greenghostdegen"
             bgColor={'#4cfd27'}
             style={{ width: 40, height: 40 }}
             title="Follow Us on Twitter"

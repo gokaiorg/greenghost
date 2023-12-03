@@ -84,7 +84,7 @@ export const buds: Bud[] = [
   {
     slug: 'bubble-zkittlez',
     name: 'Bubble Zkittlez',
-    price: 600,
+    price: 700,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -113,7 +113,7 @@ export const buds: Bud[] = [
   {
     slug: 'royal-runtz',
     name: 'Royal Runtz',
-    price: 300,
+    price: 1000,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -125,7 +125,7 @@ export const buds: Bud[] = [
     growerSlug: '/ohigho',
     environment: 'Organic Indoor',
     harvest: '22/07/2023',
-    quantity: 40,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Royal Runtz stands as a remarkable hybrid cannabis strain resulting from the intricate genetics of Gelato and Zkittlez. This distinguished USA-bred variety boasts an unparalleled blend of flavors and fragrances that truly set it apart in the world of cannabis. With an impressive THC content of 27%, Royal Runtz is primarily recommended for experienced cannabis enthusiasts who seek a robust and potent high. \n\n As attested by Leafly customers, its effects include profound happiness, relaxation, and euphoria. Moreover, many medical marijuana patients turn to Royal Runtz to alleviate symptoms associated with pain, insomnia, and loss of appetite. Crafted by the esteemed Royal Queen Seeds, this strain entices connoisseurs with its delightful flavor profile, encompassing sweet, fruity, and citrusy notes. \n\n The dominant terpene, limonene, not only enhances mood but also possesses anti-inflammatory properties. On average, Royal Runtz commands a price range of $50-$70 per eighth, reflecting its rarity and high demand. Its dense and frosty buds, adorned with vibrant orange hairs and hints of purple, are a sight to behold. The strain's aroma is a delightful fusion of sweetness, fruitiness, with subtle undertones of cream and candy.",
@@ -296,7 +296,7 @@ export const buds: Bud[] = [
   {
     slug: 'purple-queen',
     name: 'Purple Queen',
-    price: 400,
+    price: 600,
     dominance: 'Indica',
     indica: '75',
     sativa: '25',
@@ -327,7 +327,7 @@ export const buds: Bud[] = [
   {
     slug: 'mommys-milk',
     name: "Mommy's Milk",
-    price: 700,
+    price: 800,
     dominance: 'Sativa',
     indica: '40',
     sativa: '60',

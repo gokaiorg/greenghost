@@ -91,16 +91,15 @@ const CannabisCup: NextPage = () => {
           fontSize={{ base: 24, lg: 30 }}
           mb={10}
         >
-          Green Ghost Degen Weed Shop is up for Best Dispensaries in Thailand,
-          and we need your help to win!
+          Green Ghost voted 30th best weed shop in Thailand out of almost 640 participants!
           <br />
           <Link
-            href="https://weed.th/best-dispensaries-in-thailand/vote/fe835e3b-d043-4672-af43-8cc039aa013b"
+            href="https://weed.th/best-dispensaries-in-thailand"
             title="Green Ghost Degen Weed Shop - Best Dispensary in Thailand"
             passHref
           >
             <Text as={'span'} color={'ghostVerse.green.base'}>
-              Vote for us today!
+              Congratulation to all
             </Text>
           </Link>
         </Text>
