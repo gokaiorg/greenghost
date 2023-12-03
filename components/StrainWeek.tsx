@@ -114,12 +114,12 @@ export const StrainWeek = () => {
           >
             Try our new{' '}
             <Link
-              href="/weed-shop/mommys-milk"
-              title="New weed Strain - Mommy's Milk!"
+              href="/weed-shop/next-level"
+              title="New weed Strain - Next Level!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                {"Mommy's Milk"}
+                {"Next Level"}
               </Box>
             </Link>
             ,{' '}
@@ -134,12 +134,12 @@ export const StrainWeek = () => {
             </Link>
             , and{' '}
             <Link
-              href="/weed-shop/cbd-auto-tune"
-              title="New weed Strain - CBD Auto Tune!"
+              href="/weed-shop/scotty-2-hotty"
+              title="New weed Strain - Scotty 2 Hotty!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                {'CBD Auto Tune'}
+                {'Scotty 2 Hotty'}
               </Box>
             </Link>{' '}
             strains now!
@@ -286,12 +286,12 @@ export const StrainWeek = () => {
           >
             Say goodbye to the{' '}
             <Link
-              href="/weed-shop/amnesia"
-              title="Strain Sold Out - Amnesia!"
+              href="/weed-shop/mommys-milk"
+              title="Strain Sold Out - Mommy's Milk!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Amnesia
+                Mommy's Milk
               </Box>
             </Link>
             . We&apos;ll miss you...
