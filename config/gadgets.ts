@@ -68,7 +68,7 @@ export const gadgets: Gadget[] = [
   {
     slug: 'clipper-lighter',
     name: 'Clipper Lighter',
-    price: 35,
+    price: 50,
     packaging: 'Reusable',
     quantity: 22,
     description:
