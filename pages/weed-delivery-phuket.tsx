@@ -24,14 +24,14 @@ const WeedDelivery: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Weed Delivery Phuket</title>
+        <title>Green Ghost 🌿👻 Weed Delivery Phuket</title>
         <meta
           name="description"
           content="Discover Green Ghost, the premier weed delivery service in Phuket. Buy high-quality weed products and enjoy convenient, reliable delivery right to your doorstep. Explore our wide selection and experience the best of Phuket's cannabis scene with Green Ghost."
         />
         <meta
           property="og:title"
-          content="Green Ghost - Weed Delivery Phuket"
+          content="Green Ghost 🌿👻 Weed Delivery Phuket"
         />
         <meta
           property="og:description"
@@ -49,7 +49,7 @@ const WeedDelivery: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Ghost - Weed Delivery Phuket"
+          content="Green Ghost 🌿👻 Weed Delivery Phuket"
         />
         <meta
           name="twitter:description"

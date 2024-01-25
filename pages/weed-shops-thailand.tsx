@@ -12,14 +12,14 @@ const CannabisShop: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Thailand Weed Shops Selection</title>
+        <title>Green Ghost 🌿👻 Thailand Weed Shops Selection</title>
         <meta
           name="description"
           content="Looking for the best cannabis shops in Thailand? Look no further than the ones trusted by the Green Ghost. We've scoured the country to find the top cannabis shops that offer the highest quality products and the best prices. Whether you're looking for flower, edibles, pre-rolls, or accessories, we've got you covered. Trust us to help you find the perfect cannabis products to suit your needs."
         />
         <meta
           property="og:title"
-          content="Green Ghost - Thailand Weed Shops Selection."
+          content="Green Ghost 🌿👻 Thailand Weed Shops Selection."
         />
         <meta
           property="og:description"
@@ -37,7 +37,7 @@ const CannabisShop: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Ghost - Thailand Weed Shops Selection."
+          content="Green Ghost 🌿👻 Thailand Weed Shops Selection."
         />
         <meta
           name="twitter:description"

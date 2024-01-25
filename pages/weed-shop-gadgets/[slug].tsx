@@ -40,7 +40,7 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
   return (
     <>
       <Head>
-        <title>Green Ghost - {gadget.name} Gadget</title>
+        <title>Green Ghost 🌿👻 {gadget.name} Gadget</title>
         <meta name="description" content={gadget.descSeo} />
         <meta property="og:title" content={`Green Ghost - ${gadget.name}`} />
         <meta property="og:description" content={gadget.descSeo} />

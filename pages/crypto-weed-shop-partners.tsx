@@ -12,14 +12,14 @@ const CryptoWeedShop: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Crypto Weed Shop - Partners</title>
+        <title>Green Ghost 🌿👻 Crypto Weed Shop - Partners</title>
         <meta
           name="description"
           content="Unlock a 13% promotion on all your purchases at our crypto weed shop by holding one of our partner NFTs. As a valued partner, you'll have exclusive access to discounts and promotions on our premium selection of organic cannabis products. Join our community of partners today."
         />
         <meta
           property="og:title"
-          content="Green Ghost - Crypto Weed Shop - Partners"
+          content="Green Ghost 🌿👻 Crypto Weed Shop - Partners"
         />
         <meta
           property="og:description"
@@ -37,7 +37,7 @@ const CryptoWeedShop: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Ghost - Crypto Weed Shop - Partners"
+          content="Green Ghost 🌿👻 Crypto Weed Shop - Partners"
         />
         <meta
           name="twitter:description"

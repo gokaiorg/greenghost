@@ -41,7 +41,7 @@ export default function DegensPage({ degen }: DegensPageProps) {
   return (
     <>
       <Head>
-        <title>Green Ghost - {degen.name} Degen</title>
+        <title>Green Ghost 🌿👻 {degen.name} Degen</title>
         <meta name="description" content={degen.descSeo} />
         <meta property="og:title" content={`Green Ghost - ${degen.name}`} />
         <meta property="og:description" content={degen.descSeo} />
