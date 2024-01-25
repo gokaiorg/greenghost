@@ -34,7 +34,7 @@ export default function ShopPage({ shop }: ShopPageProps) {
   return (
     <>
       <Head>
-        <title>Green Ghost - {shop.name}</title>
+        <title>Green Ghost 🌿👻 {shop.name}</title>
         <meta name="description" content={shop.descSeo} />
         <meta property="og:title" content={`Green Ghost - ${shop.name}`} />
         <meta property="og:description" content={shop.descSeo} />

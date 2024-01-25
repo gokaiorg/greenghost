@@ -44,7 +44,7 @@ export default function BudPage({ bud }: BudPageProps) {
   return (
     <>
       <Head>
-        <title>Green Ghost - {bud.name} Strain</title>
+        <title>Green Ghost 🌿👻 {bud.name} Strain</title>
         <meta name="description" content={bud.descSeo} />
         <meta
           property="og:title"

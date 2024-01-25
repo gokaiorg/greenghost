@@ -41,7 +41,7 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
   return (
     <>
       <Head>
-        <title>Green Ghost - {edible.name} Edible</title>
+        <title>Green Ghost 🌿👻 {edible.name} Edible</title>
         <meta name="description" content={edible.descSeo} />
         <meta
           property="og:title"

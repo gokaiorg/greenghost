@@ -14,18 +14,18 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - Degen Weed Shop ร้าน ขาย กัญชา.</title>
+        <title>Green Ghost 🌿👻 Degen Weed Shop Thailand.</title>
         <meta
           name="description"
-          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Green Ghost is a cannabis & weed shop in Thailand offering a wide variety of locally-sourced and imported products, including flowers, edibles, and accessories. We offer instant weed delivery in Phuket."
         />
         <meta
           property="og:title"
-          content="Green Ghost - Degen Weed Shop ร้าน ขาย กัญชา."
+          content="Green Ghost 🌿👻 Degen Weed Shop Thailand."
         />
         <meta
           property="og:description"
-          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Green Ghost is a cannabis & weed shop in Thailand offering a wide variety of locally-sourced and imported products, including flowers, edibles, and accessories. We offer instant weed delivery in Phuket."
         />
         <meta
           property="og:image"
@@ -36,11 +36,11 @@ const Home: NextPage = () => {
         <meta property="og:url" content="https://green.gd/" />
         <meta
           name="twitter:title"
-          content="Green Ghost - Degen Weed Shop ร้าน ขาย กัญชา."
+          content="Green Ghost 🌿👻 Degen Weed Shop Thailand."
         />
         <meta
           name="twitter:description"
-          content="Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories."
+          content="Green Ghost is a cannabis & weed shop in Thailand offering a wide variety of locally-sourced and imported products, including flowers, edibles, and accessories. We offer instant weed delivery in Phuket."
         />
         <meta
           name="twitter:image"

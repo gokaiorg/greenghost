@@ -114,32 +114,32 @@ export const StrainWeek = () => {
           >
             Try our new{' '}
             <Link
-              href="/weed-shop/next-level"
-              title="New weed Strain - Next Level!"
+              href="/weed-shop/fat-banana"
+              title="New weed Strain - Fat Banana!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                {'Next Level'}
+                {'Fat Banana'}
               </Box>
             </Link>
             ,{' '}
             <Link
-              href="/weed-shop/bubble-zkittlez"
-              title="New weed Strain - Bubble Zkittlez!"
+              href="/weed-shop/north-thunderfuck"
+              title="New weed Strain - North Thunderfuck!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                {'Bubble Zkittlez'}
+                {'North Thunderfuck'}
               </Box>
             </Link>
             , and{' '}
             <Link
-              href="/weed-shop/scotty-2-hotty"
-              title="New weed Strain - Scotty 2 Hotty!"
+              href="/weed-shop/thai-stick"
+              title="New weed Strain - Thai Stick!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                {'Scotty 2 Hotty'}
+                {'Thai Stick'}
               </Box>
             </Link>{' '}
             strains now!
@@ -286,12 +286,12 @@ export const StrainWeek = () => {
           >
             Say goodbye to the{' '}
             <Link
-              href="/weed-shop/mommys-milk"
-              title="Strain Sold Out - Mommy's Milk!"
+              href="/weed-shop/purple-queen"
+              title="Strain Sold Out - Purple Queen!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                {"Mommy's Milk"}
+                {'Purple Queen'}
               </Box>
             </Link>
             . We&apos;ll miss you...
