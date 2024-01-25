@@ -13,12 +13,12 @@ const BuyWeed: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - About Us</title>
+        <title>Green Ghost 🌿👻 About Us</title>
         <meta
           name="description"
           content="Green Ghost is the result of a partnership with best Phuket growers, and Gokai Labs, a digital branding and communication agency with over 10 years of experience in Thailand."
         />
-        <meta property="og:title" content="Green Ghost - About" />
+        <meta property="og:title" content="Green Ghost 🌿👻 About" />
         <meta
           property="og:description"
           content="Green Ghost is the result of a partnership with best Phuket growers, and Gokai Labs, a digital branding and communication agency with over 10 years of experience in Thailand."
@@ -30,7 +30,7 @@ const BuyWeed: NextPage = () => {
         <meta property="og:image:width" content="2400" />
         <meta property="og:image:height" content="1260" />
         <meta property="og:url" content="https://green.gd/about-green-ghost" />
-        <meta name="twitter:title" content="Green Ghost - About" />
+        <meta name="twitter:title" content="Green Ghost 🌿👻 About" />
         <meta
           name="twitter:description"
           content="Green Ghost is the result of a partnership with best Phuket growers, and Gokai Labs, a digital branding and communication agency with over 10 years of experience in Thailand."

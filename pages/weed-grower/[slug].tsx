@@ -32,7 +32,7 @@ export default function GrowerPage({ grower }: GrowerPageProps) {
   return (
     <>
       <Head>
-        <title>Green Ghost - Weed Grower in Thailand {grower.name}</title>
+        <title>Green Ghost 🌿👻 Weed Grower in Thailand {grower.name}</title>
         <meta name="description" content={grower.description} />
         <meta
           property="og:title"

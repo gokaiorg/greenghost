@@ -7,9 +7,9 @@ export const dappHostname = process.env.NEXT_PUBLIC_DAPP_HOST;
 
 // HTML metata and og tags, default values for MetaHead.tsx component
 export const defaultMetaTags = {
-  title: 'Green Ghost - Degen Weed Shop ร้าน ขาย กัญชา.',
+  title: 'Green Ghost 🌿👻 Degen Weed Shop Thailand.',
   description:
-    'Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories.',
-  shortname: 'Green Ghost',
+    'Green Ghost is a cannabis & weed shop in Thailand offering a wide variety of locally-sourced and imported products, including flowers, edibles, and accessories. We offer instant weed delivery in Phuket',
+  shortname: 'Green Ghost 🌿👻',
   image: `${dappHostname}/green-ghost-degen-weed-shop.png`,
 };

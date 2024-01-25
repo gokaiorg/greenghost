@@ -1,20 +1,10 @@
 export const homehero = [
   {
-    title: 'The 2nd Phuket Cannabis Cup',
-    image: '/media/green-ghost-the-second-phuket-cannabis-cup.webp',
-    imageAlt: 'Green Ghost Phuket Cannabis Cup',
-    description:
-      'Green Ghost voted 30th best weed shop in Thailand out of almost 640 participants!',
-    link: '/phuket-cannabis-cup',
-    linkTitle: 'Top Dispensaries In Thailand - Phuket Cannabis Cup 2023',
-    linkLabel: 'Thank you',
-  },
-  {
     title: 'DEGEN WEED SHOP',
     image: '/media/green-ghost-weed-shop-phuket.webp',
     imageAlt: 'Green Ghost Weed Shop Phuket',
     description:
-      'Highest quality organic cannabis, hand-selected from the best growers in Thailand.',
+      'High quality cannabis weed shop and best dispensary in Thailand, hand-selected from the best growers in Thailand. Instant Weed delivery in Phuket!',
     link: '/about-green-ghost',
     linkTitle: 'About Green Ghost',
     linkLabel: 'Discover',

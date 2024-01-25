@@ -10,12 +10,12 @@ const InstallXportal: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost - 404.</title>
+        <title>Green Ghost 🌿👻 404.</title>
         <meta
           name="description"
           content="You got lost bro! You should try something that keeps you focused."
         />
-        <meta property="og:title" content="Green Ghost - 404." />
+        <meta property="og:title" content="Green Ghost 🌿👻 404." />
         <meta
           property="og:description"
           content="You got lost bro! You should try something that keeps you focused."
@@ -27,7 +27,7 @@ const InstallXportal: NextPage = () => {
         <meta property="og:image:width" content="2400" />
         <meta property="og:image:height" content="1260" />
         <meta property="og:url" content="https://green.gd/404" />
-        <meta name="twitter:title" content="Green Ghost - 404." />
+        <meta name="twitter:title" content="Green Ghost 🌿👻 404." />
         <meta
           name="twitter:description"
           content="You got lost bro! You should try something that keeps you focused."

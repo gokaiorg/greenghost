@@ -95,7 +95,7 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'CafeOrCoffeeShop',
-            name: 'Green Ghost',
+            name: 'Green Ghost 🌿👻',
             address: {
               '@type': 'PostalAddress',
               addressLocality: 'Talat Yai',
@@ -104,7 +104,7 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
               streetAddress: '17 Thalang Rd',
             },
             description:
-              'Green Ghost is a cannabis shop in Phuket offering a wide variety of locally-sourced and organic products, including flowers, edibles, and accessories.',
+              'Green Ghost is a cannabis & weed shop in Thailand offering a wide variety of locally-sourced and imported products, including flowers, edibles, and accessories. We offer instant weed delivery in Phuket.',
             url: 'https://green.gd',
             logo: 'https://green.gd/media/green-ghost-degen-weed-shop.webp',
             image: 'https://green.gd/green-ghost-degen-weed-shop.png',
