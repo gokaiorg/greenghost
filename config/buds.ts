@@ -146,8 +146,8 @@ export const buds: Bud[] = [
   {
     slug: 'fat-banana',
     name: 'Fat Banana',
-    price: 400,
-    dominance: 'Indica',
+    price: 500,
+    dominance: 'Hybrid',
     indica: '70',
     sativa: '30',
     THC: '28',
@@ -176,7 +176,7 @@ export const buds: Bud[] = [
   {
     slug: 'north-thunderfuck',
     name: 'North Thunderfuck',
-    price: 500,
+    price: 400,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
