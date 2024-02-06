@@ -26,7 +26,7 @@ export const buds: Bud[] = [
   {
     slug: 'scotty-2-hotty',
     name: 'Scotty 2 Hotty',
-    price: 800,
+    price: 700,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -38,7 +38,7 @@ export const buds: Bud[] = [
     growerSlug: '/sweed-dreams',
     environment: 'Indoor',
     harvest: '22/09/2023',
-    quantity: 46,
+    quantity: 88,
     origin: 'Krabi',
     description:
       "Emerging from the fusion of Biscotti and Rainbow Chip, Scotty 2 Hotty is an indica-dominant hybrid strain that delivers a potent blend of relaxation and euphoria. With its tightly-packed olive and fern green buds, Scotty 2 Hotty embodies the essence of its Cookies family lineage, offering a rich aroma and a captivating flavor profile. \n\n The effects of Scotty 2 Hotty are as diverse as its terpene profile. Its indica dominance shines through in its ability to induce a state of deep relaxation, easing tension and promoting a sense of tranquility. Simultaneously, the strain's sativa influence sparks a surge of euphoria, uplifting the mood and fostering a sense of well-being. \n\n Scotty 2 Hotty's terpene profile, dominated by caryophyllene, contributes significantly to its effects. Caryophyllene, known for its anti-inflammatory and analgesic properties, enhances the strain's relaxing effects while also alleviating pain. The presence of myrcene, a terpene associated with sedation, further complements the strain's indica-leaning effects.",
@@ -416,7 +416,7 @@ export const buds: Bud[] = [
   {
     slug: 'purple-queen',
     name: 'Purple Queen',
-    price: 1000,
+    price: 300,
     dominance: 'Indica',
     indica: '75',
     sativa: '25',
@@ -428,7 +428,7 @@ export const buds: Bud[] = [
     growerSlug: '/ohigho',
     environment: 'Organic Indoor',
     harvest: '22/07/2023',
-    quantity: 0,
+    quantity: 12,
     origin: 'Phuket',
     description:
       "Purple Queen is a captivating indica strain, born from the harmonious union of Hindu Kush and Purple Afghani cannabis varieties. With a formidable THC content of 22% and a dash of CBG at 1%, Purple Queen beckons seasoned cannabis connoisseurs to embark on a journey into relaxation and euphoria. Its entrancing effects, as recounted by Leafly patrons, are a delightful blend of giggly amusement, heightened sensuality, and an overwhelming sense of happiness. For those seeking relief from the relentless grip of depression, persistent insomnia, or a stubborn lack of appetite, Purple Queen stands as a steadfast ally. \n\n Crafted with care by Royal Queen Seeds, this strain tantalizes the palate with a unique flavor profile featuring hints of sage, subtle notes of ammonia, and a floral touch of violet. All of this is harmonized by its dominant terpene, caryophyllene, which adds to its distinct allure. \n\n Purple Queen's lineage traces back to some of the most renowned cannabis strains, blending their genetics to create a truly regal experience. It's the result of meticulous breeding, and its potency is evident in every trichome-covered bud. Whether you're looking to unwind after a long day or seeking respite from troubling ailments, Purple Queen promises an exquisite journey into the realm of relaxation and contentment. So, take a seat on your throne of tranquility, and let the Purple Queen reign over your senses, leading you into a state of joyful serenity.",
@@ -477,7 +477,7 @@ export const buds: Bud[] = [
   {
     slug: 'next-level',
     name: 'Next Level',
-    price: 700,
+    price: 600,
     dominance: 'Sativa',
     indica: '40',
     sativa: '60',
@@ -598,7 +598,7 @@ export const buds: Bud[] = [
   {
     slug: 'hulkberry',
     name: 'Hulkberry',
-    price: 300,
+    price: 1000,
     dominance: 'Sativa',
     indica: '35',
     sativa: '65',
@@ -610,7 +610,7 @@ export const buds: Bud[] = [
     growerSlug: '/ohigho',
     environment: 'Organic Indoor',
     harvest: '22/07/2023',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Hulkberry, a captivating strain with a genetic makeup of 65% sativa and 35% indica, emerges as a result of expertly blending the beloved Strawberry Diesel and OG Kush varieties. This strain earns its name from the remarkable density of its buds and a delightful infusion of berry essence. The appearance is a spectacle to behold, featuring robust, minty-green popcorn-shaped buds that sport subtle undertones of dark olive. Accentuating these nugs are long, delicate orange hairs and a generous dusting of petite, luminous white trichomes, glistening like morning dew. Upon breaking apart these frosty nuggets, an exquisite bouquet of sweet and tangy citrus notes wafts forth, accompanied by an underlying diesel richness that gains prominence when the buds are ignited. This symphony of scents preludes the flavor experience, characterized by a pronounced tang of sour lemon that harmonizes with hints of zesty diesel and earthiness upon exhalation. \n\n The Hulkberry strain wields an impressive potency, boasting an average THC level of 27%, which contributes to its robust effects. The high takes hold swiftly and profoundly, initiating a surge of invigorating sensations that kindle creativity and motivation. This euphoric ascent of the mind coexists harmoniously with a gentle, calming embrace that leaves physical energy untouched. Hulkberry's formidable potency makes it a promising contender for addressing various conditions, including chronic fatigue, migraines, ADD or ADHD, depression, and mood swings. Its distinctive profile combines the best of both sativa and indica worlds, offering a dynamic yet balanced experience that has the potential to elevate and soothe, all in one enticing package. \n\n In the realm of cannabis strains, Hulkberry emerges as a beacon of potency and flavor, beckoning connoisseurs and seekers of relief alike. Its lineage, traceable to Strawberry Diesel and OG Kush, lends it a unique character that tantalizes the senses and delivers a multifaceted high. Whether you're yearning for a wellspring of creativity or a respite from various ailments, Hulkberry stands ready to unleash its green magic, offering a remarkable journey that traverses the realms of taste, aroma, and effect.",
