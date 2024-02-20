@@ -65,8 +65,7 @@ export const shops: Shop[] = [
       "Welcome to the exclusive realm of Green Ghost Degen Weed Shop in Rawai, an avant-garde cannabis destination like no other. \n\n Green Ghost Degen Weed Shop in Rawai isn't just a dispensary; it's a lifestyle crafted for those who value both exclusivity and efficiency. Join us on a journey where quality, discretion, and convenience converge, setting a new standard for cannabis indulgence in Rawai.",
     descSeo:
       'Welcome to the exclusive realm of Green Ghost Degen Weed Shop in Rawai, an avant-garde cannabis destination like no other.',
-    mapLink:
-      '',
+    mapLink: '',
     images: [
       '/media/green-ghost-degen-weed-shop-rawai-phuket-thailand-01.webp',
       '/media/green-ghost-degen-weed-shop-rawai-phuket-thailand-02.webp',
