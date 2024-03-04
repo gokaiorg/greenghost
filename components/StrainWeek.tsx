@@ -286,12 +286,12 @@ export const StrainWeek = () => {
           >
             Say goodbye to the{' '}
             <Link
-              href="/weed-shop/purple-queen"
-              title="Strain Sold Out - Purple Queen!"
+              href="/weed-shop/next-level"
+              title="Strain Sold Out - Next Level!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                {'Purple Queen'}
+                {'Next Level'}
               </Box>
             </Link>
             {' '}and{' '}

@@ -104,7 +104,7 @@ export const gadgets: Gadget[] = [
   {
     slug: 'wizman-rolling-papers',
     name: 'Wizman Rolling Papers - all in 1',
-    price: 150,
+    price: 180,
     packaging: '32 Leaves, 107*44 mm',
     quantity: 24,
     description:
