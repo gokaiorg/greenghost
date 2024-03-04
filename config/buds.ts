@@ -477,7 +477,7 @@ export const buds: Bud[] = [
   {
     slug: 'next-level',
     name: 'Next Level',
-    price: 600,
+    price: 1000,
     dominance: 'Sativa',
     indica: '40',
     sativa: '60',
@@ -489,7 +489,7 @@ export const buds: Bud[] = [
     growerSlug: '/sweed-dreams',
     environment: 'Indoor',
     harvest: '12/10/2023',
-    quantity: 47,
+    quantity: 0,
     origin: 'Krabi',
     description:
       "Emerging from the esteemed lineage of Kushco OG and Scotty2hotty, Next Level is a sativa-dominant hybrid strain that elevates the cannabis experience to new heights. With a 60% sativa and 40% indica balance, Next Level delivers a potent cerebral high accompanied by a soothing indica undercurrent, making it a versatile strain suitable for both daytime focus and nighttime relaxation. \n\n Bred by the renowned Exotic Genetix, Next Level boasts an impressive THC content that typically ranges between 22% and 27%, making it a strain best suited for experienced cannabis consumers. Its terpene profile is dominated by myrcene, the terpene responsible for the strain's relaxing properties, while hints of caryophyllene and limonene contribute to its overall flavor profile and therapeutic effects. \n\n Upon consumption, Next Level swiftly ushers in a wave of cerebral invigoration, sharpening mental clarity, enhancing creativity, and fostering a sense of euphoria. The indica influence, however, gently counterbalances the sativa effects, providing a soothing undercurrent of relaxation that eases tension and promotes calmness. This unique blend of effects makes Next Level a well-rounded strain, suitable for a variety of activities, from engaging in creative pursuits to enjoying social gatherings or simply unwinding after a long day.",
