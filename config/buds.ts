@@ -116,7 +116,7 @@ export const buds: Bud[] = [
   {
     slug: 'bubble-zkittlez',
     name: 'Bubble Zkittlez',
-    price: 600,
+    price: 1000,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -128,7 +128,7 @@ export const buds: Bud[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/10/2023',
-    quantity: 21,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Bubble Zkittlez is an exceptional hybrid strain that brings together the best of both worlds. Born from a cross of Bubble Gum and Sweet Zkittlez, this delightful blend offers a unique and captivating experience. Bubble Gum, known for its indica-dominant traits, delivers a body-numbing high that soothes pain while keeping the mind stimulated. On the other hand, Sweet Zkittlez, with its indica dominance and sweet flavor profile, provides a relaxing high that doesn't induce immediate sleepiness. \n\n The result is Bubble Zkittlez, a strain that harmoniously combines the soothing effects of Bubble Gum with the flavorful sweetness of Sweet Zkittlez. Prepare to indulge in its tantalizing taste, as Bubble Zkittlez delights the palate with a blend of fruity sweetness and hints of bubblegum. This makes it a perfect choice for those laid-back evenings with friends, where you can unwind and enjoy the company without feeling overly drowsy. \n\n Whether you're seeking relief from physical discomfort or simply want to relax without losing your focus, Bubble Zkittlez offers a balanced and enjoyable experience. Embrace its harmonious blend of flavors and effects, and let Bubble Zkittlez elevate your relaxation sessions to new heights.",
@@ -266,7 +266,7 @@ export const buds: Bud[] = [
   {
     slug: 'gelato-runtz',
     name: 'Gelato Runtz',
-    price: 500,
+    price: 600,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
