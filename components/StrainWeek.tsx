@@ -294,16 +294,6 @@ export const StrainWeek = () => {
                 {'Next Level'}
               </Box>
             </Link>
-            {' '}and{' '}
-            <Link
-              href="/weed-shop/bubble-zkittlez"
-              title="Strain Sold Out - Bubble Zkittlez!"
-              passHref
-            >
-              <Box as={'span'} color={'ghostVerse.blue.base'}>
-                {'Bubble Zkittlez'}
-              </Box>
-            </Link>
             . We&apos;ll miss you...
           </Text>
         </Box>
