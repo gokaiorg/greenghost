@@ -38,7 +38,7 @@ export const buds: Bud[] = [
     growerSlug: '/sweed-dreams',
     environment: 'Indoor',
     harvest: '22/09/2023',
-    quantity: 88,
+    quantity: 43,
     origin: 'Krabi',
     description:
       "Emerging from the fusion of Biscotti and Rainbow Chip, Scotty 2 Hotty is an indica-dominant hybrid strain that delivers a potent blend of relaxation and euphoria. With its tightly-packed olive and fern green buds, Scotty 2 Hotty embodies the essence of its Cookies family lineage, offering a rich aroma and a captivating flavor profile. \n\n The effects of Scotty 2 Hotty are as diverse as its terpene profile. Its indica dominance shines through in its ability to induce a state of deep relaxation, easing tension and promoting a sense of tranquility. Simultaneously, the strain's sativa influence sparks a surge of euphoria, uplifting the mood and fostering a sense of well-being. \n\n Scotty 2 Hotty's terpene profile, dominated by caryophyllene, contributes significantly to its effects. Caryophyllene, known for its anti-inflammatory and analgesic properties, enhances the strain's relaxing effects while also alleviating pain. The presence of myrcene, a terpene associated with sedation, further complements the strain's indica-leaning effects.",
@@ -68,7 +68,7 @@ export const buds: Bud[] = [
     growerSlug: '/cbd-cannabiz-farm',
     environment: 'Indoor',
     harvest: '12/10/2022',
-    quantity: 45,
+    quantity: 23,
     origin: 'Surat Thani',
     description:
       "Introducing CBD Auto Tune, a therapeutic marvel cultivated with care in the heart of Thailand. Boasting a significant CBD content of 15%, this indoor-grown strain is a beacon of medical cannabis excellence. Born from the esteemed lineage of 'Auto Tsunami' and 'Auto Pivot', CBD Auto Tune emerges as a true testament to precision breeding. Cultivated in the unique climate of Thailand, this strain thrives under carefully controlled indoor conditions, ensuring optimal growth and cannabinoid development. The result is a CBD-rich haven, tailored to meet the medicinal needs of discerning users. \n\n CBD Auto Tune invites you into a world of therapeutic bliss with its Terpinolene-dominant terpene profile. Immerse yourself in the sweet and musky symphony that accompanies each inhalation, offering a sensory experience that transcends the ordinary. The gentle dance of terpenes enhances the overall therapeutic potential of this strain, making it a harmonious choice for those seeking relief. \n\n Whether you're a medical cannabis patient or a connoisseur in search of a calming companion, CBD Auto Tune is a beacon of tranquility, grown with precision in the vibrant landscapes of Thailand. Elevate your experience with a strain designed to soothe both body and mind.",
@@ -158,7 +158,7 @@ export const buds: Bud[] = [
     growerSlug: '/ohigho',
     environment: 'Indoor',
     harvest: '22/07/2023',
-    quantity: 78,
+    quantity: 42,
     origin: 'Phuket',
     description:
       "Royal Runtz stands as a remarkable hybrid cannabis strain resulting from the intricate genetics of Gelato and Zkittlez. This distinguished USA-bred variety boasts an unparalleled blend of flavors and fragrances that truly set it apart in the world of cannabis. With an impressive THC content of 27%, Royal Runtz is primarily recommended for experienced cannabis enthusiasts who seek a robust and potent high. \n\n As attested by Leafly customers, its effects include profound happiness, relaxation, and euphoria. Moreover, many medical marijuana patients turn to Royal Runtz to alleviate symptoms associated with pain, insomnia, and loss of appetite. Crafted by the esteemed Royal Queen Seeds, this strain entices connoisseurs with its delightful flavor profile, encompassing sweet, fruity, and citrusy notes. \n\n The dominant terpene, limonene, not only enhances mood but also possesses anti-inflammatory properties. On average, Royal Runtz commands a price range of $50-$70 per eighth, reflecting its rarity and high demand. Its dense and frosty buds, adorned with vibrant orange hairs and hints of purple, are a sight to behold. The strain's aroma is a delightful fusion of sweetness, fruitiness, with subtle undertones of cream and candy.",
@@ -176,7 +176,7 @@ export const buds: Bud[] = [
   {
     slug: 'fat-banana',
     name: 'Fat Banana',
-    price: 500,
+    price: 600,
     dominance: 'Hybrid',
     indica: '70',
     sativa: '30',
@@ -206,7 +206,7 @@ export const buds: Bud[] = [
   {
     slug: 'north-thunderfuck',
     name: 'North Thunderfuck',
-    price: 400,
+    price: 500,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -248,7 +248,7 @@ export const buds: Bud[] = [
     growerSlug: '/ohigho',
     environment: 'Indoor',
     harvest: '22/07/2023',
-    quantity: 89,
+    quantity: 39,
     origin: 'Phuket',
     description:
       "Green Gelato is a popular hybrid cannabis strain that offers the best of both worlds with its balanced indica and sativa genetics. This strain is a result of crossing Sunset Sherbet and Thin Mint Girl Scout Cookies, two renowned strains that contribute to Green Gelato's unique characteristics. \n\n Consumers who have smoked Green Gelato report that the strain's effects come on quickly, inducing a euphoric high accompanied by strong feelings of relaxation. This strain's balanced effects make it ideal for those seeking relief from pain, fatigue, and insomnia, while still remaining mentally stimulated and productive.",
@@ -266,7 +266,7 @@ export const buds: Bud[] = [
   {
     slug: 'gelato-runtz',
     name: 'Gelato Runtz',
-    price: 600,
+    price: 1000,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -278,7 +278,7 @@ export const buds: Bud[] = [
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
     harvest: '12/06/2023',
-    quantity: 8,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Gelato Runtz is a potent hybrid strain resulting from the crossbreeding of Runtz and Gelato #33. Bred by Elev8, this strain contains a THC content of 21%, making it a popular choice among experienced cannabis users. Gelato Runtz is known to provide a relaxed, euphoric, and tingly sensation, as reported by Leafly customers. It is often favored by medical marijuana patients seeking relief from pain, anxiety, and depression. With its dominant terpene, limonene, Gelato Runtz offers an enticing aroma and flavor profile reminiscent of vanilla, berries, and coffee. \n\n Discover the captivating blend of Runtz and Gelato #33 in Gelato Runtz. Bred by Elev8, this exceptional hybrid strain packs a THC punch at 21%, catering to the preferences of seasoned cannabis enthusiasts. Gelato Runtz has gained a reputation for inducing relaxation, euphoria, and a delightful tingling sensation, as noted by Leafly customers. Medical marijuana patients often turn to Gelato Runtz to find respite from pain, anxiety, and depression. With its dominant terpene, limonene, Gelato Runtz offers a captivating aroma and flavor profile highlighted by hints of vanilla, berries, and coffee. \n\n Experience the enchanting union of Runtz and Gelato #33 in Gelato Runtz, an impressive hybrid strain meticulously crafted by Elev8. With a THC level of 21%, Gelato Runtz is a favored choice among seasoned cannabis consumers seeking a potent and enjoyable experience. Leafly customers have reported feelings of relaxation, euphoria, and a pleasant tingling sensation. Medical marijuana patients often embrace Gelato Runtz for its potential in alleviating symptoms related to pain, anxiety, and depression. Infused with the dominant terpene limonene, Gelato Runtz entices the senses with its alluring aroma and indulgent flavor profile featuring notes of vanilla, berries, and coffee.',
