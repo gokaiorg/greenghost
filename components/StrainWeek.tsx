@@ -114,32 +114,12 @@ export const StrainWeek = () => {
           >
             Try our new{' '}
             <Link
-              href="/weed-shop/fat-banana"
-              title="New weed Strain - Fat Banana!"
+              href="/weed-shop/gorilla-goo"
+              title="New weed Strain - Gorilla Goo!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                {'Fat Banana'}
-              </Box>
-            </Link>
-            ,{' '}
-            <Link
-              href="/weed-shop/north-thunderfuck"
-              title="New weed Strain - North Thunderfuck!"
-              passHref
-            >
-              <Box as={'span'} color={'ghostVerse.blue.base'}>
-                {'North Thunderfuck'}
-              </Box>
-            </Link>
-            , and{' '}
-            <Link
-              href="/weed-shop/thai-stick"
-              title="New weed Strain - Thai Stick!"
-              passHref
-            >
-              <Box as={'span'} color={'ghostVerse.blue.base'}>
-                {'Thai Stick'}
+                {'Gorilla Goo'}
               </Box>
             </Link>{' '}
             strains now!
@@ -184,16 +164,6 @@ export const StrainWeek = () => {
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
                 SlimJim Rolling Papers
-              </Box>
-            </Link>
-            ,{' '}
-            <Link
-              href="/weed-shop-gadgets/small-metal-grinder"
-              title="New weed Gadget - Small Metal Grinder!"
-              passHref
-            >
-              <Box as={'span'} color={'ghostVerse.blue.base'}>
-                Small Metal Grinder
               </Box>
             </Link>{' '}
             and{' '}
