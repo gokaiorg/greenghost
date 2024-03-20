@@ -84,6 +84,37 @@ export const buds: Bud[] = [
     source: 'undefined',
   },
   {
+    slug: 'gorilla-goo',
+    name: 'Gorilla Goo',
+    price: 100,
+    dominance: 'Sativa',
+    indica: '30',
+    sativa: '70',
+    THC: '30',
+    CBD: '0',
+    effects: 'Euphoria, Relaxing, Sleepy',
+    relieves: 'Chronic Pain, Depression, Insomnia',
+    grower: 'Green Ghost',
+    growerSlug: '/green-ghost',
+    environment: 'Greenhouse',
+    harvest: '25/02/2024',
+    quantity: 83,
+    origin: 'Phuket',
+    description:
+      "Indulge in the captivating embrace of Gorilla Goo, a sativa-dominant hybrid that delivers an exhilarating experience crafted from the fusion of Chem's Sister, Sour Dubb, and Chocolate Diesel strains. With a staggering average THC level of 30%, this potent strain offers a long-lasting high that envelopes you in relaxation, perfect for unwinding after a long day. Its euphoric onset elevates the spirits, while its deeply sedative effects gradually soothe both mind and body, making it an ideal choice for addressing chronic pain, insomnia, depression, and muscle spasms. \n\n Experience the addictive allure of Gorilla Goo's earthy sour flavor, enhanced by a decadent chocolate diesel exhale. The aroma tantalizes the senses with fruity notes intertwined with hints of pungent pine and heavy diesel undertones. Each bud boasts a lush forest green hue, adorned with dark orange hairs and generously coated in bright white crystal trichomes. Discover the blissful tranquility and therapeutic benefits of Gorilla Goo, a strain that promises to leave you glued to the couch in blissful relaxation for hours on end.",
+    descSeo:
+      "Indulge in the captivating embrace of Gorilla Goo, a sativa-dominant hybrid that delivers an exhilarating experience crafted from the fusion of Chem's Sister, Sour Dubb, and Chocolate Diesel strains. With a staggering average THC level of 30%, this potent strain offers a long-lasting high that envelopes you in relaxation, perfect for unwinding after a long day. Its euphoric onset elevates the spirits, while its deeply sedative effects gradually soothe both mind and body, making it an ideal choice for addressing chronic pain, insomnia, depression, and muscle spasms.",
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-cover.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Gorilla Goo',
+    source:
+      'https://www.allbud.com/marijuana-strains/sativa-dominant-hybrid/gorilla-goo',
+  },
+  {
     slug: 'the-queen-s1',
     name: 'The Queen S1',
     price: 1000,
