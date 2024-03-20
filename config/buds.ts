@@ -110,7 +110,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-cover.webp',
     ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Strain The Queen S1',
+    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Gorilla Goo',
     source:
       'https://www.allbud.com/marijuana-strains/sativa-dominant-hybrid/gorilla-goo',
   },
