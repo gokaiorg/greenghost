@@ -14,13 +14,33 @@ export type Shop = {
 
 export const shops: Shop[] = [
   {
+    slug: 'rawai',
+    name: 'Degen Weed Shop in Rawai',
+    hours: 'Everyday 10h-00h.',
+    address: '26, 19 Wiset Rd, Rawai, Amphoe Mueang Phuket, Phuket 83130',
+    addresLink: 'https://maps.app.goo.gl/da4Q74sJDSU9w1FQ6',
+    reviewLink: 'https://g.page/r/CYOr82juHaKhEBM/review',
+    details: 'Main Shop. Ghost loundge 👻💨 ...',
+    description:
+      "Welcome to the exclusive realm of Green Ghost Degen Weed Shop in Rawai, an avant-garde cannabis destination like no other. \n\n Green Ghost Degen Weed Shop in Rawai isn't just a dispensary; it's a lifestyle crafted for those who value both exclusivity and efficiency. Join us on a journey where quality, discretion, and convenience converge, setting a new standard for cannabis indulgence in Rawai.",
+    descSeo:
+      'Welcome to the exclusive realm of Green Ghost Degen Weed Shop in Rawai, an avant-garde cannabis destination like no other.',
+    mapLink:
+      'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15959.273281372596!2d0!3d0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30502fd6cfeb7ef5%3A0xa1a21dee68f3ab83!2zR3JlZW4gR2hvc3Qg8J-Mv_CfkbsgUmF3YWkgfCBXZWVkIERlbGl2ZXJ5!5e0!3m2!1sen!2sth!4v1710995678031!5m2!1sen!2sth',
+    images: [
+      '/media/green-ghost-degen-weed-shop-rawai-phuket-thailand-01.webp',
+      '/media/green-ghost-degen-weed-shop-rawai-phuket-thailand-02.webp',
+      '/media/green-ghost-degen-weed-shop-rawai-phuket-thailand-03.webp',
+    ],
+  },
+  {
     slug: 'karon',
     name: 'Degen Weed Shop in Karon',
     hours: 'Monday/Saturday 10h-00h.',
     address: '452 Patak Road, Karon, Mueang Phuket District, Phuket 83100',
     addresLink: 'https://goo.gl/maps/2mrscgVuBc73KRot8',
     reviewLink: 'https://g.page/r/CcPCrFf7RfRNEBM/review',
-    details: 'Main Shop. All our buds and gadgets. Smoking room ...',
+    details: 'All our buds and gadgets. Smoking room ...',
     description:
       "Your local cannabis haven nestled in the heart of beautiful Karon, just moments away from the vibrant Karon Market, the serene Karon Temple, and the pristine Karon Beach in Phuket, Thailand. \n\n Our Karon-based cannabis dispensary is your go-to destination for premium cannabis buds, a diverse selection of strains, delectable edibles, and more. We're dedicated to bringing the finest cannabis experience to the Karon community and its visitors. \n\n Convenience is key at Green Ghost Degen. Located near Tops Daily, you'll find it easy to access your favorite cannabis products. Whether you prefer the convenience of delivery, a quick and friendly pick-up service, or the speed of our drive-thru option, we've designed our services with your needs in mind. \n\n As a forward-thinking establishment, we embrace the digital age with NFTs (Non-Fungible Tokens) that offer unique and collectible cannabis-related digital assets. We also facilitate cryptocurrency transactions, making your shopping experience seamless and future-oriented. \n\n Green Ghost Degen Weed Shop is your gateway to exceptional cannabis products, all while immersing yourself in the charm and beauty of Karon, Phuket. Explore the wonders of this idyllic beachside town, and when you're ready to enhance your experience, we're here to serve you. \n\n Join us in Karon, where we merge cannabis culture with the beauty of southern Thailand.",
     descSeo:
@@ -51,25 +71,6 @@ export const shops: Shop[] = [
       '/media/green-ghost-degen-weed-shop-phuket-town-phuket-thailand-01.webp',
       '/media/green-ghost-degen-weed-shop-phuket-town-phuket-thailand-02.webp',
       '/media/green-ghost-degen-weed-shop-phuket-town-phuket-thailand-03.webp',
-    ],
-  },
-  {
-    slug: 'rawai',
-    name: 'Degen Weed Shop in Rawai',
-    hours: '24/24',
-    address: 'Coming Soon',
-    addresLink: '',
-    reviewLink: '',
-    details: 'Coming Soon...',
-    description:
-      "Welcome to the exclusive realm of Green Ghost Degen Weed Shop in Rawai, an avant-garde cannabis destination like no other. \n\n Green Ghost Degen Weed Shop in Rawai isn't just a dispensary; it's a lifestyle crafted for those who value both exclusivity and efficiency. Join us on a journey where quality, discretion, and convenience converge, setting a new standard for cannabis indulgence in Rawai.",
-    descSeo:
-      'Welcome to the exclusive realm of Green Ghost Degen Weed Shop in Rawai, an avant-garde cannabis destination like no other.',
-    mapLink: '',
-    images: [
-      '/media/green-ghost-degen-weed-shop-rawai-phuket-thailand-01.webp',
-      '/media/green-ghost-degen-weed-shop-rawai-phuket-thailand-02.webp',
-      '/media/green-ghost-degen-weed-shop-rawai-phuket-thailand-03.webp',
     ],
   },
 ];
