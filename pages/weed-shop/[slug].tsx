@@ -120,6 +120,37 @@ export default function BudPage({ bud }: BudPageProps) {
             </SwiperSlide>
           ))}
           <BuyNowLink />
+          <Link
+            href={`https://greenghostweed.shop/products/${bud.slug}`}
+            title={'Order weed online in Thailand'}
+            passHref
+          >
+            <Text
+              ml={'auto'}
+              pos={'absolute'}
+              left={140}
+              bottom={2}
+              zIndex={2}
+              color={'ghostVerse.green.base'}
+              borderColor={'ghostVerse.green.base'}
+              fontSize={18}
+              borderWidth={1}
+              borderRadius={'full'}
+              bgColor={'ghostVerse.dark.lighter'}
+              backdropFilter={'blur(3px)'}
+              py={1}
+              px={3}
+              mb={4}
+              display={'block'}
+              width={'fit-content'}
+              _hover={{
+                bgColor: 'ghostVerse.green.base',
+                color: 'black',
+              }}
+            >
+              Order Online
+            </Text>
+          </Link>
         </Swiper>
         <BoxInfoProduct>
           <BoxInfoLeft>
