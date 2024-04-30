@@ -36,7 +36,7 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
               color: 'ghostVerse.green.base',
             }}
           >
-            Order Online Soon
+            Order Online
           </Text>
         </Link>
       </Box>
