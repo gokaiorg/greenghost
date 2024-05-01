@@ -26,7 +26,7 @@ export const buds: Bud[] = [
   {
     slug: 'chemdawg',
     name: 'Chemdawg',
-    price: 300,
+    price: 250,
     dominance: 'Indica',
     indica: '55',
     sativa: '45',
@@ -45,9 +45,10 @@ export const buds: Bud[] = [
     descSeo:
       'Chemdawg, also known as "Chemdog," is a legendary hybrid cannabis strain created and distributed by breeder Chemdog since 1991.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-chemdawg-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-chemdawg-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-chemdawg-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-chemdawg-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-chemdawg-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Chemdawg',
     source: 'https://www.leafly.com/strains/chemdawg',
@@ -104,10 +105,10 @@ export const buds: Bud[] = [
     descSeo:
       'Pitaya, a 100% Indica dominant hybrid, is a mesmerizing fusion of OG Kush, OG Kush Breath, and Girl Scout Cookies. This exquisite strain captivates connoisseurs with its exceptional flavor profile, blending the sweetness of nutty cookies with the robust undertones of rich, earthy pine. Each toke tantalizes the palate, offering a mouthwatering experience that leaves a lasting impression. With a THC content averaging at an impressive 26%, Pitaya promises a potent and memorable high, showcasing the best of its genetic lineage.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-pitaya-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-pitaya-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-pitaya-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-pitaya-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-pitaya-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-pitaya-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Pitaya',
     source: 'undefined',
@@ -115,7 +116,7 @@ export const buds: Bud[] = [
   {
     slug: 'cbd-auto-tune',
     name: 'CBD Auto tune',
-    price: 250,
+    price: 180,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -145,7 +146,7 @@ export const buds: Bud[] = [
   {
     slug: 'kd-mango-tail',
     name: 'KD Mango Tail',
-    price: 100,
+    price: 80,
     dominance: 'Sativa',
     indica: '0',
     sativa: '100',
@@ -175,7 +176,7 @@ export const buds: Bud[] = [
   {
     slug: 'gorilla-goo',
     name: 'Gorilla Goo',
-    price: 150,
+    price: 120,
     dominance: 'Sativa',
     indica: '30',
     sativa: '70',
@@ -194,10 +195,10 @@ export const buds: Bud[] = [
     descSeo:
       "Indulge in the captivating embrace of Gorilla Goo, a sativa-dominant hybrid that delivers an exhilarating experience crafted from the fusion of Chem's Sister, Sour Dubb, and Chocolate Diesel strains. With a staggering average THC level of 30%, this potent strain offers a long-lasting high that envelopes you in relaxation, perfect for unwinding after a long day. Its euphoric onset elevates the spirits, while its deeply sedative effects gradually soothe both mind and body, making it an ideal choice for addressing chronic pain, insomnia, depression, and muscle spasms.",
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Gorilla Goo',
     source:
@@ -206,7 +207,7 @@ export const buds: Bud[] = [
   {
     slug: 'thai-stick',
     name: 'Thai Stick',
-    price: 50,
+    price: 40,
     dominance: 'Sativa',
     indica: '0',
     sativa: '100',
@@ -225,10 +226,10 @@ export const buds: Bud[] = [
     descSeo:
       "Immerse yourself in the rich heritage of the Thai Stick strain, originating from a pure sativa landrace native to Thailand, later introduced to the U.S. during the 70s and 80s. Aptly named 'Thai Sticks,' this strain's buds are traditionally dried and bound into long sticks. The authentic Thai lineage has given birth to renowned strains like Voodoo, Juicy Fruit, and the timeless Haze. Thai delivers potent yet comfortable effects, accompanied by a distinctive fruity and citrus aroma. A challenge for growers outside tropical climates, Thai thrives in greenhouse gardens, rewarding patient experts with its extended growth cycle and unhurried flowering process.",
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-thai-stick-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-thai-stick-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-thai-stick-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-thai-stick-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-thai-stick-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-thai-stick-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Thai Stick',
     source: 'https://www.leafly.com/strains/thai',
@@ -248,17 +249,17 @@ export const buds: Bud[] = [
     growerSlug: '/ohigho',
     environment: 'Indoor',
     harvest: '22/07/2023',
-    quantity: 198,
+    quantity: 142,
     origin: 'Phuket',
     description:
       'Indulge in the delightful experience of Fat Banana, a hybrid cannabis strain crafted by blending the legendary OG Kush with the aromatic Chiquita Banana. Unveiling a palate of sweetness with citrus undertones, its aroma transports you to a tropical banana haven. The journey with Fat Banana begins with a gentle euphoria, gradually evolving into a profound physical relaxation. Renowned for inducing the munchies, this strain offers a flavorful and multi-layered encounter, making it a favorite among those seeking a blissful and appetite-stimulating cannabis experience.',
     descSeo:
       'Indulge in the delightful experience of Fat Banana, a hybrid cannabis strain crafted by blending the legendary OG Kush with the aromatic Chiquita Banana. Unveiling a palate of sweetness with citrus undertones, its aroma transports you to a tropical banana haven. The journey with Fat Banana begins with a gentle euphoria, gradually evolving into a profound physical relaxation. Renowned for inducing the munchies, this strain offers a flavorful and multi-layered encounter, making it a favorite among those seeking a blissful and appetite-stimulating cannabis experience.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-fat-banana-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-fat-banana-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-fat-banana-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-fat-banana-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-fat-banana-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-fat-banana-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Fat Banana',
     source: 'https://www.leafly.com/strains/fat-banana',
@@ -285,10 +286,10 @@ export const buds: Bud[] = [
     descSeo:
       "Step into the mesmerizing world of North Thunderfuck, an offspring of the legendary Alaskan Thunder Fuck (Matanuska Thunder Fuck), whose genetics remain a well-guarded secret. Boasting approximately 22% THC, North Thunderfuck delivers a gradual and robust high, characterized by potent waves of euphoria. This strain's uplifting and enduring happiness is complemented by a burst of intense lemon flavor, creating a refreshing citrus symphony. The aroma is equally enchanting, blending citrus notes with hints of earth and pine. With its mysterious lineage and exhilarating effects, North Thunderfuck stands as a compelling choice for those seeking a unique and euphoria-inducing cannabis experience.",
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-north-thunderfuck-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-north-thunderfuck-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-north-thunderfuck-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-north-thunderfuck-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-north-thunderfuck-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-north-thunderfuck-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain North Thunderfuck',
     source: 'undefined',
@@ -315,12 +316,73 @@ export const buds: Bud[] = [
     descSeo:
       'Jack Herer, also known as "JH," "The Jack," "Premium Jack," and "Platinum Jack" is a sativa-dominant hybrid marijuana strain named after the marijuana activist and author of The Emperor Wears No Clothes.',
     images: [
-      '/media/green-ghost-degen-weed-shop-strain-jack-herer-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-jack-herer-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-jack-herer-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-jack-herer-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-jack-herer-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Jack Herer',
     source: 'https://www.leafly.com/strains/jack-herer',
+  },
+  {
+    slug: 'white-widow',
+    name: 'White Widow',
+    price: 300,
+    dominance: 'Hybrid',
+    indica: '50',
+    sativa: '50',
+    THC: '15',
+    CBD: '1',
+    effects: 'Energetic, Talkative, Creative',
+    relieves: 'Stress, Anxiety, Pain',
+    grower: 'Green Ghost',
+    growerSlug: '/',
+    environment: 'Indoor',
+    harvest: '18/12/2023',
+    quantity: 95,
+    origin: 'Phuket',
+    description:
+      'White Widow is undeniably one of the most renowned strains globally, originating from the Netherlands and meticulously bred by Green House Seeds. \n\n This well-balanced hybrid is the result of crossing a Brazilian sativa landrace with a resin-rich South Indian indica. \n\n Since its inception in the 1990s, White Widow has become a staple on the menu of Dutch coffee shops. Its distinctive buds are adorned with a glistening layer of crystal resin, serving as a forewarning of its potent effects. Upon consumption, a surge of euphoria and energy quickly takes hold, invigorating both conversation and creativity. The genetic legacy of White Widow has paved the way for other legendary strains like White Russian, White Rhino, and Blue Widow.',
+    descSeo:
+      'White Widow is undeniably one of the most renowned strains globally, originating from the Netherlands and meticulously bred by Green House Seeds.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-white-widow-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-white-widow-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-white-widow-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-white-widow-bud-02.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Strain White Widow',
+    source: 'https://www.leafly.com/strains/white-widow',
+  },
+  {
+    slug: 'silver-fox',
+    name: 'Silver Fox',
+    price: 350,
+    dominance: 'Sativa',
+    indica: '30',
+    sativa: '70',
+    THC: '22',
+    CBD: '1',
+    effects: 'Happy, Talkative, Hungry',
+    relieves: 'Stress, Anxiety, Muscle spasms',
+    grower: 'Green Ghost',
+    growerSlug: '/',
+    environment: 'Indoor',
+    harvest: '02/01/2024',
+    quantity: 92,
+    origin: 'Phuket',
+    description:
+      'Silver Fox emerges as a prized sativa dominant hybrid, originating as a phenotype of the renowned Exodus Cut of UK Cheese. This strain is a visual delight, boasting small, rounded forest green nugs accented with vibrant lime hues, deep amber hairs, and a lavish blanket of silvery amber crystal trichomes. Upon breaking apart each nugget, an invigorating blend of sour pungent skunk and dank cheese wafts through the air, intensifying with each inhalation. Delightful on the palate, Silver Fox offers a flavor profile characterized by fresh sour cheese complemented by deep, rich skunk undertones, delivering a progressively potent experience with every toke. \n\n The Silver Fox experience begins swiftly, with a surge of lifted euphoria and sharpened creativity that invigorates the mind. As the high deepens, a sense of giddiness and laughter permeates, effortlessly fostering connections and conversation. This delightful journey is further enhanced by a gentle tingling sensation that blankets the body in light relaxation, offering relief without any sense of heaviness. With an average THC level ranging from 15-22%, Silver Fox proves to be a versatile ally for individuals seeking reprieve from conditions such as chronic stress, depression, mood swings, chronic pain, and ADD or ADHD. \n\n Renowned for its multifaceted effects and therapeutic potential, Silver Fox stands as a beacon of hope for those navigating the complexities of modern life. Whether seeking creative inspiration or simply looking to unwind and connect, this rare and exquisite strain promises a journey that is as uplifting as it is soothing, guiding users towards a state of balance and well-being.',
+    descSeo:
+      'Silver Fox emerges as a prized sativa dominant hybrid, originating as a phenotype of the renowned Exodus Cut of UK Cheese. This strain is a visual delight, boasting small, rounded forest green nugs accented with vibrant lime hues, deep amber hairs, and a lavish blanket of silvery amber crystal trichomes. Upon breaking apart each nugget, an invigorating blend of sour pungent skunk and dank cheese wafts through the air, intensifying with each inhalation. Delightful on the palate, Silver Fox offers a flavor profile characterized by fresh sour cheese complemented by deep, rich skunk undertones, delivering a progressively potent experience with every toke.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-silver-fox-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-silver-fox-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-silver-fox-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-silver-fox-bud-02.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Strain White Widow',
+    source: 'https://www.leafly.com/strains/silver-fox',
   },
   {
     slug: 'the-queen-s1',
@@ -894,35 +956,6 @@ export const buds: Bud[] = [
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Purple Zkittlez',
     source: 'https://www.leafly.com/strains/purple-zkittlez',
-  },
-  {
-    slug: 'white-widow',
-    name: 'White Widow',
-    price: 1000,
-    dominance: 'Hybrid',
-    indica: '50',
-    sativa: '50',
-    THC: '15',
-    CBD: '1',
-    effects: 'Energetic, Talkative, Creative',
-    relieves: 'Stress, Anxiety, Pain',
-    grower: 'Unknown',
-    growerSlug: '/my-weed-solutions',
-    environment: 'Organic Indoor',
-    harvest: '18/06/2023',
-    quantity: 0,
-    origin: 'Phuket',
-    description:
-      'White Widow is undeniably one of the most renowned strains globally, originating from the Netherlands and meticulously bred by Green House Seeds. \n\n This well-balanced hybrid is the result of crossing a Brazilian sativa landrace with a resin-rich South Indian indica. \n\n Since its inception in the 1990s, White Widow has become a staple on the menu of Dutch coffee shops. Its distinctive buds are adorned with a glistening layer of crystal resin, serving as a forewarning of its potent effects. Upon consumption, a surge of euphoria and energy quickly takes hold, invigorating both conversation and creativity. The genetic legacy of White Widow has paved the way for other legendary strains like White Russian, White Rhino, and Blue Widow.',
-    descSeo:
-      'White Widow is undeniably one of the most renowned strains globally, originating from the Netherlands and meticulously bred by Green House Seeds.',
-    images: [
-      '/media/green-ghost-degen-weed-shop-strain-white-widow-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-white-widow-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-white-widow-qr-code.webp',
-    ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Strain White Widow',
-    source: 'https://www.leafly.com/strains/white-widow',
   },
   {
     slug: 'buddy-critical',
