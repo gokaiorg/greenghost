@@ -12,7 +12,7 @@ interface FwenItemProps {
 export const FwenItem: FC<FwenItemProps> = ({ name, fwenLogo, fwenLink }) => {
   return (
     <Box
-      width={{ base: '33.33333%', lg: '16.66666%' }}
+      width={{ base: '50%', md: '33.33333%', lg: '25%' }}
       mb={'4'}
       minHeight={'170px'}
     >

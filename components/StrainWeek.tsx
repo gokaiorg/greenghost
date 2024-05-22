@@ -114,22 +114,22 @@ export const StrainWeek = () => {
           >
             Try our new{' '}
             <Link
-              href="/weed-shop/silver-fox"
-              title="New weed Strain - Silver Fox!"
+              href="/weed-shop/el-chapo-og"
+              title="New weed Strain - El Chapo OG!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                {'Silver Fox'}
+                {'El Chapo OG'}
               </Box>
             </Link>{' '}
             and{' '}
             <Link
-              href="/weed-shop/white-widow"
-              title="New weed Strain - White Widow!"
+              href="/weed-shop/mango-sticky-rice"
+              title="New weed Strain - Mango Sticky Rice!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                {'White Widow'}
+                {'Mango Sticky Rice'}
               </Box>
             </Link>{' '}
             strains now!

@@ -12,26 +12,14 @@ export type Grower = {
 
 export const growers: Grower[] = [
   {
-    slug: 'my-weed',
-    name: 'My Weed',
+    slug: 'thaigreenlab',
+    name: 'ThaiGreenLab',
     description:
-      'MW Solutions is a company that believes in its customers and believes in the right to live life their way.',
-    logo: '/media/green-ghost-grower-my-weed-solutions.webp',
-    website: 'https://myweed.in/',
-    facebook: 'https://www.facebook.com/profile.php?id=100085363101043',
-    instagram: '0',
-    twitter: '0',
-    telegram: '0',
-  },
-  {
-    slug: 'buddy-bud-weed',
-    name: 'Buddy Bud Weed',
-    description:
-      'The Buddy Bud takes pride in growing and harvesting only the finest cannabis plants. Plants are carefully tended with love and attention, ensuring that every bud is the highest quality.',
-    logo: '/media/green-ghost-weed-grower-buddy-bud-weed.webp',
-    website: 'https://buddybudweed.com/',
-    facebook: 'https://www.facebook.com/profile.php?id=100090227299714',
-    instagram: 'https://www.instagram.com/buddybudweed/',
+      'Following the legalization of cannabis in Thailand in December 2018, Thailand medical industry consists of highly qualified doctors & practitioners who took rigorous training to build expertise and knowledge over the years.',
+    logo: '/media/green-ghost-weed-grower-thaigreenlab.webp',
+    website: 'https://thaigreenlab.com/',
+    facebook: 'https://www.facebook.com/ThaiGreenLab',
+    instagram: 'https://www.instagram.com/thaigreenlab/',
     twitter: '0',
     telegram: '0',
   },
@@ -60,6 +48,17 @@ export const growers: Grower[] = [
     telegram: 'https://t.me/ohighochannel',
   },
   {
+    slug: 'growland',
+    name: 'Growland',
+    description: 'Passionate and experienced growers in Phuket.',
+    logo: '/media/green-ghost-weed-grower-growland.webp',
+    website: 'https://growland.asia/',
+    facebook: '0',
+    instagram: 'https://www.instagram.com/ohigho_',
+    twitter: '0',
+    telegram: '0',
+  },
+  {
     slug: 'sweed-dreams',
     name: 'Sweed Dreams',
     description:
@@ -79,6 +78,30 @@ export const growers: Grower[] = [
     logo: '/media/green-ghost-weed-grower-cbd-cannabiz-farm.webp',
     website: 'https://www.cbdcannabizfarm.com',
     facebook: 'https://www.facebook.com/cbdcannabiz/',
+    instagram: '0',
+    twitter: '0',
+    telegram: '0',
+  },
+  {
+    slug: 'buddy-bud-weed',
+    name: 'Buddy Bud Weed',
+    description:
+      'The Buddy Bud takes pride in growing and harvesting only the finest cannabis plants. Plants are carefully tended with love and attention, ensuring that every bud is the highest quality.',
+    logo: '/media/green-ghost-weed-grower-buddy-bud-weed.webp',
+    website: 'https://buddybudweed.com/',
+    facebook: 'https://www.facebook.com/profile.php?id=100090227299714',
+    instagram: 'https://www.instagram.com/buddybudweed/',
+    twitter: '0',
+    telegram: '0',
+  },
+  {
+    slug: 'my-weed',
+    name: 'My Weed',
+    description:
+      'MW Solutions is a company that believes in its customers and believes in the right to live life their way.',
+    logo: '/media/green-ghost-grower-my-weed-solutions.webp',
+    website: 'https://myweed.in/',
+    facebook: 'https://www.facebook.com/profile.php?id=100085363101043',
     instagram: '0',
     twitter: '0',
     telegram: '0',
