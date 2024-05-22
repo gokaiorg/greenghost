@@ -4,20 +4,35 @@ export const fwen = [
     fwenLogo: '/media/green-ghost-weed-grower-cosmic-temple-vibes.webp',
     fwenLink: 'https://cosmictemplevibes.com/',
   },
+  // {
+  //   name: 'Buddy Bud Weed',
+  //   fwenLogo: '/media/green-ghost-weed-grower-buddy-bud-weed.webp',
+  //   fwenLink: 'https://buddybudweed.com/',
+  // },
+  // {
+  //   name: 'Ohigho',
+  //   fwenLogo: '/media/green-ghost-weed-grower-ohigho.webp',
+  //   fwenLink: 'https://www.instagram.com/ohigho_/',
+  // },
   {
-    name: 'Buddy Bud Weed',
-    fwenLogo: '/media/green-ghost-weed-grower-buddy-bud-weed.webp',
-    fwenLink: 'https://buddybudweed.com/',
+    name: 'ThaiGreenLab',
+    fwenLogo: '/media/green-ghost-weed-grower-thaigreenlab.webp',
+    fwenLink: 'https://thaigreenlab.com/',
   },
   {
-    name: 'Ohigho',
-    fwenLogo: '/media/green-ghost-weed-grower-ohigho.webp',
-    fwenLink: 'https://www.instagram.com/ohigho_/',
+    name: 'Growland',
+    fwenLogo: '/media/green-ghost-weed-grower-growland.webp',
+    fwenLink: 'https://growland.asia/',
   },
   {
     name: 'Sweed Dreams',
     fwenLogo: '/media/green-ghost-weed-grower-sweed-dreams.webp',
     fwenLink: 'https://sweeddreamsthai.com/',
+  },
+  {
+    name: 'CBD Cannabiz farm',
+    fwenLogo: '/media/green-ghost-weed-grower-cbd-cannabiz-farm.webp',
+    fwenLink: 'https://www.cbdcannabizfarm.com',
   },
   {
     name: 'Phuket High Times',
@@ -28,5 +43,10 @@ export const fwen = [
     name: 'SlimJim',
     fwenLogo: '/media/green-ghost-slimjim.webp',
     fwenLink: 'https://slimjim.in/',
+  },
+  {
+    name: 'Califire',
+    fwenLogo: '/media/green-ghost-califire.webp',
+    fwenLink: 'https://www.instagram.com/califiredistribution/',
   },
 ];
