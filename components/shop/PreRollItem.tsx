@@ -137,7 +137,7 @@ export const PreRollItem = ({ bud }: PreRollItemProps) => {
                 fontSize={{ base: 18, lg: 20 }}
                 color={'ghostVerse.green.base'}
               >
-                {(bud.price + 20)} THB
+                {bud.price + 20} THB
               </Box>
             </Box>
           </Box>

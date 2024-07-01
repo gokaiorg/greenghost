@@ -114,12 +114,12 @@ export const StrainWeek = () => {
           >
             Try our new{' '}
             <Link
-              href="/weed-shop/el-chapo-og"
-              title="New weed Strain - El Chapo OG!"
+              href="/weed-shop/forbidden-fruit"
+              title="New weed Strain - Forbidden Fruit!"
               passHref
             >
               <Box as={'span'} color={'ghostVerse.blue.base'}>
-                {'El Chapo OG'}
+                {'Forbidden Fruit'}
               </Box>
             </Link>{' '}
             and{' '}
