@@ -1,15 +1,5 @@
 export const homehero = [
   {
-    title: 'New Weed Shop in Rawai',
-    image: '/media/green-ghost-weed-shop-rawai-delivery.webp',
-    imageAlt: 'Green Ghost 🌿👻 Rawai | Weed Delivery',
-    description:
-      "Green Ghost 🌿👻 Rawai isn't just a dispensary; it's a lifestyle crafted for those who value both exclusivity and efficiency.",
-    link: 'https://maps.app.goo.gl/6c4fkAW4BFMbBfYJ8',
-    linkTitle: 'Green Ghost 🌿👻 Rawai | Weed Delivery',
-    linkLabel: 'Direction',
-  },
-  {
     title: 'DEGEN WEED SHOP',
     image: '/media/green-ghost-weed-shop-phuket.webp',
     imageAlt: 'Green Ghost Weed Shop Phuket',
