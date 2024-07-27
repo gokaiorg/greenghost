@@ -10,6 +10,7 @@ const BoxItemShop: FC<BoxItemProps> = ({ children }) => {
     <Box
       backdropFilter={'blur(3px)'}
       p={1}
+      // border={'1px'}
       pos={'relative'}
       fontWeight={'bold'}
       fontSize={'lg'}
