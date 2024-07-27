@@ -49,7 +49,7 @@ export const PreRollItem = ({ bud }: PreRollItemProps) => {
                   display={'flex'}
                   whiteSpace={'nowrap'}
                   as={'h3'}
-                  color={'ghostVerse.blue.base'}
+                  color={'ghostVerse.dominance.indica'}
                   w={'30%'}
                 >
                   {bud.dominance} {bud.indica}%
@@ -60,7 +60,7 @@ export const PreRollItem = ({ bud }: PreRollItemProps) => {
                   display={'flex'}
                   whiteSpace={'nowrap'}
                   as={'h3'}
-                  color={'ghostVerse.pink.base'}
+                  color={'ghostVerse.dominance.sativa'}
                   w={'30%'}
                 >
                   {bud.dominance} {bud.sativa}%
@@ -71,7 +71,7 @@ export const PreRollItem = ({ bud }: PreRollItemProps) => {
                   display={'flex'}
                   whiteSpace={'nowrap'}
                   as={'h3'}
-                  color={'ghostVerse.orange.base'}
+                  color={'ghostVerse.dominance.hybrid'}
                   w={'30%'}
                 >
                   {bud.dominance}

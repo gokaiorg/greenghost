@@ -14,7 +14,6 @@ import BoxItemTitleShop from './elements/BoxItemTitleShop';
 import BoxItemDescShop from './elements/BoxItemDescShop';
 import BoxItemPriceShop from './elements/BoxItemPriceShop';
 import BoxItemList from './elements/BoxItemList';
-import ButtonAddCart from './elements/ButtonAddCart';
 
 type BudItemProps = {
   bud: Bud;
@@ -67,7 +66,6 @@ export const BudItem = ({ bud }: BudItemProps) => {
                   </SwiperSlide>
                 )
             )}
-            <ButtonAddCart>Buy</ButtonAddCart>
           </Swiper>
           <BoxItemDescShop>
             <BoxItemTitleShop>
@@ -82,7 +80,10 @@ export const BudItem = ({ bud }: BudItemProps) => {
                 ) : bud.quantity === 0 ? (
                   <Box
                     fontSize={{ base: 14, lg: 16 }}
+                    margin={'-0.5rem'}
+                    padding={'0.5rem'}
                     color={'ghostVerse.red.base'}
+                    backgroundColor={'white'}
                   >
                     Sold Out
                   </Box>
@@ -100,17 +101,29 @@ export const BudItem = ({ bud }: BudItemProps) => {
 
             <Box display={'flex'} fontFamily={'vt323'} fontSize={'2xl'} mb={1}>
               {bud.dominance == 'Indica' && (
-                <Box as={'h3'} color={'ghostVerse.blue.base'} marginRight={2}>
+                <Box
+                  as={'h3'}
+                  color={'ghostVerse.dominance.indica'}
+                  marginRight={2}
+                >
                   {bud.dominance} {bud.indica}%
                 </Box>
               )}
               {bud.dominance == 'Sativa' && (
-                <Box as={'h3'} color={'ghostVerse.pink.base'} marginRight={2}>
+                <Box
+                  as={'h3'}
+                  color={'ghostVerse.dominance.sativa'}
+                  marginRight={2}
+                >
                   {bud.dominance} {bud.sativa}%
                 </Box>
               )}
               {bud.dominance == 'Hybrid' && (
-                <Box as={'h3'} color={'ghostVerse.orange.base'} marginRight={2}>
+                <Box
+                  as={'h3'}
+                  color={'ghostVerse.dominance.hybrid'}
+                  marginRight={2}
+                >
                   {bud.dominance}
                 </Box>
               )}
@@ -152,18 +165,6 @@ export const BudItem = ({ bud }: BudItemProps) => {
                 )}
               </Box>
             </Box>
-
-            {bud.effects !== 'undefined' && (
-              <Box
-                display={'flex'}
-                fontFamily={'vt323'}
-                fontSize={'lg'}
-                mt={'auto'}
-                color={'ghostVerse.grey.base'}
-              >
-                {bud.effects}
-              </Box>
-            )}
           </BoxItemDescShop>
         </BoxItemShop>
       </Link>

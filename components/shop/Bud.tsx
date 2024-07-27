@@ -1,5 +1,5 @@
 // Bud.tsx
-import { Box, Select, Checkbox } from '@chakra-ui/react';
+import { Box, Button, Checkbox } from '@chakra-ui/react';
 import { useState } from 'react';
 import { buds } from '../../config/buds';
 import { BudItem } from './BudItem';
@@ -8,21 +8,16 @@ import MenuFilterShop from './elements/MenuFilterShop';
 import { ListTitle } from './elements/ListTitle';
 import WrapperShop from './elements/WrapperShop';
 import WrapperInnerShop from './elements/WrapperInnerShop';
+import { IconSativa } from '../media/IconSativa';
+import { IconHybrid } from '../media/IconHybrid';
+import { IconIndica } from '../media/IconIndica';
 
 type DominanceOption = 'All' | 'Sativa' | 'Indica' | 'Hybrid';
-type GrowerOption = 'All';
-('Buddy Bud Weed');
-('Cosmic Temple Vibes');
-('My Weed Solutions');
-('Ohigho');
-('Sweed dreams');
 
 export const Bud = () => {
-  const [sortBy, setSortBy] = useState('priceLowToHigh');
-  const [showUnavailable, setShowUnavailable] = useState(false);
+  const [showUnavailable, setShowUnavailable] = useState(true);
   const [dominanceFilter, setDominanceFilter] =
     useState<DominanceOption>('All');
-  const [growerFilter, setGrowerFilter] = useState<GrowerOption>('All');
 
   const filteredBuds = buds.filter((bud) => {
     if (!showUnavailable && (bud.quantity === 0 || bud.price === 999)) {
@@ -32,48 +27,17 @@ export const Bud = () => {
     if (dominanceFilter !== 'All' && bud.dominance !== dominanceFilter) {
       return false;
     }
-    if (growerFilter !== 'All' && bud.grower !== growerFilter) {
-      return false;
-    }
 
     return true;
   });
 
-  const sortedBuds = [...filteredBuds].sort((a, b) => {
-    switch (sortBy) {
-      case 'priceLowToHigh':
-        return Number(a.price) - Number(b.price);
-      case 'priceHighToLow':
-        return Number(b.price) - Number(a.price);
-      case 'THCHighToLow':
-        return Number(b.THC) - Number(a.THC);
-      case 'THCLowToHigh':
-        return Number(a.THC) - Number(b.THC);
-      case 'sativaHighToLow':
-        return Number(b.sativa) - Number(a.sativa);
-      case 'sativaLowToHigh':
-        return Number(a.sativa) - Number(b.sativa);
-      case 'indicaHighToLow':
-        return Number(b.indica) - Number(a.indica);
-      case 'indicaLowToHigh':
-        return Number(a.indica) - Number(b.indica);
-      default:
-        return 0;
-    }
-  });
+  // Sort buds by price from low to high
+  const sortedBuds = filteredBuds.sort((a, b) => a.price - b.price);
 
-  const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSortBy(event.target.value);
-  };
-
-  const handleDominanceChange = (
-    event: React.ChangeEvent<HTMLSelectElement>
-  ) => {
-    setDominanceFilter(event.target.value as DominanceOption);
-  };
-
-  const handleGrowerChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setGrowerFilter(event.target.value as GrowerOption);
+  const handleDominanceChange = (dominance: DominanceOption) => {
+    setDominanceFilter((prevFilter) =>
+      prevFilter === dominance ? 'All' : dominance
+    );
   };
 
   const handleShowUnavailableChange = () => {
@@ -86,100 +50,101 @@ export const Bud = () => {
         <HomeSectionTitle title="Buds Menu" />
         <WrapperInnerShop>
           <ListTitle title="Buds price for 1 gram." />
-          <MenuFilterShop>
-            <Box w={'full'} mb={{ base: '2' }}>
-              <Box display={'none'}>
-                <label htmlFor={'filters'}>Filters</label>
-              </Box>
-              <Select
-                id={'filters'}
-                value={sortBy}
-                onChange={handleSortChange}
-                borderRadius={'0'}
-                color={'ghostVerse.green.base'}
-                borderColor={'black'}
-                outline={'none'}
-                p={0}
-                cursor={'pointer'}
-                _hover={{ borderColor: 'ghostVerse.green.base' }}
-                _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
-                w={{ base: '100%' }}
-              >
-                <option value="priceLowToHigh">Price: Low to High</option>
-                <option value="priceHighToLow">Price: High to Low</option>
-                <option value="THCHighToLow">THC: High to Low</option>
-                <option value="THCLowToHigh">THC: Low to High</option>
-                <option value="sativaHighToLow">Sativa: High to Low</option>
-                <option value="sativaLowToHigh">Sativa: Low to High</option>
-                <option value="indicaHighToLow">Indica: High to Low</option>
-                <option value="indicaLowToHigh">Indica: Low to High</option>
-              </Select>
-            </Box>
-            <Box w={'full'} mb={{ base: '2' }}>
-              <Box display={'none'}>
-                <label htmlFor={'dominance'}>Dominance</label>
-              </Box>
-              <Select
-                id={'dominance'}
-                value={dominanceFilter}
-                onChange={handleDominanceChange}
-                borderRadius={'0'}
-                color={'ghostVerse.green.base'}
-                borderColor={'black'}
-                outline={'none'}
-                p={0}
-                cursor={'pointer'}
-                _hover={{ borderColor: 'ghostVerse.green.base' }}
-                _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
-                w={{ base: '100%' }}
-              >
-                <option value="All">All Dominance</option>
-                <option value="Sativa">Sativa</option>
-                <option value="Indica">Indica</option>
-                <option value="Hybrid">Hybrid</option>
-              </Select>
-            </Box>
-            <Box w={'full'} mb={{ base: '2' }}>
-              <Box display={'none'}>
-                <label htmlFor={'grower'}>Grower</label>
-              </Box>
-              <Select
-                id={'grower'}
-                value={growerFilter}
-                onChange={handleGrowerChange}
-                borderRadius={'0'}
-                color={'ghostVerse.green.base'}
-                borderColor={'black'}
-                outline={'none'}
-                p={0}
-                cursor={'pointer'}
-                _hover={{ borderColor: 'ghostVerse.green.base' }}
-                _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
-                w={{ base: '100%' }}
-              >
-                <option value="All">All Growers</option>
-                <option value="Buddy Bud Weed">Buddy Bud Weed</option>
-                <option value="Cosmic Temple Vibes">Cosmic Temple Vibes</option>
-                <option value="My Weed Solutions">My Weed Solutions</option>
-                <option value="Ohigho">Ohigho</option>
-                <option value="Sweed Dreams">Sweed Dreams</option>
-              </Select>
-            </Box>
-            <Checkbox
-              ml={{ base: '4' }}
-              my={{ base: '2' }}
-              colorScheme="green"
-              display={'flex'}
-              whiteSpace={'nowrap'}
-              checked={showUnavailable}
-              onChange={handleShowUnavailableChange}
-              _checked={{ color: 'ghostVerse.green.base' }}
-            >
-              All Buds
-            </Checkbox>
-          </MenuFilterShop>
         </WrapperInnerShop>
       </WrapperShop>
+      <MenuFilterShop>
+        <Box
+          w={'full'}
+          mb={{ base: '2' }}
+          display={'flex'}
+          flexWrap={'wrap'}
+          alignItems={'center'}
+        >
+          <Button
+            border={'1px'}
+            borderColor={
+              dominanceFilter === 'Sativa'
+                ? 'ghostVerse.dominance.sativa'
+                : 'black'
+            }
+            backgroundColor={dominanceFilter === 'Sativa' ? 'black' : 'black'}
+            color={
+              dominanceFilter === 'Sativa'
+                ? 'ghostVerse.dominance.sativa'
+                : 'ghostVerse.dominance.sativa'
+            }
+            onClick={() => handleDominanceChange('Sativa')}
+            mr={2}
+            px={2}
+            py={4}
+            fontSize={'2xl'}
+            _hover={{
+              backgroundColor: 'black',
+            }}
+          >
+            <IconSativa />
+            <Box ml={2}>{'Sativa'}</Box>
+          </Button>
+          <Button
+            border={'1px'}
+            borderColor={
+              dominanceFilter === 'Hybrid'
+                ? 'ghostVerse.dominance.hybrid'
+                : 'black'
+            }
+            backgroundColor={dominanceFilter === 'Hybrid' ? 'black' : 'black'}
+            color={
+              dominanceFilter === 'Hybrid'
+                ? 'ghostVerse.dominance.hybrid'
+                : 'ghostVerse.dominance.hybrid'
+            }
+            onClick={() => handleDominanceChange('Hybrid')}
+            mr={2}
+            px={2}
+            py={4}
+            fontSize={'2xl'}
+            _hover={{
+              backgroundColor: 'black',
+            }}
+          >
+            <IconHybrid />
+            <Box ml={2}>{'Hybrid'}</Box>
+          </Button>
+          <Button
+            border={'1px'}
+            borderColor={
+              dominanceFilter === 'Indica'
+                ? 'ghostVerse.dominance.indica'
+                : 'black'
+            }
+            backgroundColor={dominanceFilter === 'Indica' ? 'black' : 'black'}
+            color={
+              dominanceFilter === 'Indica'
+                ? 'ghostVerse.dominance.indica'
+                : 'ghostVerse.dominance.indica'
+            }
+            onClick={() => handleDominanceChange('Indica')}
+            mr={2}
+            px={2}
+            py={4}
+            fontSize={'2xl'}
+            _hover={{
+              backgroundColor: 'black',
+            }}
+          >
+            <IconIndica />
+            <Box ml={2}>{'Indica'}</Box>
+          </Button>
+          <Checkbox
+            ml={4}
+            colorScheme={'#13DE00'}
+            isChecked={!showUnavailable}
+            onChange={handleShowUnavailableChange}
+          >
+            Hide Sold Out
+          </Checkbox>
+        </Box>
+      </MenuFilterShop>
       <Box display={'flex'} flexWrap={'wrap'} mx={-0.5}>
         {sortedBuds.map((bud) => (
           <BudItem key={bud.slug} bud={bud} />

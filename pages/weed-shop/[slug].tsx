@@ -16,7 +16,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import BoxInfoProduct from '../../components/box/BoxInfoProduct';
 import BoxDescription from '../../components/box/BoxDescription';
-import BoxInfoGrow from '../../components/box/BoxInfoGrow';
 import BoxInfoLeft from '../../components/box/BoxInfoLeft';
 import BoxInfoRight from '../../components/box/BoxInfoRight';
 import BoxInfoLabel from '../../components/box/BoxInfoLabel';
@@ -155,17 +154,29 @@ export default function BudPage({ bud }: BudPageProps) {
         <BoxInfoProduct>
           <BoxInfoLeft>
             {bud.dominance == 'Indica' && (
-              <Box as={'h2'} color={'ghostVerse.blue.base'} marginRight={4}>
+              <Box
+                as={'h2'}
+                color={'ghostVerse.dominance.indica'}
+                marginRight={4}
+              >
                 {bud.dominance} {bud.indica}%
               </Box>
             )}
             {bud.dominance == 'Sativa' && (
-              <Box as={'h2'} color={'ghostVerse.pink.base'} marginRight={4}>
+              <Box
+                as={'h2'}
+                color={'ghostVerse.dominance.sativa'}
+                marginRight={4}
+              >
                 {bud.dominance} {bud.sativa}%
               </Box>
             )}
             {bud.dominance == 'Hybrid' && (
-              <Box as={'h2'} color={'ghostVerse.orange.base'} marginRight={4}>
+              <Box
+                as={'h2'}
+                color={'ghostVerse.dominance.hybrid'}
+                marginRight={4}
+              >
                 {bud.dominance}
               </Box>
             )}
@@ -257,7 +268,7 @@ export default function BudPage({ bud }: BudPageProps) {
             )}
           </BoxInfoRight>
         </BoxInfoProduct>
-        {bud.price !== 999 && bud.grower !== 'Unknown' && (
+        {/* {bud.price !== 999 && bud.grower !== 'Unknown' && (
           <BoxInfoGrow>
             <Box display={'flex'} flexDirection={{ base: 'column', xl: 'row' }}>
               <Box as={'h3'} mr={2}>
@@ -304,7 +315,7 @@ export default function BudPage({ bud }: BudPageProps) {
               </Box>
             </Box>
           </BoxInfoGrow>
-        )}
+        )} */}
         <BoxDescription>
           {bud.description}
           {bud.source !== 'undefined' && (
