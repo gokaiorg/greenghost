@@ -140,6 +140,7 @@ export const Bud = () => {
             colorScheme={'#13DE00'}
             isChecked={!showUnavailable}
             onChange={handleShowUnavailableChange}
+            fontSize={'2xl'}
           >
             Hide Sold Out
           </Checkbox>
