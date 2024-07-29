@@ -82,8 +82,8 @@ export const BudItem = ({ bud }: BudItemProps) => {
                     fontSize={{ base: 14, lg: 16 }}
                     margin={'-0.5rem'}
                     padding={'0.5rem'}
-                    color={'ghostVerse.red.base'}
-                    backgroundColor={'white'}
+                    color={'white'}
+                    backgroundColor={'ghostVerse.red.base'}
                   >
                     Sold Out
                   </Box>
@@ -129,18 +129,21 @@ export const BudItem = ({ bud }: BudItemProps) => {
               )}
               <Box
                 display={'flex'}
-                fontFamily={'vt323'}
                 fontSize={'2xl'}
                 flexWrap={'wrap'}
                 mb={1}
                 ml={'auto'}
               >
                 {bud.THC >= bud.CBD && (
-                  <Box display={'flex'} marginRight={2} flexDirection={'row'}>
+                  <Box
+                    display={'flex'}
+                    marginRight={2}
+                    flexDirection={'row'}
+                    color={'ghostVerse.grey.base'}
+                  >
                     THC
                     <Box
                       marginLeft={2}
-                      color={'ghostVerse.green.base'}
                       display={'flex'}
                       flexDirection={'row'}
                       alignItems={'baseline'}
@@ -150,11 +153,15 @@ export const BudItem = ({ bud }: BudItemProps) => {
                   </Box>
                 )}
                 {bud.THC <= bud.CBD && bud.CBD !== '0' && (
-                  <Box display={'flex'} marginRight={2} flexDirection={'row'}>
+                  <Box
+                    display={'flex'}
+                    marginRight={2}
+                    flexDirection={'row'}
+                    color={'ghostVerse.grey.base'}
+                  >
                     CBD
                     <Box
                       marginLeft={2}
-                      color={'ghostVerse.green.base'}
                       display={'flex'}
                       flexDirection={'row'}
                       alignItems={'baseline'}

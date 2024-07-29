@@ -54,9 +54,9 @@ export const theme = extendTheme({
         base: '#6dd0f6',
       },
       dominance: {
-        sativa: '#d1fee5',
-        hybrid: '#c7e37b',
-        indica: '#ffd2eb',
+        sativa: '#1d7241',
+        hybrid: '#c0ef24',
+        indica: '#ee9cc9',
       },
       green: {
         transparent: 'rgba(75,254,38, 0.1)',
