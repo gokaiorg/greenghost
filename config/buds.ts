@@ -24,6 +24,36 @@ export type Bud = {
 
 export const buds: Bud[] = [
   {
+    slug: 'thai-stick',
+    name: 'Thai Stick',
+    price: 100,
+    dominance: 'Sativa',
+    indica: '0',
+    sativa: '100',
+    THC: '19',
+    CBD: '0',
+    effects: 'Energetic, Focused, Creative',
+    relieves: 'Stress, Depression, Anxiety',
+    grower: 'Green Ghost',
+    growerSlug: '',
+    environment: 'Organic Greenhouse',
+    harvest: '12/02/2024',
+    quantity: 98,
+    origin: 'Thailand',
+    description:
+      "Immerse yourself in the rich heritage of the Thai Stick strain, originating from a pure sativa landrace native to Thailand, later introduced to the U.S. during the 70s and 80s. Aptly named 'Thai Sticks,' this strain's buds are traditionally dried and bound into long sticks. The authentic Thai lineage has given birth to renowned strains like Voodoo, Juicy Fruit, and the timeless Haze. Thai delivers potent yet comfortable effects, accompanied by a distinctive fruity and citrus aroma. A challenge for growers outside tropical climates, Thai thrives in greenhouse gardens, rewarding patient experts with its extended growth cycle and unhurried flowering process.",
+    descSeo:
+      "Immerse yourself in the rich heritage of the Thai Stick strain, originating from a pure sativa landrace native to Thailand, later introduced to the U.S. during the 70s and 80s. Aptly named 'Thai Sticks,' this strain's buds are traditionally dried and bound into long sticks. The authentic Thai lineage has given birth to renowned strains like Voodoo, Juicy Fruit, and the timeless Haze. Thai delivers potent yet comfortable effects, accompanied by a distinctive fruity and citrus aroma. A challenge for growers outside tropical climates, Thai thrives in greenhouse gardens, rewarding patient experts with its extended growth cycle and unhurried flowering process.",
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-thai-stick-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-thai-stick-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-thai-stick-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-thai-stick-bud-02.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Thai Stick',
+    source: 'https://www.leafly.com/strains/thai',
+  },
+  {
     slug: 'gorilla-goo',
     name: 'Gorilla Goo',
     price: 100,
@@ -353,36 +383,6 @@ export const buds: Bud[] = [
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Mango Sticky Rice',
     source: 'undefined',
-  },
-  {
-    slug: 'thai-stick',
-    name: 'Thai Stick',
-    price: 25,
-    dominance: 'Sativa',
-    indica: '0',
-    sativa: '100',
-    THC: '19',
-    CBD: '0',
-    effects: 'Energetic, Focused, Creative',
-    relieves: 'Stress, Depression, Anxiety',
-    grower: 'Green Ghost',
-    growerSlug: '',
-    environment: 'Outdoor',
-    harvest: '12/02/2024',
-    quantity: 98,
-    origin: 'Thailand',
-    description:
-      "Immerse yourself in the rich heritage of the Thai Stick strain, originating from a pure sativa landrace native to Thailand, later introduced to the U.S. during the 70s and 80s. Aptly named 'Thai Sticks,' this strain's buds are traditionally dried and bound into long sticks. The authentic Thai lineage has given birth to renowned strains like Voodoo, Juicy Fruit, and the timeless Haze. Thai delivers potent yet comfortable effects, accompanied by a distinctive fruity and citrus aroma. A challenge for growers outside tropical climates, Thai thrives in greenhouse gardens, rewarding patient experts with its extended growth cycle and unhurried flowering process.",
-    descSeo:
-      "Immerse yourself in the rich heritage of the Thai Stick strain, originating from a pure sativa landrace native to Thailand, later introduced to the U.S. during the 70s and 80s. Aptly named 'Thai Sticks,' this strain's buds are traditionally dried and bound into long sticks. The authentic Thai lineage has given birth to renowned strains like Voodoo, Juicy Fruit, and the timeless Haze. Thai delivers potent yet comfortable effects, accompanied by a distinctive fruity and citrus aroma. A challenge for growers outside tropical climates, Thai thrives in greenhouse gardens, rewarding patient experts with its extended growth cycle and unhurried flowering process.",
-    images: [
-      '/media/green-ghost-degen-weed-shop-strain-thai-stick-bud-01.webp',
-      '/media/green-ghost-degen-weed-shop-strain-thai-stick-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-thai-stick-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-thai-stick-bud-02.webp',
-    ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Strain Thai Stick',
-    source: 'https://www.leafly.com/strains/thai',
   },
   {
     slug: 'fat-banana',
