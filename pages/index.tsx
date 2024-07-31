@@ -5,7 +5,6 @@ import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import Head from 'next/head';
 import { HomeFeature } from '../components/HomeFeatures';
 import { HomeMenu } from '../components/HomeMenu';
-import { StrainWeek } from '../components/StrainWeek';
 import { Review } from '../components/Review';
 import { HomeHero } from '../components/HomeHero';
 import { Fwen } from '../components/Fwen';
@@ -14,18 +13,20 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 Degen Weed Shop Thailand.</title>
+        <title>
+          Green Ghost 🌿👻 Degen Weed Shop Thailand and best cannabis delivery
+        </title>
         <meta
           name="description"
-          content="Green Ghost is a cannabis & weed shop in Thailand offering a wide variety of locally-sourced and imported products, including flowers, edibles, and accessories. We offer instant weed delivery in Phuket."
+          content="Green Ghost is a cannabis & weed shop in Phuket Thailand offering a wide variety of locally-sourced and imported products, including flowers, edibles, accessories, and instant weed delivery in Phuket."
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Degen Weed Shop Thailand."
+          content="Green Ghost 🌿👻 Degen Weed Shop Thailand and best cannabis delivery"
         />
         <meta
           property="og:description"
-          content="Green Ghost is a cannabis & weed shop in Thailand offering a wide variety of locally-sourced and imported products, including flowers, edibles, and accessories. We offer instant weed delivery in Phuket."
+          content="Green Ghost is a cannabis & weed shop in Phuket Thailand offering a wide variety of locally-sourced and imported products, including flowers, edibles, accessories, and instant weed delivery in Phuket."
         />
         <meta
           property="og:image"
@@ -36,11 +37,11 @@ const Home: NextPage = () => {
         <meta property="og:url" content="https://green.gd/" />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Degen Weed Shop Thailand."
+          content="Green Ghost 🌿👻 Degen Weed Shop Thailand and best cannabis delivery"
         />
         <meta
           name="twitter:description"
-          content="Green Ghost is a cannabis & weed shop in Thailand offering a wide variety of locally-sourced and imported products, including flowers, edibles, and accessories. We offer instant weed delivery in Phuket."
+          content="Green Ghost is a cannabis & weed shop in Phuket Thailand offering a wide variety of locally-sourced and imported products, including flowers, edibles, accessories, and instant weed delivery in Phuket."
         />
         <meta
           name="twitter:image"
@@ -52,7 +53,6 @@ const Home: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <StrainWeek />
         <HomeHero />
         <HomeMenu />
         <HomeFeature />
