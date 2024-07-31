@@ -2,6 +2,7 @@ import { Container, Box, Text } from '@chakra-ui/react';
 import { SocialMediaIcons } from './SocialMediaIcons';
 import { MenuFooter } from './MenuFooter';
 import { ImgGhostverse } from './media/ImgGhostverse';
+import { BuyOnline } from './BuyOnline';
 
 export const Footer = () => {
   return (
@@ -17,6 +18,7 @@ export const Footer = () => {
         fontWeight="normal"
         textAlign={'center'}
       >
+        <BuyOnline />
         <SocialMediaIcons />
         <MenuFooter />
         <Box
