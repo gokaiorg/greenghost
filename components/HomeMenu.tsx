@@ -1,279 +1,157 @@
 import { Box, Text } from '@chakra-ui/react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { IconMenu } from './media/IconMenu';
 
 export const HomeMenu = () => {
   return (
     <Box
       display={'flex'}
-      mt={{ base: 10, lg: 20 }}
+      mt={{ base: 10 }}
       mb={10}
       flexWrap={'wrap'}
       alignItems={'stretch'}
-      mx={-1}
     >
       <Box display={'flex'} flexDir={'column'} w={'100%'} alignItems={'center'}>
-        <Box w={{ base: '100px', lg: '200px' }}>
-          <motion.div
-            animate={{
-              x: [-10, 10, -10],
-            }}
-            transition={{
-              duration: 1,
-              ease: 'easeInOut',
-              repeat: Infinity,
-              repeatDelay: 0,
-            }}
-          >
-            <IconMenu />
-          </motion.div>
+        <Box as={'span'} w={{ base: '80%', lg: '50%' }}>
+          <IconMenu />
         </Box>
         <Text
-          as={'h3'}
+          as={'h2'}
           fontSize={{ base: 24, lg: 34 }}
           mx={'auto'}
           fontFamily={'CubicFive12'}
-          mt={{ base: 5, lg: 10 }}
-          mb={{ base: 5, lg: 10 }}
+          mt={{ base: 5 }}
+          mb={{ base: 5 }}
           textAlign={'center'}
         >
-          Weed Shop Menu
+          Weed Menu
         </Text>
       </Box>
-      <Box
-        width={{ base: '50%', lg: '20%' }}
-        mb={{ base: 1, lg: 2 }}
-        minHeight={'170px'}
-      >
-        <Link href={'/weed-shop'} passHref title="Weed Shop Menu Buds">
-          <Box
-            h={'100%'}
-            fontSize={{ base: 'xl' }}
-            color={'ghostVerse.green.base'}
-            fontFamily={'CubicFive12'}
-            borderColor={'ghostVerse.grey.base'}
-            borderWidth={1}
-            mx={{ base: 0.5, lg: 1 }}
-            bgColor={'ghostVerse.dark.lighter'}
-            textAlign={'center'}
-            p={4}
-            display={'flex'}
-            justifyContent={'center'}
-            flexDirection={'column'}
-            alignItems={'center'}
-            transition={'all .3s'}
-            _hover={{
-              borderColor: 'ghostVerse.green.base',
-            }}
-          >
-            <Box w={'74px'}>
-              <Image
-                src="/media/green-ghost-degen-weed-shop-menu-buds.png"
-                width={380}
-                height={494}
-                alt="Weed Shop Menu - Buds."
-              />
-            </Box>
-            <Box
-              as={'h4'}
+
+      <Box display={'flex'}>
+        <Text
+          as={'p'}
+          fontSize={{ base: 26, md: 44 }}
+          lineHeight={1}
+          fontFamily={'vt323'}
+          w={{ base: '60%', md: '70%' }}
+          mr={4}
+        >
+          Find the rarest strains, from top-tier selections to the cheapest weed
+          in Phuket. Whether you seek premium quality or great value, we have
+          something for everyone in our cannabis menu.
+        </Text>
+
+        <Box
+          display={'flex'}
+          flexDirection={{ base: 'column' }}
+          fontSize={{ base: 16, md: 20 }}
+          fontFamily={'CubicFive12'}
+          color={'ghostVerse.green.base'}
+          justifyContent={{ base: 'top', md: 'center' }}
+        >
+          <Link href={'/weed-shop'} passHref title="Weed Shop Menu Buds">
+            <Text
+              as={'h3'}
+              mb={2}
               w={'100%'}
-              fontSize={{ base: 18, md: 22 }}
-              mt={'auto'}
+              _hover={{
+                textDecoration: 'underline',
+              }}
             >
               Buds
-            </Box>
-          </Box>
-        </Link>
-      </Box>
-      <Box
-        width={{ base: '50%', lg: '20%' }}
-        mb={{ base: 1, lg: 2 }}
-        minHeight={'170px'}
-      >
-        <Link
-          href={'/weed-shop-pre-rolls'}
-          passHref
-          title="Weed Shop Menu Pre Rolls"
-        >
-          <Box
-            h={'100%'}
-            fontSize={{ base: 'xl' }}
-            color={'ghostVerse.green.base'}
-            fontFamily={'CubicFive12'}
-            borderColor={'ghostVerse.grey.base'}
-            borderWidth={1}
-            mx={{ base: 0.5, lg: 1 }}
-            bgColor={'ghostVerse.dark.lighter'}
-            textAlign={'center'}
-            p={4}
-            display={'flex'}
-            justifyContent={'center'}
-            flexDirection={'column'}
-            alignItems={'center'}
-            transition={'all .3s'}
-            _hover={{
-              borderColor: 'ghostVerse.green.base',
-            }}
+            </Text>
+          </Link>
+          <Link
+            href={'/weed-shop-pre-rolls'}
+            passHref
+            title="Weed Shop Menu Pre Rolls"
           >
-            <Box w={'28px'}>
-              <Image
-                src="/media/green-ghost-degen-weed-shop-menu-pre-rolls.png"
-                width={380}
-                height={494}
-                alt="Weed Shop Menu - Pre-Rolls."
-              />
-            </Box>
-            <Box
-              as={'h4'}
+            <Text
+              as={'h3'}
+              mb={2}
               w={'100%'}
-              fontSize={{ base: 18, md: 22 }}
-              mt={'auto'}
+              _hover={{
+                textDecoration: 'underline',
+              }}
             >
               Pre-Rolls
-            </Box>
-          </Box>
-        </Link>
-      </Box>
-      <Box
-        width={{ base: '50%', lg: '20%' }}
-        mb={{ base: 1, lg: 2 }}
-        minHeight={'170px'}
-      >
-        <Link
-          href={'/weed-shop-edibles'}
-          passHref
-          title={'Weed Shop Menu Edibles'}
-        >
-          <Box
-            h={'100%'}
-            fontSize={{ base: 'xl' }}
-            color={'ghostVerse.green.base'}
-            fontFamily={'CubicFive12'}
-            borderColor={'ghostVerse.grey.base'}
-            borderWidth={1}
-            mx={{ base: 0.5, lg: 1 }}
-            bgColor={'ghostVerse.dark.lighter'}
-            textAlign={'center'}
-            p={4}
-            display={'flex'}
-            justifyContent={'center'}
-            flexDirection={'column'}
-            alignItems={'center'}
-            transition={'all .3s'}
-            _hover={{
-              borderColor: 'ghostVerse.green.base',
-            }}
+            </Text>
+          </Link>
+          <Link
+            href={'/weed-shop-edibles'}
+            passHref
+            title={'Weed Shop Menu Edibles'}
           >
-            <Box w={'64px'}>
-              <Image
-                src="/media/green-ghost-degen-weed-shop-menu-edibles.png"
-                width={418}
-                height={608}
-                alt="Weed Shop Menu - Edibles."
-              />
-            </Box>
-            <Box
-              as={'h4'}
+            <Text
+              as={'h3'}
+              mb={2}
               w={'100%'}
-              fontSize={{ base: 18, md: 22 }}
-              mt={'auto'}
+              _hover={{
+                textDecoration: 'underline',
+              }}
             >
               Edibles
-            </Box>
-          </Box>
-        </Link>
-      </Box>
-      <Box
-        width={{ base: '50%', lg: '20%' }}
-        mb={{ base: 1, lg: 2 }}
-        minHeight={'170px'}
-      >
-        <Link href={'/weed-shop-degen'} passHref title={'Weed Shop Menu Degen'}>
-          <Box
-            h={'100%'}
-            fontSize={{ base: 'xl' }}
-            color={'ghostVerse.green.base'}
-            fontFamily={'CubicFive12'}
-            borderColor={'ghostVerse.grey.base'}
-            borderWidth={1}
-            mx={{ base: 0.5, lg: 1 }}
-            bgColor={'ghostVerse.dark.lighter'}
-            textAlign={'center'}
-            p={4}
-            display={'flex'}
-            justifyContent={'center'}
-            flexDirection={'column'}
-            alignItems={'center'}
-            transition={'all .3s'}
-            _hover={{
-              borderColor: 'ghostVerse.green.base',
-            }}
+            </Text>
+          </Link>
+          <Link
+            href={'/weed-shop-degen'}
+            passHref
+            title={'Weed Shop Menu Degen'}
           >
-            <Box w={'25px'} my={'auto'}>
-              <Image
-                src="/media/green-ghost-degen-weed-shop-menu-degen.png"
-                width={1200}
-                height={600}
-                alt="Weed Shop Menu - Degen."
-              />
-            </Box>
-            <Box
-              as={'h4'}
+            <Text
+              as={'h3'}
+              mb={2}
               w={'100%'}
-              fontSize={{ base: 18, md: 22 }}
-              mt={'auto'}
+              _hover={{
+                textDecoration: 'underline',
+              }}
             >
               Degen
-            </Box>
-          </Box>
-        </Link>
-      </Box>
-      <Box
-        width={{ base: '50%', lg: '20%' }}
-        mb={{ base: 1, lg: 2 }}
-        minHeight={'170px'}
-      >
-        <Link href="/weed-shop-gadgets" passHref title="Weed Shop Menu Gadgets">
-          <Box
-            h={'100%'}
-            fontSize={{ base: 'xl' }}
-            color={'ghostVerse.green.base'}
-            fontFamily={'CubicFive12'}
-            borderColor={'ghostVerse.grey.base'}
-            borderWidth={1}
-            mx={{ base: 0.5, lg: 1 }}
-            bgColor={'ghostVerse.dark.lighter'}
-            textAlign={'center'}
-            p={4}
-            display={'flex'}
-            justifyContent={'center'}
-            flexDirection={'column'}
-            alignItems={'center'}
-            transition={'all .3s'}
-            _hover={{
-              borderColor: 'ghostVerse.green.base',
-            }}
+            </Text>
+          </Link>
+          <Link
+            href="/weed-shop-gadgets"
+            passHref
+            title="Weed Shop Menu Gadgets"
           >
-            <Box w={'55px'}>
-              <Image
-                src="/media/green-ghost-degen-weed-shop-menu-gadgets.webp"
-                width={342}
-                height={1290}
-                alt="Weed Shop Menu - Gadgets."
-              />
-            </Box>
-            <Box
-              as={'h4'}
+            <Text
+              as={'h3'}
+              mb={2}
               w={'100%'}
-              fontSize={{ base: 18, md: 22 }}
-              mt={'auto'}
+              _hover={{
+                textDecoration: 'underline',
+              }}
             >
               Gadgets
-            </Box>
-          </Box>
-        </Link>
+            </Text>
+          </Link>
+          <Link href={'/weed-shop'} passHref title="Green Ghost Menu">
+            <Text
+              as="span"
+              display={'inline-flex'}
+              color={'ghostVerse.green.base'}
+              borderColor={'ghostVerse.green.base'}
+              fontSize={{ base: 'xl', md: '4xl' }}
+              borderWidth={1}
+              bgColor="transparent"
+              backdropFilter={'blur(3px)'}
+              px={{ base: 4, md: 6 }}
+              pt={{ base: 2, md: 0 }}
+              pb={{ base: 2, md: 2 }}
+              mt={5}
+              mx={'auto'}
+              fontFamily={'vt323'}
+              _hover={{
+                borderColor: 'ghostVerse.green.base',
+                bgColor: 'ghostVerse.green.base',
+                color: 'black',
+              }}
+            >
+              Menu
+            </Text>
+          </Link>
+        </Box>
       </Box>
     </Box>
   );

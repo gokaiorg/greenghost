@@ -50,7 +50,7 @@ export const WalletConnectQRCode: FunctionComponent<
             p={4}
             mx={'auto'}
             mt={10}
-            fontFamily={'CubicFive10'}
+            fontFamily={'vt323'}
             _hover={{
               borderColor: 'ghostVerse.green.base',
               color: 'black',

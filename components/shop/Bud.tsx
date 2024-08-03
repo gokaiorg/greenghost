@@ -15,7 +15,7 @@ import { IconIndica } from '../media/IconIndica';
 type DominanceOption = 'All' | 'Sativa' | 'Indica' | 'Hybrid';
 
 export const Bud = () => {
-  const [showUnavailable, setShowUnavailable] = useState(true);
+  const [showUnavailable, setShowUnavailable] = useState(false);
   const [dominanceFilter, setDominanceFilter] =
     useState<DominanceOption>('All');
 

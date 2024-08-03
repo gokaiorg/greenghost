@@ -1,19 +1,13 @@
 import { Box } from '@chakra-ui/react';
 import { FC } from 'react';
-import { LoginModalButton } from './core/LoginModalButton';
-import { UserAvatar } from './UserAvatar';
 import { useRouter } from 'next/router';
-import { IconMenu } from './media/IconMenu';
 import Link from 'next/link';
-import { IconMap } from './media/IconMap';
-import { IconChat } from './media/IconChat';
-import { IconEarn } from './media/IconEarn';
 
 interface HeaderMenuButtonsProps {
   enabled: string[];
 }
 
-export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = ({ enabled }) => {
+export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = () => {
   const router = useRouter();
 
   const isActive = (href: string): boolean => {
@@ -24,12 +18,15 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = ({ enabled }) => {
     <Box
       marginLeft={'auto'}
       marginRight={{ base: 'auto', md: 0 }}
+      py={{ base: '4', lg: '0' }}
       display={'flex'}
+      fontFamily={'CubicFive12'}
     >
       <Link href={'/weed-shop'} title={'Weed Shop Menu'} passHref>
         <Box
+          as={'span'}
+          ml={4}
           display={'flex'}
-          flexDirection={'column'}
           alignItems={'center'}
           h={'100%'}
           mx={2}
@@ -38,36 +35,7 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = ({ enabled }) => {
           }}
           color={isActive('/weed-shop') ? 'ghostVerse.green.base' : 'inherit'}
         >
-          <Box display={'flex'} flex={'1'} alignItems={'center'} w={'60px'}>
-            <IconMenu />
-          </Box>
           Menu
-        </Box>
-      </Link>
-      <Link
-        href="/crypto-weed-shop-relax-and-earn"
-        title="Crypto Coffee Shop"
-        passHref
-      >
-        <Box
-          display={'flex'}
-          flexDirection={'column'}
-          alignItems={'center'}
-          h={'100%'}
-          mx={2}
-          _hover={{
-            color: 'ghostVerse.green.base',
-          }}
-          color={
-            isActive('/crypto-weed-shop-relax-and-earn')
-              ? 'ghostVerse.green.base'
-              : 'inherit'
-          }
-        >
-          <Box display={'flex'} flex={'1'} alignItems={'center'} w={'30px'}>
-            <IconEarn />
-          </Box>
-          Earn
         </Box>
       </Link>
       <Link
@@ -76,8 +44,9 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = ({ enabled }) => {
         passHref
       >
         <Box
+          as={'span'}
+          ml={4}
           display={'flex'}
-          flexDirection={'column'}
           alignItems={'center'}
           h={'100%'}
           mx={2}
@@ -90,16 +59,14 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = ({ enabled }) => {
               : 'inherit'
           }
         >
-          <Box display={'flex'} flex={'1'} alignItems={'center'} w={'23px'}>
-            <IconChat />
-          </Box>
           Chat
         </Box>
       </Link>
       <Link href="/weed-shop-near-me" title="Weed Shop Near Me" passHref>
         <Box
+          as={'span'}
+          ml={4}
           display={'flex'}
-          flexDirection={'column'}
           alignItems={'center'}
           h={'100%'}
           mx={2}
@@ -110,24 +77,9 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = ({ enabled }) => {
             isActive('/weed-shop-near-me') ? 'ghostVerse.green.base' : 'inherit'
           }
         >
-          <Box display={'flex'} flex={'1'} alignItems={'center'} w={'38px'}>
-            <IconMap />
-          </Box>
           Map
         </Box>
       </Link>
-      {enabled.includes('auth') && <LoginModalButton />}
-      <UserAvatar />
-      {enabled.includes('mint') && (
-        <Link href="/mint" title={'Mint'} passHref>
-          Mint
-        </Link>
-      )}
-      {enabled.includes('about') && (
-        <Link title={'Mint'} passHref href="/about">
-          About
-        </Link>
-      )}
     </Box>
   );
 };
