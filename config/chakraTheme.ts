@@ -61,7 +61,7 @@ export const theme = extendTheme({
       green: {
         transparent: 'rgba(75,254,38, 0.1)',
         lighter: 'rgba(75,254,38, 0.8)',
-        base: '#4cfd27',
+        base: '#13DE00',
       },
       orange: {
         light: '#FDEC2E',

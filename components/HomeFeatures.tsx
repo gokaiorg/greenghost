@@ -1,5 +1,6 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
+import { ImgDelivery } from './media/ImgDelivery';
 
 export const HomeFeature = () => {
   return (
@@ -10,153 +11,62 @@ export const HomeFeature = () => {
       mx={-1}
       alignItems={'stretch'}
     >
-      <Box width={{ base: '100%', lg: '33.333333%' }} mb={2}>
-        <Link
-          href="/weed-delivery-phuket"
-          passHref
-          title="Weed Delivery Phuket"
+      <Box display={'flex'} w={'100%'} alignItems={'center'}>
+        <Box as={'span'} w={{ base: 'auto' }} mr={4}>
+          <ImgDelivery />
+        </Box>
+        <Text
+          as={'h2'}
+          fontSize={{ base: 24, lg: 34 }}
+          fontFamily={'CubicFive12'}
+          mt={{ base: 5 }}
+          mb={{ base: 5 }}
+          textAlign={'left'}
         >
-          <Box
-            fontSize={{ base: 'xl' }}
-            height={'100%'}
-            fontFamily={'CubicFive12'}
-            color={'black'}
-            mx={1}
-            mb={1}
-            bgColor={'ghostVerse.green.base'}
-            textAlign={'center'}
-            p={4}
-            display={'flex'}
-            alignItems={'center'}
-            flexDirection={'column'}
-            justifyContent={'center'}
-            transition={'all .3s'}
-            _hover={{
-              color: 'ghostVerse.green.base',
-              backgroundColor: 'ghostVerse.dark.lighter',
-            }}
-          >
-            <Box
-              as={'h4'}
-              fontSize={{ base: 'xl' }}
-              marginBottom={2}
-              display={'flex'}
-              mx={'auto'}
-              justifyContent={'center'}
-            >
-              Weed Delivery Phuket
-            </Box>
-            <Box
-              as={'p'}
-              fontSize={{ base: '2xl' }}
-              display={'flex'}
-              mx={'auto'}
-              justifyContent={'center'}
-              fontFamily={'vt323'}
-            >
-              Experience the convenience of our Phuket weed delivery service!
-            </Box>
-          </Box>
-        </Link>
+          Weed Delivery Phuket
+        </Text>
       </Box>
-      <Box width={{ base: '100%', lg: '33.333333%' }} mb={2}>
-        <Link
-          href={'/weed-drive-thru-phuket'}
-          passHref
-          title="Weed Drive Thru Phuket"
+      <Text
+        as={'p'}
+        fontSize={{ base: 26, md: 44 }}
+        lineHeight={1}
+        fontFamily={'vt323'}
+        w={{ base: '60%', md: '70%' }}
+        mr={4}
+      >
+        Experience the best weed delivery service in Phuket with Green Ghost. We
+        offer instant delivery, bringing top-quality cannabis straight to your
+        door.
+      </Text>
+      <Link
+        href={'/weed-delivery-phuket'}
+        passHref
+        title="Weed Delivery Phuket"
+      >
+        <Text
+          as="span"
+          display={'inline-flex'}
+          color={'ghostVerse.green.base'}
+          borderColor={'ghostVerse.green.base'}
+          fontSize={{ base: 'xl', md: '4xl' }}
+          borderWidth={1}
+          bgColor="transparent"
+          backdropFilter={'blur(3px)'}
+          px={{ base: 4, md: 6 }}
+          pt={{ base: 2, md: 0 }}
+          pb={{ base: 2, md: 2 }}
+          mt={5}
+          mx={'auto'}
+          fontFamily={'vt323'}
+          _hover={{
+            borderColor: 'ghostVerse.green.base',
+            bgColor: 'ghostVerse.green.base',
+            color: 'black',
+          }}
         >
-          <Box
-            fontSize={{ base: 'xl' }}
-            height={'100%'}
-            fontFamily={'CubicFive12'}
-            color={'black'}
-            mx={1}
-            mb={1}
-            bgColor={'ghostVerse.green.base'}
-            textAlign={'center'}
-            p={4}
-            display={'flex'}
-            alignItems={'center'}
-            flexDirection={'column'}
-            justifyContent={'center'}
-            transition={'all .3s'}
-            _hover={{
-              color: 'ghostVerse.green.base',
-              backgroundColor: 'ghostVerse.dark.lighter',
-            }}
-          >
-            <Box
-              as={'h4'}
-              fontSize={{ base: 'xl' }}
-              marginBottom={2}
-              display={'flex'}
-              mx={'auto'}
-              justifyContent={'center'}
-            >
-              Weed Drive-thru Phuket
-            </Box>
-            <Box
-              as={'p'}
-              fontSize={{ base: '2xl' }}
-              display={'flex'}
-              mx={'auto'}
-              justifyContent={'center'}
-              fontFamily={'vt323'}
-            >
-              Phuket&apos;s premier Weed Drive-thru experience!
-            </Box>
-          </Box>
-        </Link>
-      </Box>
-      <Box width={{ base: '100%', lg: '33.333333%' }} mb={2}>
-        <Link
-          href={'/contact-green-ghost'}
-          passHref
-          title={'Contact Green ghost'}
-        >
-          <Box
-            fontSize={{ base: 'xl' }}
-            height={'100%'}
-            fontFamily={'CubicFive12'}
-            color={'black'}
-            mx={1}
-            mb={1}
-            bgColor={'ghostVerse.green.base'}
-            textAlign={'center'}
-            p={4}
-            display={'flex'}
-            alignItems={'center'}
-            flexDirection={'column'}
-            justifyContent={'center'}
-            transition={'all .3s'}
-            _hover={{
-              color: 'ghostVerse.green.base',
-              backgroundColor: 'ghostVerse.dark.lighter',
-            }}
-          >
-            <Box
-              as={'h4'}
-              fontSize={{ base: 'xl' }}
-              marginBottom={2}
-              display={'flex'}
-              mx={'auto'}
-              justifyContent={'center'}
-            >
-              24/7 Support
-            </Box>
-            <Box
-              as={'p'}
-              fontSize={{ base: '2xl' }}
-              display={'flex'}
-              mx={'auto'}
-              justifyContent={'center'}
-              fontFamily={'vt323'}
-            >
-              Our team is available 24/7 to provide you with prompt assistance!
-            </Box>
-          </Box>
-        </Link>
-      </Box>
+          Order Now
+        </Text>
+      </Link>
     </Box>
   );
 };

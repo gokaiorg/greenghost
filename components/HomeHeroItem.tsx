@@ -23,28 +23,28 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
   linkLabel,
 }) => {
   return (
-    <>
+    <Box display={'flex'} flexDirection={{ base: 'column', md: 'row' }}>
       <Box
-        mt={{ base: 4, lg: 0 }}
+        as="span"
         position={'relative'}
-        w="100%"
-        h={{ base: '350px', lg: '600px' }}
+        w={{ base: '100%' }}
+        h={{ base: '300px', md: '400px' }}
       >
         <Image
           src={image}
           alt={imageAlt}
           fill
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'contain' }}
           priority={true}
+          sizes="(max-width: 600px) 480px, (max-width: 1200px) 800px, 1200px"
         />
       </Box>
       <Box
-        position={'absolute'}
-        top={0}
-        bottom={0}
+        pos={{ base: 'absolute' }}
         left={0}
         right={0}
-        margin="auto"
+        width={{ base: '100%', md: '70%' }}
+        margin={{ base: 'auto' }}
         textAlign={'center'}
         display={'flex'}
         flexDirection={'column'}
@@ -56,11 +56,14 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
         bgColor={'ghostVerse.dark.ultralight'}
       >
         <Text
-          as={'h2'}
-          fontSize={{ base: 24, lg: 48 }}
-          marginBottom={4}
+          as={'h1'}
+          fontSize={{ base: 22, lg: 30, xl: 44 }}
+          lineHeight={1}
+          marginBottom={2}
           fontFamily={'CubicFive12'}
           color={'ghostVerse.green.base'}
+          w={{ base: '100%', lg: '80%', xl: '60%' }}
+          mx={'auto'}
         >
           {title}
         </Text>
@@ -69,26 +72,30 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
         </Text>
         <Link href={link} title={linkTitle} passHref>
           <Text
+            as="span"
             display={'inline-flex'}
-            color={'white'}
-            borderColor={'white'}
+            color={'ghostVerse.green.base'}
+            borderColor={'ghostVerse.green.base'}
             fontSize={{ base: 'xl', md: '4xl' }}
             borderWidth={1}
             bgColor="transparent"
             backdropFilter={'blur(3px)'}
-            p={{ base: 4, md: 6 }}
-            mt={10}
+            px={{ base: 4, md: 6 }}
+            pt={{ base: 2, md: 0 }}
+            pb={{ base: 2, md: 2 }}
+            mt={5}
             mx={'auto'}
-            fontFamily={'CubicFive10'}
+            fontFamily={'vt323'}
             _hover={{
               borderColor: 'ghostVerse.green.base',
-              color: 'ghostVerse.green.base',
+              bgColor: 'ghostVerse.green.base',
+              color: 'black',
             }}
           >
             {linkLabel}
           </Text>
         </Link>
       </Box>
-    </>
+    </Box>
   );
 };

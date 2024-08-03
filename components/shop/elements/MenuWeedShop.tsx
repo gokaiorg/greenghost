@@ -1,6 +1,5 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import NavLink from '../../NavLink';
-import Image from 'next/image';
 
 type Route = {
   label: string;
@@ -54,7 +53,7 @@ export const MenuWeedShop = () => {
     <>
       <Box
         display={'flex'}
-        mb={2}
+        mb={4}
         overflow={{ base: 'auto', md: 'none' }}
         sx={{
           '::-webkit-scrollbar': {
@@ -70,15 +69,9 @@ export const MenuWeedShop = () => {
             to={link.path}
             title={link.label}
           >
-            <Box w={link.imageW} mr={2}>
-              <Image
-                src={link.image}
-                width={20}
-                height={20}
-                alt="Green Ghost - Degen Weed Shop - Weed Menu."
-              />
-            </Box>
-            <Box fontSize={{ base: 16 }}>{link.label}</Box>
+            <Text as="span" fontSize={{ base: 14 }} fontFamily={'CubicFive12'}>
+              {link.label}
+            </Text>
           </NavLink>
         ))}
       </Box>

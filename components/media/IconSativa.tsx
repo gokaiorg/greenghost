@@ -5,7 +5,7 @@ export const IconSativa = () => {
     <Image
       src="/media/icon-sativa.png"
       width={30}
-      height={30}
+      height={31}
       alt="Green Ghost - Menu Weed Shop - Sativa"
     />
   );

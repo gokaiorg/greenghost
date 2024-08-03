@@ -19,7 +19,7 @@ export const BuyOnline = () => {
           backdropFilter={'blur(3px)'}
           p={3}
           mb={2}
-          fontFamily={'CubicFive10'}
+          fontFamily={'vt323'}
           _hover={{
             borderColor: 'ghostVerse.green.base',
             color: 'ghostVerse.green.base',
