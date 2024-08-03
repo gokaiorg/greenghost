@@ -387,7 +387,7 @@ export const buds: Bud[] = [
   {
     slug: 'fat-banana',
     name: 'Fat Banana',
-    price: 300,
+    price: 1000,
     dominance: 'Hybrid',
     indica: '70',
     sativa: '30',
@@ -399,7 +399,7 @@ export const buds: Bud[] = [
     growerSlug: '/ohigho',
     environment: 'Indoor',
     harvest: '22/07/2023',
-    quantity: 142,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Indulge in the delightful experience of Fat Banana, a hybrid cannabis strain crafted by blending the legendary OG Kush with the aromatic Chiquita Banana. Unveiling a palate of sweetness with citrus undertones, its aroma transports you to a tropical banana haven. The journey with Fat Banana begins with a gentle euphoria, gradually evolving into a profound physical relaxation. Renowned for inducing the munchies, this strain offers a flavorful and multi-layered encounter, making it a favorite among those seeking a blissful and appetite-stimulating cannabis experience.',

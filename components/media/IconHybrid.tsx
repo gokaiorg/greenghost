@@ -5,7 +5,7 @@ export const IconHybrid = () => {
     <Image
       src="/media/icon-hybrid.png"
       width={30}
-      height={30}
+      height={31}
       alt="Green Ghost - Menu Weed Shop - Hybrid"
     />
   );

@@ -43,7 +43,7 @@ export const WalletConnectPairings: FC<WalletConnectPairingsProps> = ({
           p={4}
           w={'100%'}
           mx={'auto'}
-          fontFamily={'CubicFive10'}
+          fontFamily={'vt323'}
           _hover={{
             borderColor: 'ghostVerse.green.base',
             color: 'black',

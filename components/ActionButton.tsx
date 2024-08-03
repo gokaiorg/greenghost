@@ -33,7 +33,7 @@ export const ActionButton: FC<PropsWithChildren<ActionButtonProps>> = ({
       backdropFilter={'blur(3px)'}
       p={4}
       mx={'auto'}
-      fontFamily={'CubicFive10'}
+      fontFamily={'vt323'}
       _hover={{
         borderColor: 'ghostVerse.green.base',
         color: 'black',

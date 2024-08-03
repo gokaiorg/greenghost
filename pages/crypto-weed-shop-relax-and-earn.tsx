@@ -307,7 +307,7 @@ const CryptoWeedShop: NextPage = () => {
                   p={6}
                   mt={10}
                   mx={'auto'}
-                  fontFamily={'CubicFive10'}
+                  fontFamily={'vt323'}
                   _hover={{
                     borderColor: 'ghostVerse.green.base',
                     color: 'ghostVerse.green.base',

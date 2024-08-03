@@ -33,7 +33,7 @@ export const ReviewItem: FC<ReviewItemProps> = ({
           as={'h4'}
           fontSize={{ base: 'xl' }}
           marginBottom={2}
-          fontFamily={'CubicFive10'}
+          fontFamily={'vt323'}
         >
           {title}
         </Text>
@@ -51,7 +51,7 @@ export const ReviewItem: FC<ReviewItemProps> = ({
             color={'ghostVerse.green.base'}
             fontSize={{ base: 'xl' }}
             mt={4}
-            fontFamily={'CubicFive10'}
+            fontFamily={'vt323'}
           >
             Read Review
           </Text>
