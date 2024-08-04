@@ -8,6 +8,7 @@ import { HomeMenu } from '../components/HomeMenu';
 import { Review } from '../components/Review';
 import { HomeHero } from '../components/HomeHero';
 import { Fwen } from '../components/Fwen';
+import { BuyOnline } from '../components/BuyOnline';
 
 const Home: NextPage = () => {
   return (
@@ -56,6 +57,7 @@ const Home: NextPage = () => {
         <HomeHero />
         <HomeMenu />
         <HomeFeature />
+        <BuyOnline />
         <Fwen />
         <Review />
       </MainLayout>

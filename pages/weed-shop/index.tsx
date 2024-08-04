@@ -6,6 +6,7 @@ import { Bud } from '../../components/shop/Bud';
 import Head from 'next/head';
 import { MenuWeedShop } from '../../components/shop/elements/MenuWeedShop';
 import { HomeFeature } from '../../components/HomeFeatures';
+import { BuyOnline } from '../../components/BuyOnline';
 
 const WeedShop: NextPage = () => {
   return (
@@ -52,6 +53,7 @@ const WeedShop: NextPage = () => {
         <MenuWeedShop />
         <Bud />
         <HomeFeature />
+        <BuyOnline />
       </MainLayout>
     </>
   );

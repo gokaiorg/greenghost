@@ -2,7 +2,6 @@ import { ReviewItem } from './ReviewItem';
 import { review } from '../config/reviews';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
-import { motion } from 'framer-motion';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -16,31 +15,20 @@ export const Review = () => {
     <>
       <Box display={'flex'} flexDir={'column'} alignItems={'center'} mt={20}>
         <Box w={'160px'}>
-          <motion.div
-            animate={{
-              rotateY: [0, 360],
-            }}
-            transition={{
-              duration: 5,
-              ease: 'easeInOut',
-              repeat: Infinity,
-              repeatDelay: 0,
-            }}
-          >
-            <Image
-              src={'/media/green-ghost-degen-weed-shop-cannabis-leaf.png'}
-              width={478}
-              height={475}
-              alt={'Green Ghost - Degen Weed Shop - Cannabis Leaf.'}
-            />
-          </motion.div>
+          <Image
+            src={'/media/green-ghost-degen-weed-shop-cannabis-leaf.png'}
+            width={478}
+            height={475}
+            alt={'Green Ghost - Degen Weed Shop - Cannabis Leaf.'}
+          />
         </Box>
         <Text
           as={'h3'}
           fontSize={{ base: 24, lg: 34 }}
-          mx={'auto'}
+          lineHeight={'28px'}
           fontFamily={'CubicFive12'}
-          mt={5}
+          mt={{ base: 5 }}
+          mb={{ base: 5 }}
           textAlign={'center'}
         >
           Green Ghosted Peeps

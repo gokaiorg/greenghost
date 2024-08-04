@@ -3,29 +3,80 @@ import Link from 'next/link';
 
 export const BuyOnline = () => {
   return (
-    <Box mr={{ base: 'auto', md: '2' }} ml={{ base: 'auto' }}>
+    <Box
+      display={'flex'}
+      mb={5}
+      p={5}
+      pt={0}
+      flexWrap={'wrap'}
+      alignItems={'stretch'}
+      backgroundColor={'ghostVerse.green.base'}
+      color={'black'}
+    >
+      <Box display={'flex'} w={'100%'} alignItems={'left'}>
+        <Text
+          as={'h2'}
+          fontSize={{ base: 30, md: 50 }}
+          lineHeight={1}
+          fontWeight={'bold'}
+          fontFamily={'vt323'}
+          mt={{ base: 5 }}
+          mb={{ base: 5 }}
+          textAlign={'left'}
+        >
+          Get 10% Free on Weed Orders!
+        </Text>
+      </Box>
+      <Text
+        as={'p'}
+        fontSize={{ base: 20, md: 36 }}
+        lineHeight={1}
+        fontFamily={'vt323'}
+        w={{ base: '60%', md: '70%' }}
+        mr={4}
+        textAlign={'left'}
+      >
+        Schedule your delivery for later on{' '}
+        <Link
+          href={'https://greenghostweed.shop'}
+          passHref
+          title="Green Ghost Weed Shop"
+        >
+          <Text as={'span'} textDecoration={'underline'}>
+            greenghostweed.shop
+          </Text>
+        </Link>{' '}
+        to enjoy an extra 10% free on all buds.
+      </Text>
       <Link
-        href="https://greenghostweed.shop/collections/buds?filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte=&sort_by=price-ascending"
-        title="Green Ghost Weed Shop"
+        href={
+          'https://greenghostweed.shop/collections/buds?filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte=&sort_by=price-ascending'
+        }
         passHref
+        title="Green Ghost Weed Shop - Buds Menu"
       >
         <Text
+          as="span"
           display={'inline-flex'}
           color={'ghostVerse.green.base'}
-          borderColor={'ghostVerse.green.base'}
-          fontSize={{ base: 'xl' }}
+          borderColor={'black'}
+          backgroundColor={'black'}
+          fontSize={{ base: 'xl', md: '4xl' }}
+          lineHeight={1}
           borderWidth={1}
-          bgColor="transparent"
-          backdropFilter={'blur(3px)'}
-          p={3}
-          mb={2}
+          px={{ base: 4, md: 6 }}
+          pt={{ base: 2, md: 0 }}
+          pb={{ base: 2, md: 2 }}
+          mt={5}
+          mx={'auto'}
           fontFamily={'vt323'}
           _hover={{
-            borderColor: 'ghostVerse.green.base',
-            color: 'ghostVerse.green.base',
+            borderColor: 'black',
+            bgColor: 'ghostVerse.green.base',
+            color: 'black',
           }}
         >
-          Buy weed online and get 10% off on all flowers
+          {'Schedule & Save 10%'}
         </Text>
       </Link>
     </Box>

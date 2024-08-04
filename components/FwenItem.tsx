@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import { FC } from 'react';
 import Image from 'next/image';
@@ -12,9 +12,9 @@ interface FwenItemProps {
 export const FwenItem: FC<FwenItemProps> = ({ name, fwenLogo, fwenLink }) => {
   return (
     <Box
-      width={{ base: '50%', md: '33.33333%', lg: '25%' }}
+      width={{ base: '25%', md: '20%', lg: '10%' }}
       mb={'4'}
-      minHeight={'170px'}
+      minHeight={'100px'}
     >
       <Link href={fwenLink} passHref title={`Green Ghost Fwen - ${name}`}>
         <Box
@@ -24,7 +24,7 @@ export const FwenItem: FC<FwenItemProps> = ({ name, fwenLogo, fwenLink }) => {
           fontFamily={'CubicFive12'}
           mx={2}
           textAlign={'center'}
-          p={4}
+          p={2}
           display={'flex'}
           justifyContent={'center'}
           flexDirection={'column'}
@@ -35,7 +35,7 @@ export const FwenItem: FC<FwenItemProps> = ({ name, fwenLogo, fwenLink }) => {
             color: 'ghostVerse.green.base',
           }}
         >
-          <Box w={'120px'}>
+          <Box w={'60px'}>
             <Image
               src={fwenLogo}
               width={120}
@@ -43,9 +43,9 @@ export const FwenItem: FC<FwenItemProps> = ({ name, fwenLogo, fwenLink }) => {
               alt={`Green Ghost Fwen - ${name}`}
             />
           </Box>
-          <Box as={'h4'} fontSize={{ base: 14, md: 16 }}>
+          <Text as={'h4'} fontSize={{ base: 10, md: 10 }} lineHeight={'12px'}>
             {name}
-          </Box>
+          </Text>
         </Box>
       </Link>
     </Box>
