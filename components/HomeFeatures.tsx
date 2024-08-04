@@ -4,13 +4,7 @@ import { ImgDelivery } from './media/ImgDelivery';
 
 export const HomeFeature = () => {
   return (
-    <Box
-      display={'flex'}
-      my={10}
-      flexWrap={'wrap'}
-      mx={-1}
-      alignItems={'stretch'}
-    >
+    <Box display={'flex'} my={10} flexWrap={'wrap'} alignItems={'stretch'}>
       <Box display={'flex'} w={'100%'} alignItems={'center'}>
         <Box as={'span'} w={{ base: 'auto' }} mr={4}>
           <ImgDelivery />
@@ -18,6 +12,7 @@ export const HomeFeature = () => {
         <Text
           as={'h2'}
           fontSize={{ base: 24, lg: 34 }}
+          lineHeight={'28px'}
           fontFamily={'CubicFive12'}
           mt={{ base: 5 }}
           mb={{ base: 5 }}
@@ -46,22 +41,22 @@ export const HomeFeature = () => {
         <Text
           as="span"
           display={'inline-flex'}
-          color={'ghostVerse.green.base'}
-          borderColor={'ghostVerse.green.base'}
           fontSize={{ base: 'xl', md: '4xl' }}
+          lineHeight={1}
           borderWidth={1}
-          bgColor="transparent"
-          backdropFilter={'blur(3px)'}
           px={{ base: 4, md: 6 }}
           pt={{ base: 2, md: 0 }}
           pb={{ base: 2, md: 2 }}
           mt={5}
           mx={'auto'}
           fontFamily={'vt323'}
+          color={'black'}
+          borderColor={'ghostVerse.green.base'}
+          backgroundColor={'ghostVerse.green.base'}
           _hover={{
             borderColor: 'ghostVerse.green.base',
-            bgColor: 'ghostVerse.green.base',
-            color: 'black',
+            bgColor: 'black',
+            color: 'ghostVerse.green.base',
           }}
         >
           Order Now

@@ -30,6 +30,11 @@ export const fwen = [
     fwenLink: 'https://sweeddreamsthai.com/',
   },
   {
+    name: 'Green Lab Unicorn',
+    fwenLogo: '/media/green-ghost-weed-grower-green-lab-unicorn.webp',
+    fwenLink: 'https://t.me/GreenLabUnicornShop',
+  },
+  {
     name: 'CBD Cannabiz farm',
     fwenLogo: '/media/green-ghost-weed-grower-cbd-cannabiz-farm.webp',
     fwenLink: 'https://www.cbdcannabizfarm.com',
