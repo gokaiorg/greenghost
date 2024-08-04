@@ -1,5 +1,28 @@
 export const review = [
   {
+    title: 'Shalini Barot',
+    review:
+      'Best service ever!! I ordered early in the morning and within 1 hour it was delivered to me, even though I stayed very far away. The woman who has the shop was very friendly, responsive and spoke very good English. I could track my delivery on Grab and everything...',
+    reviewLink: 'https://maps.app.goo.gl/aJTp5ULJroBwboKX7',
+  },
+  {
+    title: 'Sakaar Pandey',
+    review:
+      'Amazing service got it delivered to patong and they cut my delivery fee!! ❤️ send step by step photos also when rolling joints out. Will def be back',
+    reviewLink: 'https://maps.app.goo.gl/AY33meYUTpzckUMs6',
+  },
+  {
+    title: 'Jordan H',
+    review: 'Amazing weed shop w delivery 🚚',
+    reviewLink: 'https://maps.app.goo.gl/3eTHrBxUJg6L31au8',
+  },
+  {
+    title: 'D',
+    review:
+      'Anne is the most kind and lovely lady. She was the most friendly person in karon, she speaks very good English, and she want to make you feel like home here. She is so warm and kind',
+    reviewLink: 'https://maps.app.goo.gl/25KC8N66trzXXRQE7',
+  },
+  {
     title: 'MotniA',
     review: 'Good stuff, funny site, professional and friendly service!',
     reviewLink: 'https://g.co/kgs/WLLa43',
@@ -38,29 +61,6 @@ export const review = [
     reviewLink: 'https://g.co/kgs/FCkLhk',
   },
   {
-    title: 'MantorMBU',
-    review: 'super cool store. Just best quality',
-    reviewLink: 'https://g.co/kgs/3d6buh',
-  },
-  {
-    title: 'Martin',
-    review:
-      "Great service, prompt and with free delivery if you're in Rawai 😊",
-    reviewLink: 'https://g.co/kgs/DgPkUo',
-  },
-  {
-    title: 'R de Hooge',
-    review:
-      'Make sure to visit this new great place, to try one or more of those tasty 😋 buds',
-    reviewLink: 'https://g.co/kgs/oGcK7n',
-  },
-  {
-    title: 'Aaron Chong',
-    review:
-      'I came here for the service and people. Cannabis is better with people. They have a variety of ganjas for newbies to connoseurs. The vibe is pretty cool as it feels like a house.',
-    reviewLink: 'https://g.co/kgs/1UN67Y',
-  },
-  {
     title: 'Nikki-Rilie',
     review:
       'I came here for the service and people. Cannabis is better with people. They have a variety of ganjas for newbies to connoseurs. The vibe is pretty cool as it feels like a house.',
@@ -83,11 +83,6 @@ export const review = [
     reviewLink: 'https://goo.gl/maps/NtVCHj4dKiN2UTej7',
   },
   {
-    title: 'Nica Dragos (Jeje)',
-    review: "Lovely place! It's a must check if you're nearby",
-    reviewLink: 'https://g.co/kgs/4Gm4kh',
-  },
-  {
     title: 'Jai Chopra',
     review: 'amazing collection',
     reviewLink: 'https://goo.gl/maps/PHH4eoMhN1SikuuL7',
@@ -102,41 +97,5 @@ export const review = [
     review:
       'Super endroit !!! Je recommande. Super accueil, j adore !!! N’hesitez pas à vous y rendre si vous venez à Phuket',
     reviewLink: 'https://goo.gl/maps/sw3L6myRRmhXiopDA',
-  },
-  {
-    title: 'Lea Serrar',
-    review:
-      'The weed is amazing, they have great promotions on their incredible quality weed. So happy I found them!',
-    reviewLink: 'https://goo.gl/maps/kEduAbxzoCLewQ1d9',
-  },
-  {
-    title: 'mark Innes',
-    review:
-      'Great vibe and great herbs. Felt super chilled, Also Nati was really friendly and helpful when answering my questions.',
-    reviewLink: 'https://goo.gl/maps/xw1gbUi8zGE9kb3m9',
-  },
-  {
-    title: 'Apiwat Puchchong',
-    review:
-      'Nice place, Great buds in Karon town. Recommended if you need to find somewhere get you relaxing.',
-    reviewLink: 'https://g.co/kgs/1rs95T',
-  },
-  {
-    title: 'Aoifelouise',
-    review:
-      'What an amazing woman!! Very knowledgeable on her buds and also great prices compared to other places in the area. Highly recommend',
-    reviewLink: 'https://goo.gl/maps/jawsHz9Zg1PQLYg99',
-  },
-  {
-    title: 'Jean de Colombel',
-    review:
-      "Nati a été très sympathique, ses produits sont d'une grande qualité. Je recommande chaudement !",
-    reviewLink: 'https://goo.gl/maps/KmUpTyatuoJKXis28',
-  },
-  {
-    title: 'Lea Serrar',
-    review:
-      'The weed is amazing, they have great promotions on their incredible quality weed. So happy I found them!',
-    reviewLink: 'https://goo.gl/maps/kEduAbxzoCLewQ1d9',
   },
 ];

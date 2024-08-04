@@ -31,7 +31,7 @@ export const BudItem = ({ bud }: BudItemProps) => {
             slidesPerView={'auto'}
             loop
             autoplay={{
-              delay: 4000,
+              delay: 10000,
               pauseOnMouseEnter: true,
               disableOnInteraction: false,
             }}
@@ -45,7 +45,7 @@ export const BudItem = ({ bud }: BudItemProps) => {
             }}
             modules={[EffectCoverflow, Pagination]}
             pagination={{ clickable: true }}
-            initialSlide={1}
+            initialSlide={0}
             style={
               {
                 '--swiper-pagination-color': '#4cfd27',

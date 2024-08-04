@@ -130,22 +130,22 @@ export const HomeMenu = () => {
             <Text
               as="span"
               display={'inline-flex'}
-              color={'ghostVerse.green.base'}
-              borderColor={'ghostVerse.green.base'}
               fontSize={{ base: 'xl', md: '4xl' }}
+              lineHeight={1}
               borderWidth={1}
-              bgColor="transparent"
-              backdropFilter={'blur(3px)'}
               px={{ base: 4, md: 6 }}
               pt={{ base: 2, md: 0 }}
               pb={{ base: 2, md: 2 }}
               mt={5}
               mx={'auto'}
               fontFamily={'vt323'}
+              color={'black'}
+              borderColor={'ghostVerse.green.base'}
+              backgroundColor={'ghostVerse.green.base'}
               _hover={{
                 borderColor: 'ghostVerse.green.base',
-                bgColor: 'ghostVerse.green.base',
-                color: 'black',
+                bgColor: 'black',
+                color: 'ghostVerse.green.base',
               }}
             >
               Menu

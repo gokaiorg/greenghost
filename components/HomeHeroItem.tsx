@@ -50,15 +50,15 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
         flexDirection={'column'}
         justifyContent={'center'}
         fontWeight={'black'}
-        color={'white'}
         fontFamily={'vt323'}
         px={{ base: 5, md: 10 }}
         bgColor={'ghostVerse.dark.ultralight'}
+        backdropFilter={'blur(3px)'}
       >
         <Text
           as={'h1'}
           fontSize={{ base: 22, lg: 30, xl: 44 }}
-          lineHeight={1}
+          lineHeight={{ base: '28px', lg: '46px' }}
           marginBottom={2}
           fontFamily={'CubicFive12'}
           color={'ghostVerse.green.base'}
@@ -73,23 +73,23 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
         <Link href={link} title={linkTitle} passHref>
           <Text
             as="span"
+            lineHeight={1}
             display={'inline-flex'}
-            color={'ghostVerse.green.base'}
-            borderColor={'ghostVerse.green.base'}
             fontSize={{ base: 'xl', md: '4xl' }}
             borderWidth={1}
-            bgColor="transparent"
-            backdropFilter={'blur(3px)'}
             px={{ base: 4, md: 6 }}
             pt={{ base: 2, md: 0 }}
             pb={{ base: 2, md: 2 }}
             mt={5}
             mx={'auto'}
             fontFamily={'vt323'}
+            color={'black'}
+            borderColor={'ghostVerse.green.base'}
+            backgroundColor={'ghostVerse.green.base'}
             _hover={{
               borderColor: 'ghostVerse.green.base',
-              bgColor: 'ghostVerse.green.base',
-              color: 'black',
+              bgColor: 'black',
+              color: 'ghostVerse.green.base',
             }}
           >
             {linkLabel}
