@@ -327,7 +327,7 @@ export const buds: Bud[] = [
   {
     slug: 'kd-mango-tail',
     name: 'KD Mango Tail',
-    price: 50,
+    price: 1000,
     dominance: 'Sativa',
     indica: '0',
     sativa: '100',
@@ -339,7 +339,7 @@ export const buds: Bud[] = [
     growerSlug: '',
     environment: 'Outdoor',
     harvest: '12/03/2024',
-    quantity: 34,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "The KD Mango Tail, a sun-kissed sativa strain perfect for those seeking an uplifting and energetic experience. This 100% sativa powerhouse boasts a potent 22% THC content, delivering a focused and cerebral high that's ideal for creative endeavors or social gatherings. Its sun-grown nature translates to a smooth and flavorful smoke, leaving you feeling invigorated and inspired. \n\n The aroma and taste of KD Mango Tail are truly a tropical delight. Expect a wave of sweet mango and citrus notes, complemented by subtle hints of pineapple and papaya. This refreshing profile perfectly complements the uplifting effects of the strain, making it a well-rounded choice for sativa enthusiasts looking for a taste of paradise.",

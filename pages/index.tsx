@@ -11,6 +11,7 @@ import { Fwen } from '../components/Fwen';
 import { BuyOnline } from '../components/BuyOnline';
 import { BestWeedShops } from '../components/BestWeedShops';
 import { Find } from '../components/Find';
+import { Coffeeshop } from '../components/Coffeeshop';
 
 const Home: NextPage = () => {
   return (
@@ -58,6 +59,7 @@ const Home: NextPage = () => {
         </HeaderMenu>
         <HomeHero />
         <HomeMenu />
+        <Coffeeshop />
         <HomeFeature />
         <BuyOnline />
         <BestWeedShops />
