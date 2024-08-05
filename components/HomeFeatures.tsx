@@ -23,7 +23,7 @@ export const HomeFeature = () => {
       </Box>
       <Text
         as={'p'}
-        fontSize={{ base: 26, md: 44 }}
+        fontSize={{ base: 26, md: 40, lg: 44 }}
         lineHeight={1}
         fontFamily={'vt323'}
         w={{ base: '60%', md: '70%' }}

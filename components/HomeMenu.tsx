@@ -12,16 +12,14 @@ export const HomeMenu = () => {
       alignItems={'stretch'}
     >
       <Box display={'flex'} flexDir={'column'} w={'100%'} alignItems={'center'}>
-        <Box as={'span'} w={{ base: '80%', lg: '50%' }}>
-          <IconMenu />
-        </Box>
+        <IconMenu />
         <Text
           as={'h2'}
           fontSize={{ base: 24, lg: 34 }}
           mx={'auto'}
           fontFamily={'CubicFive12'}
-          mt={{ base: 5 }}
-          mb={{ base: 5 }}
+          mt={{ base: 4 }}
+          mb={{ base: 4 }}
           textAlign={'center'}
         >
           Weed Menu
@@ -31,7 +29,7 @@ export const HomeMenu = () => {
       <Box display={'flex'}>
         <Text
           as={'p'}
-          fontSize={{ base: 26, md: 44 }}
+          fontSize={{ base: 26, md: 40, lg: 44 }}
           lineHeight={1}
           fontFamily={'vt323'}
           w={{ base: '60%', md: '70%' }}
@@ -41,7 +39,6 @@ export const HomeMenu = () => {
           in Phuket. Whether you seek premium quality or great value, we have
           something for everyone in our cannabis menu.
         </Text>
-
         <Box
           display={'flex'}
           flexDirection={{ base: 'column' }}
@@ -49,6 +46,8 @@ export const HomeMenu = () => {
           fontFamily={'CubicFive12'}
           color={'ghostVerse.green.base'}
           justifyContent={{ base: 'top', md: 'center' }}
+          flex={1}
+          mt={{ base: '0', lg: '4' }}
         >
           <Link href={'/weed-shop'} passHref title="Weed Shop Menu Buds">
             <Text
@@ -126,31 +125,32 @@ export const HomeMenu = () => {
               Gadgets
             </Text>
           </Link>
-          <Link href={'/weed-shop'} passHref title="Green Ghost Menu">
-            <Text
-              as="span"
-              display={'inline-flex'}
-              fontSize={{ base: 'xl', md: '4xl' }}
-              lineHeight={1}
-              borderWidth={1}
-              px={{ base: 4, md: 6 }}
-              pt={{ base: 2, md: 0 }}
-              pb={{ base: 2, md: 2 }}
-              mt={5}
-              mx={'auto'}
-              fontFamily={'vt323'}
-              color={'black'}
-              borderColor={'ghostVerse.green.base'}
-              backgroundColor={'ghostVerse.green.base'}
-              _hover={{
-                borderColor: 'ghostVerse.green.base',
-                bgColor: 'black',
-                color: 'ghostVerse.green.base',
-              }}
-            >
-              Menu
-            </Text>
-          </Link>
+          <Box ml={'auto'}>
+            <Link href={'/weed-shop'} passHref title="Green Ghost Menu">
+              <Text
+                as="span"
+                display={'inline-flex'}
+                fontSize={{ base: 'xl', md: '4xl' }}
+                lineHeight={1}
+                borderWidth={1}
+                px={{ base: 4, md: 6 }}
+                pt={{ base: 2, md: 0 }}
+                pb={{ base: 2, md: 2 }}
+                mt={4}
+                fontFamily={'vt323'}
+                color={'black'}
+                borderColor={'ghostVerse.green.base'}
+                backgroundColor={'ghostVerse.green.base'}
+                _hover={{
+                  borderColor: 'ghostVerse.green.base',
+                  bgColor: 'black',
+                  color: 'ghostVerse.green.base',
+                }}
+              >
+                Menu
+              </Text>
+            </Link>
+          </Box>
         </Box>
       </Box>
     </Box>

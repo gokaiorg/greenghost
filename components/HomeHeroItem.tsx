@@ -23,11 +23,11 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
   linkLabel,
 }) => {
   return (
-    <Box display={'flex'} flexDirection={{ base: 'column', md: 'row' }}>
+    <Box display={'flex'} flexDirection={{ base: 'column', md: 'row' }} mt={5}>
       <Box
         as="span"
         position={'relative'}
-        w={{ base: '100%' }}
+        w={'100%'}
         h={{ base: '300px', md: '400px' }}
       >
         <Image
@@ -36,7 +36,7 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
           fill
           style={{ objectFit: 'contain' }}
           priority={true}
-          sizes="(max-width: 600px) 480px, (max-width: 1200px) 800px, 1200px"
+          sizes="(max-width: 600px) 768px, (max-width: 1200px) 984px, 1240px"
         />
       </Box>
       <Box
