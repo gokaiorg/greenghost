@@ -12,18 +12,6 @@ export type Grower = {
 
 export const growers: Grower[] = [
   {
-    slug: 'greenlabunicorn',
-    name: 'Green Lab Unicorn',
-    description:
-      'Following the legalization of cannabis in Thailand in December 2018, Thailand medical industry consists of highly qualified doctors & practitioners who took rigorous training to build expertise and knowledge over the years.',
-    logo: '/media/green-ghost-weed-grower-thaigreenlab.webp',
-    website: 'https://thaigreenlab.com/',
-    facebook: 'https://www.facebook.com/ThaiGreenLab',
-    instagram: 'https://www.instagram.com/thaigreenlab/',
-    twitter: '0',
-    telegram: '0',
-  },
-  {
     slug: 'thaigreenlab',
     name: 'ThaiGreenLab',
     description:
@@ -46,6 +34,17 @@ export const growers: Grower[] = [
     instagram: '0',
     twitter: '0',
     telegram: '0',
+  },
+  {
+    slug: 'greenlabunicorn',
+    name: 'Green Lab Unicorn',
+    description: 'Licensed Cannabis Shop and Farm from Phuket, Thailand 🦄',
+    logo: '/media/green-ghost-weed-grower-green-lab-unicorn.webp',
+    website: '0',
+    facebook: '0',
+    instagram: 'https://www.instagram.com/greenlabunicorn420',
+    twitter: '0',
+    telegram: 'https://t.me/GreenLabUnicornShop',
   },
   {
     slug: 'ohigho',
