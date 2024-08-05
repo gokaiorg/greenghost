@@ -40,6 +40,11 @@ export const fwen = [
     fwenLink: 'https://www.cbdcannabizfarm.com',
   },
   {
+    name: 'Goodies Deluxe',
+    fwenLogo: '/media/green-ghost-weed-goodies-deluxe.webp',
+    fwenLink: 'https://goodiesdeluxe.co/',
+  },
+  {
     name: 'Phuket High Times',
     fwenLogo: '/media/green-ghost-phuket-high-times.webp',
     fwenLink: 'https://phukethightimes.com/',

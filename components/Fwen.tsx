@@ -8,7 +8,7 @@ export const Fwen = () => {
   return (
     <Box
       display={'flex'}
-      my={10}
+      mb={10}
       flexWrap={'wrap'}
       alignItems={'stretch'}
       justifyContent={'end'}
@@ -20,7 +20,7 @@ export const Fwen = () => {
         </Box>
         <Text
           as={'h3'}
-          fontSize={{ base: 24, lg: 34 }}
+          fontSize={{ base: 20, lg: 28 }}
           lineHeight={'28px'}
           fontFamily={'CubicFive12'}
           mt={{ base: 5 }}
