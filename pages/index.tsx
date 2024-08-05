@@ -9,6 +9,8 @@ import { Review } from '../components/Review';
 import { HomeHero } from '../components/HomeHero';
 import { Fwen } from '../components/Fwen';
 import { BuyOnline } from '../components/BuyOnline';
+import { BestWeedShops } from '../components/BestWeedShops';
+import { Find } from '../components/Find';
 
 const Home: NextPage = () => {
   return (
@@ -58,8 +60,10 @@ const Home: NextPage = () => {
         <HomeMenu />
         <HomeFeature />
         <BuyOnline />
+        <BestWeedShops />
         <Fwen />
         <Review />
+        <Find />
       </MainLayout>
     </>
   );
