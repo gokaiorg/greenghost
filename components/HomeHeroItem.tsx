@@ -43,7 +43,8 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
         pos={{ base: 'absolute' }}
         left={0}
         right={0}
-        width={{ base: '100%', md: '70%' }}
+        width={{ base: '100%' }}
+        h={{ base: '300px', md: '400px' }}
         margin={{ base: 'auto' }}
         textAlign={'center'}
         display={'flex'}
@@ -52,22 +53,28 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
         fontWeight={'black'}
         fontFamily={'vt323'}
         px={{ base: 5, md: 10 }}
-        bgColor={'ghostVerse.dark.ultralight'}
+        bgColor={'ghostVerse.dark.base'}
         backdropFilter={'blur(3px)'}
       >
         <Text
           as={'h1'}
-          fontSize={{ base: 22, lg: 30, xl: 44 }}
-          lineHeight={{ base: '28px', lg: '46px' }}
+          fontSize={{ base: 22, md: 30, lg: 44 }}
+          lineHeight={1}
           marginBottom={2}
           fontFamily={'CubicFive12'}
           color={'ghostVerse.green.base'}
-          w={{ base: '100%', lg: '80%', xl: '60%' }}
+          w={{ base: '100%', md: '65%', lg: '70%', xl: '50%' }}
           mx={'auto'}
         >
           {title}
         </Text>
-        <Text as={'p'} fontSize={{ base: 26, md: 44 }} lineHeight={1}>
+        <Text
+          as={'p'}
+          lineHeight={1}
+          fontSize={{ base: 26, md: 40, lg: 44 }}
+          w={{ base: '100%', xl: '80%' }}
+          m={'auto'}
+        >
           {description}
         </Text>
         <Link href={link} title={linkTitle} passHref>
@@ -80,7 +87,7 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
             px={{ base: 4, md: 6 }}
             pt={{ base: 2, md: 0 }}
             pb={{ base: 2, md: 2 }}
-            mt={5}
+            mt={{ base: 5, md: 10 }}
             mx={'auto'}
             fontFamily={'vt323'}
             color={'black'}
