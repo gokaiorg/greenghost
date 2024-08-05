@@ -15,7 +15,7 @@ export const BuyOnline = () => {
     >
       <Box display={'flex'} w={'100%'} alignItems={'left'}>
         <Text
-          as={'h2'}
+          as={'h3'}
           fontSize={{ base: 30, md: 50 }}
           lineHeight={1}
           fontWeight={'bold'}
