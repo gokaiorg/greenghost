@@ -1,36 +1,22 @@
 import { SocialIcon } from 'react-social-icons';
 import { Box, Text } from '@chakra-ui/react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 
 export const SocialMediaIcons = () => {
   return (
     <>
-      <Box display={'flex'} flexDir={'column'} alignItems={'center'} mx={10}>
-        <Box w={'60px'} mb={4}>
-          <motion.div
-            animate={{
-              scale: [1, 1.5, 1, 1.5, 1],
-            }}
-            transition={{
-              duration: 1,
-              ease: 'easeInOut',
-              times: [0, 0.2, 0.5, 0.8, 1],
-              repeat: Infinity,
-              repeatDelay: 1,
-            }}
-          >
-            <Image
-              src="/media/green-ghost-degen-weed-shop-heart.png"
-              width={190}
-              height={152}
-              alt="Weed Menu - Weed delivery Phuket - Buy weed online."
-            />
-          </motion.div>
+      <Box display={'flex'} flexDir={'column'} alignItems={'center'} mt={4}>
+        <Box w={'50px'}>
+          <Image
+            src="/media/green-ghost-degen-weed-shop-heart.png"
+            width={190}
+            height={152}
+            alt="Weed Menu - Weed delivery Phuket - Buy weed online."
+          />
         </Box>
         <Text
           as={'h3'}
-          fontSize={'2xl'}
+          fontSize={'xl'}
           color={'ghostVerse.color2.darker'}
           fontFamily={'CubicFive12'}
         >
@@ -41,10 +27,10 @@ export const SocialMediaIcons = () => {
           display={'flex'}
           justifyContent={'center'}
           fontSize={'3xl'}
-          marginBottom={4}
-          mt={-2}
+          mt={-4}
+          mb={2}
           w={'full'}
-          color={'ghostVerse.green.base'}
+          color={'ghostVerse.grey.base'}
           fontFamily={'vt323'}
         >
           @greenghostdegen
@@ -61,39 +47,56 @@ export const SocialMediaIcons = () => {
         <Box bgColor={'black'} borderRadius={'100%'}>
           <SocialIcon
             url="https://www.instagram.com/greenghostdegen"
-            bgColor={'#4cfd27'}
+            bgColor={'#13DE00'}
             style={{ width: 40, height: 40 }}
             title="Follow Us on Instagram"
           />
         </Box>
         <Box bgColor={'black'} borderRadius={'100%'}>
           <SocialIcon
-            url="https://www.facebook.com/greenghostdegen"
-            bgColor={'#4cfd27'}
+            url="https://twitter.com/greenghostdegen"
+            bgColor={'#13DE00'}
             style={{ width: 40, height: 40 }}
-            title="Follow Us on Facebook"
+            title="Follow Us on Twitter"
           />
         </Box>
         <Box bgColor={'black'} borderRadius={'100%'}>
           <SocialIcon
-            url="https://www.tiktok.com/@greenghostdegen"
-            bgColor={'#4cfd27'}
+            url="https://warpcast.com/greenghostdegen"
+            bgColor={'#13DE00'}
             style={{ width: 40, height: 40 }}
-            title="Follow Us on TikTok"
+            title="Follow Us on Warpcast"
           />
         </Box>
+
         <Box bgColor={'black'} borderRadius={'100%'}>
           <SocialIcon
-            url="https://t.me/greenghostdegen"
-            bgColor={'#4cfd27'}
+            url="https://t.me/greenghostdegens"
+            bgColor={'#13DE00'}
             style={{ width: 40, height: 40 }}
             title="Follow Us on Telegram"
           />
         </Box>
         <Box bgColor={'black'} borderRadius={'100%'}>
           <SocialIcon
+            url="https://www.tiktok.com/@greenghostdegen"
+            bgColor={'#13DE00'}
+            style={{ width: 40, height: 40 }}
+            title="Follow Us on TikTok"
+          />
+        </Box>
+        <Box bgColor={'black'} borderRadius={'100%'}>
+          <SocialIcon
+            url="https://www.facebook.com/greenghostdegen"
+            bgColor={'#13DE00'}
+            style={{ width: 40, height: 40 }}
+            title="Follow Us on Facebook"
+          />
+        </Box>
+        <Box bgColor={'black'} borderRadius={'100%'}>
+          <SocialIcon
             url="https://www.reddit.com/r/greenghostdegen"
-            bgColor={'#4cfd27'}
+            bgColor={'#13DE00'}
             style={{ width: 40, height: 40 }}
             title="Join Us on Reddit"
           />
@@ -101,31 +104,15 @@ export const SocialMediaIcons = () => {
         <Box bgColor={'black'} borderRadius={'100%'}>
           <SocialIcon
             url="https://www.linkedin.com/company/green-ghost"
-            bgColor={'#4cfd27'}
+            bgColor={'#13DE00'}
             style={{ width: 40, height: 40 }}
             title="Join Us on Linkedin"
           />
         </Box>
         <Box bgColor={'black'} borderRadius={'100%'}>
           <SocialIcon
-            url="https://medium.com/@GokaiLabs"
-            bgColor={'#4cfd27'}
-            style={{ width: 40, height: 40 }}
-            title="Follow Us on Medium"
-          />
-        </Box>
-        <Box bgColor={'black'} borderRadius={'100%'}>
-          <SocialIcon
-            url="https://twitter.com/greenghostdegen"
-            bgColor={'#4cfd27'}
-            style={{ width: 40, height: 40 }}
-            title="Follow Us on Twitter"
-          />
-        </Box>
-        <Box bgColor={'black'} borderRadius={'100%'}>
-          <SocialIcon
             url="https://discord.gg/tXSeJfVVnH"
-            bgColor={'#4cfd27'}
+            bgColor={'#13DE00'}
             style={{ width: 40, height: 40 }}
             title="Join Us on Discord"
           />

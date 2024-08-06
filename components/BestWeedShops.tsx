@@ -10,10 +10,9 @@ export const BestWeedShops = () => {
         <Text
           as={'h2'}
           fontSize={{ base: 24, lg: 30 }}
-          lineHeight={'28px'}
+          lineHeight={1}
           fontFamily={'CubicFive12'}
-          mt={{ base: 5 }}
-          mb={{ base: 5 }}
+          my={{ base: 4 }}
           textAlign={'left'}
         >
           Best Weed Shops Phuket
@@ -21,10 +20,9 @@ export const BestWeedShops = () => {
       </Box>
       <Text
         as={'p'}
-        fontSize={{ base: 26, md: 36 }}
+        fontSize={{ base: 26, lg: 36 }}
         lineHeight={1}
         fontFamily={'vt323'}
-        w={{ base: '60%', md: '70%' }}
       >
         Explore our locations on Google Maps to find the nearest Green Ghost
         store. Experience premium quality cannabis and exceptional service at

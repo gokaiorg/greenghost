@@ -24,7 +24,7 @@ export const find = [
   },
   {
     name: 'WEED.TH Rawai',
-    findUsLink: 'https://weed.th/shop/be232698-0464-4352-bd70-15ea51257870',
+    findUsLink: 'https://weed.th/shop/2ab3e52b-83f8-4a73-a96f-a60e04774a17',
   },
   {
     name: 'Weeddee',

@@ -71,7 +71,7 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
         <Text
           as={'p'}
           lineHeight={1}
-          fontSize={{ base: 26, md: 40, lg: 44 }}
+          fontSize={{ base: 26, md: 36, lg: 44, xl: 44 }}
           w={{ base: '100%', xl: '80%' }}
           m={'auto'}
         >

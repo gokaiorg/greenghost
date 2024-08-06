@@ -15,7 +15,6 @@ export const ImgCoffeeshop = () => {
         height={531}
         alt="Green Ghost - Degen Weed Shop - Coffeeshop Phuket"
         title="Green Ghost - Degen Weed Shop - Coffeeshop Phuket"
-        layout="responsive"
         sizes="(max-width: 768px) 60px, 120px"
       />
     </Box>

@@ -16,7 +16,7 @@ export const ReviewItem: FC<ReviewItemProps> = ({
   reviewLink,
 }) => {
   return (
-    <Box display={'flex'} my={'10'} bgColor={'ghostVerse.dark.lighter'} p={'5'}>
+    <Box display={'flex'} my={'5'} bgColor={'ghostVerse.dark.lighter'} p={'5'}>
       <TestimonialPfp />
       <Box
         display={'flex'}
@@ -38,7 +38,7 @@ export const ReviewItem: FC<ReviewItemProps> = ({
           {title}
         </Text>
         <TestimonialStars />
-        <Text as={'p'} fontSize={{ base: '3xl' }} lineHeight={'1'}>
+        <Text as={'p'} fontSize={{ base: 26, lg: 28 }} lineHeight={'1'}>
           {review}
         </Text>
         <Link
