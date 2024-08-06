@@ -1,11 +1,12 @@
 import { Container, Box, Text } from '@chakra-ui/react';
 import { SocialMediaIcons } from './SocialMediaIcons';
 import { MenuFooter } from './MenuFooter';
+import { Find } from './Find';
 
 export const Footer = () => {
   return (
     <Box
-      color="elvenTools.white"
+      color={'ghostVerse.grey.lighter'}
       display={'flex'}
       alignItems={'center'}
       mt={{ base: '4' }}
@@ -16,6 +17,7 @@ export const Footer = () => {
         fontWeight="normal"
         textAlign={'center'}
       >
+        <Find />
         <SocialMediaIcons />
         <MenuFooter />
         <Box
