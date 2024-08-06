@@ -21,7 +21,7 @@ export const Coffeeshop = () => {
         <Text
           as={'h2'}
           fontSize={{ base: 24, lg: 30 }}
-          lineHeight={'28px'}
+          lineHeight={1}
           fontFamily={'CubicFive12'}
           mt={{ base: 5 }}
           textAlign={'left'}
@@ -30,7 +30,7 @@ export const Coffeeshop = () => {
         </Text>
         <Text
           as={'p'}
-          fontSize={{ base: 26, md: 36 }}
+          fontSize={{ base: 26, lg: 36 }}
           lineHeight={1}
           fontFamily={'vt323'}
         >
@@ -51,7 +51,7 @@ export const Coffeeshop = () => {
           <Text
             as={'h3'}
             fontSize={{ base: 20 }}
-            lineHeight={'28px'}
+            lineHeight={1}
             fontFamily={'CubicFive12'}
             mt={{ base: 5 }}
             textAlign={'left'}

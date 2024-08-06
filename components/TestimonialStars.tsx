@@ -4,8 +4,8 @@ export const TestimonialStars = () => {
   return (
     <Box display={'flex'} mb={2}>
       <svg
-        width={'30px'}
-        height={'30px'}
+        width={'24px'}
+        height={'24px'}
         xmlns={'http://www.w3.org/2000/svg'}
         viewBox={'0 0 20 20'}
         fill={'#4cfd27'}
@@ -17,8 +17,8 @@ export const TestimonialStars = () => {
         />
       </svg>
       <svg
-        width={'30px'}
-        height={'30px'}
+        width={'24px'}
+        height={'24px'}
         xmlns={'http://www.w3.org/2000/svg'}
         viewBox={'0 0 20 20'}
         fill={'#4cfd27'}
@@ -30,8 +30,8 @@ export const TestimonialStars = () => {
         />
       </svg>
       <svg
-        width={'30px'}
-        height={'30px'}
+        width={'24px'}
+        height={'24px'}
         xmlns={'http://www.w3.org/2000/svg'}
         viewBox={'0 0 20 20'}
         fill={'#4cfd27'}
@@ -43,8 +43,8 @@ export const TestimonialStars = () => {
         />
       </svg>
       <svg
-        width={'30px'}
-        height={'30px'}
+        width={'24px'}
+        height={'24px'}
         xmlns={'http://www.w3.org/2000/svg'}
         viewBox={'0 0 20 20'}
         fill={'#4cfd27'}
@@ -56,8 +56,8 @@ export const TestimonialStars = () => {
         />
       </svg>
       <svg
-        width={'30px'}
-        height={'30px'}
+        width={'24px'}
+        height={'24px'}
         xmlns={'http://www.w3.org/2000/svg'}
         viewBox={'0 0 20 20'}
         fill={'#4cfd27'}

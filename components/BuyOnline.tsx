@@ -16,7 +16,7 @@ export const BuyOnline = () => {
       <Box display={'flex'} w={'100%'} alignItems={'left'}>
         <Text
           as={'h3'}
-          fontSize={{ base: 30, md: 50 }}
+          fontSize={{ base: 30, lg: 50 }}
           lineHeight={1}
           fontWeight={'bold'}
           fontFamily={'vt323'}
@@ -29,7 +29,7 @@ export const BuyOnline = () => {
       </Box>
       <Text
         as={'p'}
-        fontSize={{ base: 20, md: 36 }}
+        fontSize={{ base: 20, lg: 36 }}
         lineHeight={1}
         fontFamily={'vt323'}
         w={{ base: '60%', md: '70%' }}
@@ -61,7 +61,7 @@ export const BuyOnline = () => {
           color={'ghostVerse.green.base'}
           borderColor={'black'}
           backgroundColor={'black'}
-          fontSize={{ base: 'xl', md: '4xl' }}
+          fontSize={{ base: 'xl', lg: '4xl' }}
           lineHeight={1}
           borderWidth={1}
           px={{ base: 4, md: 6 }}

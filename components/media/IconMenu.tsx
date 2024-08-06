@@ -11,8 +11,8 @@ export const IconMenu = () => {
       <Image
         src="/media/green-ghost-degen-weed-shop-menu.png"
         alt="Green Ghost - Degen Weed Shop - Weed Menu"
-        layout="fill"
-        objectFit="contain"
+        fill
+        style={{ objectFit: 'contain' }}
         priority={true}
         sizes="(max-width: 600px) 235px, (max-width: 1200px) 320px, 420px"
       />

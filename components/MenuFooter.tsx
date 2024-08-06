@@ -1,91 +1,82 @@
-import { Box, Text } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import Link from 'next/link';
 
 export const MenuFooter = () => {
   return (
     <>
-      <Text
-        as={'h3'}
-        fontSize={'lg'}
-        mx={'auto'}
-        fontFamily={'CubicFive12'}
-        mt={10}
-        textAlign={'center'}
-        color={'ghostVerse.color2.darker'}
-      >
-        Links
-      </Text>
       <Box
         display={'flex'}
         flexWrap={'wrap'}
         alignItems={'center'}
         justifyContent={'center'}
         mx={'auto'}
-        mb={4}
+        my={4}
         fontSize={'2xl'}
         fontFamily={'vt323'}
+        textDecoration={'underline'}
+        color={'ghostVerse.grey.base'}
       >
-        <Box mx={2} color={'ghostVerse.green.base'}>
+        <Box mx={2}>
           <Link
             title="Best Weed Shops in Thailand"
             href="/weed-shops-thailand"
             passHref
           >
-            Shops |
+            Shops
           </Link>
         </Box>
-        <Box mx={2} color={'ghostVerse.green.base'}>
+        <Box mx={2}>
           <Link title="Weed Growers in Thailand" href="/weed-grower" passHref>
-            Growers |
+            Growers
           </Link>
         </Box>
-        <Box mx={2} color={'ghostVerse.green.base'}>
+        <Box mx={2}>
           <Link title="Weed Shop Menu" href={'/weed-shop'} passHref>
-            Menu |
+            Menu
           </Link>
         </Box>
-        <Box mx={2} color={'ghostVerse.green.base'}>
+        <Box mx={2}>
           <Link
             title="Weed Delivery Phuket"
             href="/weed-delivery-phuket"
             passHref
           >
-            Delivery |
+            Delivery
           </Link>
         </Box>
-        <Box mx={2} color={'ghostVerse.green.base'}>
+        <Box mx={2}>
           <Link
             title="Drive Thru Phuket"
             href="/weed-drive-thru-phuket"
             passHref
           >
-            Drive-Thru |
+            Drive-Thru
           </Link>
         </Box>
-        <Box mx={2} color={'ghostVerse.green.base'}>
+        <Box mx={2}>
           <Link
             title="Green Ghost Map Location"
             href="/weed-shop-near-me"
             passHref
           >
-            Location |
+            Location
           </Link>
         </Box>
-        <Box mx={2} color={'ghostVerse.green.base'}>
+        <Box mx={2}>
           <Link title={'About Green Ghost'} href="/about-green-ghost" passHref>
-            About |
+            About
           </Link>
         </Box>
-        <Box mx={2} color={'ghostVerse.green.base'}>
+        <Box mx={2}>
           <Link
             title="Contact Green Ghost"
             href={'/contact-green-ghost'}
             passHref
           >
-            Contact |
+            Contact
           </Link>
         </Box>
-        <Box mx={2} color={'ghostVerse.green.base'}>
+        <Box mx={2}>
           <Link title="Green Ghost Sitemap" href="/sitemap" passHref>
             Sitemap
           </Link>

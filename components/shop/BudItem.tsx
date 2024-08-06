@@ -57,12 +57,15 @@ export const BudItem = ({ bud }: BudItemProps) => {
               (image, index) =>
                 index !== 2 && (
                   <SwiperSlide key={index}>
-                    <Image
-                      src={image}
-                      width={500}
-                      height={500}
-                      alt={bud.imgDesc}
-                    />
+                    <Box as="span">
+                      <Image
+                        src={image}
+                        width={250}
+                        height={250}
+                        alt={bud.imgDesc}
+                        sizes="(max-width: 600px) 160px, (max-width: 1200px) 240px, 240px"
+                      />
+                    </Box>
                   </SwiperSlide>
                 )
             )}

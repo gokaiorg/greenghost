@@ -13,22 +13,23 @@ export const Review = () => {
   if (!Array.isArray(review)) return null;
   return (
     <>
-      <Box display={'flex'} flexDir={'column'} alignItems={'center'} mt={20}>
-        <Box w={'160px'}>
+      <Box display={'flex'} flexDir={'column'} alignItems={'center'}>
+        <Box w={'120px'}>
           <Image
-            src={'/media/green-ghost-degen-weed-shop-cannabis-leaf.png'}
-            width={478}
-            height={475}
-            alt={'Green Ghost - Degen Weed Shop - Cannabis Leaf.'}
+            src="/media/green-ghost-degen-weed-shop-cannabis-leaf.png"
+            width={1080} // Original width
+            height={1106} // Original height
+            alt="Green Ghost - Degen Weed Shop - Cannabis Leaf"
+            layout="intrinsic" // Preserve aspect ratio
+            sizes="(max-width: 600px) 120px, (max-width: 1200px) 120px, 120px"
           />
         </Box>
         <Text
           as={'h3'}
-          fontSize={{ base: 24, lg: 34 }}
-          lineHeight={'28px'}
+          fontSize={{ base: 20, lg: 28 }}
+          lineHeight={1}
           fontFamily={'CubicFive12'}
-          mt={{ base: 5 }}
-          mb={{ base: 5 }}
+          my={{ base: 2 }}
           textAlign={'center'}
         >
           Green Ghosted Peeps
