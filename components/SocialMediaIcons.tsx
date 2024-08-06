@@ -30,7 +30,7 @@ export const SocialMediaIcons = () => {
           mt={-4}
           mb={2}
           w={'full'}
-          color={'ghostVerse.grey.base'}
+          color={'ghostVerse.grey.lighter'}
           fontFamily={'vt323'}
         >
           @greenghostdegen

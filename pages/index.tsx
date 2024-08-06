@@ -10,7 +10,6 @@ import { HomeHero } from '../components/HomeHero';
 import { Fwen } from '../components/Fwen';
 import { BuyOnline } from '../components/BuyOnline';
 import { BestWeedShops } from '../components/BestWeedShops';
-import { Find } from '../components/Find';
 import { Coffeeshop } from '../components/Coffeeshop';
 import { BestWeed } from '../components/BestWeed';
 
@@ -68,7 +67,6 @@ const Home: NextPage = () => {
         <BestWeedShops />
         <Fwen />
         <Review />
-        <Find />
       </MainLayout>
     </>
   );

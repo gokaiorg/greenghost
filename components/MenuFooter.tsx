@@ -14,7 +14,7 @@ export const MenuFooter = () => {
         fontSize={'2xl'}
         fontFamily={'vt323'}
         textDecoration={'underline'}
-        color={'ghostVerse.grey.base'}
+        color={'ghostVerse.grey.lighter'}
       >
         <Box mx={2}>
           <Link
