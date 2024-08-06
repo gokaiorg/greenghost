@@ -14,6 +14,7 @@ export const Find = () => {
         fontFamily={'CubicFive12'}
         mt={10}
         textAlign={'center'}
+        color={'ghostverse.color2.darker'}
       >
         Find Us Also On
       </Text>
