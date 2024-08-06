@@ -15,8 +15,8 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
     <Box
       display={'flex'}
       flexDirection={{ base: 'column' }}
-      mb={10}
-      w={{ base: '100%', lg: '32%' }}
+      mb={4}
+      w={{ base: '100%', md: '32%' }}
       bgColor={'ghostVerse.dark.lighter'}
       backdropFilter={'blur(3px)'}
       p={4}
@@ -39,7 +39,13 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
           {shop.name}
         </Text>
       </Link>
-      <Box as={'span'} fontFamily={'vt323'} fontSize={{ base: '2xl' }} mb={4}>
+      <Box
+        as={'span'}
+        fontFamily={'vt323'}
+        fontSize={{ base: '2xl' }}
+        mb={4}
+        lineHeight={1}
+      >
         <Box as={'span'} display={'flex'} alignItems={'center'}>
           <IconShop />
           <Box ml={2} mb={1}>
@@ -53,12 +59,24 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
           </Box>
         </Box>
       </Box>
-      <Box w={'100%'}>
+      <Box
+        w={'100%'}
+        position="relative"
+        pb="56.25%"
+        height="0"
+        overflow="hidden"
+      >
         <iframe
           src={shop.mapLink}
-          width="350"
-          height="250"
-          style={{ border: 0 }}
+          title={`Green Ghost - ${shop.name} - Google Map`}
+          style={{
+            border: 0,
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+          }}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>

@@ -12,11 +12,15 @@ interface FwenItemProps {
 export const FwenItem: FC<FwenItemProps> = ({ name, fwenLogo, fwenLink }) => {
   return (
     <Box
-      width={{ base: '25%', md: '20%', lg: '10%' }}
+      width={{ base: '33%', md: '20%', lg: '10%' }}
       mb={'4'}
       minHeight={'100px'}
     >
-      <Link href={fwenLink} passHref title={`Green Ghost Fwen - ${name}`}>
+      <Link
+        href={fwenLink}
+        passHref
+        title={`Green Ghost Premium Cannabis Partner - ${name}`}
+      >
         <Box
           h={'100%'}
           fontSize={{ base: 'xl' }}
@@ -40,7 +44,7 @@ export const FwenItem: FC<FwenItemProps> = ({ name, fwenLogo, fwenLink }) => {
               src={fwenLogo}
               width={120}
               height={120}
-              alt={`Green Ghost Fwen - ${name}`}
+              alt={`Green Ghost Premium Cannabis Partner - ${name}`}
             />
           </Box>
           <Text as={'h4'} fontSize={{ base: 10, md: 10 }} lineHeight={'12px'}>

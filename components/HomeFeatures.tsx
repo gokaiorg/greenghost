@@ -12,7 +12,7 @@ export const HomeFeature = () => {
         <Text
           as={'h2'}
           fontSize={{ base: 24, lg: 34 }}
-          lineHeight={'28px'}
+          lineHeight={1}
           fontFamily={'CubicFive12'}
           mt={{ base: 5 }}
           mb={{ base: 5 }}
@@ -23,7 +23,7 @@ export const HomeFeature = () => {
       </Box>
       <Text
         as={'p'}
-        fontSize={{ base: 26, md: 40, lg: 44 }}
+        fontSize={{ base: 26, lg: 44 }}
         lineHeight={1}
         fontFamily={'vt323'}
         w={{ base: '60%', md: '70%' }}

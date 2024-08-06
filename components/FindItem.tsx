@@ -10,10 +10,12 @@ interface FindItemProps {
 export const FindItem: FC<FindItemProps> = ({ name, findUsLink }) => {
   return (
     <Box
-      m={2}
+      m={1}
       px={2}
-      fontSize={26}
-      color={'ghostVerse.green.base'}
+      fontSize={22}
+      color={'ghostVerse.grey.base'}
+      bgColor={'ghostVerse.dark.lighter'}
+      backdropFilter={'blur(3px)'}
       _hover={{
         color: 'black',
         backgroundColor: 'ghostVerse.green.base',

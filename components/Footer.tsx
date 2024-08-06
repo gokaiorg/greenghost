@@ -1,7 +1,6 @@
 import { Container, Box, Text } from '@chakra-ui/react';
 import { SocialMediaIcons } from './SocialMediaIcons';
 import { MenuFooter } from './MenuFooter';
-import { ImgGhostverse } from './media/ImgGhostverse';
 
 export const Footer = () => {
   return (
@@ -9,7 +8,7 @@ export const Footer = () => {
       color="elvenTools.white"
       display={'flex'}
       alignItems={'center'}
-      mt={{ base: '5rem' }}
+      mt={{ base: '4' }}
     >
       <Container
         maxW="container.xl"
@@ -27,6 +26,7 @@ export const Footer = () => {
           display={'flex'}
           justifyContent={'center'}
           whiteSpace={'nowrap'}
+          fontFamily={'vt323'}
         >
           <Text>Made with weed by</Text>
           <Text
@@ -37,27 +37,7 @@ export const Footer = () => {
           >
             Gokai Labs
           </Text>
-          <Text>for</Text>
-          <Text
-            as="a"
-            color="ghostVerse.color1.darker"
-            href="https://ghostverse.org/"
-            mx={2}
-          >
-            GhostVerse DAO
-          </Text>
         </Box>
-        <Text
-          as="a"
-          color="ghostVerse.color1.darker"
-          href="https://ghostverse.org/"
-          mx={2}
-          width={'100%'}
-        >
-          <Box w={'200px'} mx={'auto'}>
-            <ImgGhostverse />
-          </Box>
-        </Text>
       </Container>
     </Box>
   );
