@@ -1,32 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { Box } from '@chakra-ui/react';
+// AgeVerification.tsx
+import { useState, useEffect } from 'react';
+import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 
-type AgeVerificationPopupProps = {
-  onVerify: () => void;
-};
-
-const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
-  const [isOpen, setIsOpen] = useState(true);
+const AgeVerification = () => {
+  const [isVerified, setIsVerified] = useState(false);
 
   useEffect(() => {
-    const isVerified = localStorage.getItem('ageVerified');
-    if (isVerified) {
-      setIsOpen(false);
+    const verified = localStorage.getItem('ageVerified');
+    if (verified) {
+      setIsVerified(true);
     }
   }, []);
 
-  const verifyAge = () => {
-    setIsOpen(false);
+  const handleVerify = () => {
     localStorage.setItem('ageVerified', 'true');
-    onVerify();
+    setIsVerified(true);
   };
 
-  const handleClose = () => {
-    setIsOpen(false);
-  };
-
-  if (!isOpen) {
+  if (isVerified) {
     return null;
   }
 
@@ -39,6 +31,7 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
       left={0}
       right={0}
       backgroundColor="black"
+      fontFamily={'CubicFive12'}
     >
       <Box
         position={'absolute'}
@@ -52,7 +45,6 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
         height={'fit-content'}
       >
         <Box
-          onTouchStart={handleClose}
           as={'img'}
           src="/media/green-ghost-degen-weed-shop-older-20-only.webp"
           width="300px"
@@ -61,19 +53,10 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           alt="Green Ghost - Degen Weed Shop - 20 or older only"
           title="Green Ghost - Degen Weed Shop - 20 or older only"
         />
+        <Text fontSize="xl" mb={4}>
+          You must be 21 years or older to enter this site.
+        </Text>
         <Box
-          as={'h2'}
-          display={'flex'}
-          flexDirection={'row'}
-          alignItems={'baseline'}
-          fontSize={'2xl'}
-          mt={4}
-          whiteSpace={'nowrap'}
-        >
-          Are you 20 or older?
-        </Box>
-        <Box
-          as={'span'}
           display={'inline-flex'}
           color={'ghostVerse.green.base'}
           borderColor={'ghostVerse.green.base'}
@@ -84,17 +67,10 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
           py={2}
           px={6}
           mb={2}
-          mr={'auto'}
-          outline={'none'}
           cursor={'pointer'}
-          onClick={verifyAge}
-          onTouchStart={verifyAge}
-          onTouchMove={verifyAge}
-          onMouseDown={verifyAge}
-          onPointerDown={verifyAge}
-          onTouchEnd={verifyAge}
+          onClick={handleVerify}
         >
-          Yes, I am over 20
+          I am 21 or older
         </Box>
         <br />
         <Link href={'https://ghostverse.org/'} title={'GhostVerse'} passHref>
@@ -112,7 +88,7 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
             mb={2}
             mr={'auto'}
           >
-            No, NFTs are better for me
+            Nope
           </Box>
         </Link>
       </Box>
@@ -120,4 +96,4 @@ const AgeVerificationPopup = ({ onVerify }: AgeVerificationPopupProps) => {
   );
 };
 
-export default AgeVerificationPopup;
+export default AgeVerification;

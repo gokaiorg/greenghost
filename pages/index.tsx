@@ -18,7 +18,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>
-          Green Ghost 🌿👻 Best Degen Weed Shop and Delivery in Phuket Thailand
+          Green Ghost 🌿👻 Best Degen Weed Shop and Delivery in Thailand
         </title>
         <meta
           name="description"
@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Best Degen Weed Shop and Delivery in Phuket Thailand"
+          content="Green Ghost 🌿👻 Best Degen Weed Shop and Delivery in Thailand"
         />
         <meta
           property="og:description"
@@ -41,7 +41,7 @@ const Home: NextPage = () => {
         <meta property="og:url" content="https://green.gd/" />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Best Degen Weed Shop and Delivery in Phuket Thailand"
+          content="Green Ghost 🌿👻 Best Degen Weed Shop and Delivery in Thailand"
         />
         <meta
           name="twitter:description"
