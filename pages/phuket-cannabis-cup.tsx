@@ -9,7 +9,6 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
 import { ImgCup } from '../components/media/ImgCup';
-import { Find } from '../components/Find';
 
 const CannabisCup: NextPage = () => {
   const router = useRouter();
@@ -468,7 +467,6 @@ const CannabisCup: NextPage = () => {
             </Text>
           </Box>
         </Box>
-        <Find />
       </MainLayout>
     </>
   );

@@ -1,5 +1,5 @@
 import { Box, Text } from '@chakra-ui/react';
-import { BudItem } from './shop/BudItem';
+import { BudItemBest } from './shop/BudItemBest';
 import { buds } from '../config/buds';
 
 const selectedStrains = [
@@ -44,7 +44,7 @@ export const BestWeed = () => {
       </Text>
       <Box display={'flex'} flexWrap={'wrap'} mx={-0.5}>
         {bestBuds.map((bud) => (
-          <BudItem key={bud.slug} bud={bud} />
+          <BudItemBest key={bud.slug} bud={bud} />
         ))}
       </Box>
     </Box>
