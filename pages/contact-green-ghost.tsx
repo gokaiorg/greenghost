@@ -9,7 +9,6 @@ import Head from 'next/head';
 import { SocialContactIcons } from '../components/SocialContactIcons';
 import Image from 'next/image';
 import { ImgContact } from '../components/media/ImgContact';
-import { Find } from '../components/Find';
 
 const BuyWeed: NextPage = () => {
   return (
@@ -145,7 +144,6 @@ const BuyWeed: NextPage = () => {
             </Box>
           </Box>
         </Box>
-        <Find />
       </MainLayout>
     </>
   );

@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import React, { FC, PropsWithChildren } from 'react';
 import { MetaHead, MetaHeadProps } from './MetaHead';
 import { Footer } from './Footer';
-import AgeVerificationPopup from '../components/AgeVerificationPopup';
 import Script from 'next/script';
 
 export const MainLayout: FC<PropsWithChildren<MetaHeadProps>> = ({
@@ -13,10 +12,6 @@ export const MainLayout: FC<PropsWithChildren<MetaHeadProps>> = ({
   metaImage,
   metaUrl,
 }) => {
-  const handleVerify = () => {
-    console.log('User verified age.');
-  };
-
   const router = useRouter();
   if (router.isFallback) {
     return <div>Loading...</div>;
@@ -55,7 +50,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
         `}
       </Script>
-      <AgeVerificationPopup onVerify={handleVerify} />
       <MetaHead
         metaTitle={metaTitle}
         metaDescription={metaDescription}
