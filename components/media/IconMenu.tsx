@@ -9,7 +9,7 @@ export const IconMenu = () => {
       h={{ base: '60px', md: '80px', lg: '105px' }}
     >
       <Image
-        src="/media/green-ghost-degen-weed-shop-menu.png"
+        src="/media/green-ghost-degen-weed-shop-menu.webp"
         alt="Green Ghost - Degen Weed Shop - Weed Menu"
         fill
         style={{ objectFit: 'contain' }}

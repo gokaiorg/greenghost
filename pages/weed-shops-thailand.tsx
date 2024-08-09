@@ -64,7 +64,7 @@ const CannabisShop: NextPage = () => {
           mt={4}
         >
           <ImgShops />
-          <HomeSectionTitle title="Thailand Weed Shops Selection." />
+          <HomeSectionTitle title="Thailand Weed Shops Selection" />
         </Box>
         <Box
           display={'flex'}
@@ -73,10 +73,7 @@ const CannabisShop: NextPage = () => {
           color={'white'}
           fontSize={{ base: '3xl' }}
           fontFamily={'vt323'}
-          borderColor={'ghostVerse.color2.base'}
           bgColor={'ghostVerse.dark.lighter'}
-          borderWidth={1}
-          backdropFilter={'blur(3px)'}
           mt={5}
           mb={6}
           p={4}

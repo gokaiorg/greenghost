@@ -6,10 +6,12 @@ export const ImgDelivery = () => {
     <Box w={{ base: '100px', lg: '140px' }}>
       <Image
         src="/media/weed-delivery-phuket.webp"
-        width={200}
-        height={160}
         alt="Green Ghost - Degen Weed Shop - Weed Delivery Phuket"
         title="Green Ghost - Degen Weed Shop - Weed Delivery Phuket"
+        width={640}
+        height={512}
+        sizes="(max-width: 1024px) 100px, 140px"
+        style={{ width: '100%', height: 'auto' }}
       />
     </Box>
   );
