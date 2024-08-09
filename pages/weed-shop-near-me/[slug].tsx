@@ -74,10 +74,7 @@ export default function ShopPage({ shop }: ShopPageProps) {
           ))}
         </Box>
         <Box
-          borderColor={'ghostVerse.color2.base'}
           bgColor={'ghostVerse.dark.lighter'}
-          borderWidth={1}
-          backdropFilter={'blur(3px)'}
           width="full"
           p={4}
           my={4}

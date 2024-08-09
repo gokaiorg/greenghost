@@ -55,7 +55,7 @@ export const BudItem = ({ bud }: BudItemProps) => {
           >
             {bud.images.map(
               (image, index) =>
-                index !== 2 && (
+                index !== 3 && (
                   <SwiperSlide key={index}>
                     <Box as="span">
                       <Image

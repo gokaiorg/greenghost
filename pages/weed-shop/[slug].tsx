@@ -7,7 +7,6 @@ import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import { Box, Text } from '@chakra-ui/react';
-import { BuyNowLink } from '../../components/shop/elements/BuyNowLink';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
 import 'swiper/css';
@@ -22,6 +21,7 @@ import BoxInfoLabel from '../../components/box/BoxInfoLabel';
 import { BoxInfoLabelTitle } from '../../components/box/BoxInfoLabelTitle';
 import BoxInfoMemberPrice from '../../components/box/BoxInfoMemberPrice';
 import BoxInfoQuantity from '../../components/box/BoxInfoQuantity';
+import { HomeFeature } from '../../components/HomeFeatures';
 
 interface BudPageProps {
   bud: Bud;
@@ -115,41 +115,16 @@ export default function BudPage({ bud }: BudPageProps) {
         >
           {bud.images.map((image, index) => (
             <SwiperSlide key={index}>
-              <Image src={image} width={500} height={500} alt={bud.imgDesc} />
+              <Image
+                src={image}
+                width={400}
+                height={400}
+                alt={bud.imgDesc}
+                sizes="(max-width: 400px) 100vw, 400px"
+                quality={75}
+              />
             </SwiperSlide>
           ))}
-          <BuyNowLink />
-          <Link
-            href={`https://greenghostweed.shop/products/${bud.slug}`}
-            title={'Order weed online in Thailand'}
-            passHref
-          >
-            <Text
-              ml={'auto'}
-              pos={'absolute'}
-              left={140}
-              bottom={2}
-              zIndex={2}
-              color={'ghostVerse.green.base'}
-              borderColor={'ghostVerse.green.base'}
-              fontSize={18}
-              borderWidth={1}
-              borderRadius={'full'}
-              bgColor={'ghostVerse.dark.lighter'}
-              backdropFilter={'blur(3px)'}
-              py={1}
-              px={3}
-              mb={4}
-              display={'block'}
-              width={'fit-content'}
-              _hover={{
-                bgColor: 'ghostVerse.green.base',
-                color: 'black',
-              }}
-            >
-              Order Online
-            </Text>
-          </Link>
         </Swiper>
         <BoxInfoProduct>
           <BoxInfoLeft>
@@ -332,6 +307,72 @@ export default function BudPage({ bud }: BudPageProps) {
             </Box>
           )}
         </BoxDescription>
+        <HomeFeature />
+        <Box
+          display={'flex'}
+          mb={5}
+          p={5}
+          pt={0}
+          flexWrap={'wrap'}
+          alignItems={'stretch'}
+          backgroundColor={'ghostVerse.green.base'}
+          color={'black'}
+        >
+          <Box display={'flex'} w={'100%'} alignItems={'left'}>
+            <Text
+              as={'h3'}
+              fontSize={{ base: 30, lg: 50 }}
+              lineHeight={1}
+              fontWeight={'bold'}
+              fontFamily={'vt323'}
+              mt={{ base: 5 }}
+              mb={{ base: 5 }}
+              textAlign={'left'}
+            >
+              Get 10% Free on Weed Orders!
+            </Text>
+          </Box>
+          <Text
+            as={'p'}
+            fontSize={{ base: 20, lg: 36 }}
+            lineHeight={1}
+            fontFamily={'vt323'}
+            w={{ base: '60%', md: '70%' }}
+            mr={4}
+            textAlign={'left'}
+          >
+            {`Schedule your delivery to enjoy 10% free on ${bud.name}.`}
+          </Text>
+          <Link
+            href={`https://greenghostweed.shop/products/${bud.slug}`}
+            passHref
+            title={`Green Ghost Weed Shop - Buy ${bud.name} Cannabis Strain Online`}
+          >
+            <Text
+              as="span"
+              display={'inline-flex'}
+              color={'ghostVerse.green.base'}
+              borderColor={'black'}
+              backgroundColor={'black'}
+              fontSize={{ base: 'xl', lg: '4xl' }}
+              lineHeight={1}
+              borderWidth={1}
+              px={{ base: 4, md: 6 }}
+              pt={{ base: 2, md: 0 }}
+              pb={{ base: 2, md: 2 }}
+              mt={5}
+              mx={'auto'}
+              fontFamily={'vt323'}
+              _hover={{
+                borderColor: 'black',
+                bgColor: 'ghostVerse.green.base',
+                color: 'black',
+              }}
+            >
+              {'Schedule & Save 10%'}
+            </Text>
+          </Link>
+        </Box>
       </MainLayout>
     </>
   );

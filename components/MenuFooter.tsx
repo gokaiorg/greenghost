@@ -18,43 +18,6 @@ export const MenuFooter = () => {
       >
         <Box mx={2}>
           <Link
-            title="Best Weed Shops in Thailand"
-            href="/weed-shops-thailand"
-            passHref
-          >
-            Shops
-          </Link>
-        </Box>
-        <Box mx={2}>
-          <Link title="Weed Growers in Thailand" href="/weed-grower" passHref>
-            Growers
-          </Link>
-        </Box>
-        <Box mx={2}>
-          <Link title="Weed Shop Menu" href={'/weed-shop'} passHref>
-            Menu
-          </Link>
-        </Box>
-        <Box mx={2}>
-          <Link
-            title="Weed Delivery Phuket"
-            href="/weed-delivery-phuket"
-            passHref
-          >
-            Delivery
-          </Link>
-        </Box>
-        <Box mx={2}>
-          <Link
-            title="Drive Thru Phuket"
-            href="/weed-drive-thru-phuket"
-            passHref
-          >
-            Drive-Thru
-          </Link>
-        </Box>
-        <Box mx={2}>
-          <Link
             title="Green Ghost Map Location"
             href="/weed-shop-near-me"
             passHref

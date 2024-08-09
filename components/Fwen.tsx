@@ -67,12 +67,14 @@ export const Fwen = () => {
                   color: 'ghostVerse.green.base',
                 }}
               >
-                <Box w={'60px'}>
+                <Box w={'60px'} h={'60px'}>
                   <Image
                     src="/media/green-ghost-top-dispensary-weed-th.webp"
-                    width={120}
-                    height={120}
+                    width={60}
+                    height={60}
                     alt="Green Ghost Top Dispensary Phuket Thailand - Weed.th"
+                    sizes="(max-width: 60px) 60px, 60px"
+                    style={{ objectFit: 'cover' }}
                   />
                 </Box>
                 <Text
@@ -107,12 +109,14 @@ export const Fwen = () => {
                   color: 'ghostVerse.green.base',
                 }}
               >
-                <Box w={'60px'}>
+                <Box w={'60px'} h={'60px'}>
                   <Image
                     src="/media/green-ghost-top-dispensary-cleverthai.webp"
-                    width={120}
-                    height={120}
+                    width={60}
+                    height={60}
                     alt="Green Ghost Top Dispensary Phuket Thailand - CleverThai"
+                    sizes="(max-width: 60px) 60px, 60px"
+                    style={{ objectFit: 'cover' }}
                   />
                 </Box>
                 <Text
@@ -121,6 +125,48 @@ export const Fwen = () => {
                   lineHeight={'12px'}
                 >
                   Cleverthai
+                </Text>
+              </Box>
+            </Link>
+            <Link
+              href="https://www.thailandnomads.com/cannabis-shops-phuket/"
+              passHref
+              title="Green Ghost Top Dispensary Phuket Thailand - Thailand Nomads"
+            >
+              <Box
+                h={'100%'}
+                fontSize={{ base: 'xl' }}
+                color={'ghostVerse.color2.darker'}
+                fontFamily={'CubicFive12'}
+                mx={2}
+                textAlign={'center'}
+                p={2}
+                display={'flex'}
+                justifyContent={'center'}
+                flexDirection={'column'}
+                alignItems={'center'}
+                transition={'all .3s'}
+                _hover={{
+                  bgColor: 'ghostVerse.dark.lighter',
+                  color: 'ghostVerse.green.base',
+                }}
+              >
+                <Box w={'60px'} h={'60px'}>
+                  <Image
+                    src="/media/green-ghost-top-dispensary-thailand-nomads.webp"
+                    width={60}
+                    height={60}
+                    alt="Green Ghost Top Dispensary Phuket Thailand - Thailand Nomads"
+                    sizes="(max-width: 60px) 60px, 60px"
+                    style={{ objectFit: 'cover' }}
+                  />
+                </Box>
+                <Text
+                  as={'h4'}
+                  fontSize={{ base: 10, md: 10 }}
+                  lineHeight={'12px'}
+                >
+                  Thailand Nomads
                 </Text>
               </Box>
             </Link>
@@ -147,12 +193,14 @@ export const Fwen = () => {
                   color: 'ghostVerse.green.base',
                 }}
               >
-                <Box w={'60px'}>
+                <Box w={'60px'} h={'60px'}>
                   <Image
                     src="/media/green-ghost-top-dispensary-thai-news.webp"
-                    width={120}
-                    height={120}
+                    width={60}
+                    height={60}
                     alt="Green Ghost Top Dispensary Phuket Thailand - Thai News"
+                    sizes="(max-width: 60px) 60px, 60px"
+                    style={{ objectFit: 'cover' }}
                   />
                 </Box>
                 <Text
@@ -186,6 +234,19 @@ export const Fwen = () => {
           >
             Our premium cannabis partners
           </Text>
+          <Box
+            mx={2}
+            fontFamily={'vt323'}
+            fontSize={{ base: 'xl' }}
+            lineHeight={1}
+            px={{ base: 4, md: 0 }}
+            pb={{ base: 2, md: 2 }}
+            color={'ghostVerse.green.base'}
+          >
+            <Link title="Weed Growers in Thailand" href="/weed-grower" passHref>
+              Best Cannabis Growers
+            </Link>
+          </Box>
         </Box>
       </Box>
       {fwen.map((homeHeroItem, index) => (

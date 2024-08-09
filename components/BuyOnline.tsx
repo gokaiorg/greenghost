@@ -79,6 +79,23 @@ export const BuyOnline = () => {
           {'Schedule & Save 10%'}
         </Text>
       </Link>
+      <Box
+        mx={2}
+        fontFamily={'vt323'}
+        fontSize={{ base: 'xl' }}
+        lineHeight={1}
+        px={{ base: 0, md: 6 }}
+        py={{ base: 2, md: 2 }}
+        ml={'auto'}
+      >
+        <Link
+          title="Green Ghost - Weed Drive Thru Phuket"
+          href="/weed-drive-thru-phuket"
+          passHref
+        >
+          Weed Drive-Thru Pickup
+        </Link>
+      </Box>
     </Box>
   );
 };

@@ -9,7 +9,7 @@ export const dappHostname = process.env.NEXT_PUBLIC_DAPP_HOST;
 export const defaultMetaTags = {
   title: 'Green Ghost 🌿👻 Best Degen Weed Shop and Delivery in Thailand',
   description:
-    'Green Ghost is a cannabis & weed shop in Phuket Thailand offering a wide variety of locally-sourced and imported products, including flowers, edibles, accessories, and instant weed delivery in Phuket.',
+    'Discover premium cannabis at Green Ghost in Phuket. Explore our organic selection, including flowers, edibles, and accessories, with fast, reliable delivery.',
   shortname: 'Green Ghost 🌿👻',
   image: `${dappHostname}/green-ghost-degen-weed-shop.png`,
 };
