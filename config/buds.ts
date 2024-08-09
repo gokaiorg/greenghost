@@ -47,7 +47,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-thai-stick-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-thai-stick-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-thai-stick-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-thai-stick-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Thai Stick',
@@ -76,7 +75,6 @@ export const buds: Bud[] = [
       "Indulge in the captivating embrace of Gorilla Goo, a sativa-dominant hybrid that delivers an exhilarating experience crafted from the fusion of Chem's Sister, Sour Dubb, and Chocolate Diesel strains. With a staggering average THC level of 30%, this potent strain offers a long-lasting high that envelopes you in relaxation, perfect for unwinding after a long day. Its euphoric onset elevates the spirits, while its deeply sedative effects gradually soothe both mind and body, making it an ideal choice for addressing chronic pain, insomnia, depression, and muscle spasms.",
     images: [
       '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-bud-01.webp',
-      '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-bud-02.webp',
     ],
@@ -108,7 +106,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-royal-cheese-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-royal-cheese-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-royal-cheese-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-royal-cheese-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Royal Cheese',
@@ -137,7 +134,6 @@ export const buds: Bud[] = [
       'Northern Lights, or "NL," is a legendary indica strain created by crossing Afghani with Thai genetics. Renowned for its deeply relaxing effects, Northern Lights provides a full-body experience that soothes muscles and calms the mind, making it a go-to choice for unwinding after a long day. This strain\'s flavor profile is a delightful blend of sweet and spicy notes, with a smooth and pungent exhale that leaves a lasting impression.',
     images: [
       '/media/green-ghost-degen-weed-shop-strain-northern-lights-bud-01.webp',
-      '/media/green-ghost-degen-weed-shop-strain-northern-lights-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-northern-lights-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-northern-lights-bud-02.webp',
     ],
@@ -168,7 +164,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-el-chapo-og-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-el-chapo-og-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-el-chapo-og-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-el-chapo-og-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain El Chapo OG',
@@ -198,7 +193,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Forbidden Fruit',
@@ -258,7 +252,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-scotty-2-hotty-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-scotty-2-hotty-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-scotty-2-hotty-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-scotty-2-hotty-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Scotty 2 Hotty',
@@ -287,7 +280,6 @@ export const buds: Bud[] = [
       'Pitaya, a 100% Indica dominant hybrid, is a mesmerizing fusion of OG Kush, OG Kush Breath, and Girl Scout Cookies. This exquisite strain captivates connoisseurs with its exceptional flavor profile, blending the sweetness of nutty cookies with the robust undertones of rich, earthy pine. Each toke tantalizes the palate, offering a mouthwatering experience that leaves a lasting impression. With a THC content averaging at an impressive 26%, Pitaya promises a potent and memorable high, showcasing the best of its genetic lineage.',
     images: [
       '/media/green-ghost-degen-weed-shop-strain-pitaya-bud-01.webp',
-      '/media/green-ghost-degen-weed-shop-strain-pitaya-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-pitaya-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-pitaya-bud-02.webp',
     ],
@@ -318,7 +310,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-cbd-auto-tune-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-cbd-auto-tune-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-cbd-auto-tune-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-cbd-auto-tune-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain CBD Auto Tune',
@@ -378,7 +369,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-mango-sticky-rice-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-mango-sticky-rice-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-mango-sticky-rice-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-mango-sticky-rice-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Mango Sticky Rice',
@@ -407,7 +397,6 @@ export const buds: Bud[] = [
       'Indulge in the delightful experience of Fat Banana, a hybrid cannabis strain crafted by blending the legendary OG Kush with the aromatic Chiquita Banana. Unveiling a palate of sweetness with citrus undertones, its aroma transports you to a tropical banana haven. The journey with Fat Banana begins with a gentle euphoria, gradually evolving into a profound physical relaxation. Renowned for inducing the munchies, this strain offers a flavorful and multi-layered encounter, making it a favorite among those seeking a blissful and appetite-stimulating cannabis experience.',
     images: [
       '/media/green-ghost-degen-weed-shop-strain-fat-banana-bud-01.webp',
-      '/media/green-ghost-degen-weed-shop-strain-fat-banana-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-fat-banana-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-fat-banana-bud-02.webp',
     ],
@@ -438,7 +427,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-north-thunderfuck-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-north-thunderfuck-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-north-thunderfuck-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-north-thunderfuck-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain North Thunderfuck',
@@ -468,7 +456,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-jack-herer-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-jack-herer-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-jack-herer-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-jack-herer-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Jack Herer',
@@ -498,7 +485,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-white-widow-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-white-widow-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-white-widow-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-white-widow-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain White Widow',
@@ -618,7 +604,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-bubble-zkittlez-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-bubble-zkittlez-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-bubble-zkittlez-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-bubble-zkittlez-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Bubble Zkittlez',
@@ -648,7 +633,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-royal-runtz-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-royal-runtz-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-royal-runtz-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-royal-runtz-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Royal Runtz',
@@ -678,7 +662,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-green-gelato-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-green-gelato-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-green-gelato-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-green-gelato-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Green Gelato',
@@ -708,7 +691,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-gelato-runtz-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-gelato-runtz-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-gelato-runtz-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-gelato-runtz-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Gelato Runtz',
@@ -738,9 +720,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-amnesia-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-amnesia-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-amnesia-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-amnesia-bud-02.webp',
-      '/media/green-ghost-degen-weed-shop-strain-amnesia-bud-03.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Amnesia',
     source: 'https://www.leafly.com/strains/amnesia',
@@ -769,7 +749,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-banana-daddy-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-banana-daddy-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-banana-daddy-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-banana-daddy-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Banana Daddy',
     source: 'https://www.leafly.com/strains/banana-daddy',
@@ -798,7 +778,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-amnesia-haze-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-amnesia-haze-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-amnesia-haze-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-amnesia-haze-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Amnesia Haze',
@@ -828,7 +807,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-purple-queen-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-purple-queen-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-purple-queen-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-purple-queen-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Purple Queen',
@@ -858,9 +836,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-mommys-milk-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-mommys-milk-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-mommys-milk-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-mommys-milk-bud-02.webp',
-      '/media/green-ghost-degen-weed-shop-strain-mommys-milk-bud-03.webp',
     ],
     imgDesc: "Green Ghost - Degen Weed Shop - Strain Mommy's Milk",
     source: 'https://www.exoticgenetix.com/product/mommys-milk/',
@@ -889,7 +865,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-next-level-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-next-level-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-next-level-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-next-level-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Next Level',
@@ -948,9 +923,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-sweet-zkittlez-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-sweet-zkittlez-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-sweet-zkittlez-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-sweet-zkittlez-bud-02.webp',
-      '/media/green-ghost-degen-weed-shop-strain-sweet-zkittlez-bud-03.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Sweet Zkittlez',
     source: 'https://www.leafly.com/strains/sweet-zkittlez',
@@ -979,7 +952,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-hulkberry-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-hulkberry-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-hulkberry-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-hulkberry-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Hulkberry',
@@ -1010,7 +982,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-phantom-cookies-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-phantom-cookies-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-phantom-cookies-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-phantom-cookies-cover.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Phantom Cookies',
     source: 'https://www.leafly.com/strains/phantom-cookies',
@@ -1039,9 +1011,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-pink-sunset-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-pink-sunset-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-pink-sunset-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-pink-sunset-bud-02.webp',
-      '/media/green-ghost-degen-weed-shop-strain-pink-sunset-bud-03.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Pink Sunset Critical',
     source: 'https://www.leafly.com/strains/pink-sunset',
@@ -1070,7 +1040,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-purple-zkittlez-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-purple-zkittlez-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-purple-zkittlez-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-purple-zkittlez-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Purple Zkittlez',
@@ -1100,7 +1069,6 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-buddy-critical-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-buddy-critical-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-buddy-critical-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-strain-buddy-critical-bud-02.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Buddy Critical',
@@ -1130,7 +1098,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-bruce-banner-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-bruce-banner-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-bruce-banner-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-bruce-banner-cover.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Bruce Banner',
     source: 'https://www.leafly.com/strains/bruce-banner',
@@ -1159,7 +1127,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-mango-gelato-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-mango-gelato-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-mango-gelato-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mango-gelato-cover.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Mango Gelato',
     source: 'undefined',
@@ -1188,7 +1156,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-super-lemon-haze-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-super-lemon-haze-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-super-lemon-haze-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-super-lemon-haze-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Super Lemon Haze',
     source: 'https://www.leafly.com/strains/super-lemon-haze',
@@ -1246,7 +1214,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-tangerine-dream-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-tangerine-dream-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-tangerine-dream-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-tangerine-dream-cover.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Tangerine Dream',
     source: 'https://www.leafly.com/strains/tangerine-dream',
@@ -1275,7 +1243,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-mandarin-zkittlez-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-mandarin-zkittlez-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-mandarin-zkittlez-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mandarin-zkittlez-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Mandarin Zkittlez',
     source: 'https://www.leafly.com/strains/mandarin-zkittlez',
@@ -1391,7 +1359,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-kings-juice-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-kings-juice-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-kings-juice-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-kings-juice-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain King’s Juice',
     source: 'https://growdiaries.com/seedbank/green-house-seeds/kings-juice',
@@ -1420,7 +1388,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-eleven-roses-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-eleven-roses-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-eleven-roses-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-eleven-roses-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Eleven Roses',
     source: 'https://www.leafly.com/strains/eleven-roses',
@@ -1449,7 +1417,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-lemon-zkittlez-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-lemon-zkittlez-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-lemon-zkittlez-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-lemon-zkittlez-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Lemon Zkittlez',
     source: 'undefined',
@@ -1478,7 +1446,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-cherry-garcia-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-cherry-garcia-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-cherry-garcia-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-cherry-garcia-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Cherry Garcia',
     source: 'https://www.leafly.com/strains/cherry-garcia',
@@ -1507,7 +1475,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-critical-kush-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-critical-kush-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-critical-kush-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-critical-kush-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Critical Kush',
     source: 'https://www.leafly.com/strains/critical-kush',
@@ -1536,7 +1504,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-royal-moby-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-royal-moby-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-royal-moby-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-royal-moby-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Royal Moby',
     source:
@@ -1566,7 +1534,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-mac-and-jack-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-mac-and-jack-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-mac-and-jack-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mac-and-jack-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain MAC and Jack',
     source: 'https://www.leafly.com/strains/mac-and-jack',
@@ -1595,7 +1563,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-c-vibez-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-c-vibez-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-c-vibez-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-c-vibez-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain C-Vibez',
     source: 'undefined',
@@ -1624,7 +1592,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-fruit-spirit-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-fruit-spirit-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-fruit-spirit-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-fruit-spirit-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Fruit Spirit',
     source: 'https://www.leafly.com/strains/fruit-spirit',
@@ -1653,7 +1621,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-platinum-oreoz-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-platinum-oreoz-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-platinum-oreoz-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-platinum-oreoz-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Platinum Oreoz',
     source:
@@ -1683,7 +1651,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-dosidos-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-dosidos-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-dosidos-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-dosidos-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Dosidos',
     source: 'https://www.leafly.com/strains/do-si-dos',
@@ -1712,7 +1680,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-sherbert-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-sherbert-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-sherbert-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-sherbert-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Sherbert',
     source: 'https://www.leafly.com/strains/sunset-sherbert',
@@ -1741,7 +1709,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-skunk-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-skunk-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-skunk-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-skunk-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Skunk',
     source: 'https://www.leafly.com/strains/skunk-1',
@@ -1857,7 +1825,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-og-poison-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-og-poison-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-og-poison-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-og-poison-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain OG Poison',
     source: 'https://www.leafly.com/strains/og-poison',
@@ -1886,7 +1854,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-runtz-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-runtz-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-runtz-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-runtz-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Runtz',
     source: 'https://www.leafly.com/strains/runtz',
@@ -1915,7 +1883,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-gelato-dream-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-gelato-dream-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-gelato-dream-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-gelato-dream-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Gelato Dream',
     source: 'https://www.leafly.com/strains/gelato',
@@ -1944,7 +1912,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-white-runtz-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-white-runtz-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-white-runtz-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-white-runtz-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain White Runtz',
     source: 'https://www.leafly.com/strains/white-runtz',
@@ -1973,7 +1941,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-banana-kush-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-banana-kush-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-banana-kush-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-banana-kush-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Banana Kush',
     source: 'https://www.leafly.com/strains/banana-kush',
@@ -2002,7 +1970,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-moon-fruit-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-moon-fruit-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-moon-fruit-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-moon-fruit-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Moon Fruit',
     source: 'undefined',
@@ -2031,7 +1999,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-orange-velvet-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-orange-velvet-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-orange-velvet-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-orange-velvet-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Orange Velvet',
     source: 'https://www.leafly.com/strains/orange-velvet',
@@ -2060,7 +2028,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-platinum-punch-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-platinum-punch-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-platinum-punch-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-platinum-punch-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Platinum Punch',
     source: 'https://www.leafly.com/strains/platinum-punch',
@@ -2089,7 +2057,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-lemon-berry-candy-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-lemon-berry-candy-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-lemon-berry-candy-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-lemon-berry-candy-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Lemon Berry Candy',
     source: 'https://www.leafly.com/strains/lemon-berry-candy-og',
@@ -2118,7 +2086,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-mandarin-cookies-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-mandarin-cookies-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-mandarin-cookies-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mandarin-cookies-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Mandarin Cookies',
     source: 'https://www.leafly.com/strains/mandarin-cookies',
@@ -2147,7 +2115,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-mimosa-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-mimosa-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-mimosa-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-mimosa-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Mimosa',
     source: 'https://www.leafly.com/strains/mimosa',
@@ -2176,7 +2144,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-black-cherry-punch-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-black-cherry-punch-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-black-cherry-punch-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-black-cherry-punch-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Black Cherry Punch',
     source: 'https://www.leafly.com/strains/black-cherry-punch',
@@ -2205,7 +2173,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-snoop-punch-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-snoop-punch-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-snoop-punch-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-strain-snoop-punch-bud-01.webp',
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - Strain Snoop Punch',
     source: 'undefined',

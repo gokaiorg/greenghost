@@ -9,6 +9,10 @@ import { ImgGrower } from '../../components/media/ImgGrower';
 import { Grower } from '../../components/Grower';
 
 const CannabisGrower: NextPage = () => {
+  const handleBack = () => {
+    window.history.back();
+  };
+
   return (
     <>
       <Head>
@@ -51,6 +55,13 @@ const CannabisGrower: NextPage = () => {
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
         <Box
+          cursor={'pointer'}
+          color={'ghostVerse.green.base'}
+          onClick={handleBack}
+        >
+          {'< back'}
+        </Box>
+        <Box
           display={'flex'}
           flexDirection={'column'}
           alignItems={'center'}
@@ -67,9 +78,7 @@ const CannabisGrower: NextPage = () => {
           color={'white'}
           fontSize={{ base: '3xl' }}
           fontFamily={'vt323'}
-          borderColor={'ghostVerse.color2.base'}
           bgColor={'ghostVerse.dark.lighter'}
-          borderWidth={1}
           backdropFilter={'blur(3px)'}
           mt={5}
           mb={6}

@@ -39,12 +39,14 @@ export const FwenItem: FC<FwenItemProps> = ({ name, fwenLogo, fwenLink }) => {
             color: 'ghostVerse.green.base',
           }}
         >
-          <Box w={'60px'}>
+          <Box w={'60px'} h={'60px'}>
             <Image
               src={fwenLogo}
-              width={120}
-              height={120}
               alt={`Green Ghost Premium Cannabis Partner - ${name}`}
+              width={60}
+              height={60}
+              sizes="(max-width: 600px) 60px, (max-width: 1200px) 60px, 60px"
+              style={{ objectFit: 'contain' }}
             />
           </Box>
           <Text as={'h4'} fontSize={{ base: 10, md: 10 }} lineHeight={'12px'}>

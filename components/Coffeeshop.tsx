@@ -10,7 +10,6 @@ export const Coffeeshop = () => {
       flexDirection={{ base: 'column', md: 'row' }}
       alignItems={'flex-start'}
       bgColor={'ghostVerse.dark.lighter'}
-      backdropFilter={'blur(3px)'}
     >
       <ImgCoffeeshop />
       <Box

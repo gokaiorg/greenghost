@@ -8,19 +8,22 @@ export const SocialMediaIcons = () => {
       <Box display={'flex'} flexDir={'column'} alignItems={'center'} mt={4}>
         <Box w={'50px'}>
           <Image
-            src="/media/green-ghost-degen-weed-shop-heart.png"
+            src="/media/green-ghost-degen-weed-shop-heart.webp"
+            alt="Weed Menu - Weed delivery Phuket - Green Ghost Degen Community"
             width={190}
             height={152}
-            alt="Weed Menu - Weed delivery Phuket - Buy weed online."
+            sizes="50px"
+            style={{ width: '100%', height: 'auto' }}
           />
         </Box>
         <Text
           as={'h3'}
           fontSize={'xl'}
-          color={'ghostVerse.color2.darker'}
+          color={'white'}
           fontFamily={'CubicFive12'}
+          mt={4}
         >
-          Join Us
+          Join A Degen Community
         </Text>
         <Box
           as={'h4'}
@@ -44,75 +47,75 @@ export const SocialMediaIcons = () => {
         gap={3}
         mx={'auto'}
       >
-        <Box bgColor={'black'} borderRadius={'100%'}>
+        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
           <SocialIcon
             url="https://www.instagram.com/greenghostdegen"
-            bgColor={'#13DE00'}
+            bgColor={'black'}
             style={{ width: 40, height: 40 }}
             title="Follow Us on Instagram"
           />
         </Box>
-        <Box bgColor={'black'} borderRadius={'100%'}>
+        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
           <SocialIcon
             url="https://twitter.com/greenghostdegen"
-            bgColor={'#13DE00'}
+            bgColor={'black'}
             style={{ width: 40, height: 40 }}
             title="Follow Us on Twitter"
           />
         </Box>
-        <Box bgColor={'black'} borderRadius={'100%'}>
+        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
           <SocialIcon
             url="https://warpcast.com/greenghostdegen"
-            bgColor={'#13DE00'}
+            bgColor={'black'}
             style={{ width: 40, height: 40 }}
             title="Follow Us on Warpcast"
           />
         </Box>
 
-        <Box bgColor={'black'} borderRadius={'100%'}>
+        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
           <SocialIcon
             url="https://t.me/greenghostdegens"
-            bgColor={'#13DE00'}
+            bgColor={'black'}
             style={{ width: 40, height: 40 }}
             title="Follow Us on Telegram"
           />
         </Box>
-        <Box bgColor={'black'} borderRadius={'100%'}>
+        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
           <SocialIcon
             url="https://www.tiktok.com/@greenghostdegen"
-            bgColor={'#13DE00'}
+            bgColor={'black'}
             style={{ width: 40, height: 40 }}
             title="Follow Us on TikTok"
           />
         </Box>
-        <Box bgColor={'black'} borderRadius={'100%'}>
+        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
           <SocialIcon
             url="https://www.facebook.com/greenghostdegen"
-            bgColor={'#13DE00'}
+            bgColor={'black'}
             style={{ width: 40, height: 40 }}
             title="Follow Us on Facebook"
           />
         </Box>
-        <Box bgColor={'black'} borderRadius={'100%'}>
+        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
           <SocialIcon
             url="https://www.reddit.com/r/greenghostdegen"
-            bgColor={'#13DE00'}
+            bgColor={'black'}
             style={{ width: 40, height: 40 }}
             title="Join Us on Reddit"
           />
         </Box>
-        <Box bgColor={'black'} borderRadius={'100%'}>
+        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
           <SocialIcon
             url="https://www.linkedin.com/company/green-ghost"
-            bgColor={'#13DE00'}
+            bgColor={'black'}
             style={{ width: 40, height: 40 }}
             title="Join Us on Linkedin"
           />
         </Box>
-        <Box bgColor={'black'} borderRadius={'100%'}>
+        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
           <SocialIcon
             url="https://discord.gg/tXSeJfVVnH"
-            bgColor={'#13DE00'}
+            bgColor={'black'}
             style={{ width: 40, height: 40 }}
             title="Join Us on Discord"
           />

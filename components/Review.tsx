@@ -16,10 +16,10 @@ export const Review = () => {
       <Box display={'flex'} flexDir={'column'} alignItems={'center'}>
         <Box w={'120px'}>
           <Image
-            src="/media/green-ghost-degen-weed-shop-cannabis-leaf.png"
-            width={1080} // Original width
-            height={1106} // Original height
-            alt="Green Ghost - Degen Weed Shop - Cannabis Leaf"
+            src="/media/green-ghost-degen-weed-shop-cannabis-leaf.webp"
+            width={256} // Original width
+            height={262} // Original height
+            alt="Green Ghost - Degen Weed Shop - Cannabis Reviews"
             layout="intrinsic" // Preserve aspect ratio
             sizes="(max-width: 600px) 120px, (max-width: 1200px) 120px, 120px"
           />

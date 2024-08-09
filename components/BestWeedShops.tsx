@@ -61,6 +61,23 @@ export const BestWeedShops = () => {
           Explore Our Locations
         </Text>
       </Link>
+      <Box
+        mx={2}
+        fontFamily={'vt323'}
+        fontSize={{ base: 'xl' }}
+        lineHeight={1}
+        px={{ base: 0, md: 6 }}
+        py={{ base: 2, md: 2 }}
+        color={'ghostVerse.green.base'}
+      >
+        <Link
+          title="Green Ghost - Best Weed Shops in Thailand"
+          href="/weed-shops-thailand"
+          passHref
+        >
+          Best weed shops in Thailand
+        </Link>
+      </Box>
     </Box>
   );
 };

@@ -60,10 +60,7 @@ const BuyWeed: NextPage = () => {
           as="div"
           color={'white'}
           fontFamily={'vt323'}
-          borderColor={'ghostVerse.color2.base'}
           bgColor={'ghostVerse.dark.lighter'}
-          borderWidth={1}
-          backdropFilter={'blur(3px)'}
           mt={5}
           mb={6}
           p={4}

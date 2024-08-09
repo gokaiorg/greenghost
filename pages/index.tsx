@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         </title>
         <meta
           name="description"
-          content="Green Ghost is a cannabis & weed shop in Phuket Thailand offering a wide variety of locally-sourced and imported products, including flowers, edibles, accessories, and instant weed delivery in Phuket."
+          content="Discover premium cannabis at Green Ghost in Phuket. Explore our organic selection, including flowers, edibles, and accessories, with fast, reliable delivery."
         />
         <meta
           property="og:title"
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         />
         <meta
           property="og:description"
-          content="Green Ghost is a cannabis & weed shop in Phuket Thailand offering a wide variety of locally-sourced and imported products, including flowers, edibles, accessories, and instant weed delivery in Phuket."
+          content="Discover premium cannabis at Green Ghost in Phuket. Explore our organic selection, including flowers, edibles, and accessories, with fast, reliable delivery."
         />
         <meta
           property="og:image"
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Green Ghost is a cannabis & weed shop in Phuket Thailand offering a wide variety of locally-sourced and imported products, including flowers, edibles, accessories, and instant weed delivery in Phuket."
+          content="Discover premium cannabis at Green Ghost in Phuket. Explore our organic selection, including flowers, edibles, and accessories, with fast, reliable delivery."
         />
         <meta
           name="twitter:image"
