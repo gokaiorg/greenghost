@@ -32,10 +32,12 @@ export const HomeTopInfos = () => {
           >
             <Image
               src="/media/green-ghost-degen-weed-shop-menu-gadget-weed-th-rolling-paper-tips-03.webp"
-              width={400}
-              height={400}
-              alt="Weed Menu - Weed delivery Phuket - Green Ghost Degen Community"
-              sizes="(max-width: 400px) 100vw, 400px"
+              width={828}
+              height={828}
+              style={{ objectFit: 'contain' }}
+              priority={true}
+              alt="Green Ghost - WEED.TH Rolling Papers + Tips"
+              sizes="200px"
               quality={75}
             />
           </Link>
