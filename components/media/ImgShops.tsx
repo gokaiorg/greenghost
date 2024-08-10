@@ -9,6 +9,7 @@ export const ImgShops = () => {
         width={300}
         height={83}
         alt="Green Ghost - Degen Weed Shop - Weed Shops Thailand."
+        quality={75}
       />
     </Box>
   );

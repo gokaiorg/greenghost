@@ -7,6 +7,7 @@ export const IconLogin = () => {
       width={41}
       height={41}
       alt="Green Ghost - Degen Weed Shop - Login."
+      quality={75}
     />
   );
 };

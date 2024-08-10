@@ -12,6 +12,7 @@ export const ImgDelivery = () => {
         height={512}
         sizes="(max-width: 1024px) 100px, 140px"
         style={{ width: '100%', height: 'auto' }}
+        quality={75}
       />
     </Box>
   );

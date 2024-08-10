@@ -149,6 +149,7 @@ const CryptoWeedShop: NextPage = () => {
                 width={1260}
                 height={600}
                 alt="Green Ghost - Crypto Cashback"
+                quality={75}
               />
             </Box>
             <Box width={{ base: '100%', lg: '65%' }}>
@@ -248,6 +249,7 @@ const CryptoWeedShop: NextPage = () => {
                 width={1260}
                 height={600}
                 alt="Green Ghost - eBudNFT"
+                quality={75}
               />
             </Box>
           </Box>

@@ -12,6 +12,7 @@ export const ImgEarth = () => {
         style={{ objectFit: 'contain' }}
         priority={true}
         sizes="95px"
+        quality={75}
       />
     </Box>
   );

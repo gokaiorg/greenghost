@@ -92,6 +92,7 @@ export default function GrowerPage({ grower }: GrowerPageProps) {
                 height={320}
                 alt={`Green Ghost - ${grower.name} Weed Grower in Thailand`}
                 title={`Green Ghost - ${grower.name} Weed Grower in Thailand`}
+                quality={75}
               />
             </Box>
             <Text

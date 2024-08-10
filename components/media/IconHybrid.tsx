@@ -7,6 +7,7 @@ export const IconHybrid = () => {
       width={30}
       height={31}
       alt="Green Ghost - Menu Weed Shop - Hybrid"
+      quality={75}
     />
   );
 };

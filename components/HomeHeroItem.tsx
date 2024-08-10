@@ -37,6 +37,7 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
           style={{ objectFit: 'contain' }}
           priority={true}
           sizes="(max-width: 600px) 768px, (max-width: 1200px) 984px, 1240px"
+          quality={75}
         />
       </Box>
       <Box

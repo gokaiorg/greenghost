@@ -47,6 +47,7 @@ export const FwenItem: FC<FwenItemProps> = ({ name, fwenLogo, fwenLink }) => {
               height={60}
               sizes="(max-width: 600px) 60px, (max-width: 1200px) 60px, 60px"
               style={{ objectFit: 'contain' }}
+              quality={75}
             />
           </Box>
           <Text as={'h4'} fontSize={{ base: 10, md: 10 }} lineHeight={'12px'}>

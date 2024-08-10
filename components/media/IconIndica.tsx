@@ -7,6 +7,7 @@ export const IconIndica = () => {
       width={30}
       height={31}
       alt="Green Ghost - Menu Weed Shop - Indica"
+      quality={75}
     />
   );
 };

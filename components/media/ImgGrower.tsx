@@ -9,6 +9,7 @@ export const ImgGrower = () => {
         width={200}
         height={206}
         alt="Green Ghost - Degen Weed Shop - Weed Grower."
+        quality={75}
       />
     </Box>
   );

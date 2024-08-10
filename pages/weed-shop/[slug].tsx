@@ -22,6 +22,7 @@ import { BoxInfoLabelTitle } from '../../components/box/BoxInfoLabelTitle';
 import BoxInfoMemberPrice from '../../components/box/BoxInfoMemberPrice';
 import BoxInfoQuantity from '../../components/box/BoxInfoQuantity';
 import { HomeFeature } from '../../components/HomeFeatures';
+import { HomeTopInfos } from '../../components/HomeTopInfos';
 
 interface BudPageProps {
   bud: Bud;
@@ -117,9 +118,9 @@ export default function BudPage({ bud }: BudPageProps) {
             <SwiperSlide key={index}>
               <Image
                 src={image}
+                alt={bud.imgDesc}
                 width={400}
                 height={400}
-                alt={bud.imgDesc}
                 sizes="(max-width: 400px) 100vw, 400px"
                 quality={75}
               />
@@ -373,6 +374,7 @@ export default function BudPage({ bud }: BudPageProps) {
             </Text>
           </Link>
         </Box>
+        <HomeTopInfos />
       </MainLayout>
     </>
   );
