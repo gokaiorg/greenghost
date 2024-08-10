@@ -108,6 +108,7 @@ const CryptoWeedShop: NextPage = () => {
                 width={1080}
                 height={514}
                 alt="Green Ghost is a part of the GhostVerse ecosystem"
+                quality={75}
               />
             </Box>
             <Text as={'p'} width={{ base: '100%', lg: '55%' }}>
@@ -182,6 +183,7 @@ const CryptoWeedShop: NextPage = () => {
                 width={500}
                 height={500}
                 alt="Green Ghost - Crypto System"
+                quality={75}
               />
             </Box>
           </Box>
@@ -200,6 +202,7 @@ const CryptoWeedShop: NextPage = () => {
                 width={500}
                 height={500}
                 alt="Green Ghost - Crypto Member"
+                quality={75}
               />
             </Box>
             <Box width={{ base: '100%', lg: '65%' }}>
@@ -324,6 +327,7 @@ const CryptoWeedShop: NextPage = () => {
                 width={500}
                 height={500}
                 alt="Green Ghost - Crypto Benefits"
+                quality={75}
               />
             </Box>
           </Box>

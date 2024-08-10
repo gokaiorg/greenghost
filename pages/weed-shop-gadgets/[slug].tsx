@@ -7,7 +7,6 @@ import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import { Box, Text } from '@chakra-ui/react';
-import { BuyNowLink } from '../../components/shop/elements/BuyNowLink';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
 import 'swiper/css';
@@ -19,6 +18,8 @@ import BoxInfoLeft from '../../components/box/BoxInfoLeft';
 import BoxInfoRight from '../../components/box/BoxInfoRight';
 import BoxInfoLabel from '../../components/box/BoxInfoLabel';
 import BoxInfoQuantity from '../../components/box/BoxInfoQuantity';
+import { HomeFeature } from '../../components/HomeFeatures';
+import { HomeTopInfos } from '../../components/HomeTopInfos';
 
 interface GadgetsPageProps {
   gadget: Gadget;
@@ -108,13 +109,14 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
             <SwiperSlide key={index}>
               <Image
                 src={image}
-                width={500}
-                height={500}
                 alt={gadget.imgDesc}
+                width={400}
+                height={400}
+                sizes="(max-width: 400px) 100vw, 400px"
+                quality={75}
               />
             </SwiperSlide>
           ))}
-          <BuyNowLink />
         </Swiper>
         <BoxInfoProduct>
           <BoxInfoLeft>
@@ -141,6 +143,8 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
           </BoxInfoRight>
         </BoxInfoProduct>
         <BoxDescription>{gadget.description}</BoxDescription>
+        <HomeTopInfos />
+        <HomeFeature />
       </MainLayout>
     </>
   );

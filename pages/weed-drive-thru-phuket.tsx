@@ -129,6 +129,7 @@ const WeedDriveThru: NextPage = () => {
                 width={1200}
                 height={600}
                 alt="Weed Menu - Weed Drive Thru Phuket - Fast and Discreet."
+                quality={75}
               />
             </Box>
           </Box>
@@ -177,6 +178,7 @@ const WeedDriveThru: NextPage = () => {
                 width={1200}
                 height={600}
                 alt="Near Me - Weed Drive Thru Phuket - Fast and Discreet."
+                quality={75}
               />
             </Box>
           </Box>
@@ -229,6 +231,7 @@ const WeedDriveThru: NextPage = () => {
                 width={1200}
                 height={600}
                 alt="Contact us - Weed Drive Thru Phuket - Fast and Discreet."
+                quality={75}
               />
             </Box>
           </Box>

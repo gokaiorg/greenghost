@@ -152,6 +152,25 @@ export const gadgets: Gadget[] = [
     ],
     imgDesc: 'Green Ghost - Degen Weed Shop - SlimJim Rolling Paper + Tips',
   },
+  {
+    slug: 'weed-th-rolling-papers-tips',
+    name: 'WEED.TH Rolling Papers + Tips',
+    price: 130,
+    packaging: '32 Leaves, Unbleached',
+    quantity: 150,
+    description:
+      'Enjoy a premium smoking experience with WEED.TH Rolling Papers + Tips. Each pack contains 32 unbleached leaves, sized at 107x44mm, ensuring a smooth, clean burn. Perfect for a natural and pure smoke, these rolling papers are ideal for both beginners and seasoned smokers alike. Available in-store and for delivery.',
+    descSeo:
+      'Enjoy a premium smoking experience with WEED.TH Rolling Papers + Tips. Each pack contains 32 unbleached leaves, sized at 107x44mm, ensuring a smooth, clean burn. Perfect for a natural and pure smoke, these rolling papers are ideal for both beginners and seasoned smokers alike. Available in-store and for delivery.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-menu-gadget-weed-th-rolling-paper-tips-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-weed-th-rolling-paper-tips-03.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-weed-th-rolling-paper-tips-02.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-weed-th-rolling-paper-tips-04.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-weed-th-rolling-paper-tips-05.webp',
+    ],
+    imgDesc: 'Green Ghost - Degen Weed Shop - WEED.TH Rolling Paper + Tips',
+  },
 ];
 
 export function getGadgetBySlug(slug: string): Gadget | undefined {

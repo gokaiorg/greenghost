@@ -69,7 +69,13 @@ export default function ShopPage({ shop }: ShopPageProps) {
         <Box display={'flex'} flexWrap={'wrap'}>
           {shop.images.map((image, index) => (
             <Box key={index} w={'33.33333%'}>
-              <Image src={image} width={500} height={500} alt={shop.name} />
+              <Image
+                src={image}
+                width={500}
+                height={500}
+                alt={shop.name}
+                quality={75}
+              />
             </Box>
           ))}
         </Box>

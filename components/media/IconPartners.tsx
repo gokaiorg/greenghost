@@ -9,6 +9,7 @@ export const IconPartners = () => {
       alt="Green Ghost - Crypto Weed Shop - Partners."
       layout="responsive" // Makes the image responsive
       sizes="(max-width: 600px) 140px, (min-width: 601px) and (max-width: 1200px) 240px, 240px" // Responsive sizing
+      quality={75}
     />
   );
 };

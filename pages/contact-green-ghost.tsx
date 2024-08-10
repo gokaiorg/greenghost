@@ -84,6 +84,7 @@ const BuyWeed: NextPage = () => {
               width={500}
               height={500}
               alt="Contact us - Buy weed online."
+              quality={75}
             />
           </Box>
           <Box width={{ base: '100%', lg: '65%' }} mb={10}>

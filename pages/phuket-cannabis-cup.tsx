@@ -127,6 +127,7 @@ const CannabisCup: NextPage = () => {
               width={1264}
               height={600}
               alt="Green Ghost - Phuket Cannabis Cup 2023"
+              quality={75}
             />
           </Box>
           <Box
@@ -209,6 +210,7 @@ const CannabisCup: NextPage = () => {
               width={1264}
               height={600}
               alt="Green Ghost - The 1st Phuket Cannabis Cup"
+              quality={75}
             />
           </Box>
           <Box

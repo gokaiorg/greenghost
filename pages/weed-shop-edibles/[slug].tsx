@@ -7,7 +7,6 @@ import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import { Box, Text } from '@chakra-ui/react';
-import { BuyNowLink } from '../../components/shop/elements/BuyNowLink';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
 import 'swiper/css';
@@ -20,6 +19,8 @@ import BoxInfoRight from '../../components/box/BoxInfoRight';
 import BoxInfoLabel from '../../components/box/BoxInfoLabel';
 import { BoxInfoLabelTitle } from '../../components/box/BoxInfoLabelTitle';
 import BoxInfoQuantity from '../../components/box/BoxInfoQuantity';
+import { HomeTopInfos } from '../../components/HomeTopInfos';
+import { HomeFeature } from '../../components/HomeFeatures';
 
 interface EdiblesPageProps {
   edible: Edible;
@@ -115,13 +116,14 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
             <SwiperSlide key={index}>
               <Image
                 src={image}
-                width={500}
-                height={500}
                 alt={edible.imgDesc}
+                width={400}
+                height={400}
+                sizes="(max-width: 400px) 100vw, 400px"
+                quality={75}
               />
             </SwiperSlide>
           ))}
-          <BuyNowLink />
         </Swiper>
         <BoxInfoProduct>
           <BoxInfoLeft>
@@ -172,6 +174,8 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
           </BoxInfoRight>
         </BoxInfoProduct>
         <BoxDescription>{edible.description}</BoxDescription>
+        <HomeTopInfos />
+        <HomeFeature />
       </MainLayout>
     </>
   );

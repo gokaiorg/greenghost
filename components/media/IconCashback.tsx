@@ -7,6 +7,7 @@ export const IconCashback = () => {
       width={418}
       height={569}
       alt="Green Ghost - Crypto Weed Shop - Cashback."
+      quality={75}
     />
   );
 };

@@ -14,6 +14,7 @@ export const SocialMediaIcons = () => {
             height={152}
             sizes="50px"
             style={{ width: '100%', height: 'auto' }}
+            quality={75}
           />
         </Box>
         <Text
@@ -49,6 +50,14 @@ export const SocialMediaIcons = () => {
       >
         <Box bgColor={'#13DE00'} borderRadius={'100%'}>
           <SocialIcon
+            url="https://www.youtube.com/@greenghostdegen"
+            bgColor={'black'}
+            style={{ width: 40, height: 40 }}
+            title="Subscribe on Youtube"
+          />
+        </Box>{' '}
+        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
+          <SocialIcon
             url="https://www.instagram.com/greenghostdegen"
             bgColor={'black'}
             style={{ width: 40, height: 40 }}
@@ -71,7 +80,6 @@ export const SocialMediaIcons = () => {
             title="Follow Us on Warpcast"
           />
         </Box>
-
         <Box bgColor={'#13DE00'} borderRadius={'100%'}>
           <SocialIcon
             url="https://t.me/greenghostdegens"

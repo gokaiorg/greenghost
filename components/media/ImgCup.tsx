@@ -10,6 +10,7 @@ export const ImgCup = () => {
         height={100}
         alt="Green Ghost - Degen Weed Shop - Phuket Cannabis Cup"
         title="Green Ghost - Degen Weed Shop - Phuket Cannabis Cup"
+        quality={75}
       />
     </Box>
   );

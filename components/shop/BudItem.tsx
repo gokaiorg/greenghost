@@ -64,6 +64,7 @@ export const BudItem = ({ bud }: BudItemProps) => {
                         height={250}
                         alt={bud.imgDesc}
                         sizes="(max-width: 600px) 160px, (max-width: 1200px) 240px, 240px"
+                        quality={75}
                       />
                     </Box>
                   </SwiperSlide>

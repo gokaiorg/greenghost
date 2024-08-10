@@ -75,6 +75,7 @@ export const Fwen = () => {
                     alt="Green Ghost Top Dispensary Phuket Thailand - Weed.th"
                     sizes="(max-width: 60px) 60px, 60px"
                     style={{ objectFit: 'cover' }}
+                    quality={75}
                   />
                 </Box>
                 <Text
@@ -117,6 +118,7 @@ export const Fwen = () => {
                     alt="Green Ghost Top Dispensary Phuket Thailand - CleverThai"
                     sizes="(max-width: 60px) 60px, 60px"
                     style={{ objectFit: 'cover' }}
+                    quality={75}
                   />
                 </Box>
                 <Text
@@ -159,6 +161,7 @@ export const Fwen = () => {
                     alt="Green Ghost Top Dispensary Phuket Thailand - Thailand Nomads"
                     sizes="(max-width: 60px) 60px, 60px"
                     style={{ objectFit: 'cover' }}
+                    quality={75}
                   />
                 </Box>
                 <Text
@@ -201,6 +204,7 @@ export const Fwen = () => {
                     alt="Green Ghost Top Dispensary Phuket Thailand - Thai News"
                     sizes="(max-width: 60px) 60px, 60px"
                     style={{ objectFit: 'cover' }}
+                    quality={75}
                   />
                 </Box>
                 <Text

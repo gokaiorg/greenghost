@@ -148,6 +148,7 @@ const WeedDelivery: NextPage = () => {
                 width={1200}
                 height={600}
                 alt="Weed Menu - Weed delivery Phuket - Buy weed online."
+                quality={75}
               />
             </Box>
           </Box>
@@ -200,6 +201,7 @@ const WeedDelivery: NextPage = () => {
                 width={1200}
                 height={600}
                 alt="Contact us - Weed delivery Phuket - Buy weed online."
+                quality={75}
               />
             </Box>
           </Box>

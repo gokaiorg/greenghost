@@ -7,6 +7,7 @@ export const IconSativa = () => {
       width={30}
       height={31}
       alt="Green Ghost - Menu Weed Shop - Sativa"
+      quality={75}
     />
   );
 };

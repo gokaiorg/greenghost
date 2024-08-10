@@ -7,6 +7,7 @@ export const IconMap = () => {
       width={189}
       height={189}
       alt="Green Ghost - Degen Weed Shop - Map Near Me."
+      quality={75}
     />
   );
 };

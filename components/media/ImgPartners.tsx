@@ -11,6 +11,7 @@ export const ImgPartners = () => {
         height={1632}
         sizes="(max-width: 1024px) 200px, 300px"
         style={{ width: '100%', height: 'auto' }}
+        quality={75}
       />
     </Box>
   );
