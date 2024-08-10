@@ -49,7 +49,7 @@ export const HomeTopInfos = () => {
           alignItems={'start'}
         >
           <Text
-            as={'h3'}
+            as={'h2'}
             fontSize={{ base: '18', lg: '24' }}
             lineHeight={1}
             fontFamily={'CubicFive12'}
@@ -59,7 +59,7 @@ export const HomeTopInfos = () => {
             New cannabis gadget in store
           </Text>
           <Text
-            as={'h4'}
+            as={'h3'}
             fontSize={{ base: 26 }}
             lineHeight={1}
             fontFamily={'vt323'}
