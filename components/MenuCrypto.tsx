@@ -58,6 +58,7 @@ export const MenuCrypto = () => {
                 width={50}
                 height={50}
                 alt="Green Ghost - Degen Weed Shop - Crypto Weed Shop."
+                quality={75}
               />
             </Box>
             <Box fontSize={{ base: 14, lg: 16 }}>{link.label}</Box>

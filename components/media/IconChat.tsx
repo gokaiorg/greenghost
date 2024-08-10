@@ -7,6 +7,7 @@ export const IconChat = () => {
       width={380}
       height={683}
       alt="Green Ghost - Degen Weed Shop - Chat with us."
+      quality={75}
     />
   );
 };

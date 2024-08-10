@@ -10,6 +10,7 @@ export const ImgContact = () => {
         height={175}
         alt="Green Ghost - Degen Weed Shop - Contact"
         title="Green Ghost - Degen Weed Shop - Contact"
+        quality={75}
       />
     </Box>
   );

@@ -7,7 +7,6 @@ import BoxItemDescShop from './elements/BoxItemDescShop';
 import BoxItemTitleShop from './elements/BoxItemTitleShop';
 import BoxItemPriceShop from './elements/BoxItemPriceShop';
 import BoxItemList from './elements/BoxItemList';
-import ButtonAddCart from './elements/ButtonAddCart';
 
 type DegenItemProps = {
   degen: Degen;
@@ -30,8 +29,8 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
               height={700}
               title={degen.imgDesc}
               priority={false}
+              quality={75}
             />
-            <ButtonAddCart>Buy</ButtonAddCart>
           </Box>
           <BoxItemDescShop>
             <BoxItemTitleShop>

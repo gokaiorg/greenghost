@@ -34,6 +34,7 @@ export const GadgetItem = ({ gadget }: GadgetItemProps) => {
               height={700}
               title={gadget.imgDesc}
               priority={false}
+              quality={75}
             />
             <ButtonAddCart>Buy</ButtonAddCart>
           </Box>

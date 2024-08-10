@@ -49,6 +49,7 @@ export const ThaiShopItem = ({ thaishop }: ThaiShopItemProps) => {
               height={50}
               title={`Thailand Weed Shop - ${thaishop.name} - ${thaishop.city}`}
               priority={false}
+              quality={75}
             />
           </Box>
           <Box>

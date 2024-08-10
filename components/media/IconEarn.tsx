@@ -7,6 +7,7 @@ export const IconEarn = () => {
       width={418}
       height={569}
       alt="Green Ghost - Crypto Weed Shop - Relax and Earn."
+      quality={75}
     />
   );
 };

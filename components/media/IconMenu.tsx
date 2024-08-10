@@ -15,6 +15,7 @@ export const IconMenu = () => {
         style={{ objectFit: 'contain' }}
         priority={true}
         sizes="(max-width: 600px) 235px, (max-width: 1200px) 320px, 420px"
+        quality={75}
       />
     </Box>
   );

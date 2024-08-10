@@ -5,6 +5,8 @@ import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
 import Head from 'next/head';
 import { MenuWeedShop } from '../../components/shop/elements/MenuWeedShop';
 import { Edible } from '../../components/shop/Edible';
+import { HomeFeature } from '../../components/HomeFeatures';
+import { BuyOnline } from '../../components/BuyOnline';
 
 const WeedShopEdibles: NextPage = () => {
   return (
@@ -50,6 +52,8 @@ const WeedShopEdibles: NextPage = () => {
         </HeaderMenu>
         <MenuWeedShop />
         <Edible />
+        <HomeFeature />
+        <BuyOnline />
       </MainLayout>
     </>
   );

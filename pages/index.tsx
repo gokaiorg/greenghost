@@ -12,6 +12,7 @@ import { BuyOnline } from '../components/BuyOnline';
 import { BestWeedShops } from '../components/BestWeedShops';
 import { Coffeeshop } from '../components/Coffeeshop';
 import { BestWeed } from '../components/BestWeed';
+import { HomeTopInfos } from '../components/HomeTopInfos';
 
 const Home: NextPage = () => {
   return (
@@ -58,7 +59,7 @@ const Home: NextPage = () => {
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
         <HomeHero />
-
+        <HomeTopInfos />
         <HomeMenu />
         <BestWeed />
         <Coffeeshop />

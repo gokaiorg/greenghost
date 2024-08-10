@@ -37,6 +37,7 @@ export const GrowerItem = ({ grower }: GrowerItemProps) => {
               height={120}
               title={`${grower.name} - Weed grower in Thailand`}
               priority={false}
+              quality={75}
             />
           </Box>
           <Box as={'h3'} w={'100%'} fontSize={{ base: 18, md: 22 }} mt={'auto'}>

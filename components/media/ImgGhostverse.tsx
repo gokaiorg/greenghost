@@ -7,6 +7,7 @@ export const ImgGhostverse = () => {
       width={256}
       height={91}
       alt="Green Ghost - Degen Weed Shop - Weed Menu."
+      quality={75}
     />
   );
 };

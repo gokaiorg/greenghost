@@ -91,6 +91,7 @@ const BuyWeed: NextPage = () => {
                 width={500}
                 height={500}
                 alt="ok"
+                quality={75}
               />
             </Box>
             <Box width={{ base: '100%', lg: '65%' }}>
@@ -199,6 +200,7 @@ const BuyWeed: NextPage = () => {
                 width={500}
                 height={500}
                 alt="ok"
+                quality={75}
               />
             </Box>
           </Box>
@@ -219,6 +221,7 @@ const BuyWeed: NextPage = () => {
               style={{ objectFit: 'contain' }}
               alt={'Green Ghost Weed Shop Phuket'}
               priority={false}
+              quality={75}
             />
           </Box>
         </Box>

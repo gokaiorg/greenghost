@@ -5,6 +5,8 @@ import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
 import Head from 'next/head';
 import { MenuWeedShop } from '../../components/shop/elements/MenuWeedShop';
 import { Degen } from '../../components/shop/Degen';
+import { HomeFeature } from '../../components/HomeFeatures';
+import { BuyOnline } from '../../components/BuyOnline';
 
 const GhostDegenWeedShop: NextPage = () => {
   return (
@@ -50,6 +52,8 @@ const GhostDegenWeedShop: NextPage = () => {
         </HeaderMenu>
         <MenuWeedShop />
         <Degen />
+        <HomeFeature />
+        <BuyOnline />
       </MainLayout>
     </>
   );
