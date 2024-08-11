@@ -215,7 +215,7 @@ const WeedDelivery: NextPage = () => {
           />
         </Box>
         <WeedDeliveryFeature />
-        <Box
+        <Text
           as="p"
           fontSize={{ base: 30, lg: 40 }}
           lineHeight={1}
@@ -227,7 +227,7 @@ const WeedDelivery: NextPage = () => {
           {
             "Explore our premium weed selection, featuring high-quality strains curated for the best experience. Whether you're in Phuket or anywhere across Thailand, including Rawai, Karon, Chalong, and Patong, we offer fast and reliable weed delivery. Find the perfect strain to suit your needs and enjoy discreet, door-to-door service. Our collection includes a variety of Indica, Sativa, and Hybrid options, all carefully sourced from trusted growers. Experience the convenience of getting top-shelf weed delivered directly to your doorstep."
           }
-        </Box>
+        </Text>
         <BuyOnline />
         <HomeTopInfos />
       </MainLayout>

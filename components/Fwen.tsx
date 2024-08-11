@@ -43,7 +43,7 @@ export const Fwen = () => {
             See where Green Ghost stands among the best dispensaries in Phuket
             Thailand.
           </Text>
-          <Box display={'flex'}>
+          <Box display={'flex'} flexWrap={'wrap'}>
             <Link
               href="https://weed.th/best-dispensaries-in-thailand"
               passHref
