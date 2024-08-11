@@ -4,10 +4,12 @@ import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import { Box, Text } from '@chakra-ui/react';
-import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
 import { ImgAbout } from '../components/media/ImgAbout';
+import { HomeTopInfos } from '../components/HomeTopInfos';
+import { HomeFeature } from '../components/HomeFeatures';
+import { Fwen } from '../components/Fwen';
 
 const BuyWeed: NextPage = () => {
   return (
@@ -52,178 +54,75 @@ const BuyWeed: NextPage = () => {
           textAlign={'center'}
         >
           <ImgAbout />
-          <HomeSectionTitle title="About Green Ghost" />
+          <HomeSectionTitle title="Welcome to Green Ghost" />
         </Box>
-        <Box
-          display={'flex'}
-          flexDirection={'column'}
-          as="div"
-          color={'white'}
-          fontFamily={'vt323'}
-          bgColor={'ghostVerse.dark.lighter'}
-          mt={5}
-          mb={6}
-          p={4}
+        <Text
+          as="h2"
+          textAlign="center"
+          fontSize={{ base: 20 }}
           lineHeight={1}
-          fontSize={{ base: 24, lg: 30 }}
+          fontFamily="CubicFive12"
+          my={4}
         >
-          <Text
-            as={'h2'}
-            color={'white'}
-            fontSize={{ base: 30, lg: 34 }}
-            fontWeight={'black'}
-            mb={4}
-          >
-            What&apos;s the inspiring story behind Green Ghost&apos;s origins?
-          </Text>
-          <Box
-            display={'flex'}
-            flexDirection={{ base: 'column', lg: 'row' }}
-            mb={10}
-          >
-            <Box
-              width={{ base: '100%', lg: '35%' }}
-              mr={{ base: 0, lg: 10 }}
-              my={4}
-            >
-              <Image
-                src="/green-ghost-weed-shop-growers.png"
-                width={500}
-                height={500}
-                alt="ok"
-                quality={75}
-              />
-            </Box>
-            <Box width={{ base: '100%', lg: '65%' }}>
-              <Text>
-                At Green Ghost, our philosophy is to support the local Thai weed
-                market by exclusively selecting high-quality organic weed grown
-                in Thailand. We do not import weed from other countries. By
-                doing so, we hope to contribute to making Thailand a top spot
-                for high-quality weed growth in the world.
-              </Text>
-              <br />
-              <Text
-                as={'h2'}
-                color={'white'}
-                fontSize={{ base: 30, lg: 34 }}
-                fontWeight={'black'}
-                mb={4}
-              >
-                How the Green Ghost works?
-              </Text>
-              <Text>
-                Green Ghost is the result of a partnership with{' '}
-                <Link
-                  href="/weed-grower"
-                  title="Best Weed Growers Thailand"
-                  passHref
-                >
-                  <Box as={'span'} color={'ghostVerse.green.base'}>
-                    best weed growers in Thailand
-                  </Box>
-                </Link>{' '}
-                and{' '}
-                <Link
-                  href="https://gokai.org/"
-                  title="Gokai Labs - Creative Web3 agency"
-                  passHref
-                >
-                  <Box as={'span'} color={'ghostVerse.green.base'}>
-                    Gokai Labs
-                  </Box>
-                </Link>
-                , a digital branding and communication agency with over 10 years
-                of experience in Thailand.
-              </Text>
-            </Box>
-          </Box>
-          <Box display={'flex'} flexDirection={{ base: 'column', lg: 'row' }}>
-            <Box width={{ base: '100%', lg: '65%' }}>
-              <Text
-                as={'h2'}
-                color={'white'}
-                fontSize={{ base: 30, lg: 34 }}
-                fontWeight={'black'}
-                mb={4}
-              >
-                What sets Green Ghost apart from other coffeeshop in the
-                industry ?
-              </Text>
-              <Text>
-                This collaboration has allowed us to launch a unique concept
-                that combines the precision of quality weed production, weed
-                shop management, technology, and creativity. Green Ghost stands
-                out from its competitors.
-              </Text>
-              <Text>
-                Committed to local values,{' '}
-                <Link href={'/weed-shop'} title={'Weed Shop'} passHref>
-                  <Box
-                    as={'span'}
-                    display="inline-block"
-                    color={'ghostVerse.green.base'}
-                  >
-                    our products
-                  </Box>
-                </Link>{' '}
-                are mainly sourced from Thailand, organic, and carefully
-                selected by our experts.
-                <br />
-                <br />
-                Green Ghost is not just another coffee shop; it is the
-                culmination of the passion of an entire team dedicated to our
-                clients with an innovative{' '}
-                <Link
-                  href="/crypto-weed-shop-relax-and-earn"
-                  title="Crypto Weed Shop Relax And Earn"
-                  passHref
-                >
-                  <Box
-                    as={'span'}
-                    display="inline-block"
-                    color={'ghostVerse.green.base'}
-                  >
-                    rewards system
-                  </Box>
-                </Link>
-                .
-              </Text>
-            </Box>
-            <Box
-              width={{ base: '100%', lg: '35%' }}
-              ml={{ base: 0, lg: 10 }}
-              mt={4}
-            >
-              <Image
-                src="/green-ghost-weed-shop-design-agency.png"
-                width={500}
-                height={500}
-                alt="ok"
-                quality={75}
-              />
-            </Box>
-          </Box>
-          <Text textAlign={'center'} my={10}>
-            All our efforts are focused on providing the highest quality
-            products at the best possible price.
-            <br />
-            Thank you for your trust.
-          </Text>
-          <Box
-            position={'relative'}
-            w="100%"
-            h={{ base: '200px', lg: '600px' }}
-          >
-            <Image
-              src="/media/green-ghost-weed-shop-phuket.webp"
-              fill
-              style={{ objectFit: 'contain' }}
-              alt={'Green Ghost Weed Shop Phuket'}
-              priority={false}
-              quality={75}
-            />
-          </Box>
+          {"Nurturing Thailand's Cannabis Culture"}
+        </Text>
+        <Text
+          textAlign={'center'}
+          as="p"
+          fontSize={{ base: 30, lg: 40 }}
+          lineHeight={1}
+          fontFamily="vt323"
+        >
+          {
+            'At Green Ghost, we’re dedicated to supporting the Thai cannabis community by offering the best weed across outdoor, greenhouse, and indoor varieties. Our mission is to help Thailand grow as a leading hub for premium cannabis.'
+          }
+        </Text>
+        <Fwen />
+        <Text
+          as="h2"
+          textAlign="center"
+          fontSize={{ base: 20 }}
+          lineHeight={1}
+          fontFamily="CubicFive12"
+          mb={4}
+        >
+          Green Ghost redefines the cannabis coffeeshop experience
+        </Text>
+        <Text
+          textAlign={'center'}
+          as="p"
+          fontSize={{ base: 30, lg: 40 }}
+          lineHeight={1}
+          fontFamily="vt323"
+        >
+          By blending top-notch weed with cutting-edge technology and crypto
+          rewards. Our unique concept integrates expertly crafted Thai-grown,
+          organic products with exclusive discounts and innovative rewards for
+          crypto enthusiasts. At Green Ghost, we’re dedicated to exceptional
+          quality and a distinctive experience that highlights our commitment to
+          excellence.
+        </Text>
+        <HomeFeature />
+        <HomeTopInfos />
+        <Text
+          textAlign={'center'}
+          as="p"
+          fontSize={{ base: 30, lg: 40 }}
+          lineHeight={1}
+          fontFamily="vt323"
+        >
+          Thanks for choosing us—where top-notch quality meets wallet-friendly
+          prices, with a dash of good vibes!
+        </Text>
+        <Box position={'relative'} w="100%" h={{ base: '200px', lg: '600px' }}>
+          <Image
+            src="/media/green-ghost-weed-shop-phuket.webp"
+            fill
+            style={{ objectFit: 'contain' }}
+            alt={'Green Ghost Weed Shop Phuket'}
+            priority={false}
+            quality={75}
+          />
         </Box>
       </MainLayout>
     </>
