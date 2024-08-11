@@ -2,21 +2,22 @@ import { Box, Text } from '@chakra-ui/react';
 
 export const WeedDeliveryFeature = () => {
   return (
-    <Box display={'flex'} my={10} flexWrap={'wrap'}>
+    <Box display={'flex'} my={4}>
       <Text
         as={'h4'}
-        fontSize={{ base: 'xl' }}
+        fontSize={{ base: 14, lg: 20 }}
+        lineHeight={1}
         fontFamily={'CubicFive12'}
         color={'white'}
         textAlign={'center'}
-        p={4}
+        p={2}
         display={'flex'}
         alignItems={'center'}
         flexDirection={'column'}
         justifyContent={'center'}
         width={{ base: '100%', lg: '33%' }}
       >
-        <Box fontSize={{ base: '5xl' }} marginBottom={5}>
+        <Box fontSize={{ base: '3xl' }} mb={2} color={'ghostVerse.green.base'}>
           <svg
             xmlns={'http://www.w3.org/2000/svg'}
             fill="none"
@@ -36,18 +37,19 @@ export const WeedDeliveryFeature = () => {
       </Text>
       <Text
         as={'h4'}
-        fontSize={{ base: 'xl' }}
+        fontSize={{ base: 14, lg: 20 }}
+        lineHeight={1}
         fontFamily={'CubicFive12'}
         color={'white'}
         textAlign={'center'}
-        p={4}
+        p={2}
         display={'flex'}
         alignItems={'center'}
         flexDirection={'column'}
         justifyContent={'center'}
         width={{ base: '100%', lg: '33%' }}
       >
-        <Box fontSize={{ base: '5xl' }} marginBottom={5}>
+        <Box fontSize={{ base: '3xl' }} mb={2} color={'ghostVerse.green.base'}>
           <svg
             xmlns={'http://www.w3.org/2000/svg'}
             viewBox="0 0 24 24"
@@ -61,22 +63,23 @@ export const WeedDeliveryFeature = () => {
             />
           </svg>
         </Box>
-        Immediate weed delivery in Phuket
+        Instant weed delivery in Phuket
       </Text>
       <Text
         as={'h4'}
-        fontSize={{ base: 'xl' }}
+        fontSize={{ base: 14, lg: 20 }}
+        lineHeight={1}
         fontFamily={'CubicFive12'}
         color={'white'}
         textAlign={'center'}
-        p={4}
+        p={2}
         display={'flex'}
         alignItems={'center'}
         flexDirection={'column'}
         justifyContent={'center'}
         width={{ base: '100%', lg: '33%' }}
       >
-        <Box fontSize={{ base: '5xl' }} marginBottom={5}>
+        <Box fontSize={{ base: '3xl' }} mb={2} color={'ghostVerse.green.base'}>
           <svg
             xmlns={'http://www.w3.org/2000/svg'}
             viewBox="0 0 24 24"
