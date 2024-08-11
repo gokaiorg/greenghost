@@ -10,6 +10,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { WeedDeliveryFeature } from '../components/WeedDeliveryFeature';
 import { ImgDelivery } from '../components/media/ImgDelivery';
+import { BuyOnline } from '../components/BuyOnline';
+import { HomeTopInfos } from '../components/HomeTopInfos';
 
 const WeedDelivery: NextPage = () => {
   const router = useRouter();
@@ -21,13 +23,91 @@ const WeedDelivery: NextPage = () => {
   const handleBack = () => {
     window.history.back();
   };
+
+  const SectionLink = ({
+    href,
+    title,
+    heading,
+    text,
+    imgSrc,
+    imgAlt,
+    imgSizes,
+    number,
+  }: {
+    href: string;
+    title: string;
+    heading: string;
+    text: string;
+    imgSrc: string;
+    imgAlt: string;
+    imgSizes: string;
+    number: string;
+  }) => (
+    <Box
+      position="relative"
+      width={{ base: '100%', md: '50%' }}
+      mb={2}
+      mx={{ base: '0', md: '2' }}
+    >
+      <Link href={href} title={title} passHref>
+        <Box
+          as="span"
+          bgColor={'ghostVerse.dark.lighter'}
+          backdropFilter="blur(3px)"
+          textAlign="center"
+          p={4}
+          position="absolute"
+          top={0}
+          bottom={0}
+          left={0}
+          right={0}
+          transition="all .3s"
+          _hover={{
+            color: 'ghostVerse.green.base',
+            bgColor: 'ghostVerse.dark.lighter',
+          }}
+        >
+          <Text
+            as="h3"
+            fontSize={{ base: 'xl', lg: '2xl' }}
+            fontFamily="CubicFive12"
+            color="ghostVerse.green.base"
+          >
+            <Box fontSize={{ base: '3xl', lg: '5xl' }}>{number}</Box>
+            {heading}
+          </Text>
+          <Text
+            as="p"
+            fontSize={{ base: 30, xl: 50 }}
+            lineHeight={1}
+            fontWeight="bold"
+            fontFamily="vt323"
+            textAlign="center"
+          >
+            {text}
+          </Text>
+        </Box>
+      </Link>
+      <Box width="100%">
+        <Image
+          src={imgSrc}
+          alt={imgAlt}
+          width={2048}
+          height={1366}
+          sizes={imgSizes}
+          quality={75}
+        />
+      </Box>
+    </Box>
+  );
+
   return (
     <>
       <Head>
         <title>Green Ghost 🌿👻 Weed Delivery Phuket</title>
         <meta
           name="description"
-          content="Discover Green Ghost, the premier weed delivery service in Phuket. Buy high-quality weed products and enjoy convenient, reliable delivery right to your doorstep. Explore our wide selection and experience the best of Phuket's cannabis scene with Green Ghost."
+          content="Discover Green Ghost, the premier weed delivery service in Phuket. Buy high-quality weed products and enjoy convenient, reliable delivery right to your doorstep."
         />
         <meta
           property="og:title"
@@ -35,11 +115,11 @@ const WeedDelivery: NextPage = () => {
         />
         <meta
           property="og:description"
-          content="Discover Green Ghost, the premier weed delivery service in Phuket. Buy high-quality weed products and enjoy convenient, reliable delivery right to your doorstep. Explore our wide selection and experience the best of Phuket's cannabis scene with Green Ghost."
+          content="Discover Green Ghost, the premier weed delivery service in Phuket."
         />
         <meta
           property="og:image"
-          content="https://green.gd/green-ghost-degen-weed-shop.png"
+          content="https://green.gd/media/green-ghost-weed-shop-delivery-menu.webp"
         />
         <meta property="og:image:width" content="2400" />
         <meta property="og:image:height" content="1260" />
@@ -53,11 +133,11 @@ const WeedDelivery: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Discover Green Ghost, the premier weed delivery service in Phuket. Buy high-quality weed products and enjoy convenient, reliable delivery right to your doorstep. Explore our wide selection and experience the best of Phuket's cannabis scene with Green Ghost."
+          content="Discover Green Ghost, the premier weed delivery service in Phuket."
         />
         <meta
           name="twitter:image"
-          content="https://green.gd/green-ghost-degen-weed-shop.png"
+          content="https://green.gd/media/green-ghost-weed-shop-delivery-menu.webp"
         />
         <meta
           name="twitter:url"
@@ -69,17 +149,17 @@ const WeedDelivery: NextPage = () => {
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
         <Box
-          cursor={'pointer'}
-          color={'ghostVerse.green.base'}
+          cursor="pointer"
+          color="ghostVerse.green.base"
           onClick={handleBack}
         >
           {'< back'}
         </Box>
         <Box
-          display={'flex'}
-          flexDirection={'column'}
-          alignItems={'center'}
-          textAlign={'center'}
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          textAlign="center"
           my={4}
           lineHeight={1}
         >
@@ -87,140 +167,69 @@ const WeedDelivery: NextPage = () => {
           <HomeSectionTitle title="Weed Delivery Phuket" />
         </Box>
         <Text
-          as={'h2'}
-          textAlign={'center'}
+          as="p"
+          fontSize={{ base: 30, lg: 40 }}
           lineHeight={1}
-          fontSize={{ base: '3xl' }}
-          fontFamily={'vt323'}
-          mb={10}
+          fontWeight="bold"
+          fontFamily="vt323"
+          mb={{ base: 4 }}
+          textAlign="center"
         >
-          To enjoy our weed delivery service in Phuket, simply follow these
-          steps:
+          Savor the best strains and products without leaving your home!
+        </Text>
+        <Text
+          as="h2"
+          textAlign="center"
+          fontSize={{ base: 20 }}
+          lineHeight={1}
+          fontFamily="CubicFive12"
+          mb={4}
+        >
+          To enjoy our weed delivery service in Phuket
         </Text>
         <Box
-          display={'flex'}
-          flexDirection={{ base: 'column', lg: 'row' }}
-          alignItems={'stretch'}
-          mb={10}
+          display="flex"
+          flexDirection={{ base: 'column', md: 'row' }}
+          alignItems="stretch"
+          mb={4}
         >
-          <Box
-            display={'flex'}
-            flexDirection={'column'}
-            position={'relative'}
-            height={'fit-content'}
-            width={{ base: '100%', lg: '50%' }}
-            mb={2}
-          >
-            <Link href={'/weed-shop'} title={'Weed Shop'} passHref>
-              <Text
-                as={'h2'}
-                fontSize={{ base: 'xl', lg: '2xl' }}
-                fontFamily={'CubicFive12'}
-                color={'white'}
-                borderColor={'ghostVerse.color2.base'}
-                bgColor={'ghostVerse.dark.ultralight'}
-                borderWidth={1}
-                backdropFilter={'blur(1px)'}
-                textAlign={'center'}
-                p={4}
-                position={'absolute'}
-                top={0}
-                bottom={0}
-                left={0}
-                right={0}
-                display={'flex'}
-                alignItems={'center'}
-                flexDirection={'column'}
-                justifyContent={'center'}
-                transition={'all .3s'}
-                _hover={{
-                  color: 'ghostVerse.green.base',
-                  bgColor: 'ghostVerse.dark.lighter',
-                }}
-              >
-                <Box fontSize={{ base: '3xl', lg: '5xl' }}>1</Box>
-                Browse our selection of high-quality weed
-              </Text>
-            </Link>
-            <Box width={{ base: '100%' }}>
-              <Image
-                src="/media/green-ghost-degen-weed-shop-weed-delivery-phuket-strain-choice.webp"
-                width={1200}
-                height={600}
-                alt="Weed Menu - Weed delivery Phuket - Buy weed online."
-                quality={75}
-              />
-            </Box>
-          </Box>
-          <Box
-            display={'flex'}
-            flexDirection={'column'}
-            position={'relative'}
-            height={'fit-content'}
-            width={{ base: '100%', lg: '50%' }}
-            mb={2}
-          >
-            <Link
-              href={'/contact-green-ghost'}
-              title={'Contact Green Ghost'}
-              passHref
-            >
-              <Text
-                as={'h2'}
-                fontSize={{ base: 'xl', lg: '2xl' }}
-                fontFamily={'CubicFive12'}
-                color={'white'}
-                borderColor={'ghostVerse.color2.base'}
-                bgColor={'ghostVerse.dark.ultralight'}
-                borderWidth={1}
-                backdropFilter={'blur(1px)'}
-                textAlign={'center'}
-                p={4}
-                position={'absolute'}
-                top={0}
-                bottom={0}
-                left={0}
-                right={0}
-                display={'flex'}
-                alignItems={'center'}
-                flexDirection={'column'}
-                justifyContent={'center'}
-                transition={'all .3s'}
-                _hover={{
-                  color: 'ghostVerse.green.base',
-                  bgColor: 'ghostVerse.dark.lighter',
-                }}
-              >
-                <Box fontSize={{ base: '3xl', lg: '5xl' }}>2</Box>
-                Proceed to contact and provide your delivery details
-              </Text>
-            </Link>
-            <Box width={{ base: '100%' }}>
-              <Image
-                src="/media/green-ghost-degen-weed-shop-weed-delivery-phuket-contact-us.webp"
-                width={1200}
-                height={600}
-                alt="Contact us - Weed delivery Phuket - Buy weed online."
-                quality={75}
-              />
-            </Box>
-          </Box>
+          <SectionLink
+            href="/weed-shop"
+            title="Weed Shop"
+            heading="Explore Our Premium Cannabis Selection"
+            text="Whether you're looking for flowers, edibles, concentrates or gadgets, we have it for you."
+            imgSrc="/media/green-ghost-weed-shop-delivery-menu.webp"
+            imgAlt="Green Ghost - Weed delivery Phuket - Weed Menu"
+            imgSizes="(max-width: 1024px) 420px, 602px"
+            number="1"
+          />
+          <SectionLink
+            href="/contact-green-ghost"
+            title="Contact Green Ghost"
+            heading="Contact And Provide Delivery Details"
+            text="Contact us and share your delivery information to ensure quick and seamless service."
+            imgSrc="/media/green-ghost-degen-weed-shop-weed-delivery-phuket-contact-us.webp"
+            imgAlt="Green Ghost - Buy weed on delivery Phuket - Contact online"
+            imgSizes="(max-width: 1024px) 420px, 602px"
+            number="2"
+          />
         </Box>
         <WeedDeliveryFeature />
         <Box
-          as={'h3'}
-          mb={20}
-          display={'flex'}
-          textAlign={'center'}
-          fontSize={'4xl'}
-          width={'fit-content'}
-          flexDirection={'column'}
-          fontFamily={'vt323'}
+          as="p"
+          fontSize={{ base: 30, lg: 40 }}
+          lineHeight={1}
+          fontWeight="bold"
+          fontFamily="vt323"
+          mb={{ base: 10 }}
+          textAlign="center"
         >
-          Sit back and relax as we rapidly deliver your order to your location
-          in Phuket and experience the convenience and top-notch service of
-          Green Ghost&apos;s weed delivery today!
+          {
+            "Explore our premium weed selection, featuring high-quality strains curated for the best experience. Whether you're in Phuket or anywhere across Thailand, including Rawai, Karon, Chalong, and Patong, we offer fast and reliable weed delivery. Find the perfect strain to suit your needs and enjoy discreet, door-to-door service. Our collection includes a variety of Indica, Sativa, and Hybrid options, all carefully sourced from trusted growers. Experience the convenience of getting top-shelf weed delivered directly to your doorstep."
+          }
         </Box>
+        <BuyOnline />
+        <HomeTopInfos />
       </MainLayout>
     </>
   );
