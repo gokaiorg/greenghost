@@ -26,7 +26,11 @@ export const MenuFooter = () => {
           </Link>
         </Box>
         <Box mx={2}>
-          <Link title={'About Green Ghost'} href="/about-green-ghost" passHref>
+          <Link
+            title={'Green Ghost 🌿👻 About Cannabis Culture in Thailand'}
+            href="/about"
+            passHref
+          >
             About
           </Link>
         </Box>

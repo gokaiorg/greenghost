@@ -86,7 +86,7 @@ export const HomeTopInfos = () => {
           <Link
             href={'/weed-shop-gadgets/weed-th-rolling-papers-tips'}
             passHref
-            title="Green Ghost - WEED.TH Rolling Papers + Tips"
+            title="Green Ghost 🌿👻 WEED.TH Rolling Papers + Tips"
           >
             <Text
               as="span"
@@ -142,9 +142,9 @@ export const HomeTopInfos = () => {
           Exclusive community for premium cannabis enthusiasts.
         </Text>
         <Link
-          href={'/crypto-weed-shop-relax-and-earn'}
+          href={'/cannabis-club'}
           passHref
-          title="Green Ghost - WEED.TH Rolling Papers + Tips"
+          title="Green Ghost 🌿👻 Best Cannabis Social Club in Phuket Thailand"
         >
           <Text
             as="span"

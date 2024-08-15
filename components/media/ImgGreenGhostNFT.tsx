@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
-export const ImgGhostverse = () => {
+export const ImgGreenGhostNFT = () => {
   return (
     <Image
-      src="/media/green-ghost-weed-shop-pixel-art.webp"
-      alt="Green Ghost 🌿👻 Community-driven collectible NFT DAO on MultiversX"
+      src="/media/green-ghost-degen-nft.webp"
+      alt="Green Ghost 🌿👻 Green Ghost Degen NFT"
       width={1260}
       height={600}
       sizes="
