@@ -20,7 +20,6 @@ export const Review = () => {
             width={256} // Original width
             height={262} // Original height
             alt="Green Ghost - Degen Weed Shop - Cannabis Reviews"
-            layout="intrinsic" // Preserve aspect ratio
             sizes="(max-width: 600px) 120px, (max-width: 1200px) 120px, 120px"
             quality={75}
           />

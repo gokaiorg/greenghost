@@ -9,7 +9,6 @@ export const TestimonialPfp = () => {
         width={128} // Original width
         height={128} // Original height
         alt="Green Ghost Weed Shop Phuket"
-        layout="intrinsic" // Preserve aspect ratio
         sizes="(max-width: 600px) 80px, (max-width: 1200px) 80px, 80px"
         quality={75}
       />

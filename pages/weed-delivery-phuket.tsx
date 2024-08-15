@@ -69,7 +69,7 @@ const WeedDelivery: NextPage = () => {
         >
           <Text
             as="h3"
-            fontSize={{ base: 'xl', lg: '2xl' }}
+            fontSize={{ base: 'lg', lg: '2xl' }}
             fontFamily="CubicFive12"
             color="ghostVerse.green.base"
           >
@@ -78,7 +78,7 @@ const WeedDelivery: NextPage = () => {
           </Text>
           <Text
             as="p"
-            fontSize={{ base: 30, xl: 50 }}
+            fontSize={{ base: 24, xl: 50 }}
             lineHeight={1}
             fontWeight="bold"
             fontFamily="vt323"
@@ -121,8 +121,8 @@ const WeedDelivery: NextPage = () => {
           property="og:image"
           content="https://green.gd/media/green-ghost-weed-shop-delivery-menu.webp"
         />
-        <meta property="og:image:width" content="2400" />
-        <meta property="og:image:height" content="1260" />
+        <meta property="og:image:width" content="2048" />
+        <meta property="og:image:height" content="1366" />
         <meta
           property="og:url"
           content="https://green.gd/weed-delivery-phuket"
@@ -152,8 +152,21 @@ const WeedDelivery: NextPage = () => {
           cursor="pointer"
           color="ghostVerse.green.base"
           onClick={handleBack}
+          title={'BACK'}
         >
-          {'< back'}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="#13DE00"
+            width="30px"
+            height="30px"
+          >
+            <path
+              fillRule="evenodd"
+              d="M12.5 9.75A2.75 2.75 0 0 0 9.75 7H4.56l2.22 2.22a.75.75 0 1 1-1.06 1.06l-3.5-3.5a.75.75 0 0 1 0-1.06l3.5-3.5a.75.75 0 0 1 1.06 1.06L4.56 5.5h5.19a4.25 4.25 0 0 1 0 8.5h-1a.75.75 0 0 1 0-1.5h1a2.75 2.75 0 0 0 2.75-2.75Z"
+              clipRule="evenodd"
+            />
+          </svg>
         </Box>
         <Box
           display="flex"

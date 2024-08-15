@@ -53,8 +53,18 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/about-green-ghost',
+        destination: '/about',
+        permanent: true,
+      },
+      {
         source: '/weed-shop/chem-dog',
         destination: '/weed-shop/chemdawg',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-member',
+        destination: '/cannabis-club',
         permanent: true,
       },
       {

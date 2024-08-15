@@ -59,7 +59,7 @@ export const WeedDeliveryFeature = () => {
             <path
               fillRule={'evenodd'}
               d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             />
           </svg>
         </Box>
@@ -87,9 +87,9 @@ export const WeedDeliveryFeature = () => {
             width="100px"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             />
           </svg>
         </Box>
