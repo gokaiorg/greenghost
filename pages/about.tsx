@@ -15,33 +15,39 @@ const BuyWeed: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 About Us</title>
+        <title>Green Ghost 🌿👻 About Cannabis Culture in Thailand</title>
         <meta
           name="description"
-          content="Green Ghost is the result of a partnership with best Phuket growers, and Gokai Labs, a digital branding and communication agency with over 10 years of experience in Thailand."
+          content="Discover Green Ghost, a leading cannabis social club in Phuket, championing local culture, top-quality weed, and a thriving community for enthusiasts."
         />
-        <meta property="og:title" content="Green Ghost 🌿👻 About" />
+        <meta
+          property="og:title"
+          content="Green Ghost 🌿👻 About Cannabis Culture in Thailand"
+        />
         <meta
           property="og:description"
-          content="Green Ghost is the result of a partnership with best Phuket growers, and Gokai Labs, a digital branding and communication agency with over 10 years of experience in Thailand."
+          content="Discover Green Ghost, a leading cannabis social club in Phuket, championing local culture, top-quality weed, and a thriving community for enthusiasts."
         />
         <meta
           property="og:image"
           content="https://green.gd/green-ghost-degen-weed-shop.png"
         />
-        <meta property="og:image:width" content="2400" />
-        <meta property="og:image:height" content="1260" />
-        <meta property="og:url" content="https://green.gd/about-green-ghost" />
-        <meta name="twitter:title" content="Green Ghost 🌿👻 About" />
+        <meta property="og:image:width" content="2048" />
+        <meta property="og:image:height" content="1366" />
+        <meta property="og:url" content="https://green.gd/about" />
+        <meta
+          name="twitter:title"
+          content="Green Ghost 🌿👻 About Cannabis Culture in Thailand"
+        />
         <meta
           name="twitter:description"
-          content="Green Ghost is the result of a partnership with best Phuket growers, and Gokai Labs, a digital branding and communication agency with over 10 years of experience in Thailand."
+          content="Discover Green Ghost, a leading cannabis social club in Phuket, championing local culture, top-quality weed, and a thriving community for enthusiasts."
         />
         <meta
           name="twitter:image"
           content="https://green.gd/green-ghost-degen-weed-shop.png"
         />
-        <meta name="twitter:url" content="https://green.gd/about-green-ghost" />
+        <meta name="twitter:url" content="https://green.gd/about" />
       </Head>
       <MainLayout>
         <HeaderMenu>
@@ -54,7 +60,7 @@ const BuyWeed: NextPage = () => {
           textAlign={'center'}
         >
           <ImgAbout />
-          <HomeSectionTitle title="Welcome to Green Ghost" />
+          <HomeSectionTitle title="About" />
         </Box>
         <Text
           as="h2"

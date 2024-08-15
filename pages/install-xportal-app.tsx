@@ -29,8 +29,8 @@ const InstallXportal: NextPage = () => {
           property="og:image"
           content="https://green.gd/green-ghost-degen-weed-shop.png"
         />
-        <meta property="og:image:width" content="2400" />
-        <meta property="og:image:height" content="1260" />
+        <meta property="og:image:width" content="2048" />
+        <meta property="og:image:height" content="1366" />
         <meta
           property="og:url"
           content="https://green.gd/install-xportal-app"

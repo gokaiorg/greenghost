@@ -5,12 +5,14 @@ export const ImgAbout = () => {
   return (
     <Box w={{ base: '100px', lg: '140px' }}>
       <Image
-        src="/media/about-green-ghost.webp"
-        width={200}
-        height={171}
-        alt="Green Ghost - Degen Weed Shop - About"
-        title="Green Ghost - Degen Weed Shop - About"
+        src="/media/green-ghost-degen-weed-shop-about-weed.webp"
+        alt="Green Ghost 🌿👻 About Cannabis Culture in Thailand"
+        title="Green Ghost 🌿👻 About Cannabis Culture in Thailand"
+        width={1860}
+        height={1253}
         quality={75}
+        sizes="(max-width: 768px) 100px, 140px"
+        style={{ width: '100%', height: 'auto' }}
       />
     </Box>
   );

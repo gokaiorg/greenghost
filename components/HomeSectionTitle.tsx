@@ -9,7 +9,7 @@ export const HomeSectionTitle: FC<HomeSectionTitleProps> = ({ title }) => {
   return (
     <Text
       as={'h1'}
-      fontSize={20}
+      fontSize={{ base: '20', lg: '30' }}
       fontFamily={'CubicFive12'}
       display={'flex'}
       flexDirection={'row'}
