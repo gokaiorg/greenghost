@@ -267,7 +267,7 @@ const CryptoWeedShop: NextPage = () => {
                 What are the benefits?
               </Text>
               <Text as={'p'} mb={4}>
-                You get 31% off on buds and certain other products, and
+                You get 20% off on buds and certain other products, and
                 privileged access to our new strain arrivals. You also receive
                 cashback in{' '}
                 <Link

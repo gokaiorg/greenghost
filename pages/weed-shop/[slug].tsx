@@ -210,7 +210,7 @@ export default function BudPage({ bud }: BudPageProps) {
                 <BoxInfoMemberPrice>
                   {' '}
                   <Box mr={2}>member</Box>
-                  {(bud.price * 0.69).toFixed(0)} THB
+                  {(bud.price * 0.8).toFixed(0)} THB
                 </BoxInfoMemberPrice>
                 <BoxInfoLabel>
                   <BoxInfoLabelTitle title="5G" />
@@ -225,7 +225,7 @@ export default function BudPage({ bud }: BudPageProps) {
                 <BoxInfoMemberPrice>
                   {' '}
                   <Box mr={2}>member</Box>
-                  {((bud.price * 5 - bud.price) * 0.69).toFixed(0)} THB
+                  {((bud.price * 5 - bud.price) * 0.8).toFixed(0)} THB
                 </BoxInfoMemberPrice>
                 <BoxInfoQuantity>{bud.quantity} grams left</BoxInfoQuantity>
               </>

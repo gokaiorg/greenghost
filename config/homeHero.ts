@@ -44,7 +44,7 @@ export const homehero = [
   //   image: '/media/green-ghost-weed-shop-pixel-art.webp',
   //   imageAlt: 'Green Ghost Weed Shop Pixel Art',
   //   description:
-  //     'Join the Ghost Clan and earn 31% on every order, get cashback and get exclusive access to our latest strains.#MxGhosts',
+  //     'Join the Ghost Clan and earn 20% on every order, get cashback and get exclusive access to our latest strains.#MxGhosts',
   //   link: 'https://ghostverse.org/mxghosts',
   //   linkTitle: 'GhostVerse MxGhosts',
   //   linkLabel: 'Buy NFT',

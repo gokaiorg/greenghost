@@ -30,10 +30,7 @@ const BuyWeed: NextPage = () => {
         />
         <meta property="og:image:width" content="2048" />
         <meta property="og:image:height" content="1366" />
-        <meta
-          property="og:url"
-          content="https://green.gd/contact-green-ghost"
-        />
+        <meta property="og:url" content="https://green.gd/contact" />
         <meta name="twitter:title" content="Green Ghost 🌿👻 Contact Us" />
         <meta
           name="twitter:description"
@@ -43,10 +40,7 @@ const BuyWeed: NextPage = () => {
           name="twitter:image"
           content="https://green.gd/green-ghost-degen-weed-shop.png"
         />
-        <meta
-          name="twitter:url"
-          content="https://green.gd/contact-green-ghost"
-        />
+        <meta name="twitter:url" content="https://green.gd/contact" />
       </Head>
       <MainLayout>
         <HeaderMenu>
