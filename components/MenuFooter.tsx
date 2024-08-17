@@ -35,11 +35,7 @@ export const MenuFooter = () => {
           </Link>
         </Box>
         <Box mx={2}>
-          <Link
-            title="Contact Green Ghost"
-            href={'/contact-green-ghost'}
-            passHref
-          >
+          <Link title="Contact Green Ghost" href={'/contact'} passHref>
             Contact
           </Link>
         </Box>

@@ -190,11 +190,7 @@ const WeedDriveThru: NextPage = () => {
             width={{ base: '100%', lg: '50%' }}
             mb={2}
           >
-            <Link
-              href={'/contact-green-ghost'}
-              title={'Contact Green ghost'}
-              passHref
-            >
+            <Link href={'/contact'} title={'Contact Green ghost'} passHref>
               <Text
                 as={'h2'}
                 fontSize={{ base: 'xl', lg: '2xl' }}
