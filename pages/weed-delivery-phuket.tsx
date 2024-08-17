@@ -217,7 +217,7 @@ const WeedDelivery: NextPage = () => {
             number="1"
           />
           <SectionLink
-            href="/contact-green-ghost"
+            href="/contact"
             title="Contact Green Ghost"
             heading="Contact And Provide Delivery Details"
             text="Contact us and share your delivery information to ensure quick and seamless service."

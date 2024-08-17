@@ -6,8 +6,8 @@ export const ImgEarth = () => {
     <Box position="relative" width="95px" height="100px" maxW="inherit">
       <Image
         src="/media/green-ghost-degen-weed-shop.webp"
-        alt="Green Ghost - Best Degen Weed Shop and Delivery in Phuket Thailand"
-        title="Green Ghost - Best Degen Weed Shop and Delivery in Phuket Thailand"
+        alt="Green Ghost 🌿👻 Best Degen Weed Shop and Delivery"
+        title="Green Ghost 🌿👻 Best Degen Weed Shop and Delivery"
         fill
         style={{ objectFit: 'contain' }}
         priority={true}

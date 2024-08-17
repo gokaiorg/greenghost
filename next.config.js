@@ -53,6 +53,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/contact-green-ghost',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
         source: '/about-green-ghost',
         destination: '/about',
         permanent: true,
