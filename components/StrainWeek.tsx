@@ -29,7 +29,7 @@ export const StrainWeek = () => {
         <Link
           href="https://wa.me/message/XUOXIOUI4MZAJ1"
           passHref
-          title="Green Ghost 🌿👻 Contact us on Whatsapp"
+          title="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order on Whatsapp"
         >
           <Box
             as="span"

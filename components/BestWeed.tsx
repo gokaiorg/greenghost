@@ -6,7 +6,7 @@ const selectedStrains = [
   'Scotty 2 Hotty',
   'Thai Stick',
   'Forbidden Fruit',
-  'El Chapo OG',
+  'Super Boof',
   'Mango Sticky Rice',
 ];
 

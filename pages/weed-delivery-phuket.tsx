@@ -104,22 +104,22 @@ const WeedDelivery: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 Weed Delivery Phuket</title>
+        <title>Green Ghost 🌿👻 Best Weed Delivery Service in Phuket</title>
         <meta
           name="description"
-          content="Discover Green Ghost, the premier weed delivery service in Phuket. Buy high-quality weed products and enjoy convenient, reliable delivery right to your doorstep."
+          content="Green Ghost offers the best weed delivery in Phuket Thailand, bringing premium cannabis straight to your doorstep with fast, reliable service. Order now for top-quality buds."
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Weed Delivery Phuket"
+          content="Green Ghost 🌿👻 Best Weed Delivery Service in Phuket"
         />
         <meta
           property="og:description"
-          content="Discover Green Ghost, the premier weed delivery service in Phuket."
+          content="Green Ghost offers the best weed delivery in Phuket Thailand, bringing premium cannabis straight to your doorstep with fast, reliable service. Order now for top-quality buds."
         />
         <meta
           property="og:image"
-          content="https://green.gd/media/green-ghost-weed-shop-delivery-menu.webp"
+          content="https://green.gd/media/green-ghost-weed-shop-delivery.webp"
         />
         <meta property="og:image:width" content="2048" />
         <meta property="og:image:height" content="1366" />
@@ -129,15 +129,15 @@ const WeedDelivery: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Weed Delivery Phuket"
+          content="Green Ghost 🌿👻 Best Weed Delivery Service in Phuket"
         />
         <meta
           name="twitter:description"
-          content="Discover Green Ghost, the premier weed delivery service in Phuket."
+          content="Green Ghost offers the best weed delivery in Phuket Thailand, bringing premium cannabis straight to your doorstep with fast, reliable service. Order now for top-quality buds."
         />
         <meta
           name="twitter:image"
-          content="https://green.gd/media/green-ghost-weed-shop-delivery-menu.webp"
+          content="https://green.gd/media/green-ghost-weed-shop-delivery.webp"
         />
         <meta
           name="twitter:url"
@@ -208,21 +208,21 @@ const WeedDelivery: NextPage = () => {
         >
           <SectionLink
             href="/weed-shop"
-            title="Weed Shop"
+            title="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
             heading="Explore Our Premium Cannabis Selection"
             text="Whether you're looking for flowers, edibles, concentrates or gadgets, we have it for you."
             imgSrc="/media/green-ghost-weed-shop-delivery-menu.webp"
-            imgAlt="Green Ghost - Weed delivery Phuket - Weed Menu"
+            imgAlt="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
             imgSizes="(max-width: 1024px) 420px, 602px"
             number="1"
           />
           <SectionLink
             href="/contact"
-            title="Contact Green Ghost"
+            title="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
             heading="Contact And Provide Delivery Details"
             text="Contact us and share your delivery information to ensure quick and seamless service."
             imgSrc="/media/green-ghost-degen-weed-shop-weed-delivery-phuket-contact-us.webp"
-            imgAlt="Green Ghost - Buy weed on delivery Phuket - Contact online"
+            imgAlt="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
             imgSizes="(max-width: 1024px) 420px, 602px"
             number="2"
           />

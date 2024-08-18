@@ -18,7 +18,7 @@ export const shops: Shop[] = [
     name: 'Best Weed Shop Rawai',
     hours: 'Everyday 14h-2h.',
     address: '26, 19 Wiset Rd, Rawai, Amphoe Mueang Phuket, Phuket 83130',
-    addresLink: 'https://maps.app.goo.gl/da4Q74sJDSU9w1FQ6',
+    addresLink: 'https://maps.app.goo.gl/itYbMhJaoHeqKA1n8',
     reviewLink: 'https://g.page/r/CYOr82juHaKhEBM/review',
     details: 'Ghost loundge 👻💨',
     description:
@@ -38,7 +38,7 @@ export const shops: Shop[] = [
     name: 'Best Weed Shop Karon',
     hours: 'Monday/Saturday 18h-00h.',
     address: '452 Patak Road, Karon, Mueang Phuket District, Phuket 83100',
-    addresLink: 'https://goo.gl/maps/2mrscgVuBc73KRot8',
+    addresLink: 'https://maps.app.goo.gl/cQYcMeytm6XNQuHS9',
     reviewLink: 'https://g.page/r/CcPCrFf7RfRNEBM/review',
     details: 'Smoking area 💨',
     description:
@@ -46,7 +46,7 @@ export const shops: Shop[] = [
     descSeo:
       'Your local cannabis haven nestled in the heart of beautiful Karon, just moments away from the vibrant Karon Market, the serene Karon Temple, and the pristine Karon Beach in Phuket, Thailand.',
     mapLink:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.456934535779!2d98.2985733!3d7.847151599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305025d1fcbc13ff%3A0x4df445fb57acc2c3!2sGreen%20Ghost%20%7C%20Degen%20Weed%20Shop%20Karon!5e0!3m2!1sen!2sth!4v1688547648541!5m2!1sen!2sth',
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63243.4774906724!2d98.27857340519498!3d7.819713803357078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305025cdbe048e47%3A0xe9e1c35ad359e18f!2s452%20Patak%20Rd%2C%20Tambon%20Karon%2C%20Amphoe%20Mueang%20Phuket%2C%20Chang%20Wat%20Phuket%2083100!5e0!3m2!1sen!2sth!4v1723956908324!5m2!1sen!2sth',
     images: [
       '/media/green-ghost-degen-weed-shop-karon-phuket-thailand-01.webp',
       '/media/green-ghost-degen-weed-shop-karon-phuket-thailand-02.webp',
