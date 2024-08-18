@@ -10,7 +10,7 @@ export const IconMenu = () => {
     >
       <Image
         src="/media/green-ghost-degen-weed-shop-menu.webp"
-        alt="Green Ghost - Degen Weed Shop - Weed Menu"
+        alt="Green Ghost 🌿👻 Weed Shop Premium Cannabis Menu"
         fill
         style={{ objectFit: 'contain' }}
         priority={true}

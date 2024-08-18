@@ -24,7 +24,7 @@ export const BudItem = ({ bud }: BudItemProps) => {
 
   return (
     <BoxItemList>
-      <Link href={`weed-shop/${bud.slug}`} title={bud.name} passHref>
+      <Link href={`weed-shop/${bud.slug}`} title={bud.imgDesc} passHref>
         <BoxItemShop>
           <Swiper
             spaceBetween={10}
