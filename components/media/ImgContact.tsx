@@ -5,11 +5,11 @@ export const ImgContact = () => {
   return (
     <Box w={{ base: '100px', lg: '140px' }}>
       <Image
-        src="/media/contact.webp"
+        src="/media/contact-green-ghost.webp"
         width={200}
         height={175}
-        alt="Green Ghost - Degen Weed Shop - Contact"
-        title="Green Ghost - Degen Weed Shop - Contact"
+        alt="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
+        title="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
         quality={75}
       />
     </Box>

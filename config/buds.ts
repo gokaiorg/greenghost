@@ -321,7 +321,7 @@ export const buds: Bud[] = [
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
-    THC: '28',
+    THC: '25',
     CBD: '0',
     effects: 'Giggly, Talkative, Happy',
     relieves: 'Anxiety, Depression, Stress',

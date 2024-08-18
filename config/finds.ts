@@ -4,6 +4,11 @@ export const find = [
     findUsLink: 'https://weed.th/shop/2ab3e52b-83f8-4a73-a96f-a60e04774a17',
   },
   {
+    name: 'ThaiWeedGuide',
+    findUsLink:
+      'https://thaiweedguide.com/directory-dispensaries/listing/green-ghost/',
+  },
+  {
     name: 'Trip Advisor',
     findUsLink:
       'https://www.tripadvisor.com.sg/Attraction_Review-g1215780-d26518105-Reviews-Green_Ghost-Karon_Phuket.html',
@@ -25,11 +30,6 @@ export const find = [
   {
     name: 'Weeddee',
     findUsLink: 'https://thaiweeddee.com/listing/green-ghost/',
-  },
-  {
-    name: 'ThaiWeedGuide',
-    findUsLink:
-      'https://thaiweedguide.com/directory-dispensaries/listing/green-ghost/',
   },
   {
     name: 'WeedHub',

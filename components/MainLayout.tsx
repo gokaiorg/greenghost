@@ -63,7 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         color="ghostVerse.color2.darker"
         mb={5}
       >
-        <Container maxW="container.xl" px={5}>
+        <Container maxW="container.xl" px={3}>
           <Box>{children}</Box>
         </Container>
       </Box>

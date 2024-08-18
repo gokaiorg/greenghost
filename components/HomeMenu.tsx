@@ -48,7 +48,11 @@ export const HomeMenu = () => {
           flex={1}
           mt={{ base: '0', lg: '4' }}
         >
-          <Link href={'/weed-shop'} passHref title="Weed Shop Menu Buds">
+          <Link
+            href={'/weed-shop'}
+            passHref
+            title="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
+          >
             <Text
               as={'h3'}
               mb={2}
@@ -63,7 +67,7 @@ export const HomeMenu = () => {
           <Link
             href={'/weed-shop-pre-rolls'}
             passHref
-            title="Weed Shop Menu Pre Rolls"
+            title="Green Ghost 🌿👻 Weed Shop Premium Cannabis Pre-Rolls Menu"
           >
             <Text
               as={'h3'}
@@ -79,7 +83,7 @@ export const HomeMenu = () => {
           <Link
             href={'/weed-shop-edibles'}
             passHref
-            title={'Weed Shop Menu Edibles'}
+            title={'Green Ghost 🌿👻 Weed Shop Premium Cannabis Edibles Menu'}
           >
             <Text
               as={'h3'}
@@ -95,7 +99,7 @@ export const HomeMenu = () => {
           <Link
             href={'/weed-shop-degen'}
             passHref
-            title={'Weed Shop Menu Degen'}
+            title={'Green Ghost 🌿👻 Weed Shop Premium Cannabis Degen Menu'}
           >
             <Text
               as={'h3'}
@@ -111,7 +115,7 @@ export const HomeMenu = () => {
           <Link
             href="/weed-shop-gadgets"
             passHref
-            title="Weed Shop Menu Gadgets"
+            title="Green Ghost 🌿👻 Weed Shop Premium Cannabis Gadgets Menu"
           >
             <Text
               as={'h3'}
@@ -125,7 +129,11 @@ export const HomeMenu = () => {
             </Text>
           </Link>
           <Box ml={'auto'}>
-            <Link href={'/weed-shop'} passHref title="Green Ghost Menu">
+            <Link
+              href={'/weed-shop'}
+              passHref
+              title="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
+            >
               <Text
                 as="span"
                 display={'inline-flex'}

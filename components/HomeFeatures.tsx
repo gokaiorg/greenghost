@@ -4,58 +4,50 @@ import { ImgDelivery } from './media/ImgDelivery';
 
 export const HomeFeature = () => {
   return (
-    <Box display={'flex'} my={10} flexWrap={'wrap'} alignItems={'stretch'}>
-      <Box display={'flex'} w={'100%'} alignItems={'center'}>
-        <Box as={'span'} w={{ base: 'auto' }} mr={4}>
-          <ImgDelivery />
-        </Box>
+    <Box display="flex" my={10} flexWrap="wrap" alignItems="stretch">
+      <Box display="flex" w="100%" alignItems="center" mb={5}>
+        <ImgDelivery />
         <Text
-          as={'h2'}
+          as="h2"
           fontSize={{ base: 24, lg: 34 }}
           lineHeight={1}
-          fontFamily={'CubicFive12'}
-          mt={{ base: 5 }}
-          mb={{ base: 5 }}
-          textAlign={'left'}
+          fontFamily="CubicFive12"
+          ml={4}
         >
           Weed Delivery Phuket
         </Text>
       </Box>
       <Text
-        as={'p'}
+        as="p"
         fontSize={{ base: 26, lg: 44 }}
         lineHeight={1}
-        fontFamily={'vt323'}
+        fontFamily="vt323"
         w={{ base: '60%', md: '70%' }}
-        mr={4}
+        mb={5}
       >
         Experience the best weed delivery service in Phuket with Green Ghost. We
         offer instant delivery, bringing top-quality cannabis straight to your
         door.
       </Text>
       <Link
-        href={'/weed-delivery-phuket'}
+        href="/weed-delivery-phuket"
         passHref
-        title="Weed Delivery Phuket"
+        title="Green Ghost 🌿👻 Best Weed Delivery Service in Phuket"
       >
         <Text
           as="span"
-          display={'inline-flex'}
+          display="inline-flex"
           fontSize={{ base: 'xl', md: '4xl' }}
           lineHeight={1}
           borderWidth={1}
-          px={{ base: 4, md: 6 }}
-          pt={{ base: 2, md: 0 }}
-          pb={{ base: 2, md: 2 }}
-          mt={5}
-          mx={'auto'}
-          fontFamily={'vt323'}
-          color={'black'}
-          borderColor={'ghostVerse.green.base'}
-          backgroundColor={'ghostVerse.green.base'}
+          px={6}
+          py={2}
+          fontFamily="vt323"
+          color="black"
+          borderColor="ghostVerse.green.base"
+          backgroundColor="ghostVerse.green.base"
           _hover={{
-            borderColor: 'ghostVerse.green.base',
-            bgColor: 'black',
+            bg: 'black',
             color: 'ghostVerse.green.base',
           }}
         >
