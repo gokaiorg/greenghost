@@ -7,6 +7,8 @@ import Head from 'next/head';
 import { MenuWeedShop } from '../../components/shop/elements/MenuWeedShop';
 import { HomeFeature } from '../../components/HomeFeatures';
 import { BuyOnline } from '../../components/BuyOnline';
+import { Box } from '@chakra-ui/react';
+import Image from 'next/image';
 
 const WeedShop: NextPage = () => {
   return (
@@ -54,6 +56,17 @@ const WeedShop: NextPage = () => {
         <Bud />
         <HomeFeature />
         <BuyOnline />
+        <Box w={{ base: '100%' }}>
+          <Image
+            src="/media/green-ghost-degen-weed-shop-buds-menu.webp"
+            alt="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
+            title="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
+            width={2048}
+            height={1366}
+            sizes="100%"
+            quality={75}
+          />
+        </Box>
       </MainLayout>
     </>
   );
