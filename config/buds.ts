@@ -307,9 +307,9 @@ export const buds: Bud[] = [
     descSeo:
       "Super Boof, also known as 'Superboof' is a perfectly balanced hybrid strain with equal parts indica and sativa. Created by crossing Black Cherry Punch with Tropicana Cookies, this strain is ideal for those seeking a well-rounded experience. Its high potency delivers intense effects that impact both mind and body, offering a unique blend of relaxation and stimulation.",
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-super-boof-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-super-boof-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-super-boof-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-super-boof-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-super-boof-bud-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Super Boof Strain',
     source: 'https://www.leafly.com/strains/super-boof',
@@ -336,9 +336,9 @@ export const buds: Bud[] = [
     descSeo:
       'Pink Runtz is an exceptional hybrid strain, equally balanced between indica and sativa. Known for its origins as a phenotype of the Runtz strain or as a cross of Rainbow Sherbet and Pink Panties, Pink Runtz offers a unique blend of flavors and effects that make it a standout choice for cannabis enthusiasts.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-pink-runtz-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-pink-runtz-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-pink-runtz-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-pink-runtz-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-pink-runtz-bud-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Pink Runtz Strain',
     source: 'https://www.leafly.com/strains/pink-runtz',
