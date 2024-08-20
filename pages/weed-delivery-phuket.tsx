@@ -243,6 +243,17 @@ const WeedDelivery: NextPage = () => {
         </Text>
         <BuyOnline />
         <HomeTopInfos />
+        <Box w={{ base: '100%' }}>
+          <Image
+            src="/media/green-ghost-weed-shop-delivery.webp"
+            width={2048}
+            height={1366}
+            alt="Green Ghost 🌿👻 Best Weed Delivery Service in Phuket"
+            title="Green Ghost 🌿👻 Best Weed Delivery Service in Phuket"
+            sizes="100%"
+            quality={75}
+          />
+        </Box>
       </MainLayout>
     </>
   );

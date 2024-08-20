@@ -52,97 +52,55 @@ const BuyWeed: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <Box
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          textAlign="center"
-          my={4}
-          lineHeight={1}
-        >
-          <ImgContact />
-          <HomeSectionTitle title="Contact" />
-        </Box>
-        <Text
-          as="h2"
-          textAlign="center"
-          fontSize={{ base: '3xl' }}
-          fontFamily="vt323"
-          mb={10}
-          lineHeight={1}
-        >
-          Get in touch with the Green Ghost for all your cannabis inquiries.
-        </Text>
-        <Box
-          display="flex"
-          flexDirection={{ base: 'column-reverse', lg: 'row' }}
-          mb={10}
-        >
-          <Box width={{ base: '100%', lg: '35%' }} mr={{ base: 0, lg: 10 }}>
-            <Image
-              src="/media/green-ghost-degen-weed-shop-weed-delivery-phuket-contact-us.webp"
-              width={500}
-              height={500}
-              alt="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
-              quality={75}
-            />
+        <Box as="section" textAlign="center" my={4} lineHeight={1}>
+          <Box
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            textAlign="center"
+            my={4}
+            lineHeight={1}
+          >
+            <ImgContact />
+            <HomeSectionTitle title="Contact" />
           </Box>
-          <Box width={{ base: '100%', lg: '65%' }} mb={10}>
-            <Box display="flex" flexDirection="column">
-              <Text
-                as="h3"
-                color="white"
-                fontSize={{ base: 'xl' }}
-                fontFamily="CubicFive12"
-                borderColor="ghostVerse.color2.base"
-                bgColor="ghostVerse.dark.lighter"
-                borderWidth={1}
-                backdropFilter="blur(3px)"
-                mb={6}
-                p={2}
-                mr="auto"
-              >
+          <Text as="h2" fontSize={{ base: '3xl' }} fontFamily="vt323" mb={10}>
+            Get in touch with the Green Ghost for all your cannabis inquiries.
+          </Text>
+          <Box
+            display="flex"
+            flexDirection={{ base: 'column', lg: 'row' }}
+            justifyContent={{ base: 'start', lg: 'center' }}
+            alignItems={{ base: 'start', lg: 'center' }}
+            mb={10}
+            gap={6}
+          >
+            <Box textAlign="left" fontFamily="CubicFive12">
+              <Text as="h3" fontSize="xl" mb={2}>
                 Call us
               </Text>
-              <Text
-                display="inline-flex"
-                color="ghostVerse.green.base"
-                borderColor="ghostVerse.green.base"
-                fontSize={{ base: '4xl' }}
-                borderWidth={1}
-                whiteSpace="nowrap"
-                bgColor="ghostVerse.dark.lighter"
-                backdropFilter="blur(3px)"
-                py={1}
-                px={6}
-                mb={2}
-                mr="auto"
-                fontFamily="vt323"
-              >
-                <Link href="tel:+66936459898" title="+66936459898" passHref>
+              <Text as="div" fontSize="2xl" color="ghostVerse.green.base">
+                <Link href="tel:+66936459898" passHref>
                   +66 93 645 9898
                 </Link>
               </Text>
             </Box>
-            <Box display="flex" flexDirection="column">
-              <Text
-                as="h3"
-                color="white"
-                fontSize={{ base: 'xl' }}
-                fontFamily="CubicFive12"
-                borderColor="ghostVerse.color2.base"
-                bgColor="ghostVerse.dark.lighter"
-                borderWidth={1}
-                backdropFilter="blur(3px)"
-                mt={5}
-                mb={6}
-                p={2}
-                mr="auto"
-              >
+            <Box textAlign="left">
+              <Text as="h3" fontSize="xl" mb={2} fontFamily="CubicFive12">
                 Text us
               </Text>
               <SocialContactIcons />
             </Box>
+          </Box>
+          <Box>
+            <Image
+              src="/media/green-ghost-degen-weed-shop-weed-delivery-phuket-contact-us.webp"
+              alt="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
+              width={2048}
+              height={1366}
+              sizes="100%"
+              quality={75}
+            />
           </Box>
         </Box>
       </MainLayout>
