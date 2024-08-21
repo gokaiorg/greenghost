@@ -4,6 +4,8 @@ import Link from 'next/link';
 export const BuyOnline = () => {
   return (
     <Box
+      as="section"
+      aria-labelledby="Get 10% Free on Weed Orders!"
       display={'flex'}
       mb={5}
       p={5}
@@ -53,7 +55,7 @@ export const BuyOnline = () => {
           'https://greenghostweed.shop/collections/buds?filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte=&sort_by=price-ascending'
         }
         passHref
-        title="Green Ghost Weed Shop - Buds Menu"
+        title="Green Ghost 🌿👻 Get 10% Free on greenghostweed.shop Orders"
       >
         <Text
           as="span"
@@ -89,7 +91,7 @@ export const BuyOnline = () => {
         ml={'auto'}
       >
         <Link
-          title="Green Ghost - Weed Drive Thru Phuket"
+          title="Green Ghost 🌿👻 Weed Drive Thru Phuket"
           href="/weed-drive-thru-phuket"
           passHref
         >

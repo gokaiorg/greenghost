@@ -13,6 +13,7 @@ type ShopItemProps = {
 export const ShopItem = ({ shop }: ShopItemProps) => {
   return (
     <Box
+      as="li"
       display="flex"
       flexDirection="column"
       mb={4}

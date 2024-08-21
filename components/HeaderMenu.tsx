@@ -7,6 +7,8 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
 }) => {
   return (
     <Box
+      as="header"
+      aria-label="Site Header"
       display={'flex'}
       alignItems={'center'}
       flexWrap={'wrap'}

@@ -4,7 +4,13 @@ import { ImgEarth } from './media/ImgEarth';
 
 export const Logo = () => {
   return (
-    <Box mx={{ base: 'auto', md: 'inherit' }}>
+    <Box
+      mx={{ base: 'auto', md: '0' }}
+      position="relative"
+      width="95px"
+      height="100px"
+      maxW="inherit"
+    >
       <NextLink
         title={'Green Ghost 🌿👻 Best Degen Weed Shop and Delivery'}
         href="/"

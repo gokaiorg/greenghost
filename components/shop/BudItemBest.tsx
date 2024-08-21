@@ -12,7 +12,6 @@ import 'swiper/css/pagination';
 import BoxItemShop from './elements/BoxItemShop';
 import BoxItemDescShop from './elements/BoxItemDescShop';
 import BoxItemPriceShop from './elements/BoxItemPriceShop';
-import BoxItemList from './elements/BoxItemList';
 
 type BudItemBestProps = {
   bud: Bud;
@@ -22,7 +21,13 @@ export const BudItemBest = ({ bud }: BudItemBestProps) => {
   SwiperCore.use([Autoplay]);
 
   return (
-    <BoxItemList>
+    <Box
+      as="li"
+      width={{ base: '50%', md: '33.33333%', lg: '25%', xl: '20%' }}
+      p={0.5}
+      lineHeight={1}
+      pos={'relative'}
+    >
       <Link href={`weed-shop/${bud.slug}`} title={bud.imgDesc} passHref>
         <BoxItemShop>
           <Swiper
@@ -184,6 +189,6 @@ export const BudItemBest = ({ bud }: BudItemBestProps) => {
           </BoxItemDescShop>
         </BoxItemShop>
       </Link>
-    </BoxItemList>
+    </Box>
   );
 };

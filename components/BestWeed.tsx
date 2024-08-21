@@ -19,7 +19,7 @@ export const BestWeed = () => {
     );
 
   return (
-    <Box mb="10">
+    <Box as="section" aria-labelledby="The best weed in Phuket" mb="10">
       <Text
         as={'h2'}
         fontSize={{ base: 24, lg: 30 }}
@@ -42,10 +42,12 @@ export const BestWeed = () => {
         these strains include a variety of Sativa, Hybrid, and Indica
         dominances, each chosen to elevate your experience.
       </Text>
-      <Box display={'flex'} flexWrap={'wrap'} mx={-0.5}>
-        {bestBuds.map((bud) => (
-          <BudItemBest key={bud.slug} bud={bud} />
-        ))}
+      <Box as="nav" aria-label="Best Weed Navigation">
+        <Box as="ul" display={'flex'} flexWrap={'wrap'} mx={-0.5}>
+          {bestBuds.map((bud) => (
+            <BudItemBest key={bud.slug} bud={bud} />
+          ))}
+        </Box>
       </Box>
     </Box>
   );

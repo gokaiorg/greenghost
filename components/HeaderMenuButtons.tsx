@@ -10,80 +10,58 @@ interface HeaderMenuButtonsProps {
 export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = () => {
   const router = useRouter();
 
-  const isActive = (href: string): boolean => {
-    return router.asPath === href;
-  };
+  const isActive = (href: string): boolean => router.asPath === href;
+
+  const menuItems = [
+    {
+      href: '/weed-shop',
+      title: 'Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu',
+      label: 'Shop',
+    },
+    {
+      href: '/contact',
+      title: 'Green Ghost 🌿👻 Contact Our Weed Shop Team To Order',
+      label: 'Contact',
+    },
+    {
+      href: '/weed-shop-near-me',
+      title: 'Green Ghost 🌿👻 Best Weed Shop Near Me in Phuket',
+      label: 'Map',
+    },
+  ];
 
   return (
     <Box
-      marginLeft={'auto'}
-      marginRight={{ base: 'auto', md: 0 }}
-      py={{ base: '4', lg: '0' }}
-      display={'flex'}
-      fontFamily={'CubicFive12'}
+      as="nav"
+      mr={{ base: 'auto', md: '0' }}
+      ml={{ base: 'auto' }}
+      aria-label="Main Navigation"
     >
-      <Link
-        href={'/weed-shop'}
-        title={'Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu'}
-        passHref
+      <Box
+        as="ul"
+        ml="auto"
+        mr={{ base: 'auto', md: 0 }}
+        py={{ base: 4, lg: 0 }}
+        display="flex"
+        fontFamily="CubicFive12"
       >
-        <Box
-          as={'span'}
-          ml={4}
-          display={'flex'}
-          alignItems={'center'}
-          h={'100%'}
-          mx={2}
-          _hover={{
-            color: 'ghostVerse.green.base',
-          }}
-          color={isActive('/weed-shop') ? 'ghostVerse.green.base' : 'inherit'}
-        >
-          Shop
-        </Box>
-      </Link>
-      <Link
-        href={'/contact'}
-        title={'Green Ghost 🌿👻 Contact Our Weed Shop Team To Order'}
-        passHref
-      >
-        <Box
-          as={'span'}
-          ml={4}
-          display={'flex'}
-          alignItems={'center'}
-          h={'100%'}
-          mx={2}
-          _hover={{
-            color: 'ghostVerse.green.base',
-          }}
-          color={isActive('/contact') ? 'ghostVerse.green.base' : 'inherit'}
-        >
-          Contact
-        </Box>
-      </Link>
-      <Link
-        href="/weed-shop-near-me"
-        title={'Green Ghost 🌿👻 Best Weed Shop Near Me in Phuket'}
-        passHref
-      >
-        <Box
-          as={'span'}
-          ml={4}
-          display={'flex'}
-          alignItems={'center'}
-          h={'100%'}
-          mx={2}
-          _hover={{
-            color: 'ghostVerse.green.base',
-          }}
-          color={
-            isActive('/weed-shop-near-me') ? 'ghostVerse.green.base' : 'inherit'
-          }
-        >
-          Map
-        </Box>
-      </Link>
+        {menuItems.map((item) => (
+          <Box
+            as="li"
+            key={item.href}
+            ml={4}
+            display="flex"
+            alignItems="center"
+            mx={2}
+            color={isActive(item.href) ? 'ghostVerse.green.base' : 'inherit'}
+            _hover={{ color: 'ghostVerse.green.base' }}
+          >
+            <Link href={item.href} title={item.title} passHref>
+              {item.label}
+            </Link>
+          </Box>
+        ))}
+      </Box>
     </Box>
   );
 };

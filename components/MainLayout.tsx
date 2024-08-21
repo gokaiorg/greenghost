@@ -1,4 +1,4 @@
-import { Container, Box } from '@chakra-ui/react';
+import { Container } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React, { FC, PropsWithChildren } from 'react';
 import { MetaHead, MetaHeadProps } from './MetaHead';
@@ -56,17 +56,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         metaImage={metaImage}
         metaUrl={metaUrl}
       />
-      <Box
+      <Container
+        maxW="container.xl"
+        px={3}
         minHeight="calc(100vh - 34px)"
         position={'relative'}
         zIndex={3}
         color="ghostVerse.color2.darker"
         mb={5}
       >
-        <Container maxW="container.xl" px={3}>
-          <Box>{children}</Box>
-        </Container>
-      </Box>
+        {children}
+      </Container>
       <Footer />
     </>
   );

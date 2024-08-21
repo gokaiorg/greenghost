@@ -1,6 +1,7 @@
 // HomeHero.tsx
 import { HomeHeroItem } from './HomeHeroItem';
 import { homehero } from '../config/homeHero';
+import { Box } from '@chakra-ui/react';
 
 export const HomeHero = () => {
   if (!Array.isArray(homehero)) return null;
@@ -8,9 +9,9 @@ export const HomeHero = () => {
   return (
     <>
       {homehero.map((homeHeroItem, index) => (
-        <span key={index}>
+        <Box as="section" key={index}>
           <HomeHeroItem {...homeHeroItem} />
-        </span>
+        </Box>
       ))}
     </>
   );
