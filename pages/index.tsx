@@ -14,6 +14,7 @@ import { Coffeeshop } from '../components/Coffeeshop';
 import { BestWeed } from '../components/BestWeed';
 import { HomeTopInfos } from '../components/HomeTopInfos';
 import { StrainWeek } from '../components/StrainWeek';
+import { Box } from '@chakra-ui/react';
 
 const Home: NextPage = () => {
   return (
@@ -59,17 +60,19 @@ const Home: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <HomeHero />
-        <HomeTopInfos />
-        <HomeMenu />
-        <BestWeed />
-        <Coffeeshop />
-        <HomeFeature />
-        <BuyOnline />
-        <BestWeedShops />
-        <Fwen />
-        <Review />
-        <StrainWeek />
+        <Box as="main" aria-label="Main Content">
+          <HomeHero />
+          <HomeTopInfos />
+          <HomeMenu />
+          <BestWeed />
+          <Coffeeshop />
+          <HomeFeature />
+          <BuyOnline />
+          <BestWeedShops />
+          <Fwen />
+          <Review />
+          <StrainWeek />
+        </Box>
       </MainLayout>
     </>
   );

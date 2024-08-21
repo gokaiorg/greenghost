@@ -5,19 +5,28 @@ import { ShopItem } from './ShopItem';
 
 export const BestWeedShops = () => {
   return (
-    <Box display={'flex'} my={10} flexWrap={'wrap'} alignItems={'stretch'}>
-      <Box display={'flex'} w={'100%'} alignItems={'center'} width={'100%'}>
-        <Text
-          as={'h2'}
-          fontSize={{ base: 24, lg: 30 }}
-          lineHeight={1}
-          fontFamily={'CubicFive12'}
-          my={{ base: 4 }}
-          textAlign={'left'}
-        >
-          Best Weed Shops Phuket
-        </Text>
-      </Box>
+    <Box
+      as="section"
+      aria-labelledby="Best Weed Shops Phuket"
+      display={'flex'}
+      my={10}
+      flexWrap={'wrap'}
+      alignItems={'stretch'}
+    >
+      <Text
+        as={'h2'}
+        fontSize={{ base: 24, lg: 30 }}
+        lineHeight={1}
+        fontFamily={'CubicFive12'}
+        my={{ base: 4 }}
+        textAlign={'left'}
+        display={'flex'}
+        w={'100%'}
+        alignItems={'center'}
+        width={'100%'}
+      >
+        Best Weed Shops Phuket
+      </Text>
       <Text
         as={'p'}
         fontSize={{ base: 26, lg: 36 }}
@@ -28,7 +37,7 @@ export const BestWeedShops = () => {
         store. Experience premium quality cannabis and exceptional service at
         our convenient Phuket locations.
       </Text>
-      <Box w={'100%'} display={'flex'} flexWrap={'wrap'} mt={5}>
+      <Box as="ul" w={'100%'} display={'flex'} flexWrap={'wrap'} mt={5}>
         {shops.map((shop) => (
           <ShopItem key={shop.slug} shop={shop} />
         ))}
@@ -71,7 +80,7 @@ export const BestWeedShops = () => {
         color={'ghostVerse.green.base'}
       >
         <Link
-          title="Green Ghost - Best Weed Shops in Thailand"
+          title="Green Ghost 🌿👻 Best Weed Shops in Thailand"
           href="/weed-shops-thailand"
           passHref
         >

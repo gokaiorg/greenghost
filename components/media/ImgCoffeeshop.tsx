@@ -4,6 +4,7 @@ import Image from 'next/image';
 export const ImgCoffeeshop = () => {
   return (
     <Box
+      as="span"
       flex={'none'}
       w={{ base: '60px', md: '120px' }}
       mr={{ base: '0', md: '8' }}
@@ -13,8 +14,8 @@ export const ImgCoffeeshop = () => {
         src="/media/green-ghost-coffeeshop-phuket.webp"
         width={342}
         height={531}
-        alt="Green Ghost - Degen Weed Shop - Coffeeshop Phuket"
-        title="Green Ghost - Degen Weed Shop - Coffeeshop Phuket"
+        alt="Green Ghost 🌿👻 Best Coffeeshop in Rawai Phuket"
+        title="Green Ghost 🌿👻 Best Coffeeshop in Rawai Phuket"
         sizes="(max-width: 768px) 60px, 120px"
         quality={75}
       />

@@ -5,78 +5,67 @@ import Image from 'next/image';
 export const HomeTopInfos = () => {
   return (
     <Box
-      display={'flex'}
+      display="flex"
       my={{ base: 5, lg: 10 }}
       flexDirection={{ base: 'column', lg: 'row' }}
-      alignItems={'stretch'}
     >
       <Box
+        as="section"
+        aria-labelledby="New cannabis gadget in store"
         w={{ base: '100%', lg: '65%' }}
-        display={'flex'}
-        flexDirection={{ base: 'row', md: 'row' }}
-        bgColor={'ghostVerse.dark.lighter'}
-        p={{ base: 5 }}
-        mr={{ base: '0', lg: '4' }}
-        mb={{ base: '2', lg: '0' }}
+        display="flex"
+        bgColor="ghostVerse.dark.lighter"
+        p={5}
+        mr={{ base: 0, lg: 4 }}
+        mb={{ base: 2, lg: 0 }}
       >
-        <Box
-          as={'span'}
-          w={{ base: '50%', md: '30%', lg: '50%', xl: '30%' }}
-          mr={{ base: '4', md: '4' }}
-          mb={{ base: '4', md: '0' }}
-        >
+        <Box w={{ base: '50%', lg: '30%' }} mr={4} mb={{ base: 4, md: 0 }}>
           <Link
-            href={'/weed-shop-gadgets/weed-th-rolling-papers-tips'}
+            href="/weed-shop-gadgets/weed-th-rolling-papers-tips"
             passHref
-            title="Green Ghost - WEED.TH Rolling Papers + Tips"
+            title="Green Ghost 🌿👻 WEED.TH Rolling Papers + Tips"
           >
             <Image
               src="/media/green-ghost-degen-weed-shop-menu-gadget-weed-th-rolling-paper-tips-03.webp"
               width={828}
               height={828}
               style={{ objectFit: 'contain' }}
-              priority={true}
-              alt="Green Ghost - WEED.TH Rolling Papers + Tips"
+              priority
+              alt="Green Ghost 🌿👻 WEED.TH Rolling Papers + Tips"
+              title="Green Ghost 🌿👻 WEED.TH Rolling Papers + Tips"
               sizes="200px"
               quality={75}
             />
           </Link>
         </Box>
-        <Box
-          display={'flex'}
-          flexDirection={'column'}
-          w={'100%'}
-          alignItems={'start'}
-        >
+        <Box display="flex" flexDirection="column" w="100%" alignItems="start">
           <Text
-            as={'h2'}
-            fontSize={{ base: '18', lg: '24' }}
+            as="h2"
+            fontSize={{ base: 18, lg: 24 }}
             lineHeight={1}
-            fontFamily={'CubicFive12'}
-            mb={{ base: 2 }}
-            textAlign={'left'}
+            fontFamily="CubicFive12"
+            mb={2}
+            textAlign="left"
           >
             New cannabis gadget in store
           </Text>
           <Text
-            as={'h3'}
-            fontSize={{ base: 26 }}
+            as="p"
+            fontSize={26}
             lineHeight={1}
-            fontFamily={'vt323'}
-            w={{ base: '100%', md: '100%' }}
-            mr={4}
-            mb={'auto'}
+            fontFamily="vt323"
+            mb="auto"
           >
             Experience smooth, natural smoking with{' '}
             <Link
-              href={'https://weed.th/'}
+              href="https://weed.th/"
               passHref
-              title="Green Ghost - WEED.TH"
+              title="Green Ghost 🌿👻 WEED.TH WeedMaps for Thailand"
             >
               <Text
-                as={'span'}
-                color={'ghostVerse.green.base'}
-                textDecoration={'underline'}
+                as="span"
+                color="ghostVerse.green.base"
+                textDecoration="underline"
               >
                 WEED.TH
               </Text>
@@ -84,27 +73,24 @@ export const HomeTopInfos = () => {
             Rolling Papers + Tips.
           </Text>
           <Link
-            href={'/weed-shop-gadgets/weed-th-rolling-papers-tips'}
+            href="/weed-shop-gadgets/weed-th-rolling-papers-tips"
             passHref
             title="Green Ghost 🌿👻 WEED.TH Rolling Papers + Tips"
           >
             <Text
               as="span"
-              display={'inline-flex'}
+              display="inline-flex"
               fontSize={{ base: 'xl', md: '4xl' }}
-              lineHeight={1}
               borderWidth={1}
-              px={{ base: 4, md: 6 }}
-              pt={{ base: 2, md: 0 }}
-              pb={{ base: 2, md: 2 }}
-              mt={'5'}
-              mx={'auto'}
-              fontFamily={'vt323'}
-              color={'black'}
-              borderColor={'ghostVerse.green.base'}
-              backgroundColor={'ghostVerse.green.base'}
+              px={6}
+              pb={2}
+              mt={5}
+              mx="auto"
+              fontFamily="vt323"
+              color="black"
+              borderColor="ghostVerse.green.base"
+              bgColor="ghostVerse.green.base"
               _hover={{
-                borderColor: 'ghostVerse.green.base',
                 bgColor: 'black',
                 color: 'ghostVerse.green.base',
               }}
@@ -115,54 +101,47 @@ export const HomeTopInfos = () => {
         </Box>
       </Box>
       <Box
-        display={'flex'}
-        flexDirection={'column'}
+        as="section"
+        aria-labelledby="Cannabis Club"
+        display="flex"
+        flexDirection="column"
         w={{ base: '100%', lg: '35%' }}
-        bgColor={'ghostVerse.green.base'}
-        color={'black'}
-        p={{ base: 5 }}
+        bgColor="ghostVerse.green.base"
+        color="black"
+        p={5}
       >
         <Text
-          as={'h3'}
+          as="h3"
           fontSize={{ base: 24, lg: 34 }}
           lineHeight={1}
-          fontFamily={'CubicFive12'}
-          mb={{ base: 2 }}
-          textAlign={'left'}
+          fontFamily="CubicFive12"
+          mb={2}
+          textAlign="left"
         >
           Cannabis Club
         </Text>
-        <Text
-          mb={'auto'}
-          as={'p'}
-          fontFamily={'vt323'}
-          fontSize={{ base: 26 }}
-          lineHeight={1}
-        >
+        <Text as="p" fontFamily="vt323" fontSize={26} lineHeight={1} mb="auto">
           Exclusive community for premium cannabis enthusiasts.
         </Text>
         <Link
-          href={'/cannabis-club'}
+          href="/cannabis-club"
           passHref
           title="Green Ghost 🌿👻 Best Cannabis Social Club in Phuket Thailand"
         >
           <Text
             as="span"
-            display={'inline-flex'}
-            color={'ghostVerse.green.base'}
-            borderColor={'black'}
-            backgroundColor={'black'}
+            display="inline-flex"
             fontSize={{ base: 'xl', lg: '4xl' }}
-            lineHeight={1}
             borderWidth={1}
-            px={{ base: 4, md: 6 }}
-            pt={{ base: 2, md: 0 }}
-            pb={{ base: 2, md: 2 }}
-            mx={'auto'}
-            mt={'4'}
-            fontFamily={'vt323'}
+            px={6}
+            pb={2}
+            mx="auto"
+            mt={4}
+            fontFamily="vt323"
+            borderColor="black"
+            bgColor="black"
+            color="ghostVerse.green.base"
             _hover={{
-              borderColor: 'black',
               bgColor: 'ghostVerse.green.base',
               color: 'black',
             }}
