@@ -6,6 +6,8 @@ import { Find } from './Find';
 export const Footer = () => {
   return (
     <Box
+      as="footer"
+      aria-label="Site Footer"
       color={'ghostVerse.grey.lighter'}
       display={'flex'}
       alignItems={'center'}

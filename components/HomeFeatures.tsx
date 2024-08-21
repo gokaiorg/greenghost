@@ -4,7 +4,14 @@ import { ImgDelivery } from './media/ImgDelivery';
 
 export const HomeFeature = () => {
   return (
-    <Box display="flex" my={10} flexWrap="wrap" alignItems="stretch">
+    <Box
+      as="section"
+      aria-labelledby="Weed Delivery Phuket"
+      display="flex"
+      my={10}
+      flexWrap="wrap"
+      alignItems="stretch"
+    >
       <Box display="flex" w="100%" alignItems="center" mb={5}>
         <ImgDelivery />
         <Text
@@ -38,10 +45,10 @@ export const HomeFeature = () => {
           as="span"
           display="inline-flex"
           fontSize={{ base: 'xl', md: '4xl' }}
-          lineHeight={1}
           borderWidth={1}
           px={6}
-          py={2}
+          pb={2}
+          mx="auto"
           fontFamily="vt323"
           color="black"
           borderColor="ghostVerse.green.base"
