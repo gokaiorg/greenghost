@@ -11,7 +11,7 @@ const BoxInfoLeft: FC<BoxProps> = ({ children }) => {
       order={{ base: 2, md: 1 }}
       display={'flex'}
       flexDirection={{ base: 'column' }}
-      fontSize={'3xl'}
+      fontSize={'xl'}
       fontFamily={'vt323'}
     >
       {children}

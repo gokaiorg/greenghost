@@ -37,7 +37,15 @@ export const BestWeedShops = () => {
         store. Experience premium quality cannabis and exceptional service at
         our convenient Phuket locations.
       </Text>
-      <Box as="ul" w={'100%'} display={'flex'} flexWrap={'wrap'} mt={5}>
+      <Box
+        as="ul"
+        aria-label="Best Weed Shops Phuket Near Me"
+        listStyleType={'none'}
+        w={'100%'}
+        display={'flex'}
+        flexWrap={'wrap'}
+        mt={5}
+      >
         {shops.map((shop) => (
           <ShopItem key={shop.slug} shop={shop} />
         ))}

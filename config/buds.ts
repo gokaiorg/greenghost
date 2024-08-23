@@ -18,7 +18,7 @@ export type Bud = {
   source: string;
   origin: string;
   environment: string;
-  harvest: string;
+  grade: string;
   quantity: number;
 };
 
@@ -37,7 +37,7 @@ export const buds: Bud[] = [
     grower: 'Green Ghost',
     growerSlug: '',
     environment: 'Organic Greenhouse',
-    harvest: '12/02/2024',
+    grade: 'A Grade',
     quantity: 98,
     origin: 'Thailand',
     description:
@@ -66,7 +66,7 @@ export const buds: Bud[] = [
     grower: 'Green Ghost',
     growerSlug: '/',
     environment: 'Organic Greenhouse',
-    harvest: '24/06/2024',
+    grade: 'AA Grade',
     quantity: 99,
     origin: 'Phuket',
     description:
@@ -96,7 +96,7 @@ export const buds: Bud[] = [
     grower: 'Green Ghost',
     growerSlug: '/',
     environment: 'Organic Greenhouse',
-    harvest: '21/06/2024',
+    grade: 'AA Grade',
     quantity: 78,
     origin: 'Phuket',
     description:
@@ -125,7 +125,7 @@ export const buds: Bud[] = [
     grower: 'Green Ghost',
     growerSlug: '/',
     environment: 'Organic Greenhouse',
-    harvest: '22/05/2024',
+    grade: 'AA Grade',
     quantity: 88,
     origin: 'Phuket',
     description:
@@ -154,7 +154,7 @@ export const buds: Bud[] = [
     grower: 'Green Ghost',
     growerSlug: '/',
     environment: 'Indoor',
-    harvest: '03/04/2024',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -183,7 +183,7 @@ export const buds: Bud[] = [
     grower: 'Green Ghost',
     growerSlug: '/',
     environment: 'Indoor Organic',
-    harvest: '10/14/2024',
+    grade: 'AAA Grade',
     quantity: 89,
     origin: 'Phuket',
     description:
@@ -212,7 +212,7 @@ export const buds: Bud[] = [
     grower: 'Sweed Dreams',
     growerSlug: '/sweed-dreams',
     environment: 'Indoor',
-    harvest: '22/09/2023',
+    grade: 'AAAA Grade',
     quantity: 43,
     origin: 'Krabi',
     description:
@@ -241,7 +241,7 @@ export const buds: Bud[] = [
     grower: 'Green Ghost',
     growerSlug: '/',
     environment: 'Indoor',
-    harvest: '10/03/2024',
+    grade: 'AAAA Grade',
     quantity: 89,
     origin: 'Phuket',
     description:
@@ -263,14 +263,14 @@ export const buds: Bud[] = [
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
-    THC: '1',
+    THC: '0',
     CBD: '15',
     effects: 'Relaxed, Uplifted, Sleepy',
     relieves: 'Stress, Pain, Depression',
     grower: 'CBD Cannabiz farm',
     growerSlug: '/cbd-cannabiz-farm',
     environment: 'Indoor',
-    harvest: '12/10/2022',
+    grade: 'AA Grade',
     quantity: 23,
     origin: 'Surat Thani',
     description:
@@ -299,7 +299,7 @@ export const buds: Bud[] = [
     grower: 'Green Ghost',
     growerSlug: '',
     environment: 'Indoor',
-    harvest: '12/10/2024',
+    grade: 'AAAA Grade',
     quantity: 39,
     origin: 'Phuket',
     description:
@@ -328,7 +328,7 @@ export const buds: Bud[] = [
     grower: 'Green Ghost',
     growerSlug: '',
     environment: 'Indoor',
-    harvest: '12/10/2024',
+    grade: 'AAAA Grade',
     quantity: 45,
     origin: 'Phuket',
     description:
@@ -357,7 +357,7 @@ export const buds: Bud[] = [
     grower: 'Green Ghost',
     growerSlug: '',
     environment: 'Outdoor',
-    harvest: '12/03/2024',
+    grade: 'B Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -387,7 +387,7 @@ export const buds: Bud[] = [
     grower: 'Green Ghost',
     growerSlug: '/',
     environment: 'Greenhouse',
-    harvest: '29/01/2024',
+    grade: 'AAAA Grade',
     quantity: 92,
     origin: 'Phuket',
     description:
@@ -416,7 +416,7 @@ export const buds: Bud[] = [
     grower: 'Ohigho',
     growerSlug: '/ohigho',
     environment: 'Indoor',
-    harvest: '22/07/2023',
+    grade: 'AAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -445,7 +445,7 @@ export const buds: Bud[] = [
     grower: 'Ohigho',
     growerSlug: '/ohigho',
     environment: 'Indoor',
-    harvest: '22/07/2023',
+    grade: 'AAA Grade',
     quantity: 82,
     origin: 'Phuket',
     description:
@@ -474,7 +474,7 @@ export const buds: Bud[] = [
     grower: 'Green Ghost',
     growerSlug: '/',
     environment: 'Organic Greenhouse',
-    harvest: '11/06/2023',
+    grade: 'AA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -503,7 +503,7 @@ export const buds: Bud[] = [
     grower: 'Green Ghost',
     growerSlug: '/',
     environment: 'Organic Indoor',
-    harvest: '12/03/2024',
+    grade: 'AA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -532,7 +532,7 @@ export const buds: Bud[] = [
     grower: 'Green Ghost',
     growerSlug: '/',
     environment: 'Indoor',
-    harvest: '18/12/2023',
+    grade: 'AAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -561,7 +561,7 @@ export const buds: Bud[] = [
     grower: 'Green Ghost',
     growerSlug: '/',
     environment: 'Indoor',
-    harvest: '02/01/2024',
+    grade: 'AAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -591,7 +591,7 @@ export const buds: Bud[] = [
     grower: 'Green Ghost',
     growerSlug: '/',
     environment: 'Organic Greenhouse',
-    harvest: '03/04/2024',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -621,7 +621,7 @@ export const buds: Bud[] = [
     grower: 'CBD Cannabiz farm',
     growerSlug: '/cbd-cannabiz-farm',
     environment: 'Indoor',
-    harvest: '12/01/2024',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Surat Thani',
     description:
@@ -651,7 +651,7 @@ export const buds: Bud[] = [
     grower: 'Buddy Bud Weed',
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
-    harvest: '12/10/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -680,7 +680,7 @@ export const buds: Bud[] = [
     grower: 'Ohigho',
     growerSlug: '/ohigho',
     environment: 'Indoor',
-    harvest: '22/07/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -709,7 +709,7 @@ export const buds: Bud[] = [
     grower: 'Ohigho',
     growerSlug: '/ohigho',
     environment: 'Indoor',
-    harvest: '22/07/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -738,7 +738,7 @@ export const buds: Bud[] = [
     grower: 'Buddy Bud Weed',
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
-    harvest: '12/06/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -767,7 +767,7 @@ export const buds: Bud[] = [
     grower: 'Buddy Bud Weed',
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
-    harvest: '12/06/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -796,7 +796,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/unknown',
     environment: 'Organic Indoor',
-    harvest: '03/10/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -825,7 +825,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
-    harvest: '10/08/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -854,7 +854,7 @@ export const buds: Bud[] = [
     grower: 'Ohigho',
     growerSlug: '/ohigho',
     environment: 'Indoor',
-    harvest: '22/07/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -883,7 +883,7 @@ export const buds: Bud[] = [
     grower: 'Sweed Dreams',
     growerSlug: '/sweed-dreams',
     environment: 'Indoor',
-    harvest: '12/10/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Krabi',
     description:
@@ -912,7 +912,7 @@ export const buds: Bud[] = [
     grower: 'Sweed Dreams',
     growerSlug: '/sweed-dreams',
     environment: 'Indoor',
-    harvest: '12/10/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Krabi',
     description:
@@ -941,7 +941,7 @@ export const buds: Bud[] = [
     grower: 'CBD Cannabiz farm',
     growerSlug: '/cbd-cannabiz-farm',
     environment: 'Indoor',
-    harvest: '12/10/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Surat Thani',
     description:
@@ -970,7 +970,7 @@ export const buds: Bud[] = [
     grower: 'Buddy Bud Weed',
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
-    harvest: '12/08/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -999,7 +999,7 @@ export const buds: Bud[] = [
     grower: 'Ohigho',
     growerSlug: '/ohigho',
     environment: 'Indoor',
-    harvest: '22/07/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1029,7 +1029,7 @@ export const buds: Bud[] = [
     grower: 'CBD Cannabiz farm',
     growerSlug: '/cbd-cannabiz-farm',
     environment: 'Indoor',
-    harvest: '23/10/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Surat Thani',
     description:
@@ -1058,7 +1058,7 @@ export const buds: Bud[] = [
     grower: 'Buddy Bud Weed',
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
-    harvest: '12/06/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1087,7 +1087,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
-    harvest: '12/06/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1116,7 +1116,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
-    harvest: '12/06/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1145,7 +1145,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
-    harvest: '04/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1174,7 +1174,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
-    harvest: '12/06/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1203,7 +1203,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
-    harvest: '12/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1232,7 +1232,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
-    harvest: '11/06/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1261,7 +1261,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
-    harvest: '22/05/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1290,7 +1290,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
-    harvest: '11/06/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1319,7 +1319,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/cosmic-temple-vibes',
     environment: 'Organic Indoor',
-    harvest: '22/06/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1348,13 +1348,13 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/cosmic-temple-vibes',
     environment: 'Organic Indoor',
-    harvest: '22/06/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
-      'Critical Plus 2.0, a remarkable offspring of the renowned Dinafem Seeds original strain, Critical Plus, takes its genetics to new depths. This hybrid is cherished for its rapid flowering time and invigorating lemon fragrance, making it an ideal choice for novice growers seeking a profoundly relaxing experience and bountiful harvests. \n\n The aroma of Critical Plus 2.0 is notably intense, emanating pungent hints of lemon, incense, and exotic wood. To counter its robust scent, Dinafem recommends the use of a potent carbon filter during the flowering stage. With its deep relaxation properties and stress-relieving effects, Critical Plus 2.0 truly delivers a serene experience.',
+      'Critical Plus 2.0, a remarkable offspring of the renowned Dinafem Seeds original strain, Critical Plus, takes its genetics to new depths. This hybrid is cherished for its rapid flowering time and invigorating lemon fragrance, making it an ideal choice for novice growers seeking a profoundly relaxing experience and bountiful grades. \n\n The aroma of Critical Plus 2.0 is notably intense, emanating pungent hints of lemon, incense, and exotic wood. To counter its robust scent, Dinafem recommends the use of a potent carbon filter during the flowering stage. With its deep relaxation properties and stress-relieving effects, Critical Plus 2.0 truly delivers a serene experience.',
     descSeo:
-      'Critical Plus 2.0, a remarkable offspring of the renowned Dinafem Seeds original strain, Critical Plus, takes its genetics to new depths. This hybrid is cherished for its rapid flowering time and invigorating lemon fragrance, making it an ideal choice for novice growers seeking a profoundly relaxing experience and bountiful harvests.',
+      'Critical Plus 2.0, a remarkable offspring of the renowned Dinafem Seeds original strain, Critical Plus, takes its genetics to new depths. This hybrid is cherished for its rapid flowering time and invigorating lemon fragrance, making it an ideal choice for novice growers seeking a profoundly relaxing experience and bountiful grades.',
     images: [
       '/media/green-ghost-degen-weed-shop-strain-critical-plus-20-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-critical-plus-20-cover.webp',
@@ -1377,7 +1377,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/cosmic-temple-vibes',
     environment: 'Organic Indoor',
-    harvest: '07/06/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1406,7 +1406,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
-    harvest: '03/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1435,7 +1435,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
-    harvest: '08/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1464,11 +1464,11 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
-    harvest: '12/06/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
-      "Lemon Zkittlez is an extraordinary hybrid strain that brings together the best qualities of Sweet Zkittlez and Critical Plus. With its lineage rooted in the indica-dominant Sweet Zkittlez, Lemon ZZ offers a delightful combination of a sweet flavor profile and a deeply relaxing high. Perfect for those seeking a flavorful experience, Lemon ZZ entices the taste buds with its fruity and citrusy notes, leaving a pleasant aftertaste with every inhale. \n\n The genetic influence of Critical Plus adds a special touch to Lemon ZZ, enhancing its growth potential and yield. Critical Plus is renowned for its fast growth and abundant harvests, making it a favorite among cultivators. This blend of robust genetics and exceptional flavors makes Lemon ZZ an ideal choice for those who appreciate a sweet taste accompanied by a relaxing high. \n\n Indulge in the calming effects of Lemon ZZ as it washes over your body, melting away tension and promoting a sense of deep tranquility. Let its aromatic citrus and diesel undertones transport you to a state of pure bliss. Whether you're looking for a strain to unwind after a long day or to enhance social gatherings, Lemon ZZ is sure to deliver an enjoyable and memorable experience.",
+      "Lemon Zkittlez is an extraordinary hybrid strain that brings together the best qualities of Sweet Zkittlez and Critical Plus. With its lineage rooted in the indica-dominant Sweet Zkittlez, Lemon ZZ offers a delightful combination of a sweet flavor profile and a deeply relaxing high. Perfect for those seeking a flavorful experience, Lemon ZZ entices the taste buds with its fruity and citrusy notes, leaving a pleasant aftertaste with every inhale. \n\n The genetic influence of Critical Plus adds a special touch to Lemon ZZ, enhancing its growth potential and yield. Critical Plus is renowned for its fast growth and abundant grades, making it a favorite among cultivators. This blend of robust genetics and exceptional flavors makes Lemon ZZ an ideal choice for those who appreciate a sweet taste accompanied by a relaxing high. \n\n Indulge in the calming effects of Lemon ZZ as it washes over your body, melting away tension and promoting a sense of deep tranquility. Let its aromatic citrus and diesel undertones transport you to a state of pure bliss. Whether you're looking for a strain to unwind after a long day or to enhance social gatherings, Lemon ZZ is sure to deliver an enjoyable and memorable experience.",
     descSeo:
       'Lemon Zkittlez is an extraordinary hybrid strain that brings together the best qualities of Sweet Zkittlez and Critical Plus. With its lineage rooted in the indica-dominant Sweet Zkittlez, Lemon ZZ offers a delightful combination of a sweet flavor profile and a deeply relaxing high. Perfect for those seeking a flavorful experience, Lemon ZZ entices the taste buds with its fruity and citrusy notes, leaving a pleasant aftertaste with every inhale.',
     images: [
@@ -1493,7 +1493,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
-    harvest: '22/01/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1522,7 +1522,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
-    harvest: '07/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1551,7 +1551,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
-    harvest: '01/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1581,7 +1581,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
-    harvest: '03/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1610,7 +1610,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
-    harvest: '28/12/2022',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1639,7 +1639,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
-    harvest: '08/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1668,7 +1668,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/cosmic-temple-vibes',
     environment: 'Organic Indoor',
-    harvest: '16/05/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1698,7 +1698,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/cosmic-temple-vibes',
     environment: 'Organic Indoor',
-    harvest: '08/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1727,7 +1727,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/cosmic-temple-vibes',
     environment: 'Organic Indoor',
-    harvest: '08/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1756,7 +1756,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/cosmic-temple-vibes',
     environment: 'Organic Indoor',
-    harvest: '08/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1785,11 +1785,11 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
-    harvest: '12/06/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
-      'Sorbet#4 is the exceptional outcome of blending two renowned genetic strains. This variety thrives with vigorous growth, displaying robust plants that develop abundantly with multiple secondary branches. However, its exuberance requires careful control to maintain its desired form. \n\n With its elongated and resinous buds, Sorbet#4 offers a unique appeal and earns its place as a cherished addition to any garden. After approximately 9 weeks of flowering, these buds are ready to be harvested. The remarkable productivity of Sorbet#4 ensures a yield of over 500g per square meter, making it a highly rewarding cultivar. \n\n Indulge in the delightful combination of fruity and creamy flavors that Sorbet#4 delivers. This strain offers a harmonious blend of relaxation for the body and euphoria for the mind. It provides the perfect invitation to unwind and enjoy a tranquil time in the company of good friends or loved ones.',
+      'Sorbet#4 is the exceptional outcome of blending two renowned genetic strains. This variety thrives with vigorous growth, displaying robust plants that develop abundantly with multiple secondary branches. However, its exuberance requires careful control to maintain its desired form. \n\n With its elongated and resinous buds, Sorbet#4 offers a unique appeal and earns its place as a cherished addition to any garden. After approximately 9 weeks of flowering, these buds are ready to be gradeed. The remarkable productivity of Sorbet#4 ensures a yield of over 500g per square meter, making it a highly rewarding cultivar. \n\n Indulge in the delightful combination of fruity and creamy flavors that Sorbet#4 delivers. This strain offers a harmonious blend of relaxation for the body and euphoria for the mind. It provides the perfect invitation to unwind and enjoy a tranquil time in the company of good friends or loved ones.',
     descSeo:
       'Sorbet#4 is the exceptional outcome of blending two renowned genetic strains. This variety thrives with vigorous growth, displaying robust plants that develop abundantly with multiple secondary branches. However, its exuberance requires careful control to maintain its desired form.',
     images: [
@@ -1814,7 +1814,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/buddy-bud-weed',
     environment: 'Organic Indoor',
-    harvest: '12/06/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1843,7 +1843,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
-    harvest: '11/06/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1872,7 +1872,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/unknown',
     environment: 'Organic Indoor',
-    harvest: '03/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1901,7 +1901,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/unknown',
     environment: 'Organic Indoor',
-    harvest: '03/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1930,7 +1930,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/unknown',
     environment: 'Organic Indoor',
-    harvest: '03/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1959,7 +1959,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/unknown',
     environment: 'Organic Indoor',
-    harvest: '03/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -1988,7 +1988,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/unknown',
     environment: 'Organic Indoor',
-    harvest: '03/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -2017,7 +2017,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/unknown',
     environment: 'Organic Indoor',
-    harvest: '03/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -2046,7 +2046,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/unknown',
     environment: 'Organic Indoor',
-    harvest: '03/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -2075,7 +2075,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/unknown',
     environment: 'Organic Indoor',
-    harvest: '03/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -2104,7 +2104,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/unknown',
     environment: 'Organic Indoor',
-    harvest: '03/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -2133,7 +2133,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/unknown',
     environment: 'Organic Indoor',
-    harvest: '03/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -2162,7 +2162,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/unknown',
     environment: 'Organic Indoor',
-    harvest: '03/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -2191,7 +2191,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/unknown',
     environment: 'Organic Indoor',
-    harvest: '03/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:
@@ -2220,7 +2220,7 @@ export const buds: Bud[] = [
     grower: 'Unknown',
     growerSlug: '/unknown',
     environment: 'Organic Indoor',
-    harvest: '03/04/2023',
+    grade: 'AAAA Grade',
     quantity: 0,
     origin: 'Phuket',
     description:

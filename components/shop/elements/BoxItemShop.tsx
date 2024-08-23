@@ -8,9 +8,9 @@ interface BoxItemProps {
 const BoxItemShop: FC<BoxItemProps> = ({ children }) => {
   return (
     <Box
-      backdropFilter={'blur(3px)'}
+      as="div"
+      lineHeight={1}
       p={1}
-      // border={'1px'}
       pos={'relative'}
       fontWeight={'bold'}
       fontSize={'lg'}
@@ -22,7 +22,6 @@ const BoxItemShop: FC<BoxItemProps> = ({ children }) => {
       position={'relative'}
       _hover={{
         bgColor: 'ghostVerse.green.transparent',
-        backdropFilter: 'blur(3px)',
       }}
       transition={'all .3s'}
     >

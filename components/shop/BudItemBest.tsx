@@ -23,10 +23,9 @@ export const BudItemBest = ({ bud }: BudItemBestProps) => {
   return (
     <Box
       as="li"
+      listStyleType={'none'}
       width={{ base: '50%', md: '33.33333%', lg: '25%', xl: '20%' }}
       p={0.5}
-      lineHeight={1}
-      pos={'relative'}
     >
       <Link href={`weed-shop/${bud.slug}`} title={bud.imgDesc} passHref>
         <BoxItemShop>
@@ -52,75 +51,79 @@ export const BudItemBest = ({ bud }: BudItemBestProps) => {
             initialSlide={0}
             style={
               {
-                '--swiper-pagination-color': '#4cfd27',
+                '--swiper-pagination-color': '#13DE00',
                 '--swiper-pagination-bullet-inactive-color': '#fff',
               } as React.CSSProperties
             }
           >
-            {bud.images.map(
-              (image, index) =>
-                index !== 2 && (
-                  <SwiperSlide key={index}>
-                    <Box as="span">
-                      <Image
-                        src={image}
-                        width={250}
-                        height={250}
-                        alt={bud.imgDesc}
-                        sizes="(max-width: 600px) 160px, (max-width: 1200px) 240px, 240px"
-                        quality={75}
-                      />
-                    </Box>
-                  </SwiperSlide>
-                )
+            {bud.images.map((image, index) =>
+              index !== 2 ? (
+                <SwiperSlide key={index}>
+                  <Image
+                    src={image}
+                    width={250}
+                    height={250}
+                    alt={bud.imgDesc}
+                    title={bud.imgDesc}
+                    sizes="(max-width: 600px) 160px, (max-width: 1200px) 240px, 240px"
+                    quality={75}
+                    style={{ objectFit: 'cover' }}
+                  />
+                </SwiperSlide>
+              ) : null
             )}
           </Swiper>
           <BoxItemDescShop>
-            <Text
-              as={'h3'}
-              fontFamily={'CubicFive12'}
-              fontSize={{ base: 16 }}
+            <BoxItemPriceShop>
+              {bud.price == 999 ? (
+                <Box
+                  as="span"
+                  fontSize={{ base: 14, lg: 16 }}
+                  color={'ghostVerse.green.base'}
+                >
+                  Coming Soon
+                </Box>
+              ) : bud.quantity === 0 ? (
+                <Box
+                  as="span"
+                  fontSize={{ base: 14, lg: 16 }}
+                  margin={'-0.5rem'}
+                  padding={'0.5rem'}
+                  color={'white'}
+                  backgroundColor={'ghostVerse.red.base'}
+                >
+                  Sold Out
+                </Box>
+              ) : (
+                <>{`${bud.price} THB`}</>
+              )}
+            </BoxItemPriceShop>
+            <Box as="li" listStyleType={'none'}>
+              <Text
+                as={'h3'}
+                fontFamily={'CubicFive12'}
+                fontSize={{ base: 16 }}
+                display={'flex'}
+                flexDirection={'column'}
+                marginRight={1}
+              >
+                {bud.name}
+              </Text>
+            </Box>
+            <Box
+              as="li"
               display={'flex'}
-              flexDirection={'column'}
-              marginRight={1}
+              fontFamily={'vt323'}
+              fontSize={'2xl'}
+              mb={1}
             >
-              <BoxItemPriceShop>
-                {bud.price == 999 ? (
-                  <Box
-                    fontSize={{ base: 14, lg: 16 }}
-                    color={'ghostVerse.green.base'}
-                  >
-                    Coming Soon
-                  </Box>
-                ) : bud.quantity === 0 ? (
-                  <Box
-                    fontSize={{ base: 14, lg: 16 }}
-                    margin={'-0.5rem'}
-                    padding={'0.5rem'}
-                    color={'white'}
-                    backgroundColor={'ghostVerse.red.base'}
-                  >
-                    Sold Out
-                  </Box>
-                ) : (
-                  <Box
-                    fontSize={{ base: 14, lg: 16 }}
-                    color={'ghostVerse.green.base'}
-                  >
-                    {bud.price} THB
-                  </Box>
-                )}
-              </BoxItemPriceShop>
-              {bud.name}
-            </Text>
-            <Box display={'flex'} fontFamily={'vt323'} fontSize={'2xl'} mb={1}>
               {bud.dominance == 'Indica' && (
                 <Box
                   as={'h4'}
                   color={'ghostVerse.dominance.indica'}
                   marginRight={2}
                 >
-                  {bud.dominance} {bud.indica}%
+                  {`${bud.dominance} ${bud.indica}%`}
                 </Box>
               )}
               {bud.dominance == 'Sativa' && (
@@ -129,7 +132,7 @@ export const BudItemBest = ({ bud }: BudItemBestProps) => {
                   color={'ghostVerse.dominance.sativa'}
                   marginRight={2}
                 >
-                  {bud.dominance} {bud.sativa}%
+                  {`${bud.dominance} ${bud.sativa}%`}
                 </Box>
               )}
               {bud.dominance == 'Hybrid' && (
@@ -138,51 +141,21 @@ export const BudItemBest = ({ bud }: BudItemBestProps) => {
                   color={'ghostVerse.dominance.hybrid'}
                   marginRight={2}
                 >
-                  {bud.dominance}
+                  {`${bud.dominance}`}
                 </Box>
               )}
               <Box
+                as="h4"
                 display={'flex'}
                 fontSize={'2xl'}
                 flexWrap={'wrap'}
                 mb={1}
                 ml={'auto'}
+                color={'ghostVerse.grey.base'}
               >
-                {bud.THC >= bud.CBD && (
-                  <Box
-                    display={'flex'}
-                    marginRight={2}
-                    flexDirection={'row'}
-                    color={'ghostVerse.grey.base'}
-                  >
-                    THC
-                    <Box
-                      marginLeft={2}
-                      display={'flex'}
-                      flexDirection={'row'}
-                      alignItems={'baseline'}
-                    >
-                      {bud.THC}%
-                    </Box>
-                  </Box>
-                )}
+                {bud.THC >= bud.CBD && <>{`THC ${bud.THC}%`}</>}
                 {bud.THC <= bud.CBD && bud.CBD !== '0' && (
-                  <Box
-                    display={'flex'}
-                    marginRight={2}
-                    flexDirection={'row'}
-                    color={'ghostVerse.grey.base'}
-                  >
-                    CBD
-                    <Box
-                      marginLeft={2}
-                      display={'flex'}
-                      flexDirection={'row'}
-                      alignItems={'baseline'}
-                    >
-                      {bud.CBD}%
-                    </Box>
-                  </Box>
+                  <>{`CBD ${bud.CBD}%`}</>
                 )}
               </Box>
             </Box>

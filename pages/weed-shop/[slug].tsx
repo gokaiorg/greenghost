@@ -1,11 +1,9 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { getBuds, Bud } from '../../config/buds';
 import { MainLayout } from '../../components/MainLayout';
 import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
-import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import { Box, Text } from '@chakra-ui/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
@@ -15,41 +13,49 @@ import Image from 'next/image';
 import Link from 'next/link';
 import BoxInfoProduct from '../../components/box/BoxInfoProduct';
 import BoxDescription from '../../components/box/BoxDescription';
-import BoxInfoLeft from '../../components/box/BoxInfoLeft';
-import BoxInfoRight from '../../components/box/BoxInfoRight';
-import BoxInfoLabel from '../../components/box/BoxInfoLabel';
-import { BoxInfoLabelTitle } from '../../components/box/BoxInfoLabelTitle';
-import BoxInfoMemberPrice from '../../components/box/BoxInfoMemberPrice';
-import BoxInfoQuantity from '../../components/box/BoxInfoQuantity';
 import { HomeFeature } from '../../components/HomeFeatures';
 import { HomeTopInfos } from '../../components/HomeTopInfos';
+import { IconIndica } from '../../components/media/IconIndica';
+import { IconSativa } from '../../components/media/IconSativa';
+import { IconHybrid } from '../../components/media/IconHybrid';
 
 interface BudPageProps {
   bud: Bud;
 }
 
 export default function BudPage({ bud }: BudPageProps) {
-  const router = useRouter();
-
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  }
-
   SwiperCore.use([Autoplay]);
 
   const handleBack = () => {
     window.history.back();
   };
 
+  const schemaData = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: bud?.name || 'Unknown Product',
+    image: bud?.images && bud.images.length > 0 ? bud.images[0] : '',
+    description: bud?.descSeo || 'No description available',
+    sku: bud?.slug || 'no-sku',
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'THB',
+      price: bud?.price || '0',
+      itemCondition: 'https://schema.org/NewCondition',
+      availability:
+        bud?.quantity > 0
+          ? 'https://schema.org/InStock'
+          : 'https://schema.org/OutOfStock',
+      url: `https://green.gd/weed-shop/${bud?.slug || 'unknown'}`,
+    },
+  };
+
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 {bud.name} Strain</title>
+        <title>{bud.imgDesc}</title>
         <meta name="description" content={bud.descSeo} />
-        <meta
-          property="og:title"
-          content={`Green Ghost - ${bud.name} Strain`}
-        />
+        <meta property="og:title" content={bud.imgDesc} />
         <meta property="og:description" content={bud.descSeo} />
         <meta property="og:image" content={bud.images[1]} />
         <meta property="og:image:width" content="1000" />
@@ -58,281 +64,282 @@ export default function BudPage({ bud }: BudPageProps) {
           property="og:url"
           content={`https://green.gd/weed-shop/${bud.slug}`}
         />
-        <meta
-          name="twitter:title"
-          content={`Green Ghost - ${bud.name} Strain`}
-        />
+        <meta name="twitter:title" content={bud.imgDesc} />
         <meta name="twitter:description" content={bud.descSeo} />
         <meta name="twitter:image" content={bud.images[1]} />
         <meta
           name="twitter:url"
           content={`https://green.gd/weed-shop/${bud.slug}`}
         />
+        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Head>
       <MainLayout>
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <Box
-          cursor={'pointer'}
-          color={'ghostVerse.green.base'}
-          onClick={handleBack}
-          title={'BACK'}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="#13DE00"
-            width="30px"
-            height="30px"
+        <Box as="main">
+          <Box
+            as="span"
+            cursor={'pointer'}
+            color={'ghostVerse.green.base'}
+            onClick={handleBack}
+            title={'BACK'}
           >
-            <path
-              fillRule="evenodd"
-              d="M12.5 9.75A2.75 2.75 0 0 0 9.75 7H4.56l2.22 2.22a.75.75 0 1 1-1.06 1.06l-3.5-3.5a.75.75 0 0 1 0-1.06l3.5-3.5a.75.75 0 0 1 1.06 1.06L4.56 5.5h5.19a4.25 4.25 0 0 1 0 8.5h-1a.75.75 0 0 1 0-1.5h1a2.75 2.75 0 0 0 2.75-2.75Z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </Box>
-        <HomeSectionTitle title={`${bud.name} Strain`} />
-        <Swiper
-          spaceBetween={10}
-          slidesPerView={'auto'}
-          breakpoints={{
-            320: {
-              slidesPerView: 1,
-            },
-            640: {
-              slidesPerView: 3,
-            },
-            768: {
-              slidesPerView: 3,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-          loop
-          autoplay={{
-            delay: 4000,
-            pauseOnMouseEnter: true,
-            disableOnInteraction: false,
-          }}
-          effect={'coverflow'}
-          coverflowEffect={{
-            rotate: 25,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
-          modules={[EffectCoverflow]}
-        >
-          {bud.images.map((image, index) => (
-            <SwiperSlide key={index}>
-              <Image
-                src={image}
-                alt={bud.imgDesc}
-                width={400}
-                height={400}
-                sizes="(max-width: 400px) 100vw, 400px"
-                quality={75}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="#13DE00"
+              width="30px"
+              height="30px"
+            >
+              <path
+                fillRule="evenodd"
+                d="M12.5 9.75A2.75 2.75 0 0 0 9.75 7H4.56l2.22 2.22a.75.75 0 1 1-1.06 1.06l-3.5-3.5a.75.75 0 0 1 0-1.06l3.5-3.5a.75.75 0 0 1 1.06 1.06L4.56 5.5h5.19a4.25 4.25 0 0 1 0 8.5h-1a.75.75 0 0 1 0-1.5h1a2.75 2.75 0 0 0 2.75-2.75Z"
+                clipRule="evenodd"
               />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <BoxInfoProduct>
-          <BoxInfoLeft>
-            {bud.dominance == 'Indica' && (
+            </svg>
+          </Box>
+          <Box as="article" itemScope itemType="https://schema.org/Product">
+            <Box as="header" mb={2}>
               <Box
-                as={'h2'}
-                color={'ghostVerse.dominance.indica'}
-                marginRight={4}
+                as="h1"
+                fontSize={{ base: '20', lg: '30' }}
+                fontFamily={'CubicFive12'}
+                display={'flex'}
+                flexDirection={'row'}
+                alignItems={'center'}
+                itemProp="name"
               >
-                {bud.dominance} {bud.indica}%
+                {bud?.name ? `${bud.name} Strain` : 'Product Name Unavailable'}
               </Box>
-            )}
-            {bud.dominance == 'Sativa' && (
-              <Box
-                as={'h2'}
-                color={'ghostVerse.dominance.sativa'}
-                marginRight={4}
-              >
-                {bud.dominance} {bud.sativa}%
-              </Box>
-            )}
-            {bud.dominance == 'Hybrid' && (
-              <Box
-                as={'h2'}
-                color={'ghostVerse.dominance.hybrid'}
-                marginRight={4}
-              >
-                {bud.dominance}
-              </Box>
-            )}
-            <Box display={'flex'}>
-              <BoxInfoLabel>
-                <BoxInfoLabelTitle title="THC" />
-                <Text color={'ghostVerse.green.base'} mr={4}>
-                  {bud.THC}%
-                </Text>
-              </BoxInfoLabel>
-              {bud.CBD !== '0' && (
-                <BoxInfoLabel>
-                  <BoxInfoLabelTitle title="CBD" />
-                  <Text color={'ghostVerse.green.base'}>{bud.CBD}%</Text>
-                </BoxInfoLabel>
+              {/* Ensure `bud.images` is defined and has at least one image */}
+              {bud?.images?.length > 0 && (
+                <Swiper
+                  spaceBetween={10}
+                  slidesPerView={'auto'}
+                  breakpoints={{
+                    320: { slidesPerView: 1 },
+                    640: { slidesPerView: 3 },
+                  }}
+                  loop
+                  autoplay={{
+                    delay: 4000,
+                    pauseOnMouseEnter: true,
+                    disableOnInteraction: false,
+                  }}
+                  effect="coverflow"
+                  coverflowEffect={{
+                    rotate: 25,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                  }}
+                  modules={[EffectCoverflow]}
+                  aria-label="Cannabis buds slider"
+                >
+                  {bud.images.map((image, index) => (
+                    <SwiperSlide key={index}>
+                      <Image
+                        src={image}
+                        alt={bud.imgDesc || 'Image'}
+                        title={bud.imgDesc || 'Image'}
+                        width={400}
+                        height={400}
+                        sizes="(max-width: 400px) 100vw, 400px"
+                        quality={75}
+                        loading="lazy"
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
               )}
             </Box>
-            <BoxInfoLabel>
-              <BoxInfoLabelTitle title="Feelings" />
-              <Text color={'ghostVerse.grey.base'}>{bud.effects}</Text>
-            </BoxInfoLabel>
-            {bud.relieves !== 'undefined' && (
-              <BoxInfoLabel>
-                <BoxInfoLabelTitle title="Relieves" />
-                <Text color={'ghostVerse.grey.base'}>{bud.relieves}</Text>
-              </BoxInfoLabel>
-            )}
-          </BoxInfoLeft>
-          <BoxInfoRight>
-            {bud.quantity !== 0 && bud.price !== 999 && (
-              <>
-                <BoxInfoLabel>
-                  <BoxInfoLabelTitle title="1G" />
-                  <Text
-                    color={'ghostVerse.green.base'}
-                    fontFamily={'CubicFive12'}
-                    fontSize={20}
-                  >
-                    {bud.price} THB
-                  </Text>
-                </BoxInfoLabel>
-                <BoxInfoMemberPrice>
-                  {' '}
-                  <Box mr={2}>member</Box>
-                  {(bud.price * 0.8).toFixed(0)} THB
-                </BoxInfoMemberPrice>
-                <BoxInfoLabel>
-                  <BoxInfoLabelTitle title="5G" />
-                  <Text
-                    color={'ghostVerse.green.base'}
-                    fontFamily={'CubicFive12'}
-                    fontSize={20}
-                  >
-                    {(bud.price * 5 - bud.price).toFixed(0)} THB
-                  </Text>
-                </BoxInfoLabel>
-                <BoxInfoMemberPrice>
-                  {' '}
-                  <Box mr={2}>member</Box>
-                  {((bud.price * 5 - bud.price) * 0.8).toFixed(0)} THB
-                </BoxInfoMemberPrice>
-                <BoxInfoQuantity>{bud.quantity} grams left</BoxInfoQuantity>
-              </>
-            )}
 
-            {bud.quantity === 0 && (
+            <BoxInfoProduct>
+              {bud.quantity !== 0 && bud.price !== 999 && (
+                <Box
+                  as="ul"
+                  listStyleType={'none'}
+                  aria-label={`${bud.name} Strain Pricing`}
+                  fontFamily={'CubicFive12'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={'md'}
+                  ml={'auto'}
+                >
+                  <Box
+                    as="li"
+                    aria-label="Price for 1G"
+                    whiteSpace={'nowrap'}
+                    mb={2}
+                  >
+                    <Box as="span" color={'white'} mr={2}>
+                      1G
+                    </Box>
+                    {`${bud.price} THB`}
+                  </Box>
+                  <Box as="li" aria-label="Price for 5G" whiteSpace={'nowrap'}>
+                    <Box as="span" color={'white'} mr={2}>
+                      5G
+                    </Box>
+                    {`${(bud.price * 5 - bud.price).toFixed(0)} THB`}
+                  </Box>
+                </Box>
+              )}
+              {bud.quantity === 0 && (
+                <div
+                  style={{
+                    color: 'var(--ghostVerse-red-base)',
+                    fontSize: 'xl',
+                  }}
+                >
+                  SOLD OUT
+                </div>
+              )}
+              {bud.price === 999 && (
+                <p
+                  style={{
+                    fontSize: '14px',
+                    color: 'var(--ghostVerse-green-base)',
+                  }}
+                >
+                  Coming soon
+                </p>
+              )}
               <Box
-                display={'flex'}
-                ml={'auto'}
-                fontSize={'xl'}
-                fontFamily={'CubicFive12'}
-                color="ghostVerse.red.base"
+                as="ul"
+                listStyleType={'none'}
+                aria-label={`${bud.name} Strain Characteristics`}
+                fontFamily={'vt323'}
+                fontSize={'2xl'}
+                marginRight={2}
               >
-                SOLD OUT
-              </Box>
-            )}
+                {bud.dominance === 'Indica' && (
+                  <Box
+                    as="li"
+                    aria-label="Dominance"
+                    color={'ghostVerse.dominance.indica'}
+                    display={'flex'}
+                    alignItems={'center'}
+                  >
+                    <IconIndica />
+                    &nbsp;
+                    {`${bud.dominance} ${bud.indica}%`}
+                  </Box>
+                )}
+                {bud.dominance === 'Sativa' && (
+                  <Box
+                    as="li"
+                    aria-label="Dominance"
+                    color={'ghostVerse.dominance.sativa'}
+                    display={'flex'}
+                    alignItems={'center'}
+                  >
+                    <IconSativa />
+                    &nbsp;
+                    {`${bud.dominance} ${bud.sativa}%`}
+                  </Box>
+                )}
+                {bud.dominance === 'Hybrid' && (
+                  <Box
+                    as="li"
+                    aria-label="Dominance"
+                    color={'ghostVerse.dominance.hybrid'}
+                    display={'flex'}
+                    alignItems={'center'}
+                  >
+                    <IconHybrid />
+                    &nbsp;
+                    {`${bud.dominance}`}
+                  </Box>
+                )}
+                <Box
+                  as="li"
+                  listStyleType={'none'}
+                  aria-label="THC Level"
+                  color={'ghostVerse.grey.base'}
+                >
+                  {`THC ${bud.THC}%`}
+                </Box>
+                {bud.CBD !== '0' && (
+                  <Box
+                    as="li"
+                    listStyleType={'none'}
+                    aria-label="CBD Level"
+                    color={'ghostVerse.grey.base'}
+                  >
+                    {`CBD ${bud.CBD}%`}
+                  </Box>
+                )}
+                <Box
+                  as="li"
+                  listStyleType={'none'}
+                  aria-label="Grade"
+                  color={'ghostVerse.pink.base'}
+                  fontSize={'xl'}
+                >
+                  {bud.grade}
+                </Box>
 
-            {bud.price === 999 && (
-              <Text
-                display={'flex'}
-                fontFamily={'CubicFive12'}
-                justifyContent="end"
-                fontSize={14}
-                color="ghostVerse.green.base"
-              >
-                Coming soon
-              </Text>
-              // <BoxInfoMemberPrice>Member Only</BoxInfoMemberPrice>
-            )}
-          </BoxInfoRight>
-        </BoxInfoProduct>
-        {/* {bud.price !== 999 && bud.grower !== 'Unknown' && (
-          <BoxInfoGrow>
-            <Box display={'flex'} flexDirection={{ base: 'column', xl: 'row' }}>
-              <Box as={'h3'} mr={2}>
-                Grower
-              </Box>
-              <Link
-                href={`/weed-grower${bud.growerSlug}`}
-                title={bud.grower}
-                passHref
-              >
-                <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
-                  {bud.grower}
+                <Box
+                  as="li"
+                  listStyleType={'none'}
+                  aria-label="Effects"
+                  color={'ghostVerse.orange.base'}
+                  fontSize={'xl'}
+                >
+                  <Box as="span" mr={2} color={'white'}>
+                    Feelings:
+                  </Box>
+                  {`${bud.effects}`}
                 </Box>
-              </Link>
-            </Box>
-            <Box display={'flex'} flexDirection={{ base: 'column', xl: 'row' }}>
-              <Box as={'h3'} mr={2}>
-                Origin
+                {bud.relieves !== 'undefined' && (
+                  <Box
+                    as="li"
+                    listStyleType={'none'}
+                    aria-label="Relieves"
+                    color={'ghostVerse.orange.base'}
+                    fontSize={'xl'}
+                  >
+                    <Box as="span" mr={2} color={'white'}>
+                      Relieves:
+                    </Box>
+                    {`${bud.relieves}`}
+                  </Box>
+                )}
               </Box>
-              <Link
-                href="/weed-grower"
-                title="Weed Growers in Thailand"
-                passHref
-              >
-                <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
-                  {bud.origin}
+            </BoxInfoProduct>
+            <BoxDescription>
+              {bud.description}
+              {bud.source !== 'undefined' && (
+                <Box
+                  display={'flex'}
+                  flexDirection={'column'}
+                  color={'ghostVerse.green.base'}
+                  as="a"
+                  mr={4}
+                  target="_blank"
+                  href={bud.source}
+                >
+                  Source
                 </Box>
-              </Link>
-            </Box>
-            <Box display={'flex'} flexDirection={{ base: 'column', xl: 'row' }}>
-              <Box as={'h3'} mr={2}>
-                Environment
-              </Box>
-              <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
-                {bud.environment}
-              </Box>
-            </Box>
-            <Box display={'flex'} flexDirection={{ base: 'column', xl: 'row' }}>
-              <Box as={'h3'} mr={2}>
-                Harvest
-              </Box>
-              <Box display={'flex'} color={'ghostVerse.green.base'} mr={4}>
-                {bud.harvest}
-              </Box>
-            </Box>
-          </BoxInfoGrow>
-        )} */}
-        <BoxDescription>
-          {bud.description}
-          {bud.source !== 'undefined' && (
-            <Box
-              display={'flex'}
-              flexDirection={'column'}
-              color={'ghostVerse.green.base'}
-              as="a"
-              mr={4}
-              target="_blank"
-              href={bud.source}
-            >
-              Source
-            </Box>
-          )}
-        </BoxDescription>
-        <HomeFeature />
-        <Box
-          display={'flex'}
-          mb={5}
-          p={5}
-          pt={0}
-          flexWrap={'wrap'}
-          alignItems={'stretch'}
-          backgroundColor={'ghostVerse.green.base'}
-          color={'black'}
-        >
-          <Box display={'flex'} w={'100%'} alignItems={'left'}>
+              )}
+            </BoxDescription>
+          </Box>
+          <HomeFeature />
+          <Box
+            as="section"
+            aria-labelledby="Get 10% Free on Weed Orders!"
+            display={'flex'}
+            mb={5}
+            p={5}
+            pt={0}
+            flexWrap={'wrap'}
+            alignItems={'stretch'}
+            backgroundColor={'ghostVerse.green.base'}
+            color={'black'}
+          >
             <Text
               as={'h3'}
               fontSize={{ base: 30, lg: 50 }}
@@ -345,76 +352,85 @@ export default function BudPage({ bud }: BudPageProps) {
             >
               Get 10% Free on Weed Orders!
             </Text>
-          </Box>
-          <Text
-            as={'p'}
-            fontSize={{ base: 20, lg: 36 }}
-            lineHeight={1}
-            fontFamily={'vt323'}
-            w={{ base: '60%', md: '70%' }}
-            mr={4}
-            textAlign={'left'}
-          >
-            {`Schedule your delivery to enjoy 10% free on ${bud.name}.`}
-          </Text>
-          <Link
-            href={`https://greenghostweed.shop/products/${bud.slug}`}
-            passHref
-            title={`Green Ghost Weed Shop - Buy ${bud.name} Cannabis Strain Online`}
-          >
+
             <Text
-              as="span"
-              display={'inline-flex'}
-              color={'ghostVerse.green.base'}
-              borderColor={'black'}
-              backgroundColor={'black'}
-              fontSize={{ base: 'xl', lg: '4xl' }}
+              as={'p'}
+              fontSize={{ base: 20, lg: 36 }}
               lineHeight={1}
-              borderWidth={1}
-              px={{ base: 4, md: 6 }}
-              pt={{ base: 2, md: 0 }}
-              pb={{ base: 2, md: 2 }}
-              mt={5}
-              mx={'auto'}
               fontFamily={'vt323'}
-              _hover={{
-                borderColor: 'black',
-                bgColor: 'ghostVerse.green.base',
-                color: 'black',
-              }}
+              w={{ base: '60%', md: '70%' }}
+              mr={4}
+              textAlign={'left'}
             >
-              {'Schedule & Save 10%'}
+              {`Schedule your delivery on greenghostweed.shop to enjoy 10% free on ${bud.name}.`}
             </Text>
-          </Link>
+            <Link
+              href={`https://greenghostweed.shop/products/${bud.slug}`}
+              passHref
+              title={`Green Ghost 🌿👻 Buy ${bud.name} Cannabis Strain Online`}
+            >
+              <Text
+                as="span"
+                display={'inline-flex'}
+                color={'ghostVerse.green.base'}
+                borderColor={'black'}
+                backgroundColor={'black'}
+                fontSize={{ base: 'xl', lg: '4xl' }}
+                lineHeight={1}
+                borderWidth={1}
+                px={{ base: 4, md: 6 }}
+                pt={{ base: 2, md: 0 }}
+                pb={{ base: 2, md: 2 }}
+                mt={5}
+                mx={'auto'}
+                fontFamily={'vt323'}
+                _hover={{
+                  borderColor: 'black',
+                  bgColor: 'ghostVerse.green.base',
+                  color: 'black',
+                }}
+              >
+                {'Schedule & Save 10%'}
+              </Text>
+            </Link>
+          </Box>
+          <HomeTopInfos />
         </Box>
-        <HomeTopInfos />
       </MainLayout>
     </>
   );
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  //console.log('Generating paths...');
   const buds = getBuds();
 
   const paths = buds.map((bud) => ({
     params: { slug: bud.slug },
   }));
 
-  return { paths, fallback: true };
+  console.log('Generated paths:', paths); // Log paths to verify
+
+  return { paths, fallback: 'blocking' }; // Use 'blocking' to ensure paths are correctly handled
 };
 
 export const getStaticProps: GetStaticProps<BudPageProps> = async ({
   params,
 }) => {
+  console.log('Params:', params); // Log params to verify slug value
+
   const buds = getBuds();
+  console.log('Fetched buds:', buds); // Log fetched buds to ensure data
+
   const bud = buds.find((p) => p.slug === params?.slug);
 
   if (!bud) {
+    console.log('No bud found for slug:', params?.slug); // Log if no bud is found
     return {
       notFound: true,
     };
   }
+
+  console.log('Found bud:', bud); // Log the found bud
 
   return {
     props: {

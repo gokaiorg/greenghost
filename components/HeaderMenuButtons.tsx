@@ -39,6 +39,8 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = () => {
     >
       <Box
         as="ul"
+        aria-label="Main Navigation List Links to Weed Shop, Contact and Maps"
+        listStyleType={'none'}
         ml="auto"
         mr={{ base: 'auto', md: 0 }}
         py={{ base: 4, lg: 0 }}

@@ -8,6 +8,8 @@ interface BoxItemProps {
 const MenuFilterShop: FC<BoxItemProps> = ({ children }) => {
   return (
     <Box
+      as="section"
+      aria-label="Menu Filters"
       marginRight={'auto'}
       py={4}
       borderRadius={0}
@@ -16,15 +18,7 @@ const MenuFilterShop: FC<BoxItemProps> = ({ children }) => {
       top={0}
       w={'full'}
     >
-      <Box
-        display={'flex'}
-        width={'100%'}
-        alignItems={{ base: 'start' }}
-        flexDirection={{ base: 'column' }}
-        fontFamily={'vt323'}
-      >
-        {children}
-      </Box>
+      {children}
     </Box>
   );
 };
