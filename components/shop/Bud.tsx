@@ -1,5 +1,4 @@
-// Bud.tsx
-import { Box, Button, Checkbox } from '@chakra-ui/react';
+import { Box, Checkbox } from '@chakra-ui/react';
 import { useState } from 'react';
 import { buds } from '../../config/buds';
 import { BudItem } from './BudItem';
@@ -7,12 +6,56 @@ import { HomeSectionTitle } from '../HomeSectionTitle';
 import MenuFilterShop from './elements/MenuFilterShop';
 import { ListTitle } from './elements/ListTitle';
 import WrapperShop from './elements/WrapperShop';
-import WrapperInnerShop from './elements/WrapperInnerShop';
 import { IconSativa } from '../media/IconSativa';
 import { IconHybrid } from '../media/IconHybrid';
 import { IconIndica } from '../media/IconIndica';
 
 type DominanceOption = 'All' | 'Sativa' | 'Indica' | 'Hybrid';
+
+const filterOptions: { label: DominanceOption; icon: JSX.Element }[] = [
+  { label: 'Sativa', icon: <IconSativa /> },
+  { label: 'Hybrid', icon: <IconHybrid /> },
+  { label: 'Indica', icon: <IconIndica /> },
+];
+
+const FilterButton = ({
+  label,
+  icon,
+  isActive,
+  onClick,
+}: {
+  label: DominanceOption;
+  icon: JSX.Element;
+  isActive: boolean;
+  onClick: () => void;
+}) => (
+  <Box
+    as="li"
+    aria-label={`${label} filter button`}
+    mr={2}
+    mb={2}
+    border={'1px'}
+    borderColor={
+      isActive ? `ghostVerse.dominance.${label.toLowerCase()}` : 'black'
+    }
+    backgroundColor={isActive ? 'black' : 'black'}
+    color={
+      isActive
+        ? `ghostVerse.dominance.${label.toLowerCase()}`
+        : `ghostVerse.dominance.${label.toLowerCase()}`
+    }
+    onClick={onClick}
+    p={2}
+    cursor={'pointer'}
+    fontSize={'2xl'}
+    _hover={{ backgroundColor: 'black' }}
+    display="flex"
+    alignItems="center"
+  >
+    {icon}
+    <Box ml={2}>{label}</Box>
+  </Box>
+);
 
 export const Bud = () => {
   const [showUnavailable, setShowUnavailable] = useState(false);
@@ -20,18 +63,13 @@ export const Bud = () => {
     useState<DominanceOption>('All');
 
   const filteredBuds = buds.filter((bud) => {
-    if (!showUnavailable && (bud.quantity === 0 || bud.price === 999)) {
+    if (!showUnavailable && (bud.quantity === 0 || bud.price === 999))
       return false;
-    }
-
-    if (dominanceFilter !== 'All' && bud.dominance !== dominanceFilter) {
+    if (dominanceFilter !== 'All' && bud.dominance !== dominanceFilter)
       return false;
-    }
-
     return true;
   });
 
-  // Sort buds by price from low to high
   const sortedBuds = filteredBuds.sort((a, b) => a.price - b.price);
 
   const handleDominanceChange = (dominance: DominanceOption) => {
@@ -45,108 +83,52 @@ export const Bud = () => {
   };
 
   return (
-    <Box mb="10">
+    <Box as="section" aria-labelledby="Buds Menu" mb="10">
       <WrapperShop>
         <HomeSectionTitle title="Buds Menu" />
-        <WrapperInnerShop>
-          <ListTitle title="Buds price for 1 gram." />
-        </WrapperInnerShop>
+        <ListTitle title="Buds price for 1 gram." />
       </WrapperShop>
       <MenuFilterShop>
         <Box
-          w={'full'}
-          mb={{ base: '2' }}
-          display={'flex'}
-          flexWrap={'wrap'}
-          alignItems={'center'}
+          as="ul"
+          aria-label="Cannabis dominance filter options"
+          display="inline-flex"
+          flexWrap="wrap"
+          listStyleType="none"
+          m={0}
+          p={0}
+          fontFamily={'vt323'}
         >
-          <Button
-            border={'1px'}
-            borderColor={
-              dominanceFilter === 'Sativa'
-                ? 'ghostVerse.dominance.sativa'
-                : 'black'
-            }
-            backgroundColor={dominanceFilter === 'Sativa' ? 'black' : 'black'}
-            color={
-              dominanceFilter === 'Sativa'
-                ? 'ghostVerse.dominance.sativa'
-                : 'ghostVerse.dominance.sativa'
-            }
-            onClick={() => handleDominanceChange('Sativa')}
-            mr={2}
-            px={2}
-            py={4}
-            fontSize={'2xl'}
-            _hover={{
-              backgroundColor: 'black',
-            }}
-          >
-            <IconSativa />
-            <Box ml={2}>{'Sativa'}</Box>
-          </Button>
-          <Button
-            border={'1px'}
-            borderColor={
-              dominanceFilter === 'Hybrid'
-                ? 'ghostVerse.dominance.hybrid'
-                : 'black'
-            }
-            backgroundColor={dominanceFilter === 'Hybrid' ? 'black' : 'black'}
-            color={
-              dominanceFilter === 'Hybrid'
-                ? 'ghostVerse.dominance.hybrid'
-                : 'ghostVerse.dominance.hybrid'
-            }
-            onClick={() => handleDominanceChange('Hybrid')}
-            mr={2}
-            px={2}
-            py={4}
-            fontSize={'2xl'}
-            _hover={{
-              backgroundColor: 'black',
-            }}
-          >
-            <IconHybrid />
-            <Box ml={2}>{'Hybrid'}</Box>
-          </Button>
-          <Button
-            border={'1px'}
-            borderColor={
-              dominanceFilter === 'Indica'
-                ? 'ghostVerse.dominance.indica'
-                : 'black'
-            }
-            backgroundColor={dominanceFilter === 'Indica' ? 'black' : 'black'}
-            color={
-              dominanceFilter === 'Indica'
-                ? 'ghostVerse.dominance.indica'
-                : 'ghostVerse.dominance.indica'
-            }
-            onClick={() => handleDominanceChange('Indica')}
-            mr={2}
-            px={2}
-            py={4}
-            fontSize={'2xl'}
-            _hover={{
-              backgroundColor: 'black',
-            }}
-          >
-            <IconIndica />
-            <Box ml={2}>{'Indica'}</Box>
-          </Button>
-          <Checkbox
-            ml={4}
-            colorScheme={'#13DE00'}
-            isChecked={!showUnavailable}
-            onChange={handleShowUnavailableChange}
-            fontSize={'2xl'}
-          >
-            Hide Sold Out
-          </Checkbox>
+          {filterOptions.map(({ label, icon }) => (
+            <FilterButton
+              key={label}
+              label={label}
+              icon={icon}
+              isActive={dominanceFilter === label}
+              onClick={() => handleDominanceChange(label)}
+            />
+          ))}
         </Box>
+        <Checkbox
+          ml={4}
+          colorScheme={'#13DE00'}
+          isChecked={!showUnavailable}
+          onChange={handleShowUnavailableChange}
+          fontSize={'2xl'}
+          py={4}
+          fontFamily={'vt323'}
+        >
+          Hide Sold Out
+        </Checkbox>
       </MenuFilterShop>
-      <Box display={'flex'} flexWrap={'wrap'} mx={-0.5}>
+      <Box
+        as="ul"
+        listStyleType={'none'}
+        aria-label="Buds Menu Strains list"
+        display={'flex'}
+        flexWrap={'wrap'}
+        mx={-0.5}
+      >
         {sortedBuds.map((bud) => (
           <BudItem key={bud.slug} bud={bud} />
         ))}

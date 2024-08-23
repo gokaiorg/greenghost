@@ -18,6 +18,11 @@ export const BestWeed = () => {
         selectedStrains.indexOf(a.name) - selectedStrains.indexOf(b.name)
     );
 
+  // Create an aria-label string including the selected strains
+  const ariaLabel = `Best weed strains list: ${bestBuds
+    .map((bud) => bud.name)
+    .join(', ')}`;
+
   return (
     <Box as="section" aria-labelledby="The best weed in Phuket" mb="10">
       <Text
@@ -43,7 +48,13 @@ export const BestWeed = () => {
         dominances, each chosen to elevate your experience.
       </Text>
       <Box as="nav" aria-label="Best Weed Navigation">
-        <Box as="ul" display={'flex'} flexWrap={'wrap'} mx={-0.5}>
+        <Box
+          as="ul"
+          aria-label={ariaLabel}
+          display={'flex'}
+          flexWrap={'wrap'}
+          mx={-0.5}
+        >
           {bestBuds.map((bud) => (
             <BudItemBest key={bud.slug} bud={bud} />
           ))}

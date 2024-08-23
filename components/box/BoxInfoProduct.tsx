@@ -8,8 +8,10 @@ interface BoxProps {
 const BoxInfoProduct: FC<BoxProps> = ({ children }) => {
   return (
     <Box
+      as="section"
+      aria-labelledby="Strain Pricing and Characteristics"
       display={'flex'}
-      flexDirection={{ base: 'column', md: 'row' }}
+      flexDirection={{ base: 'row-reverse', md: 'row-reverse' }}
       alignItems={'start'}
       lineHeight={1}
       mb={4}
