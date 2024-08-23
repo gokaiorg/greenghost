@@ -8,10 +8,10 @@ interface ListTitleProps {
 export const ListTitle: FC<ListTitleProps> = ({ title }) => {
   return (
     <Text
-      as={'h2'}
+      as={'p'}
       display={'inline-flex'}
       mr={'auto'}
-      mb={2}
+      ml={2}
       flexWrap={'wrap'}
       fontSize={26}
       fontFamily={'vt323'}

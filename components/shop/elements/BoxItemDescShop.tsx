@@ -8,6 +8,9 @@ interface BoxItemProps {
 const BoxItemDescShop: FC<BoxItemProps> = ({ children }) => {
   return (
     <Box
+      as="ul"
+      aria-label="Best Weed Price, Name, dominance percentage, and THC level"
+      listStyleType={'none'}
       display={'flex'}
       flexDirection={'column'}
       flex={'1'}

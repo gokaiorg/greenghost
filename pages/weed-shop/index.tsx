@@ -9,8 +9,30 @@ import { HomeFeature } from '../../components/HomeFeatures';
 import { BuyOnline } from '../../components/BuyOnline';
 import { Box } from '@chakra-ui/react';
 import Image from 'next/image';
+import { buds } from '../../config/buds';
 
 const WeedShop: NextPage = () => {
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Buds Menu',
+    description: 'Weed Shop Premium Cannabis Buds Menu',
+    itemListElement: buds.map((bud, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Product',
+        name: bud.name,
+        description: bud.description,
+        offers: {
+          '@type': 'Offer',
+          price: bud.price.toFixed(2),
+          priceCurrency: 'THB',
+        },
+      },
+    })),
+  };
+
   return (
     <>
       <Head>
@@ -47,25 +69,31 @@ const WeedShop: NextPage = () => {
           content="https://green.gd/media/green-ghost-degen-weed-shop-buds-menu.webp"
         />
         <meta name="twitter:url" content="https://green.gd/weed-shop" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+        />
       </Head>
       <MainLayout>
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
         <MenuWeedShop />
-        <Bud />
-        <HomeFeature />
-        <BuyOnline />
-        <Box w={{ base: '100%' }}>
-          <Image
-            src="/media/green-ghost-degen-weed-shop-buds-menu.webp"
-            alt="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
-            title="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
-            width={2048}
-            height={1366}
-            sizes="100%"
-            quality={75}
-          />
+        <Box as="main">
+          <Bud />
+          <HomeFeature />
+          <BuyOnline />
+          <Box w={{ base: '100%' }}>
+            <Image
+              src="/media/green-ghost-degen-weed-shop-buds-menu.webp"
+              alt="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
+              title="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
+              width={2048}
+              height={1366}
+              sizes="100%"
+              quality={75}
+            />
+          </Box>
         </Box>
       </MainLayout>
     </>

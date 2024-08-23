@@ -85,6 +85,7 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="@GokaiLabs" />
       <meta name="twitter:site" content="@greenghostdegen" />
+      <meta itemProp="priceCurrency" content="THB" />
       <meta
         name="google-site-verification"
         content="dOuCZqslG5Lkw8i3jVwoGcedgH6-nIGGQ71qYu"

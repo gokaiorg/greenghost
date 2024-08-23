@@ -8,6 +8,9 @@ interface BoxItemProps {
 const BoxItemPriceShop: FC<BoxItemProps> = ({ children }) => {
   return (
     <Box
+      as="li"
+      listStyleType={'none'}
+      aria-label={`Buds Menu Strain Price`}
       marginLeft={'auto'}
       whiteSpace={'nowrap'}
       mb={2}
@@ -18,6 +21,11 @@ const BoxItemPriceShop: FC<BoxItemProps> = ({ children }) => {
       background={'ghostVerse.dark.lighter'}
       padding={'0.5rem'}
       color={'ghostVerse.green.base'}
+      fontFamily={'CubicFive12'}
+      lineHeight={1}
+      itemProp="offers"
+      itemScope
+      itemType="https://schema.org/Offer"
     >
       {children}
     </Box>

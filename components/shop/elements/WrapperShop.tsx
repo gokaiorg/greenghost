@@ -8,6 +8,7 @@ interface BoxItemProps {
 const WrapperShop: FC<BoxItemProps> = ({ children }) => {
   return (
     <Box
+      as="header"
       display={'flex'}
       flexDirection={{ base: 'column', lg: 'row' }}
       alignItems={{ base: 'start', lg: 'center' }}
