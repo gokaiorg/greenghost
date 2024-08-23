@@ -33,20 +33,20 @@ export default function BudPage({ bud }: BudPageProps) {
   const schemaData = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: bud.name,
-    image: bud.images,
-    description: bud.descSeo,
-    sku: bud.slug,
+    name: bud?.name || 'Unknown Product',
+    image: bud?.images && bud.images.length > 0 ? bud.images[0] : '',
+    description: bud?.descSeo || 'No description available',
+    sku: bud?.slug || 'no-sku',
     offers: {
       '@type': 'Offer',
       priceCurrency: 'THB',
-      price: bud.price,
+      price: bud?.price || '0',
       itemCondition: 'https://schema.org/NewCondition',
       availability:
-        bud.quantity > 0
+        bud?.quantity > 0
           ? 'https://schema.org/InStock'
           : 'https://schema.org/OutOfStock',
-      url: `https://green.gd/weed-shop/${bud.slug}`,
+      url: `https://green.gd/weed-shop/${bud?.slug || 'unknown'}`,
     },
   };
 
@@ -109,52 +109,54 @@ export default function BudPage({ bud }: BudPageProps) {
                 flexDirection={'row'}
                 alignItems={'center'}
                 itemProp="name"
-              >{`${bud.name} Strain`}</Box>
-              <Swiper
-                spaceBetween={10}
-                slidesPerView={'auto'}
-                breakpoints={{
-                  320: {
-                    slidesPerView: 1,
-                  },
-                  640: {
-                    slidesPerView: 3,
-                  },
-                }}
-                loop
-                autoplay={{
-                  delay: 4000,
-                  pauseOnMouseEnter: true,
-                  disableOnInteraction: false,
-                }}
-                effect="coverflow"
-                coverflowEffect={{
-                  rotate: 25,
-                  stretch: 0,
-                  depth: 100,
-                  modifier: 1,
-                  slideShadows: true,
-                }}
-                modules={[EffectCoverflow]}
-                aria-label="Cannabis buds slider"
               >
-                {bud.images.map((image, index) => (
-                  <SwiperSlide key={index}>
-                    <Image
-                      src={image}
-                      alt={bud.imgDesc}
-                      title={bud.imgDesc}
-                      width={400}
-                      height={400}
-                      sizes="(max-width: 400px) 100vw, 400px"
-                      quality={75}
-                      loading="lazy"
-                      style={{ objectFit: 'cover' }}
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+                {bud?.name ? `${bud.name} Strain` : 'Product Name Unavailable'}
+              </Box>
+              {/* Ensure `bud.images` is defined and has at least one image */}
+              {bud?.images?.length > 0 && (
+                <Swiper
+                  spaceBetween={10}
+                  slidesPerView={'auto'}
+                  breakpoints={{
+                    320: { slidesPerView: 1 },
+                    640: { slidesPerView: 3 },
+                  }}
+                  loop
+                  autoplay={{
+                    delay: 4000,
+                    pauseOnMouseEnter: true,
+                    disableOnInteraction: false,
+                  }}
+                  effect="coverflow"
+                  coverflowEffect={{
+                    rotate: 25,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                  }}
+                  modules={[EffectCoverflow]}
+                  aria-label="Cannabis buds slider"
+                >
+                  {bud.images.map((image, index) => (
+                    <SwiperSlide key={index}>
+                      <Image
+                        src={image}
+                        alt={bud.imgDesc || 'Image'}
+                        title={bud.imgDesc || 'Image'}
+                        width={400}
+                        height={400}
+                        sizes="(max-width: 400px) 100vw, 400px"
+                        quality={75}
+                        loading="lazy"
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              )}
             </Box>
+
             <BoxInfoProduct>
               {bud.quantity !== 0 && bud.price !== 999 && (
                 <Box
@@ -400,27 +402,35 @@ export default function BudPage({ bud }: BudPageProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  //console.log('Generating paths...');
   const buds = getBuds();
 
   const paths = buds.map((bud) => ({
     params: { slug: bud.slug },
   }));
 
-  return { paths, fallback: true };
+  console.log('Generated paths:', paths); // Log paths to verify
+
+  return { paths, fallback: 'blocking' }; // Use 'blocking' to ensure paths are correctly handled
 };
 
 export const getStaticProps: GetStaticProps<BudPageProps> = async ({
   params,
 }) => {
+  console.log('Params:', params); // Log params to verify slug value
+
   const buds = getBuds();
+  console.log('Fetched buds:', buds); // Log fetched buds to ensure data
+
   const bud = buds.find((p) => p.slug === params?.slug);
 
   if (!bud) {
+    console.log('No bud found for slug:', params?.slug); // Log if no bud is found
     return {
       notFound: true,
     };
   }
+
+  console.log('Found bud:', bud); // Log the found bud
 
   return {
     props: {
