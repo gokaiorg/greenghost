@@ -33,7 +33,7 @@ export default function BudPage({ bud }: BudPageProps) {
   const schemaData = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: bud?.name,
+    name: `${bud?.name} Strain`,
     image: [
       `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-cover.webp`,
       `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-bud-01.webp`,
