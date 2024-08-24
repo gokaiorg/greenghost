@@ -135,7 +135,7 @@ export default function BudPage({ bud }: BudPageProps) {
               />
             </svg>
           </Box>
-          <Box as="article" itemScope itemType="https://schema.org/Product">
+          <Box as="article">
             <Box as="header" mb={2}>
               <Box
                 as="h1"
