@@ -316,7 +316,7 @@ export const buds: Bud[] = [
   {
     slug: 'the-queen-s1',
     name: 'The Queen S1',
-    price: 250,
+    price: 999,
     dominance: 'Sativa',
     indica: '20',
     sativa: '80',
