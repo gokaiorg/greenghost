@@ -37,24 +37,19 @@ export default function BudPage({ bud }: BudPageProps) {
     image:
       bud?.images && bud.images.length > 0
         ? bud.images[0]
-        : 'https://example.com/default-image.jpg', // Provide a fallback image
+        : 'https://example.com/default-image.jpg',
     description: bud?.descSeo || 'No description available',
     sku: bud?.slug || 'no-sku',
     offers: {
       '@type': 'Offer',
       priceCurrency: 'THB',
-      price: bud?.price ? Number(bud.price).toFixed(2) : '0.00', // Ensure price is a string with two decimal places
+      price: bud?.price ? Number(bud.price).toFixed(2) : '0.00',
       itemCondition: 'https://schema.org/NewCondition',
       availability:
         bud?.quantity > 0
           ? 'https://schema.org/InStock'
           : 'https://schema.org/OutOfStock',
       url: `https://green.gd/weed-shop/${bud?.slug || 'unknown'}`,
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5', // Ensure this is a string, or use a number if possible
-      reviewCount: '13', // Ensure this is a string, or use a number if possible
     },
   };
 
