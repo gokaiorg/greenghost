@@ -48,11 +48,13 @@ export default function BudPage({ bud }: BudPageProps) {
           : 'https://schema.org/OutOfStock',
       url: `https://green.gd/weed-shop/${bud?.slug || 'unknown'}`,
     },
-    // Adding an example of aggregateRating for SEO enhancement
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5', // Adjust this based on actual ratings
       reviewCount: '13', // Adjust this based on actual number of reviews
+      // Optionally, you can add 'bestRating' and 'worstRating' for more context
+      bestRating: '5',
+      worstRating: '1',
     },
   };
 
