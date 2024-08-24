@@ -23,9 +23,6 @@ const BoxItemPriceShop: FC<BoxItemProps> = ({ children }) => {
       color={'ghostVerse.green.base'}
       fontFamily={'CubicFive12'}
       lineHeight={1}
-      itemProp="offers"
-      itemScope
-      itemType="https://schema.org/Offer"
     >
       {children}
     </Box>

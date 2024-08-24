@@ -11,7 +11,7 @@ export const ListTitle: FC<ListTitleProps> = ({ title }) => {
       as={'p'}
       display={'inline-flex'}
       mr={'auto'}
-      ml={2}
+      ml={{ base: '0', md: '2' }}
       flexWrap={'wrap'}
       fontSize={26}
       fontFamily={'vt323'}

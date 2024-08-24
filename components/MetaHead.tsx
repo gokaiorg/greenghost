@@ -95,15 +95,34 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'CafeOrCoffeeShop',
+            '@type': ['Store', 'LocalBusiness'],
             name: 'Green Ghost 🌿👻',
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: 'Rawai',
-              addressRegion: 'Phuket',
-              postalCode: '83130',
-              streetAddress: '26, 19 Wiset Rd',
-            },
+            address: [
+              {
+                '@type': 'PostalAddress',
+                addressLocality: 'Rawai',
+                addressRegion: 'Phuket',
+                addressCountry: 'TH',
+                postalCode: '83130',
+                streetAddress: '26, 19 Wiset Rd',
+              },
+              {
+                '@type': 'PostalAddress',
+                addressLocality: 'Karon',
+                addressRegion: 'Phuket',
+                addressCountry: 'TH',
+                postalCode: '83100',
+                streetAddress: '452 Patak Rd',
+              },
+              {
+                '@type': 'PostalAddress',
+                addressLocality: 'Talat Yai',
+                addressRegion: 'Phuket',
+                addressCountry: 'TH',
+                postalCode: '83000',
+                streetAddress: '17 Thalang Rd',
+              },
+            ],
             description:
               'Discover premium cannabis at Green Ghost in Phuket. Explore our organic selection, including flowers, edibles, and accessories, with fast, reliable delivery.',
             url: 'https://green.gd',
@@ -116,47 +135,85 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
               '@type': 'AggregateRating',
               ratingValue: '5',
               reviewCount: '20',
-            },
-            servesCuisine: ['Cannabis'],
-            hasMenu: [
-              {
-                '@type': 'Menu',
-                name: 'Green Ghost Menu',
-                description:
-                  'Try our wide range of cannabis products and discover your new favorite strain and elevate your experience today.',
-                url: 'https://green.gd/weed-shop',
-                hasMenuSection: [
+              itemReviewed: {
+                '@type': ['Store', 'LocalBusiness'],
+                name: 'Green Ghost 🌿👻',
+                image: 'https://green.gd/green-ghost-degen-weed-shop.png',
+                priceRange: '$',
+                telephone: '+66936459898',
+                address: [
                   {
-                    '@type': 'MenuSection',
-                    name: 'Buds Menu',
-                    description:
-                      'Our shop is stocked with a wide range of organic and locally sourced flowers.',
-                    url: 'https://green.gd/weed-shop',
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Rawai',
+                    addressRegion: 'Phuket',
+                    addressCountry: 'TH',
+                    postalCode: '83130',
+                    streetAddress: '26, 19 Wiset Rd',
                   },
                   {
-                    '@type': 'MenuSection',
-                    name: 'Edibles Menu',
-                    description:
-                      'Discover our delicious selection of locally sourced and organic edibles from classic brownies and gummies to unique artisanal cookies.',
-                    url: 'https://green.gd/weed-shop-edibles',
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Karon',
+                    addressRegion: 'Phuket',
+                    addressCountry: 'TH',
+                    postalCode: '83100',
+                    streetAddress: '452 Patak Rd',
                   },
                   {
-                    '@type': 'MenuSection',
-                    name: 'Degen Menu',
-                    description:
-                      'Indulge in the ultimate cannabis experience with our degen menu. Explore a tantalizing selection of concentrated weed products, including hash, wax, and oil.',
-                    url: 'https://green.gd/weed-shop-degen',
-                  },
-                  {
-                    '@type': 'MenuSection',
-                    name: 'Gadgets Menu',
-                    description:
-                      'Elevate your smoking experience with our premium selection of weed gadgets. From high-quality grinders to sleek bongs and rolling papers, we offer everything you need to enhance your sessions.',
-                    url: 'https://green.gd/weed-shop-gadgets',
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Talat Yai',
+                    addressRegion: 'Phuket',
+                    addressCountry: 'TH',
+                    postalCode: '83000',
+                    streetAddress: '17 Thalang Rd',
                   },
                 ],
               },
-            ],
+            },
+            servesCuisine: 'Cannabis',
+            hasMenu: {
+              '@type': 'Menu',
+              name: 'Green Ghost Menu',
+              description:
+                "Explore Green Ghost's 🌿👻 complete cannabis menu, featuring premium buds, edibles, pre-rolls, accessories, and concentrates. Elevate your experience with our curated selection.",
+              url: 'https://green.gd/weed-shop',
+              hasMenuSection: [
+                {
+                  '@type': 'MenuSection',
+                  name: 'Buds Menu',
+                  description:
+                    "Explore Green Ghost's premium cannabis buds menu. Discover top-quality strains and products, expertly curated for your enjoyment and satisfaction.",
+                  url: 'https://green.gd/weed-shop',
+                },
+                {
+                  '@type': 'MenuSection',
+                  name: 'Edibles Menu',
+                  description:
+                    "Explore Green Ghost's Edibles Menu, featuring a curated selection of organic, locally sourced cannabis-infused treats like brownies, gummies, and artisanal cookies.",
+                  url: 'https://green.gd/weed-shop-edibles',
+                },
+                {
+                  '@type': 'MenuSection',
+                  name: 'Degen Menu',
+                  description:
+                    "Discover Green Ghost's Concentrates Menu, offering premium cannabis extracts like hash, wax, kiev and oil. Elevate your experience with our potent, curated selection.",
+                  url: 'https://green.gd/weed-shop-degen',
+                },
+                {
+                  '@type': 'MenuSection',
+                  name: 'Gadgets Menu',
+                  description:
+                    "Explore Green Ghost's Accessories Menu. Find premium cannabis gadgets, from high-quality grinders to sleek bongs, and elevate your smoking experience today.",
+                  url: 'https://green.gd/weed-shop-gadgets',
+                },
+                {
+                  '@type': 'MenuSection',
+                  name: 'Pre-Rolls Menu',
+                  description:
+                    "Discover Green Ghost's Pre-Roll Menu. Enjoy perfectly rolled joints made from premium cannabis, ready to elevate your smoking experience instantly.",
+                  url: 'https://green.gd/weed-shop-pre-rolls',
+                },
+              ],
+            },
           }),
         }}
       />
