@@ -138,6 +138,9 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
               itemReviewed: {
                 '@type': 'Store',
                 name: 'Green Ghost 🌿👻',
+                image: 'https://green.gd/green-ghost-degen-weed-shop.png',
+                priceRange: '$',
+                telephone: '+66936459898',
                 address: [
                   {
                     '@type': 'PostalAddress',
