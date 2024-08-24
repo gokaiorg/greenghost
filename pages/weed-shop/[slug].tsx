@@ -33,13 +33,13 @@ export default function BudPage({ bud }: BudPageProps) {
   const schemaData = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: bud?.name || 'Unknown Product',
-    image:
-      bud?.images && bud.images.length > 0
-        ? bud.images[0]
-        : 'https://example.com/default-image.jpg',
-    description: bud?.descSeo || 'No description available',
-    sku: bud?.slug || 'no-sku',
+    name: bud?.name,
+    image: [
+      `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-cover.webp`,
+      `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-bud-01.webp`,
+      `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-bud-02.webp`,
+    ],
+    description: bud?.descSeo,
     offers: {
       '@type': 'Offer',
       priceCurrency: 'THB',
@@ -49,8 +49,17 @@ export default function BudPage({ bud }: BudPageProps) {
         bud?.quantity > 0
           ? 'https://schema.org/InStock'
           : 'https://schema.org/OutOfStock',
-      url: `https://green.gd/weed-shop/${bud?.slug || 'unknown'}`,
+      url: `https://green.gd/weed-shop/${bud?.slug}`,
+      seller: {
+        '@type': 'Organization',
+        name: 'Green Ghost 🌿👻',
+      },
     },
+    brand: {
+      '@type': 'Brand',
+      name: 'Green Ghost 🌿👻',
+    },
+    category: 'Cannabis',
   };
 
   return (
