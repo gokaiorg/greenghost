@@ -15,7 +15,7 @@ const GhostDegenWeedShop: NextPage = () => {
         <title>Green Ghost 🌿👻 Weed Shop Premium Cannabis Degen Menu</title>
         <meta
           name="description"
-          content="Indulge in the ultimate cannabis experience with our degen menu. Explore a tantalizing selection of concentrated weed products, including hash, wax, and oil. Each item is carefully crafted to deliver potent and flavorful hits that will elevate your high to new heights. Discover the rich aromas, smooth textures, and powerful effects that our degen menu has to offer. Elevate your smoking sessions with our degen menu and unlock a world of intense and unforgettable sensations."
+          content="Discover Green Ghost's Concentrates Menu, offering premium cannabis extracts like hash, wax, kiev and oil. Elevate your experience with our potent, curated selection."
         />
         <meta
           property="og:title"
@@ -23,7 +23,7 @@ const GhostDegenWeedShop: NextPage = () => {
         />
         <meta
           property="og:description"
-          content="Indulge in the ultimate cannabis experience with our degen menu. Explore a tantalizing selection of concentrated weed products, including hash, wax, and oil. Each item is carefully crafted to deliver potent and flavorful hits that will elevate your high to new heights. Discover the rich aromas, smooth textures, and powerful effects that our degen menu has to offer. Elevate your smoking sessions with our degen menu and unlock a world of intense and unforgettable sensations."
+          content="Discover Green Ghost's Concentrates Menu, offering premium cannabis extracts like hash, wax, kiev and oil. Elevate your experience with our potent, curated selection."
         />
         <meta
           property="og:image"
@@ -38,7 +38,7 @@ const GhostDegenWeedShop: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Indulge in the ultimate cannabis experience with our degen menu. Explore a tantalizing selection of concentrated weed products, including hash, wax, and oil. Each item is carefully crafted to deliver potent and flavorful hits that will elevate your high to new heights. Discover the rich aromas, smooth textures, and powerful effects that our degen menu has to offer. Elevate your smoking sessions with our degen menu and unlock a world of intense and unforgettable sensations."
+          content="Discover Green Ghost's Concentrates Menu, offering premium cannabis extracts like hash, wax, kiev and oil. Elevate your experience with our potent, curated selection."
         />
         <meta
           name="twitter:image"

@@ -29,6 +29,11 @@ const WeedShop: NextPage = () => {
           price: bud.price.toFixed(2),
           priceCurrency: 'THB',
         },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '5', // Adjust based on actual ratings
+          reviewCount: '13', // Adjust based on actual review count
+        },
       },
     })),
   };

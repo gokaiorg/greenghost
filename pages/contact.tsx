@@ -11,21 +11,21 @@ import Image from 'next/image';
 import { ImgContact } from '../components/media/ImgContact';
 
 const contactJSONLD = {
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+66 93 645 9898",
-    "contactType": "Customer Service",
-    "areaServed": "TH",
-    "availableLanguage": "English"
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+66 93 645 9898',
+    contactType: 'Customer Service',
+    areaServed: 'TH',
+    availableLanguage: 'English',
   },
-  "sameAs": [
-    "https://www.facebook.com/greenghostdegen",
-    "https://x.com/greenghostdegen",
-    "https://www.instagram.com/greenghostdegen",
-    "https://www.tiktok.com/@greenghostdegen",
-    "https://www.youtube.com/@greenghostdegen",
-    "https://warpcast.com/greenghostdegen",
-  ]
+  sameAs: [
+    'https://www.facebook.com/greenghostdegen',
+    'https://x.com/greenghostdegen',
+    'https://www.instagram.com/greenghostdegen',
+    'https://www.tiktok.com/@greenghostdegen',
+    'https://www.youtube.com/@greenghostdegen',
+    'https://warpcast.com/greenghostdegen',
+  ],
 };
 
 const BuyWeed: NextPage = () => {
