@@ -32,8 +32,8 @@ const FilterButton = ({
   <Box
     as="li"
     aria-label={`${label} filter button`}
-    mr={2}
-    mb={2}
+    mr={1}
+    mb={1}
     border={'1px'}
     borderColor={
       isActive ? `ghostVerse.dominance.${label.toLowerCase()}` : 'black'
@@ -45,7 +45,7 @@ const FilterButton = ({
         : `ghostVerse.dominance.${label.toLowerCase()}`
     }
     onClick={onClick}
-    p={2}
+    p={1}
     cursor={'pointer'}
     fontSize={'2xl'}
     _hover={{ backgroundColor: 'black' }}
@@ -110,12 +110,12 @@ export const Bud = () => {
           ))}
         </Box>
         <Checkbox
-          ml={4}
+          ml={'auto'}
           colorScheme={'#13DE00'}
           isChecked={!showUnavailable}
           onChange={handleShowUnavailableChange}
           fontSize={'2xl'}
-          py={4}
+          py={{ base: '2', md: '3' }}
           fontFamily={'vt323'}
         >
           Hide Sold Out

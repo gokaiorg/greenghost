@@ -174,7 +174,7 @@ const WeedDriveThru: NextPage = () => {
             </Link>
             <Box width={{ base: '100%' }}>
               <Image
-                src="/media/green-ghost-degen-weed-shop-weed-delivery-phuket-contact-us.webp"
+                src="/media/green-ghost-degen-weed-shop-contact-us.webp"
                 width={1200}
                 height={600}
                 alt="Near Me - Weed Drive Thru Phuket - Fast and Discreet."
@@ -223,7 +223,7 @@ const WeedDriveThru: NextPage = () => {
             </Link>
             <Box width={{ base: '100%' }}>
               <Image
-                src="/media/green-ghost-degen-weed-shop-weed-delivery-phuket-contact-us.webp"
+                src="/media/green-ghost-degen-weed-shop-contact-us.webp"
                 width={1200}
                 height={600}
                 alt="Contact us - Weed Drive Thru Phuket - Fast and Discreet."

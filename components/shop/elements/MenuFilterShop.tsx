@@ -11,7 +11,9 @@ const MenuFilterShop: FC<BoxItemProps> = ({ children }) => {
       as="section"
       aria-label="Menu Filters"
       marginRight={'auto'}
-      py={4}
+      py={2}
+      display={'flex'}
+      flexDirection={{ base: 'column', md: 'row' }}
       borderRadius={0}
       background={'black'}
       borderColor={'black'}

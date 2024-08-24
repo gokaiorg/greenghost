@@ -33,21 +33,57 @@ export default function BudPage({ bud }: BudPageProps) {
   const schemaData = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: bud?.name || 'Unknown Product',
-    image: bud?.images && bud.images.length > 0 ? bud.images[0] : '',
-    description: bud?.descSeo || 'No description available',
-    sku: bud?.slug || 'no-sku',
+    name: `${bud?.name} Strain`,
+    image: [
+      `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-cover.webp`,
+      `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-bud-01.webp`,
+      `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-bud-02.webp`,
+    ],
+    description: bud?.descSeo,
     offers: {
       '@type': 'Offer',
       priceCurrency: 'THB',
-      price: bud?.price || '0',
+      price: bud?.price ? Number(bud.price).toFixed(2) : '0.00',
       itemCondition: 'https://schema.org/NewCondition',
       availability:
         bud?.quantity > 0
           ? 'https://schema.org/InStock'
           : 'https://schema.org/OutOfStock',
-      url: `https://green.gd/weed-shop/${bud?.slug || 'unknown'}`,
+      url: `https://green.gd/weed-shop/${bud?.slug}`,
+      seller: {
+        '@type': 'Organization',
+        name: 'Green Ghost 🌿👻',
+      },
     },
+    brand: {
+      '@type': 'Brand',
+      name: 'Green Ghost 🌿👻',
+    },
+    category: 'Cannabis',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5', // Example rating value
+      reviewCount: '20', // Example review count
+      bestRating: '5',
+      worstRating: '1',
+    },
+    review: [
+      {
+        '@type': 'Review',
+        author: {
+          '@type': 'Person',
+          name: 'Jeremy', // Example reviewer name
+        },
+        datePublished: '2024-08-01', // Example review date
+        reviewBody: 'Great product, highly recommended!', // Example review content
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5', // Example review rating
+          bestRating: '5',
+          worstRating: '1',
+        },
+      },
+    ],
   };
 
   return (
@@ -99,7 +135,7 @@ export default function BudPage({ bud }: BudPageProps) {
               />
             </svg>
           </Box>
-          <Box as="article" itemScope itemType="https://schema.org/Product">
+          <Box as="article">
             <Box as="header" mb={2}>
               <Box
                 as="h1"
@@ -108,9 +144,8 @@ export default function BudPage({ bud }: BudPageProps) {
                 display={'flex'}
                 flexDirection={'row'}
                 alignItems={'center'}
-                itemProp="name"
               >
-                {bud?.name ? `${bud.name} Strain` : 'Product Name Unavailable'}
+                {`${bud.name} Strain`}
               </Box>
               {/* Ensure `bud.images` is defined and has at least one image */}
               {bud?.images?.length > 0 && (

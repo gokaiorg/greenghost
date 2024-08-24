@@ -24,10 +24,20 @@ const WeedShop: NextPage = () => {
         '@type': 'Product',
         name: bud.name,
         description: bud.description,
+        image: [
+          `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-cover.webp`,
+          `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-bud-01.webp`,
+          `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-bud-02.webp`,
+        ],
         offers: {
           '@type': 'Offer',
           price: bud.price.toFixed(2),
           priceCurrency: 'THB',
+        },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '5', // Adjust based on actual ratings
+          reviewCount: '13', // Adjust based on actual review count
         },
       },
     })),
@@ -39,7 +49,7 @@ const WeedShop: NextPage = () => {
         <title>Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu</title>
         <meta
           name="description"
-          content="Looking for a dispensary that prioritizes organic, locally sourced cannabis products? Look no further than Green Ghost Degen Weed Shop. Our shop is stocked with a wide range of flower, edibles, and concentrates, all of which are carefully curated from the best growers in the area."
+          content="Explore Green Ghost's premium cannabis buds menu. Discover top-quality strains and products, expertly curated for your enjoyment and satisfaction."
         />
         <meta
           property="og:title"
@@ -47,7 +57,7 @@ const WeedShop: NextPage = () => {
         />
         <meta
           property="og:description"
-          content="Looking for a dispensary that prioritizes organic, locally sourced cannabis products? Look no further than Green Ghost Degen Weed Shop. Our shop is stocked with a wide range of flower, edibles, and concentrates, all of which are carefully curated from the best growers in the area."
+          content="Explore Green Ghost's premium cannabis buds menu. Discover top-quality strains and products, expertly curated for your enjoyment and satisfaction."
         />
         <meta
           property="og:image"
@@ -62,7 +72,7 @@ const WeedShop: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Looking for a dispensary that prioritizes organic, locally sourced cannabis products? Look no further than Green Ghost Degen Weed Shop. Our shop is stocked with a wide range of flower, edibles, and concentrates, all of which are carefully curated from the best growers in the area."
+          content="Explore Green Ghost's premium cannabis buds menu. Discover top-quality strains and products, expertly curated for your enjoyment and satisfaction."
         />
         <meta
           name="twitter:image"

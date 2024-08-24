@@ -15,7 +15,7 @@ const WeedShopEdibles: NextPage = () => {
         <title>Green Ghost 🌿👻 Weed Shop Premium Cannabis Edibles Menu</title>
         <meta
           name="description"
-          content="Discover our delicious selection of locally sourced and organic edibles. From classic brownies and gummies to unique artisanal cookies, our edibles are carefully crafted to provide a consistent and enjoyable experience. Our products are made with high-quality ingredients and are lab tested for potency and purity. Whether you're looking for a tasty way to relax or a discreet way to medicate, our edibles have got you covered. Order now and indulge in the ultimate edible experience!"
+          content="Explore Green Ghost's Edibles Menu, featuring a curated selection of organic, locally sourced cannabis-infused treats like brownies, gummies, and artisanal cookies."
         />
         <meta
           property="og:title"
@@ -23,7 +23,7 @@ const WeedShopEdibles: NextPage = () => {
         />
         <meta
           property="og:description"
-          content="Discover our delicious selection of locally sourced and organic edibles. From classic brownies and gummies to unique artisanal cookies, our edibles are carefully crafted to provide a consistent and enjoyable experience. Our products are made with high-quality ingredients and are lab tested for potency and purity. Whether you're looking for a tasty way to relax or a discreet way to medicate, our edibles have got you covered. Order now and indulge in the ultimate edible experience!"
+          content="Explore Green Ghost's Edibles Menu, featuring a curated selection of organic, locally sourced cannabis-infused treats like brownies, gummies, and artisanal cookies."
         />
         <meta
           property="og:image"
@@ -38,7 +38,7 @@ const WeedShopEdibles: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Discover our delicious selection of locally sourced and organic edibles. From classic brownies and gummies to unique artisanal cookies, our edibles are carefully crafted to provide a consistent and enjoyable experience. Our products are made with high-quality ingredients and are lab tested for potency and purity. Whether you're looking for a tasty way to relax or a discreet way to medicate, our edibles have got you covered. Order now and indulge in the ultimate edible experience!"
+          content="Explore Green Ghost's Edibles Menu, featuring a curated selection of organic, locally sourced cannabis-infused treats like brownies, gummies, and artisanal cookies."
         />
         <meta
           name="twitter:image"

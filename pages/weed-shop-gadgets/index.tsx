@@ -15,7 +15,7 @@ const WeedShopGadgets: NextPage = () => {
         <title>Green Ghost 🌿👻 Weed Shop Premium Cannabis Gadgets Menu</title>
         <meta
           name="description"
-          content="Elevate your smoking experience with our premium selection of weed gadgets. From high-quality grinders to sleek bongs and rolling papers, we offer everything you need to enhance your sessions. Discover top-notch accessories designed for convenience, durability, and optimal performance. Whether you're a casual smoker or a seasoned connoisseur, our weed gadgets are crafted to meet your needs and elevate your enjoyment. Explore our collection and unlock a new level of satisfaction in your smoking rituals."
+          content="Explore Green Ghost's Accessories Menu. Find premium cannabis gadgets, from high-quality grinders to sleek bongs, and elevate your smoking experience today."
         />
         <meta
           property="og:title"
@@ -23,7 +23,7 @@ const WeedShopGadgets: NextPage = () => {
         />
         <meta
           property="og:description"
-          content="Elevate your smoking experience with our premium selection of weed gadgets. From high-quality grinders to sleek bongs and rolling papers, we offer everything you need to enhance your sessions. Discover top-notch accessories designed for convenience, durability, and optimal performance. Whether you're a casual smoker or a seasoned connoisseur, our weed gadgets are crafted to meet your needs and elevate your enjoyment. Explore our collection and unlock a new level of satisfaction in your smoking rituals."
+          content="Explore Green Ghost's Accessories Menu. Find premium cannabis gadgets, from high-quality grinders to sleek bongs, and elevate your smoking experience today."
         />
         <meta
           property="og:image"
@@ -38,7 +38,7 @@ const WeedShopGadgets: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Elevate your smoking experience with our premium selection of weed gadgets. From high-quality grinders to sleek bongs and rolling papers, we offer everything you need to enhance your sessions. Discover top-notch accessories designed for convenience, durability, and optimal performance. Whether you're a casual smoker or a seasoned connoisseur, our weed gadgets are crafted to meet your needs and elevate your enjoyment. Explore our collection and unlock a new level of satisfaction in your smoking rituals."
+          content="Explore Green Ghost's Accessories Menu. Find premium cannabis gadgets, from high-quality grinders to sleek bongs, and elevate your smoking experience today."
         />
         <meta
           name="twitter:image"

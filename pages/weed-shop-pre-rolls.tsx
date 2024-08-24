@@ -15,7 +15,7 @@ const WeedShopPreRolls: NextPage = () => {
         </title>
         <meta
           name="description"
-          content="Looking for high-quality pre-roll joints made with locally sourced, organic cannabis? Look no further than our pre-rolled shop! We offer a wide selection of pre-rolls made with only the best, all-natural ingredients. Our products are carefully crafted to ensure a consistent, high-quality experience every time. Try our pre-rolls today and taste the difference that local, organic products can make."
+          content="Discover Green Ghost's Pre-Roll Menu. Enjoy perfectly rolled joints made from premium cannabis, ready to elevate your smoking experience instantly."
         />
         <meta
           property="og:title"
@@ -23,7 +23,7 @@ const WeedShopPreRolls: NextPage = () => {
         />
         <meta
           property="og:description"
-          content="Looking for high-quality pre-roll joints made with locally sourced, organic cannabis? Look no further than our pre-rolled shop! We offer a wide selection of pre-rolls made with only the best, all-natural ingredients. Our products are carefully crafted to ensure a consistent, high-quality experience every time. Try our pre-rolls today and taste the difference that local, organic products can make."
+          content="Discover Green Ghost's Pre-Roll Menu. Enjoy perfectly rolled joints made from premium cannabis, ready to elevate your smoking experience instantly."
         />
         <meta
           property="og:image"
@@ -41,7 +41,7 @@ const WeedShopPreRolls: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Looking for high-quality pre-roll joints made with locally sourced, organic cannabis? Look no further than our pre-rolled shop! We offer a wide selection of pre-rolls made with only the best, all-natural ingredients. Our products are carefully crafted to ensure a consistent, high-quality experience every time. Try our pre-rolls today and taste the difference that local, organic products can make."
+          content="Discover Green Ghost's Pre-Roll Menu. Enjoy perfectly rolled joints made from premium cannabis, ready to elevate your smoking experience instantly."
         />
         <meta
           name="twitter:image"

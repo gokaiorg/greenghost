@@ -221,7 +221,7 @@ const WeedDelivery: NextPage = () => {
             title="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
             heading="Contact And Provide Delivery Details"
             text="Contact us and share your delivery information to ensure quick and seamless service."
-            imgSrc="/media/green-ghost-degen-weed-shop-weed-delivery-phuket-contact-us.webp"
+            imgSrc="/media/green-ghost-degen-weed-shop-contact-us.webp"
             imgAlt="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
             imgSizes="(max-width: 1024px) 420px, 602px"
             number="2"

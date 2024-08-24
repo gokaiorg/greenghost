@@ -33,7 +33,7 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = () => {
   return (
     <Box
       as="nav"
-      mr={{ base: 'auto', md: '0' }}
+      mr={{ base: '0', md: '0' }}
       ml={{ base: 'auto' }}
       aria-label="Main Navigation"
     >
@@ -54,7 +54,7 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = () => {
             ml={4}
             display="flex"
             alignItems="center"
-            mx={2}
+            mx={{ base: '1', md: '2' }}
             color={isActive(item.href) ? 'ghostVerse.green.base' : 'inherit'}
             _hover={{ color: 'ghostVerse.green.base' }}
           >

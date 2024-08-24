@@ -34,11 +34,11 @@ export const fwen = [
     fwenLogo: '/media/green-ghost-weed-grower-green-lab-unicorn.webp',
     fwenLink: 'https://t.me/GreenLabUnicornShop',
   },
-  {
-    name: 'CBD Cannabiz farm',
-    fwenLogo: '/media/green-ghost-weed-grower-cbd-cannabiz-farm.webp',
-    fwenLink: 'https://www.cbdcannabizfarm.com',
-  },
+  // {
+  //   name: 'CBD Cannabiz farm',
+  //   fwenLogo: '/media/green-ghost-weed-grower-cbd-cannabiz-farm.webp',
+  //   fwenLink: 'https://www.cbdcannabizfarm.com',
+  // },
   {
     name: 'Goodies Deluxe',
     fwenLogo: '/media/green-ghost-weed-goodies-deluxe.webp',
