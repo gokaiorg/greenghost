@@ -95,7 +95,7 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'CannabisDispensary',
+            '@type': 'Store',
             name: 'Green Ghost 🌿👻',
             address: [
               {
@@ -135,6 +135,10 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
               '@type': 'AggregateRating',
               ratingValue: '5',
               reviewCount: '20',
+              itemReviewed: {
+                '@type': 'Store',
+                name: 'Green Ghost 🌿👻',
+              },
             },
             servesCuisine: 'Cannabis',
             hasMenu: {
@@ -180,21 +184,6 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
                   url: 'https://green.gd/weed-shop-pre-rolls',
                 },
               ],
-            },
-            review: {
-              '@type': 'Review',
-              itemReviewed: {
-                '@type': 'CannabisDispensary',
-                name: 'Green Ghost 🌿👻',
-              },
-              reviewRating: {
-                '@type': 'Rating',
-                ratingValue: '5',
-              },
-              author: {
-                '@type': 'Person',
-                name: 'Gokai Labs',
-              },
             },
           }),
         }}
