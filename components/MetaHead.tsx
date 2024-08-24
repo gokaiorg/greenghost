@@ -95,14 +95,14 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'Store',
+            '@type': ['Store', 'LocalBusiness'],
             name: 'Green Ghost 🌿👻',
             address: [
               {
                 '@type': 'PostalAddress',
                 addressLocality: 'Rawai',
                 addressRegion: 'Phuket',
-                addressCountry: 'Thailand',
+                addressCountry: 'TH',
                 postalCode: '83130',
                 streetAddress: '26, 19 Wiset Rd',
               },
@@ -110,17 +110,23 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
                 '@type': 'PostalAddress',
                 addressLocality: 'Karon',
                 addressRegion: 'Phuket',
-                addressCountry: 'Thailand',
+                addressCountry: 'TH',
                 postalCode: '83100',
                 streetAddress: '452 Patak Rd',
+                telephone: '+66936459898',
+                priceRange: '$',
+                image: 'https://green.gd/karon-location.jpg', // Add an image URL for Karon location
               },
               {
                 '@type': 'PostalAddress',
                 addressLocality: 'Talat Yai',
                 addressRegion: 'Phuket',
-                addressCountry: 'Thailand',
+                addressCountry: 'TH',
                 postalCode: '83000',
                 streetAddress: '17 Thalang Rd',
+                telephone: '+66936459898',
+                priceRange: '$',
+                image: 'https://green.gd/talat-yai-location.jpg', // Add an image URL for Talat Yai location
               },
             ],
             description:
@@ -138,35 +144,6 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
               itemReviewed: {
                 '@type': 'Store',
                 name: 'Green Ghost 🌿👻',
-                image: 'https://green.gd/green-ghost-degen-weed-shop.png',
-                priceRange: '$',
-                telephone: '+66936459898',
-                address: [
-                  {
-                    '@type': 'PostalAddress',
-                    addressLocality: 'Rawai',
-                    addressRegion: 'Phuket',
-                    addressCountry: 'Thailand',
-                    postalCode: '83130',
-                    streetAddress: '26, 19 Wiset Rd',
-                  },
-                  {
-                    '@type': 'PostalAddress',
-                    addressLocality: 'Karon',
-                    addressRegion: 'Phuket',
-                    addressCountry: 'Thailand',
-                    postalCode: '83100',
-                    streetAddress: '452 Patak Rd',
-                  },
-                  {
-                    '@type': 'PostalAddress',
-                    addressLocality: 'Talat Yai',
-                    addressRegion: 'Phuket',
-                    addressCountry: 'Thailand',
-                    postalCode: '83000',
-                    streetAddress: '17 Thalang Rd',
-                  },
-                ],
               },
             },
             servesCuisine: 'Cannabis',
