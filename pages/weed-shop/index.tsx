@@ -24,6 +24,11 @@ const WeedShop: NextPage = () => {
         '@type': 'Product',
         name: bud.name,
         description: bud.description,
+        image: [
+          `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-cover.webp`,
+          `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-bud-01.webp`,
+          `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-bud-02.webp`,
+        ],
         offers: {
           '@type': 'Offer',
           price: bud.price.toFixed(2),
