@@ -10,6 +10,24 @@ import { SocialContactIcons } from '../components/SocialContactIcons';
 import Image from 'next/image';
 import { ImgContact } from '../components/media/ImgContact';
 
+const contactJSONLD = {
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+66 93 645 9898",
+    "contactType": "Customer Service",
+    "areaServed": "TH",
+    "availableLanguage": "English"
+  },
+  "sameAs": [
+    "https://www.facebook.com/greenghostdegen",
+    "https://x.com/greenghostdegen",
+    "https://www.instagram.com/greenghostdegen",
+    "https://www.tiktok.com/@greenghostdegen",
+    "https://www.youtube.com/@greenghostdegen",
+    "https://warpcast.com/greenghostdegen",
+  ]
+};
+
 const BuyWeed: NextPage = () => {
   return (
     <>
@@ -17,7 +35,7 @@ const BuyWeed: NextPage = () => {
         <title>Green Ghost 🌿👻 Contact Our Weed Shop Team To Order</title>
         <meta
           name="description"
-          content="Contact Green Ghost Degen to place your order for high-quality, locally-sourced cannabis products. Our knowledgeable team provides a safe and reliable service with discreet and secure shipping. Enjoy the fastest Phuket weed delivery."
+          content="Get in touch with the Green Ghost team 🌿👻 for all your weed shop inquiries and orders. We're here to assist with your cannabis needs and provide exceptional service."
         />
         <meta
           property="og:title"
@@ -25,11 +43,11 @@ const BuyWeed: NextPage = () => {
         />
         <meta
           property="og:description"
-          content="Contact Green Ghost Degen to place your order for high-quality, locally-sourced cannabis products. Our knowledgeable team provides a safe and reliable service with discreet and secure shipping. Enjoy the fastest Phuket weed delivery."
+          content="Get in touch with the Green Ghost team 🌿👻 for all your weed shop inquiries and orders. We're here to assist with your cannabis needs and provide exceptional service."
         />
         <meta
           property="og:image"
-          content="https://green.gd/media/green-ghost-degen-weed-shop-weed-delivery-phuket-contact-us.webp"
+          content="https://green.gd/media/green-ghost-degen-weed-shop-contact-us.webp"
         />
         <meta property="og:image:width" content="2048" />
         <meta property="og:image:height" content="1366" />
@@ -40,13 +58,16 @@ const BuyWeed: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Contact Green Ghost Degen to place your order for high-quality, locally-sourced cannabis products. Our knowledgeable team provides a safe and reliable service with discreet and secure shipping. Enjoy the fastest Phuket weed delivery."
+          content="Get in touch with the Green Ghost team 🌿👻 for all your weed shop inquiries and orders. We're here to assist with your cannabis needs and provide exceptional service."
         />
         <meta
           name="twitter:image"
-          content="https://green.gd/media/green-ghost-degen-weed-shop-weed-delivery-phuket-contact-us.webp"
+          content="https://green.gd/media/green-ghost-degen-weed-shop-contact-us.webp"
         />
         <meta name="twitter:url" content="https://green.gd/contact" />
+        <script type="application/ld+json">
+          {JSON.stringify(contactJSONLD)}
+        </script>
       </Head>
       <MainLayout>
         <HeaderMenu>
@@ -94,7 +115,7 @@ const BuyWeed: NextPage = () => {
           </Box>
           <Box>
             <Image
-              src="/media/green-ghost-degen-weed-shop-weed-delivery-phuket-contact-us.webp"
+              src="/media/green-ghost-degen-weed-shop-contact-us.webp"
               alt="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
               width={2048}
               height={1366}

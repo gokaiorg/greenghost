@@ -39,7 +39,7 @@ const WeedShop: NextPage = () => {
         <title>Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu</title>
         <meta
           name="description"
-          content="Looking for a dispensary that prioritizes organic, locally sourced cannabis products? Look no further than Green Ghost Degen Weed Shop. Our shop is stocked with a wide range of flower, edibles, and concentrates, all of which are carefully curated from the best growers in the area."
+          content="Explore Green Ghost's premium cannabis buds menu. Discover top-quality strains and products, expertly curated for your enjoyment and satisfaction."
         />
         <meta
           property="og:title"
@@ -47,7 +47,7 @@ const WeedShop: NextPage = () => {
         />
         <meta
           property="og:description"
-          content="Looking for a dispensary that prioritizes organic, locally sourced cannabis products? Look no further than Green Ghost Degen Weed Shop. Our shop is stocked with a wide range of flower, edibles, and concentrates, all of which are carefully curated from the best growers in the area."
+          content="Explore Green Ghost's premium cannabis buds menu. Discover top-quality strains and products, expertly curated for your enjoyment and satisfaction."
         />
         <meta
           property="og:image"
@@ -62,7 +62,7 @@ const WeedShop: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Looking for a dispensary that prioritizes organic, locally sourced cannabis products? Look no further than Green Ghost Degen Weed Shop. Our shop is stocked with a wide range of flower, edibles, and concentrates, all of which are carefully curated from the best growers in the area."
+          content="Explore Green Ghost's premium cannabis buds menu. Discover top-quality strains and products, expertly curated for your enjoyment and satisfaction."
         />
         <meta
           name="twitter:image"
