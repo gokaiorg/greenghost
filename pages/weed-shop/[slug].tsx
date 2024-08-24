@@ -34,13 +34,16 @@ export default function BudPage({ bud }: BudPageProps) {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: bud?.name || 'Unknown Product',
-    image: bud?.images && bud.images.length > 0 ? bud.images[0] : '',
+    image:
+      bud?.images && bud.images.length > 0
+        ? bud.images[0]
+        : 'https://example.com/default-image.jpg', // Provide a fallback image
     description: bud?.descSeo || 'No description available',
     sku: bud?.slug || 'no-sku',
     offers: {
       '@type': 'Offer',
       priceCurrency: 'THB',
-      price: bud?.price || '0',
+      price: bud?.price ? Number(bud.price).toFixed(2) : '0.00', // Ensure price is a string with two decimal places
       itemCondition: 'https://schema.org/NewCondition',
       availability:
         bud?.quantity > 0
@@ -50,11 +53,8 @@ export default function BudPage({ bud }: BudPageProps) {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '5', // Adjust this based on actual ratings
-      reviewCount: '13', // Adjust this based on actual number of reviews
-      // Optionally, you can add 'bestRating' and 'worstRating' for more context
-      bestRating: '5',
-      worstRating: '1',
+      ratingValue: '5', // Ensure this is a string, or use a number if possible
+      reviewCount: '13', // Ensure this is a string, or use a number if possible
     },
   };
 
