@@ -138,6 +138,32 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
               itemReviewed: {
                 '@type': 'Store',
                 name: 'Green Ghost 🌿👻',
+                address: [
+                  {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Rawai',
+                    addressRegion: 'Phuket',
+                    addressCountry: 'Thailand',
+                    postalCode: '83130',
+                    streetAddress: '26, 19 Wiset Rd',
+                  },
+                  {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Karon',
+                    addressRegion: 'Phuket',
+                    addressCountry: 'Thailand',
+                    postalCode: '83100',
+                    streetAddress: '452 Patak Rd',
+                  },
+                  {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Talat Yai',
+                    addressRegion: 'Phuket',
+                    addressCountry: 'Thailand',
+                    postalCode: '83000',
+                    streetAddress: '17 Thalang Rd',
+                  },
+                ],
               },
             },
             servesCuisine: 'Cannabis',
