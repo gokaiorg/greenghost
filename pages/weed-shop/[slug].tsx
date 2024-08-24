@@ -60,6 +60,26 @@ export default function BudPage({ bud }: BudPageProps) {
       name: 'Green Ghost 🌿👻',
     },
     category: 'Cannabis',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5', // Example rating value
+      reviewCount: '20', // Example review count
+    },
+    review: [
+      {
+        '@type': 'Review',
+        author: {
+          '@type': 'Person',
+          name: 'Jeremy', // Example reviewer name
+        },
+        datePublished: '2024-08-01', // Example review date
+        reviewBody: 'Great product, highly recommended!', // Example review content
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5', // Example review rating
+        },
+      },
+    ],
   };
 
   return (
