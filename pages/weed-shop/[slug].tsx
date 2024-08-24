@@ -144,7 +144,6 @@ export default function BudPage({ bud }: BudPageProps) {
                 display={'flex'}
                 flexDirection={'row'}
                 alignItems={'center'}
-                itemProp="name"
               >
                 {`${bud.name} Strain`}
               </Box>
