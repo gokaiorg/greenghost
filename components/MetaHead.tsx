@@ -181,6 +181,21 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
                 },
               ],
             },
+            review: {
+              '@type': 'Review',
+              itemReviewed: {
+                '@type': 'CannabisDispensary',
+                name: 'Green Ghost 🌿👻',
+              },
+              reviewRating: {
+                '@type': 'Rating',
+                ratingValue: '5',
+              },
+              author: {
+                '@type': 'Person',
+                name: 'Gokai Labs',
+              },
+            },
           }),
         }}
       />
