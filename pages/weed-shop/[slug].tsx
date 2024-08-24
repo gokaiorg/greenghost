@@ -142,7 +142,7 @@ export default function BudPage({ bud }: BudPageProps) {
                 alignItems={'center'}
                 itemProp="name"
               >
-                {bud?.name ? `${bud.name} Strain` : 'Product Name Unavailable'}
+                {`${bud.name} Strain`}
               </Box>
               {/* Ensure `bud.images` is defined and has at least one image */}
               {bud?.images?.length > 0 && (
