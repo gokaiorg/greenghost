@@ -29,7 +29,7 @@ const CryptoWeedShop: NextPage = () => {
         />
         <meta
           property="og:image"
-          content="https://green.gd/green-ghost-degen-weed-shop-grand-opening.png"
+          content="https://green.gd/media/green-ghost-degen-weed-shop-buds-menu.webp"
         />
         <meta property="og:image:width" content="2048" />
         <meta property="og:image:height" content="1366" />
@@ -47,7 +47,7 @@ const CryptoWeedShop: NextPage = () => {
         />
         <meta
           name="twitter:image"
-          content="https://green.gd/green-ghost-degen-weed-shop-grand-opening.png"
+          content="https://green.gd/media/green-ghost-degen-weed-shop-buds-menu.webp"
         />
         <meta
           name="twitter:url"
