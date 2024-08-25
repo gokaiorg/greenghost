@@ -143,6 +143,21 @@ const WeedDelivery: NextPage = () => {
           name="twitter:url"
           content="https://green.gd/weed-delivery-phuket"
         />
+        <meta
+          property="og:video"
+          content="https://www.youtube.com/shorts/7FrEbdNYbI0"
+        />
+        <meta
+          property="og:video"
+          content="https://www.youtube.com/shorts/7FrEbdNYbI0"
+        />
+        <meta property="og:video:type" content="video/mp4" />
+        <meta property="og:video:width" content="1080" />
+        <meta property="og:video:height" content="1920" />
+        <meta
+          property="og:video:secure_url"
+          content="https://www.youtube.com/shorts/7FrEbdNYbI0"
+        />
       </Head>
       <MainLayout>
         <HeaderMenu>
@@ -228,19 +243,60 @@ const WeedDelivery: NextPage = () => {
           />
         </Box>
         <WeedDeliveryFeature />
-        <Text
-          as="p"
-          fontSize={{ base: 30, lg: 40 }}
-          lineHeight={1}
-          fontWeight="bold"
-          fontFamily="vt323"
-          mb={{ base: 10 }}
-          textAlign="center"
+        <Box
+          as="section"
+          aria-labelledby="The best weed delivery service in Phuket"
+          display={'flex'}
+          flexDirection={{ base: 'column', md: 'row' }}
+          mb={5}
         >
-          {
-            "Explore our premium weed selection, featuring high-quality strains curated for the best experience. Whether you're in Phuket or anywhere across Thailand, including Rawai, Karon, Chalong, and Patong, we offer fast and reliable weed delivery. Find the perfect strain to suit your needs and enjoy discreet, door-to-door service. Our collection includes a variety of Indica, Sativa, and Hybrid options, all carefully sourced from trusted growers. Experience the convenience of getting top-shelf weed delivered directly to your doorstep."
-          }
-        </Text>
+          <Box
+            width={{ base: '100%', md: '200px' }}
+            mx="auto"
+            position="relative"
+            overflow="hidden"
+            mb={5}
+            // Ensure there's a minimum height to prevent collapse
+            minHeight={{ base: '600px', md: '200px' }}
+          >
+            <Box
+              position="absolute"
+              top={0}
+              left={0}
+              width="100%"
+              paddingTop="177.78%" // 9:16 aspect ratio
+            >
+              <iframe
+                src="https://www.youtube.com/embed/7FrEbdNYbI0"
+                title="Weed delivery in Phuket Thailand"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                }}
+              ></iframe>
+            </Box>
+          </Box>
+          <Text
+            as="p"
+            fontSize={{ base: 30, lg: 40 }}
+            lineHeight={1}
+            fontWeight="bold"
+            fontFamily="vt323"
+            textAlign={{ base: 'center', md: 'left' }}
+            marginLeft={{ base: '0', md: '4' }}
+            flex={'1'}
+          >
+            {
+              "Explore our premium weed selection, featuring high-quality strains curated for the best experience. Whether you're in Phuket or anywhere across Thailand, including Rawai, Karon, Chalong, and Patong, we offer fast and reliable weed delivery. Find the perfect strain to suit your needs and enjoy discreet, door-to-door service. Our collection includes a variety of Indica, Sativa, and Hybrid options, all carefully sourced from trusted growers. Experience the convenience of getting top-shelf weed delivered directly to your doorstep."
+            }
+          </Text>
+        </Box>
         <BuyOnline />
         <HomeTopInfos />
         <Box w={{ base: '100%' }}>
