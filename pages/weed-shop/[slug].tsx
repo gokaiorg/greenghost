@@ -223,24 +223,26 @@ export default function BudPage({ bud }: BudPageProps) {
                 </Box>
               )}
               {bud.quantity === 0 && (
-                <div
-                  style={{
-                    color: 'var(--ghostVerse-red-base)',
-                    fontSize: 'xl',
-                  }}
+                <Box
+                  as="span"
+                  fontFamily={'CubicFive12'}
+                  color={'ghostVerse.red.base'}
+                  fontSize={'md'}
+                  ml={'auto'}
                 >
                   SOLD OUT
-                </div>
+                </Box>
               )}
               {bud.price === 999 && (
-                <p
-                  style={{
-                    fontSize: '14px',
-                    color: 'var(--ghostVerse-green-base)',
-                  }}
+                <Box
+                  as="span"
+                  fontFamily={'CubicFive12'}
+                  color={'ghostVerse.yellow.base'}
+                  fontSize={'md'}
+                  ml={'auto'}
                 >
-                  Coming soon
-                </p>
+                  COMING SOON
+                </Box>
               )}
               <Box
                 as="ul"
