@@ -75,6 +75,7 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
           display="flex"
           mt={2}
           fontSize="2xl"
+          lineHeight={1}
           fontFamily="vt323"
           _hover={{ color: 'ghostVerse.green.base' }}
         >
@@ -90,6 +91,97 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
       >
         <IconsReview />
       </Link>
+      <Box as="h4" fontFamily="CubicFive12">
+        Also on
+      </Box>
+      <Box
+        as="ul"
+        aria-label="Best Weed Shop Links"
+        listStyleType={'none'}
+        display={'flex'}
+        flexWrap={'wrap'}
+      >
+        {shop?.tripadvisor?.length > 0 && (
+          <Box
+            as="li"
+            aria-label={`${shop.name} on Trip Advisor`}
+            listStyleType={'none'}
+            fontFamily="vt323"
+            mr={2}
+            _hover={{
+              color: 'ghostVerse.green.base',
+            }}
+          >
+            <Link
+              title={`Green Ghost 🌿👻 ${shop.name} on Trip Advisor`}
+              href={shop.tripadvisor}
+              passHref
+            >
+              Trip Advisor
+            </Link>
+          </Box>
+        )}
+        {shop?.weedin?.length > 0 && (
+          <Box
+            as="li"
+            aria-label={`${shop.name} on WEED.TH`}
+            listStyleType={'none'}
+            fontFamily="vt323"
+            mr={2}
+            _hover={{
+              color: 'ghostVerse.green.base',
+            }}
+          >
+            <Link
+              title={`Green Ghost 🌿👻 ${shop.name} on WEED.TH`}
+              href={shop.weedin}
+              passHref
+            >
+              WEED.TH
+            </Link>
+          </Box>
+        )}
+        {shop?.smokingskunk?.length > 0 && (
+          <Box
+            as="li"
+            aria-label={`${shop.name} on Smoking Skunk`}
+            listStyleType={'none'}
+            fontFamily="vt323"
+            mr={2}
+            _hover={{
+              color: 'ghostVerse.green.base',
+            }}
+          >
+            <Link
+              title={`Green Ghost 🌿👻 ${shop.name} on Smoking Skunk`}
+              href={shop.smokingskunk}
+              passHref
+            >
+              Smoking Skunk
+            </Link>
+          </Box>
+        )}
+        {shop?.restauguru?.length > 0 && (
+          <Box
+            as="li"
+            aria-label={`${shop.name} on Restaurant Guru`}
+            listStyleType={'none'}
+            fontFamily="vt323"
+            mr={2}
+            _hover={{
+              color: 'ghostVerse.green.base',
+            }}
+          >
+            <Link
+              title={`Green Ghost 🌿👻 ${shop.name} on Restaurant Guru`}
+              href={shop.restauguru}
+              passHref
+            >
+              Restaurant Guru
+            </Link>
+          </Box>
+        )}
+      </Box>
     </Box>
   );
 };
