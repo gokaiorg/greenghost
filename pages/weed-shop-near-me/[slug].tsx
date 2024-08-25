@@ -51,6 +51,11 @@ export default function ShopPage({ shop }: ShopPageProps) {
           name="twitter:url"
           content={`https://green.gd/weed-shop-near-me/${shop.slug}`}
         />
+        <meta property="og:video" content={shop.videoLink} />
+        <meta property="og:video:type" content="video/mp4" />
+        <meta property="og:video:width" content="1280" />
+        <meta property="og:video:height" content="720" />
+        <meta property="og:video:secure_url" content={shop.videoLink} />
       </Head>
       <MainLayout>
         <HeaderMenu>
@@ -105,6 +110,26 @@ export default function ShopPage({ shop }: ShopPageProps) {
           whiteSpace="pre-line"
         >
           {shop.description}
+        </Box>
+        <Box
+          width="100%"
+          position="relative"
+          paddingTop="56.25%" // 16:9 aspect ratio
+        >
+          <iframe
+            src={shop.videoLink}
+            title={`${shop.name} Video`}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+            }}
+          ></iframe>
         </Box>
       </MainLayout>
     </>

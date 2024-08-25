@@ -147,10 +147,6 @@ const WeedDelivery: NextPage = () => {
           property="og:video"
           content="https://www.youtube.com/shorts/7FrEbdNYbI0"
         />
-        <meta
-          property="og:video"
-          content="https://www.youtube.com/shorts/7FrEbdNYbI0"
-        />
         <meta property="og:video:type" content="video/mp4" />
         <meta property="og:video:width" content="1080" />
         <meta property="og:video:height" content="1920" />
