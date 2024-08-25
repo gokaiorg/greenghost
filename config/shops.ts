@@ -13,6 +13,7 @@ export type Shop = {
   descSeo: string;
   details: string;
   mapLink: string;
+  videoLink: string;
   images: string[];
 };
 
@@ -36,6 +37,7 @@ export const shops: Shop[] = [
       'Welcome to the exclusive realm of Green Ghost Degen Weed Shop in Rawai, an avant-garde cannabis destination like no other.',
     mapLink:
       'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d76998.36702840267!2d98.33663!3d7.804923!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30502fd6cfeb7ef5%3A0xa1a21dee68f3ab83!2sGreen%20Ghost%20%F0%9F%8C%BF%F0%9F%91%BB%20Best%20Degen%20Weed%20Shop%20and%20Delivery!5e1!3m2!1sen!2sth!4v1724033204965!5m2!1sen!2sth',
+    videoLink: 'https://www.youtube.com/embed/AhX9PlNbvPU',
     images: [
       '/media/green-ghost-degen-weed-shop-rawai-phuket-thailand-01.webp',
       '/media/green-ghost-degen-weed-shop-rawai-phuket-thailand-02.webp',
@@ -62,6 +64,7 @@ export const shops: Shop[] = [
       'Your local cannabis haven nestled in the heart of beautiful Karon, just moments away from the vibrant Karon Market, the serene Karon Temple, and the pristine Karon Beach in Phuket, Thailand.',
     mapLink:
       'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d76995.63991439389!2d98.2785734!3d7.8197138!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305025cdbe048e47%3A0xe9e1c35ad359e18f!2s452%20Patak%20Rd%2C%20Tambon%20Karon%2C%20Amphoe%20Mueang%20Phuket%2C%20Chang%20Wat%20Phuket%2083100!5e1!3m2!1sen!2sth!4v1724033960215!5m2!1sen!2sth',
+    videoLink: 'https://www.youtube.com/embed/lGpxomxAsoI?si=peQos07ZiOAWWeP6',
     images: [
       '/media/green-ghost-degen-weed-shop-karon-phuket-thailand-01.webp',
       '/media/green-ghost-degen-weed-shop-karon-phuket-thailand-02.webp',
@@ -86,6 +89,7 @@ export const shops: Shop[] = [
       'your ultimate destination for cannabis enthusiasts in the heart of Phuket Town. Conveniently situated on historic Thalang Road, just steps away from the bustling Sunday Market, our shop is your go-to spot for all things cannabis accessories.',
     mapLink:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4811.472213596345!2d98.385320075006!3d7.884923592137618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305031353d385cf7%3A0xfc698838827f19d1!2sGreen%20Ghost%20%F0%9F%8C%BF%F0%9F%91%BB%20Phuket%20Town%20%7C%20Weed%20Delivery!5e1!3m2!1sen!2sth!4v1724034029939!5m2!1sen!2sth',
+    videoLink: 'https://www.youtube.com/embed/qviAMP3d3O8?si=kMAcjzxR3EfRhitW',
     images: [
       '/media/green-ghost-degen-weed-shop-phuket-town-phuket-thailand-01.webp',
       '/media/green-ghost-degen-weed-shop-phuket-town-phuket-thailand-02.webp',
