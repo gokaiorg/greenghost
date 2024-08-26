@@ -163,7 +163,7 @@ export const buds: Bud[] = [
     images: [
       '/media/green-ghost-degen-weed-shop-strain-the-queen-s1-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-the-queen-s1-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-the-queen-s1-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-the-queen-s1-bud-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop The Queen S1 Strain',
     source: 'https://copycatgenetixx.com/shop/ols/products/the-queen-s1',
