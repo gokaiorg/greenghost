@@ -27,7 +27,6 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
       as="div"
       display="flex"
       flexDirection="column"
-      mt={5}
       position="relative"
     >
       <Box
@@ -41,7 +40,7 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
           alt={imageAlt}
           title={imageAlt}
           fill
-          style={{ objectFit: 'contain' }}
+          style={{ objectFit: 'cover' }}
           priority
           sizes="(max-width: 600px) 768px, (max-width: 1200px) 984px, 1240px"
           quality={75}
@@ -58,7 +57,7 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
         justifyContent="center"
         textAlign="center"
         fontWeight="black"
-        bgColor="rgba(0, 0, 0, 0.7)" // Semi-transparent background for contrast
+        bgColor="rgba(0, 0, 0, 0.8)" // Semi-transparent background for contrast
       >
         <Text
           as="h1"
