@@ -39,7 +39,7 @@ export const BestWeedShops = () => {
       </Text>
       <Box
         as="ul"
-        aria-label="Best Weed Shops Phuket Near Me"
+        aria-label="Best Weed Shops Phuket"
         listStyleType={'none'}
         w={'100%'}
         display={'flex'}
@@ -51,7 +51,7 @@ export const BestWeedShops = () => {
         ))}
       </Box>
       <Link
-        href={'/weed-shop-near-me'}
+        href={'/best-degen-weed-shop'}
         passHref
         title="Best Weed shops near me in Phuket"
       >

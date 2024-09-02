@@ -15,7 +15,6 @@ export const FindItem: FC<FindItemProps> = ({ name, findUsLink }) => {
       fontSize={22}
       color={'ghostVerse.grey.lighter'}
       bgColor={'ghostVerse.dark.lighter'}
-      backdropFilter={'blur(3px)'}
       _hover={{
         color: 'black',
         backgroundColor: 'ghostVerse.green.base',
