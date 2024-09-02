@@ -53,6 +53,26 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/weed-shop-near-me/phuket',
+        destination: '/best-degen-weed-shop/phuket',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-near-me/karon',
+        destination: '/best-degen-weed-shop/karon',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-near-me/rawai',
+        destination: '/best-degen-weed-shop/rawai',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-near-me',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
         source: '/contact-green-ghost',
         destination: '/contact',
         permanent: true,

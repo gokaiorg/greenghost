@@ -23,12 +23,7 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
   linkLabel,
 }) => {
   return (
-    <Box
-      as="div"
-      display="flex"
-      flexDirection="column"
-      position="relative"
-    >
+    <Box as="div" display="flex" flexDirection="column" position="relative">
       <Box
         as="span"
         w="100%"

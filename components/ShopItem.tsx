@@ -4,7 +4,6 @@ import { Shop } from '../config/shops';
 import { IconShop } from './media/IconShop';
 import { IconClock } from './media/IconClock';
 import { IconPin } from './media/IconPin';
-import { IconsReview } from './media/IconsReview';
 
 type ShopItemProps = {
   shop: Shop;
@@ -14,6 +13,8 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
   return (
     <Box
       as="li"
+      aria-label={`${shop.name}`}
+      listStyleType={'none'}
       display="flex"
       flexDirection="column"
       mb={4}
@@ -24,7 +25,7 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
       mr={2}
     >
       <Link
-        href={`weed-shop-near-me/${shop.slug}`}
+        href={`best-degen-weed-shop/${shop.slug}`}
         title={`Green Ghost 🌿👻 ${shop.name}`}
       >
         <Text
@@ -37,24 +38,43 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
           {shop.name}
         </Text>
       </Link>
-      <Box fontFamily="vt323" fontSize="2xl" mb={4} lineHeight={1}>
-        <Box display="flex" alignItems="center">
+      <Box
+        as="ul"
+        fontFamily="vt323"
+        fontSize="2xl"
+        mb={4}
+        lineHeight={1}
+        p={0}
+      >
+        <Box
+          as="li"
+          display="flex"
+          alignItems="center"
+          aria-label="Accommodations"
+        >
           <IconShop />
-          <Box ml={2} mb={1}>
+          <Box as="span" ml={2} mb={1}>
             {shop.details}
           </Box>
         </Box>
-        <Box display="flex" alignItems="center">
+        <Box as="li" display="flex" alignItems="center" aria-label="Hours">
           <IconClock />
-          <Box ml={2} mb={1}>
+          <Box as="span" ml={2} mb={1}>
             {shop.hours}
           </Box>
         </Box>
       </Box>
-      <Box w="100%" position="relative" pb="56.25%" overflow="hidden">
+      <Box
+        as="section"
+        aria-labelledby={`${shop.name} Google Map`}
+        w="100%"
+        position="relative"
+        pb="56.25%"
+        overflow="hidden"
+      >
         <iframe
           src={shop.mapLink}
-          title={`Green Ghost - ${shop.name} - Google Map`}
+          title={`Green Ghost 🌿👻 ${shop.name} Google Map`}
           style={{
             border: 0,
             position: 'absolute',
@@ -73,7 +93,7 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
       >
         <Box
           display="flex"
-          mt={2}
+          my={2}
           fontSize="2xl"
           lineHeight={1}
           fontFamily="vt323"
@@ -85,101 +105,40 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
           </Text>
         </Box>
       </Link>
-      <Link
-        href={shop.reviewLink}
-        title={`Green Ghost 🌿👻 ${shop.name} Add a Google Map Review`}
-      >
-        <IconsReview />
-      </Link>
-      <Box as="h4" fontFamily="CubicFive12">
-        Also on
-      </Box>
       <Box
         as="ul"
-        aria-label="Best Weed Shop Links"
+        aria-label={`${shop.name} Social Links`}
         listStyleType={'none'}
         display={'flex'}
         flexWrap={'wrap'}
       >
-        {shop?.tripadvisor?.length > 0 && (
-          <Box
-            as="li"
-            aria-label={`${shop.name} on Trip Advisor`}
-            listStyleType={'none'}
-            fontFamily="vt323"
-            mr={2}
-            _hover={{
-              color: 'ghostVerse.green.base',
-            }}
-          >
-            <Link
-              title={`Green Ghost 🌿👻 ${shop.name} on Trip Advisor`}
-              href={shop.tripadvisor}
-              passHref
-            >
-              Trip Advisor
-            </Link>
-          </Box>
-        )}
-        {shop?.weedin?.length > 0 && (
-          <Box
-            as="li"
-            aria-label={`${shop.name} on WEED.TH`}
-            listStyleType={'none'}
-            fontFamily="vt323"
-            mr={2}
-            _hover={{
-              color: 'ghostVerse.green.base',
-            }}
-          >
-            <Link
-              title={`Green Ghost 🌿👻 ${shop.name} on WEED.TH`}
-              href={shop.weedin}
-              passHref
-            >
-              WEED.TH
-            </Link>
-          </Box>
-        )}
-        {shop?.smokingskunk?.length > 0 && (
-          <Box
-            as="li"
-            aria-label={`${shop.name} on Smoking Skunk`}
-            listStyleType={'none'}
-            fontFamily="vt323"
-            mr={2}
-            _hover={{
-              color: 'ghostVerse.green.base',
-            }}
-          >
-            <Link
-              title={`Green Ghost 🌿👻 ${shop.name} on Smoking Skunk`}
-              href={shop.smokingskunk}
-              passHref
-            >
-              Smoking Skunk
-            </Link>
-          </Box>
-        )}
-        {shop?.restauguru?.length > 0 && (
-          <Box
-            as="li"
-            aria-label={`${shop.name} on Restaurant Guru`}
-            listStyleType={'none'}
-            fontFamily="vt323"
-            mr={2}
-            _hover={{
-              color: 'ghostVerse.green.base',
-            }}
-          >
-            <Link
-              title={`Green Ghost 🌿👻 ${shop.name} on Restaurant Guru`}
-              href={shop.restauguru}
-              passHref
-            >
-              Restaurant Guru
-            </Link>
-          </Box>
+        {shop.socialLinks.map(
+          (social) =>
+            social.link && ( // Check if the link is not empty
+              <Box
+                as="li"
+                aria-label={`${shop.name} ${social.label} Link`}
+                listStyleType="none"
+                fontFamily="vt323"
+                mr={2}
+                key={social.label}
+                px={1}
+                color={'black'}
+                bgColor={'ghostVerse.green.base'}
+                _hover={{
+                  color: 'ghostVerse.grey.lighter',
+                  backgroundColor: 'ghostVerse.dark.lighter',
+                }}
+              >
+                <Link
+                  title={`Green Ghost 🌿👻 ${shop.name} on ${social.label}`}
+                  href={social.link}
+                  passHref
+                >
+                  {social.label}
+                </Link>
+              </Box>
+            )
         )}
       </Box>
     </Box>

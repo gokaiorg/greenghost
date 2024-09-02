@@ -16,7 +16,13 @@ export const ReviewItem: FC<ReviewItemProps> = ({
   reviewLink,
 }) => {
   return (
-    <Box display={'flex'} my={'5'} bgColor={'ghostVerse.dark.lighter'} p={'5'}>
+    <Box
+      as="article"
+      display={'flex'}
+      my={'5'}
+      bgColor={'ghostVerse.dark.lighter'}
+      p={'5'}
+    >
       <TestimonialPfp />
       <Box
         display={'flex'}
