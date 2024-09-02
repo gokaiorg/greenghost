@@ -38,7 +38,7 @@ export const theme = extendTheme({
       shadowColor: '#141414',
       dark: {
         ultralight: 'rgb(0, 0, 0, 0.3)',
-        lighter: 'rgba(21,21,21,.8)',
+        lighter: 'rgb(17,17,17)',
         base: 'rgb(0, 0, 0, 0.5)',
         darker: '#000',
       },

@@ -19,7 +19,7 @@ export const MenuFooter = () => {
         <Box mx={2}>
           <Link
             title="Green Ghost Map Location"
-            href="/weed-shop-near-me"
+            href="/best-degen-weed-shop"
             passHref
           >
             Location

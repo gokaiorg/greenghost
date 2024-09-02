@@ -5,7 +5,7 @@ export const IconPin = () => {
       xmlns={'http://www.w3.org/2000/svg'}
       viewBox="0 0 24 24"
       fill={'#4cfd27'}
-      style={{ float: 'left', marginTop: '8', marginRight: '8' }}
+      style={{ float: 'left' }}
     >
       <path
         fillRule={'evenodd'}

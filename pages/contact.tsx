@@ -9,6 +9,7 @@ import Head from 'next/head';
 import { SocialContactIcons } from '../components/SocialContactIcons';
 import Image from 'next/image';
 import { ImgContact } from '../components/media/ImgContact';
+import { BestWeedShops } from '../components/BestWeedShops';
 
 const contactJSONLD = {
   contactPoint: {
@@ -101,8 +102,12 @@ const BuyWeed: NextPage = () => {
                 Call us
               </Text>
               <Text as="div" fontSize="2xl" color="ghostVerse.green.base">
-                <Link href="tel:+66936459898" passHref>
-                  +66 93 645 9898
+                <Link
+                  title={`Call: +66936459898`}
+                  href="tel:+66936459898"
+                  passHref
+                >
+                  +66936459898
                 </Link>
               </Text>
             </Box>
@@ -113,6 +118,7 @@ const BuyWeed: NextPage = () => {
               <SocialContactIcons />
             </Box>
           </Box>
+          <BestWeedShops />
           <Box>
             <Image
               src="/media/green-ghost-degen-weed-shop-contact-us.webp"
