@@ -6,7 +6,7 @@ export const Shop = () => {
   return (
     <Box mt={4} mb="10">
       <Text
-        as={'h2'}
+        as={'p'}
         textAlign={'center'}
         fontSize={{ base: '3xl' }}
         fontFamily={'vt323'}
@@ -14,6 +14,15 @@ export const Shop = () => {
         lineHeight={1}
       >
         Looking for a trusted and high-quality weed shop near you?
+      </Text>
+      <Text
+        as="h2"
+        fontSize="xl"
+        mb={2}
+        fontFamily="CubicFive12"
+        textAlign={'center'}
+      >
+        Find us
       </Text>
       <Box display={'flex'} flexWrap={'wrap'}>
         {shops.map((shop) => (

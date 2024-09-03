@@ -21,7 +21,6 @@ export const StrainWeek = () => {
       bottom={0}
       right={0}
       bgColor="ghostVerse.dark.lighter"
-      backdropFilter="blur(3px)"
       borderRadius="md"
       boxShadow="md"
     >
