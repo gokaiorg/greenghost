@@ -299,7 +299,8 @@ export default function ShopPage({ shop }: ShopPageProps) {
                         src={image}
                         width={250}
                         height={250}
-                        alt={shop.name}
+                        alt={`Green Ghost 🌿👻 ${shop.name}`}
+                        title={`Green Ghost 🌿👻 ${shop.name}`}
                         quality={75}
                         sizes="(max-width: 768px) 100vw, 250px"
                       />

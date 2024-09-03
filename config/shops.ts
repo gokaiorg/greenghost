@@ -53,6 +53,10 @@ export const shops: Shop[] = [
         label: 'Restaurant Guru',
         link: 'https://restaurantguru.com/Green-Ghost-Thailand',
       },
+      {
+        label: 'Apple Map',
+        link: 'https://maps.apple.com/?address=26/16%204024,%20Phuket,%20Phuket%2083130,%20Thailand&auid=3541566368782066682&ll=7.804892,98.336731&lsp=9902&q=Green%20Ghost',
+      },
     ],
   },
   {
@@ -92,6 +96,10 @@ export const shops: Shop[] = [
         label: 'Smoking Skunk',
         link: 'https://smokingskunk.com/weed-in-thailand/green-ghost-degen-weed-shop-karon/',
       },
+      {
+        label: 'Bing Map',
+        link: 'https://www.bing.com/maps?osid=a8753de2-61a3-4fc5-a01c-4bb159897058&cp=7.847206~98.293326&lvl=16&pi=0&imgid=32620f54-46f8-47a3-9ad3-a69e0fb9f5c9&v=2&sV=2&form=S00027',
+      },
     ],
   },
   {
@@ -111,9 +119,12 @@ export const shops: Shop[] = [
     videoLink: 'https://www.youtube.com/embed/qviAMP3d3O8?si=kMAcjzxR3EfRhitW',
     imagesOg: 'green-ghost-best-degen-weed-shop-delivery-phuket-thailand.webp',
     images: [
-      '/media/green-ghost-degen-weed-shop-phuket-town-phuket-thailand-01.webp',
-      '/media/green-ghost-degen-weed-shop-phuket-town-phuket-thailand-02.webp',
-      '/media/green-ghost-degen-weed-shop-phuket-town-phuket-thailand-03.webp',
+      '/media/green-ghost-degen-weed-shop-phuket-thailand-cannabis-delivery-01.webp',
+      '/media/green-ghost-degen-weed-shop-phuket-thailand-cannabis-delivery-02.webp',
+      '/media/green-ghost-degen-weed-shop-phuket-thailand-cannabis-delivery-03.webp',
+      '/media/green-ghost-degen-weed-shop-phuket-thailand-cannabis-delivery-04.webp',
+      '/media/green-ghost-degen-weed-shop-phuket-thailand-cannabis-delivery-05.webp',
+      '/media/green-ghost-degen-weed-shop-phuket-thailand-cannabis-delivery-06.webp',
     ],
     socialLinks: [
       {

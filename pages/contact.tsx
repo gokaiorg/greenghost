@@ -9,7 +9,7 @@ import Head from 'next/head';
 import { SocialContactIcons } from '../components/SocialContactIcons';
 import Image from 'next/image';
 import { ImgContact } from '../components/media/ImgContact';
-import { BestWeedShops } from '../components/BestWeedShops';
+import { Shop } from '../components/Shop';
 
 const contactJSONLD = {
   contactPoint: {
@@ -74,7 +74,7 @@ const BuyWeed: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <Box as="section" textAlign="center" my={4} lineHeight={1}>
+        <Box as="section" my={4}>
           <Box
             display="flex"
             flexDirection="column"
@@ -86,7 +86,14 @@ const BuyWeed: NextPage = () => {
             <ImgContact />
             <HomeSectionTitle title="Contact" />
           </Box>
-          <Text as="h2" fontSize={{ base: '3xl' }} fontFamily="vt323" mb={10}>
+          <Text
+            as="p"
+            fontSize={{ base: '3xl' }}
+            lineHeight={1}
+            fontFamily="vt323"
+            mb={10}
+            textAlign={'center'}
+          >
             Get in touch with the Green Ghost for all your cannabis inquiries.
           </Text>
           <Box
@@ -98,10 +105,16 @@ const BuyWeed: NextPage = () => {
             gap={6}
           >
             <Box textAlign="left" fontFamily="CubicFive12">
-              <Text as="h3" fontSize="xl" mb={2}>
+              <Text as="h2" fontSize="xl" mb={2}>
                 Call us
               </Text>
-              <Text as="div" fontSize="2xl" color="ghostVerse.green.base">
+              <Text
+                as="div"
+                fontSize="2xl"
+                color="ghostVerse.green.base"
+                p={2}
+                bgColor="ghostVerse.dark.lighter"
+              >
                 <Link
                   title={`Call: +66936459898`}
                   href="tel:+66936459898"
@@ -112,13 +125,13 @@ const BuyWeed: NextPage = () => {
               </Text>
             </Box>
             <Box textAlign="left">
-              <Text as="h3" fontSize="xl" mb={2} fontFamily="CubicFive12">
+              <Text as="h2" fontSize="xl" mb={2} fontFamily="CubicFive12">
                 Text us
               </Text>
               <SocialContactIcons />
             </Box>
           </Box>
-          <BestWeedShops />
+          <Shop />
           <Box>
             <Image
               src="/media/green-ghost-degen-weed-shop-contact-us.webp"
