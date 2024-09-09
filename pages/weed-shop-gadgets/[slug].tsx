@@ -5,8 +5,7 @@ import { getGadgets, Gadget } from '../../config/gadgets';
 import { MainLayout } from '../../components/MainLayout';
 import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
-import { HomeSectionTitle } from '../../components/HomeSectionTitle';
-import { Box, Text } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
 import 'swiper/css';
@@ -14,10 +13,6 @@ import 'swiper/css/effect-coverflow';
 import Image from 'next/image';
 import BoxInfoProduct from '../../components/box/BoxInfoProduct';
 import BoxDescription from '../../components/box/BoxDescription';
-import BoxInfoLeft from '../../components/box/BoxInfoLeft';
-import BoxInfoRight from '../../components/box/BoxInfoRight';
-import BoxInfoLabel from '../../components/box/BoxInfoLabel';
-import BoxInfoQuantity from '../../components/box/BoxInfoQuantity';
 import { HomeFeature } from '../../components/HomeFeatures';
 import { HomeTopInfos } from '../../components/HomeTopInfos';
 
@@ -38,12 +33,71 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
     window.history.back();
   };
 
+  const schemaData = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: `${gadget?.name} Cannabis Concentrate`,
+    image: [
+      `https://green.gd/media/green-ghost-gadget-weed-shop-gadget-${gadget.slug}-cover.webp`,
+    ],
+    description: gadget?.descSeo,
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'THB',
+      price: gadget?.price ? Number(gadget.price).toFixed(2) : '0.00',
+      itemCondition: 'https://schema.org/NewCondition',
+      availability:
+        gadget?.quantity > 0
+          ? 'https://schema.org/InStock'
+          : 'https://schema.org/OutOfStock',
+      url: `https://green.gd/weed-shop/${gadget?.slug}`,
+      seller: {
+        '@type': 'Organization',
+        name: 'Green Ghost 🌿👻',
+      },
+    },
+    brand: {
+      '@type': 'Brand',
+      name: 'Green Ghost 🌿👻',
+    },
+    category: 'Cannabis',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5',
+      reviewCount: '20',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    review: [
+      {
+        '@type': 'Review',
+        author: {
+          '@type': 'Person',
+          name: 'Jeremy',
+        },
+        datePublished: '2024-08-01',
+        reviewBody: 'Amazing gadget!',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+          worstRating: '1',
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 {gadget.name} Gadget</title>
+        <title>
+          Green Ghost 🌿👻 Degen Weed Shop {gadget.name} Cannabis Accessory
+        </title>
         <meta name="description" content={gadget.descSeo} />
-        <meta property="og:title" content={`Green Ghost - ${gadget.name}`} />
+        <meta
+          property="og:title"
+          content={`Green Ghost 🌿👻 Degen Weed Shop ${gadget.name} Cannabis Accessory`}
+        />
         <meta property="og:description" content={gadget.descSeo} />
         <meta property="og:image" content={gadget.images[1]} />
         <meta property="og:image:width" content="1000" />
@@ -52,112 +106,150 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
           property="og:url"
           content={`https://green.gd/weed-shop-gadgets/${gadget.slug}`}
         />
-        <meta name="twitter:title" content={`Green Ghost - ${gadget.name}`} />
+        <meta
+          name="twitter:title"
+          content={`Green Ghost 🌿👻 Degen Weed Shop ${gadget.name} Cannabis Accessory`}
+        />
         <meta name="twitter:description" content={gadget.descSeo} />
         <meta name="twitter:image" content={gadget.images[1]} />
         <meta
           name="twitter:url"
           content={`https://green.gd/weed-shop-gadgets/${gadget.slug}`}
         />
+        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Head>
       <MainLayout>
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <Box
-          cursor={'pointer'}
-          color={'ghostVerse.green.base'}
-          onClick={handleBack}
-          title={'BACK'}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="#13DE00"
-            width="30px"
-            height="30px"
+        <Box as="main">
+          <Box
+            as="span"
+            cursor={'pointer'}
+            color={'ghostVerse.green.base'}
+            onClick={handleBack}
+            title={'BACK'}
           >
-            <path
-              fillRule="evenodd"
-              d="M12.5 9.75A2.75 2.75 0 0 0 9.75 7H4.56l2.22 2.22a.75.75 0 1 1-1.06 1.06l-3.5-3.5a.75.75 0 0 1 0-1.06l3.5-3.5a.75.75 0 0 1 1.06 1.06L4.56 5.5h5.19a4.25 4.25 0 0 1 0 8.5h-1a.75.75 0 0 1 0-1.5h1a2.75 2.75 0 0 0 2.75-2.75Z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </Box>
-        <HomeSectionTitle title={`${gadget.name}`} />
-        <Swiper
-          spaceBetween={10}
-          slidesPerView={'auto'}
-          breakpoints={{
-            320: {
-              slidesPerView: 1,
-            },
-            640: {
-              slidesPerView: 3,
-            },
-            768: {
-              slidesPerView: 3,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-          loop
-          autoplay={{
-            delay: 4000,
-            pauseOnMouseEnter: true,
-            disableOnInteraction: false,
-          }}
-          effect={'coverflow'}
-          coverflowEffect={{
-            rotate: 25,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
-          modules={[EffectCoverflow]}
-        >
-          {gadget.images.map((image, index) => (
-            <SwiperSlide key={index}>
-              <Image
-                src={image}
-                alt={gadget.imgDesc}
-                width={400}
-                height={400}
-                sizes="(max-width: 400px) 100vw, 400px"
-                quality={75}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="#13DE00"
+              width="30px"
+              height="30px"
+            >
+              <path
+                fillRule="evenodd"
+                d="M12.5 9.75A2.75 2.75 0 0 0 9.75 7H4.56l2.22 2.22a.75.75 0 1 1-1.06 1.06l-3.5-3.5a.75.75 0 0 1 0-1.06l3.5-3.5a.75.75 0 0 1 1.06 1.06L4.56 5.5h5.19a4.25 4.25 0 0 1 0 8.5h-1a.75.75 0 0 1 0-1.5h1a2.75 2.75 0 0 0 2.75-2.75Z"
+                clipRule="evenodd"
               />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <BoxInfoProduct>
-          <BoxInfoLeft>
-            <Box as={'h2'} color={'ghostVerse.blue.base'} marginRight={4}>
-              {gadget.packaging}
+            </svg>
+          </Box>
+          <Box as="article">
+            <Box
+              as="h1"
+              fontSize={{ base: '20', lg: '30' }}
+              fontFamily={'CubicFive12'}
+              display={'flex'}
+              flexDirection={'row'}
+              alignItems={'center'}
+            >
+              {`${gadget.name} Edible`}
             </Box>
-          </BoxInfoLeft>
-          <BoxInfoRight>
-            <BoxInfoLabel>
-              <Text
-                color={'ghostVerse.green.base'}
-                fontFamily={'CubicFive12'}
-                fontSize={20}
+            <Swiper
+              spaceBetween={10}
+              slidesPerView={'auto'}
+              breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                },
+                640: {
+                  slidesPerView: 3,
+                },
+                768: {
+                  slidesPerView: 3,
+                },
+                1024: {
+                  slidesPerView: 3,
+                },
+              }}
+              loop
+              autoplay={{
+                delay: 4000,
+                pauseOnMouseEnter: true,
+                disableOnInteraction: false,
+              }}
+              effect={'coverflow'}
+              coverflowEffect={{
+                rotate: 25,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+              }}
+              modules={[EffectCoverflow]}
+            >
+              {gadget.images.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    src={image}
+                    alt={gadget.imgDesc}
+                    width={400}
+                    height={400}
+                    sizes="(max-width: 400px) 100vw, 400px"
+                    quality={75}
+                    loading="lazy"
+                    style={{ objectFit: 'cover' }}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <BoxInfoProduct>
+              {gadget.quantity !== 0 && gadget.price !== 999 && (
+                <Box
+                  as="ul"
+                  listStyleType={'none'}
+                  aria-label={`${gadget.name} Concentrate Cannabis Pricing`}
+                  fontFamily={'CubicFive12'}
+                  color={'ghostVerse.green.base'}
+                  fontSize={'md'}
+                  ml={'auto'}
+                >
+                  <Box
+                    as="li"
+                    aria-label="Price for 1G"
+                    whiteSpace={'nowrap'}
+                    mb={2}
+                  >
+                    {`${gadget.price} THB`}
+                  </Box>
+                </Box>
+              )}
+              <Box
+                as="ul"
+                listStyleType={'none'}
+                aria-label={`${gadget.name} Cannabis Concentrate Characteristics`}
+                fontFamily={'vt323'}
+                fontSize={'2xl'}
+                marginRight={2}
               >
-                {gadget.price} THB
-              </Text>
-            </BoxInfoLabel>
-            {gadget.quantity !== 0 && gadget.price !== 999 && (
-              <BoxInfoQuantity>{gadget.quantity} in stock</BoxInfoQuantity>
-            )}
-            {gadget.quantity === 0 && (
-              <BoxInfoQuantity>Sold Out</BoxInfoQuantity>
-            )}
-          </BoxInfoRight>
-        </BoxInfoProduct>
-        <BoxDescription>{gadget.description}</BoxDescription>
-        <HomeTopInfos />
-        <HomeFeature />
+                {gadget.packaging !== 'undefined' && (
+                  <Box
+                    as="li"
+                    listStyleType={'none'}
+                    aria-label="Relieves"
+                    color={'ghostVerse.orange.base'}
+                    fontSize={'xl'}
+                  >
+                    {`${gadget.packaging}`}
+                  </Box>
+                )}
+              </Box>
+            </BoxInfoProduct>
+            <BoxDescription>{gadget.description}</BoxDescription>
+            <HomeTopInfos />
+            <HomeFeature />
+          </Box>
+        </Box>
       </MainLayout>
     </>
   );

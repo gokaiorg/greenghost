@@ -28,7 +28,7 @@ export const gadgets: Gadget[] = [
       '/media/green-ghost-degen-weed-shop-menu-gadget-metal-grinder-50mm-2-layer-03.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-metal-grinder-50mm-2-layer-02.webp',
     ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Metal Grinder',
+    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Metal Grinder',
   },
   {
     slug: 'small-metal-grinder',
@@ -45,7 +45,7 @@ export const gadgets: Gadget[] = [
       '/media/green-ghost-degen-weed-shop-menu-gadget-small-metal-grinder-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-small-metal-grinder-qr-code.webp',
     ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Small Metal Grinder',
+    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Small Metal Grinder',
   },
   {
     slug: 'classic-ice-bong',
@@ -63,7 +63,7 @@ export const gadgets: Gadget[] = [
       '/media/green-ghost-degen-weed-shop-menu-gadget-classic-ice-bong-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-classic-ice-bong-03.webp',
     ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Classic Ice Bong',
+    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Classic Ice Bong',
   },
   {
     slug: 'clipper-lighter',
@@ -80,7 +80,7 @@ export const gadgets: Gadget[] = [
       '/media/green-ghost-degen-weed-shop-menu-gadget-clipper-lighter-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-clipper-lighter-qr-code.webp',
     ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Clipper Lighter',
+    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Clipper Lighter',
   },
   {
     slug: 'wood-grinder-68mm-2-layer',
@@ -99,7 +99,7 @@ export const gadgets: Gadget[] = [
       '/media/green-ghost-degen-weed-shop-menu-gadget-wood-grinder-68mm-2-layer-03.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-wood-grinder-68mm-2-layer-02.webp',
     ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Wood Grinder',
+    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Wood Grinder',
   },
   {
     slug: 'wizman-rolling-papers',
@@ -116,7 +116,7 @@ export const gadgets: Gadget[] = [
       '/media/green-ghost-degen-weed-shop-menu-gadget-wizman-rolling-paper-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-wizman-rolling-paper-qr-code.webp',
     ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Wizman Rolling Paper',
+    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Wizman Rolling Paper',
   },
   {
     slug: 'slimjim-rolling-papers',
@@ -133,7 +133,7 @@ export const gadgets: Gadget[] = [
       '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-qr-code.webp',
     ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - SlimJim Rolling Paper',
+    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop SlimJim Rolling Paper',
   },
   {
     slug: 'slimjim-rolling-papers-tips',
@@ -150,12 +150,12 @@ export const gadgets: Gadget[] = [
       '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-tips-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-tips-qr-code.webp',
     ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - SlimJim Rolling Paper + Tips',
+    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop SlimJim Rolling Paper + Tips',
   },
   {
     slug: 'weed-th-rolling-papers-tips',
     name: 'WEED.TH Rolling Papers + Tips',
-    price: 130,
+    price: 100,
     packaging: '32 Leaves, Unbleached',
     quantity: 150,
     description:
@@ -169,7 +169,7 @@ export const gadgets: Gadget[] = [
       '/media/green-ghost-degen-weed-shop-menu-gadget-weed-th-rolling-paper-tips-04.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-weed-th-rolling-paper-tips-05.webp',
     ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - WEED.TH Rolling Paper + Tips',
+    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop WEED.TH Rolling Paper + Tips',
   },
 ];
 

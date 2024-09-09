@@ -1,13 +1,10 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Gadget } from '../../config/gadgets';
 import BoxItemShop from './elements/BoxItemShop';
 import BoxItemDescShop from './elements/BoxItemDescShop';
-import BoxItemTitleShop from './elements/BoxItemTitleShop';
 import BoxItemPriceShop from './elements/BoxItemPriceShop';
-import BoxItemList from './elements/BoxItemList';
-import ButtonAddCart from './elements/ButtonAddCart';
 
 type GadgetItemProps = {
   gadget: Gadget;
@@ -15,7 +12,13 @@ type GadgetItemProps = {
 
 export const GadgetItem = ({ gadget }: GadgetItemProps) => {
   return (
-    <BoxItemList>
+    <Box
+      as="li"
+      aria-label={`Cannabis Accessory Menu ${gadget.name}`}
+      listStyleType={'none'}
+      width={{ base: '50%', md: '33.33333%', lg: '25%', xl: '20%' }}
+      p={0.5}
+    >
       <Link
         href={`weed-shop-gadgets/${gadget.slug}`}
         title={gadget.name}
@@ -30,56 +33,46 @@ export const GadgetItem = ({ gadget }: GadgetItemProps) => {
             <Image
               src={gadget.images[1]}
               alt={gadget.imgDesc}
-              width={700}
-              height={700}
               title={gadget.imgDesc}
-              priority={false}
+              width={250}
+              height={250}
+              sizes="(max-width: 600px) 160px, (max-width: 1200px) 240px, 240px"
               quality={75}
+              style={{ objectFit: 'cover' }}
             />
-            <ButtonAddCart>Buy</ButtonAddCart>
           </Box>
           <BoxItemDescShop>
-            <BoxItemTitleShop>
-              <BoxItemPriceShop>
-                {gadget.price == 999 ? (
-                  <Box
-                    fontSize={{ base: 14, lg: 16 }}
-                    color={'ghostVerse.green.base'}
-                  >
-                    Coming Soon
-                  </Box>
-                ) : gadget.quantity === 0 ? (
-                  <Box
-                    fontSize={{ base: 14, lg: 16 }}
-                    color={'ghostVerse.red.base'}
-                  >
-                    Sold Out
-                  </Box>
-                ) : (
-                  <Box
-                    fontSize={{ base: 14, lg: 16 }}
-                    color={'ghostVerse.green.base'}
-                  >
-                    {gadget.price} THB
-                  </Box>
-                )}
-              </BoxItemPriceShop>
-              {gadget.name}
-            </BoxItemTitleShop>
+            <Box as="li" aria-label={`Product Name`} listStyleType={'none'}>
+              <Text
+                itemProp="name"
+                as={'h2'}
+                fontFamily={'CubicFive12'}
+                fontSize={{ base: 16 }}
+                display={'flex'}
+                flexDirection={'column'}
+                marginRight={1}
+              >
+                {gadget.name}
+              </Text>
+            </Box>
+            {gadget.price !== 999 && (
+              <BoxItemPriceShop>{`${gadget.price} THB`}</BoxItemPriceShop>
+            )}
             <Box
+              as="li"
+              aria-label={`Product THC level`}
+              listStyleType={'none'}
               display={'flex'}
-              flexDirection={'column'}
               fontFamily={'vt323'}
               fontSize={'2xl'}
+              color={'ghostVerse.grey.base'}
               mb={1}
             >
-              <Box as={'h4'} color={'ghostVerse.blue.base'} marginRight={4}>
-                {gadget.packaging}
-              </Box>
+              {`${gadget.packaging}`}
             </Box>
           </BoxItemDescShop>
         </BoxItemShop>
       </Link>
-    </BoxItemList>
+    </Box>
   );
 };

@@ -19,8 +19,8 @@ export const degens: Degen[] = [
     name: 'Bubble Hash',
     price: 999,
     packaging: '1g',
-    THC: '60%',
-    CBD: '1% - 10mg/g',
+    THC: '60',
+    CBD: '0',
     ingretiens: 'Kief, Oil',
     quantity: 0,
     description:
@@ -33,15 +33,16 @@ export const degens: Degen[] = [
       '/media/green-ghost-degen-weed-shop-menu-degen-bubble-hash-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-menu-degen-bubble-hash-photo-02.webp',
     ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Bubble Hash',
+    imgDesc:
+      'Green Ghost 🌿👻 Degen Weed Shop Bubble Hash Cannabis Concentrate',
   },
   {
     slug: 'pollen-hash',
     name: 'Pollen Hash',
     price: 500,
     packaging: '1g',
-    THC: '40%',
-    CBD: '1% - 10mg/g',
+    THC: '40',
+    CBD: '0',
     ingretiens: 'Kief, Oil',
     quantity: 20,
     description:
@@ -54,15 +55,16 @@ export const degens: Degen[] = [
       '/media/green-ghost-degen-weed-shop-menu-degen-pollen-hash-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-menu-degen-pollen-hash-photo-02.webp',
     ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Pollen Hash',
+    imgDesc:
+      'Green Ghost 🌿👻 Degen Weed Shop Pollen Hash Cannabis Concentrate',
   },
   {
     slug: 'pure-kief',
     name: 'Pure Kief',
     price: 999,
     packaging: 'Sativa. 150 microns - 1g',
-    THC: '60%',
-    CBD: 'undefined',
+    THC: '60',
+    CBD: '0',
     ingretiens: '100% Kief',
     quantity: 0,
     description:
@@ -74,7 +76,7 @@ export const degens: Degen[] = [
       '/media/green-ghost-degen-weed-shop-degen-pure-kief-cover.webp',
       '/media/green-ghost-degen-weed-shop-degen-pure-kief-qr-code.webp',
     ],
-    imgDesc: 'Green Ghost - Degen Weed Shop - Pure Kief',
+    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Pure Kief Cannabis Concentrate',
   },
 ];
 

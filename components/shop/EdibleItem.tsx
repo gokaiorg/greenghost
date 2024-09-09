@@ -1,12 +1,10 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Edible } from '../../config/edibles';
 import BoxItemShop from './elements/BoxItemShop';
 import BoxItemDescShop from './elements/BoxItemDescShop';
-import BoxItemTitleShop from './elements/BoxItemTitleShop';
 import BoxItemPriceShop from './elements/BoxItemPriceShop';
-import BoxItemList from './elements/BoxItemList';
 
 type EdibleItemProps = {
   edible: Edible;
@@ -14,10 +12,16 @@ type EdibleItemProps = {
 
 export const EdibleItem = ({ edible }: EdibleItemProps) => {
   return (
-    <BoxItemList>
+    <Box
+      as="li"
+      aria-label={`Cannabis Edible Menu ${edible.name}`}
+      listStyleType={'none'}
+      width={{ base: '50%', md: '33.33333%', lg: '25%', xl: '20%' }}
+      p={0.5}
+    >
       <Link
         href={`weed-shop-edibles/${edible.slug}`}
-        title={edible.name}
+        title={`Green Ghost 🌿👻 Degen Weed Shop Best ${edible.name} Edible`}
         passHref
       >
         <BoxItemShop>
@@ -29,52 +33,62 @@ export const EdibleItem = ({ edible }: EdibleItemProps) => {
             <Image
               src={edible.images[1]}
               alt={edible.imgDesc}
-              width={700}
-              height={700}
               title={edible.imgDesc}
-              priority={false}
+              width={250}
+              height={250}
+              sizes="(max-width: 600px) 160px, (max-width: 1200px) 240px, 240px"
               quality={75}
+              style={{ objectFit: 'cover' }}
             />
           </Box>
           <BoxItemDescShop>
-            <BoxItemTitleShop>
-              {edible.price !== 999 && (
-                <BoxItemPriceShop>{edible.price} THB</BoxItemPriceShop>
-              )}
-              {edible.name}
-            </BoxItemTitleShop>
-
-            <Box display={'flex'} fontFamily={'vt323'} fontSize={'2xl'} mb={1}>
-              {edible.THC !== 'undefined' && (
-                <Box display={'flex'} marginRight={2} flexDirection={'row'}>
-                  THC
-                  <Box
-                    marginLeft={2}
-                    color={'ghostVerse.green.base'}
-                    display={'flex'}
-                    flexDirection={'row'}
-                    alignItems={'baseline'}
-                  >
-                    {edible.THC}
-                  </Box>
-                </Box>
-              )}
-            </Box>
-
-            {edible.effects !== 'undefined' && (
-              <Box
+            <Box as="li" aria-label={`Product Name`} listStyleType={'none'}>
+              <Text
+                itemProp="name"
+                as={'h2'}
+                fontFamily={'CubicFive12'}
+                fontSize={{ base: 16 }}
                 display={'flex'}
-                fontFamily={'vt323'}
-                fontSize={'lg'}
-                mt={'auto'}
+                flexDirection={'column'}
+                marginRight={1}
+              >
+                {edible.name}
+              </Text>
+            </Box>
+            {edible.price !== 999 && (
+              <BoxItemPriceShop>{`${edible.price} THB`}</BoxItemPriceShop>
+            )}
+            <Box
+              as="li"
+              aria-label={`Product THC level`}
+              listStyleType={'none'}
+              display={'flex'}
+              fontFamily={'vt323'}
+              fontSize={'2xl'}
+              color={'ghostVerse.grey.base'}
+              mb={1}
+            >
+              <Box as={'h3'} color={'ghostVerse.yellow.base'} marginRight={2}>
+                {`${edible.packaging}`}
+              </Box>
+              <Box
+                as="h3"
+                display={'flex'}
+                fontSize={'2xl'}
+                flexWrap={'wrap'}
+                mb={1}
+                ml={'auto'}
                 color={'ghostVerse.grey.base'}
               >
-                {edible.effects}
+                {edible.THC >= edible.CBD && <>{`THC ${edible.THC}mg`}</>}
+                {edible.THC <= edible.CBD && edible.CBD !== '0' && (
+                  <>{`CBD ${edible.CBD}mg`}</>
+                )}
               </Box>
-            )}
+            </Box>
           </BoxItemDescShop>
         </BoxItemShop>
       </Link>
-    </BoxItemList>
+    </Box>
   );
 };

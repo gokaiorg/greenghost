@@ -52,8 +52,7 @@ const WeedDelivery: NextPage = () => {
       <Link href={href} title={title} passHref>
         <Box
           as="span"
-          bgColor={'ghostVerse.dark.lighter'}
-          backdropFilter="blur(3px)"
+          bgColor="rgba(0, 0, 0, 0.8)"
           textAlign="center"
           p={4}
           position="absolute"
