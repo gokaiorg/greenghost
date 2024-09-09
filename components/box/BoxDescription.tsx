@@ -9,7 +9,7 @@ const BoxDescription: FC<BoxProps> = ({ children }) => {
   return (
     <Box
       as="section"
-      aria-labelledby="Strain Description"
+      aria-labelledby="Product Description"
       bgColor={'ghostVerse.dark.lighter'}
       backdropFilter={'blur(3px)'}
       width="full"

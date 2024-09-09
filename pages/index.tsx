@@ -35,7 +35,7 @@ const Home: NextPage = () => {
         />
         <meta
           property="og:image"
-          content="https://green.gd/green-ghost-degen-weed-shop.png"
+          content="https://green.gd/media/green-ghost-best-degen-weed-shop-delivery-phuket-thailand.webp"
         />
         <meta property="og:image:width" content="2048" />
         <meta property="og:image:height" content="1366" />
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
         />
         <meta
           name="twitter:image"
-          content="https://green.gd/green-ghost-degen-weed-shop.png"
+          content="https://green.gd/media/green-ghost-best-degen-weed-shop-delivery-phuket-thailand.webp"
         />
         <meta name="twitter:url" content="https://green.gd/" />
       </Head>

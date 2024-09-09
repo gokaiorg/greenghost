@@ -9,7 +9,7 @@ const BoxInfoProduct: FC<BoxProps> = ({ children }) => {
   return (
     <Box
       as="section"
-      aria-labelledby="Strain Pricing and Characteristics"
+      aria-labelledby="Product Pricing and Characteristics"
       display={'flex'}
       flexDirection={{ base: 'row-reverse', md: 'row-reverse' }}
       alignItems={'start'}

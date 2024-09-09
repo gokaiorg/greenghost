@@ -75,6 +75,19 @@ export const BudItem = ({ bud }: BudItemProps) => {
             )}
           </Swiper>
           <BoxItemDescShop>
+            <Box as="li" aria-label={`Product Name`} listStyleType={'none'}>
+              <Text
+                itemProp="name"
+                as={'h2'}
+                fontFamily={'CubicFive12'}
+                fontSize={{ base: 16 }}
+                display={'flex'}
+                flexDirection={'column'}
+                marginRight={1}
+              >
+                {bud.name}
+              </Text>
+            </Box>
             <BoxItemPriceShop>
               {bud.price == 999 ? (
                 <Box
@@ -101,24 +114,7 @@ export const BudItem = ({ bud }: BudItemProps) => {
             </BoxItemPriceShop>
             <Box
               as="li"
-              aria-label={`Buds Menu Strain Name`}
-              listStyleType={'none'}
-            >
-              <Text
-                itemProp="name"
-                as={'h2'}
-                fontFamily={'CubicFive12'}
-                fontSize={{ base: 16 }}
-                display={'flex'}
-                flexDirection={'column'}
-                marginRight={1}
-              >
-                {bud.name}
-              </Text>
-            </Box>
-            <Box
-              as="li"
-              aria-label={`Buds Menu Strain Dominance and THC level`}
+              aria-label={`Product Dominance and THC level`}
               listStyleType={'none'}
               display={'flex'}
               fontFamily={'vt323'}
