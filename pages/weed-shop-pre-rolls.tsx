@@ -22,7 +22,7 @@ const WeedShopPreRolls: NextPage = () => {
       position: index + 1,
       item: {
         '@type': 'Product',
-        name: bud.name,
+        name: `${bud.name} Pre Roll`,
         description: bud.description,
         image: [
           `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-cover.webp`,

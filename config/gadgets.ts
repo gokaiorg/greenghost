@@ -31,23 +31,6 @@ export const gadgets: Gadget[] = [
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Metal Grinder',
   },
   {
-    slug: 'small-metal-grinder',
-    name: 'Small Metal Grinder',
-    price: 150,
-    packaging: '40x25mm, 2-layer',
-    quantity: 3,
-    description:
-      'Elevate your herb preparation game with our Small Metal Grinder. Crafted from robust aluminum, this compact powerhouse measures 40mm in width and 25mm in height. Designed for durability and efficiency, this grinder ensures a consistently smooth grind for your favorite herbs. Get ready to enjoy a finely tuned experience with our Small Metal Grinder, the perfect companion for your smoking adventures.',
-    descSeo:
-      'Elevate your herb preparation game with our Small Metal Grinder. Crafted from robust aluminum, this compact powerhouse measures 40mm in width and 25mm in height. Designed for durability and efficiency, this grinder ensures a consistently smooth grind for your favorite herbs. Get ready to enjoy a finely tuned experience with our Small Metal Grinder, the perfect companion for your smoking adventures.',
-    images: [
-      '/media/green-ghost-degen-weed-shop-menu-gadget-small-metal-grinder-02.webp',
-      '/media/green-ghost-degen-weed-shop-menu-gadget-small-metal-grinder-01.webp',
-      '/media/green-ghost-degen-weed-shop-menu-gadget-small-metal-grinder-qr-code.webp',
-    ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Small Metal Grinder',
-  },
-  {
     slug: 'classic-ice-bong',
     name: 'Classic Ice Bong',
     price: 600,
