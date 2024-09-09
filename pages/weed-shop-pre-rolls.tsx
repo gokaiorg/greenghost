@@ -9,8 +9,40 @@ import { HomeFeature } from '../components/HomeFeatures';
 import { BuyOnline } from '../components/BuyOnline';
 import { Box } from '@chakra-ui/react';
 import Image from 'next/image';
+import { buds } from '../config/buds';
 
 const WeedShopPreRolls: NextPage = () => {
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Pre Rolls Menu',
+    description: 'Weed Shop Premium Cannabis Pre Rolls Menu',
+    itemListElement: buds.map((bud, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Product',
+        name: bud.name,
+        description: bud.description,
+        image: [
+          `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-cover.webp`,
+          `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-product-01.webp`,
+          `https://green.gd/media/green-ghost-degen-weed-shop-strain-${bud.slug}-product-02.webp`,
+        ],
+        offers: {
+          '@type': 'Offer',
+          price: `${bud.price + 20}`,
+          priceCurrency: 'THB',
+        },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '5',
+          reviewCount: '13',
+        },
+      },
+    })),
+  };
+
   return (
     <>
       <Head>
@@ -54,6 +86,10 @@ const WeedShopPreRolls: NextPage = () => {
         <meta
           name="twitter:url"
           content="https://green.gd/weed-shop-pre-rolls"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
         />
       </Head>
       <MainLayout>

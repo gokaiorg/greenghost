@@ -9,8 +9,40 @@ import { HomeFeature } from '../../components/HomeFeatures';
 import { BuyOnline } from '../../components/BuyOnline';
 import { Box } from '@chakra-ui/react';
 import Image from 'next/image';
+import { degens } from '../../config/degens';
 
 const GhostDegenWeedShop: NextPage = () => {
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Cannabis Concentrate Menu',
+    description: 'Weed Shop Premium Cannabis Concentrate Menu',
+    itemListElement: degens.map((degen, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Product',
+        name: degen.name,
+        description: degen.description,
+        image: [
+          `https://green.gd/media/green-ghost-degen-weed-shop-menu-degen-${degen.slug}-cover.webp`,
+          `https://green.gd/media/green-ghost-degen-weed-shop-menu-degen-${degen.slug}-photo-01.webp`,
+          `https://green.gd/media/green-ghost-degen-weed-shop-menu-degen-${degen.slug}-photo-02.webp`,
+        ],
+        offers: {
+          '@type': 'Offer',
+          price: degen.price.toFixed(2),
+          priceCurrency: 'THB',
+        },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '5',
+          reviewCount: '13',
+        },
+      },
+    })),
+  };
+
   return (
     <>
       <Head>
@@ -47,6 +79,10 @@ const GhostDegenWeedShop: NextPage = () => {
           content="https://green.gd/green-ghost-degen-weed-shop.png"
         />
         <meta name="twitter:url" content="https://green.gd/weed-shop-degen" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+        />
       </Head>
       <MainLayout>
         <HeaderMenu>

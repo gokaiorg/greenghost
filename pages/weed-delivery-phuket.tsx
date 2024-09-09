@@ -91,6 +91,7 @@ const WeedDelivery: NextPage = () => {
         <Image
           src={imgSrc}
           alt={imgAlt}
+          title={imgAlt}
           width={2048}
           height={1366}
           sizes={imgSizes}

@@ -9,8 +9,40 @@ import { HomeFeature } from '../../components/HomeFeatures';
 import { BuyOnline } from '../../components/BuyOnline';
 import { Box } from '@chakra-ui/react';
 import Image from 'next/image';
+import { edibles } from '../../config/edibles';
 
 const WeedShopEdibles: NextPage = () => {
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Edibles Menu',
+    description: 'Weed Shop Premium Cannabis Edibles Menu',
+    itemListElement: edibles.map((edible, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Product',
+        name: edible.name,
+        description: edible.description,
+        image: [
+          `https://green.gd/media/green-ghost-degen-weed-shop-menu-edible-${edible.slug}-cover.webp`,
+          `https://green.gd/media/green-ghost-degen-weed-shop-menu-edible-${edible.slug}-product-01.webp`,
+          `https://green.gd/media/green-ghost-degen-weed-shop-menu-edible--${edible.slug}-product-02.webp`,
+        ],
+        offers: {
+          '@type': 'Offer',
+          price: edible.price.toFixed(2),
+          priceCurrency: 'THB',
+        },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '5',
+          reviewCount: '13',
+        },
+      },
+    })),
+  };
+
   return (
     <>
       <Head>
@@ -47,6 +79,10 @@ const WeedShopEdibles: NextPage = () => {
           content="https://green.gd/media/green-ghost-degen-weed-shop-cannabis-edibles-menu.webp"
         />
         <meta name="twitter:url" content="https://green.gd/weed-shop-edibles" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+        />
       </Head>
       <MainLayout>
         <HeaderMenu>
