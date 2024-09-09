@@ -1,12 +1,10 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Degen } from '../../config/degens';
 import BoxItemShop from './elements/BoxItemShop';
 import BoxItemDescShop from './elements/BoxItemDescShop';
-import BoxItemTitleShop from './elements/BoxItemTitleShop';
 import BoxItemPriceShop from './elements/BoxItemPriceShop';
-import BoxItemList from './elements/BoxItemList';
 
 type DegenItemProps = {
   degen: Degen;
@@ -14,8 +12,18 @@ type DegenItemProps = {
 
 export const DegenItem = ({ degen }: DegenItemProps) => {
   return (
-    <BoxItemList>
-      <Link href={`weed-shop-degen/${degen.slug}`} title={degen.name} passHref>
+    <Box
+      as="li"
+      aria-label={`Cannabis Concentrate Menu ${degen.name}`}
+      listStyleType={'none'}
+      width={{ base: '50%', md: '33.33333%', lg: '25%', xl: '20%' }}
+      p={0.5}
+    >
+      <Link
+        href={`weed-shop-degen/${degen.slug}`}
+        title={`Green Ghost 🌿👻 ${degen.name} Cannabis Concentrate`}
+        passHref
+      >
         <BoxItemShop>
           <Box
             width={{ base: 'full' }}
@@ -25,45 +33,46 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
             <Image
               src={degen.images[1]}
               alt={degen.imgDesc}
-              width={700}
-              height={700}
               title={degen.imgDesc}
-              priority={false}
+              width={250}
+              height={250}
+              sizes="(max-width: 600px) 160px, (max-width: 1200px) 240px, 240px"
               quality={75}
+              style={{ objectFit: 'cover' }}
             />
           </Box>
           <BoxItemDescShop>
-            <BoxItemTitleShop>
-              {degen.price !== 999 && (
-                <BoxItemPriceShop>{degen.price} THB</BoxItemPriceShop>
-              )}
-              {degen.name}
-            </BoxItemTitleShop>
+            <Box as="li" aria-label={`Product Name`} listStyleType={'none'}>
+              <Text
+                itemProp="name"
+                as={'h2'}
+                fontFamily={'CubicFive12'}
+                fontSize={{ base: 16 }}
+                display={'flex'}
+                flexDirection={'column'}
+                marginRight={1}
+              >
+                {degen.name}
+              </Text>
+            </Box>
+            {degen.price !== 999 && (
+              <BoxItemPriceShop>{`${degen.price} THB`}</BoxItemPriceShop>
+            )}
             <Box
+              as="li"
+              aria-label={`Product THC level`}
+              listStyleType={'none'}
               display={'flex'}
-              flexDirection={'column'}
               fontFamily={'vt323'}
               fontSize={'2xl'}
+              color={'ghostVerse.grey.base'}
               mb={1}
             >
-              {degen.THC !== 'undefined' && (
-                <Box display={'flex'} marginRight={2} flexDirection={'row'}>
-                  THC
-                  <Box
-                    marginLeft={2}
-                    color={'ghostVerse.green.base'}
-                    display={'flex'}
-                    flexDirection={'row'}
-                    alignItems={'baseline'}
-                  >
-                    {degen.THC}
-                  </Box>
-                </Box>
-              )}
+              {`THC ${degen.THC}%`}
             </Box>
           </BoxItemDescShop>
         </BoxItemShop>
       </Link>
-    </BoxItemList>
+    </Box>
   );
 };

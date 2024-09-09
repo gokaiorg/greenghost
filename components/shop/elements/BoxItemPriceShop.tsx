@@ -10,7 +10,7 @@ const BoxItemPriceShop: FC<BoxItemProps> = ({ children }) => {
     <Box
       as="li"
       listStyleType={'none'}
-      aria-label={`Buds Menu Strain Price`}
+      aria-label={`Product Price`}
       marginLeft={'auto'}
       whiteSpace={'nowrap'}
       mb={2}

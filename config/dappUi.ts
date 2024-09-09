@@ -11,5 +11,5 @@ export const defaultMetaTags = {
   description:
     'Discover premium cannabis at Green Ghost in Phuket. Explore our organic selection, including flowers, edibles, and accessories, with fast, reliable delivery.',
   shortname: 'Green Ghost 🌿👻',
-  image: `${dappHostname}/green-ghost-degen-weed-shop.png`,
+  image: `${dappHostname}/media/green-ghost-best-degen-weed-shop-delivery-phuket-thailand.webp`,
 };

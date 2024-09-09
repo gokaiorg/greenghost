@@ -7,8 +7,42 @@ import { MenuWeedShop } from '../../components/shop/elements/MenuWeedShop';
 import { Gadget } from '../../components/shop/Gadget';
 import { HomeFeature } from '../../components/HomeFeatures';
 import { BuyOnline } from '../../components/BuyOnline';
+import { Box } from '@chakra-ui/react';
+import Image from 'next/image';
+import { gadgets } from '../../config/gadgets';
 
 const WeedShopGadgets: NextPage = () => {
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Cannabis Accessories Menu',
+    description: 'Weed Shop Premium Cannabis Accessories Menu',
+    itemListElement: gadgets.map((gadget, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Product',
+        name: gadget.name,
+        description: gadget.description,
+        image: [
+          `https://green.gd/media/green-ghost-degen-weed-shop-menu-gadget-${gadget.slug}-cover.webp`,
+          `https://green.gd/media/green-ghost-degen-weed-shop-menu-gadget-${gadget.slug}-01.webp`,
+          `https://green.gd/media/green-ghost-degen-weed-shop-menu-gadget-${gadget.slug}-02.webp`,
+        ],
+        offers: {
+          '@type': 'Offer',
+          price: gadget.price.toFixed(2),
+          priceCurrency: 'THB',
+        },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '5',
+          reviewCount: '13',
+        },
+      },
+    })),
+  };
+
   return (
     <>
       <Head>
@@ -45,15 +79,32 @@ const WeedShopGadgets: NextPage = () => {
           content="https://green.gd/green-ghost-degen-weed-shop.png"
         />
         <meta name="twitter:url" content="https://green.gd/weed-shop-gadgets" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+        />
       </Head>
       <MainLayout>
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
         <MenuWeedShop />
-        <Gadget />
-        <HomeFeature />
-        <BuyOnline />
+        <Box as="main">
+          <Gadget />
+          <HomeFeature />
+          <BuyOnline />
+          <Box w={{ base: '100%' }}>
+            <Image
+              src="/media/green-ghost-degen-weed-shop-buds-menu.webp"
+              alt="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
+              title="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
+              width={2048}
+              height={1366}
+              sizes="100%"
+              quality={75}
+            />
+          </Box>
+        </Box>
       </MainLayout>
     </>
   );

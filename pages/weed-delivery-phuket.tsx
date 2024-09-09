@@ -52,8 +52,7 @@ const WeedDelivery: NextPage = () => {
       <Link href={href} title={title} passHref>
         <Box
           as="span"
-          bgColor={'ghostVerse.dark.lighter'}
-          backdropFilter="blur(3px)"
+          bgColor="rgba(0, 0, 0, 0.8)"
           textAlign="center"
           p={4}
           position="absolute"
@@ -92,6 +91,7 @@ const WeedDelivery: NextPage = () => {
         <Image
           src={imgSrc}
           alt={imgAlt}
+          title={imgAlt}
           width={2048}
           height={1366}
           sizes={imgSizes}
