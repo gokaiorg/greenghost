@@ -30,9 +30,9 @@ export const edibles: Edible[] = [
     descSeo:
       'Enjoy THC Honey Sticks in Lemon Hybrid, Cinnamon Indica, and Peppermint Sativa. Infused with 20mg THC, these delicious flavors elevate your cannabis experience.',
     images: [
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-honey-stick-product-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-honey-stick-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-thc-honey-stick-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-thc-honey-stick-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-honey-stick-product-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Best Honey Stick THC Edible',
   },
@@ -51,9 +51,9 @@ export const edibles: Edible[] = [
     descSeo:
       'Enjoy the natural sweetness of CBD with our 40mg CBD Honey Stick. All-natural honey flavor, perfect for relaxation and wellness. Shop now for a calming treat!',
     images: [
+      '/media/green-ghost-degen-weed-shop-menu-edible-cbd-honey-stick-product-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-cbd-honey-stick-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-cbd-honey-stick-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-cbd-honey-stick-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-cbd-honey-stick-product-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Best Honey Stick CBD Edible',
   },
@@ -72,9 +72,9 @@ export const edibles: Edible[] = [
     descSeo:
       'Indulge in Cocos Supreme THC cookies – 4 chocolate chip cookies, each with 60mg of THC. Enjoy a sweet, potent treat with a discount on the pack!',
     images: [
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookies-product-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookies-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookies-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookies-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookies-product-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Best Cookies THC Edible',
   },
@@ -93,9 +93,9 @@ export const edibles: Edible[] = [
     descSeo:
       'Experience "Cocos Supreme" THC Chocolate Chip Cookie Bites – 60mg of THC per cookie. Delicious, potent, and perfect for a tasty cannabis treat. Enjoy responsibly.',
     images: [
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookie-product-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookie-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookie-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookie-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookie-product-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Best Cookie THC Edible',
   },
@@ -114,9 +114,9 @@ export const edibles: Edible[] = [
     descSeo:
       'Enjoy our "Double Dutch" THC Stroopwafels – a delicious chocolate-dipped treat with 30mg of THC. Perfect for a relaxing snack or to elevate any moment!',
     images: [
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-stroopwafel-product-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-stroopwafel-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-thc-stroopwafel-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-thc-stroopwafel-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-stroopwafel-product-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Best Stroopwafel THC Edible',
   },
@@ -135,9 +135,9 @@ export const edibles: Edible[] = [
     descSeo:
       'Enjoy our THC Gummies – 5 delicious gummies, 10mg THC each, totaling 50mg per pack. Perfect for a tasty, controlled, and consistent cannabis experience!',
     images: [
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-gummies-product-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-gummies-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-thc-gummies-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-thc-gummies-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-gummies-product-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Best Gummies THC Edible',
   },
@@ -156,9 +156,9 @@ export const edibles: Edible[] = [
     descSeo:
       'Indulge in "Chubby Twists" THC Pretzels – chocolate-covered, medicated delights with 30mg of THC (6 x 5mg). Perfect for a balanced, tasty high!',
     images: [
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-pretzels-product-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-pretzels-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-thc-pretzels-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-thc-pretzels-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-pretzels-product-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Best Pretzels THC Edible',
   },
@@ -177,9 +177,9 @@ export const edibles: Edible[] = [
     descSeo:
       'Enjoy "Brother Browns" THC Brownie Bites – 60mg of premium THC in each delicious bite. Perfect for a potent and tasty edible experience. Consume responsibly.',
     images: [
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-brownie-product-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-brownie-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-thc-brownie-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-thc-brownie-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-brownie-product-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Best Brownie THC Edible',
   },

@@ -2,6 +2,11 @@ import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Edible } from '../../config/edibles';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
 import BoxItemShop from './elements/BoxItemShop';
 import BoxItemDescShop from './elements/BoxItemDescShop';
 import BoxItemPriceShop from './elements/BoxItemPriceShop';
@@ -11,6 +16,8 @@ type EdibleItemProps = {
 };
 
 export const EdibleItem = ({ edible }: EdibleItemProps) => {
+  SwiperCore.use([Autoplay]);
+
   return (
     <Box
       as="li"
@@ -25,22 +32,50 @@ export const EdibleItem = ({ edible }: EdibleItemProps) => {
         passHref
       >
         <BoxItemShop>
-          <Box
-            width={{ base: 'full' }}
-            height={{ base: 'auto' }}
-            pos={'relative'}
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={'auto'}
+            loop
+            autoplay={{
+              delay: 10000,
+              pauseOnMouseEnter: true,
+              disableOnInteraction: false,
+            }}
+            effect={'coverflow'}
+            coverflowEffect={{
+              rotate: 25,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            modules={[EffectCoverflow, Pagination]}
+            pagination={{ clickable: true }}
+            initialSlide={0}
+            style={
+              {
+                '--swiper-pagination-color': '#13DE00',
+                '--swiper-pagination-bullet-inactive-color': '#fff',
+              } as React.CSSProperties
+            }
           >
-            <Image
-              src={edible.images[1]}
-              alt={edible.imgDesc}
-              title={edible.imgDesc}
-              width={250}
-              height={250}
-              sizes="(max-width: 600px) 160px, (max-width: 1200px) 240px, 240px"
-              quality={75}
-              style={{ objectFit: 'cover' }}
-            />
-          </Box>
+            {edible.images.map((image, index) =>
+              index !== 2 ? (
+                <SwiperSlide key={index}>
+                  <Image
+                    src={image}
+                    width={250}
+                    height={250}
+                    alt={edible.imgDesc}
+                    title={edible.imgDesc}
+                    sizes="(max-width: 600px) 160px, (max-width: 1200px) 240px, 240px"
+                    quality={75}
+                    style={{ objectFit: 'cover' }}
+                  />
+                </SwiperSlide>
+              ) : null
+            )}
+          </Swiper>
           <BoxItemDescShop>
             <Box as="li" aria-label={`Product Name`} listStyleType={'none'}>
               <Text
