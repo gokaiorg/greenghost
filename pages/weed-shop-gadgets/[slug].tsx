@@ -36,7 +36,7 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
   const schemaData = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: `${gadget?.name} Cannabis Concentrate`,
+    name: `${gadget?.name} Cannabis Accessory`,
     image: [
       `https://green.gd/media/green-ghost-gadget-weed-shop-gadget-${gadget.slug}-cover.webp`,
     ],
