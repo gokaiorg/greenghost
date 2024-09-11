@@ -153,7 +153,7 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
               flexDirection={'row'}
               alignItems={'center'}
             >
-              {`${gadget.name} Edible`}
+              {`${gadget.name} Accessory`}
             </Box>
             <Swiper
               spaceBetween={10}
@@ -208,7 +208,7 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
                 <Box
                   as="ul"
                   listStyleType={'none'}
-                  aria-label={`${gadget.name} Concentrate Cannabis Pricing`}
+                  aria-label={`${gadget.name} Cannabis Accessory Pricing`}
                   fontFamily={'CubicFive12'}
                   color={'ghostVerse.green.base'}
                   fontSize={'md'}
@@ -227,7 +227,7 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
               <Box
                 as="ul"
                 listStyleType={'none'}
-                aria-label={`${gadget.name} Cannabis Concentrate Characteristics`}
+                aria-label={`${gadget.name} Cannabis Accessory Characteristics`}
                 fontFamily={'vt323'}
                 fontSize={'2xl'}
                 marginRight={2}
