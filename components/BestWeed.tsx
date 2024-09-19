@@ -5,8 +5,8 @@ import { buds } from '../config/buds';
 const selectedStrains = [
   'Scotty 2 Hotty',
   'Thai Stick',
-  'Forbidden Fruit',
   'Super Boof',
+  'The Queen S1',
   'Mango Sticky Rice',
 ];
 
