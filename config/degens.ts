@@ -39,12 +39,12 @@ export const degens: Degen[] = [
   {
     slug: 'pollen-hash',
     name: 'Pollen Hash',
-    price: 500,
+    price: 999,
     packaging: '1g',
     THC: '40',
     CBD: '0',
     ingretiens: 'Kief, Oil',
-    quantity: 20,
+    quantity: 0,
     description:
       'Experience the ethereal world of cannabis at Green Ghost, your go-to weed shop for Pollen Hash THC with a tantalizing 40% potency. Crafted from the finest ingredients, our concoction blends premium Kief and luscious Oil, creating a hypnotic journey into a higher realm of relaxation and euphoria. Elevate your senses and spirit with this extraordinary fusion, exclusively at Green Ghost.',
     descSeo:
@@ -57,6 +57,27 @@ export const degens: Degen[] = [
     ],
     imgDesc:
       'Green Ghost 🌿👻 Degen Weed Shop Pollen Hash Cannabis Concentrate',
+  },
+  {
+    slug: 'dry-sift-hash',
+    name: 'Dry Sift Hash',
+    price: 600,
+    packaging: '1g',
+    THC: '50',
+    CBD: '0',
+    ingretiens: 'Kief, Oil',
+    quantity: 1,
+    description:
+      "Introducing Dry Sift Hash with an impressive 50% THC concentration, delivering a potent and flavorful experience for cannabis connoisseurs. This premium hash is crafted through a meticulous dry sifting process, where cannabis trichomes are separated from plant material to create a clean, concentrated product. The result is a fine, sandy texture packed with pure cannabinoids and terpenes, offering a robust, long-lasting high. \n\n Known for its rich, earthy aroma with hints of pine and spice, Dry Sift Hash delivers a smooth and enjoyable smoke. Perfect for those looking to enhance their cannabis experience, it can be enjoyed in a pipe, vaporizer, or mixed with flower for an added kick. Whether you're seeking deep relaxation or relief from chronic pain, Dry Sift Hash's high THC content ensures powerful effects that cater to both recreational and medicinal users.",
+    descSeo:
+      'Experience premium Dry Sift Hash with 50% THC. Potent, pure, and packed with cannabinoids for a powerful, long-lasting high. Perfect for seasoned cannabis users.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-product-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-product-02.webp',
+    ],
+    imgDesc:
+      'Green Ghost 🌿👻 Degen Weed Shop Dry Sift Hash Cannabis Concentrate',
   },
   {
     slug: 'pure-kief',
