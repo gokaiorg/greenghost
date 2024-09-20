@@ -103,9 +103,9 @@ export const buds: Bud[] = [
     descSeo:
       'Fried Applez is a hybrid strain with 25% THC, offering sweet apple and baked goods flavors. It provides a balanced, uplifting euphoria and calming relaxation.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-fried-applez-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-fried-applez-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-fried-applez-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-fried-applez-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-fried-applez-bud-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Fried Applez Strain',
     source: 'undefined',
@@ -161,9 +161,9 @@ export const buds: Bud[] = [
     descSeo:
       'Frosted Jungle is a sativa-dominant hybrid with 22% THC. It features dense, frosty buds with sweet, earthy, and fruity aromas, providing uplifting and creative effects.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-frosted-jungle-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-frosted-jungle-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-frosted-jungle-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-frosted-jungle-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-frosted-jungle-bud-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Frosted Jungle Strain',
     source: 'undefined',
@@ -248,9 +248,9 @@ export const buds: Bud[] = [
     descSeo:
       'Experience the rich, potent effects of "Drippin’ Aint Eazy"—a 70% Indica strain with 27% THC. Deep purple buds, floral, creamy flavors, and intense body effects await.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-drippin-aint-eazy-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-drippin-aint-eazy-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-drippin-aint-eazy-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-drippin-aint-eazy-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-drippin-aint-eazy-bud-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Drippin’ Aint Eazy Strain',
     source: 'https://www.leafly.com/strains/drippin-aint-eazy',
@@ -273,13 +273,13 @@ export const buds: Bud[] = [
     quantity: 50,
     origin: 'Phuket',
     description:
-      'Discover the delightful Ben & Gary\'s strain from Exotic Genetix, a tantalizing 70/30 Indica-dominant hybrid that brings a creamy, fruity experience reminiscent of berry ice cream and fizzy drinks. This unique strain results from the remarkable crossing of the Ben & Berries and Gary Poppins varieties, each contributing its own exceptional characteristics. \n\n Ben & Berries, an elite clone developed by Lumpy\'s Flowers, is a luscious combination of Apple Fritter and Reckless Rainbow. Its conical, forest-green buds are adorned with fine orange hairs and coated in a thick layer of crystalline white trichomes, promising a visually stunning experience. The flavor profile bursts with super sweet and sugary berry notes, complemented by fresh blueberries and spicy apples, all wrapped in soft hints of floral herbs. This strain is perfect for anyone seeking maximum fruity flavor. \n\n On the other hand, Gary Poppins is an indica-dominant hybrid derived from the renowned Red Runtz lineage. This strain showcases a unique Kool-Aid-like terpene profile, making it an intriguing choice for growers and enthusiasts alike. With its impressive yield and straightforward cultivation process, Ben & Gary\'s is a must-try for anyone looking to elevate their cannabis experience with truly unique aromas and flavors.',
+      "Discover the delightful Ben & Gary's strain from Exotic Genetix, a tantalizing 70/30 Indica-dominant hybrid that brings a creamy, fruity experience reminiscent of berry ice cream and fizzy drinks. This unique strain results from the remarkable crossing of the Ben & Berries and Gary Poppins varieties, each contributing its own exceptional characteristics. \n\n Ben & Berries, an elite clone developed by Lumpy's Flowers, is a luscious combination of Apple Fritter and Reckless Rainbow. Its conical, forest-green buds are adorned with fine orange hairs and coated in a thick layer of crystalline white trichomes, promising a visually stunning experience. The flavor profile bursts with super sweet and sugary berry notes, complemented by fresh blueberries and spicy apples, all wrapped in soft hints of floral herbs. This strain is perfect for anyone seeking maximum fruity flavor. \n\n On the other hand, Gary Poppins is an indica-dominant hybrid derived from the renowned Red Runtz lineage. This strain showcases a unique Kool-Aid-like terpene profile, making it an intriguing choice for growers and enthusiasts alike. With its impressive yield and straightforward cultivation process, Ben & Gary's is a must-try for anyone looking to elevate their cannabis experience with truly unique aromas and flavors.",
     descSeo:
-      'Experience Ben & Gary\'s by Exotic Genetix: a creamy, fruity strain with berry ice cream aromas and a delightful indica-dominant profile.',
+      "Experience Ben & Gary's by Exotic Genetix: a creamy, fruity strain with berry ice cream aromas and a delightful indica-dominant profile.",
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-ben-garys-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-ben-garys-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-ben-garys-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-ben-garys-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-ben-garys-bud-02.webp',
     ],
     imgDesc: "Green Ghost 🌿👻 Degen Weed Shop Ben & Gary's Strain",
     source: 'undefined',
