@@ -4,6 +4,7 @@ export const IconHybrid = () => {
   return (
     <Image
       src="/media/icon-hybrid.webp"
+      aria-label="Hybrid Icon"
       width={30}
       height={31}
       alt="Green Ghost 🌿👻 Menu Weed Shop Hybrid Dominance"

@@ -76,28 +76,52 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
         >
           {description}
         </Text>
-        <Link href={link} title={linkTitle} passHref>
-          <Text
-            as="span"
-            display="inline-flex"
-            fontSize={{ base: 'xl', md: '4xl' }}
-            borderWidth={1}
-            px={6}
-            pb={2}
-            mt={10}
-            fontFamily="vt323"
-            color="black"
-            borderColor="ghostVerse.green.base"
-            bgColor="ghostVerse.green.base"
-            _hover={{
-              bgColor: 'black',
-              color: 'ghostVerse.green.base',
-            }}
-            mx="auto"
-          >
-            {linkLabel}
-          </Text>
-        </Link>
+        <Box display={'flex'} flexWrap={'wrap'} gap={2} mx={'auto'}>
+          <Link href={link} title={linkTitle} passHref>
+            <Text
+              as="span"
+              display="inline-flex"
+              fontSize={{ base: 'xl', md: '4xl' }}
+              borderWidth={1}
+              px={6}
+              pb={2}
+              mt={10}
+              fontFamily="vt323"
+              color="black"
+              borderColor="ghostVerse.green.base"
+              bgColor="ghostVerse.green.base"
+              _hover={{
+                bgColor: 'black',
+                color: 'ghostVerse.green.base',
+              }}
+              mx="auto"
+            >
+              {linkLabel}
+            </Text>
+          </Link>
+          <Link href={'/weed'} title={linkTitle} passHref>
+            <Text
+              as="span"
+              display="inline-flex"
+              fontSize={{ base: 'xl', md: '4xl' }}
+              borderWidth={1}
+              px={6}
+              pb={2}
+              mt={10}
+              fontFamily="vt323"
+              color="black"
+              borderColor="ghostVerse.green.base"
+              bgColor="ghostVerse.green.base"
+              _hover={{
+                bgColor: 'black',
+                color: 'ghostVerse.green.base',
+              }}
+              mx="auto"
+            >
+              Weed
+            </Text>
+          </Link>
+        </Box>
       </Box>
     </Box>
   );

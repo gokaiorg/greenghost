@@ -287,7 +287,7 @@ export const buds: Bud[] = [
   {
     slug: 'el-chapo-og',
     name: 'El Chapo OG',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -430,35 +430,6 @@ export const buds: Bud[] = [
     source: 'https://www.leafly.com/strains/super-boof',
   },
   {
-    slug: 'end-game',
-    name: 'End Game',
-    price: 350,
-    dominance: 'Hybrid',
-    indica: '50',
-    sativa: '50',
-    THC: '25',
-    CBD: '0',
-    effects: 'Uplifted, Euphoric, Energetic',
-    relieves: 'Anxiety, Depression, Insomnia',
-    grower: 'Green Ghost',
-    growerSlug: '',
-    environment: 'Indoor',
-    grade: 'AAA Grade',
-    quantity: 39,
-    origin: 'Phuket',
-    description:
-      "End Game is a meticulously crafted hybrid cannabis strain, boasting an equal blend of 50% sativa and 50% indica genetics. Born from the union of Ethos Cookies #4 and Purple Sunset, this strain is renowned for its large, dense buds and intricate terpene profile. The aroma of End Game is a tantalizing mix of sweet and sour notes, with subtle hints of grape and fuel, making it a sensory delight for cannabis enthusiasts. With a THC content of 25% and CBD levels ranging from 1-3%, End Game is tailored for experienced consumers seeking a potent and well-rounded experience. \n\n The effects of End Game are celebrated for their ability to induce a state of deep relaxation, coupled with feelings of happiness and an enhanced appetite. Medical marijuana patients often turn to this strain to alleviate symptoms of pain, stress, and insomnia, thanks to its dominant terpene, caryophyllene, which is known for its anti-inflammatory and analgesic properties. The strain's balanced high offers a unique combination of mental stimulation and physical calm, making it a versatile choice for both recreational and medicinal use. \n\n Best suited for afternoon or evening consumption, End Game is a strain that enhances mood while gently soothing the body. Its flavor profile, rich with notes of grape, fuel, and pepper, provides a memorable experience for the palate. End Game delivers exceptional value for those seeking a potent and flavorful strain that can elevate both mind and body, making it a must-try for cannabis connoisseurs.",
-    descSeo:
-      'End Game is a balanced hybrid strain with sweet grape and fuel notes, offering relaxing effects. Ideal for pain, stress, and insomnia relief. 25% THC, 1-3% CBD.',
-    images: [
-      '/media/green-ghost-degen-weed-shop-strain-end-game-bud-01.webp',
-      '/media/green-ghost-degen-weed-shop-strain-end-game-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-end-game-bud-02.webp',
-    ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop End Game Strain',
-    source: 'https://www.leafly.com/strains/end-game',
-  },
-  {
     slug: 'pink-runtz',
     name: 'Pink Runtz',
     price: 400,
@@ -490,7 +461,7 @@ export const buds: Bud[] = [
   {
     slug: 'cbd-auto-tune',
     name: 'CBD Auto tune',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -519,7 +490,7 @@ export const buds: Bud[] = [
   {
     slug: 'kd-mango-tail',
     name: 'KD Mango Tail',
-    price: 1000,
+    price: 420,
     dominance: 'Sativa',
     indica: '0',
     sativa: '100',
@@ -578,7 +549,7 @@ export const buds: Bud[] = [
   {
     slug: 'fat-banana',
     name: 'Fat Banana',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -634,9 +605,38 @@ export const buds: Bud[] = [
     source: 'undefined',
   },
   {
+    slug: 'end-game',
+    name: 'End Game',
+    price: 420,
+    dominance: 'Hybrid',
+    indica: '50',
+    sativa: '50',
+    THC: '25',
+    CBD: '0',
+    effects: 'Uplifted, Euphoric, Energetic',
+    relieves: 'Anxiety, Depression, Insomnia',
+    grower: 'Green Ghost',
+    growerSlug: '',
+    environment: 'Indoor',
+    grade: 'AAA Grade',
+    quantity: 0,
+    origin: 'Phuket',
+    description:
+      "End Game is a meticulously crafted hybrid cannabis strain, boasting an equal blend of 50% sativa and 50% indica genetics. Born from the union of Ethos Cookies #4 and Purple Sunset, this strain is renowned for its large, dense buds and intricate terpene profile. The aroma of End Game is a tantalizing mix of sweet and sour notes, with subtle hints of grape and fuel, making it a sensory delight for cannabis enthusiasts. With a THC content of 25% and CBD levels ranging from 1-3%, End Game is tailored for experienced consumers seeking a potent and well-rounded experience. \n\n The effects of End Game are celebrated for their ability to induce a state of deep relaxation, coupled with feelings of happiness and an enhanced appetite. Medical marijuana patients often turn to this strain to alleviate symptoms of pain, stress, and insomnia, thanks to its dominant terpene, caryophyllene, which is known for its anti-inflammatory and analgesic properties. The strain's balanced high offers a unique combination of mental stimulation and physical calm, making it a versatile choice for both recreational and medicinal use. \n\n Best suited for afternoon or evening consumption, End Game is a strain that enhances mood while gently soothing the body. Its flavor profile, rich with notes of grape, fuel, and pepper, provides a memorable experience for the palate. End Game delivers exceptional value for those seeking a potent and flavorful strain that can elevate both mind and body, making it a must-try for cannabis connoisseurs.",
+    descSeo:
+      'End Game is a balanced hybrid strain with sweet grape and fuel notes, offering relaxing effects. Ideal for pain, stress, and insomnia relief. 25% THC, 1-3% CBD.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-end-game-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-end-game-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-end-game-bud-02.webp',
+    ],
+    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop End Game Strain',
+    source: 'https://www.leafly.com/strains/end-game',
+  },
+  {
     slug: 'gorilla-goo',
     name: 'Gorilla Goo',
-    price: 1000,
+    price: 420,
     dominance: 'Sativa',
     indica: '30',
     sativa: '70',
@@ -666,7 +666,7 @@ export const buds: Bud[] = [
   {
     slug: 'jack-herer',
     name: 'Jack Herer',
-    price: 1000,
+    price: 420,
     dominance: 'Sativa',
     indica: '20',
     sativa: '80',
@@ -695,7 +695,7 @@ export const buds: Bud[] = [
   {
     slug: 'grandmaster-kush',
     name: 'Grandmaster Kush',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '90',
     sativa: '10',
@@ -724,7 +724,7 @@ export const buds: Bud[] = [
   {
     slug: 'white-widow',
     name: 'White Widow',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -753,7 +753,7 @@ export const buds: Bud[] = [
   {
     slug: 'silver-fox',
     name: 'Silver Fox',
-    price: 1000,
+    price: 420,
     dominance: 'Sativa',
     indica: '30',
     sativa: '70',
@@ -783,7 +783,7 @@ export const buds: Bud[] = [
   {
     slug: 'chemdawg',
     name: 'Chemdawg',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '55',
     sativa: '45',
@@ -813,7 +813,7 @@ export const buds: Bud[] = [
   {
     slug: 'bubble-zkittlez',
     name: 'Bubble Zkittlez',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -842,7 +842,7 @@ export const buds: Bud[] = [
   {
     slug: 'royal-runtz',
     name: 'Royal Runtz',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -871,7 +871,7 @@ export const buds: Bud[] = [
   {
     slug: 'green-gelato',
     name: 'Green Gelato',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '55',
     sativa: '45',
@@ -900,7 +900,7 @@ export const buds: Bud[] = [
   {
     slug: 'gelato-runtz',
     name: 'Gelato Runtz',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -929,7 +929,7 @@ export const buds: Bud[] = [
   {
     slug: 'amnesia',
     name: 'Amnesia',
-    price: 1000,
+    price: 420,
     dominance: 'Sativa',
     indica: '30',
     sativa: '70',
@@ -958,7 +958,7 @@ export const buds: Bud[] = [
   {
     slug: 'banana-daddy',
     name: 'Banana Daddy',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -987,7 +987,7 @@ export const buds: Bud[] = [
   {
     slug: 'purple-queen',
     name: 'Purple Queen',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '75',
     sativa: '25',
@@ -1016,7 +1016,7 @@ export const buds: Bud[] = [
   {
     slug: 'mommys-milk',
     name: "Mommy's Milk",
-    price: 1000,
+    price: 420,
     dominance: 'Sativa',
     indica: '40',
     sativa: '60',
@@ -1045,7 +1045,7 @@ export const buds: Bud[] = [
   {
     slug: 'next-level',
     name: 'Next Level',
-    price: 1000,
+    price: 420,
     dominance: 'Sativa',
     indica: '40',
     sativa: '60',
@@ -1074,7 +1074,7 @@ export const buds: Bud[] = [
   {
     slug: 'cbd-charlottes-angel',
     name: "CBD Charlotte's Angel",
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -1103,7 +1103,7 @@ export const buds: Bud[] = [
   {
     slug: 'sweet-zkittlez',
     name: 'Sweet Zkittlez',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '80',
     sativa: '20',
@@ -1132,7 +1132,7 @@ export const buds: Bud[] = [
   {
     slug: 'hulkberry',
     name: 'Hulkberry',
-    price: 1000,
+    price: 420,
     dominance: 'Sativa',
     indica: '35',
     sativa: '65',
@@ -1162,7 +1162,7 @@ export const buds: Bud[] = [
   {
     slug: 'phantom-cookies',
     name: 'Phantom Cookies',
-    price: 1000,
+    price: 420,
     dominance: 'Sativa',
     indica: '30',
     sativa: '70',
@@ -1191,7 +1191,7 @@ export const buds: Bud[] = [
   {
     slug: 'pink-sunset',
     name: 'Pink Sunset',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -1220,7 +1220,7 @@ export const buds: Bud[] = [
   {
     slug: 'purple-zkittlez',
     name: 'Purple Zkittlez',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '60',
     sativa: '40',
@@ -1249,7 +1249,7 @@ export const buds: Bud[] = [
   {
     slug: 'buddy-critical',
     name: 'Buddy Critical',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '60',
     sativa: '40',
@@ -1278,7 +1278,7 @@ export const buds: Bud[] = [
   {
     slug: 'bruce-banner',
     name: 'Bruce Banner',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -1307,7 +1307,7 @@ export const buds: Bud[] = [
   {
     slug: 'mango-gelato',
     name: 'Mango Gelato',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '60',
     sativa: '40',
@@ -1336,7 +1336,7 @@ export const buds: Bud[] = [
   {
     slug: 'super-lemon-haze',
     name: 'Super Lemon Haze',
-    price: 1000,
+    price: 420,
     dominance: 'Sativa',
     indica: '30',
     sativa: '70',
@@ -1365,7 +1365,7 @@ export const buds: Bud[] = [
   {
     slug: 'stardawg',
     name: 'Stardawg',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -1394,7 +1394,7 @@ export const buds: Bud[] = [
   {
     slug: 'tangerine-dream',
     name: 'Tangerine Dream',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -1423,7 +1423,7 @@ export const buds: Bud[] = [
   {
     slug: 'mandarin-zkittlez',
     name: 'Mandarin Zkittlez',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '60',
     sativa: '40',
@@ -1452,7 +1452,7 @@ export const buds: Bud[] = [
   {
     slug: 'wedding-cake',
     name: 'Wedding Cake',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '60',
     sativa: '40',
@@ -1481,7 +1481,7 @@ export const buds: Bud[] = [
   {
     slug: 'critical-plus-20',
     name: 'Critical Plus 2.0',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -1510,7 +1510,7 @@ export const buds: Bud[] = [
   {
     slug: 'mimosa-evo',
     name: 'Mimosa Evo',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '60',
     sativa: '40',
@@ -1539,7 +1539,7 @@ export const buds: Bud[] = [
   {
     slug: 'kings-juice',
     name: 'King’s Juice',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '60',
     sativa: '40',
@@ -1568,7 +1568,7 @@ export const buds: Bud[] = [
   {
     slug: 'eleven-roses',
     name: 'Eleven Roses',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '90',
     sativa: '10',
@@ -1597,7 +1597,7 @@ export const buds: Bud[] = [
   {
     slug: 'lemon-zkittlez',
     name: 'Lemon Zkittlez',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -1626,7 +1626,7 @@ export const buds: Bud[] = [
   {
     slug: 'cherry-garcia',
     name: 'Cherry Garcia',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -1655,7 +1655,7 @@ export const buds: Bud[] = [
   {
     slug: 'critical-kush',
     name: 'Critical Kush',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '90',
     sativa: '10',
@@ -1684,7 +1684,7 @@ export const buds: Bud[] = [
   {
     slug: 'royal-moby',
     name: 'Royal Moby',
-    price: 1000,
+    price: 420,
     dominance: 'Sativa',
     indica: '35',
     sativa: '65',
@@ -1714,7 +1714,7 @@ export const buds: Bud[] = [
   {
     slug: 'mac-and-jack',
     name: 'MAC and Jack',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -1743,7 +1743,7 @@ export const buds: Bud[] = [
   {
     slug: 'c-vibez',
     name: 'C-Vibez',
-    price: 1000,
+    price: 420,
     dominance: 'Sativa',
     indica: '40',
     sativa: '60',
@@ -1772,7 +1772,7 @@ export const buds: Bud[] = [
   {
     slug: 'fruit-spirit',
     name: 'Fruit Spirit',
-    price: 1000,
+    price: 420,
     dominance: 'Sativa',
     indica: '40',
     sativa: '60',
@@ -1801,7 +1801,7 @@ export const buds: Bud[] = [
   {
     slug: 'platinum-oreoz',
     name: 'Platinum Oreoz',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '60',
     sativa: '40',
@@ -1831,7 +1831,7 @@ export const buds: Bud[] = [
   {
     slug: 'dosidos',
     name: 'Dosidos',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -1860,7 +1860,7 @@ export const buds: Bud[] = [
   {
     slug: 'sherbert',
     name: 'Sherbert',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '85',
     sativa: '15',
@@ -1889,7 +1889,7 @@ export const buds: Bud[] = [
   {
     slug: 'skunk',
     name: 'Skunk',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '65',
     sativa: '35',
@@ -1918,7 +1918,7 @@ export const buds: Bud[] = [
   {
     slug: 'sorbet-4',
     name: 'Sorbet #4',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '60',
     sativa: '40',
@@ -1947,7 +1947,7 @@ export const buds: Bud[] = [
   {
     slug: 'bubble-mango',
     name: 'Bubble Mango',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -1976,7 +1976,7 @@ export const buds: Bud[] = [
   {
     slug: 'mac-1',
     name: 'MAC 1',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -2005,7 +2005,7 @@ export const buds: Bud[] = [
   {
     slug: 'og-poison',
     name: 'OG Poison',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '70',
     sativa: '30',
@@ -2034,7 +2034,7 @@ export const buds: Bud[] = [
   {
     slug: 'runtz',
     name: 'Runtz',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -2063,7 +2063,7 @@ export const buds: Bud[] = [
   {
     slug: 'gelato-dream',
     name: 'Gelato Dream',
-    price: 1000,
+    price: 420,
     dominance: 'Sativa',
     indica: '30',
     sativa: '70',
@@ -2092,7 +2092,7 @@ export const buds: Bud[] = [
   {
     slug: 'white-runtz',
     name: 'White Runtz',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -2121,7 +2121,7 @@ export const buds: Bud[] = [
   {
     slug: 'banana-kush',
     name: 'Banana Kush',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '60',
     sativa: '40',
@@ -2150,7 +2150,7 @@ export const buds: Bud[] = [
   {
     slug: 'moon-fruit',
     name: 'Moon Fruit',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -2179,7 +2179,7 @@ export const buds: Bud[] = [
   {
     slug: 'orange-velvet',
     name: 'Orange Velvet',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -2208,7 +2208,7 @@ export const buds: Bud[] = [
   {
     slug: 'platinum-punch',
     name: 'Platinum Punch',
-    price: 1000,
+    price: 420,
     dominance: 'Sativa',
     indica: '30',
     sativa: '70',
@@ -2237,7 +2237,7 @@ export const buds: Bud[] = [
   {
     slug: 'lemon-berry-candy',
     name: 'Lemon Berry Candy',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -2266,7 +2266,7 @@ export const buds: Bud[] = [
   {
     slug: 'mandarin-cookies',
     name: 'Mandarin Cookies',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -2295,7 +2295,7 @@ export const buds: Bud[] = [
   {
     slug: 'mimosa',
     name: 'Mimosa',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -2324,7 +2324,7 @@ export const buds: Bud[] = [
   {
     slug: 'black-cherry-punch',
     name: 'Black Cherry Punch',
-    price: 1000,
+    price: 420,
     dominance: 'Indica',
     indica: '80',
     sativa: '20',
@@ -2353,7 +2353,7 @@ export const buds: Bud[] = [
   {
     slug: 'snoop-punch',
     name: 'Snoop Punch',
-    price: 1000,
+    price: 420,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',

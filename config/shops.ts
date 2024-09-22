@@ -50,10 +50,6 @@ export const shops: Shop[] = [
         link: 'https://weed.th/shop/2ab3e52b-83f8-4a73-a96f-a60e04774a17',
       },
       {
-        label: 'Restaurant Guru',
-        link: 'https://restaurantguru.com/Green-Ghost-Thailand',
-      },
-      {
         label: 'Apple Map',
         link: 'https://maps.apple.com/?address=26/16%204024,%20Phuket,%20Phuket%2083130,%20Thailand&auid=3541566368782066682&ll=7.804892,98.336731&lsp=9902&q=Green%20Ghost',
       },
@@ -97,8 +93,8 @@ export const shops: Shop[] = [
         link: 'https://smokingskunk.com/weed-in-thailand/green-ghost-degen-weed-shop-karon/',
       },
       {
-        label: 'Bing Map',
-        link: 'https://www.bing.com/maps?osid=a8753de2-61a3-4fc5-a01c-4bb159897058&cp=7.847206~98.293326&lvl=16&pi=0&imgid=32620f54-46f8-47a3-9ad3-a69e0fb9f5c9&v=2&sV=2&form=S00027',
+        label: 'Apple Map',
+        link: 'https://maps.apple.com/?address=42/2%204028,%20Phuket,%20Phuket%2083100,%20Thailand&auid=11391650870587444137&ll=7.847196,98.298610&lsp=9902&q=Green%20Ghost%20Karon%20%7C%20Weed%20Delivery',
       },
     ],
   },
@@ -130,6 +126,10 @@ export const shops: Shop[] = [
       {
         label: 'WEED.TH',
         link: 'https://weed.th/shop/0d9dde2a-13bd-4167-b063-577af34971e8',
+      },
+      {
+        label: 'Apple Map',
+        link: 'https://maps.apple.com/?address=17%20Thalang%20Rd.,%20Phuket,%20Phuket%2083000,%20Thailand&auid=4961311243724311645&ll=7.884924,98.387895&lsp=9902&q=Green%20Ghost%20Phuket%20Town%20%7C%20Weed%20Delivery',
       },
     ],
   },
