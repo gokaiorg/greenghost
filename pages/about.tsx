@@ -10,6 +10,7 @@ import { ImgAbout } from '../components/media/ImgAbout';
 import { HomeTopInfos } from '../components/HomeTopInfos';
 import { HomeFeature } from '../components/HomeFeatures';
 import { Fwen } from '../components/Fwen';
+import Link from 'next/link';
 
 const BuyWeed: NextPage = () => {
   return (
@@ -80,7 +81,20 @@ const BuyWeed: NextPage = () => {
           fontFamily="vt323"
         >
           {
-            'At Green Ghost, we’re dedicated to supporting the Thai cannabis community by offering the best weed across outdoor, greenhouse, and indoor varieties. Our mission is to help Thailand grow as a leading hub for premium cannabis.'
+            'At Green Ghost, we’re dedicated to supporting the Thai cannabis community by offering the best '
+          }
+          <Link
+            href="/weed"
+            passHref
+            color="ghostVerse.green.base"
+            title="Green Ghost 🌿👻 Your Weed Guide to Cannabis Excellence"
+          >
+            <Box as="span" color="ghostVerse.green.base">
+              Weed
+            </Box>
+          </Link>
+          {
+            ' across outdoor, greenhouse, and indoor varieties. Our mission is to help Thailand grow as a leading hub for premium cannabis.'
           }
         </Text>
         <Fwen />

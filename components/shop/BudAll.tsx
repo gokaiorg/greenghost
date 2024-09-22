@@ -1,10 +1,9 @@
-import { Box, Checkbox } from '@chakra-ui/react';
+import { Box, Input } from '@chakra-ui/react';
 import { useState } from 'react';
 import { buds } from '../../config/buds';
-import { BudItem } from './BudItem';
+import { BudItemAll } from './BudItemAll';
 import { HomeSectionTitle } from '../HomeSectionTitle';
 import MenuFilterShop from './elements/MenuFilterShop';
-import { ListTitle } from './elements/ListTitle';
 import WrapperShop from './elements/WrapperShop';
 import { IconSativa } from '../media/IconSativa';
 import { IconHybrid } from '../media/IconHybrid';
@@ -57,23 +56,23 @@ const FilterButton = ({
   </Box>
 );
 
-export const Bud = () => {
-  const [showUnavailable, setShowUnavailable] = useState(false);
+export const BudAll = () => {
+  const [searchQuery, setSearchQuery] = useState('');
   const [dominanceFilter, setDominanceFilter] =
     useState<DominanceOption>('All');
 
   const filteredBuds = buds.filter((bud) => {
-    if (!showUnavailable && bud.quantity === 0) return false;
-    if (dominanceFilter !== 'All' && bud.dominance !== dominanceFilter)
-      return false;
-    return true;
+    const matchesSearch = bud.name
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
+    const matchesDominance =
+      dominanceFilter === 'All' || bud.dominance === dominanceFilter;
+    return matchesSearch && matchesDominance;
   });
 
-  const sortedBuds = filteredBuds.sort((a, b) => {
-    if (a.quantity === 0 && b.quantity > 0) return 1; // Sold-out buds appear after available ones
-    if (a.quantity > 0 && b.quantity === 0) return -1; // Available buds appear before sold-out ones
-    return a.price - b.price; // Sort by price within each group
-  });
+  const sortedBuds = filteredBuds.sort(
+    (a, b) => a.name.localeCompare(b.name) // Sort by name alphabetically
+  );
 
   const handleDominanceChange = (dominance: DominanceOption) => {
     setDominanceFilter((prevFilter) =>
@@ -81,15 +80,10 @@ export const Bud = () => {
     );
   };
 
-  const handleShowUnavailableChange = () => {
-    setShowUnavailable((prevValue) => !prevValue);
-  };
-
   return (
-    <Box as="section" aria-labelledby="Buds Menu" mb="10">
+    <Box as="section" aria-labelledby="All Cannabis Strains" mb="10">
       <WrapperShop>
-        <HomeSectionTitle title="Buds Menu" />
-        <ListTitle title="Buds price for 1 gram." />
+        <HomeSectionTitle title="All the best cannabis strains" />
       </WrapperShop>
       <MenuFilterShop>
         <Box
@@ -112,28 +106,28 @@ export const Bud = () => {
             />
           ))}
         </Box>
-        <Checkbox
-          ml={'auto'}
-          colorScheme={'#13DE00'}
-          isChecked={!showUnavailable}
-          onChange={handleShowUnavailableChange}
-          fontSize={'2xl'}
-          py={{ base: '2', md: '3' }}
-          fontFamily={'vt323'}
-        >
-          Hide Sold Out
-        </Checkbox>
+        <Input
+          placeholder="Search buds..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          ml={'auto'} // Margin left for spacing
+          mb={2} // Margin bottom for spacing
+          fontSize="md"
+          width="auto" // Adjust width as needed
+          color={'ghostVerse.green.base'}
+          borderColor={'ghostVerse.green.base'}
+        />
       </MenuFilterShop>
       <Box
         as="ul"
         listStyleType={'none'}
-        aria-label="Buds Menu Strains list"
+        aria-label="Best Cannabis Strains list"
         display={'flex'}
         flexWrap={'wrap'}
         mx={-0.5}
       >
         {sortedBuds.map((bud) => (
-          <BudItem key={bud.slug} bud={bud} />
+          <BudItemAll key={bud.slug} bud={bud} />
         ))}
       </Box>
     </Box>
