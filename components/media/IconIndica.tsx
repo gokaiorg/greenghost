@@ -4,6 +4,7 @@ export const IconIndica = () => {
   return (
     <Image
       src="/media/icon-indica.webp"
+      aria-label="Indica Icon"
       width={30}
       height={31}
       alt="Green Ghost 🌿👻 Menu Weed Shop Indica Dominance"
