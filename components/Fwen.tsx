@@ -47,7 +47,7 @@ export const Fwen = () => {
             <Link
               href="https://weed.th/best-dispensaries-in-thailand"
               passHref
-              title="Green Ghost Top Dispensary Phuket Thailand - Weed.th"
+              title="Green Ghost 🌿👻 Top Dispensary Phuket Thailand Weed.th"
             >
               <Box
                 h={'100%'}
@@ -90,7 +90,7 @@ export const Fwen = () => {
             <Link
               href="https://www.cleverthai.com/best-cannabis-shops-in-phuket/"
               passHref
-              title="Green Ghost Top Dispensary Phuket Thailand - CleverThai"
+              title="Green Ghost 🌿👻 Top Dispensary Phuket Thailand CleverThai"
             >
               <Box
                 h={'100%'}
@@ -133,7 +133,7 @@ export const Fwen = () => {
             <Link
               href="https://www.thailandnomads.com/cannabis-shops-phuket/"
               passHref
-              title="Green Ghost Top Dispensary Phuket Thailand - Thailand Nomads"
+              title="Green Ghost 🌿👻 Top Dispensary Phuket Thailand Nomads"
             >
               <Box
                 h={'100%'}
@@ -174,9 +174,9 @@ export const Fwen = () => {
               </Box>
             </Link>
             <Link
-              href="https://thai.news/news/thailand/top-13-cannabis-shops-where-to-buy-weed-in-phangnga-vol-7-2024"
+              href="https://thai.news/news/thailand/top-20-cannabis-shops-where-to-buy-weed-in-phuket-vol-1-2024"
               passHref
-              title="Green Ghost Top Dispensary Phuket Thailand - Thai News"
+              title="Green Ghost 🌿👻 Top Dispensary Phuket Thailand Thai News"
             >
               <Box
                 h={'100%'}
