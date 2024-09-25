@@ -31,7 +31,7 @@ const Weed: NextPage = () => {
         />
         <meta
           property="og:image"
-          content="https://green.gd/media/green-ghost-degen-weed-shop-contact-us.webp"
+          content="https://green.gd/media/green-ghost-degen-weed-guide-premium-cannabis.webp"
         />
         <meta property="og:image:width" content="2048" />
         <meta property="og:image:height" content="1366" />
@@ -46,7 +46,7 @@ const Weed: NextPage = () => {
         />
         <meta
           name="twitter:image"
-          content="https://green.gd/media/green-ghost-degen-weed-shop-contact-us.webp"
+          content="https://green.gd/media/green-ghost-degen-weed-guide-premium-cannabis.webp"
         />
         <meta name="twitter:url" content="https://green.gd/weed" />
       </Head>
@@ -86,6 +86,7 @@ const Weed: NextPage = () => {
             <Image
               src="/media/green-ghost-degen-weed-guide-premium-cannabis.webp"
               alt="Green Ghost 🌿👻 Your Weed Guide to Cannabis Excellence"
+              title="Green Ghost 🌿👻 Your Weed Guide to Cannabis Excellence"
               width={2048}
               height={1366}
               sizes="100%"
