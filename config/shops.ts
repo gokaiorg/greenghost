@@ -30,7 +30,7 @@ export const shops: Shop[] = [
       'Visit Green Ghost 🌿👻 in Rawai, located between Youtopia and Cosmic Temple Vibes. Discover premium cannabis, exclusive benefits, and a vibrant community vibe.',
     mapLink:
       'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d79798.30764761734!2d98.33663!3d7.804923!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30502fd6cfeb7ef5%3A0xa1a21dee68f3ab83!2sGreen%20Ghost%20%F0%9F%8C%BF%F0%9F%91%BB%20Best%20Degen%20Weed%20Shop%20and%20Delivery!5e1!3m2!1sen!2sth!4v1725182242180!5m2!1sen!2sth',
-    videoLink: 'https://www.youtube.com/embed/AhX9PlNbvPU',
+    videoLink: 'https://www.youtube.com/embed/YVodYua9kBk',
     imagesOg: 'green-ghost-best-degen-weed-shop-delivery-rawai.webp',
     images: [
       '/media/green-ghost-degen-weed-shop-rawai-phuket-thailand-01.webp',

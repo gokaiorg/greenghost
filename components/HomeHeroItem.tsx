@@ -99,7 +99,11 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
               {linkLabel}
             </Text>
           </Link>
-          <Link href={'/weed'} title={linkTitle} passHref>
+          <Link
+            href={'/weed'}
+            title={'Green Ghost 🌿👻 Your Weed Guide to Cannabis Excellence'}
+            passHref
+          >
             <Text
               as="span"
               display="inline-flex"
