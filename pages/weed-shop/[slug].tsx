@@ -365,72 +365,76 @@ export default function BudPage({ bud }: BudPageProps) {
             </BoxDescription>
           </Box>
           <HomeFeature />
-          <Box
-            as="section"
-            aria-labelledby="Get 10% Free on Weed Orders!"
-            display={'flex'}
-            mb={5}
-            p={5}
-            pt={0}
-            flexWrap={'wrap'}
-            alignItems={'stretch'}
-            backgroundColor={'ghostVerse.green.base'}
-            color={'black'}
-          >
-            <Text
-              as={'h3'}
-              fontSize={{ base: 30, lg: 50 }}
-              lineHeight={1}
-              fontWeight={'bold'}
-              fontFamily={'vt323'}
-              mt={{ base: 5 }}
-              mb={{ base: 5 }}
-              textAlign={'left'}
-            >
-              Get 10% Free on Weed Orders!
-            </Text>
 
-            <Text
-              as={'p'}
-              fontSize={{ base: 20, lg: 36 }}
-              lineHeight={1}
-              fontFamily={'vt323'}
-              w={{ base: '60%', md: '70%' }}
-              mr={4}
-              textAlign={'left'}
-            >
-              {`Schedule your delivery on greenghostweed.shop to enjoy 10% free on ${bud.name}.`}
-            </Text>
-            <Link
-              href={`https://greenghostweed.shop/products/${bud.slug}`}
-              passHref
-              title={`Green Ghost 🌿👻 Buy ${bud.name} Cannabis Strain Online`}
+          {bud.quantity > 0 && (
+            <Box
+              as="section"
+              aria-labelledby="Get 10% Free on Weed Orders!"
+              display={'flex'}
+              mb={5}
+              p={5}
+              pt={0}
+              flexWrap={'wrap'}
+              alignItems={'stretch'}
+              backgroundColor={'ghostVerse.green.base'}
+              color={'black'}
             >
               <Text
-                as="span"
-                display={'inline-flex'}
-                color={'ghostVerse.green.base'}
-                borderColor={'black'}
-                backgroundColor={'black'}
-                fontSize={{ base: 'xl', lg: '4xl' }}
+                as={'h3'}
+                fontSize={{ base: 30, lg: 50 }}
                 lineHeight={1}
-                borderWidth={1}
-                px={{ base: 4, md: 6 }}
-                pt={{ base: 2, md: 0 }}
-                pb={{ base: 2, md: 2 }}
-                mt={5}
-                mx={'auto'}
+                fontWeight={'bold'}
                 fontFamily={'vt323'}
-                _hover={{
-                  borderColor: 'black',
-                  bgColor: 'ghostVerse.green.base',
-                  color: 'black',
-                }}
+                mt={{ base: 5 }}
+                mb={{ base: 5 }}
+                textAlign={'left'}
               >
-                {'Schedule & Save 10%'}
+                Get 10% Free on Weed Orders!
               </Text>
-            </Link>
-          </Box>
+
+              <Text
+                as={'p'}
+                fontSize={{ base: 20, lg: 36 }}
+                lineHeight={1}
+                fontFamily={'vt323'}
+                w={{ base: '60%', md: '70%' }}
+                mr={4}
+                textAlign={'left'}
+              >
+                {`Schedule your delivery on greenghostweed.shop to enjoy 10% free on ${bud.name}.`}
+              </Text>
+              <Link
+                href={`https://greenghostweed.shop/products/${bud.slug}`}
+                passHref
+                title={`Green Ghost 🌿👻 Buy ${bud.name} Cannabis Strain Online`}
+              >
+                <Text
+                  as="span"
+                  display={'inline-flex'}
+                  color={'ghostVerse.green.base'}
+                  borderColor={'black'}
+                  backgroundColor={'black'}
+                  fontSize={{ base: 'xl', lg: '4xl' }}
+                  lineHeight={1}
+                  borderWidth={1}
+                  px={{ base: 4, md: 6 }}
+                  pt={{ base: 2, md: 0 }}
+                  pb={{ base: 2, md: 2 }}
+                  mt={5}
+                  mx={'auto'}
+                  fontFamily={'vt323'}
+                  _hover={{
+                    borderColor: 'black',
+                    bgColor: 'ghostVerse.green.base',
+                    color: 'black',
+                  }}
+                >
+                  {'Schedule & Save 10%'}
+                </Text>
+              </Link>
+            </Box>
+          )}
+
           <HomeTopInfos />
         </Box>
       </MainLayout>
