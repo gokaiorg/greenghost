@@ -80,6 +80,27 @@ export const degens: Degen[] = [
       'Green Ghost 🌿👻 Degen Weed Shop Dry Sift Hash Cannabis Concentrate',
   },
   {
+    slug: 'super-dry-hash',
+    name: 'Super Dry Hash',
+    price: 600,
+    packaging: '1g',
+    THC: '50',
+    CBD: '0',
+    ingretiens: 'Kief, Oil',
+    quantity: 1,
+    description:
+      "Introducing Dry Sift Hash with an impressive 50% THC concentration, delivering a potent and flavorful experience for cannabis connoisseurs. This premium hash is crafted through a meticulous dry sifting process, where cannabis trichomes are separated from plant material to create a clean, concentrated product. The result is a fine, sandy texture packed with pure cannabinoids and terpenes, offering a robust, long-lasting high. \n\n Known for its rich, earthy aroma with hints of pine and spice, Dry Sift Hash delivers a smooth and enjoyable smoke. Perfect for those looking to enhance their cannabis experience, it can be enjoyed in a pipe, vaporizer, or mixed with flower for an added kick. Whether you're seeking deep relaxation or relief from chronic pain, Dry Sift Hash's high THC content ensures powerful effects that cater to both recreational and medicinal users.",
+    descSeo:
+      'Experience premium Dry Sift Hash with 50% THC. Potent, pure, and packed with cannabinoids for a powerful, long-lasting high. Perfect for seasoned cannabis users.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-product-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-product-02.webp',
+    ],
+    imgDesc:
+      'Green Ghost 🌿👻 Degen Weed Shop Dry Sift Hash Cannabis Concentrate',
+  },
+  {
     slug: 'pure-kief',
     name: 'Pure Kief',
     price: 999,
