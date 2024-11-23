@@ -351,8 +351,8 @@ export const buds: Bud[] = [
     sativa: '30',
     THC: '30',
     CBD: '0',
-    effects: 'Euphoria, Relaxation, Creativity',
-    relieves: 'Stress, Pain, Insomnia',
+    effects: 'Euphoric, Relaxed, Sleepy',
+    relieves: 'Stress, Chronic Pain, Insomnia',
     grower: 'Green Ghost',
     growerSlug: '',
     environment: 'Indoor',
@@ -360,9 +360,9 @@ export const buds: Bud[] = [
     quantity: 50,
     origin: 'Phuket',
     description:
-      "Discover the delightful Ben & Gary's strain from Exotic Genetix, a tantalizing 70/30 Indica-dominant hybrid that brings a creamy, fruity experience reminiscent of berry ice cream and fizzy drinks. This unique strain results from the remarkable crossing of the Ben & Berries and Gary Poppins varieties, each contributing its own exceptional characteristics. \n\n Ben & Berries, an elite clone developed by Lumpy's Flowers, is a luscious combination of Apple Fritter and Reckless Rainbow. Its conical, forest-green buds are adorned with fine orange hairs and coated in a thick layer of crystalline white trichomes, promising a visually stunning experience. The flavor profile bursts with super sweet and sugary berry notes, complemented by fresh blueberries and spicy apples, all wrapped in soft hints of floral herbs. This strain is perfect for anyone seeking maximum fruity flavor. \n\n On the other hand, Gary Poppins is an indica-dominant hybrid derived from the renowned Red Runtz lineage. This strain showcases a unique Kool-Aid-like terpene profile, making it an intriguing choice for growers and enthusiasts alike. With its impressive yield and straightforward cultivation process, Ben & Gary's is a must-try for anyone looking to elevate their cannabis experience with truly unique aromas and flavors.",
+      "Slaphappy is a captivating 70/30 indica-dominant hybrid from the creative minds at Exotic Genetix, bred by crossing Tina (Constantine x Triple OG) with Gary Poppins (Gary Payton x Red Runtz). This strain is a sensory masterpiece, showcasing deep purple buds adorned with fiery orange hairs and a rich, dark foliage backdrop. Its aroma is equally striking, blending sweet caramel, diesel, spices, and a bold kerosene-like fuel scent, promising a complex and unforgettable profile. \n\n Slaphappy is not only a delight for connoisseurs but also a favorite among growers. Known for its robust genetics, this strain offers exceptional production and ease of cultivation, making it a top pick for both experienced and novice cultivators. With its lineage tied to iconic strains like Slippery Susan and Cream & Sugar, Slaphappy carries forward the exotic terpene profiles Exotic Genetix is celebrated for. \n\n The effects are as potent as the aroma, delivering a powerful punch of relaxation and euphoria. Ideal for evening use, Slaphappy melts away stress and tension, replacing it with a sense of tranquility and contentment. Its unique terpene profile, reminiscent of Kool-Aid drinks, makes every session a flavorful journey. This strain is a go-to for managing chronic pain, insomnia, and stress while providing a sweet escape into relaxation.",
     descSeo:
-      "Experience Ben & Gary's by Exotic Genetix: a creamy, fruity strain with berry ice cream aromas and a delightful indica-dominant profile.",
+      "Slaphappy is a 70/30 indica-dominant hybrid with rich flavors of caramel, diesel, and spices. It delivers powerful relaxation and stress relief.",
     images: [
       '/media/green-ghost-degen-weed-shop-strain-slaphappy-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-slaphappy-cover.webp',
