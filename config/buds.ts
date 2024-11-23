@@ -343,6 +343,35 @@ export const buds: Bud[] = [
     source: 'undefined',
   },
   {
+    slug: 'slaphappy',
+    name: 'Slaphappy',
+    price: 500,
+    dominance: 'Indica',
+    indica: '70',
+    sativa: '30',
+    THC: '30',
+    CBD: '0',
+    effects: 'Euphoria, Relaxation, Creativity',
+    relieves: 'Stress, Pain, Insomnia',
+    grower: 'Green Ghost',
+    growerSlug: '',
+    environment: 'Indoor',
+    grade: 'AAAA Grade',
+    quantity: 50,
+    origin: 'Phuket',
+    description:
+      "Discover the delightful Ben & Gary's strain from Exotic Genetix, a tantalizing 70/30 Indica-dominant hybrid that brings a creamy, fruity experience reminiscent of berry ice cream and fizzy drinks. This unique strain results from the remarkable crossing of the Ben & Berries and Gary Poppins varieties, each contributing its own exceptional characteristics. \n\n Ben & Berries, an elite clone developed by Lumpy's Flowers, is a luscious combination of Apple Fritter and Reckless Rainbow. Its conical, forest-green buds are adorned with fine orange hairs and coated in a thick layer of crystalline white trichomes, promising a visually stunning experience. The flavor profile bursts with super sweet and sugary berry notes, complemented by fresh blueberries and spicy apples, all wrapped in soft hints of floral herbs. This strain is perfect for anyone seeking maximum fruity flavor. \n\n On the other hand, Gary Poppins is an indica-dominant hybrid derived from the renowned Red Runtz lineage. This strain showcases a unique Kool-Aid-like terpene profile, making it an intriguing choice for growers and enthusiasts alike. With its impressive yield and straightforward cultivation process, Ben & Gary's is a must-try for anyone looking to elevate their cannabis experience with truly unique aromas and flavors.",
+    descSeo:
+      "Experience Ben & Gary's by Exotic Genetix: a creamy, fruity strain with berry ice cream aromas and a delightful indica-dominant profile.",
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-slaphappy-bud-01.webp',
+      '/media/green-ghost-degen-weed-shop-strain-slaphappy-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-slaphappy-bud-02.webp',
+    ],
+    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Slaphappy Strain',
+    source: 'undefined',
+  },
+  {
     slug: 'el-chapo-og',
     name: 'El Chapo OG',
     price: 420,
@@ -509,9 +538,9 @@ export const buds: Bud[] = [
     descSeo:
       'Poppin Fresh by Exotic Genetix: Indica-dominant (70/30) hybrid with 26% THC. Sweet, spicy, and gassy aroma. Relaxing and flavorful. Easy to grow.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-poppin-fresh-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-poppin-fresh-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-poppin-fresh-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-poppin-fresh-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-poppin-fresh-bud-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Poppin Fresh Strain',
     source: 'undefined',
@@ -592,13 +621,13 @@ export const buds: Bud[] = [
     quantity: 50,
     origin: 'Phuket',
     description:
-      "Medellin is a perfectly balanced hybrid strain (50% indica, 50% sativa) created by crossing Wedding Cake and Chemdawg, offering a high that’s as dynamic as its origin. With an impressive THC level averaging between 25-28%, Medellin is well-suited for seasoned cannabis users looking for a potent, multifaceted experience. Its effects begin with an uplifting and tingly sensation, delivering a subtle boost of energy and stimulation before transitioning into a deep state of relaxation. This duality makes it a great companion for both socializing and unwinding. \n\n Medellin is popular among medical cannabis patients for its ability to alleviate symptoms of anxiety, depression, pain, and chronic stress. It’s also a go-to strain for combating inflammation and fatigue. The buds of Medellin are a visual treat, with neon green pepper-shaped nugs, vibrant purple undertones, fiery orange hairs, and a frosty coating of purple-tinted trichomes. \n\n The flavor profile of Medellin is just as captivating, offering a mix of sweet and sour lemony herbal tea with notes of pungent diesel and pepper. The dominant terpene, caryophyllene, adds spicy and earthy undertones that enhance its overall complexity. Bred by Lemonnade and named after the iconic Colombian region, Medellin encapsulates a tropical vibe that transports you to a warm and tranquil paradise. Whether for medical use or recreational enjoyment, Medellin delivers a memorable cannabis experience.",
+      'Medellin is a perfectly balanced hybrid strain (50% indica, 50% sativa) created by crossing Wedding Cake and Chemdawg, offering a high that’s as dynamic as its origin. With an impressive THC level averaging between 25-28%, Medellin is well-suited for seasoned cannabis users looking for a potent, multifaceted experience. Its effects begin with an uplifting and tingly sensation, delivering a subtle boost of energy and stimulation before transitioning into a deep state of relaxation. This duality makes it a great companion for both socializing and unwinding. \n\n Medellin is popular among medical cannabis patients for its ability to alleviate symptoms of anxiety, depression, pain, and chronic stress. It’s also a go-to strain for combating inflammation and fatigue. The buds of Medellin are a visual treat, with neon green pepper-shaped nugs, vibrant purple undertones, fiery orange hairs, and a frosty coating of purple-tinted trichomes. \n\n The flavor profile of Medellin is just as captivating, offering a mix of sweet and sour lemony herbal tea with notes of pungent diesel and pepper. The dominant terpene, caryophyllene, adds spicy and earthy undertones that enhance its overall complexity. Bred by Lemonnade and named after the iconic Colombian region, Medellin encapsulates a tropical vibe that transports you to a warm and tranquil paradise. Whether for medical use or recreational enjoyment, Medellin delivers a memorable cannabis experience.',
     descSeo:
       'Medellin is a balanced hybrid with 26-28% THC, offering uplifting energy and deep relaxation. Perfect for anxiety, pain, and stress relief with lemony diesel notes.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-medellin-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-medellin-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-medellin-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-medellin-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-medellin-bud-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Medellin Strain',
     source: 'https://www.leafly.com/strains/medellin',
@@ -625,9 +654,9 @@ export const buds: Bud[] = [
     descSeo:
       'Strawneapple is a balanced hybrid with tropical pineapple flavors and earthy tones, offering uplifting energy and deep relaxation. Perfect for stress relief.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-strawneapple-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-strawneapple-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-strawneapple-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-strawneapple-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-strawneapple-bud-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Strawneapple Strain',
     source: 'undefined',
@@ -683,9 +712,9 @@ export const buds: Bud[] = [
     descSeo:
       'Toasted Toffee strain: A hybrid with uplifting, relaxing effects. May relieve pain, stress, anxiety, or depression. Rich in b-Caryophyllene and Limonene terpenes.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-toasted-toffee-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-toasted-toffee-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-toasted-toffee-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-toasted-toffee-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-toasted-toffee-bud-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Toasted Toffee Strain',
     source: '',
