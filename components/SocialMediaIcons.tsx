@@ -56,20 +56,20 @@ export const SocialMediaIcons = () => {
             title="Subscribe on Youtube"
           />
         </Box>{' '}
-        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
+        {/* <Box bgColor={'#13DE00'} borderRadius={'100%'}>
           <SocialIcon
             url="https://www.instagram.com/greenghostdegen"
             bgColor={'black'}
             style={{ width: 40, height: 40 }}
             title="Follow Us on Instagram"
           />
-        </Box>
+        </Box> */}
         <Box bgColor={'#13DE00'} borderRadius={'100%'}>
           <SocialIcon
-            url="https://twitter.com/greenghostdegen"
+            url="https://x.com/greenghostdegen"
             bgColor={'black'}
             style={{ width: 40, height: 40 }}
-            title="Follow Us on Twitter"
+            title="Follow Us on X"
           />
         </Box>
         <Box bgColor={'#13DE00'} borderRadius={'100%'}>
