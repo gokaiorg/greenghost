@@ -6,7 +6,7 @@ const selectedStrains = [
   'Scotty 2 Hotty',
   'Thai Stick',
   'Northern Lights',
-  'Drippin’ Aint Eazy',
+  'Strawneapple',
   'Mango Sticky Rice',
 ];
 

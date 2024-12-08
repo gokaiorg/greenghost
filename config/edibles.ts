@@ -184,6 +184,27 @@ export const edibles: Edible[] = [
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Best Brownie THC Edible',
   },
   {
+    slug: 'thc-muffin',
+    name: 'THC Muffin',
+    price: 400,
+    packaging: '1 Muffin',
+    THC: '150',
+    CBD: '0',
+    effects: 'Uplifted, Relaxed, Creative',
+    ingretiens: 'Dark chocolate, Sugar, Cannabutter, Eggs, Flour',
+    quantity: 1,
+    description:
+      'Indulge in the ultimate cannabis treat with our THC Muffin, crafted using an exclusive blend of premium Exotic Genetix weed strains. Each muffin is infused with a potent 150 mg of THC, delivering a powerful and enjoyable experience tailored to seasoned enthusiasts. With a rich chocolate taste, this muffin offers the perfect balance of decadent flavor and euphoric effects. \n\n The THC Muffin isn’t just about indulgence—it’s an adventure. The blend of Exotic Genetix strains ensures a complex profile of cannabinoids and terpenes, enhancing the overall experience. The muffin delivers a gradual onset of effects, starting with a cerebral buzz that uplifts your mood and sparks creativity. As the high deepens, you’ll notice a calming wave of relaxation enveloping your body, making it ideal for unwinding after a long day or elevating social moments. \n\n Perfect for recreational use and therapeutic relief, this muffin can help alleviate symptoms of chronic pain, stress, and anxiety. It’s also a great choice for those battling insomnia, as the relaxing properties may ease you into a restful sleep. Convenient, discreet, and irresistibly tasty, the THC Muffin is the perfect blend of flavor and potency.',
+    descSeo:
+      'Experience indulgence with our THC Muffin: 150 mg of premium Exotic Genetix strains, rich chocolate taste, uplifting effects, and relaxing relief in every bite.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-muffin-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-muffin-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-muffin-cover.webp',
+    ],
+    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Best Muffin THC Edible',
+  },
+  {
     slug: 'thc-brownies',
     name: 'THC Brownies',
     price: 800,
