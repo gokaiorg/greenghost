@@ -461,7 +461,7 @@ export const buds: Bud[] = [
   {
     slug: 'pop-star',
     name: 'Pop Star',
-    price: 350,
+    price: 300,
     dominance: 'Indica',
     indica: '80',
     sativa: '20',
@@ -519,7 +519,7 @@ export const buds: Bud[] = [
   {
     slug: 'super-boof',
     name: 'Super Boof',
-    price: 450,
+    price: 400,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -763,7 +763,7 @@ export const buds: Bud[] = [
     growerSlug: '/',
     environment: 'Indoor',
     grade: 'AAAA Grade',
-    quantity: 89,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "On Point is an indica-dominant (60% indica / 40% sativa) created by crossing OG Kush and Pineapple Express, offering a potent and flavorful experience. \n\n With 24% THC, this strain is perfect for those seeking a relaxing yet uplifting high. \n\n The buds are large and dense, covered in vibrant green hues and a thick layer of trichomes. The flavor profile combines sweet pineapple, zesty citrus, and earthy undertones, making it a favorite among cannabis enthusiasts. On Point delivers calming body effects with an energizing mental uplift, providing euphoria and relaxation in equal measure. Whether you're looking to unwind after a long day or enjoy a cheerful, euphoric experience, On Point offers a balanced hybrid high that can be enjoyed at any time. This premium strain is available for purchase in Bangkok, Thailand.",
@@ -780,7 +780,7 @@ export const buds: Bud[] = [
   {
     slug: 'medellin',
     name: 'Medellin',
-    price: 500,
+    price: 550,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -838,7 +838,7 @@ export const buds: Bud[] = [
   {
     slug: 'poppin-fresh',
     name: 'Poppin Fresh',
-    price: 400,
+    price: 350,
     dominance: 'Indica',
     indica: '70',
     sativa: '0',

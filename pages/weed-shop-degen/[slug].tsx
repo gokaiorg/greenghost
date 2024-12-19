@@ -261,7 +261,7 @@ export default function DegensPage({ degen }: DegensPageProps) {
                     {`CBD ${degen.CBD}%`}
                   </Box>
                 )}
-                <Box
+                {/* <Box
                   as="li"
                   listStyleType={'none'}
                   aria-label="Effects"
@@ -272,7 +272,7 @@ export default function DegensPage({ degen }: DegensPageProps) {
                     Ingredients:
                   </Box>
                   {`${degen.ingretiens}`}
-                </Box>
+                </Box>*/}
               </Box>
             </BoxInfoProduct>
             <BoxDescription>{degen.description}</BoxDescription>
