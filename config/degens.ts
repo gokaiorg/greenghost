@@ -72,9 +72,9 @@ export const degens: Degen[] = [
     descSeo:
       'Experience premium Dry Sift Hash with 50% THC. Potent, pure, and packed with cannabinoids for a powerful, long-lasting high. Perfect for seasoned cannabis users.',
     images: [
-      '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-product-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-product-02.webp',
+      '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-cover.webp',
     ],
     imgDesc:
       'Green Ghost 🌿👻 Degen Weed Shop Dry Sift Hash Cannabis Concentrate',
@@ -84,21 +84,21 @@ export const degens: Degen[] = [
     name: 'Super Dry Hash',
     price: 600,
     packaging: '1g',
-    THC: '50',
+    THC: '60',
     CBD: '0',
     ingretiens: 'Kief, Oil',
     quantity: 1,
     description:
-      "Introducing Dry Sift Hash with an impressive 50% THC concentration, delivering a potent and flavorful experience for cannabis connoisseurs. This premium hash is crafted through a meticulous dry sifting process, where cannabis trichomes are separated from plant material to create a clean, concentrated product. The result is a fine, sandy texture packed with pure cannabinoids and terpenes, offering a robust, long-lasting high. \n\n Known for its rich, earthy aroma with hints of pine and spice, Dry Sift Hash delivers a smooth and enjoyable smoke. Perfect for those looking to enhance their cannabis experience, it can be enjoyed in a pipe, vaporizer, or mixed with flower for an added kick. Whether you're seeking deep relaxation or relief from chronic pain, Dry Sift Hash's high THC content ensures powerful effects that cater to both recreational and medicinal users.",
+      'Super Dry Hash is a premium dry sift hash that delivers an unparalleled experience for cannabis enthusiasts seeking potent and clean concentrates. Crafted through a meticulous dry sifting process, this hash achieves a super-dry texture while preserving the highest quality of cannabinoids and terpenes. With an impressive THC content of 60%, Super Dry Hash offers a powerful punch that is sure to satisfy even the most seasoned users. \n\n The texture of this hash is crumbly and easy to work with, making it an ideal choice for sprinkling into joints, topping off bowls, or using in a hash-specific vaporizer. Its aroma is rich and earthy, with hints of pine and spice that evoke the natural essence of premium cannabis flowers. Upon consumption, expect a smooth and flavorful experience that highlights the robust terpene profile. \n\n Super Dry Hash is celebrated for its intense effects, starting with an uplifting cerebral buzz that transitions into a deeply relaxing body high. It’s perfect for moments of creative inspiration or winding down after a long day. Medical cannabis users may find relief from chronic pain, stress, and insomnia thanks to its potent properties.',
     descSeo:
-      'Experience premium Dry Sift Hash with 50% THC. Potent, pure, and packed with cannabinoids for a powerful, long-lasting high. Perfect for seasoned cannabis users.',
+      'Super Dry Hash: A premium dry sift hash with 60% THC, offering intense effects, earthy flavors, and a versatile, super-dry texture perfect for any session.',
     images: [
-      '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-product-01.webp',
-      '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-product-02.webp',
+      '/media/green-ghost-degen-weed-shop-menu-degen-super-dry-hash-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-degen-super-dry-hash-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-degen-super-dry-hash-cover.webp',
     ],
     imgDesc:
-      'Green Ghost 🌿👻 Degen Weed Shop Dry Sift Hash Cannabis Concentrate',
+      'Green Ghost 🌿👻 Degen Weed Shop Super Dry Hash Cannabis Concentrate',
   },
   {
     slug: 'pure-kief',

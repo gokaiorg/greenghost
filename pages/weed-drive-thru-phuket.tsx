@@ -125,7 +125,7 @@ const WeedDriveThru: NextPage = () => {
             </Link>
             <Box width={{ base: '100%' }}>
               <Image
-                src="/media/green-ghost-degen-weed-shop-weed-delivery-phuket-strain-choice.webp"
+                src="/media/green-ghost-degen-weed-shop-buds-menu.webp"
                 width={1200}
                 height={600}
                 alt="Weed Menu - Weed Drive Thru Phuket - Fast and Discreet."

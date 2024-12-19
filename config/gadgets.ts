@@ -68,9 +68,9 @@ export const gadgets: Gadget[] = [
   {
     slug: 'wood-grinder-68mm-2-layer',
     name: 'Wood Grinder',
-    price: 300,
+    price: 999,
     packaging: '68x28mm, 2-layer',
-    quantity: 2,
+    quantity: 0,
     description:
       'The perfect combination of functionality and style with our wood grinder. Measuring 68x28mm, this 2-layer grinder is compact yet efficient. Its durable wooden construction ensures longevity, while the sharp teeth effortlessly grind your herbs to perfection. Experience convenience and enjoy the natural beauty of wood with this essential tool for herb enthusiasts.',
     descSeo:

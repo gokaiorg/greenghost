@@ -222,7 +222,7 @@ const WeedDelivery: NextPage = () => {
             title="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
             heading="Explore Our Premium Cannabis Selection"
             text="Whether you're looking for flowers, edibles, concentrates or gadgets, we have it for you."
-            imgSrc="/media/green-ghost-weed-shop-delivery-menu.webp"
+            imgSrc="/media/green-ghost-degen-weed-shop-buds-menu.webp"
             imgAlt="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
             imgSizes="(max-width: 1024px) 420px, 602px"
             number="1"
