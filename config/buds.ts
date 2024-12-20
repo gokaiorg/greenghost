@@ -277,9 +277,9 @@ export const buds: Bud[] = [
     descSeo:
       'L.A. Haze: A sativa-dominant hybrid with uplifting effects, treating migraines, stress, and PTSD. Enjoy its energizing buzz and citrus-herbal flavors.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-la-haze-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-la-haze-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-la-haze-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-la-haze-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-la-haze-bud-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop L.A. Haze Strain',
     source: 'https://growdiaries.com/seedbank/gagegreen/la-haze',
@@ -449,11 +449,11 @@ export const buds: Bud[] = [
     description:
       'Runtz, also referred to as "Runtz OG," is a rare and highly sought-after hybrid marijuana strain created by the Cookies Fam by crossing Zkittlez with Gelato. It\'s recognized for its exceptional fruity flavor profile that mimics the aroma of sugary candy we all love. \n\n Its popularity has been rising steadily, and it was named Leafly Strain of the Year in 2020. According to growers, Runtz has resinous buds that range in color from deep purple to vibrant lime green. \n\n It boasts a smooth and creamy smoke that is easy to inhale. This strain is famous for its long-lasting uplifting effects and euphoric highs. Purple Caper Seeds also produced the same cross and marketed it as Gelato Zkittlez.',
     descSeo:
-      'Runtz, also referred to as "Runtz OG," is a rare and highly sought-after hybrid marijuana strain created by the Cookies Fam by crossing Zkittlez with Gelato. It\'s recognized for its exceptional fruity flavor profile that mimics the aroma of sugary candy we all love.',
+      'Runtz is a balanced hybrid strain known for its candy-like sweetness and euphoric effects. Perfect for relaxing, it helps with stress, anxiety, and chronic pain relief.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-runtz-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-runtz-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-runtz-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-runtz-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-runtz-bud-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Runtz Strain',
     source: 'https://www.leafly.com/strains/runtz',
@@ -480,9 +480,9 @@ export const buds: Bud[] = [
     descSeo:
       'Pop Star by Exotic Genetix is an 80% indica hybrid with rich vanilla, cherry flavors, high THC, and balanced, relaxing effects.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-pop-star-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-pop-star-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-pop-star-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-pop-star-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-pop-star-bud-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Pop Star Strain',
     source: 'undefined',
