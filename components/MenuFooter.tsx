@@ -18,7 +18,16 @@ export const MenuFooter = () => {
       >
         <Box mx={2}>
           <Link
-            title="Green Ghost Map Location"
+            title="Green Ghost 🌿👻 Wholesale Cannabis Premium Strains in Phuket"
+            href="/wholesale"
+            passHref
+          >
+            Wholesale
+          </Link>
+        </Box>
+        <Box mx={2}>
+          <Link
+            title="Green Ghost 🌿👻 Best Weed Shop Near Me in Phuket"
             href="/best-degen-weed-shop"
             passHref
           >
@@ -35,12 +44,16 @@ export const MenuFooter = () => {
           </Link>
         </Box>
         <Box mx={2}>
-          <Link title="Contact Green Ghost" href={'/contact'} passHref>
+          <Link
+            title="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
+            href={'/contact'}
+            passHref
+          >
             Contact
           </Link>
         </Box>
         <Box mx={2}>
-          <Link title="Green Ghost Sitemap" href="/sitemap" passHref>
+          <Link title="Green Ghost 🌿👻 Sitemap" href="/sitemap" passHref>
             Sitemap
           </Link>
         </Box>

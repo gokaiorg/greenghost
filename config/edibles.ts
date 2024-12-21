@@ -198,9 +198,9 @@ export const edibles: Edible[] = [
     descSeo:
       'Experience indulgence with our THC Muffin: 150 mg of premium Exotic Genetix strains, rich chocolate taste, uplifting effects, and relaxing relief in every bite.',
     images: [
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-muffin-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-muffin-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-thc-muffin-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-edible-thc-muffin-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-muffin-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Best Muffin THC Edible',
   },
