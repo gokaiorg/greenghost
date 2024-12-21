@@ -209,16 +209,50 @@ export default function BudPage({ bud }: BudPageProps) {
                     whiteSpace={'nowrap'}
                     mb={2}
                   >
-                    <Box as="span" color={'white'} mr={2}>
+                    <Box
+                      as="span"
+                      color={'white'}
+                      mr={2}
+                      display={'inline-flex'}
+                      w={10}
+                    >
                       1G
                     </Box>
                     {`${bud.price} THB`}
                   </Box>
-                  <Box as="li" aria-label="Price for 5G" whiteSpace={'nowrap'}>
-                    <Box as="span" color={'white'} mr={2}>
+                  <Box
+                    as="li"
+                    aria-label="Price for 5G"
+                    whiteSpace={'nowrap'}
+                    mb={2}
+                  >
+                    <Box
+                      as="span"
+                      color={'white'}
+                      mr={2}
+                      display={'inline-flex'}
+                      w={10}
+                    >
                       5G
                     </Box>
                     {`${(bud.price * 5 - bud.price).toFixed(0)} THB`}
+                  </Box>
+                  <Box
+                    as="li"
+                    aria-label="Price for 30G"
+                    whiteSpace={'nowrap'}
+                    mb={2}
+                  >
+                    <Box
+                      as="span"
+                      color={'white'}
+                      mr={2}
+                      display={'inline-flex'}
+                      w={10}
+                    >
+                      30G
+                    </Box>
+                    {`${(bud.price * 30 * 0.7).toFixed(0)} THB`}
                   </Box>
                 </Box>
               )}

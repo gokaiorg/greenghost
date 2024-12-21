@@ -22,7 +22,6 @@ const contactJSONLD = {
   sameAs: [
     'https://www.facebook.com/greenghostdegen',
     'https://x.com/greenghostdegen',
-    'https://www.instagram.com/greenghostdegen',
     'https://www.tiktok.com/@greenghostdegen',
     'https://www.youtube.com/@greenghostdegen',
     'https://warpcast.com/greenghostdegen',
