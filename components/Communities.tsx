@@ -42,17 +42,23 @@ export const Communities = () => {
           p={4}
           mr={'2'}
         >
-          <Text
-            as={'h3'}
-            fontSize={{ base: 18 }}
-            fontFamily={'CubicFive12'}
-            color={'ghostVerse.green.base'}
-            _hover={{
-              textDecoration: 'underline',
-            }}
+          <Link
+            title="Green Ghost 🌿👻 Green Ghost Degen NFT Collection"
+            href="/nft"
+            passHref
           >
-            Green Ghost NFT
-          </Text>
+            <Text
+              as={'h3'}
+              fontSize={{ base: 18 }}
+              fontFamily={'CubicFive12'}
+              color={'ghostVerse.green.base'}
+              _hover={{
+                textDecoration: 'underline',
+              }}
+            >
+              Green Ghost Degen NFT
+            </Text>
+          </Link>
           <ImgGreenGhostNFT />
           <Box
             mb={'auto'}

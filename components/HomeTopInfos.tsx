@@ -123,32 +123,50 @@ export const HomeTopInfos = () => {
         <Text as="p" fontFamily="vt323" fontSize={26} lineHeight={1} mb="auto">
           Exclusive community for premium cannabis enthusiasts.
         </Text>
-        <Link
-          href="/cannabis-club"
-          passHref
-          title="Green Ghost 🌿👻 Best Cannabis Social Club in Phuket Thailand"
-        >
-          <Text
-            as="span"
-            display="inline-flex"
-            fontSize={{ base: 'xl', lg: '4xl' }}
-            borderWidth={1}
-            px={6}
-            pb={2}
-            mx="auto"
-            mt={4}
-            fontFamily="vt323"
-            borderColor="black"
-            bgColor="black"
-            color="ghostVerse.green.base"
-            _hover={{
-              bgColor: 'ghostVerse.green.base',
-              color: 'black',
-            }}
+        <Box display={'flex'} alignItems={'center'} justifyContent={'center'}>
+          <Link
+            href="/cannabis-club"
+            passHref
+            title="Green Ghost 🌿👻 Best Cannabis Social Club in Phuket Thailand"
           >
-            Become a member
-          </Text>
-        </Link>
+            <Text
+              as="span"
+              display="inline-flex"
+              fontSize={{ base: 'xl', lg: '4xl' }}
+              borderWidth={1}
+              px={6}
+              pb={2}
+              mx="auto"
+              mt={4}
+              fontFamily="vt323"
+              borderColor="black"
+              bgColor="black"
+              color="ghostVerse.green.base"
+              _hover={{
+                bgColor: 'ghostVerse.green.base',
+                color: 'black',
+              }}
+            >
+              Become a member
+            </Text>
+          </Link>
+          <Box
+            fontFamily={'vt323'}
+            fontSize={{ base: '2xl' }}
+            lineHeight={1}
+            px={{ base: 0, md: 6 }}
+            py={{ base: 2, md: 2 }}
+            fontWeight={'bold'}
+          >
+            <Link
+              href="/nft"
+              passHref
+              title="Green Ghost 🌿👻 Green Ghost Degen NFT Collection"
+            >
+              GET NFT!
+            </Link>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
