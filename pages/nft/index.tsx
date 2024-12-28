@@ -7,6 +7,9 @@ import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import Head from 'next/head';
 import { ImgNFT } from '../../components/media/ImgNFT';
 import { NFT } from '../../components/NFT';
+import Link from 'next/link';
+import { IconOpensea } from '../../components/media/IconOpensea';
+import { IconNFTCalendar } from '../../components/media/IconNFTCalendar';
 
 const NFTs: NextPage = () => {
   return (
@@ -91,6 +94,56 @@ const NFTs: NextPage = () => {
             and cash back on your cannabis purchases at the best degen weed
             shop.
           </Box>
+        </Box>
+        <Box
+          fontFamily={'vt323'}
+          fontSize={{ base: 24 }}
+          display={'flex'}
+          alignItems={'center'}
+          gap={4}
+          mb={4}
+        >
+          View on:
+          <Link
+            href="https://opensea.io/collection/greenghostdegen/overview"
+            passHref
+            title="Green Ghost 🌿👻 Green Ghost Degen Collection OpenSea"
+          >
+            <Box
+              display="flex"
+              alignItems="center"
+              gap={2}
+              border={'1px solid white'}
+              p={2}
+              _hover={{
+                backgroundColor: 'ghostVerse.green.base',
+                color: 'black',
+              }}
+            >
+              OpenSea
+              <IconOpensea />
+            </Box>
+          </Link>
+          <Link
+            href="https://nftcalendar.io/event/green-ghost-degen/"
+            passHref
+            title="Green Ghost 🌿👻 Green Ghost Degen NFT Calendar"
+          >
+            <Box
+              display="flex"
+              alignItems="center"
+              gap={2}
+              border={'1px solid white'}
+              p={2}
+              _hover={{
+                backgroundColor: 'ghostVerse.green.base',
+                color: 'black',
+              }}
+            >
+              NFT Calendar
+              <IconNFTCalendar />
+            </Box>
+          </Link>
         </Box>
         <NFT />
       </MainLayout>
