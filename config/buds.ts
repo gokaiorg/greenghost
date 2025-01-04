@@ -908,7 +908,7 @@ export const buds: Bud[] = [
     growerSlug: '',
     environment: 'Indoor',
     grade: 'AAAA Grade',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Toasted Toffee is a balanced hybrid strain, born from the cross of White Truffles and Gary Poppins. Known for its rich terpene profile featuring b-Caryophyllene, Limonene, and a-Humulene, this strain offers a smooth blend of relaxation and mood elevation. With its toffee-like aroma and subtle earthy undertones, Toasted Toffee delivers a unique sensory experience. \n\n The effects are both uplifting and relaxing, making it perfect for relieving stress while maintaining a happy, carefree mood. \n\n Whether you're dealing with pain, depression, anxiety, or stress, this strain offers relief with a euphoric touch. Its balanced nature makes it suitable for day or night use, allowing users to unwind without feeling overly sedated.",
