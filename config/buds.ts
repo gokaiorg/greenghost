@@ -270,7 +270,7 @@ export const buds: Bud[] = [
     growerSlug: '',
     environment: 'Indoor',
     grade: 'AAA Grade',
-    quantity: 99,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "L.A. Haze is a sativa-dominant hybrid born from an expert blend of LA Confidential, Kali Mist, and Afghan Haze F2 genetics. Crafted by Gage Green Genetics, this strain delivers an exceptional cerebral experience that balances energizing euphoria with calming relaxation. Known for its potent sativa effects, L.A. Haze is a go-to for users seeking an uplifting, creative high that fosters focus and productivity. \n\n This strain's effects are perfect for relieving mental burdens, offering a natural remedy for migraines, headaches, and mental health challenges like anxiety, chronic stress, depression, and PTSD. L.A. Haze pairs therapeutic benefits with an enjoyable recreational experience, leaving users feeling tingly, giggly, and comfortably relaxed. \n\n The flavor and aroma are a harmonious fusion of herbal, citrus, and earthy notes, reminiscent of its Afghani heritage. Each inhale is an invigorating burst of spicy herbal tones, with hints of sweet citrus lingering on the exhale. As the high sets in, expect super yields of creative energy paired with a light physical buzz that keeps you uplifted without overwhelming sedation. A favorite for daytime use, L.A. Haze is a versatile strain for those seeking relief or simply chasing an enjoyable high. Its balance of euphoria and calm makes it a unique and unforgettable choice for cannabis connoisseurs.",
@@ -517,6 +517,35 @@ export const buds: Bud[] = [
     source: 'undefined',
   },
   {
+    slug: 'sour-diesel',
+    name: 'Sour Diesel',
+    price: 400,
+    dominance: 'Sativa',
+    indica: '10',
+    sativa: '90',
+    THC: '26',
+    CBD: '0',
+    effects: 'Creative, Euphoria, Happy',
+    relieves: 'Anxiety, Depression, Stress',
+    grower: 'Green Ghost',
+    growerSlug: '',
+    environment: 'Indoor',
+    grade: 'AAAA Grade',
+    quantity: 50,
+    origin: 'Phuket',
+    description:
+      'Sour Diesel, also known as "Sour D" or "Sour Deez," is a legendary sativa-dominant hybrid celebrated for its uplifting effects and distinctive aroma. With a 90:10 sativa-to-indica ratio, Sour Diesel is a powerhouse for creativity and energy, making it a favorite for both recreational and medicinal users. Its origins are often debated, with some attributing its lineage to a cross between Mass Super Skunk and 91 Chemdog, while others point to Mexican sativa and a Chemdog phenotype. Regardless of its genetic roots, Sour Diesel consistently delivers a vibrant cerebral high that stimulates the mind and fuels productivity. \n\n Unlike indica-heavy strains, Sour Diesel won’t leave you couch-locked. Instead, it’s a go-to choice for alleviating anxiety, depression, and chronic fatigue, offering users an invigorating mental lift. The strain’s stimulating properties make it less ideal for insomnia but perfect for a morning boost or mid-day spark. \n\n Sour Diesel\'s aroma is unmistakable—a bold combination of diesel fuel and fresh lemon with subtle earthy undertones. Its smooth smoke leaves a tangy lemon aftertaste, tantalizing the palate. Visually, this strain boasts dense, light-green buds intertwined with vibrant orange hairs, encapsulating its energetic essence. Whether you\'re looking to spark creativity, elevate your mood, or enjoy a flavorful experience, Sour Diesel is the perfect companion for an inspired day.',
+    descSeo:
+      'Sour Diesel is a sativa-dominant strain with a 90:10 ratio. Known for its uplifting cerebral high, diesel aroma, and lemon aftertaste, it\'s perfect for creative energy.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-sour-diesel-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-sour-diesel-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-sour-diesel-cover.webp',
+    ],
+    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Sour Diesel Strain',
+    source: 'https://www.allbud.com/marijuana-strains/sativa-dominant-hybrid/sour-diesel',
+  },
+  {
     slug: 'super-boof',
     name: 'Super Boof',
     price: 400,
@@ -531,7 +560,7 @@ export const buds: Bud[] = [
     growerSlug: '',
     environment: 'Indoor',
     grade: 'AAAA Grade',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Super Boof, also known as 'Superboof' is a perfectly balanced hybrid strain with equal parts indica and sativa. Created by crossing Black Cherry Punch with Tropicana Cookies, this strain is ideal for those seeking a well-rounded experience. Its high potency delivers intense effects that impact both mind and body, offering a unique blend of relaxation and stimulation. \n\n The flavor profile of Super Boof features sweet and fruity cherry berry notes, complemented by a nutty and sour citrus aroma. The dense, heart-shaped nugs are emerald green with thin red-orange hairs and a coating of milky amber trichomes, adding to its appealing appearance. \n\n Super Boof’s effects begin with a cerebral uplift, enhancing focus and creativity, making it suitable for creative tasks or social interactions. As the high progresses, it provides deep physical relaxation, easing aches and pains. With its high THC content of 28-32%, Super Boof is effective for managing chronic stress, fibromyalgia, gastrointestinal issues, mood swings, and chronic pain.",
@@ -850,7 +879,7 @@ export const buds: Bud[] = [
     growerSlug: '/',
     environment: 'Indoor',
     grade: 'AAAA Grade',
-    quantity: 89,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Poppin Fresh by Exotic Genetix is an indica-dominant hybrid (70/30) born from a unique collaboration between Compound Genetics, Family Cookies, and rapper Quavo Huncho. \n\n Created by crossing Pavé (Paris OG x The Menthol) with Gary Poppins, this rare strain delivers a flavorful and potent experience. \n\n Poppin Fresh offers a complex aroma profile that blends sweet, woody, fuel, and gas notes, making it a favorite among seasoned cannabis enthusiasts. With a THC content of 26%, it provides a powerful, relaxing effect that is ideal for unwinding. Its terpene profile includes spicy, sweet, and ice cream-like aromas with a hint of gas, reminiscent of Kool-Aid. This strain is easy to cultivate, offering excellent yields and exceptional quality, making it a must-try for growers and connoisseurs alike.',
@@ -908,7 +937,7 @@ export const buds: Bud[] = [
     growerSlug: '',
     environment: 'Indoor',
     grade: 'AAAA Grade',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Toasted Toffee is a balanced hybrid strain, born from the cross of White Truffles and Gary Poppins. Known for its rich terpene profile featuring b-Caryophyllene, Limonene, and a-Humulene, this strain offers a smooth blend of relaxation and mood elevation. With its toffee-like aroma and subtle earthy undertones, Toasted Toffee delivers a unique sensory experience. \n\n The effects are both uplifting and relaxing, making it perfect for relieving stress while maintaining a happy, carefree mood. \n\n Whether you're dealing with pain, depression, anxiety, or stress, this strain offers relief with a euphoric touch. Its balanced nature makes it suitable for day or night use, allowing users to unwind without feeling overly sedated.",
