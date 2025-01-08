@@ -30,7 +30,7 @@ const Jobs: NextPage = () => {
         />
         <meta
           property="og:image"
-          content="https://green.gd/media/green-ghost-degen-weed-shop-contact-us.webp"
+          content="https://green.gd/media/green-ghost-degen-weed-shop-jobs.webp"
         />
         <meta property="og:image:width" content="2048" />
         <meta property="og:image:height" content="1366" />
@@ -45,7 +45,7 @@ const Jobs: NextPage = () => {
         />
         <meta
           name="twitter:image"
-          content="https://green.gd/media/green-ghost-degen-weed-shop-contact-us.webp"
+          content="https://green.gd/media/green-ghost-degen-weed-shop-jobs.webp"
         />
         <meta name="twitter:url" content="https://green.gd/jobs" />
       </Head>
