@@ -536,14 +536,15 @@ export const buds: Bud[] = [
     description:
       'Sour Diesel, also known as "Sour D" or "Sour Deez," is a legendary sativa-dominant hybrid celebrated for its uplifting effects and distinctive aroma. With a 90:10 sativa-to-indica ratio, Sour Diesel is a powerhouse for creativity and energy, making it a favorite for both recreational and medicinal users. Its origins are often debated, with some attributing its lineage to a cross between Mass Super Skunk and 91 Chemdog, while others point to Mexican sativa and a Chemdog phenotype. Regardless of its genetic roots, Sour Diesel consistently delivers a vibrant cerebral high that stimulates the mind and fuels productivity. \n\n Unlike indica-heavy strains, Sour Diesel won’t leave you couch-locked. Instead, it’s a go-to choice for alleviating anxiety, depression, and chronic fatigue, offering users an invigorating mental lift. The strain’s stimulating properties make it less ideal for insomnia but perfect for a morning boost or mid-day spark. \n\n Sour Diesel\'s aroma is unmistakable—a bold combination of diesel fuel and fresh lemon with subtle earthy undertones. Its smooth smoke leaves a tangy lemon aftertaste, tantalizing the palate. Visually, this strain boasts dense, light-green buds intertwined with vibrant orange hairs, encapsulating its energetic essence. Whether you\'re looking to spark creativity, elevate your mood, or enjoy a flavorful experience, Sour Diesel is the perfect companion for an inspired day.',
     descSeo:
-      'Sour Diesel is a sativa-dominant strain with a 90:10 ratio. Known for its uplifting cerebral high, diesel aroma, and lemon aftertaste, it\'s perfect for creative energy.',
+      "Sour Diesel is a sativa-dominant strain with a 90:10 ratio. Known for its uplifting cerebral high, diesel aroma, and lemon aftertaste, it's perfect for creative energy.",
     images: [
       '/media/green-ghost-degen-weed-shop-strain-sour-diesel-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-sour-diesel-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-sour-diesel-cover.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Sour Diesel Strain',
-    source: 'https://www.allbud.com/marijuana-strains/sativa-dominant-hybrid/sour-diesel',
+    source:
+      'https://www.allbud.com/marijuana-strains/sativa-dominant-hybrid/sour-diesel',
   },
   {
     slug: 'super-boof',
