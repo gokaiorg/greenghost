@@ -27,6 +27,15 @@ export const MenuFooter = () => {
         </Box>
         <Box mx={2}>
           <Link
+            title="Green Ghost 🌿👻 Budtender Job Opening at Our Cannabis Shop"
+            href="/jobs"
+            passHref
+          >
+            Jobs
+          </Link>
+        </Box>
+        <Box mx={2}>
+          <Link
             title="Green Ghost 🌿👻 Best Weed Shop Near Me in Phuket"
             href="/best-degen-weed-shop"
             passHref
