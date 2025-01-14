@@ -142,6 +142,27 @@ export const edibles: Edible[] = [
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Best Gummies THC Edible',
   },
   {
+    slug: 'thc-nano-gummies',
+    name: 'THC Nano Gummies',
+    price: 400,
+    packaging: '5 Gummies',
+    THC: '100',
+    CBD: '0',
+    effects: 'Creative, Happy, Euphoric',
+    ingretiens: 'Cannabutter, Eggs, Flour',
+    quantity: 1,
+    description:
+      "Dive into a world of sour-sweet delight with Nano Sourz Sour Atch Kids, the ultimate treat for cannabis enthusiasts seeking a mild, controlled experience. Each pack contains 5 carefully crafted gummies, infused with advanced nano-emulsion technology for fast-acting effects and maximum bioavailability. These hybrid-dominant gummies are designed to offer a balanced blend of uplifting euphoria and soothing relaxation, perfect for any time of day. \n\n With just 0.2% THC per piece, Nano Sourz Sour Atch Kids provide a subtle yet satisfying experience, making them an excellent choice for beginners or anyone looking to microdose. The sour coating adds a tangy burst of flavor that complements the fruity sweetness, creating a taste sensation you'll crave. \n\n Crafted with precision, these gummies ensure consistent dosing and rapid onset, thanks to the nano-infusion process that enhances THC absorption. Whether you're seeking creative inspiration, a gentle lift in mood, or a way to unwind after a long day, these hybrid-dominant treats are your go-to option. Indulge in a discreet and delicious cannabis experience with Nano Sourz Sour Atch Kids. Perfect for on-the-go enjoyment or a laid-back evening, they combine great taste with cutting-edge innovation. Elevate your snacking game today and discover why these gummies are a fan favorite!",
+    descSeo:
+      'Enjoy Nano Sourz Sour Atch Kids! 5 nano-infused gummies, 0.2% THC each. Hybrid-dominant for balanced effects. Fast-acting, discreet, and irresistibly tangy!',
+    images: [
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-nano-gummies-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-nano-gummies-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-edible-thc-nano-gummies-02.webp',
+    ],
+    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Best Nano Gummies THC Edible',
+  },
+  {
     slug: 'thc-pretzels',
     name: 'THC Pretzels',
     price: 200,
