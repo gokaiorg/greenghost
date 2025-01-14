@@ -538,9 +538,9 @@ export const buds: Bud[] = [
     descSeo:
       "Sour Diesel is a sativa-dominant strain with a 90:10 ratio. Known for its uplifting cerebral high, diesel aroma, and lemon aftertaste, it's perfect for creative energy.",
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-sour-diesel-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-sour-diesel-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-sour-diesel-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-sour-diesel-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-sour-diesel-bud-02.webp',
     ],
     imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Sour Diesel Strain',
     source:
@@ -822,7 +822,7 @@ export const buds: Bud[] = [
     growerSlug: '',
     environment: 'Indoor',
     grade: 'AAAA Grade',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Medellin is a perfectly balanced hybrid strain (50% indica, 50% sativa) created by crossing Wedding Cake and Chemdawg, offering a high that’s as dynamic as its origin. With an impressive THC level averaging between 25-28%, Medellin is well-suited for seasoned cannabis users looking for a potent, multifaceted experience. Its effects begin with an uplifting and tingly sensation, delivering a subtle boost of energy and stimulation before transitioning into a deep state of relaxation. This duality makes it a great companion for both socializing and unwinding. \n\n Medellin is popular among medical cannabis patients for its ability to alleviate symptoms of anxiety, depression, pain, and chronic stress. It’s also a go-to strain for combating inflammation and fatigue. The buds of Medellin are a visual treat, with neon green pepper-shaped nugs, vibrant purple undertones, fiery orange hairs, and a frosty coating of purple-tinted trichomes. \n\n The flavor profile of Medellin is just as captivating, offering a mix of sweet and sour lemony herbal tea with notes of pungent diesel and pepper. The dominant terpene, caryophyllene, adds spicy and earthy undertones that enhance its overall complexity. Bred by Lemonnade and named after the iconic Colombian region, Medellin encapsulates a tropical vibe that transports you to a warm and tranquil paradise. Whether for medical use or recreational enjoyment, Medellin delivers a memorable cannabis experience.',
