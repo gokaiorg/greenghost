@@ -45,6 +45,49 @@ export const Fwen = () => {
           </Text>
           <Box display={'flex'} flexWrap={'wrap'}>
             <Link
+              href="https://www.tripadvisor.com/Attractions-g293920-Activities-c20-t170-Phuket.html"
+              passHref
+              title="Green Ghost 🌿👻 THE 5 BEST Phuket Coffeehouses (2025) - Tripadvisor"
+            >
+              <Box
+                h={'100%'}
+                fontSize={{ base: 'xl' }}
+                color={'ghostVerse.color2.darker'}
+                fontFamily={'CubicFive12'}
+                mx={2}
+                textAlign={'center'}
+                p={2}
+                display={'flex'}
+                justifyContent={'center'}
+                flexDirection={'column'}
+                alignItems={'center'}
+                transition={'all .3s'}
+                _hover={{
+                  bgColor: 'ghostVerse.dark.lighter',
+                  color: 'ghostVerse.green.base',
+                }}
+              >
+                <Box w={'60px'} h={'60px'}>
+                  <Image
+                    src="/media/green-ghost-top-dispensary-tripadvisor.webp"
+                    width={60}
+                    height={60}
+                    alt="Green Ghost Top Dispensary Phuket Thailand - Tripadvisor"
+                    sizes="(max-width: 60px) 60px, 60px"
+                    style={{ objectFit: 'cover' }}
+                    quality={75}
+                  />
+                </Box>
+                <Text
+                  as={'h4'}
+                  fontSize={{ base: 10, md: 10 }}
+                  lineHeight={'12px'}
+                >
+                  Tripadvisor
+                </Text>
+              </Box>
+            </Link>
+            <Link
               href="https://weed.th/best-dispensaries-in-thailand"
               passHref
               title="Green Ghost 🌿👻 Top Dispensary Phuket Thailand Weed.th"
