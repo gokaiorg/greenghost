@@ -27,7 +27,7 @@ export const ThaiShop = () => {
     return true;
   });
 
-  filteredProducts.sort((a, b) => a.city.localeCompare(b.city));
+  filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
 
   const handleCityChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setCityFilter(event.target.value as CityOption);
@@ -42,7 +42,7 @@ export const ThaiShop = () => {
         alignItems={{ base: 'start', lg: 'center' }}
         flexDirection={{ base: 'column', lg: 'row' }}
       >
-        <Box w={'full'} mb={{ base: '2' }}>
+        <Box mb={{ base: '2' }}>
           <Box
             fontFamily={'CubicFive12'}
             fontSize={14}
@@ -57,7 +57,7 @@ export const ThaiShop = () => {
             onChange={handleCityChange}
             borderRadius={'0'}
             color={'ghostVerse.green.base'}
-            borderColor={'black'}
+            borderColor={'ghostVerse.green.base'}
             outline={'none'}
             p={0}
             cursor={'pointer'}
@@ -65,17 +65,24 @@ export const ThaiShop = () => {
             fontSize={24}
             _hover={{ borderColor: 'ghostVerse.green.base' }}
             _focusVisible={{ borderColor: 'ghostVerse.green.base' }}
-            w={{ base: '100%' }}
           >
             <option value="All">Thailand</option>
             <option value="Karon">Karon</option>
             <option value="Patong">Patong</option>
-            <option value="Phuket Town">Phuket Town</option>
             <option value="Rawai">Rawai</option>
+            <option value="Koh Kaeo">Koh Kaeo</option>
+            <option value="Ratsada">Ratsada</option>
+            <option value="Bangkok">Bangkok</option>
           </Select>
         </Box>
       </Box>
-      <Box display={'flex'} flexWrap={'wrap'}>
+      <Box
+        as="ul"
+        aria-label="Best Weed Shops in Thailand"
+        listStyleType="none"
+        display={'flex'}
+        flexWrap={'wrap'}
+      >
         {filteredProducts.map((thaishop) => (
           <ThaiShopItem key={thaishop.map} thaishop={thaishop} />
         ))}

@@ -10,6 +10,8 @@ type ThaiShopItemProps = {
 export const ThaiShopItem = ({ thaishop }: ThaiShopItemProps) => {
   return (
     <Box
+      as="li"
+      aria-label={`${thaishop.name} | ${thaishop.city}`}
       width={{ base: '50%', md: '33.33333%', lg: '25%', xl: '20%' }}
       paddingBottom={1}
       paddingRight={1}
@@ -17,7 +19,7 @@ export const ThaiShopItem = ({ thaishop }: ThaiShopItemProps) => {
     >
       <Link
         href={thaishop.map}
-        title={`Thailand Weed Shop - ${thaishop.name} - ${thaishop.city}`}
+        title={`Best weed shop Thailand | ${thaishop.city} | ${thaishop.name}`}
         passHref
       >
         <Box
@@ -44,10 +46,10 @@ export const ThaiShopItem = ({ thaishop }: ThaiShopItemProps) => {
           <Box mr={4} height={{ base: 'auto' }}>
             <Image
               src={thaishop.logo}
-              alt={`Thailand Weed Shop - ${thaishop.name} - ${thaishop.city}`}
+              alt={`Best Weed Shop Thailand | ${thaishop.city} | ${thaishop.name}`}
               width={50}
               height={50}
-              title={`Thailand Weed Shop - ${thaishop.name} - ${thaishop.city}`}
+              title={`Best Weed Shop Thailand | ${thaishop.city} | ${thaishop.name}`}
               priority={false}
               quality={75}
             />
