@@ -1,5 +1,35 @@
 export const review = [
   {
+    title: 'Dylan',
+    review: 'Highly the Thai sticks',
+    reviewLink: 'https://maps.app.goo.gl/BNJ6rwEeuswNi6cv8',
+  },
+  {
+    title: 'Enoi End',
+    review: 'Choice of standards, prices from 100-150 baht to 600. There are promotions 4 g + 1 g as a gift. I advise',
+    reviewLink: 'https://maps.app.goo.gl/KUgCnWeTnfVo7sHv9',
+  },
+  {
+    title: 'Arnab De',
+    review: 'Best chill out place in rawai. The staff is very polite and hospitable…',
+    reviewLink: 'https://maps.app.goo.gl/V8Jd9JDnadDVifce6',
+  },
+  {
+    title: 'Frank',
+    review: 'Green Ghost WOW Phuket\'s hidden treasure for smokers.Friendly helpful and may I say pretty owner was so informative and kind.Travelled around Phuket for 4 months now and Green Ghost is so far ahead of other places with their value and quality goods.Khop Khun khap 😀...',
+    reviewLink: 'https://maps.app.goo.gl/AnYp8jLJcWeF9ZBE7',
+  },
+  {
+    title: 'MantorMBU',
+    review: 'Best place in rawai',
+    reviewLink: 'https://maps.app.goo.gl/AbdUKGi4xMiSyZ4s8',
+  },
+  {
+    title: 'icon nails',
+    review: 'Great store, I\'ve been buying here for two years now, the best price and the best varieties',
+    reviewLink: 'https://maps.app.goo.gl/jSY9e64AHV7LtbW28',
+  },
+  {
     title: 'Shalini Barot',
     review:
       'Best service ever!! I ordered early in the morning and within 1 hour it was delivered to me, even though I stayed very far away. The woman who has the shop was very friendly, responsive and spoke very good English. I could track my delivery on Grab and everything...',

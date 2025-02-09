@@ -16,7 +16,7 @@ export const thaishops: ThaiShop[] = [
     name: 'Green Ghost',
     city: 'Rawai',
     logo: '/media/green-ghost-weed-shop-logo-g.webp',
-    map: 'https://maps.app.goo.gl/MwdJHK2UwfWCiSrS6',
+    map: 'https://maps.app.goo.gl/8XS9YZuG7orJznU3A',
   },
   {
     name: 'Le Versace',
