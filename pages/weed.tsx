@@ -16,14 +16,14 @@ const Weed: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 Your Weed Guide to Cannabis Excellence</title>
+        <title>Your Weed Guide to Cannabis Excellence - Green Ghost 🌿👻</title>
         <meta
           name="description"
           content="Explore the world of cannabis with Green Ghost, your weed source for premium strains, educational resources, and crypto community connection. Discover the art and science of cannabis here."
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Your Weed Guide to Cannabis Excellence"
+          content="Your Weed Guide to Cannabis Excellence - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -38,7 +38,7 @@ const Weed: NextPage = () => {
         <meta property="og:url" content="https://green.gd/weed" />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Your Weed Guide to Cannabis Excellence"
+          content="Your Weed Guide to Cannabis Excellence - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"
@@ -85,8 +85,8 @@ const Weed: NextPage = () => {
           <Box>
             <Image
               src="/media/green-ghost-degen-weed-guide-premium-cannabis.webp"
-              alt="Green Ghost 🌿👻 Your Weed Guide to Cannabis Excellence"
-              title="Green Ghost 🌿👻 Your Weed Guide to Cannabis Excellence"
+              alt="Your Weed Guide to Cannabis Excellence - Green Ghost 🌿👻"
+              title="Your Weed Guide to Cannabis Excellence - Green Ghost 🌿👻"
               width={2048}
               height={1366}
               sizes="100%"

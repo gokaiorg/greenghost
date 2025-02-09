@@ -16,14 +16,14 @@ const BuyWeed: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 About Cannabis Culture in Thailand</title>
+        <title>About Cannabis Culture in Thailand - Green Ghost 🌿👻</title>
         <meta
           name="description"
           content="Discover Green Ghost, a leading cannabis social club in Phuket, championing local culture, top-quality weed, and a thriving community for enthusiasts."
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 About Cannabis Culture in Thailand"
+          content="About Cannabis Culture in Thailand - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -38,7 +38,7 @@ const BuyWeed: NextPage = () => {
         <meta property="og:url" content="https://green.gd/about" />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 About Cannabis Culture in Thailand"
+          content="About Cannabis Culture in Thailand - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"

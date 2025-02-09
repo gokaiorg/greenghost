@@ -14,14 +14,14 @@ const CryptoWeedShop: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 Crypto Weed Shop - Cashback</title>
+        <title>Crypto Weed Shop - Green Ghost 🌿👻</title>
         <meta
           name="description"
           content="At our online Crypto Weed Shop, you can buy high-quality cannabis items and get cashback benefits. You may earn cashback on purchases as a member by owning Ghost NFTs or being one of the first 1000 clients."
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Crypto Weed Shop - Cashback"
+          content="Crypto Weed Shop - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -39,7 +39,7 @@ const CryptoWeedShop: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Crypto Weed Shop - Cashback"
+          content="Crypto Weed Shop - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"

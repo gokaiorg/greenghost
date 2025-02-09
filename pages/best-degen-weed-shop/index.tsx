@@ -12,14 +12,14 @@ const WeedShopNearMe: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 Best Weed Shop Near Me in Phuket</title>
+        <title>Best Weed Shop Near Me in Phuket - Green Ghost 🌿👻</title>
         <meta
           name="description"
           content="Visit Green Ghost Weed Shop near me today for the best selection of locally sourced organic cannabis products. With multiple locations in Phuket, Thailand, we offer fast and convenient delivery options as well. Browse our menu and order online now!"
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Best Weed Shop Near Me in Phuket"
+          content="Best Weed Shop Near Me in Phuket - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -37,7 +37,7 @@ const WeedShopNearMe: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Best Weed Shop Near Me in Phuket"
+          content="Best Weed Shop Near Me in Phuket - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"

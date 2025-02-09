@@ -14,7 +14,7 @@ const BuyWholesaleWeed: NextPage = () => {
     <>
       <Head>
         <title>
-          Green Ghost 🌿👻 Wholesale Cannabis Premium Strains in Phuket
+          Wholesale Cannabis Premium Strains in Phuket - Green Ghost 🌿👻
         </title>
         <meta
           name="description"
@@ -22,7 +22,7 @@ const BuyWholesaleWeed: NextPage = () => {
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Wholesale Cannabis Premium Strains in Phuket"
+          content="Wholesale Cannabis Premium Strains in Phuket - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -37,7 +37,7 @@ const BuyWholesaleWeed: NextPage = () => {
         <meta property="og:url" content="https://green.gd/wholesale" />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Wholesale Cannabis Premium Strains in Phuket"
+          content="Wholesale Cannabis Premium Strains in Phuket - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"
@@ -80,7 +80,7 @@ const BuyWholesaleWeed: NextPage = () => {
           <Box>
             <Image
               src="/media/green-ghost-degen-weed-shop-wholesale-cannabis.webp"
-              alt="Green Ghost 🌿👻 Wholesale Cannabis Premium Strains in Phuket"
+              alt="Wholesale Cannabis Premium Strains in Phuket - Green Ghost 🌿👻"
               width={2048}
               height={1366}
               sizes="100%"

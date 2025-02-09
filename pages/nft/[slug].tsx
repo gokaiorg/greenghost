@@ -30,15 +30,15 @@ export default function NFTPage({ nft, previousSlug, nextSlug }: NFTPageProps) {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 {nft.name}</title>
+        <title>{nft.name} - Green Ghost 🌿👻</title>
         <meta name="description" content={nft.description} />
-        <meta property="og:title" content={`Green Ghost 🌿👻 ${nft.name}`} />
+        <meta property="og:title" content={`${nft.name} - Green Ghost 🌿👻`} />
         <meta property="og:description" content={nft.description} />
         <meta property="og:image" content={nft.logo} />
         <meta property="og:image:width" content="500" />
         <meta property="og:image:height" content="500" />
         <meta property="og:url" content={`https://green.gd/nft/${nft.slug}`} />
-        <meta name="twitter:title" content={`Green Ghost 🌿👻 ${nft.name}`} />
+        <meta name="twitter:title" content={`${nft.name} - Green Ghost 🌿👻`} />
         <meta name="twitter:description" content={nft.description} />
         <meta name="twitter:image" content={nft.logo} />
         <meta name="twitter:url" content={`https://green.gd/nft/${nft.slug}`} />
@@ -89,8 +89,8 @@ export default function NFTPage({ nft, previousSlug, nextSlug }: NFTPageProps) {
                 src={nft.logo}
                 width={500}
                 height={500}
-                alt={`Green Ghost 🌿👻 ${nft.name}`}
-                title={`Green Ghost 🌿👻 ${nft.name}`}
+                alt={`${nft.name} - Green Ghost 🌿👻`}
+                title={`${nft.name} - Green Ghost 🌿👻`}
                 quality={75}
               />
             </Box>

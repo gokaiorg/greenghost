@@ -18,9 +18,9 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
   image,
   imageAlt,
   description,
-  link,
-  linkTitle,
-  linkLabel,
+  // link,
+  // linkTitle,
+  // linkLabel,
 }) => {
   return (
     <Box as="div" display="flex" flexDirection="column" position="relative">
@@ -77,7 +77,7 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
           {description}
         </Text>
         <Box display={'flex'} flexWrap={'wrap'} gap={2} mx={'auto'}>
-          <Link href={link} title={linkTitle} passHref>
+          {/* <Link href={link} title={linkTitle} passHref>
             <Text
               as="span"
               display="inline-flex"
@@ -98,10 +98,10 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
             >
               {linkLabel}
             </Text>
-          </Link>
+          </Link> */}
           <Link
             href={'/weed'}
-            title={'Green Ghost 🌿👻 Your Weed Guide to Cannabis Excellence'}
+            title={'Your Weed Guide to Cannabis Excellence'}
             passHref
           >
             <Text

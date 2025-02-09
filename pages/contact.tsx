@@ -32,14 +32,14 @@ const BuyWeed: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 Contact Our Weed Shop Team To Order</title>
+        <title>Contact Our Weed Shop Team To Order - Green Ghost 🌿👻</title>
         <meta
           name="description"
           content="Get in touch with the Green Ghost team 🌿👻 for all your weed shop inquiries and orders. We're here to assist with your cannabis needs and provide exceptional service."
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
+          content="Contact Our Weed Shop Team To Order - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -54,7 +54,7 @@ const BuyWeed: NextPage = () => {
         <meta property="og:url" content="https://green.gd/contact" />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
+          content="Contact Our Weed Shop Team To Order - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"
@@ -134,7 +134,7 @@ const BuyWeed: NextPage = () => {
           <Box>
             <Image
               src="/media/green-ghost-degen-weed-shop-contact-us.webp"
-              alt="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
+              alt="Contact Our Weed Shop Team To Order - Green Ghost 🌿👻"
               width={2048}
               height={1366}
               sizes="100%"

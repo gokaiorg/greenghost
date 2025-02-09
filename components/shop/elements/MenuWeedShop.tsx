@@ -15,35 +15,35 @@ const Links: Route[] = [
     path: '/weed-shop',
     image: '/media/green-ghost-degen-weed-shop-menu-buds.png',
     label: 'Buds',
-    title: 'Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu',
+    title: 'Weed Shop Premium Cannabis Buds Menu',
     imageW: '20px',
   },
   {
     path: '/weed-shop-pre-rolls',
     image: '/media/green-ghost-degen-weed-shop-menu-pre-rolls.png',
     label: 'Pre-Rolls',
-    title: 'Green Ghost 🌿👻 Weed Shop Premium Cannabis Pre Rolls Menu',
+    title: 'Weed Shop Premium Cannabis Pre Rolls Menu',
     imageW: '8px',
   },
   {
     path: '/weed-shop-edibles',
     image: '/media/green-ghost-degen-weed-shop-menu-edibles.png',
     label: 'Edibles',
-    title: 'Green Ghost 🌿👻 Weed Shop Premium Cannabis Edibles Menu',
+    title: 'Weed Shop Premium Cannabis Edibles Menu',
     imageW: '18px',
   },
   {
     path: '/weed-shop-degen',
     image: '/media/green-ghost-degen-weed-shop-menu-degen.png',
-    label: 'Degen',
-    title: 'Green Ghost 🌿👻 Weed Shop Premium Cannabis Degen Menu',
+    label: 'Concentrates',
+    title: 'Weed Shop Premium Cannabis Concentrates Menu',
     imageW: '7px',
   },
   {
     path: '/weed-shop-gadgets',
     image: '/media/green-ghost-degen-weed-shop-menu-gadgets.webp',
     label: 'Gadgets',
-    title: 'Green Ghost 🌿👻 Weed Shop Premium Cannabis Gadgets Menu',
+    title: 'Weed Shop Premium Cannabis Gadgets Menu',
     imageW: '14px',
   },
 ];
@@ -54,7 +54,7 @@ export const MenuWeedShop = () => {
   return (
     <Box
       as="nav"
-      aria-label="Weed Shop Navigation"
+      aria-label="Menu Navigation"
       mb={4}
       overflow={{ base: 'auto', md: 'none' }}
       sx={{
@@ -65,7 +65,7 @@ export const MenuWeedShop = () => {
     >
       <Box
         as="ul"
-        aria-label="Weed Shop Menu"
+        aria-label="Menu Navigation List"
         display="flex"
         listStyleType="none"
         m={0}
@@ -77,7 +77,7 @@ export const MenuWeedShop = () => {
         {Links.map((link) => (
           <Box
             as="li"
-            aria-label={`Weed Shop Menu ${link.label}`}
+            aria-label={`${link.label}`}
             key={link.label}
             px={4}
             py={4}

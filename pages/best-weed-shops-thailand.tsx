@@ -152,14 +152,14 @@ const BestWeedShops: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Best Weed Shops Thailand | Green Ghost 🌿👻</title>
+        <title>Best Weed Shops Thailand - Green Ghost 🌿👻</title>
         <meta
           name="description"
           content="Discover the best weed shops near you with Green Ghost 🌿👻. Explore our curated list of top-rated dispensaries and cannabis stores in your area."
         />
         <meta
           property="og:title"
-          content="Best Weed Shops Thailand | Green Ghost 🌿👻"
+          content="Best Weed Shops Thailand - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -177,7 +177,7 @@ const BestWeedShops: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Best Weed Shops Thailand | Green Ghost 🌿👻"
+          content="Best Weed Shops Thailand - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"
@@ -252,7 +252,7 @@ const BestWeedShops: NextPage = () => {
           <Box>
             <Image
               src="/media/best-weed-shops-green-ghost.webp"
-              alt="Best Weed Shops Thailand | Green Ghost 🌿👻"
+              alt="Best Weed Shops Thailand - Green Ghost 🌿👻"
               width={2048}
               height={1366}
               sizes="100%"

@@ -24,7 +24,7 @@ const WeedShopMember: NextPage = () => {
     <>
       <Head>
         <title>
-          Green Ghost 🌿👻 Best Cannabis Social Club in Phuket Thailand
+          Best Cannabis Social Club in Phuket Thailand - Green Ghost 🌿👻
         </title>
         <meta
           name="description"
@@ -32,7 +32,7 @@ const WeedShopMember: NextPage = () => {
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Best Cannabis Social Club in Phuket Thailand"
+          content="Best Cannabis Social Club in Phuket Thailand - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -47,7 +47,7 @@ const WeedShopMember: NextPage = () => {
         <meta property="og:url" content="https://green.gd/cannabis-club" />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Best Cannabis Social Club in Phuket Thailand"
+          content="Best Cannabis Social Club in Phuket Thailand - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"

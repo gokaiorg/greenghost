@@ -46,14 +46,14 @@ const WeedShop: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu</title>
+        <title>Weed Shop Premium Cannabis Buds Menu - Green Ghost 🌿👻</title>
         <meta
           name="description"
           content="Explore Green Ghost's premium cannabis buds menu. Discover top-quality strains and products, expertly curated for your enjoyment and satisfaction."
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
+          content="Weed Shop Premium Cannabis Buds Menu - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -68,7 +68,7 @@ const WeedShop: NextPage = () => {
         <meta property="og:url" content="https://green.gd/weed-shop" />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
+          content="Weed Shop Premium Cannabis Buds Menu - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"
@@ -96,8 +96,8 @@ const WeedShop: NextPage = () => {
           <Box w={{ base: '100%' }}>
             <Image
               src="/media/green-ghost-degen-weed-shop-buds-menu.webp"
-              alt="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
-              title="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
+              alt="Weed Shop Premium Cannabis Buds Menu - Green Ghost 🌿👻"
+              title="Weed Shop Premium Cannabis Buds Menu - Green Ghost 🌿👻"
               width={2048}
               height={1366}
               sizes="100%"

@@ -23,14 +23,14 @@ const CannabisCup: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 Phuket Cannabis Cup</title>
+        <title>Phuket Cannabis Cup - Green Ghost 🌿👻</title>
         <meta
           name="description"
           content="Green Ghost Degen Weed Shop present a comprehensive guide to the upcoming Phuket Cannabis Cup! This page includes information about the event's schedule, location, and prize categories. It also includes a list of all the strains that win the Phulet cannabis cup in the greenhouse, indoor sativa, indica, and hybrid categories. Whether you're a cannabis connoisseur or just a curious spectator, be sure to check out Green Ghost's Phuket Cannabis Cup to learn everything you need to know about the event."
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Phuket Cannabis Cup"
+          content="Phuket Cannabis Cup - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -48,7 +48,7 @@ const CannabisCup: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Phuket Cannabis Cup"
+          content="Phuket Cannabis Cup - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"
