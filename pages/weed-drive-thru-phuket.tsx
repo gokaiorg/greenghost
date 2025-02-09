@@ -12,14 +12,14 @@ const WeedDriveThru: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 Weed Drive-thru in Phuket</title>
+        <title>Weed Drive-thru in Phuket - Green Ghost 🌿👻</title>
         <meta
           name="description"
           content="Green Ghost Weed Drive-thru in Phuket, where convenience meets quality. Our drive-thru service is designed to provide you with a seamless and hassle-free experience, allowing you to browse and order your favorite cannabis products without leaving the comfort of your car."
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Weed Drive-thru in Phuket"
+          content="Weed Drive-thru in Phuket - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -37,7 +37,7 @@ const WeedDriveThru: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Weed Drive-thru in Phuket"
+          content="Weed Drive-thru in Phuket - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"

@@ -91,12 +91,12 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
     <>
       <Head>
         <title>
-          Green Ghost 🌿👻 Degen Weed Shop {gadget.name} Cannabis Accessory
+          Degen Weed Shop {gadget.name} Cannabis Concentrate - Green Ghost 🌿👻
         </title>
         <meta name="description" content={gadget.descSeo} />
         <meta
           property="og:title"
-          content={`Green Ghost 🌿👻 Degen Weed Shop ${gadget.name} Cannabis Accessory`}
+          content={`Degen Weed Shop ${gadget.name} Cannabis Concentrate - Green Ghost 🌿👻`}
         />
         <meta property="og:description" content={gadget.descSeo} />
         <meta property="og:image" content={gadget.images[1]} />
@@ -108,7 +108,7 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
         />
         <meta
           name="twitter:title"
-          content={`Green Ghost 🌿👻 Degen Weed Shop ${gadget.name} Cannabis Accessory`}
+          content={`Degen Weed Shop ${gadget.name} Cannabis Concentrate - Green Ghost 🌿👻`}
         />
         <meta name="twitter:description" content={gadget.descSeo} />
         <meta name="twitter:image" content={gadget.images[1]} />

@@ -49,7 +49,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-thai-stick-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-thai-stick-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Thai Stick Strain',
+    imgDesc: 'Order Thai Stick Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/thai',
   },
   {
@@ -78,7 +78,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-amnesia-haze-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-amnesia-haze-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Amnesia Haze Strain',
+    imgDesc: 'Order Amnesia Haze Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/amnesia-haze',
   },
   {
@@ -107,7 +107,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-hawaiian-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-hawaiian-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Hawaiian Strain',
+    imgDesc: 'Order Hawaiian Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/hawaiian',
   },
   {
@@ -136,7 +136,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-cherry-z-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-cherry-z-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Cherry Z Strain',
+    imgDesc: 'Order Cherry Z Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/cherry-zkittlez',
   },
   {
@@ -165,7 +165,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-orange-sherbert-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-orange-sherbert-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Orange Sherbert Strain',
+    imgDesc: 'Order Orange Sherbert Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/orange-sherbert',
   },
   {
@@ -194,7 +194,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-master-og-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-master-og-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Master OG Strain',
+    imgDesc: 'Order Master OG Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/master-og',
   },
   {
@@ -223,7 +223,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-royal-cheese-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-royal-cheese-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Royal Cheese Strain',
+    imgDesc: 'Order Royal Cheese Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.allbud.com/marijuana-strains/hybrid/royal-cheese',
   },
   {
@@ -252,7 +252,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-fried-applez-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-fried-applez-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Fried Applez Strain',
+    imgDesc: 'Order Fried Applez Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -281,7 +281,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-la-haze-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-la-haze-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop L.A. Haze Strain',
+    imgDesc: 'Order L.A. Haze Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://growdiaries.com/seedbank/gagegreen/la-haze',
   },
   {
@@ -310,7 +310,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-frosted-jungle-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-frosted-jungle-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Frosted Jungle Strain',
+    imgDesc: 'Order Frosted Jungle Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -339,7 +339,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-northern-lights-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-northern-lights-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Northern Lights Strain',
+    imgDesc: 'Order Northern Lights Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/northern-lights',
   },
   {
@@ -368,7 +368,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-super-lemon-haze-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-super-lemon-haze-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Super Lemon Haze Strain',
+    imgDesc: 'Order Super Lemon Haze Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/super-lemon-haze',
   },
   {
@@ -397,7 +397,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-the-queen-s1-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-the-queen-s1-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop The Queen S1 Strain',
+    imgDesc: 'Order The Queen S1 Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://copycatgenetixx.com/shop/ols/products/the-queen-s1',
   },
   {
@@ -426,7 +426,8 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-drippin-aint-eazy-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-drippin-aint-eazy-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Drippin’ Aint Eazy Strain',
+    imgDesc:
+      'Order Drippin’ Aint Eazy Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/drippin-aint-eazy',
   },
   {
@@ -455,7 +456,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-runtz-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-runtz-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Runtz Strain',
+    imgDesc: 'Order Runtz Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/runtz',
   },
   {
@@ -484,7 +485,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-pop-star-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-pop-star-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Pop Star Strain',
+    imgDesc: 'Order Pop Star Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -513,7 +514,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-popanonymous-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-popanonymous-cover.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Popanonymous Strain',
+    imgDesc: 'Order Popanonymous Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -542,7 +543,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-sour-diesel-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-sour-diesel-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Sour Diesel Strain',
+    imgDesc: 'Order Sour Diesel Cannabis Strain Online - Green Ghost 🌿👻',
     source:
       'https://www.allbud.com/marijuana-strains/sativa-dominant-hybrid/sour-diesel',
   },
@@ -572,7 +573,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-super-boof-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-super-boof-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Super Boof Strain',
+    imgDesc: 'Order Super Boof Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/super-boof',
   },
   {
@@ -601,7 +602,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-ben-garys-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-ben-garys-bud-02.webp',
     ],
-    imgDesc: "Green Ghost 🌿👻 Degen Weed Shop Ben & Gary's Strain",
+    imgDesc: "Order Ben & Gary's Cannabis Strain Online - Green Ghost 🌿👻",
     source: 'undefined',
   },
   {
@@ -630,7 +631,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-slaphappy-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-slaphappy-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Slaphappy Strain',
+    imgDesc: 'Order Slaphappy Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -659,7 +660,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-el-chapo-og-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-el-chapo-og-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop El Chapo OG Strain',
+    imgDesc: 'Order El Chapo OG Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/el-chapo-og',
   },
   {
@@ -688,7 +689,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-forbidden-fruit-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Forbidden Fruit Strain',
+    imgDesc: 'Order Forbidden Fruit Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/forbidden-fruit',
   },
   {
@@ -717,7 +718,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-apricot-oreoz-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-apricot-oreoz-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Apricot Oreoz Strain',
+    imgDesc: 'Order Apricot Oreoz Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -746,7 +747,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-scotty-2-hotty-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-scotty-2-hotty-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Scotty 2 Hotty Strain',
+    imgDesc: 'Order Scotty 2 Hotty Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/scotty-2-hotty',
   },
   {
@@ -775,7 +776,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-pitaya-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-pitaya-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Pitaya Strain',
+    imgDesc: 'Order Pitaya Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -804,7 +805,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-on-point-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-on-point-cover.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop On Point Strain',
+    imgDesc: 'Order On Point Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -833,7 +834,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-medellin-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-medellin-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Medellin Strain',
+    imgDesc: 'Order Medellin Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/medellin',
   },
   {
@@ -862,7 +863,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-strawneapple-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-strawneapple-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Strawneapple Strain',
+    imgDesc: 'Order Strawneapple Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -891,7 +892,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-poppin-fresh-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-poppin-fresh-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Poppin Fresh Strain',
+    imgDesc: 'Order Poppin Fresh Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -920,7 +921,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-pink-runtz-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-pink-runtz-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Pink Runtz Strain',
+    imgDesc: 'Order Pink Runtz Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/pink-runtz',
   },
   {
@@ -949,7 +950,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-toasted-toffee-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-toasted-toffee-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Toasted Toffee Strain',
+    imgDesc: 'Order Toasted Toffee Cannabis Strain Online - Green Ghost 🌿👻',
     source: '',
   },
   {
@@ -978,7 +979,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-cbd-auto-tune-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-cbd-auto-tune-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop CBD Auto Tune Strain',
+    imgDesc: 'Order CBD Auto Tune Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -1008,7 +1009,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-kd-mango-tail-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-kd-mango-tail-cover.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop KD Mango Tail Strain',
+    imgDesc: 'Order KD Mango Tail Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -1037,7 +1038,8 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-mango-sticky-rice-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-mango-sticky-rice-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Mango Sticky Rice Strain',
+    imgDesc:
+      'Order Mango Sticky Rice Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -1066,7 +1068,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-fat-banana-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-fat-banana-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Fat Banana Strain',
+    imgDesc: 'Order Fat Banana Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/fat-banana',
   },
   {
@@ -1095,7 +1097,8 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-north-thunderfuck-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-north-thunderfuck-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop North Thunderfuck Strain',
+    imgDesc:
+      'Order North Thunderfuck Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -1124,7 +1127,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-end-game-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-end-game-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop End Game Strain',
+    imgDesc: 'Order End Game Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/end-game',
   },
   {
@@ -1153,7 +1156,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-gorilla-goo-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Gorilla Goo Strain',
+    imgDesc: 'Order Gorilla Goo Cannabis Strain Online - Green Ghost 🌿👻',
     source:
       'https://www.allbud.com/marijuana-strains/sativa-dominant-hybrid/gorilla-goo',
   },
@@ -1183,7 +1186,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-jack-herer-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-jack-herer-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Jack Herer Strain',
+    imgDesc: 'Order Jack Herer Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/jack-herer',
   },
   {
@@ -1212,7 +1215,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-grandmaster-kush-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-grandmaster-kush-cover.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Grandmaster Kush Strain',
+    imgDesc: 'Order Grandmaster Kush Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/master-kush',
   },
   {
@@ -1241,7 +1244,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-white-widow-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-white-widow-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop White Widow Strain',
+    imgDesc: 'Order White Widow Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/white-widow',
   },
   {
@@ -1271,7 +1274,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-silver-fox-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-silver-fox-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop White Widow Strain',
+    imgDesc: 'Order White Widow Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/silver-fox',
   },
   {
@@ -1301,7 +1304,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-chemdawg-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-chemdawg-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Chemdawg Strain',
+    imgDesc: 'Order Chemdawg Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/chemdawg',
   },
   {
@@ -1330,7 +1333,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-bubble-zkittlez-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-bubble-zkittlez-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Bubble Zkittlez Strain',
+    imgDesc: 'Order Bubble Zkittlez Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -1359,7 +1362,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-royal-runtz-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-royal-runtz-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Royal Runtz Strain',
+    imgDesc: 'Order Royal Runtz Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/royal-runtz',
   },
   {
@@ -1388,7 +1391,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-green-gelato-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-green-gelato-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Green Gelato Strain',
+    imgDesc: 'Order Green Gelato Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/green-gelato',
   },
   {
@@ -1417,7 +1420,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-gelato-runtz-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-gelato-runtz-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Gelato Runtz Strain',
+    imgDesc: 'Order Gelato Runtz Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/gelato-runtz',
   },
   {
@@ -1446,7 +1449,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-amnesia-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-amnesia-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Amnesia Strain',
+    imgDesc: 'Order Amnesia Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/amnesia',
   },
   {
@@ -1475,7 +1478,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-banana-daddy-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-banana-daddy-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Banana Daddy Strain',
+    imgDesc: 'Order Banana Daddy Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/banana-daddy',
   },
   {
@@ -1504,7 +1507,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-purple-queen-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-purple-queen-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Purple Queen Strain',
+    imgDesc: 'Order Purple Queen Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/purple-queen',
   },
   {
@@ -1533,7 +1536,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-mommys-milk-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-mommys-milk-bud-02.webp',
     ],
-    imgDesc: "Green Ghost 🌿👻 Degen Weed Shop Mommy's Milk Strain",
+    imgDesc: "Order Mommy's Milk Cannabis Strain Online - Green Ghost 🌿👻",
     source: 'https://www.exoticgenetix.com/product/mommys-milk/',
   },
   {
@@ -1562,7 +1565,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-next-level-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-next-level-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Next Level Strain',
+    imgDesc: 'Order Next Level Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/next-level',
   },
   {
@@ -1591,7 +1594,8 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-cbd-charlottes-angel-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-cbd-charlottes-angel-cover.webp',
     ],
-    imgDesc: "Green Ghost 🌿👻 Degen Weed Shop CBD Charlotte's Angel Strain",
+    imgDesc:
+      "Order CBD Charlotte's Angel Cannabis Strain Online - Green Ghost 🌿👻",
     source: 'https://www.leafly.com/strains/cbd-charlottes-angel',
   },
   {
@@ -1620,7 +1624,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-sweet-zkittlez-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-sweet-zkittlez-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Sweet Zkittlez Strain',
+    imgDesc: 'Order Sweet Zkittlez Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/sweet-zkittlez',
   },
   {
@@ -1649,7 +1653,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-hulkberry-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-hulkberry-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Hulkberry Strain',
+    imgDesc: 'Order Hulkberry Cannabis Strain Online - Green Ghost 🌿👻',
     source:
       'https://www.allbud.com/marijuana-strains/sativa-dominant-hybrid/hulkberry',
   },
@@ -1679,7 +1683,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-phantom-cookies-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-phantom-cookies-cover.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Phantom Cookies Strain',
+    imgDesc: 'Order Phantom Cookies Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/phantom-cookies',
   },
   {
@@ -1708,7 +1712,8 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-pink-sunset-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-pink-sunset-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Pink Sunset Critical Strain',
+    imgDesc:
+      'Order Pink Sunset Critical Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/pink-sunset',
   },
   {
@@ -1737,7 +1742,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-purple-zkittlez-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-purple-zkittlez-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Purple Zkittlez Strain',
+    imgDesc: 'Order Purple Zkittlez Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/purple-zkittlez',
   },
   {
@@ -1766,7 +1771,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-buddy-critical-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-buddy-critical-bud-02.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Buddy Critical Strain',
+    imgDesc: 'Order Buddy Critical Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -1795,7 +1800,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-bruce-banner-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-bruce-banner-cover.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Bruce Banner Strain',
+    imgDesc: 'Order Bruce Banner Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/bruce-banner',
   },
   {
@@ -1824,7 +1829,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-mango-gelato-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-mango-gelato-cover.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Mango Gelato Strain',
+    imgDesc: 'Order Mango Gelato Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -1853,7 +1858,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-stardawg-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-stardawg-cover.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Stardawg Strain',
+    imgDesc: 'Order Stardawg Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/stardawg',
   },
   {
@@ -1882,7 +1887,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-tangerine-dream-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-tangerine-dream-cover.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Tangerine Dream Strain',
+    imgDesc: 'Order Tangerine Dream Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/tangerine-dream',
   },
   {
@@ -1911,7 +1916,8 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-mandarin-zkittlez-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-mandarin-zkittlez-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Mandarin Zkittlez Strain',
+    imgDesc:
+      'Order Mandarin Zkittlez Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/mandarin-zkittlez',
   },
   {
@@ -1940,7 +1946,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-wedding-cake-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-wedding-cake-cover.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Wedding Cake Strain',
+    imgDesc: 'Order Wedding Cake Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/wedding-cake',
   },
   {
@@ -1969,7 +1975,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-critical-plus-20-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-critical-plus-20-cover.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Wedding Cake Strain',
+    imgDesc: 'Order Wedding Cake Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/critical-plus-20',
   },
   {
@@ -1998,7 +2004,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-mimosa-evo-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-mimosa-evo-cover.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Mimosa Evo Strain',
+    imgDesc: 'Order Mimosa Evo Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.cannaconnection.com/strains/mimosa-evo',
   },
   {
@@ -2027,7 +2033,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-kings-juice-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-kings-juice-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop King’s Juice Strain',
+    imgDesc: 'Order King’s Juice Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://growdiaries.com/seedbank/green-house-seeds/kings-juice',
   },
   {
@@ -2056,7 +2062,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-eleven-roses-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-eleven-roses-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Eleven Roses Strain',
+    imgDesc: 'Order Eleven Roses Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/eleven-roses',
   },
   {
@@ -2085,7 +2091,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-lemon-zkittlez-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-lemon-zkittlez-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Lemon Zkittlez Strain',
+    imgDesc: 'Order Lemon Zkittlez Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -2114,7 +2120,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-cherry-garcia-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-cherry-garcia-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Cherry Garcia Strain',
+    imgDesc: 'Order Cherry Garcia Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/cherry-garcia',
   },
   {
@@ -2143,7 +2149,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-critical-kush-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-critical-kush-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Critical Kush Strain',
+    imgDesc: 'Order Critical Kush Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/critical-kush',
   },
   {
@@ -2172,7 +2178,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-royal-moby-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-royal-moby-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Royal Moby Strain',
+    imgDesc: 'Order Royal Moby Cannabis Strain Online - Green Ghost 🌿👻',
     source:
       'https://www.royalqueenseeds.com/feminized-cannabis-seeds/137-royal-moby.html',
   },
@@ -2202,7 +2208,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-mac-and-jack-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-mac-and-jack-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop MAC and Jack Strain',
+    imgDesc: 'Order MAC and Jack Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/mac-and-jack',
   },
   {
@@ -2231,7 +2237,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-c-vibez-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-c-vibez-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop C-Vibez Strain',
+    imgDesc: 'Order C-Vibez Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -2260,7 +2266,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-fruit-spirit-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-fruit-spirit-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Fruit Spirit Strain',
+    imgDesc: 'Order Fruit Spirit Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/fruit-spirit',
   },
   {
@@ -2289,7 +2295,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-platinum-oreoz-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-platinum-oreoz-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Platinum Oreoz Strain',
+    imgDesc: 'Order Platinum Oreoz Cannabis Strain Online - Green Ghost 🌿👻',
     source:
       'https://weed.th/shop/20ce9823-8d9d-465c-b31d-b5ffe67ba71e/flowers/7961f539-285c-4b59-b976-90be63408af3',
   },
@@ -2319,7 +2325,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-dosidos-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-dosidos-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Dosidos Strain',
+    imgDesc: 'Order Dosidos Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/do-si-dos',
   },
   {
@@ -2348,7 +2354,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-sherbert-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-sherbert-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Sherbert Strain',
+    imgDesc: 'Order Sherbert Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/sunset-sherbert',
   },
   {
@@ -2377,7 +2383,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-skunk-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-skunk-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Skunk Strain',
+    imgDesc: 'Order Skunk Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/skunk-1',
   },
   {
@@ -2406,7 +2412,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-sorbet-4-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-sorbet-4-cover.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Sorbet #4 Strain',
+    imgDesc: 'Order Sorbet #4 Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/sorbet-4',
   },
   {
@@ -2435,7 +2441,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-bubble-mango-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-bubble-mango-cover.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Bubble Mango Strain',
+    imgDesc: 'Order Bubble Mango Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -2464,7 +2470,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-mac-1-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-mac-1-cover.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Mac 1 Strain',
+    imgDesc: 'Order Mac 1 Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/mac-1',
   },
   {
@@ -2493,7 +2499,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-og-poison-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-og-poison-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop OG Poison Strain',
+    imgDesc: 'Order OG Poison Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/og-poison',
   },
   {
@@ -2522,7 +2528,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-gelato-dream-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-gelato-dream-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Gelato Dream Strain',
+    imgDesc: 'Order Gelato Dream Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/gelato',
   },
   {
@@ -2551,7 +2557,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-white-runtz-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-white-runtz-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop White Runtz Strain',
+    imgDesc: 'Order White Runtz Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/white-runtz',
   },
   {
@@ -2580,7 +2586,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-banana-kush-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-banana-kush-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Banana Kush Strain',
+    imgDesc: 'Order Banana Kush Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/banana-kush',
   },
   {
@@ -2609,7 +2615,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-moon-fruit-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-moon-fruit-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Moon Fruit Strain',
+    imgDesc: 'Order Moon Fruit Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
   {
@@ -2638,7 +2644,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-orange-velvet-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-orange-velvet-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Orange Velvet Strain',
+    imgDesc: 'Order Orange Velvet Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/orange-velvet',
   },
   {
@@ -2667,7 +2673,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-platinum-punch-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-platinum-punch-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Platinum Punch Strain',
+    imgDesc: 'Order Platinum Punch Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/platinum-punch',
   },
   {
@@ -2696,7 +2702,8 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-lemon-berry-candy-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-lemon-berry-candy-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Lemon Berry Candy Strain',
+    imgDesc:
+      'Order Lemon Berry Candy Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/lemon-berry-candy-og',
   },
   {
@@ -2725,7 +2732,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-mandarin-cookies-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-mandarin-cookies-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Mandarin Cookies Strain',
+    imgDesc: 'Order Mandarin Cookies Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/mandarin-cookies',
   },
   {
@@ -2754,7 +2761,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-mimosa-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-mimosa-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Mimosa Strain',
+    imgDesc: 'Order Mimosa Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/mimosa',
   },
   {
@@ -2783,7 +2790,8 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-black-cherry-punch-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-black-cherry-punch-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Black Cherry Punch Strain',
+    imgDesc:
+      'Order Black Cherry Punch Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/black-cherry-punch',
   },
   {
@@ -2812,7 +2820,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-snoop-punch-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-snoop-punch-bud-01.webp',
     ],
-    imgDesc: 'Green Ghost 🌿👻 Degen Weed Shop Snoop Punch Strain',
+    imgDesc: 'Order Snoop Punch Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
   },
 ];

@@ -5,6 +5,9 @@ export const MenuFooter = () => {
   return (
     <>
       <Box
+        aria-label="Footer Navigation"
+        as="ul"
+        listStyleType={'none'}
         display={'flex'}
         flexWrap={'wrap'}
         alignItems={'center'}
@@ -16,53 +19,53 @@ export const MenuFooter = () => {
         textDecoration={'underline'}
         color={'ghostVerse.grey.lighter'}
       >
-        <Box mx={2}>
+        <Box aria-label="Wholesale" as="li" mx={2}>
           <Link
-            title="Green Ghost 🌿👻 Wholesale Cannabis Premium Strains in Phuket"
+            title="Wholesale Cannabis Premium Strains in Phuket"
             href="/wholesale"
             passHref
           >
             Wholesale
           </Link>
         </Box>
-        <Box mx={2}>
+        <Box aria-label="Jobs" as="li" mx={2}>
           <Link
-            title="Green Ghost 🌿👻 Budtender Job Opening at Our Cannabis Shop"
+            title="Budtender Job Opening at Our Cannabis Shop"
             href="/jobs"
             passHref
           >
             Jobs
           </Link>
         </Box>
-        <Box mx={2}>
+        <Box aria-label="Location" as="li" mx={2}>
           <Link
-            title="Green Ghost 🌿👻 Best Weed Shop Near Me in Phuket"
+            title="Best Weed Shop Near Me in Phuket"
             href="/best-degen-weed-shop"
             passHref
           >
             Location
           </Link>
         </Box>
-        <Box mx={2}>
+        <Box aria-label="About" as="li" mx={2}>
           <Link
-            title={'Green Ghost 🌿👻 About Cannabis Culture in Thailand'}
+            title={'About Cannabis Culture in Thailand'}
             href="/about"
             passHref
           >
             About
           </Link>
         </Box>
-        <Box mx={2}>
+        <Box aria-label="Contact" as="li" mx={2}>
           <Link
-            title="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
+            title="Contact Our Weed Shop Team To Order"
             href={'/contact'}
             passHref
           >
             Contact
           </Link>
         </Box>
-        <Box mx={2}>
-          <Link title="Green Ghost 🌿👻 Sitemap" href="/sitemap" passHref>
+        <Box aria-label="Sitemap" as="li" mx={2}>
+          <Link title="Sitemap" href="/sitemap" passHref>
             Sitemap
           </Link>
         </Box>

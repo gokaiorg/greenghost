@@ -46,14 +46,16 @@ const WeedShopEdibles: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 Weed Shop Premium Cannabis Edibles Menu</title>
+        <title>
+          Weed Shop Premium Cannabis Edibles Menu - Green Ghost 🌿👻
+        </title>
         <meta
           name="description"
           content="Explore Green Ghost's Edibles Menu, featuring a curated selection of organic, locally sourced cannabis-infused treats like brownies, gummies, and artisanal cookies."
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Weed Shop Premium Cannabis Edibles Menu"
+          content="Weed Shop Premium Cannabis Edibles Menu - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -68,7 +70,7 @@ const WeedShopEdibles: NextPage = () => {
         <meta property="og:url" content="https://green.gd/weed-shop-edibles" />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Weed Shop Premium Cannabis Edibles Menu"
+          content="Weed Shop Premium Cannabis Edibles Menu - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"
@@ -96,8 +98,8 @@ const WeedShopEdibles: NextPage = () => {
           <Box w={{ base: '100%' }}>
             <Image
               src="/media/green-ghost-degen-weed-shop-cannabis-edibles-menu.webp"
-              alt="Green Ghost 🌿👻 Weed Shop Premium Cannabis Edibles Menu"
-              title="Green Ghost 🌿👻 Weed Shop Premium Cannabis Edibles Menu"
+              alt="Weed Shop Premium Cannabis Edibles Menu - Green Ghost 🌿👻"
+              title="Weed Shop Premium Cannabis Edibles Menu - Green Ghost 🌿👻"
               width={2048}
               height={1366}
               sizes="100%"

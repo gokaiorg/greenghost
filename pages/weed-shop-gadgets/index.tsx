@@ -46,14 +46,16 @@ const WeedShopGadgets: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 Weed Shop Premium Cannabis Gadgets Menu</title>
+        <title>
+          Weed Shop Premium Cannabis Gadgets Menu - Green Ghost 🌿👻
+        </title>
         <meta
           name="description"
           content="Explore Green Ghost's Accessories Menu. Find premium cannabis gadgets, from high-quality grinders to sleek bongs, and elevate your smoking experience today."
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Weed Shop Premium Cannabis Gadgets Menu"
+          content="Weed Shop Premium Cannabis Gadgets Menu - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -68,7 +70,7 @@ const WeedShopGadgets: NextPage = () => {
         <meta property="og:url" content="https://green.gd/weed-shop-gadgets" />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Weed Shop Premium Cannabis Gadgets Menu"
+          content="Weed Shop Premium Cannabis Gadgets Menu - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"

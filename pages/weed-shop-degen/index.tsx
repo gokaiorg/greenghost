@@ -46,14 +46,16 @@ const GhostDegenWeedShop: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 Weed Shop Premium Cannabis Degen Menu</title>
+        <title>
+          Weed Shop Premium Cannabis Concentrates Menu - Green Ghost 🌿👻
+        </title>
         <meta
           name="description"
           content="Discover Green Ghost's Concentrates Menu, offering premium cannabis extracts like hash, wax, kiev and oil. Elevate your experience with our potent, curated selection."
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Weed Shop Premium Cannabis Degen Menu"
+          content="Weed Shop Premium Cannabis Concentrates Menu - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -68,7 +70,7 @@ const GhostDegenWeedShop: NextPage = () => {
         <meta property="og:url" content="https://green.gd/weed-shop-degen" />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Weed Shop Premium Cannabis Degen Menu"
+          content="Weed Shop Premium Cannabis Concentrates Menu - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"
