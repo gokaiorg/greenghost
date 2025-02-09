@@ -58,6 +58,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/weed-shops-thailand',
+        destination: '/best-weed-shops-thailand',
+        permanent: true,
+      },
+      {
         source: '/weed-shop-near-me/karon',
         destination: '/best-degen-weed-shop/karon',
         permanent: true,
