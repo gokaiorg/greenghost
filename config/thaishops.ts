@@ -19,22 +19,10 @@ export const thaishops: ThaiShop[] = [
     map: 'https://maps.app.goo.gl/MwdJHK2UwfWCiSrS6',
   },
   {
-    name: 'Green Ghost',
-    city: 'Phuket Town',
-    logo: '/media/green-ghost-weed-shop-logo-g.webp',
-    map: 'https://maps.app.goo.gl/VPwHCD9Wxj8ucXKG6',
-  },
-  {
     name: 'Le Versace',
     city: 'Patong',
     logo: '/media/green-ghost-weed-shop-le-versace.webp',
     map: 'https://maps.app.goo.gl/XDGUZ97YmG1SiUws5',
-  },
-  {
-    name: 'Cafe de Paris',
-    city: 'Patong',
-    logo: '/media/green-ghost-weed-shop-cafe-de-paris.webp',
-    map: 'https://maps.app.goo.gl/Ny2d86LjVVjyFoCr6',
   },
   {
     name: 'Cosmic Temple Vibes',
@@ -53,6 +41,42 @@ export const thaishops: ThaiShop[] = [
     city: 'Rawai',
     logo: '/media/green-ghost-weed-shop-sweed-dreams.webp',
     map: 'https://maps.app.goo.gl/Rf7NzFBecD2eH65E9',
+  },
+  {
+    name: 'High Roller Club Thailand',
+    city: 'Koh Kaeo',
+    logo: '/media/best-weed-shops-thailand-high-roller-club-thailand.webp',
+    map: 'https://maps.app.goo.gl/SGN4KU1XpPi5f9bs6',
+  },
+  {
+    name: 'Green Lab Unicorn',
+    city: 'Ratsada',
+    logo: '/media/best-weed-shops-thailand-green-lab-unicorn.webp',
+    map: 'https://maps.app.goo.gl/D7PBitdHFRbqp5ga8',
+  },
+  {
+    name: 'Growland',
+    city: 'Rawai',
+    logo: '/media/best-weed-shops-thailand-growland.webp',
+    map: 'https://maps.app.goo.gl/K9EnuAR5DJw4T3hh6',
+  },
+  {
+    name: 'Green Lab',
+    city: 'Patong',
+    logo: '/media/best-weed-shops-thailand-greenlab.webp',
+    map: 'https://maps.app.goo.gl/Cg9hp2Tfg6BwUFQv7',
+  },
+  {
+    name: 'Green House Thailand',
+    city: 'Bangkok',
+    logo: '/media/best-weed-shops-thailand-green-house-thailand.webp',
+    map: 'https://maps.app.goo.gl/nZXCLM2sL6zzNSb77',
+  },
+  {
+    name: 'Phuket High',
+    city: 'Rawai',
+    logo: '/media/best-weed-shops-thailand-phuket-high.webp',
+    map: 'https://maps.app.goo.gl/Q3b8K4Z5hW83rxfNA',
   },
 ];
 

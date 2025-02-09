@@ -88,8 +88,8 @@ export const BestWeedShops = () => {
         color={'ghostVerse.green.base'}
       >
         <Link
-          title="Green Ghost 🌿👻 Best Weed Shops in Thailand"
-          href="/weed-shops-thailand"
+          title="Best Weed Shops Thailand | Green Ghost 🌿👻"
+          href="/best-weed-shops-thailand"
           passHref
         >
           Best weed shops in Thailand
