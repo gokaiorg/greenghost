@@ -94,7 +94,7 @@ export const Bud = () => {
       <MenuFilterShop>
         <Box
           as="ul"
-          aria-label="Cannabis dominance filter options"
+          aria-label="Menu Filters List"
           display="inline-flex"
           flexWrap="wrap"
           listStyleType="none"

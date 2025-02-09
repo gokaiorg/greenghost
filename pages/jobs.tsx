@@ -14,7 +14,7 @@ const Jobs: NextPage = () => {
     <>
       <Head>
         <title>
-          Green Ghost 🌿👻 Budtender Job Opening at Our Cannabis Shop
+          Budtender Job Opening at Our Cannabis Shop - Green Ghost 🌿👻
         </title>
         <meta
           name="description"
@@ -22,7 +22,7 @@ const Jobs: NextPage = () => {
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Budtender Job Opening at Our Cannabis Shop"
+          content="Budtender Job Opening at Our Cannabis Shop - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -37,7 +37,7 @@ const Jobs: NextPage = () => {
         <meta property="og:url" content="https://green.gd/jobs" />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Budtender Job Opening at Our Cannabis Shop"
+          content="Budtender Job Opening at Our Cannabis Shop - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"
@@ -368,7 +368,7 @@ const Jobs: NextPage = () => {
           <Box>
             <Image
               src="/media/green-ghost-degen-weed-shop-jobs.webp"
-              alt="Green Ghost 🌿👻 Budtender Job Opening at Our Cannabis Shop"
+              alt="Budtender Job Opening at Our Cannabis Shop - Green Ghost 🌿👻"
               width={2048}
               height={1366}
               sizes="100%"

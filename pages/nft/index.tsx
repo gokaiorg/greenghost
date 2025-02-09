@@ -15,7 +15,7 @@ const NFTs: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 Green Ghost Degen NFT Collection</title>
+        <title>Green Ghost Degen NFT Collection - Green Ghost 🌿👻</title>
         <meta
           name="description"
           content="420 Green Ghost Degen NFT Collection to enjoy exclusive discounts
@@ -23,7 +23,7 @@ const NFTs: NextPage = () => {
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Green Ghost Degen NFT Collection"
+          content="Green Ghost Degen NFT Collection - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -39,7 +39,7 @@ const NFTs: NextPage = () => {
         <meta property="og:url" content="https://green.gd/nft" />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Green Ghost Degen NFT Collection"
+          content="Green Ghost Degen NFT Collection - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"

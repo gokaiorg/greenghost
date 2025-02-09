@@ -16,14 +16,14 @@ const CannabisGrower: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 Thailand Weed Grower Selection</title>
+        <title>Thailand Weed Grower Selection - Green Ghost 🌿👻</title>
         <meta
           name="description"
           content="Discover the best cannabis grower in Thailand handpicked by Green Ghost. We partner with experienced and passionate growers who cultivate top-quality organic cannabis. From seed to harvest, our growers use advanced techniques to ensure the highest quality of buds. Trust Green Ghost to bring you the best cannabis from the best growers in Thailand."
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Thailand Weed Grower Selection"
+          content="Thailand Weed Grower Selection - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -38,7 +38,7 @@ const CannabisGrower: NextPage = () => {
         <meta property="og:url" content="https://green.gd/weed-grower" />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Thailand Weed Grower Selection"
+          content="Thailand Weed Grower Selection - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"

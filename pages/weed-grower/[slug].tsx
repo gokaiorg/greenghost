@@ -32,11 +32,11 @@ export default function GrowerPage({ grower }: GrowerPageProps) {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 Weed Grower in Thailand {grower.name}</title>
+        <title>Weed Grower in Thailand {grower.name} - Green Ghost 🌿👻</title>
         <meta name="description" content={grower.description} />
         <meta
           property="og:title"
-          content={`Green Ghost - ${grower.name} Weed Grower in Thailand`}
+          content={`Weed Grower in Thailand {grower.name} - Green Ghost 🌿👻`}
         />
         <meta property="og:description" content={grower.description} />
         <meta property="og:image" content={grower.logo} />
@@ -48,7 +48,7 @@ export default function GrowerPage({ grower }: GrowerPageProps) {
         />
         <meta
           name="twitter:title"
-          content={`Green Ghost - ${grower.name} Weed Grower in Thailand`}
+          content={`Weed Grower in Thailand {grower.name} - Green Ghost 🌿👻`}
         />
         <meta name="twitter:description" content={grower.description} />
         <meta name="twitter:image" content={grower.logo} />
@@ -103,8 +103,8 @@ export default function GrowerPage({ grower }: GrowerPageProps) {
                 src={grower.logo}
                 width={320}
                 height={320}
-                alt={`Green Ghost - ${grower.name} Weed Grower in Thailand`}
-                title={`Green Ghost - ${grower.name} Weed Grower in Thailand`}
+                alt={`Weed Grower in Thailand {grower.name} - Green Ghost 🌿👻`}
+                title={`Weed Grower in Thailand {grower.name} - Green Ghost 🌿👻`}
                 quality={75}
               />
             </Box>

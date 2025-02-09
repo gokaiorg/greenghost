@@ -31,12 +31,12 @@ const SitemapPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 Sitemap.</title>
+        <title>Sitemap - Green Ghost 🌿👻</title>
         <meta
           name="description"
           content="Looking for a quick and easy way to navigate the Green Ghost website? Check out our sitemap page, where you can find links to all of our main pages and subsections. From our cannabis products to our membership program and more, our sitemap makes it easy to find what you're looking for. Browse through our website with ease and discover all that Green Ghost has to offer."
         />
-        <meta property="og:title" content="Green Ghost 🌿👻 Sitemap." />
+        <meta property="og:title" content="Sitemap - Green Ghost 🌿👻" />
         <meta
           property="og:description"
           content="Looking for a quick and easy way to navigate the Green Ghost website? Check out our sitemap page, where you can find links to all of our main pages and subsections. From our cannabis products to our membership program and more, our sitemap makes it easy to find what you're looking for. Browse through our website with ease and discover all that Green Ghost has to offer."
@@ -48,7 +48,7 @@ const SitemapPage: NextPage = () => {
         <meta property="og:image:width" content="2048" />
         <meta property="og:image:height" content="1366" />
         <meta property="og:url" content="https://green.gd/sitemap" />
-        <meta name="twitter:title" content="Green Ghost 🌿👻 Sitemap." />
+        <meta name="twitter:title" content="Sitemap - Green Ghost 🌿👻" />
         <meta
           name="twitter:description"
           content="Looking for a quick and easy way to navigate the Green Ghost website? Check out our sitemap page, where you can find links to all of our main pages and subsections. From our cannabis products to our membership program and more, our sitemap makes it easy to find what you're looking for. Browse through our website with ease and discover all that Green Ghost has to offer."

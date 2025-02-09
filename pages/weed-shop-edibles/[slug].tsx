@@ -91,12 +91,12 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
     <>
       <Head>
         <title>
-          Green Ghost 🌿👻 Degen Weed Shop Best {edible.name} Edible
+          Degen Weed Shop {edible.name} Cannabis Concentrate - Green Ghost 🌿👻
         </title>
         <meta name="description" content={edible.descSeo} />
         <meta
           property="og:title"
-          content={`Green Ghost 🌿👻 Degen Weed Shop Best ${edible.name} Edible`}
+          content={`Degen Weed Shop ${edible.name} Cannabis Concentrate - Green Ghost 🌿👻`}
         />
         <meta property="og:description" content={edible.descSeo} />
         <meta property="og:image" content={edible.images[1]} />
@@ -108,7 +108,7 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
         />
         <meta
           name="twitter:title"
-          content={`Green Ghost 🌿👻 Degen Weed Shop Best ${edible.name} Edible`}
+          content={`Degen Weed Shop ${edible.name} Cannabis Concentrate - Green Ghost 🌿👻`}
         />
         <meta name="twitter:description" content={edible.descSeo} />
         <meta name="twitter:image" content={edible.images[1]} />

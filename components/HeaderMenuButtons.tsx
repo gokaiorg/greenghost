@@ -15,13 +15,13 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = () => {
   const menuItems = [
     {
       href: '/weed-shop',
-      title: 'Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu',
-      label: 'Weed Shop',
+      title: 'Weed Shop Premium Cannabis Buds Menu',
+      label: 'Menu',
     },
     {
-      href: '/contact',
-      title: 'Green Ghost 🌿👻 Contact Our Weed Shop Team To Order',
-      label: 'Contact',
+      href: '/weed-delivery-phuket',
+      title: 'Best Weed Delivery Service in Phuket',
+      label: 'Delivery',
     },
   ];
 
@@ -34,7 +34,7 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = () => {
     >
       <Box
         as="ul"
-        aria-label="Main Navigation List Links to Weed Shop Menu, Contact and Maps"
+        aria-label="Main Navigation List"
         listStyleType={'none'}
         ml="auto"
         mr={{ base: 'auto', md: 0 }}
@@ -45,7 +45,7 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = () => {
         {menuItems.map((item) => (
           <Box
             as="li"
-            aria-label={`Main Navigation Link to ${item.label}`}
+            aria-label={`${item.label}`}
             key={item.href}
             ml={4}
             display="flex"

@@ -96,7 +96,7 @@ export default function DegensPage({ degen }: DegensPageProps) {
         <meta name="description" content={degen.descSeo} />
         <meta
           property="og:title"
-          content={`Green Ghost 🌿👻 Degen Weed Shop ${degen.name} Cannabis Concentrate`}
+          content={`Degen Weed Shop ${degen.name} Cannabis Concentrate - Green Ghost 🌿👻`}
         />
         <meta property="og:description" content={degen.descSeo} />
         <meta property="og:image" content={degen.images[1]} />
@@ -108,7 +108,7 @@ export default function DegensPage({ degen }: DegensPageProps) {
         />
         <meta
           name="twitter:title"
-          content={`Green Ghost 🌿👻 Degen Weed Shop ${degen.name} Cannabis Concentrate`}
+          content={`Degen Weed Shop ${degen.name} Cannabis Concentrate - Green Ghost 🌿👻`}
         />
         <meta name="twitter:description" content={degen.descSeo} />
         <meta name="twitter:image" content={degen.images[1]} />

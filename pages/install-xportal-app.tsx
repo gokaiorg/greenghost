@@ -12,14 +12,14 @@ const InstallXportal: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 Install xPortal app.</title>
+        <title>Install xPortal app - Green Ghost 🌿👻</title>
         <meta
           name="description"
           content="To become a member of the Ghost Clan in the GhostVerse, you can install the XPortal app on your mobile device. XPortal is a secure app that allows you to access the GhostVerse and interact with other members of the Ghost Clan. To get started, visit the XPortal website and download the app for your device. Once installed, create a new account and follow the on-screen instructions to set up your profile. "
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Install xPortal app."
+          content="Install xPortal app - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -37,7 +37,7 @@ const InstallXportal: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Install xPortal app."
+          content="Install xPortal app - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"
