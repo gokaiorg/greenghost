@@ -219,8 +219,8 @@ const BestWeedShops: NextPage = () => {
             mb={10}
             textAlign={'center'}
           >
-            Welcome to Green Ghost, your ultimate guide to finding the best
-            weed shops in Thailand. Our team has carefully curated a list of
+            Welcome to Green Ghost, your ultimate guide to finding the best weed
+            shops in Thailand. Our team has carefully curated a list of
             top-rated dispensaries and cannabis stores in your area, ensuring
             that you have access to the highest-quality products and exceptional
             customer service.

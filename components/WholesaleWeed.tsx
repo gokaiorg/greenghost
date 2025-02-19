@@ -5,9 +5,9 @@ import { buds } from '../config/buds';
 const selectedStrains = [
   'Hawaiian',
   'Orange Sherbert',
+  'OG Kush',
   'Super Lemon Haze',
-  'Cherry Z',
-  'Master OG',
+  'Pink Zkittlez',
 ];
 
 export const WholesaleWeed = () => {

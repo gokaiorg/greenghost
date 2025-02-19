@@ -6,17 +6,20 @@ export const review = [
   },
   {
     title: 'Enoi End',
-    review: 'Choice of standards, prices from 100-150 baht to 600. There are promotions 4 g + 1 g as a gift. I advise',
+    review:
+      'Choice of standards, prices from 100-150 baht to 600. There are promotions 4 g + 1 g as a gift. I advise',
     reviewLink: 'https://maps.app.goo.gl/KUgCnWeTnfVo7sHv9',
   },
   {
     title: 'Arnab De',
-    review: 'Best chill out place in rawai. The staff is very polite and hospitable…',
+    review:
+      'Best chill out place in rawai. The staff is very polite and hospitable…',
     reviewLink: 'https://maps.app.goo.gl/V8Jd9JDnadDVifce6',
   },
   {
     title: 'Frank',
-    review: 'Green Ghost WOW Phuket\'s hidden treasure for smokers.Friendly helpful and may I say pretty owner was so informative and kind.Travelled around Phuket for 4 months now and Green Ghost is so far ahead of other places with their value and quality goods.Khop Khun khap 😀...',
+    review:
+      "Green Ghost WOW Phuket's hidden treasure for smokers.Friendly helpful and may I say pretty owner was so informative and kind.Travelled around Phuket for 4 months now and Green Ghost is so far ahead of other places with their value and quality goods.Khop Khun khap 😀...",
     reviewLink: 'https://maps.app.goo.gl/AnYp8jLJcWeF9ZBE7',
   },
   {
@@ -26,7 +29,8 @@ export const review = [
   },
   {
     title: 'icon nails',
-    review: 'Great store, I\'ve been buying here for two years now, the best price and the best varieties',
+    review:
+      "Great store, I've been buying here for two years now, the best price and the best varieties",
     reviewLink: 'https://maps.app.goo.gl/jSY9e64AHV7LtbW28',
   },
   {
