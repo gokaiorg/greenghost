@@ -132,9 +132,9 @@ export const buds: Bud[] = [
     descSeo:
       'Pink Zkittlez, a stunning hybrid with pink hues, offers tropical candy flavors and a euphoric yet relaxing high. Perfect for focus, creativity, and pain relief.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-pink-zkittlez-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-pink-zkittlez-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-pink-zkittlez-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-pink-zkittlez-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-pink-zkittlez-bud-02.webp',
     ],
     imgDesc: 'Order Pink Zkittlez Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.allbud.com/marijuana-strains/hybrid/pink-zkittlez',
@@ -219,9 +219,9 @@ export const buds: Bud[] = [
     descSeo:
       "OG Kush, a legendary hybrid with lemon-pine-fuel aroma, delivers euphoric, full-body effects. A West Coast classic, it's the backbone of many top strains.",
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-og-kush-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-og-kush-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-og-kush-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-og-kush-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-og-kush-bud-02.webp',
     ],
     imgDesc: 'Order OG Kush Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'https://www.leafly.com/strains/og-kush',
@@ -859,9 +859,9 @@ export const buds: Bud[] = [
     descSeo:
       'On Point strain: Indica-dominant with 24% THC. Pineapple, citrus, and earthy flavors. Relaxing and euphoric effects. Available in Bangkok, Thailand.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-on-point-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-on-point-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-on-point-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-on-point-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-on-point-bud-02.webp',
     ],
     imgDesc: 'Order On Point Cannabis Strain Online - Green Ghost 🌿👻',
     source: 'undefined',
