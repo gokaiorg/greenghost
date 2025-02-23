@@ -6,7 +6,7 @@ import { ListTitle } from './elements/ListTitle';
 import WrapperShop from './elements/WrapperShop';
 
 export const Edible = () => {
-  const filteredProducts = edibles.filter((edible) => edible.price !== 999);
+  const filteredProducts = edibles.filter((edible) => edible.quantity !== 0);
 
   const sortedProducts = [...filteredProducts].sort(
     (a, b) => Number(a.price) - Number(b.price)

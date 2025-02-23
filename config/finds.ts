@@ -14,10 +14,6 @@ export const find = [
     findUsLink: 'https://thaiweeddee.com/listing/green-ghost/',
   },
   {
-    name: 'WeedHub',
-    findUsLink: 'https://weedhub.asia/listing/green-ghost/',
-  },
-  {
     name: 'Thailand Weed',
     findUsLink:
       'https://www.thailandweed.com/directory-dispensaries/listing/green-ghost/',

@@ -54,7 +54,12 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = () => {
             color={isActive(item.href) ? 'ghostVerse.green.base' : 'inherit'}
             _hover={{ color: 'ghostVerse.green.base' }}
           >
-            <Link href={item.href} title={item.title} passHref>
+            <Link
+              href={item.href}
+              title={item.title}
+              passHref
+              aria-label={`${item.label}`}
+            >
               {item.label}
             </Link>
           </Box>
