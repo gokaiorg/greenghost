@@ -6,7 +6,7 @@ export const HomeMenu = () => {
   const menuItems = [
     {
       href: '/weed-shop',
-      title: 'Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu',
+      title: 'Weed Shop Premium Cannabis Buds Menu',
       label: 'Buds',
     },
     {
@@ -21,8 +21,8 @@ export const HomeMenu = () => {
     },
     {
       href: '/weed-shop-degen',
-      title: 'Green Ghost 🌿👻 Weed Shop Premium Cannabis Degen Menu',
-      label: 'Degen',
+      title: 'Green Ghost 🌿👻 Weed Shop Premium Cannabis Concentrates Menu',
+      label: 'Concentrates',
     },
     {
       href: '/weed-shop-gadgets',
@@ -68,10 +68,9 @@ export const HomeMenu = () => {
           in Phuket. Whether you seek premium quality or great value, we have
           something for everyone in our cannabis menu.
         </Text>
-
         <Box
           as="nav"
-          aria-label="Weed Menu"
+          aria-label="Menu Navigation"
           display="flex"
           flexDirection="column"
           fontSize={{ base: 16, md: 20 }}
@@ -84,7 +83,12 @@ export const HomeMenu = () => {
           <ul style={{ listStyleType: 'none', paddingLeft: 0, margin: 0 }}>
             {menuItems.map((item, index) => (
               <li key={index}>
-                <Link href={item.href} passHref title={item.title}>
+                <Link
+                  href={item.href}
+                  passHref
+                  title={item.title}
+                  aria-label={`${item.label} Menu`}
+                >
                   <Text
                     as="h3"
                     mb={2}
@@ -101,7 +105,7 @@ export const HomeMenu = () => {
             <Link
               href="/weed-shop"
               passHref
-              title="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
+              title="Weed Shop Premium Cannabis Buds Menu"
             >
               <Text
                 as="span"

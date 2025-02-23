@@ -92,7 +92,12 @@ export const MenuWeedShop = () => {
               pathname === link.path ? 'ghostVerse.green.base' : 'transparent'
             }
           >
-            <Link href={link.path} title={link.title} passHref>
+            <Link
+              href={link.path}
+              title={link.title}
+              passHref
+              aria-label={`${link.label} Menu`}
+            >
               {link.label}
             </Link>
           </Box>

@@ -4,16 +4,6 @@ export const fwen = [
     fwenLogo: '/media/green-ghost-weed-grower-cosmic-temple-vibes.webp',
     fwenLink: 'https://cosmictemplevibes.com/',
   },
-  // {
-  //   name: 'Buddy Bud Weed',
-  //   fwenLogo: '/media/green-ghost-weed-grower-buddy-bud-weed.webp',
-  //   fwenLink: 'https://buddybudweed.com/',
-  // },
-  // {
-  //   name: 'Ohigho',
-  //   fwenLogo: '/media/green-ghost-weed-grower-ohigho.webp',
-  //   fwenLink: 'https://www.instagram.com/ohigho_/',
-  // },
   {
     name: 'ThaiGreenLab',
     fwenLogo: '/media/green-ghost-weed-grower-thaigreenlab.webp',
@@ -22,7 +12,7 @@ export const fwen = [
   {
     name: 'Growland',
     fwenLogo: '/media/green-ghost-weed-grower-growland.webp',
-    fwenLink: 'https://growland.asia/',
+    fwenLink: 'https://www.instagram.com/growlandphuket/',
   },
   {
     name: 'Sweed Dreams',
@@ -34,11 +24,6 @@ export const fwen = [
     fwenLogo: '/media/green-ghost-weed-grower-green-lab-unicorn.webp',
     fwenLink: 'https://t.me/GreenLabUnicornShop',
   },
-  // {
-  //   name: 'CBD Cannabiz farm',
-  //   fwenLogo: '/media/green-ghost-weed-grower-cbd-cannabiz-farm.webp',
-  //   fwenLink: 'https://www.cbdcannabizfarm.com',
-  // },
   {
     name: 'Goodies Deluxe',
     fwenLogo: '/media/green-ghost-weed-goodies-deluxe.webp',
