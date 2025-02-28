@@ -2,7 +2,6 @@ import { Box, Input } from '@chakra-ui/react';
 import { useState } from 'react';
 import { buds } from '../../config/buds';
 import { BudItemAll } from './BudItemAll';
-import { HomeSectionTitle } from '../HomeSectionTitle';
 import MenuFilterShop from './elements/MenuFilterShop';
 import WrapperShop from './elements/WrapperShop';
 import { IconSativa } from '../media/IconSativa';
@@ -83,7 +82,14 @@ export const BudAll = () => {
   return (
     <Box as="section" aria-labelledby="All Cannabis Strains" mb="10">
       <WrapperShop>
-        <HomeSectionTitle title="All the best cannabis strains" />
+        <Box
+          as="h2"
+          fontSize={{ base: 24, lg: 30 }}
+          lineHeight={1}
+          fontFamily={'CubicFive12'}
+        >
+          All the best cannabis strains
+        </Box>
       </WrapperShop>
       <MenuFilterShop>
         <Box

@@ -31,10 +31,7 @@ const WeedShopNearMe: NextPage = () => {
         />
         <meta property="og:image:width" content="2048" />
         <meta property="og:image:height" content="1366" />
-        <meta
-          property="og:url"
-          content="https://green.gd/best-degen-weed-shop"
-        />
+        <meta property="og:url" content="https://green.gd/locations" />
         <meta
           name="twitter:title"
           content="Best Weed Shop Near Me in Phuket - Green Ghost 🌿👻"
@@ -47,10 +44,7 @@ const WeedShopNearMe: NextPage = () => {
           name="twitter:image"
           content="https://green.gd/green-ghost-degen-weed-shop.png"
         />
-        <meta
-          name="twitter:url"
-          content="https://green.gd/best-degen-weed-shop"
-        />
+        <meta name="twitter:url" content="https://green.gd/locations" />
       </Head>
       <MainLayout>
         <HeaderMenu>
@@ -67,7 +61,7 @@ const WeedShopNearMe: NextPage = () => {
           <Box w={{ base: '70px', lg: '100px' }} mb={1}>
             <IconMap />
           </Box>
-          <HomeSectionTitle title="Degen Weed Shop Near Me" />
+          <HomeSectionTitle title="Locations" />
         </Box>
         <Shop />
       </MainLayout>

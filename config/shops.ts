@@ -18,7 +18,7 @@ export type Shop = {
 export const shops: Shop[] = [
   {
     slug: 'rawai',
-    name: 'Best Degen Weed Shop Rawai',
+    name: 'Best Degen Weed Shop and Delivery in Rawai',
     hours: 'Everyday 14h-2h.',
     address: '26, 19 Wiset Rd, Rawai, Amphoe Mueang Phuket, Phuket 83130',
     addresLink: 'https://maps.app.goo.gl/5AGqxpdoqxMN6iSHA',
@@ -50,6 +50,10 @@ export const shops: Shop[] = [
         link: 'https://weed.th/shop/2ab3e52b-83f8-4a73-a96f-a60e04774a17',
       },
       {
+        label: 'Wongnai',
+        link: 'https://www.wongnai.com/restaurants/3106120Va-green-ghost-best-degen-weed-shop-and-delivery-rawai',
+      },
+      {
         label: 'Apple Map',
         link: 'https://maps.apple.com/?address=26/16%204024,%20Phuket,%20Phuket%2083130,%20Thailand&auid=3541566368782066682&ll=7.804892,98.336731&lsp=9902&q=Green%20Ghost',
       },
@@ -57,7 +61,7 @@ export const shops: Shop[] = [
   },
   {
     slug: 'karon',
-    name: 'Best Degen Weed Shop Karon',
+    name: 'Best Degen Weed Shop and Delivery in Karon',
     hours: 'Monday/Saturday 18h-00h.',
     address: '452 Patak Road, Karon, Mueang Phuket District, Phuket 83100',
     addresLink: 'https://maps.app.goo.gl/bcFR9XFSS9M29HK7A',
@@ -100,7 +104,7 @@ export const shops: Shop[] = [
   },
   {
     slug: 'phuket',
-    name: 'Best Degen Weed Shop Phuket',
+    name: 'Best Degen Weed Shop and Delivery in Phuket',
     hours: 'Everyday 8h-2h.',
     address: '17 Thalang Rd, Talat Yai, Mueang Phuket District, Phuket 83000',
     addresLink: 'https://maps.app.goo.gl/BcFn7La6ayi8jUh46',

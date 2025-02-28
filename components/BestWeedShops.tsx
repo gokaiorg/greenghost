@@ -51,7 +51,7 @@ export const BestWeedShops = () => {
         ))}
       </Box>
       <Link
-        href={'/best-degen-weed-shop'}
+        href={'/locations'}
         passHref
         title="Best Weed shops near me in Phuket"
       >

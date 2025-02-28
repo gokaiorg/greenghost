@@ -47,7 +47,7 @@ export const Fwen = () => {
             <Link
               href="https://www.tripadvisor.com/Attractions-g293920-Activities-c20-t170-Phuket.html"
               passHref
-              title="Green Ghost 🌿👻 THE 5 BEST Phuket Coffeehouses (2025) - Tripadvisor"
+              title="THE 5 BEST Phuket Coffeehouses (2025) - Tripadvisor"
             >
               <Box
                 h={'100%'}
@@ -90,7 +90,7 @@ export const Fwen = () => {
             <Link
               href="https://weed.th/best-dispensaries-in-thailand"
               passHref
-              title="Green Ghost 🌿👻 Top Dispensary Phuket Thailand Weed.th"
+              title="Top Dispensaries In Thailand - Best Weed In Thailand - WEED.TH"
             >
               <Box
                 h={'100%'}
@@ -133,7 +133,7 @@ export const Fwen = () => {
             <Link
               href="https://www.cleverthai.com/best-cannabis-shops-in-phuket/"
               passHref
-              title="Green Ghost 🌿👻 Top Dispensary Phuket Thailand CleverThai"
+              title="Phuket's Finest: Exploring the Top 11 Cannabis Destinations [2025 ]"
             >
               <Box
                 h={'100%'}
@@ -176,7 +176,7 @@ export const Fwen = () => {
             <Link
               href="https://www.thailandnomads.com/cannabis-shops-phuket/"
               passHref
-              title="Green Ghost 🌿👻 Top Dispensary Phuket Thailand Nomads"
+              title="25 Cannabis Shops & Cafes to Buy Weed in Phuket 2025"
             >
               <Box
                 h={'100%'}
@@ -219,7 +219,7 @@ export const Fwen = () => {
             <Link
               href="https://thai.news/news/thailand/top-20-cannabis-shops-where-to-buy-weed-in-phuket-vol-1-2024"
               passHref
-              title="Green Ghost 🌿👻 Top Dispensary Phuket Thailand Thai News"
+              title="Top 20 Cannabis Shops: Where to Buy Weed in Phuket Vol 1, 2024 – THAI.NEWS – Thailand Breaking News"
             >
               <Box
                 h={'100%'}
