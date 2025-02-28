@@ -27,7 +27,7 @@ export const BudItemAll = ({ bud }: BudItemAllProps) => {
       >
         <Text
           itemProp="name"
-          as={'h2'}
+          as={'h3'}
           fontFamily={'CubicFive12'}
           fontSize={{ base: 14 }}
           p={1}

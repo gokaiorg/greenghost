@@ -37,13 +37,18 @@ export const MenuFooter = () => {
             Jobs
           </Link>
         </Box>
-        <Box aria-label="Location" as="li" mx={2}>
+        <Box aria-label="Locations" as="li" mx={2}>
           <Link
             title="Best Weed Shop Near Me in Phuket"
-            href="/best-degen-weed-shop"
+            href="/locations"
             passHref
           >
-            Location
+            Locations
+          </Link>
+        </Box>
+        <Box aria-label="Sitemap" as="li" mx={2}>
+          <Link title="Sitemap" href="/sitemap" passHref>
+            Sitemap
           </Link>
         </Box>
         <Box aria-label="About" as="li" mx={2}>
@@ -62,11 +67,6 @@ export const MenuFooter = () => {
             passHref
           >
             Contact
-          </Link>
-        </Box>
-        <Box aria-label="Sitemap" as="li" mx={2}>
-          <Link title="Sitemap" href="/sitemap" passHref>
-            Sitemap
           </Link>
         </Box>
       </Box>

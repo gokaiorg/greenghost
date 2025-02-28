@@ -24,10 +24,7 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
       p={4}
       mr={2}
     >
-      <Link
-        href={`best-degen-weed-shop/${shop.slug}`}
-        title={`Green Ghost 🌿👻 ${shop.name}`}
-      >
+      <Link href={`locations/${shop.slug}`} title={`${shop.name}`}>
         <Text
           as="h3"
           fontSize={18}
@@ -74,7 +71,7 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
       >
         <iframe
           src={shop.mapLink}
-          title={`Green Ghost 🌿👻 ${shop.name} Google Map`}
+          title={`${shop.name} on Google Map`}
           style={{
             border: 0,
             position: 'absolute',
@@ -87,10 +84,7 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
           referrerPolicy="no-referrer-when-downgrade"
         />
       </Box>
-      <Link
-        href={shop.addresLink}
-        title={`Green Ghost 🌿👻 ${shop.name} Google Map`}
-      >
+      <Link href={shop.addresLink} title={`${shop.name} on Google Map`}>
         <Box
           display="flex"
           my={2}
@@ -131,7 +125,7 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
                 }}
               >
                 <Link
-                  title={`Green Ghost 🌿👻 ${shop.name} on ${social.label}`}
+                  title={`${shop.name} on ${social.label}`}
                   href={social.link}
                   passHref
                 >
