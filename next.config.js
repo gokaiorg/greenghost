@@ -53,23 +53,23 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/weed-shop-near-me/phuket',
-        destination: '/best-degen-weed-shop/phuket',
+        source: '/best-degen-weed-shop/karon',
+        destination: '/locations/karon',
+        permanent: true,
+      },
+      {
+        source: '/best-degen-weed-shop/rawai',
+        destination: '/locations/rawai',
+        permanent: true,
+      },
+      {
+        source: '/best-degen-weed-shop/phuket',
+        destination: '/locations/phuket',
         permanent: true,
       },
       {
         source: '/weed-shops-thailand',
         destination: '/best-weed-shops-thailand',
-        permanent: true,
-      },
-      {
-        source: '/weed-shop-near-me/karon',
-        destination: '/best-degen-weed-shop/karon',
-        permanent: true,
-      },
-      {
-        source: '/weed-shop-near-me/rawai',
-        destination: '/best-degen-weed-shop/rawai',
         permanent: true,
       },
       {

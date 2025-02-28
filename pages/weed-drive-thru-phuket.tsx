@@ -141,7 +141,7 @@ const WeedDriveThru: NextPage = () => {
             width={{ base: '100%', lg: '50%' }}
             mb={2}
           >
-            <Link href={'/best-degen-weed-shop'} title={'Near Me'} passHref>
+            <Link href={'/locations'} title={'Near Me'} passHref>
               <Text
                 as={'h2'}
                 fontSize={{ base: 'xl', lg: '2xl' }}

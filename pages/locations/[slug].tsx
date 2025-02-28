@@ -35,9 +35,9 @@ export default function ShopPage({ shop }: ShopPageProps) {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 {shop.name}</title>
+        <title>{shop.name} - Green Ghost 🌿👻</title>
         <meta name="description" content={shop.descSeo} />
-        <meta property="og:title" content={`Green Ghost 🌿👻 ${shop.name}`} />
+        <meta property="og:title" content={`${shop.name} - Green Ghost 🌿👻`} />
         <meta property="og:description" content={shop.descSeo} />
         <meta
           property="og:image"
@@ -47,9 +47,12 @@ export default function ShopPage({ shop }: ShopPageProps) {
         <meta property="og:image:height" content="1366" />
         <meta
           property="og:url"
-          content={`https://green.gd/best-degen-weed-shop/${shop.slug}`}
+          content={`https://green.gd/locations/${shop.slug}`}
         />
-        <meta name="twitter:title" content={`Green Ghost 🌿👻 ${shop.name}`} />
+        <meta
+          name="twitter:title"
+          content={`${shop.name}  - Green Ghost 🌿👻`}
+        />
         <meta name="twitter:description" content={shop.descSeo} />
         <meta
           name="twitter:image"
@@ -57,7 +60,7 @@ export default function ShopPage({ shop }: ShopPageProps) {
         />
         <meta
           name="twitter:url"
-          content={`https://green.gd/best-degen-weed-shop/${shop.slug}`}
+          content={`https://green.gd/locations/${shop.slug}`}
         />
         <meta property="og:video" content={shop.videoLink} />
         <meta property="og:video:type" content="video/mp4" />
@@ -126,7 +129,7 @@ export default function ShopPage({ shop }: ShopPageProps) {
                 >
                   <iframe
                     src={shop.mapLink}
-                    title={`Green Ghost 🌿👻 ${shop.name} Google Map`}
+                    title={`${shop.name} Google Map`}
                     style={{
                       border: 0,
                       position: 'absolute',
@@ -151,7 +154,7 @@ export default function ShopPage({ shop }: ShopPageProps) {
                 </Text>
                 <Link
                   href={shop.addresLink}
-                  title={`Green Ghost 🌿👻 ${shop.name} Google Map`}
+                  title={`${shop.name} Google Map`}
                   passHref
                 >
                   <Box
@@ -170,7 +173,7 @@ export default function ShopPage({ shop }: ShopPageProps) {
                 </Link>
                 <Link
                   href={shop.reviewLink}
-                  title={`Green Ghost 🌿👻 ${shop.name} Add a Google Map Review`}
+                  title={`${shop.name} Add a Google Map Review`}
                 >
                   <IconsReview />
                 </Link>
@@ -266,7 +269,7 @@ export default function ShopPage({ shop }: ShopPageProps) {
                           }}
                         >
                           <Link
-                            title={`Green Ghost 🌿👻 ${shop.name} on ${social.label}`}
+                            title={`${shop.name} on ${social.label}`}
                             href={social.link}
                             passHref
                           >
