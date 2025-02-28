@@ -37,15 +37,6 @@ export const MenuFooter = () => {
             Jobs
           </Link>
         </Box>
-        <Box aria-label="Locations" as="li" mx={2}>
-          <Link
-            title="Best Weed Shop Near Me in Phuket"
-            href="/locations"
-            passHref
-          >
-            Locations
-          </Link>
-        </Box>
         <Box aria-label="Sitemap" as="li" mx={2}>
           <Link title="Sitemap" href="/sitemap" passHref>
             Sitemap
