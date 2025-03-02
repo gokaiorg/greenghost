@@ -93,8 +93,8 @@ export const shops: Shop[] = [
         link: 'https://weed.th/shop/fe835e3b-d043-4672-af43-8cc039aa013b',
       },
       {
-        label: 'Smoking Skunk',
-        link: 'https://smokingskunk.com/weed-in-thailand/green-ghost-degen-weed-shop-karon/',
+        label: 'Wongnai',
+        link: 'https://www.wongnai.com/restaurants/3138274cx-green-ghost-best-degen-weed-shop-and-delivery-karon',
       },
       {
         label: 'Apple Map',
@@ -116,7 +116,7 @@ export const shops: Shop[] = [
       'Order premium cannabis from Green Ghost 🌿👻 in Phuket, with delivery to Phuket Town, Wichit, Koh Siret, Phanwa Cape, Kathu, Thalang, and all of Thailand. Get free weed with a photo review!',
     mapLink:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4986.434839450538!2d98.387895!3d7.884923599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305031353d385cf7%3A0xfc698838827f19d1!2sGreen%20Ghost%20%F0%9F%8C%BF%F0%9F%91%BB%20Best%20Degen%20Weed%20Shop%20and%20Delivery!5e1!3m2!1sen!2sth!4v1725182576417!5m2!1sen!2sth',
-    videoLink: 'https://www.youtube.com/embed/qviAMP3d3O8?si=kMAcjzxR3EfRhitW',
+    videoLink: 'https://www.youtube.com/embed/8x0aKDRP4q4',
     imagesOg: 'green-ghost-best-degen-weed-shop-delivery-phuket-thailand.webp',
     images: [
       '/media/green-ghost-degen-weed-shop-phuket-thailand-cannabis-delivery-01.webp',

@@ -76,7 +76,13 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
         >
           {description}
         </Text>
-        <Box display={'flex'} flexWrap={'wrap'} gap={2} mx={'auto'}>
+        <Box
+          aria-label="Learn about weed"
+          display={'flex'}
+          flexWrap={'wrap'}
+          gap={2}
+          mx={'auto'}
+        >
           {/* <Link href={link} title={linkTitle} passHref>
             <Text
               as="span"

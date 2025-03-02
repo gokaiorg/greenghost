@@ -22,4 +22,9 @@ export const find = [
     name: 'High Thailand',
     findUsLink: 'https://www.highthailand.com/location/green-ghost/',
   },
+  {
+    name: 'Smoking Skunk',
+    findUsLink:
+      'https://smokingskunk.com/weed-in-thailand/green-ghost-degen-weed-shop-karon/',
+  },
 ];

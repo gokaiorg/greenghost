@@ -57,6 +57,7 @@ export const BestWeedShops = () => {
       >
         <Text
           as="span"
+          aria-label="Visit our locations"
           display={'inline-flex'}
           w={'auto'}
           fontSize={{ base: 'xl', md: '4xl' }}
@@ -75,7 +76,7 @@ export const BestWeedShops = () => {
             color: 'ghostVerse.green.base',
           }}
         >
-          Explore Our Locations
+          Visit our locations
         </Text>
       </Link>
       <Box
