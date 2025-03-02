@@ -5,7 +5,6 @@ import { getShops, Shop } from '../../config/shops';
 import { MainLayout } from '../../components/MainLayout';
 import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
-import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import { Box, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,7 +14,6 @@ import { Review } from '../../components/Review';
 import { IconShop } from '../../components/media/IconShop';
 import { IconClock } from '../../components/media/IconClock';
 import { HomeFeature } from '../../components/HomeFeatures';
-import { HomeMenu } from '../../components/HomeMenu';
 
 interface ShopPageProps {
   shop: Shop;
@@ -94,7 +92,19 @@ export default function ShopPage({ shop }: ShopPageProps) {
               />
             </svg>
           </Box>
-          <HomeSectionTitle title={shop.name} />
+          <Box
+            as="h1"
+            fontSize={{ base: 24, lg: 40 }}
+            lineHeight={1}
+            maxW={{ base: '100%', md: '80%', lg: '45%' }}
+            m={'auto'}
+            color="ghostVerse.green.base"
+            fontFamily="CubicFive12"
+            my={{ base: 4 }}
+            textAlign="center"
+          >
+            {shop.name}
+          </Box>
           <Box
             display={{
               base: 'block',
@@ -358,8 +368,36 @@ export default function ShopPage({ shop }: ShopPageProps) {
               </Box>
             </Box>
           </Box>
+          <Link
+            href={'/locations'}
+            passHref
+            title="Best Weed shops near me in Phuket"
+          >
+            <Text
+              as="span"
+              display={'inline-flex'}
+              w={'auto'}
+              fontSize={{ base: 'xl', md: '4xl' }}
+              lineHeight={1}
+              borderWidth={1}
+              px={{ base: 4, md: 6 }}
+              pb={{ base: 2, md: 2 }}
+              mx={'auto'}
+              mb={4}
+              fontFamily={'vt323'}
+              color={'black'}
+              borderColor={'ghostVerse.green.base'}
+              backgroundColor={'ghostVerse.green.base'}
+              _hover={{
+                borderColor: 'ghostVerse.green.base',
+                bgColor: 'black',
+                color: 'ghostVerse.green.base',
+              }}
+            >
+              Find a store near you
+            </Text>
+          </Link>
           <Review />
-          <HomeMenu />
           <HomeFeature />
           <Box>
             <Image

@@ -17,11 +17,13 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = () => {
       href: '/weed-shop',
       title: 'Weed Shop Premium Cannabis Buds Menu',
       label: 'Menu',
+      ariaLabel: 'Explore our menu',
     },
     {
       href: '/weed-delivery-phuket',
       title: 'Best Weed Delivery Service in Phuket',
       label: 'Delivery',
+      ariaLabel: 'Get delivered',
     },
   ];
 
@@ -45,7 +47,7 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = () => {
         {menuItems.map((item) => (
           <Box
             as="li"
-            aria-label={`${item.label}`}
+            aria-label={`${item.ariaLabel}`}
             key={item.href}
             ml={4}
             display="flex"
