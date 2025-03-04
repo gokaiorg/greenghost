@@ -87,7 +87,7 @@ const BuyWeed: NextPage = () => {
             href="/weed"
             passHref
             color="ghostVerse.green.base"
-            title="Green Ghost 🌿👻 Your Weed Guide to Cannabis Excellence"
+            title="Your Weed Guide to Cannabis Excellence"
           >
             <Box as="span" color="ghostVerse.green.base">
               Weed

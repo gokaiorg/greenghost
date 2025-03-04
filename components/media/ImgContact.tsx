@@ -8,8 +8,8 @@ export const ImgContact = () => {
         src="/media/contact-green-ghost.webp"
         width={1594}
         height={1594}
-        alt="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
-        title="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
+        alt="Contact Our Weed Shop Team To Order"
+        title="Contact Our Weed Shop Team To Order"
         quality={75}
       />
     </Box>

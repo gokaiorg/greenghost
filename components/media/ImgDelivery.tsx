@@ -6,8 +6,8 @@ export const ImgDelivery = () => {
     <Box w={{ base: '100px', lg: '140px' }}>
       <Image
         src="/media/weed-delivery-phuket.webp"
-        alt="Green Ghost 🌿👻 Best Weed Delivery Service in Phuket"
-        title="Green Ghost 🌿👻 Best Weed Delivery Service in Phuket"
+        alt="Best Weed Delivery Service in Phuket"
+        title="Best Weed Delivery Service in Phuket"
         width={640}
         height={512}
         sizes="(max-width: 1024px) 100px, 140px"

@@ -42,11 +42,7 @@ export const Communities = () => {
           p={4}
           mr={'2'}
         >
-          <Link
-            title="Green Ghost 🌿👻 Green Ghost Degen NFT Collection"
-            href="/nft"
-            passHref
-          >
+          <Link title="Green Ghost Degen NFT Collection" href="/nft" passHref>
             <Text
               as={'h3'}
               fontSize={{ base: 18 }}
@@ -113,14 +109,14 @@ export const Communities = () => {
             color={'ghostVerse.green.base'}
           >
             <Link
-              title="Green Ghost 🌿👻 Crypto Weed Shop Relax and Earn"
+              title="Crypto Weed Shop Relax and Earn"
               href="/crypto-weed-shop-relax-and-earn"
               passHref
             >
               Read More&nbsp;
             </Link>
             <Link
-              title="Green Ghost 🌿👻 Community-driven collectible NFT DAO on MultiversX"
+              title="Community-driven collectible NFT DAO on MultiversX"
               href="https://ghostverse.org/mxghosts"
               passHref
             >
@@ -176,14 +172,14 @@ export const Communities = () => {
             color={'ghostVerse.green.base'}
           >
             <Link
-              title="Green Ghost 🌿👻 Verified Cannabis Card Dispensaries which offer discounts"
+              title="Verified Cannabis Card Dispensaries which offer discounts"
               href="https://card.weed.th/en/verified-cannabis-card-dispensaries"
               passHref
             >
               Read More&nbsp;
             </Link>
             <Link
-              title="Green Ghost 🌿👻 Medicinal Cannabis Card for Thailand"
+              title="Medicinal Cannabis Card for Thailand"
               href="https://card.weed.th/en"
               passHref
             >

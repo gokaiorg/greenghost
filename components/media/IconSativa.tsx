@@ -7,8 +7,8 @@ export const IconSativa = () => {
       aria-label="Sativa Icon"
       width={30}
       height={31}
-      alt="Green Ghost 🌿👻 Menu Weed Shop Sativa Dominance"
-      title="Green Ghost 🌿👻 Menu Weed Shop Sativa Dominance"
+      alt="Menu Weed Shop Sativa Dominance"
+      title="Menu Weed Shop Sativa Dominance"
       quality={75}
       loading="lazy"
       priority={false}

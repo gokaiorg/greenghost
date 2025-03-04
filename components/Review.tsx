@@ -31,8 +31,8 @@ export const Review = () => {
           src="/media/green-ghost-degen-weed-shop-cannabis-leaf.webp"
           width={256}
           height={262}
-          alt="Green Ghost 🌿👻 Best Degen Weed Shop Cannabis Reviews"
-          title="Green Ghost 🌿👻 Best Degen Weed Shop Cannabis Reviews"
+          alt="Best Degen Weed Shop Cannabis Reviews"
+          title="Best Degen Weed Shop Cannabis Reviews"
           sizes="(max-width: 600px) 120px, (max-width: 1200px) 120px, 120px"
           quality={75}
         />
