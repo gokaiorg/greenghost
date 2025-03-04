@@ -10,7 +10,7 @@ const InstallXportal: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Green Ghost 🌿👻 404.</title>
+        <title>404 - Green Ghost 🌿👻</title>
         <meta
           name="description"
           content="You got lost bro! You should try something that keeps you focused."

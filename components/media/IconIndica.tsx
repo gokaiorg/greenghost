@@ -7,8 +7,8 @@ export const IconIndica = () => {
       aria-label="Indica Icon"
       width={30}
       height={31}
-      alt="Green Ghost 🌿👻 Menu Weed Shop Indica Dominance"
-      title="Green Ghost 🌿👻 Menu Weed Shop Indica Dominance"
+      alt="Menu Weed Shop Indica Dominance"
+      title="Menu Weed Shop Indica Dominance"
       quality={75}
       loading="lazy"
       priority={false}

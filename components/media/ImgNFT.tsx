@@ -8,8 +8,8 @@ export const ImgNFT = () => {
         src="/media/green-ghost-degen-nft-collection.webp"
         width={1594}
         height={1594}
-        alt="Green Ghost 🌿👻 Green Ghost Degen NFT Collection"
-        title="Green Ghost 🌿👻 Green Ghost Degen NFT Collection"
+        alt="Green Ghost Degen NFT Collection"
+        title="Green Ghost Degen NFT Collection"
         quality={75}
       />
     </Box>

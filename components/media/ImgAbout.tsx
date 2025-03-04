@@ -6,8 +6,8 @@ export const ImgAbout = () => {
     <Box w={{ base: '100px', lg: '140px' }}>
       <Image
         src="/media/green-ghost-degen-weed-shop-about-weed.webp"
-        alt="Green Ghost 🌿👻 About Cannabis Culture in Thailand"
-        title="Green Ghost 🌿👻 About Cannabis Culture in Thailand"
+        alt="About Cannabis Culture in Thailand"
+        title="About Cannabis Culture in Thailand"
         width={1860}
         height={1253}
         quality={75}

@@ -7,8 +7,8 @@ export const IconHybrid = () => {
       aria-label="Hybrid Icon"
       width={30}
       height={31}
-      alt="Green Ghost 🌿👻 Menu Weed Shop Hybrid Dominance"
-      title="Green Ghost 🌿👻 Menu Weed Shop Hybrid Dominance"
+      alt="Menu Weed Shop Hybrid Dominance"
+      title="Menu Weed Shop Hybrid Dominance"
       quality={75}
       loading="lazy"
       priority={false}

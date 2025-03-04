@@ -8,8 +8,8 @@ export const ImgWeed = () => {
         src="/media/weed-green-ghost.webp"
         width={1594}
         height={1594}
-        alt="Green Ghost 🌿👻 Your Weed Guide to Cannabis Excellence"
-        title="Green Ghost 🌿👻 Your Weed Guide to Cannabis Excellence"
+        alt="Your Weed Guide to Cannabis Excellence"
+        title="Your Weed Guide to Cannabis Excellence"
         quality={75}
       />
     </Box>

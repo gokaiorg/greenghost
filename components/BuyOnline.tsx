@@ -55,7 +55,7 @@ export const BuyOnline = () => {
           'https://greenghostweed.shop/collections/buds?filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte=&sort_by=price-ascending'
         }
         passHref
-        title="Green Ghost 🌿👻 Get 10% Free on greenghostweed.shop Orders"
+        title="Get 10% Free on greenghostweed.shop Orders"
       >
         <Text
           as="span"
@@ -91,7 +91,7 @@ export const BuyOnline = () => {
         ml={'auto'}
       >
         <Link
-          title="Green Ghost 🌿👻 Weed Drive Thru Phuket"
+          title="Weed Drive Thru Phuket"
           href="/weed-drive-thru-phuket"
           passHref
         >

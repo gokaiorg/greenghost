@@ -39,7 +39,7 @@ export const HomeFeature = () => {
       <Link
         href="/weed-delivery-phuket"
         passHref
-        title="Green Ghost 🌿👻 Best Weed Delivery Service in Phuket"
+        title="Best Weed Delivery Service in Phuket"
       >
         <Text
           as="span"

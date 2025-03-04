@@ -219,21 +219,21 @@ const WeedDelivery: NextPage = () => {
         >
           <SectionLink
             href="/weed-shop"
-            title="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
+            title="Weed Shop Premium Cannabis Buds Menu"
             heading="Explore Our Premium Cannabis Selection"
             text="Whether you're looking for flowers, edibles, concentrates or gadgets, we have it for you."
             imgSrc="/media/green-ghost-degen-weed-shop-buds-menu.webp"
-            imgAlt="Green Ghost 🌿👻 Weed Shop Premium Cannabis Buds Menu"
+            imgAlt="Weed Shop Premium Cannabis Buds Menu"
             imgSizes="(max-width: 1024px) 420px, 602px"
             number="1"
           />
           <SectionLink
             href="/contact"
-            title="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
+            title="Contact Our Weed Shop Team To Order"
             heading="Contact And Provide Delivery Details"
             text="Contact us and share your delivery information to ensure quick and seamless service."
             imgSrc="/media/green-ghost-degen-weed-shop-contact-us.webp"
-            imgAlt="Green Ghost 🌿👻 Contact Our Weed Shop Team To Order"
+            imgAlt="Contact Our Weed Shop Team To Order"
             imgSizes="(max-width: 1024px) 420px, 602px"
             number="2"
           />

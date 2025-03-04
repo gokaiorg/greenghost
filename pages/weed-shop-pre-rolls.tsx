@@ -47,7 +47,7 @@ const WeedShopPreRolls: NextPage = () => {
     <>
       <Head>
         <title>
-          Green Ghost 🌿👻 Weed Shop Premium Cannabis Pre Rolls Menu
+          Weed Shop Premium Cannabis Pre Rolls Menu - Green Ghost 🌿👻
         </title>
         <meta
           name="description"
@@ -55,7 +55,7 @@ const WeedShopPreRolls: NextPage = () => {
         />
         <meta
           property="og:title"
-          content="Green Ghost 🌿👻 Weed Shop Premium Cannabis Pre Rolls Menu"
+          content="Weed Shop Premium Cannabis Pre Rolls Menu - Green Ghost 🌿👻"
         />
         <meta
           property="og:description"
@@ -73,7 +73,7 @@ const WeedShopPreRolls: NextPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Green Ghost 🌿👻 Weed Shop Premium Cannabis Pre Rolls Menu"
+          content="Weed Shop Premium Cannabis Pre Rolls Menu - Green Ghost 🌿👻"
         />
         <meta
           name="twitter:description"
@@ -104,8 +104,8 @@ const WeedShopPreRolls: NextPage = () => {
           <Box w={{ base: '100%' }}>
             <Image
               src="/media/green-ghost-degen-weed-shop-preroll-joints-menu.webp"
-              alt="Green Ghost 🌿👻 Weed Shop Premium Cannabis Pre-Roll Joints Menu"
-              title="Green Ghost 🌿👻 Weed Shop Premium Cannabis Pre-Roll Joints Menu"
+              alt="Weed Shop Premium Cannabis Pre-Roll Joints Menu"
+              title="Weed Shop Premium Cannabis Pre-Roll Joints Menu"
               width={2048}
               height={1366}
               sizes="100%"
