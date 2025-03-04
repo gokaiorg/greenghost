@@ -23,7 +23,7 @@ export const HomeTopInfos = () => {
           <Link
             href="/weed-shop-gadgets/weed-th-rolling-papers-tips"
             passHref
-            title="Green Ghost 🌿👻 WEED.TH Rolling Papers + Tips"
+            title="WEED.TH Rolling Papers + Tips"
           >
             <Image
               src="/media/green-ghost-degen-weed-shop-menu-gadget-weed-th-rolling-paper-tips-03.webp"
@@ -31,8 +31,8 @@ export const HomeTopInfos = () => {
               height={828}
               style={{ objectFit: 'contain' }}
               priority
-              alt="Green Ghost 🌿👻 WEED.TH Rolling Papers + Tips"
-              title="Green Ghost 🌿👻 WEED.TH Rolling Papers + Tips"
+              alt="WEED.TH Rolling Papers + Tips"
+              title="WEED.TH Rolling Papers + Tips"
               sizes="200px"
               quality={75}
             />
@@ -60,7 +60,7 @@ export const HomeTopInfos = () => {
             <Link
               href="https://weed.th/"
               passHref
-              title="Green Ghost 🌿👻 WEED.TH WeedMaps for Thailand"
+              title="WEED.TH WeedMaps for Thailand"
             >
               <Text
                 as="span"
@@ -75,7 +75,7 @@ export const HomeTopInfos = () => {
           <Link
             href="/weed-shop-gadgets/weed-th-rolling-papers-tips"
             passHref
-            title="Green Ghost 🌿👻 WEED.TH Rolling Papers + Tips"
+            title="WEED.TH Rolling Papers + Tips"
           >
             <Text
               as="span"
@@ -127,7 +127,7 @@ export const HomeTopInfos = () => {
           <Link
             href="/cannabis-club"
             passHref
-            title="Green Ghost 🌿👻 Best Cannabis Social Club in Phuket Thailand"
+            title="Best Cannabis Social Club in Phuket Thailand"
           >
             <Text
               as="span"
@@ -158,11 +158,7 @@ export const HomeTopInfos = () => {
             py={{ base: 2, md: 2 }}
             fontWeight={'bold'}
           >
-            <Link
-              href="/nft"
-              passHref
-              title="Green Ghost 🌿👻 Green Ghost Degen NFT Collection"
-            >
+            <Link href="/nft" passHref title="Green Ghost Degen NFT Collection">
               GET NFT!
             </Link>
           </Box>

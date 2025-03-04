@@ -6,8 +6,8 @@ export const ImgClub = () => {
     <Box w={{ base: '100px', lg: '140px' }}>
       <Image
         src="/media/green-ghost-degen-weed-shop-cannabis-club-stoner.webp"
-        alt="Green Ghost 🌿👻 Best Cannabis Social Club in Phuket Thailand"
-        title="Green Ghost 🌿👻 Best Cannabis Social Club in Phuket Thailand"
+        alt="Best Cannabis Social Club in Phuket Thailand"
+        title="Best Cannabis Social Club in Phuket Thailand"
         width={2048}
         height={1973}
         sizes="(max-width: 1024px) 100px, 140px"

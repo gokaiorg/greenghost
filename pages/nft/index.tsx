@@ -107,7 +107,7 @@ const NFTs: NextPage = () => {
           <Link
             href="https://opensea.io/collection/greenghostdegen/overview"
             passHref
-            title="Green Ghost 🌿👻 Green Ghost Degen Collection OpenSea"
+            title="Green Ghost Degen Collection OpenSea"
           >
             <Box
               display="flex"
@@ -127,7 +127,7 @@ const NFTs: NextPage = () => {
           <Link
             href="https://nftcalendar.io/event/green-ghost-degen/"
             passHref
-            title="Green Ghost 🌿👻 Green Ghost Degen NFT Calendar"
+            title="Green Ghost Degen NFT Calendar"
           >
             <Box
               display="flex"

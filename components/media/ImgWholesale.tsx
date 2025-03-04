@@ -8,8 +8,8 @@ export const ImgWholesale = () => {
         src="/media/green-ghost-wholesale-cannabis.webp"
         width={1594}
         height={1594}
-        alt="Green Ghost 🌿👻 Wholesale Cannabis Premium Strains in Phuket"
-        title="Green Ghost 🌿👻 Wholesale Cannabis Premium Strains in Phuket"
+        alt="Wholesale Cannabis Premium Strains in Phuket"
+        title="Wholesale Cannabis Premium Strains in Phuket"
         quality={75}
       />
     </Box>

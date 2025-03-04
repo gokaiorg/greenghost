@@ -4,7 +4,7 @@ export const ImgGhostverse = () => {
   return (
     <Image
       src="/media/green-ghost-weed-shop-pixel-art.webp"
-      alt="Green Ghost 🌿👻 Community-driven collectible NFT DAO on MultiversX"
+      alt="Community-driven collectible NFT DAO on MultiversX"
       width={1260}
       height={600}
       sizes="

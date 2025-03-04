@@ -4,8 +4,8 @@ export const ImgEarth = () => {
   return (
     <Image
       src="/media/green-ghost-degen-weed-shop.webp"
-      alt="Green Ghost 🌿👻 Best Degen Weed Shop and Delivery"
-      title="Green Ghost 🌿👻 Best Degen Weed Shop and Delivery"
+      alt="Best Degen Weed Shop and Delivery"
+      title="Best Degen Weed Shop and Delivery"
       width={95}
       height={91}
       style={{ objectFit: 'contain' }}

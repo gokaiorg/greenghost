@@ -8,8 +8,8 @@ export const ImgJobs = () => {
         src="/media/jobs-green-ghost.webp"
         width={1784}
         height={1669}
-        alt="Green Ghost 🌿👻 Budtender Job Opening at Our Cannabis Shop"
-        title="Green Ghost 🌿👻 Budtender Job Opening at Our Cannabis Shop"
+        alt="Budtender Job Opening at Our Cannabis Shop"
+        title="Budtender Job Opening at Our Cannabis Shop"
         quality={75}
       />
     </Box>
