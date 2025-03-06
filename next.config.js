@@ -53,6 +53,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/best-degen-weed-shop',
+        destination: '/locations',
+        permanent: true,
+      },
+      {
         source: '/best-degen-weed-shop/karon',
         destination: '/locations/karon',
         permanent: true,
