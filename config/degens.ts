@@ -33,8 +33,7 @@ export const degens: Degen[] = [
       '/media/green-ghost-degen-weed-shop-menu-degen-bubble-hash-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-menu-degen-bubble-hash-photo-02.webp',
     ],
-    imgDesc:
-      'Green Ghost 🌿👻 Degen Weed Shop Bubble Hash Cannabis Concentrate',
+    imgDesc: 'Degen Weed Shop Bubble Hash Cannabis Concentrate',
   },
   {
     slug: 'pollen-hash',
@@ -55,8 +54,7 @@ export const degens: Degen[] = [
       '/media/green-ghost-degen-weed-shop-menu-degen-pollen-hash-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-menu-degen-pollen-hash-photo-02.webp',
     ],
-    imgDesc:
-      'Green Ghost 🌿👻 Degen Weed Shop Pollen Hash Cannabis Concentrate',
+    imgDesc: 'Degen Weed Shop Pollen Hash Cannabis Concentrate',
   },
   {
     slug: 'dry-sift-hash',
@@ -76,8 +74,7 @@ export const degens: Degen[] = [
       '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-cover.webp',
       '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-product-02.webp',
     ],
-    imgDesc:
-      'Green Ghost 🌿👻 Degen Weed Shop Dry Sift Hash Cannabis Concentrate',
+    imgDesc: 'Degen Weed Shop Dry Sift Hash Cannabis Concentrate',
   },
   {
     slug: 'super-dry-hash',
@@ -97,8 +94,7 @@ export const degens: Degen[] = [
       '/media/green-ghost-degen-weed-shop-menu-degen-super-dry-hash-cover.webp',
       '/media/green-ghost-degen-weed-shop-menu-degen-super-dry-hash-cover.webp',
     ],
-    imgDesc:
-      'Green Ghost 🌿👻 Degen Weed Shop Super Dry Hash Cannabis Concentrate',
+    imgDesc: 'Degen Weed Shop Super Dry Hash Cannabis Concentrate',
   },
   {
     slug: 'pure-kief',
