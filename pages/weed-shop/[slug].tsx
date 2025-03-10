@@ -440,7 +440,7 @@ export default function BudPage({ bud }: BudPageProps) {
               <Link
                 href={`https://greenghostweed.shop/products/${bud.slug}`}
                 passHref
-                title={`Green Ghost 🌿👻 Buy ${bud.name} Cannabis Strain Online`}
+                title={`Buy ${bud.name} Cannabis Strain Online`}
               >
                 <Text
                   as="span"

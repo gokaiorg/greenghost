@@ -91,7 +91,7 @@ export default function DegensPage({ degen }: DegensPageProps) {
     <>
       <Head>
         <title>
-          Green Ghost 🌿👻 Degen Weed Shop {degen.name} Cannabis Concentrate
+          Degen Weed Shop {degen.name} Cannabis Concentrate - Green Ghost 🌿👻
         </title>
         <meta name="description" content={degen.descSeo} />
         <meta
