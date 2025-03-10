@@ -14,8 +14,8 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = () => {
 
   const menuItems = [
     {
-      href: '/weed-shop',
-      title: 'Weed Shop Premium Cannabis Buds Menu',
+      href: '/menu',
+      title: 'Weed & Cannabis Products Menu',
       label: 'Menu',
       ariaLabel: 'Explore our menu',
     },
