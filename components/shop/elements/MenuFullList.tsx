@@ -86,7 +86,7 @@ export const MenuFullList = () => {
       >
         {Links.map((link) => (
           <Box
-            w={{ base: '100%', sm: '50%', md: '25%' }}
+            w={{ base: '100%', sm: '50%', md: '33.33333%', lg: '25%' }}
             as="li"
             aria-label={`${link.label} Menu`}
             key={link.label}
