@@ -14,7 +14,7 @@ import { useNetworkSync } from '@useelven/core';
 import { theme } from '../config/chakraTheme';
 import { SWRConfig } from 'swr';
 import { useToast } from '@chakra-ui/react';
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import Fonts from '../components/Fonts';
 import AgeVerification from '../components/AgeVerificationPopup';
 // import { AnimatePresence } from 'framer-motion';
@@ -22,6 +22,11 @@ import AgeVerification from '../components/AgeVerificationPopup';
 const toastId = 'elven-tools-error-toast';
 
 const ElvenToolsDapp = ({ Component, pageProps }: AppProps) => {
+
+  useEffect(() => {
+    document.documentElement.lang = 'en';
+  }, []);
+
   useNetworkSync({
     apiTimeout: '10000',
     chainType: process.env.NEXT_PUBLIC_MULTIVERSX_CHAIN,

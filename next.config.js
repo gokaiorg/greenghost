@@ -31,10 +31,6 @@ const nextConfig = {
   eslint: {
     dirs: ['components', 'config', 'hooks', 'pages', 'store', 'types', 'utils'],
   },
-  i18n: {
-    locales: ['en'],
-    defaultLocale: 'en',
-  },
   images: {
     domains: [
       'nftstorage.link',
