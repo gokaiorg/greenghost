@@ -485,7 +485,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   console.log('Generated paths:', paths); // Log paths to verify
 
-  return { paths, fallback: 'blocking' }; // Use 'blocking' to ensure paths are correctly handled
+  return { paths, fallback: true }; // Use 'blocking' to ensure paths are correctly handled
 };
 
 export const getStaticProps: GetStaticProps<BudPageProps> = async ({

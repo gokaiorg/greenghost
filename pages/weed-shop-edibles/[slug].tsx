@@ -294,7 +294,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { slug: edible.slug },
   }));
 
-  return { paths, fallback: 'blocking' };
+  return { paths, fallback: true };
 };
 
 export const getStaticProps: GetStaticProps<EdiblesPageProps> = async ({
