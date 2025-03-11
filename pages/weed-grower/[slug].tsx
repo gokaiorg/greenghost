@@ -203,6 +203,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<GrowerPageProps> = async ({
   params,
 }) => {
+  if (!params) {
+    return {
+      notFound: true,
+    };
+  }
   const growers = getGrowers();
   const grower = growers.find((p) => p.slug === params?.slug);
 

@@ -424,6 +424,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<ShopPageProps> = async ({
   params,
 }) => {
+  if (!params) {
+    return {
+      notFound: true,
+    };
+  }
   const shops = getShops();
   const shop = shops.find((p) => p.slug === params?.slug);
 

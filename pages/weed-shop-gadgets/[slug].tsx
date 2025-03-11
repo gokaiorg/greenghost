@@ -269,6 +269,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<GadgetsPageProps> = async ({
   params,
 }) => {
+  if (!params) {
+    return {
+      notFound: true,
+    };
+  }
   const gadgets = getGadgets();
   const gadget = gadgets.find((p) => p.slug === params?.slug);
 

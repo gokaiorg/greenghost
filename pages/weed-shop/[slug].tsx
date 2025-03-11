@@ -491,6 +491,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<BudPageProps> = async ({
   params,
 }) => {
+  if (!params) {
+    return {
+      notFound: true,
+    };
+  }
   console.log('Params:', params); // Log params to verify slug value
 
   const buds = getBuds();

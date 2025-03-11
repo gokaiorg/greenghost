@@ -299,6 +299,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<DegensPageProps> = async ({
   params,
 }) => {
+  if (!params) {
+    return {
+      notFound: true,
+    };
+  }
   const degens = getDegens();
   const degen = degens.find((p) => p.slug === params?.slug);
 

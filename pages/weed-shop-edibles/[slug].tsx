@@ -300,6 +300,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<EdiblesPageProps> = async ({
   params,
 }) => {
+  if (!params) {
+    return {
+      notFound: true,
+    };
+  }
   const edibles = getEdibles();
   const edible = edibles.find((p) => p.slug === params?.slug);
 
