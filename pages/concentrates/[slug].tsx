@@ -293,7 +293,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { slug: degen.slug },
   }));
 
-  return { paths, fallback: true };
+  return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps<DegensPageProps> = async ({
@@ -313,6 +313,5 @@ export const getStaticProps: GetStaticProps<DegensPageProps> = async ({
       degen,
     },
     revalidate: 60 * 60, // 1 hour
-    fallback: 'blocking',
   };
 };

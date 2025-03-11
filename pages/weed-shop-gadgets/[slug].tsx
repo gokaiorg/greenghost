@@ -263,7 +263,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { slug: gadget.slug },
   }));
 
-  return { paths, fallback: true };
+  return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps<GadgetsPageProps> = async ({
@@ -283,6 +283,5 @@ export const getStaticProps: GetStaticProps<GadgetsPageProps> = async ({
       gadget,
     },
     revalidate: 60 * 60, // 1 hour
-    fallback: 'blocking',
   };
 };

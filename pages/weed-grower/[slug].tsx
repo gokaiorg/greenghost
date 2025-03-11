@@ -197,7 +197,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { slug: grower.slug },
   }));
 
-  return { paths, fallback: true };
+  return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps<GrowerPageProps> = async ({
@@ -217,6 +217,5 @@ export const getStaticProps: GetStaticProps<GrowerPageProps> = async ({
       grower,
     },
     revalidate: 60 * 60, // 1 hour
-    fallback: 'blocking',
   };
 };
