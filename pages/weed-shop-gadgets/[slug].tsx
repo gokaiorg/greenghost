@@ -283,5 +283,6 @@ export const getStaticProps: GetStaticProps<GadgetsPageProps> = async ({
       gadget,
     },
     revalidate: 60 * 60, // 1 hour
+    fallback: 'blocking',
   };
 };

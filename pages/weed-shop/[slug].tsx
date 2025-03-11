@@ -512,5 +512,6 @@ export const getStaticProps: GetStaticProps<BudPageProps> = async ({
       bud,
     },
     revalidate: 60 * 60, // 1 hour
+    fallback: 'blocking',
   };
 };

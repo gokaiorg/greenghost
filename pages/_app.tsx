@@ -22,7 +22,6 @@ import AgeVerification from '../components/AgeVerificationPopup';
 const toastId = 'elven-tools-error-toast';
 
 const ElvenToolsDapp = ({ Component, pageProps }: AppProps) => {
-
   useEffect(() => {
     document.documentElement.lang = 'en';
   }, []);

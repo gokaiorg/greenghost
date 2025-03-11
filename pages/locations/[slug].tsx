@@ -434,5 +434,6 @@ export const getStaticProps: GetStaticProps<ShopPageProps> = async ({
   return {
     props: { shop },
     revalidate: 60 * 60, // 1 hour
+    fallback: 'blocking',
   };
 };

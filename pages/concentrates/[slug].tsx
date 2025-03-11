@@ -313,5 +313,6 @@ export const getStaticProps: GetStaticProps<DegensPageProps> = async ({
       degen,
     },
     revalidate: 60 * 60, // 1 hour
+    fallback: 'blocking',
   };
 };

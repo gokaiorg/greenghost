@@ -314,5 +314,6 @@ export const getStaticProps: GetStaticProps<EdiblesPageProps> = async ({
       edible,
     },
     revalidate: 60 * 60, // 1 hour
+    fallback: 'blocking',
   };
 };

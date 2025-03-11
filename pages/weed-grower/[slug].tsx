@@ -217,5 +217,6 @@ export const getStaticProps: GetStaticProps<GrowerPageProps> = async ({
       grower,
     },
     revalidate: 60 * 60, // 1 hour
+    fallback: 'blocking',
   };
 };
