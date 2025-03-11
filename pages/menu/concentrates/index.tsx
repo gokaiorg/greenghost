@@ -1,15 +1,15 @@
 import type { NextPage } from 'next';
-import { MainLayout } from '../../components/MainLayout';
-import { HeaderMenu } from '../../components/HeaderMenu';
-import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
+import { MainLayout } from '../../../components/MainLayout';
+import { HeaderMenu } from '../../../components/HeaderMenu';
+import { HeaderMenuButtons } from '../../../components/HeaderMenuButtons';
 import Head from 'next/head';
-import { MenuWeedShop } from '../../components/shop/elements/MenuWeedShop';
-import { Degen } from '../../components/shop/Degen';
-import { HomeFeature } from '../../components/HomeFeatures';
-import { BuyOnline } from '../../components/BuyOnline';
+import { MenuWeedShop } from '../../../components/shop/elements/MenuWeedShop';
+import { Degen } from '../../../components/shop/Degen';
+import { HomeFeature } from '../../../components/HomeFeatures';
+import { BuyOnline } from '../../../components/BuyOnline';
 import { Box } from '@chakra-ui/react';
 import Image from 'next/image';
-import { degens } from '../../config/degens';
+import { degens } from '../../../config/degens';
 
 const GhostDegenWeedShop: NextPage = () => {
   const itemListJsonLd = {
@@ -67,7 +67,7 @@ const GhostDegenWeedShop: NextPage = () => {
         />
         <meta property="og:image:width" content="2048" />
         <meta property="og:image:height" content="1366" />
-        <meta property="og:url" content="https://green.gd/weed-shop-degen" />
+        <meta property="og:url" content="https://green.gd/menu/concentrates" />
         <meta
           name="twitter:title"
           content="Weed Shop Premium Cannabis Concentrates Menu - Green Ghost 🌿👻"
@@ -80,7 +80,7 @@ const GhostDegenWeedShop: NextPage = () => {
           name="twitter:image"
           content="https://green.gd/green-ghost-degen-weed-shop.png"
         />
-        <meta name="twitter:url" content="https://green.gd/weed-shop-degen" />
+        <meta name="twitter:url" content="https://green.gd/menu/concentrates" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}

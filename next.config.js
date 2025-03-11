@@ -53,6 +53,41 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/weed-shop-degen/pure-kief',
+        destination: '/concentrates/pure-kief',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-degen/super-dry-hash',
+        destination: '/concentrates/super-dry-hash',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-degen/dry-sift-hash',
+        destination: '/concentrates/dry-sift-hash',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-degen/pollen-hash',
+        destination: '/concentrates/pollen-hash',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-degen/bubble-hash',
+        destination: '/concentrates/bubble-hash',
+        permanent: true,
+      },
+      {
+        source: '/concentrates',
+        destination: '/menu/concentrates',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-degen',
+        destination: '/menu/concentrates',
+        permanent: true,
+      },
+      {
         source: '/best-degen-weed-shop',
         destination: '/locations',
         permanent: true,
@@ -100,11 +135,6 @@ const nextConfig = {
       {
         source: '/weed-shop-member',
         destination: '/cannabis-club',
-        permanent: true,
-      },
-      {
-        source: '/weed-shop-degen/hash',
-        destination: '/weed-shop-degen/bubble-hash',
         permanent: true,
       },
       {

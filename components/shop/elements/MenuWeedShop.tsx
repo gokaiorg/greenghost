@@ -33,7 +33,7 @@ const Links: Route[] = [
     imageW: '18px',
   },
   {
-    path: '/weed-shop-degen',
+    path: '/menu/concentrates',
     image: '/media/green-ghost-degen-weed-shop-menu-degen.png',
     label: 'Concentrates',
     title: 'Weed Shop Premium Cannabis Concentrates Menu',

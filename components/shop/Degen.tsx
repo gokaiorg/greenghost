@@ -13,8 +13,8 @@ export const Degen = () => {
   return (
     <Box as={'section'} aria-labelledby="Cannabis Concentrate Menu" mb="10">
       <WrapperShop>
-        <HomeSectionTitle title="Degen Menu" />
-        <ListTitle title="Concentrated weed for degen." />
+        <HomeSectionTitle title="Concentrates Menu" />
+        <ListTitle title="Concentrate price for 1 gram." />
       </WrapperShop>
       <Box
         as="ul"

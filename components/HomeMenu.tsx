@@ -20,7 +20,7 @@ export const HomeMenu = () => {
       label: 'Edibles',
     },
     {
-      href: '/weed-shop-degen',
+      href: '/menu/concentrates',
       title: 'Weed Shop Premium Cannabis Concentrates Menu',
       label: 'Concentrates',
     },
