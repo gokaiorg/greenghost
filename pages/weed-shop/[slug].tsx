@@ -483,9 +483,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { slug: bud.slug },
   }));
 
-  console.log('Generated paths:', paths); // Log paths to verify
-
-  return { paths, fallback: true }; // Use 'blocking' to ensure paths are correctly handled
+  return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps<BudPageProps> = async ({
@@ -496,21 +494,16 @@ export const getStaticProps: GetStaticProps<BudPageProps> = async ({
       notFound: true,
     };
   }
-  console.log('Params:', params); // Log params to verify slug value
 
   const buds = getBuds();
-  console.log('Fetched buds:', buds); // Log fetched buds to ensure data
 
   const bud = buds.find((p) => p.slug === params?.slug);
 
   if (!bud) {
-    console.log('No bud found for slug:', params?.slug); // Log if no bud is found
     return {
       notFound: true,
     };
   }
-
-  console.log('Found bud:', bud); // Log the found bud
 
   return {
     props: {
