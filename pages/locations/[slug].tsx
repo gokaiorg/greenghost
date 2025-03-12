@@ -418,7 +418,7 @@ export default function ShopPage({ shop }: ShopPageProps) {
 export const getStaticPaths: GetStaticPaths = async () => {
   const shops = getShops();
   const paths = shops.map((shop) => ({ params: { slug: shop.slug } }));
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 };
 
 export const getStaticProps: GetStaticProps<ShopPageProps> = async ({

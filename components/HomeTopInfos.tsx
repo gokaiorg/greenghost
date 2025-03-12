@@ -21,7 +21,7 @@ export const HomeTopInfos = () => {
       >
         <Box w={{ base: '50%', lg: '30%' }} mr={4} mb={{ base: 4, md: 0 }}>
           <Link
-            href="//gadgets/weed-th-rolling-papers-tips"
+            href="/gadgets/weed-th-rolling-papers-tips"
             passHref
             title="WEED.TH Rolling Papers + Tips"
           >
@@ -73,7 +73,7 @@ export const HomeTopInfos = () => {
             Rolling Papers + Tips.
           </Text>
           <Link
-            href="//gadgets/weed-th-rolling-papers-tips"
+            href="/gadgets/weed-th-rolling-papers-tips"
             passHref
             title="WEED.TH Rolling Papers + Tips"
           >

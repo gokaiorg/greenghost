@@ -90,9 +90,7 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
   return (
     <>
       <Head>
-        <title>
-          {gadget.name} Cannabis Concentrate - Green Ghost 🌿👻
-        </title>
+        <title>{gadget.name} Cannabis Concentrate - Green Ghost 🌿👻</title>
         <meta name="description" content={gadget.descSeo} />
         <meta
           property="og:title"
@@ -263,7 +261,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { slug: gadget.slug },
   }));
 
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 };
 
 export const getStaticProps: GetStaticProps<GadgetsPageProps> = async ({

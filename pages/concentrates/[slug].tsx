@@ -293,7 +293,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { slug: degen.slug },
   }));
 
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 };
 
 export const getStaticProps: GetStaticProps<DegensPageProps> = async ({
