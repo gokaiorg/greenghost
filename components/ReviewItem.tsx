@@ -49,7 +49,7 @@ export const ReviewItem: FC<ReviewItemProps> = ({
         </Text>
         <Link
           href={reviewLink}
-          title={'Read More Review on Google Map Place'}
+          title={'Read More Review on Google Maps'}
           passHref
         >
           <Text

@@ -440,7 +440,7 @@ export default function BudPage({ bud }: BudPageProps) {
               <Link
                 href={`https://greenghostweed.shop/products/${bud.slug}`}
                 passHref
-                title={`Green Ghost 🌿👻 Buy ${bud.name} Cannabis Strain Online`}
+                title={`Buy ${bud.name} Cannabis Strain Online`}
               >
                 <Text
                   as="span"
@@ -483,29 +483,27 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { slug: bud.slug },
   }));
 
-  console.log('Generated paths:', paths); // Log paths to verify
-
-  return { paths, fallback: 'blocking' }; // Use 'blocking' to ensure paths are correctly handled
+  return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps<BudPageProps> = async ({
   params,
 }) => {
-  console.log('Params:', params); // Log params to verify slug value
-
-  const buds = getBuds();
-  console.log('Fetched buds:', buds); // Log fetched buds to ensure data
-
-  const bud = buds.find((p) => p.slug === params?.slug);
-
-  if (!bud) {
-    console.log('No bud found for slug:', params?.slug); // Log if no bud is found
+  if (!params) {
     return {
       notFound: true,
     };
   }
 
-  console.log('Found bud:', bud); // Log the found bud
+  const buds = getBuds();
+
+  const bud = buds.find((p) => p.slug === params?.slug);
+
+  if (!bud) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {

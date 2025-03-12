@@ -31,10 +31,6 @@ const nextConfig = {
   eslint: {
     dirs: ['components', 'config', 'hooks', 'pages', 'store', 'types', 'utils'],
   },
-  i18n: {
-    locales: ['en'],
-    defaultLocale: 'en',
-  },
   images: {
     domains: [
       'nftstorage.link',
@@ -52,6 +48,91 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      {
+        source: '/weed-shop-degen/pure-kief',
+        destination: '/concentrates/pure-kief',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-degen/super-dry-hash',
+        destination: '/concentrates/super-dry-hash',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-degen/dry-sift-hash',
+        destination: '/concentrates/dry-sift-hash',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-degen/pollen-hash',
+        destination: '/concentrates/pollen-hash',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-degen/bubble-hash',
+        destination: '/concentrates/bubble-hash',
+        permanent: true,
+      },
+      {
+        source: '/concentrates',
+        destination: '/menu/concentrates',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-degen',
+        destination: '/menu/concentrates',
+        permanent: true,
+      },
+      {
+        source: '/gadgets',
+        destination: '/menu/gadgets',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets',
+        destination: '/menu/gadgets',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets/metal-grinder-50mm-2-layer',
+        destination: '/gadgets/metal-grinder-50mm-2-layer',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets/classic-ice-bong',
+        destination: '/gadgets/classic-ice-bong',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets/clipper-lighter',
+        destination: '/gadgets/clipper-lighter',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets/wood-grinder-68mm-2-layer',
+        destination: '/gadgets/wood-grinder-68mm-2-layer',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets/wizman-rolling-papers',
+        destination: '/gadgets/wizman-rolling-papers',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets/slimjim-rolling-papers',
+        destination: '/gadgets/slimjim-rolling-papers',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets/slimjim-rolling-papers-tips',
+        destination: '/gadgets/slimjim-rolling-papers-tips',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets/weed-th-rolling-papers-tips',
+        destination: '/gadgets/weed-th-rolling-papers-tips',
+        permanent: true,
+      },
       {
         source: '/best-degen-weed-shop',
         destination: '/locations',
@@ -100,11 +181,6 @@ const nextConfig = {
       {
         source: '/weed-shop-member',
         destination: '/cannabis-club',
-        permanent: true,
-      },
-      {
-        source: '/weed-shop-degen/hash',
-        destination: '/weed-shop-degen/bubble-hash',
         permanent: true,
       },
       {

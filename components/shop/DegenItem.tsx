@@ -20,8 +20,8 @@ export const DegenItem = ({ degen }: DegenItemProps) => {
       p={0.5}
     >
       <Link
-        href={`weed-shop-degen/${degen.slug}`}
-        title={`Green Ghost 🌿👻 ${degen.name} Cannabis Concentrate`}
+        href={`/concentrates/${degen.slug}`}
+        title={`${degen.name} Cannabis Concentrate`}
         passHref
       >
         <BoxItemShop>

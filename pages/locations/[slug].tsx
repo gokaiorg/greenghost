@@ -418,12 +418,17 @@ export default function ShopPage({ shop }: ShopPageProps) {
 export const getStaticPaths: GetStaticPaths = async () => {
   const shops = getShops();
   const paths = shops.map((shop) => ({ params: { slug: shop.slug } }));
-  return { paths, fallback: true };
+  return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps<ShopPageProps> = async ({
   params,
 }) => {
+  if (!params) {
+    return {
+      notFound: true,
+    };
+  }
   const shops = getShops();
   const shop = shops.find((p) => p.slug === params?.slug);
 

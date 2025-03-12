@@ -87,8 +87,8 @@ const BuyWeed: NextPage = () => {
           </Box>
           <Text
             as="p"
-            fontSize={{ base: '3xl' }}
-            lineHeight={1}
+            fontSize={{ base: '30px', md: '35px' }}
+            lineHeight={{ base: '25px', md: '30px' }}
             fontFamily="vt323"
             mb={10}
             textAlign={'center'}

@@ -19,9 +19,9 @@ export const Footer = () => {
         fontWeight="normal"
         textAlign={'center'}
       >
+        <MenuFooter />
         <Find />
         <SocialMediaIcons />
-        <MenuFooter />
         <Box
           fontSize={{ base: 11, lg: 14 }}
           fontWeight={'bold'}

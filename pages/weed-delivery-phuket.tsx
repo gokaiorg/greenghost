@@ -192,11 +192,11 @@ const WeedDelivery: NextPage = () => {
         </Box>
         <Text
           as="p"
-          fontSize={{ base: 30, lg: 40 }}
-          lineHeight={1}
+          fontSize={{ base: '30px', md: '35px' }}
+          lineHeight={{ base: '25px', md: '30px' }}
           fontWeight="bold"
           fontFamily="vt323"
-          mb={{ base: 4 }}
+          mb={{ base: 5 }}
           textAlign="center"
         >
           Savor the best strains and products without leaving your home!

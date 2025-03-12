@@ -50,7 +50,7 @@ export default function DegensPage({ degen }: DegensPageProps) {
         degen?.quantity > 0
           ? 'https://schema.org/InStock'
           : 'https://schema.org/OutOfStock',
-      url: `https://green.gd/weed-shop/${degen?.slug}`,
+      url: `https://green.gd/concentrates/${degen?.slug}`,
       seller: {
         '@type': 'Organization',
         name: 'Green Ghost 🌿👻',
@@ -91,12 +91,12 @@ export default function DegensPage({ degen }: DegensPageProps) {
     <>
       <Head>
         <title>
-          Green Ghost 🌿👻 Degen Weed Shop {degen.name} Cannabis Concentrate
+          Weed Shop {degen.name} Cannabis Concentrate - Green Ghost 🌿👻
         </title>
         <meta name="description" content={degen.descSeo} />
         <meta
           property="og:title"
-          content={`Degen Weed Shop ${degen.name} Cannabis Concentrate - Green Ghost 🌿👻`}
+          content={`Weed Shop ${degen.name} Cannabis Concentrate - Green Ghost 🌿👻`}
         />
         <meta property="og:description" content={degen.descSeo} />
         <meta property="og:image" content={degen.images[1]} />
@@ -104,17 +104,17 @@ export default function DegensPage({ degen }: DegensPageProps) {
         <meta property="og:image:height" content="1000" />
         <meta
           property="og:url"
-          content={`https://green.gd/weed-shop-degen/${degen.slug}`}
+          content={`https://green.gd/concentrates/${degen.slug}`}
         />
         <meta
           name="twitter:title"
-          content={`Degen Weed Shop ${degen.name} Cannabis Concentrate - Green Ghost 🌿👻`}
+          content={`Weed Shop ${degen.name} Cannabis Concentrate - Green Ghost 🌿👻`}
         />
         <meta name="twitter:description" content={degen.descSeo} />
         <meta name="twitter:image" content={degen.images[1]} />
         <meta
           name="twitter:url"
-          content={`https://green.gd/weed-shop-degen/${degen.slug}`}
+          content={`https://green.gd/concentrates/${degen.slug}`}
         />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Head>
@@ -293,12 +293,17 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { slug: degen.slug },
   }));
 
-  return { paths, fallback: true };
+  return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps<DegensPageProps> = async ({
   params,
 }) => {
+  if (!params) {
+    return {
+      notFound: true,
+    };
+  }
   const degens = getDegens();
   const degen = degens.find((p) => p.slug === params?.slug);
 
