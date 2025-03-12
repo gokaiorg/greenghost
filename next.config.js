@@ -84,6 +84,56 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/gadgets',
+        destination: '/menu/gadgets',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets',
+        destination: '/menu/gadgets',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets/metal-grinder-50mm-2-layer',
+        destination: '/gadgets/metal-grinder-50mm-2-layer',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets/classic-ice-bong',
+        destination: '/gadgets/classic-ice-bong',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets/clipper-lighter',
+        destination: '/gadgets/clipper-lighter',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets/wood-grinder-68mm-2-layer',
+        destination: '/gadgets/wood-grinder-68mm-2-layer',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets/wizman-rolling-papers',
+        destination: '/gadgets/wizman-rolling-papers',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets/slimjim-rolling-papers',
+        destination: '/gadgets/slimjim-rolling-papers',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets/slimjim-rolling-papers-tips',
+        destination: '/gadgets/slimjim-rolling-papers-tips',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-gadgets/weed-th-rolling-papers-tips',
+        destination: '/gadgets/weed-th-rolling-papers-tips',
+        permanent: true,
+      },
+      {
         source: '/best-degen-weed-shop',
         destination: '/locations',
         permanent: true,

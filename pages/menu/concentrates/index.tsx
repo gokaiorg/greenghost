@@ -25,9 +25,9 @@ const GhostDegenWeedShop: NextPage = () => {
         name: degen.name,
         description: degen.description,
         image: [
-          `https://green.gd/media/green-ghost-degen-weed-shop-menu-degen-${degen.slug}-cover.webp`,
-          `https://green.gd/media/green-ghost-degen-weed-shop-menu-degen-${degen.slug}-photo-01.webp`,
-          `https://green.gd/media/green-ghost-degen-weed-shop-menu-degen-${degen.slug}-photo-02.webp`,
+          `https://green.gd/media/green-ghost-degen-weed-shop-menu-concentrates-${degen.slug}-cover.webp`,
+          `https://green.gd/media/green-ghost-degen-weed-shop-menu-concentrates-${degen.slug}-photo-01.webp`,
+          `https://green.gd/media/green-ghost-degen-weed-shop-menu-concentrates-${degen.slug}-photo-02.webp`,
         ],
         offers: {
           '@type': 'Offer',

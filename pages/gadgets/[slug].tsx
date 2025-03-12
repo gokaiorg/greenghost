@@ -91,12 +91,12 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
     <>
       <Head>
         <title>
-          Degen Weed Shop {gadget.name} Cannabis Concentrate - Green Ghost 🌿👻
+          {gadget.name} Cannabis Concentrate - Green Ghost 🌿👻
         </title>
         <meta name="description" content={gadget.descSeo} />
         <meta
           property="og:title"
-          content={`Degen Weed Shop ${gadget.name} Cannabis Concentrate - Green Ghost 🌿👻`}
+          content={`${gadget.name} Cannabis Concentrate - Green Ghost 🌿👻`}
         />
         <meta property="og:description" content={gadget.descSeo} />
         <meta property="og:image" content={gadget.images[1]} />
@@ -104,17 +104,17 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
         <meta property="og:image:height" content="1000" />
         <meta
           property="og:url"
-          content={`https://green.gd/weed-shop-gadgets/${gadget.slug}`}
+          content={`https://green.gd/menu/gadgets/${gadget.slug}`}
         />
         <meta
           name="twitter:title"
-          content={`Degen Weed Shop ${gadget.name} Cannabis Concentrate - Green Ghost 🌿👻`}
+          content={`${gadget.name} Cannabis Concentrate - Green Ghost 🌿👻`}
         />
         <meta name="twitter:description" content={gadget.descSeo} />
         <meta name="twitter:image" content={gadget.images[1]} />
         <meta
           name="twitter:url"
-          content={`https://green.gd/weed-shop-gadgets/${gadget.slug}`}
+          content={`https://green.gd/menu/gadgets/${gadget.slug}`}
         />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Head>
@@ -153,7 +153,7 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
               flexDirection={'row'}
               alignItems={'center'}
             >
-              {`${gadget.name} Accessory`}
+              {`${gadget.name}`}
             </Box>
             <Swiper
               spaceBetween={10}

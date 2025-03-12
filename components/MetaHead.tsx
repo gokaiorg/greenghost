@@ -203,7 +203,7 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
                   name: 'Gadgets Menu',
                   description:
                     "Explore Green Ghost's Accessories Menu. Find premium cannabis gadgets, from high-quality grinders to sleek bongs, and elevate your smoking experience today.",
-                  url: 'https://green.gd/weed-shop-gadgets',
+                  url: 'https://green.gd/menu/gadgets',
                 },
                 {
                   '@type': 'MenuSection',

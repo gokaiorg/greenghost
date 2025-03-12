@@ -25,7 +25,7 @@ export const HomeMenu = () => {
       label: 'Concentrates',
     },
     {
-      href: '/weed-shop-gadgets',
+      href: '/menu/gadgets',
       title: 'Weed Shop Premium Cannabis Gadgets Menu',
       label: 'Gadgets',
     },

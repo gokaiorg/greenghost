@@ -49,7 +49,7 @@ const Links: Route[] = [
     imageW: '7px',
   },
   {
-    path: '/weed-shop-gadgets',
+    path: '/menu/gadgets',
     image: '/media/gadgets-menu-weed-shop-green-ghost.webp',
     label: 'Gadgets',
     title: 'Weed Shop Premium Cannabis Gadgets Menu',
