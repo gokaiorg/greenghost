@@ -299,7 +299,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths = nfts.map((nft) => ({
     params: { slug: nft.slug },
   }));
-  return { paths, fallback: false };
+  return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
