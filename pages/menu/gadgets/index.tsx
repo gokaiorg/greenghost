@@ -1,15 +1,15 @@
 import type { NextPage } from 'next';
-import { MainLayout } from '../../components/MainLayout';
-import { HeaderMenu } from '../../components/HeaderMenu';
-import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
+import { MainLayout } from '../../../components/MainLayout';
+import { HeaderMenu } from '../../../components/HeaderMenu';
+import { HeaderMenuButtons } from '../../../components/HeaderMenuButtons';
 import Head from 'next/head';
-import { MenuWeedShop } from '../../components/shop/elements/MenuWeedShop';
-import { Gadget } from '../../components/shop/Gadget';
-import { HomeFeature } from '../../components/HomeFeatures';
-import { BuyOnline } from '../../components/BuyOnline';
+import { MenuWeedShop } from '../../../components/shop/elements/MenuWeedShop';
+import { Gadget } from '../../../components/shop/Gadget';
+import { HomeFeature } from '../../../components/HomeFeatures';
+import { BuyOnline } from '../../../components/BuyOnline';
 import { Box } from '@chakra-ui/react';
 import Image from 'next/image';
-import { gadgets } from '../../config/gadgets';
+import { gadgets } from '../../../config/gadgets';
 
 const WeedShopGadgets: NextPage = () => {
   const itemListJsonLd = {
@@ -67,7 +67,7 @@ const WeedShopGadgets: NextPage = () => {
         />
         <meta property="og:image:width" content="2048" />
         <meta property="og:image:height" content="1366" />
-        <meta property="og:url" content="https://green.gd/weed-shop-gadgets" />
+        <meta property="og:url" content="https://green.gd/menu/gadgets" />
         <meta
           name="twitter:title"
           content="Weed Shop Premium Cannabis Gadgets Menu - Green Ghost 🌿👻"
@@ -80,7 +80,7 @@ const WeedShopGadgets: NextPage = () => {
           name="twitter:image"
           content="https://green.gd/green-ghost-degen-weed-shop.png"
         />
-        <meta name="twitter:url" content="https://green.gd/weed-shop-gadgets" />
+        <meta name="twitter:url" content="https://green.gd/menu/gadgets" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
@@ -98,8 +98,8 @@ const WeedShopGadgets: NextPage = () => {
           <Box w={{ base: '100%' }}>
             <Image
               src="/media/green-ghost-degen-weed-shop-buds-menu.webp"
-              alt="Weed Shop Premium Cannabis Buds Menu"
-              title="Weed Shop Premium Cannabis Buds Menu"
+              alt="Weed Shop Premium Cannabis Gadgets Menu"
+              title="Weed Shop Premium Cannabis Gadgets Menu"
               width={2048}
               height={1366}
               sizes="100%"

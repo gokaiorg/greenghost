@@ -197,12 +197,17 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { slug: grower.slug },
   }));
 
-  return { paths, fallback: true };
+  return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps<GrowerPageProps> = async ({
   params,
 }) => {
+  if (!params) {
+    return {
+      notFound: true,
+    };
+  }
   const growers = getGrowers();
   const grower = growers.find((p) => p.slug === params?.slug);
 

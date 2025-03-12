@@ -34,7 +34,7 @@ export const edibles: Edible[] = [
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-honey-stick-cover.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-honey-stick-product-02.webp',
     ],
-    imgDesc: 'Degen Weed Shop Best Honey Stick THC Edible - Green Ghost 🌿👻',
+    imgDesc: 'Degen Weed Shop Best Honey Stick THC Edible',
   },
   {
     slug: 'cbd-honey-stick',
@@ -55,7 +55,7 @@ export const edibles: Edible[] = [
       '/media/green-ghost-degen-weed-shop-menu-edible-cbd-honey-stick-cover.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-cbd-honey-stick-product-02.webp',
     ],
-    imgDesc: 'Degen Weed Shop Best Honey Stick CBD Edible - Green Ghost 🌿👻',
+    imgDesc: 'Degen Weed Shop Best Honey Stick CBD Edible',
   },
   {
     slug: 'thc-cookies',
@@ -76,7 +76,7 @@ export const edibles: Edible[] = [
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookies-cover.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookies-product-02.webp',
     ],
-    imgDesc: 'Degen Weed Shop Best Cookies THC Edible - Green Ghost 🌿👻',
+    imgDesc: 'Degen Weed Shop Best Cookies THC Edible',
   },
   {
     slug: 'thc-cookie',
@@ -97,7 +97,7 @@ export const edibles: Edible[] = [
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookie-cover.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-cookie-product-02.webp',
     ],
-    imgDesc: 'Degen Weed Shop Best Cookie THC Edible - Green Ghost 🌿👻',
+    imgDesc: 'Degen Weed Shop Best Cookie THC Edible',
   },
   {
     slug: 'thc-stroopwafel',
@@ -118,7 +118,7 @@ export const edibles: Edible[] = [
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-stroopwafel-cover.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-stroopwafel-product-02.webp',
     ],
-    imgDesc: 'Degen Weed Shop Best Stroopwafel THC Edible - Green Ghost 🌿👻',
+    imgDesc: 'Degen Weed Shop Best Stroopwafel THC Edible',
   },
   {
     slug: 'thc-gummies',
@@ -139,7 +139,7 @@ export const edibles: Edible[] = [
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-gummies-cover.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-gummies-product-02.webp',
     ],
-    imgDesc: 'Degen Weed Shop Best Gummies THC Edible - Green Ghost 🌿👻',
+    imgDesc: 'Degen Weed Shop Best Gummies THC Edible',
   },
   {
     slug: 'thc-nano-gummies',
@@ -160,7 +160,7 @@ export const edibles: Edible[] = [
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-nano-gummies-cover.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-nano-gummies-02.webp',
     ],
-    imgDesc: 'Degen Weed Shop Best Nano Gummies THC Edible - Green Ghost 🌿👻',
+    imgDesc: 'Degen Weed Shop Best Nano Gummies THC Edible',
   },
   {
     slug: 'thc-pretzels',
@@ -181,7 +181,7 @@ export const edibles: Edible[] = [
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-pretzels-cover.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-pretzels-product-02.webp',
     ],
-    imgDesc: 'Degen Weed Shop Best Pretzels THC Edible - Green Ghost 🌿👻',
+    imgDesc: 'Degen Weed Shop Best Pretzels THC Edible',
   },
   {
     slug: 'thc-brownie',
@@ -202,7 +202,7 @@ export const edibles: Edible[] = [
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-brownie-cover.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-brownie-product-02.webp',
     ],
-    imgDesc: 'Degen Weed Shop Best Brownie THC Edible - Green Ghost 🌿👻',
+    imgDesc: 'Degen Weed Shop Best Brownie THC Edible',
   },
   {
     slug: 'thc-muffin',
@@ -223,7 +223,7 @@ export const edibles: Edible[] = [
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-muffin-cover.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-muffin-02.webp',
     ],
-    imgDesc: 'Degen Weed Shop Best Muffin THC Edible - Green Ghost 🌿👻',
+    imgDesc: 'Degen Weed Shop Best Muffin THC Edible',
   },
   {
     slug: 'thc-brownies',
@@ -244,7 +244,7 @@ export const edibles: Edible[] = [
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-brownies-cover.webp',
       '/media/green-ghost-degen-weed-shop-menu-edible-thc-brownies-product-02.webp',
     ],
-    imgDesc: 'Degen Weed Shop Best Brownies THC Edible - Green Ghost 🌿👻',
+    imgDesc: 'Degen Weed Shop Best Brownies THC Edible',
   },
 ];
 

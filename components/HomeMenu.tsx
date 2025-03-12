@@ -11,22 +11,22 @@ export const HomeMenu = () => {
     },
     {
       href: '/weed-shop-pre-rolls',
-      title: 'Green Ghost 🌿👻 Weed Shop Premium Cannabis Pre-Rolls Menu',
+      title: 'Weed Shop Premium Cannabis Pre-Rolls Menu',
       label: 'Pre-Rolls',
     },
     {
       href: '/weed-shop-edibles',
-      title: 'Green Ghost 🌿👻 Weed Shop Premium Cannabis Edibles Menu',
+      title: 'Weed Shop Premium Cannabis Edibles Menu',
       label: 'Edibles',
     },
     {
-      href: '/weed-shop-degen',
-      title: 'Green Ghost 🌿👻 Weed Shop Premium Cannabis Concentrates Menu',
+      href: '/menu/concentrates',
+      title: 'Weed Shop Premium Cannabis Concentrates Menu',
       label: 'Concentrates',
     },
     {
-      href: '/weed-shop-gadgets',
-      title: 'Green Ghost 🌿👻 Weed Shop Premium Cannabis Gadgets Menu',
+      href: '/menu/gadgets',
+      title: 'Weed Shop Premium Cannabis Gadgets Menu',
       label: 'Gadgets',
     },
   ];
@@ -80,15 +80,14 @@ export const HomeMenu = () => {
           flex={1}
           mt={{ base: 4, lg: 0 }}
         >
-          <ul style={{ listStyleType: 'none', paddingLeft: 0, margin: 0 }}>
+          <Box
+            as="ul"
+            aria-label="Menu Navigation List"
+            style={{ listStyleType: 'none', paddingLeft: 0, margin: 0 }}
+          >
             {menuItems.map((item, index) => (
-              <li key={index}>
-                <Link
-                  href={item.href}
-                  passHref
-                  title={item.title}
-                  aria-label={`${item.label} Menu`}
-                >
+              <Box as="li" key={index} aria-label={`${item.label} Menu`}>
+                <Link href={item.href} passHref title={item.title}>
                   <Text
                     as="h3"
                     mb={2}
@@ -98,15 +97,11 @@ export const HomeMenu = () => {
                     {item.label}
                   </Text>
                 </Link>
-              </li>
+              </Box>
             ))}
-          </ul>
+          </Box>
           <Box ml="auto" mt={4}>
-            <Link
-              href="/weed-shop"
-              passHref
-              title="Weed Shop Premium Cannabis Buds Menu"
-            >
+            <Link href="/menu" passHref title="Weed & Cannabis Products Menu">
               <Text
                 as="span"
                 display="inline-flex"

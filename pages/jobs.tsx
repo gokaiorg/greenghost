@@ -357,7 +357,7 @@ const Jobs: NextPage = () => {
               width={'fit-content'}
             >
               <Link
-                title={`Green Ghost 🌿👻 Apply for Budtender Position`}
+                title={`Apply for Budtender Position`}
                 href="https://docs.google.com/forms/d/e/1FAIpQLScnR4_SsE1DAn-HGk5oYhxfThlaKXFOdmWZDBi1BJrdVLcmFg/viewform?usp=sharing"
                 passHref
               >

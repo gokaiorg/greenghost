@@ -196,14 +196,14 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
                   name: 'Degen Menu',
                   description:
                     "Discover Green Ghost's Concentrates Menu, offering premium cannabis extracts like hash, wax, kiev and oil. Elevate your experience with our potent, curated selection.",
-                  url: 'https://green.gd/weed-shop-degen',
+                  url: 'https://green.gd/menu/concentrates',
                 },
                 {
                   '@type': 'MenuSection',
                   name: 'Gadgets Menu',
                   description:
                     "Explore Green Ghost's Accessories Menu. Find premium cannabis gadgets, from high-quality grinders to sleek bongs, and elevate your smoking experience today.",
-                  url: 'https://green.gd/weed-shop-gadgets',
+                  url: 'https://green.gd/menu/gadgets',
                 },
                 {
                   '@type': 'MenuSection',

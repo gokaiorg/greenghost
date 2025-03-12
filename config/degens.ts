@@ -28,13 +28,12 @@ export const degens: Degen[] = [
     descSeo:
       'Dive into the enchanting realm of cannabis with Bubble Hash, boasting a remarkable 60% THC concentration. Meticulously crafted, this exceptional concoction combines top-tier ingredients, resulting in a harmonious blend of pure bliss. Created from the finest cannabis trichomes, Bubble Hash delivers an elevated experience like no other, available exclusively at Green Ghost, your trusted source for exceptional cannabis products.',
     images: [
-      '/media/green-ghost-degen-weed-shop-menu-degen-bubble-hash-photo-01.webp',
-      '/media/green-ghost-degen-weed-shop-menu-degen-bubble-hash-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-degen-bubble-hash-qr-code.webp',
-      '/media/green-ghost-degen-weed-shop-menu-degen-bubble-hash-photo-02.webp',
+      '/media/green-ghost-degen-weed-shop-menu-concentrates-bubble-hash-photo-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-concentrates-bubble-hash-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-concentrates-bubble-hash-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-menu-concentrates-bubble-hash-photo-02.webp',
     ],
-    imgDesc:
-      'Green Ghost 🌿👻 Degen Weed Shop Bubble Hash Cannabis Concentrate',
+    imgDesc: 'Degen Weed Shop Bubble Hash Cannabis Concentrate',
   },
   {
     slug: 'pollen-hash',
@@ -50,13 +49,12 @@ export const degens: Degen[] = [
     descSeo:
       'Experience the ethereal world of cannabis at Green Ghost, your go-to weed shop for Pollen Hash THC with a tantalizing 40% potency. Crafted from the finest ingredients, our concoction blends premium Kief and luscious Oil, creating a hypnotic journey into a higher realm of relaxation and euphoria. Elevate your senses and spirit with this extraordinary fusion, exclusively at Green Ghost.',
     images: [
-      '/media/green-ghost-degen-weed-shop-menu-degen-pollen-hash-photo-01.webp',
-      '/media/green-ghost-degen-weed-shop-menu-degen-pollen-hash-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-degen-pollen-hash-qr-code.webp',
-      '/media/green-ghost-degen-weed-shop-menu-degen-pollen-hash-photo-02.webp',
+      '/media/green-ghost-degen-weed-shop-menu-concentrates-pollen-hash-photo-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-concentrates-pollen-hash-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-concentrates-pollen-hash-qr-code.webp',
+      '/media/green-ghost-degen-weed-shop-menu-concentrates-pollen-hash-photo-02.webp',
     ],
-    imgDesc:
-      'Green Ghost 🌿👻 Degen Weed Shop Pollen Hash Cannabis Concentrate',
+    imgDesc: 'Degen Weed Shop Pollen Hash Cannabis Concentrate',
   },
   {
     slug: 'dry-sift-hash',
@@ -72,12 +70,11 @@ export const degens: Degen[] = [
     descSeo:
       'Experience premium Dry Sift Hash with 60% THC. Potent, pure, and packed with cannabinoids for a powerful, long-lasting high. Perfect for seasoned cannabis users.',
     images: [
-      '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-product-01.webp',
-      '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-degen-dry-sift-hash-product-02.webp',
+      '/media/green-ghost-degen-weed-shop-menu-concentrates-dry-sift-hash-product-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-concentrates-dry-sift-hash-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-concentrates-dry-sift-hash-product-02.webp',
     ],
-    imgDesc:
-      'Green Ghost 🌿👻 Degen Weed Shop Dry Sift Hash Cannabis Concentrate',
+    imgDesc: 'Degen Weed Shop Dry Sift Hash Cannabis Concentrate',
   },
   {
     slug: 'super-dry-hash',
@@ -93,12 +90,11 @@ export const degens: Degen[] = [
     descSeo:
       'Super Dry Hash: A premium dry sift hash with 60% THC, offering intense effects, earthy flavors, and a versatile, super-dry texture perfect for any session.',
     images: [
-      '/media/green-ghost-degen-weed-shop-menu-degen-super-dry-hash-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-degen-super-dry-hash-cover.webp',
-      '/media/green-ghost-degen-weed-shop-menu-degen-super-dry-hash-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-concentrates-super-dry-hash-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-concentrates-super-dry-hash-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-concentrates-super-dry-hash-cover.webp',
     ],
-    imgDesc:
-      'Green Ghost 🌿👻 Degen Weed Shop Super Dry Hash Cannabis Concentrate',
+    imgDesc: 'Degen Weed Shop Super Dry Hash Cannabis Concentrate',
   },
   {
     slug: 'pure-kief',

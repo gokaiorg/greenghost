@@ -1,64 +1,120 @@
 import { Box } from '@chakra-ui/react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export const MenuFooter = () => {
+  const router = useRouter();
+
+  const isActive = (href: string): boolean => router.asPath === href;
+
+  const menuItems = [
+    {
+      href: '/menu',
+      title: 'Weed Shop Premium Cannabis Buds Menu',
+      label: 'Menu',
+      ariaLabel: 'Explore our menu',
+    },
+    {
+      href: '/weed-delivery-phuket',
+      title: 'Best Weed Delivery Service in Phuket',
+      label: 'Delivery',
+      ariaLabel: 'Get delivered',
+    },
+    {
+      href: '/weed',
+      title: 'Your Weed Guide to Cannabis Excellence',
+      label: 'Learn about weed',
+      ariaLabel: 'Learn about weed',
+    },
+    {
+      href: '/wholesale',
+      title: 'Wholesale Cannabis Premium Strains in Phuket',
+      label: 'Bulk ordering',
+      ariaLabel: 'Bulk ordering',
+    },
+    {
+      href: '/jobs',
+      title: 'Budtender Job Opening at Our Cannabis Shop',
+      label: 'We are hiring',
+      ariaLabel: 'We are hiring',
+    },
+    {
+      href: '/about',
+      title: 'About Cannabis Culture in Thailand',
+      label: 'Cannabis culture',
+      ariaLabel: 'Cannabis culture',
+    },
+    {
+      href: '/sitemap',
+      title: 'List of all website pages and sections',
+      label: 'Website sitemap',
+      ariaLabel: 'Website sitemap',
+    },
+    {
+      href: '/locations',
+      title: 'Best Weed shops near me in Phuket',
+      label: 'Visit our locations',
+      ariaLabel: 'Visit our locations',
+    },
+    {
+      href: '/contact',
+      title: 'Contact Our Weed Shop Team To Order',
+      label: 'Contact us now',
+      ariaLabel: 'Contact us now',
+    },
+  ];
+
   return (
     <>
       <Box
+        as="nav"
+        mr={{ base: '0', md: '0' }}
+        ml={{ base: 'auto' }}
         aria-label="Footer Navigation"
-        as="ul"
-        listStyleType={'none'}
-        display={'flex'}
-        flexWrap={'wrap'}
-        alignItems={'center'}
-        justifyContent={'center'}
-        mx={'auto'}
-        my={4}
-        fontSize={'2xl'}
-        fontFamily={'vt323'}
-        textDecoration={'underline'}
-        color={'ghostVerse.grey.lighter'}
+        textAlign={'left'}
       >
-        <Box aria-label="Wholesale" as="li" mx={2}>
-          <Link
-            title="Wholesale Cannabis Premium Strains in Phuket"
-            href="/wholesale"
-            passHref
-          >
-            Wholesale
-          </Link>
-        </Box>
-        <Box aria-label="Jobs" as="li" mx={2}>
-          <Link
-            title="Budtender Job Opening at Our Cannabis Shop"
-            href="/jobs"
-            passHref
-          >
-            Jobs
-          </Link>
-        </Box>
-        <Box aria-label="Sitemap" as="li" mx={2}>
-          <Link title="Sitemap" href="/sitemap" passHref>
-            Sitemap
-          </Link>
-        </Box>
-        <Box aria-label="About" as="li" mx={2}>
-          <Link
-            title={'About Cannabis Culture in Thailand'}
-            href="/about"
-            passHref
-          >
-            About
-          </Link>
-        </Box>
-        <Box aria-label="Contact" as="li" mx={2}>
-          <Link
-            title="Contact Our Weed Shop Team To Order"
-            href={'/contact'}
-            passHref
-          >
-            Contact
-          </Link>
+        <Box
+          as="ul"
+          aria-label="Footer Navigation List"
+          listStyleType={'none'}
+          display="flex"
+          justifyContent={'center'}
+          flexWrap={'wrap'}
+          fontFamily={'vt323'}
+          fontSize={'2xl'}
+          lineHeight={1}
+        >
+          {menuItems.map((item) => (
+            <Box
+              as="li"
+              aria-label={`${item.ariaLabel}`}
+              key={item.href}
+              ml={4}
+              display="flex"
+              m={{ base: '1' }}
+              p={1}
+              w={{ base: '100px' }}
+              h={{ base: '100px' }}
+              color={
+                isActive(item.href)
+                  ? 'ghostVerse.green.base'
+                  : 'ghostVerse.dark.lighter'
+              }
+              backgroundColor={
+                isActive(item.href)
+                  ? 'ghostVerse.dark.lighter'
+                  : 'ghostVerse.green.base'
+              }
+              _hover={{
+                backgroundColor: 'ghostVerse.green.transparent',
+                color: 'ghostVerse.green.base',
+              }}
+            >
+              <Link href={item.href} title={item.title} passHref>
+                {item.ariaLabel}
+              </Link>
+            </Box>
+          ))}
         </Box>
       </Box>
     </>

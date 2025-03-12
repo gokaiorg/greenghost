@@ -136,7 +136,7 @@ export const Communities = () => {
         >
           <Link
             href={'https://weed.th/'}
-            title={'Green Ghost 🌿👻 Map of Cannabis Shops in Thailand'}
+            title={'Map of Cannabis Shops in Thailand'}
             passHref
           >
             <Text

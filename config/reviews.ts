@@ -1,5 +1,11 @@
 export const review = [
   {
+    title: 'Dario De Lucia',
+    review:
+      'WONDERFUL SHOP! Posto meraviglioso, sembra di stare a casa, una rilassatezza unica.',
+    reviewLink: 'https://g.co/kgs/4Tezqfz',
+  },
+  {
     title: 'Dylan',
     review: 'Highly the Thai sticks',
     reviewLink: 'https://maps.app.goo.gl/BNJ6rwEeuswNi6cv8',

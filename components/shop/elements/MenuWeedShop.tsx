@@ -33,14 +33,14 @@ const Links: Route[] = [
     imageW: '18px',
   },
   {
-    path: '/weed-shop-degen',
+    path: '/menu/concentrates',
     image: '/media/green-ghost-degen-weed-shop-menu-degen.png',
     label: 'Concentrates',
     title: 'Weed Shop Premium Cannabis Concentrates Menu',
     imageW: '7px',
   },
   {
-    path: '/weed-shop-gadgets',
+    path: '/menu/gadgets',
     image: '/media/green-ghost-degen-weed-shop-menu-gadgets.webp',
     label: 'Gadgets',
     title: 'Weed Shop Premium Cannabis Gadgets Menu',
@@ -77,7 +77,7 @@ export const MenuWeedShop = () => {
         {Links.map((link) => (
           <Box
             as="li"
-            aria-label={`${link.label}`}
+            aria-label={`${link.label} Menu`}
             key={link.label}
             px={4}
             py={4}
@@ -92,12 +92,7 @@ export const MenuWeedShop = () => {
               pathname === link.path ? 'ghostVerse.green.base' : 'transparent'
             }
           >
-            <Link
-              href={link.path}
-              title={link.title}
-              passHref
-              aria-label={`${link.label} Menu`}
-            >
+            <Link href={link.path} title={link.title} passHref>
               {link.label}
             </Link>
           </Box>
