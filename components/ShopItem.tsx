@@ -113,8 +113,10 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
                 as="li"
                 aria-label={`${shop.name} ${social.label} Link`}
                 listStyleType="none"
-                fontFamily="vt323"
-                mr={2}
+                fontFamily="CubicFive12"
+                fontSize={{ base: '12px', md: '12px' }}
+                mr={1}
+                mb={1}
                 key={social.label}
                 px={1}
                 color={'black'}

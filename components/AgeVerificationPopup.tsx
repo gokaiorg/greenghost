@@ -1,21 +1,22 @@
-// AgeVerification.tsx
 import { useState, useEffect } from 'react';
 import { Box, Text, Button, Link } from '@chakra-ui/react';
 
 const AgeVerification = () => {
-  const [isVerified, setIsVerified] = useState(false);
+  const [isVerified, setIsVerified] = useState<boolean | null>(null);
 
   useEffect(() => {
-    const verified = localStorage.getItem('ageVerified');
-    if (verified) {
-      setIsVerified(true);
-    }
+    const verified = localStorage.getItem('ageVerified') === 'true';
+    setIsVerified(verified);
   }, []);
 
   const handleVerify = () => {
     localStorage.setItem('ageVerified', 'true');
     setIsVerified(true);
   };
+
+  if (isVerified === null) {
+    return null; // Avoid rendering on the server
+  }
 
   if (isVerified) {
     return null;

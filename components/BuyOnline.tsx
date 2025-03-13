@@ -59,26 +59,23 @@ export const BuyOnline = () => {
       >
         <Text
           as="span"
-          display={'inline-flex'}
-          color={'ghostVerse.green.base'}
-          borderColor={'black'}
-          backgroundColor={'black'}
-          fontSize={{ base: 'xl', lg: '4xl' }}
-          lineHeight={1}
-          borderWidth={1}
-          px={{ base: 4, md: 6 }}
-          pt={{ base: 2, md: 0 }}
-          pb={{ base: 2, md: 2 }}
+          display="inline-flex"
+          fontFamily="CubicFive12"
+          fontSize={{ base: 'md', md: 'lg' }}
+          px={6}
+          py={2}
           mt={5}
-          mx={'auto'}
-          fontFamily={'vt323'}
+          mx="auto"
+          borderWidth={1}
+          borderColor="black"
+          bgColor="black"
+          color="ghostVerse.green.base"
           _hover={{
-            borderColor: 'black',
             bgColor: 'ghostVerse.green.base',
             color: 'black',
           }}
         >
-          {'Schedule & Save 10%'}
+          {'Schedule & Save'}
         </Text>
       </Link>
       <Box

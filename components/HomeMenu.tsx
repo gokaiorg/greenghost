@@ -105,13 +105,14 @@ export const HomeMenu = () => {
               <Text
                 as="span"
                 display="inline-flex"
-                fontSize={{ base: 'xl', md: '4xl' }}
-                borderWidth={1}
-                px={{ base: 4, md: 6 }}
-                pt={{ base: 2, md: 0 }}
-                pb={{ base: 2, md: 2 }}
-                fontFamily="vt323"
+                fontFamily="CubicFive12"
+                fontSize={{ base: 'md', md: 'lg' }}
+                px={6}
+                py={2}
+                mt={0}
+                mx="auto"
                 color="black"
+                borderWidth={1}
                 borderColor="ghostVerse.green.base"
                 backgroundColor="ghostVerse.green.base"
                 _hover={{
