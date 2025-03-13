@@ -65,7 +65,12 @@ const SitemapPage: NextPage = () => {
         </HeaderMenu>
         <HomeSectionTitle title="Sitemap - All you need is links!" />
         {sitemapLinks.map((link) => (
-          <Box key={link} color={'ghostVerse.green.base'}>
+          <Box
+            key={link}
+            color={'ghostVerse.green.base'}
+            fontFamily={'vt323'}
+            fontSize={'2xl'}
+          >
             <Link href={link} title={link} passHref>
               {link}
             </Link>

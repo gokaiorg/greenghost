@@ -44,13 +44,14 @@ export const HomeFeature = () => {
         <Text
           as="span"
           display="inline-flex"
-          fontSize={{ base: 'xl', md: '4xl' }}
-          borderWidth={1}
+          fontFamily="CubicFive12"
+          fontSize={{ base: 'md', md: 'lg' }}
           px={6}
-          pb={2}
+          py={2}
+          mt={10}
           mx="auto"
-          fontFamily="vt323"
           color="black"
+          borderWidth={1}
           borderColor="ghostVerse.green.base"
           backgroundColor="ghostVerse.green.base"
           _hover={{

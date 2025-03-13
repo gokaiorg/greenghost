@@ -87,12 +87,12 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
             <Text
               as="span"
               display="inline-flex"
-              fontSize={{ base: 'xl', md: '4xl' }}
+              fontSize={{ base: 'lg', md: 'xl' }}
               borderWidth={1}
               px={6}
               pb={2}
               mt={10}
-              fontFamily="vt323"
+              fontFamily="CubicFive12"
               color="black"
               borderColor="ghostVerse.green.base"
               bgColor="ghostVerse.green.base"
@@ -106,29 +106,29 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
             </Text>
           </Link> */}
           <Link
-            href={'/weed'}
-            title={'Your Weed Guide to Cannabis Excellence'}
+            href={'/contact'}
+            title={'Contact Our Weed Shop Team To Order'}
             passHref
           >
             <Text
               as="span"
               display="inline-flex"
-              fontSize={{ base: 'xl', md: '4xl' }}
-              borderWidth={1}
+              fontFamily="CubicFive12"
+              fontSize={{ base: 'md', md: 'lg' }}
               px={6}
-              pb={2}
+              py={2}
               mt={10}
-              fontFamily="vt323"
+              mx="auto"
               color="black"
+              borderWidth={1}
               borderColor="ghostVerse.green.base"
               bgColor="ghostVerse.green.base"
               _hover={{
                 bgColor: 'black',
                 color: 'ghostVerse.green.base',
               }}
-              mx="auto"
             >
-              Weed
+              Contact
             </Text>
           </Link>
         </Box>

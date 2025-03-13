@@ -80,14 +80,14 @@ export const HomeTopInfos = () => {
             <Text
               as="span"
               display="inline-flex"
-              fontSize={{ base: 'xl', md: '4xl' }}
-              borderWidth={1}
+              fontFamily="CubicFive12"
+              fontSize={{ base: 'md', md: 'lg' }}
               px={6}
-              pb={2}
-              mt={5}
+              py={2}
+              mt={10}
               mx="auto"
-              fontFamily="vt323"
               color="black"
+              borderWidth={1}
               borderColor="ghostVerse.green.base"
               bgColor="ghostVerse.green.base"
               _hover={{
@@ -123,7 +123,12 @@ export const HomeTopInfos = () => {
         <Text as="p" fontFamily="vt323" fontSize={26} lineHeight={1} mb="auto">
           Exclusive community for premium cannabis enthusiasts.
         </Text>
-        <Box display={'flex'} alignItems={'center'} justifyContent={'center'}>
+        <Box
+          mt={5}
+          display={'flex'}
+          alignItems={{ base: 'left', md: 'center' }}
+          justifyContent={{ base: 'left', md: 'center' }}
+        >
           <Link
             href="/cannabis-club"
             passHref
@@ -132,22 +137,23 @@ export const HomeTopInfos = () => {
             <Text
               as="span"
               display="inline-flex"
-              fontSize={{ base: 'xl', lg: '4xl' }}
-              borderWidth={1}
+              fontFamily="CubicFive12"
+              fontSize={{ base: 'md', md: 'lg' }}
               px={6}
-              pb={2}
+              py={2}
+              mt={0}
               mx="auto"
-              mt={4}
-              fontFamily="vt323"
+              borderWidth={1}
               borderColor="black"
               bgColor="black"
+              whiteSpace={'nowrap'}
               color="ghostVerse.green.base"
               _hover={{
                 bgColor: 'ghostVerse.green.base',
                 color: 'black',
               }}
             >
-              Become a member
+              {'Become a member'}
             </Text>
           </Link>
           <Box
@@ -156,10 +162,12 @@ export const HomeTopInfos = () => {
             lineHeight={1}
             px={{ base: 0, md: 6 }}
             py={{ base: 2, md: 2 }}
+            ml={{ base: 2, md: 0 }}
             fontWeight={'bold'}
+            whiteSpace={'nowrap'}
           >
             <Link href="/nft" passHref title="Green Ghost Degen NFT Collection">
-              GET NFT!
+              {'GET NFT!'}
             </Link>
           </Box>
         </Box>

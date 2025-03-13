@@ -57,22 +57,19 @@ export const BestWeedShops = () => {
       >
         <Text
           as="span"
-          aria-label="Visit our locations"
-          display={'inline-flex'}
-          w={'auto'}
-          fontSize={{ base: 'xl', md: '4xl' }}
-          lineHeight={1}
+          display="inline-flex"
+          fontFamily="CubicFive12"
+          fontSize={{ base: 'md', md: 'lg' }}
+          px={6}
+          py={2}
+          mt={0}
+          mx="auto"
+          color="black"
           borderWidth={1}
-          px={{ base: 4, md: 6 }}
-          pb={{ base: 2, md: 2 }}
-          mx={'auto'}
-          fontFamily={'vt323'}
-          color={'black'}
-          borderColor={'ghostVerse.green.base'}
-          backgroundColor={'ghostVerse.green.base'}
+          borderColor="ghostVerse.green.base"
+          backgroundColor="ghostVerse.green.base"
           _hover={{
-            borderColor: 'ghostVerse.green.base',
-            bgColor: 'black',
+            bg: 'black',
             color: 'ghostVerse.green.base',
           }}
         >
