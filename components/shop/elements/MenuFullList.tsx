@@ -22,7 +22,7 @@ const Links: Route[] = [
     imageW: '20px',
   },
   {
-    path: '/weed-shop-pre-rolls',
+    path: '/menu/pre-rolls',
     image: '/media/pre-rolls-menu-weed-shop-green-ghost.webp',
     label: 'Pre-Rolls',
     title: 'Weed Shop Premium Cannabis Pre Rolls Menu',
@@ -31,7 +31,7 @@ const Links: Route[] = [
     imageW: '8px',
   },
   {
-    path: '/weed-shop-edibles',
+    path: '/menu/edibles',
     image: '/media/edibles-menu-weed-shop-green-ghost.webp',
     label: 'Edibles',
     title: 'Weed Shop Premium Cannabis Edibles Menu',

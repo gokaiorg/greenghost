@@ -1,15 +1,15 @@
 import type { NextPage } from 'next';
-import { MainLayout } from '../components/MainLayout';
-import { HeaderMenu } from '../components/HeaderMenu';
-import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
-import { PreRoll } from '../components/shop/PreRoll';
+import { MainLayout } from '../../../components/MainLayout';
+import { HeaderMenu } from '../../../components/HeaderMenu';
+import { HeaderMenuButtons } from '../../../components/HeaderMenuButtons';
+import { PreRoll } from '../../../components/shop/PreRoll';
 import Head from 'next/head';
-import { MenuWeedShop } from '../components/shop/elements/MenuWeedShop';
-import { HomeFeature } from '../components/HomeFeatures';
-import { BuyOnline } from '../components/BuyOnline';
+import { MenuWeedShop } from '../../../components/shop/elements/MenuWeedShop';
+import { HomeFeature } from '../../../components/HomeFeatures';
+import { BuyOnline } from '../../../components/BuyOnline';
 import { Box } from '@chakra-ui/react';
 import Image from 'next/image';
-import { buds } from '../config/buds';
+import { buds } from '../../../config/buds';
 
 const WeedShopPreRolls: NextPage = () => {
   const itemListJsonLd = {
@@ -69,7 +69,7 @@ const WeedShopPreRolls: NextPage = () => {
         <meta property="og:image:height" content="1366" />
         <meta
           property="og:url"
-          content="https://green.gd/weed-shop-pre-rolls"
+          content="https://green.gd/menu/pre-rolls"
         />
         <meta
           name="twitter:title"
@@ -85,7 +85,7 @@ const WeedShopPreRolls: NextPage = () => {
         />
         <meta
           name="twitter:url"
-          content="https://green.gd/weed-shop-pre-rolls"
+          content="https://green.gd/menu/pre-rolls"
         />
         <script
           type="application/ld+json"
