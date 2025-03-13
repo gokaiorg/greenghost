@@ -10,7 +10,7 @@ export const MenuFooter = () => {
   const menuItems = [
     {
       href: '/menu',
-      title: 'Weed Shop Premium Cannabis Buds Menu',
+      title: 'Weed & Cannabis Products Menu',
       label: 'Menu',
       ariaLabel: 'Explore our menu',
     },
