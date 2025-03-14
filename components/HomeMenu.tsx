@@ -10,12 +10,12 @@ export const HomeMenu = () => {
       label: 'Buds',
     },
     {
-      href: '/weed-shop-pre-rolls',
+      href: '/menu/pre-rolls',
       title: 'Weed Shop Premium Cannabis Pre-Rolls Menu',
       label: 'Pre-Rolls',
     },
     {
-      href: '/weed-shop-edibles',
+      href: '/menu/edibles',
       title: 'Weed Shop Premium Cannabis Edibles Menu',
       label: 'Edibles',
     },

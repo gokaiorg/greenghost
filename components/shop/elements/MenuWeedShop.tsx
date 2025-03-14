@@ -19,14 +19,14 @@ const Links: Route[] = [
     imageW: '20px',
   },
   {
-    path: '/weed-shop-pre-rolls',
+    path: '/menu/pre-rolls',
     image: '/media/green-ghost-degen-weed-shop-menu-pre-rolls.png',
     label: 'Pre-Rolls',
     title: 'Weed Shop Premium Cannabis Pre Rolls Menu',
     imageW: '8px',
   },
   {
-    path: '/weed-shop-edibles',
+    path: '/menu/edibles',
     image: '/media/green-ghost-degen-weed-shop-menu-edibles.png',
     label: 'Edibles',
     title: 'Weed Shop Premium Cannabis Edibles Menu',

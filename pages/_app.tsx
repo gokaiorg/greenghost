@@ -1,13 +1,3 @@
-import '@fontsource/poppins/100.css';
-import '@fontsource/poppins/200.css';
-import '@fontsource/poppins/300.css';
-import '@fontsource/poppins/400.css';
-import '@fontsource/poppins/500.css';
-import '@fontsource/poppins/600.css';
-import '@fontsource/poppins/700.css';
-import '@fontsource/poppins/800.css';
-import '@fontsource/poppins/900.css';
-
 import type { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
 import { useNetworkSync } from '@useelven/core';
@@ -17,7 +7,6 @@ import { useToast } from '@chakra-ui/react';
 import { useCallback, useEffect } from 'react';
 import Fonts from '../components/Fonts';
 import AgeVerification from '../components/AgeVerificationPopup';
-// import { AnimatePresence } from 'framer-motion';
 
 const toastId = 'elven-tools-error-toast';
 

@@ -189,7 +189,7 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
                   name: 'Edibles Menu',
                   description:
                     "Explore Green Ghost's Edibles Menu, featuring a curated selection of organic, locally sourced cannabis-infused treats like brownies, gummies, and artisanal cookies.",
-                  url: 'https://green.gd/weed-shop-edibles',
+                  url: 'https://green.gd/menu/edibles',
                 },
                 {
                   '@type': 'MenuSection',
@@ -210,7 +210,7 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
                   name: 'Pre-Rolls Menu',
                   description:
                     "Discover Green Ghost's Pre-Roll Menu. Enjoy perfectly rolled joints made from premium cannabis, ready to elevate your smoking experience instantly.",
-                  url: 'https://green.gd/weed-shop-pre-rolls',
+                  url: 'https://green.gd/menu/pre-rolls',
                 },
               ],
             },

@@ -50,7 +50,7 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
         edible?.quantity > 0
           ? 'https://schema.org/InStock'
           : 'https://schema.org/OutOfStock',
-      url: `https://green.gd/weed-shop/${edible?.slug}`,
+      url: `https://green.gd/s/${edible?.slug}`,
       seller: {
         '@type': 'Organization',
         name: 'Green Ghost 🌿👻',
@@ -104,7 +104,7 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
         <meta property="og:image:height" content="1000" />
         <meta
           property="og:url"
-          content={`https://green.gd/weed-shop-edibles/${edible.slug}`}
+          content={`https://green.gd/menu/edibles/${edible.slug}`}
         />
         <meta
           name="twitter:title"
@@ -114,7 +114,7 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
         <meta name="twitter:image" content={edible.images[1]} />
         <meta
           name="twitter:url"
-          content={`https://green.gd/weed-shop-edibles/${edible.slug}`}
+          content={`https://green.gd/menu/edibles/${edible.slug}`}
         />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Head>

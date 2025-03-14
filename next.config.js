@@ -84,6 +84,81 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/pre-rolls',
+        destination: '/menu/pre-rolls',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-pre-rolls',
+        destination: '/menu/pre-rolls',
+        permanent: true,
+      },
+      {
+        source: '/edibles',
+        destination: '/menu/edibles',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-edibles',
+        destination: '/menu/edibles',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-edibles/thc-honey-stick',
+        destination: '/edibles/thc-honey-stick',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-edibles/cbd-honey-stick',
+        destination: '/edibles/cbd-honey-stick',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-edibles/thc-cookies',
+        destination: '/edibles/thc-cookies',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-edibles/thc-cookie',
+        destination: '/edibles/thc-cookie',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-edibles/thc-stroopwafel',
+        destination: '/edibles/thc-stroopwafel',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-edibles/thc-gummies',
+        destination: '/edibles/thc-gummies',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-edibles/thc-nano-gummies',
+        destination: '/edibles/thc-nano-gummies',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-edibles/thc-pretzels',
+        destination: '/edibles/thc-pretzels',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-edibles/thc-brownie',
+        destination: '/edibles/thc-brownie',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-edibles/thc-muffin',
+        destination: '/edibles/thc-muffin',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop-edibles/thc-brownies',
+        destination: '/edibles/thc-brownies',
+        permanent: true,
+      },
+      {
         source: '/gadgets',
         destination: '/menu/gadgets',
         permanent: true,
@@ -184,11 +259,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/weed-shop-pre-rolled',
-        destination: '/weed-shop-pre-rolls',
-        permanent: true,
-      },
-      {
         source: '/contact-us-buy-weed-online',
         destination: '/contact-green-ghost',
         permanent: true,
@@ -221,11 +291,6 @@ const nextConfig = {
       {
         source: '/cannabis-shop-phuket',
         destination: '/weed-shops-thailand',
-        permanent: true,
-      },
-      {
-        source: '/space-cake-brownie',
-        destination: '/weed-shop-edibles/thc-brownie',
         permanent: true,
       },
       {

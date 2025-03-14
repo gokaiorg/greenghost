@@ -27,7 +27,7 @@ export const EdibleItem = ({ edible }: EdibleItemProps) => {
       p={0.5}
     >
       <Link
-        href={`weed-shop-edibles/${edible.slug}`}
+        href={`/edibles/${edible.slug}`}
         title={`Degen Weed Shop Best ${edible.name} Edible`}
         passHref
       >

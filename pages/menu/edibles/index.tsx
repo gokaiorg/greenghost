@@ -1,15 +1,15 @@
 import type { NextPage } from 'next';
-import { MainLayout } from '../../components/MainLayout';
-import { HeaderMenu } from '../../components/HeaderMenu';
-import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
+import { MainLayout } from '../../../components/MainLayout';
+import { HeaderMenu } from '../../../components/HeaderMenu';
+import { HeaderMenuButtons } from '../../../components/HeaderMenuButtons';
 import Head from 'next/head';
-import { MenuWeedShop } from '../../components/shop/elements/MenuWeedShop';
-import { Edible } from '../../components/shop/Edible';
-import { HomeFeature } from '../../components/HomeFeatures';
-import { BuyOnline } from '../../components/BuyOnline';
+import { MenuWeedShop } from '../../../components/shop/elements/MenuWeedShop';
+import { Edible } from '../../../components/shop/Edible';
+import { HomeFeature } from '../../../components/HomeFeatures';
+import { BuyOnline } from '../../../components/BuyOnline';
 import { Box } from '@chakra-ui/react';
 import Image from 'next/image';
-import { edibles } from '../../config/edibles';
+import { edibles } from '../../../config/edibles';
 
 const WeedShopEdibles: NextPage = () => {
   const itemListJsonLd = {
@@ -27,7 +27,7 @@ const WeedShopEdibles: NextPage = () => {
         image: [
           `https://green.gd/media/green-ghost-degen-weed-shop-menu-edible-${edible.slug}-cover.webp`,
           `https://green.gd/media/green-ghost-degen-weed-shop-menu-edible-${edible.slug}-product-01.webp`,
-          `https://green.gd/media/green-ghost-degen-weed-shop-menu-edible--${edible.slug}-product-02.webp`,
+          `https://green.gd/media/green-ghost-degen-weed-shop-menu-edible-${edible.slug}-product-02.webp`,
         ],
         offers: {
           '@type': 'Offer',
@@ -67,7 +67,7 @@ const WeedShopEdibles: NextPage = () => {
         />
         <meta property="og:image:width" content="2048" />
         <meta property="og:image:height" content="1366" />
-        <meta property="og:url" content="https://green.gd/weed-shop-edibles" />
+        <meta property="og:url" content="https://green.gd/menu/edibles" />
         <meta
           name="twitter:title"
           content="Weed Shop Premium Cannabis Edibles Menu - Green Ghost 🌿👻"
@@ -80,7 +80,7 @@ const WeedShopEdibles: NextPage = () => {
           name="twitter:image"
           content="https://green.gd/media/green-ghost-degen-weed-shop-cannabis-edibles-menu.webp"
         />
-        <meta name="twitter:url" content="https://green.gd/weed-shop-edibles" />
+        <meta name="twitter:url" content="https://green.gd/menu/edibles" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}

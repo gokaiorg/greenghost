@@ -50,7 +50,7 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
         gadget?.quantity > 0
           ? 'https://schema.org/InStock'
           : 'https://schema.org/OutOfStock',
-      url: `https://green.gd/weed-shop/${gadget?.slug}`,
+      url: `https://green.gd/gadgets/${gadget?.slug}`,
       seller: {
         '@type': 'Organization',
         name: 'Green Ghost 🌿👻',
