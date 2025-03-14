@@ -50,7 +50,7 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
         edible?.quantity > 0
           ? 'https://schema.org/InStock'
           : 'https://schema.org/OutOfStock',
-      url: `https://green.gd/weed-shop/${edible?.slug}`,
+      url: `https://green.gd/s/${edible?.slug}`,
       seller: {
         '@type': 'Organization',
         name: 'Green Ghost 🌿👻',
