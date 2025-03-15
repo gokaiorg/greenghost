@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 import { MainLayout } from '../../components/MainLayout';
 import { HeaderMenu } from '../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
@@ -8,6 +8,10 @@ import { Box, Text } from '@chakra-ui/react';
 import { HomeSectionTitle } from '../../components/HomeSectionTitle';
 import Image from 'next/image';
 import { ImgMenu } from '../../components/media/ImgMenu';
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return { props: {} };
+};
 
 const MenuFull: NextPage = () => {
   return (
