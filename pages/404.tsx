@@ -1,8 +1,4 @@
-import type { GetServerSideProps, NextPage } from 'next';
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  return { props: {} };
-};
+import type { NextPage } from 'next';
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
@@ -10,7 +6,7 @@ import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import { Box, Text } from '@chakra-ui/react';
 import Head from 'next/head';
 
-const InstallXportal: NextPage = () => {
+const ErrorPage: NextPage = () => {
   return (
     <>
       <Head>
@@ -74,4 +70,4 @@ const InstallXportal: NextPage = () => {
   );
 };
 
-export default InstallXportal;
+export default ErrorPage;
