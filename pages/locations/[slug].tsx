@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { getShops, Shop } from '../../config/shops';
@@ -415,29 +415,13 @@ export default function ShopPage({ shop }: ShopPageProps) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const shops = getShops();
-  const paths = shops.map((shop) => ({ params: { slug: shop.slug } }));
-  return { paths, fallback: 'blocking' };
-};
-
-export const getStaticProps: GetStaticProps<ShopPageProps> = async ({
+export const getServerSideProps: GetServerSideProps<ShopPageProps> = async ({
   params,
 }) => {
-  if (!params) {
-    return {
-      notFound: true,
-    };
-  }
-  const shops = getShops();
-  const shop = shops.find((p) => p.slug === params?.slug);
+  if (!params) return { notFound: true };
 
-  if (!shop) {
-    return { notFound: true };
-  }
+  const shops = getShops(); // Fetch shops using the getShops function
+  const shop = shops.find((s) => s.slug === params.slug); // Find the shop based on the slug from params
 
-  return {
-    props: { shop },
-    revalidate: 60 * 60, // 1 hour
-  };
+  return shop ? { props: { shop } } : { notFound: true }; // Return the shop if found, or return notFound if not
 };

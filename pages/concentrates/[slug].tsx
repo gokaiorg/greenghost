@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { getDegens, Degen } from '../../config/degens';
@@ -285,38 +285,11 @@ export default function DegensPage({ degen }: DegensPageProps) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  //console.log('Generating paths...');
-  const degens = getDegens();
-
-  const paths = degens.map((degen) => ({
-    params: { slug: degen.slug },
-  }));
-
-  return { paths, fallback: 'blocking' };
-};
-
-export const getStaticProps: GetStaticProps<DegensPageProps> = async ({
+export const getServerSideProps: GetServerSideProps<DegensPageProps> = async ({
   params,
 }) => {
-  if (!params) {
-    return {
-      notFound: true,
-    };
-  }
+  if (!params) return { notFound: true };
   const degens = getDegens();
-  const degen = degens.find((p) => p.slug === params?.slug);
-
-  if (!degen) {
-    return {
-      notFound: true,
-    };
-  }
-
-  return {
-    props: {
-      degen,
-    },
-    revalidate: 60 * 60, // 1 hour
-  };
+  const degen = degens.find((p) => p.slug === params.slug);
+  return degen ? { props: { degen } } : { notFound: true };
 };

@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { getEdibles, Edible } from '../../config/edibles';
@@ -286,38 +286,11 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  //console.log('Generating paths...');
-  const edibles = getEdibles();
-
-  const paths = edibles.map((edible) => ({
-    params: { slug: edible.slug },
-  }));
-
-  return { paths, fallback: 'blocking' };
-};
-
-export const getStaticProps: GetStaticProps<EdiblesPageProps> = async ({
+export const getServerSideProps: GetServerSideProps<EdiblesPageProps> = async ({
   params,
 }) => {
-  if (!params) {
-    return {
-      notFound: true,
-    };
-  }
+  if (!params) return { notFound: true };
   const edibles = getEdibles();
-  const edible = edibles.find((p) => p.slug === params?.slug);
-
-  if (!edible) {
-    return {
-      notFound: true,
-    };
-  }
-
-  return {
-    props: {
-      edible,
-    },
-    revalidate: 60 * 60, // 1 hour
-  };
+  const edible = edibles.find((p) => p.slug === params.slug);
+  return edible ? { props: { edible } } : { notFound: true };
 };

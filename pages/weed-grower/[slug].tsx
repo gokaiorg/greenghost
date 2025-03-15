@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 
 import { useRouter } from 'next/router';
@@ -103,8 +103,8 @@ export default function GrowerPage({ grower }: GrowerPageProps) {
                 src={grower.logo}
                 width={320}
                 height={320}
-                alt={`Weed Grower in Thailand {grower.name} - Green Ghost 🌿👻`}
-                title={`Weed Grower in Thailand {grower.name} - Green Ghost 🌿👻`}
+                alt={`Weed Grower in Thailand {grower.name}`}
+                title={`Weed Grower in Thailand {grower.name}`}
                 quality={75}
               />
             </Box>
@@ -189,38 +189,13 @@ export default function GrowerPage({ grower }: GrowerPageProps) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  //console.log('Generating paths...');
-  const growers = getGrowers();
-
-  const paths = growers.map((grower) => ({
-    params: { slug: grower.slug },
-  }));
-
-  return { paths, fallback: 'blocking' };
-};
-
-export const getStaticProps: GetStaticProps<GrowerPageProps> = async ({
+export const getServerSideProps: GetServerSideProps<GrowerPageProps> = async ({
   params,
 }) => {
-  if (!params) {
-    return {
-      notFound: true,
-    };
-  }
-  const growers = getGrowers();
-  const grower = growers.find((p) => p.slug === params?.slug);
+  if (!params) return { notFound: true };
 
-  if (!grower) {
-    return {
-      notFound: true,
-    };
-  }
+  const growers = getGrowers(); // Fetch growers using the getGrowers function
+  const grower = growers.find((g) => g.slug === params.slug); // Find the grower based on the slug from params
 
-  return {
-    props: {
-      grower,
-    },
-    revalidate: 60 * 60, // 1 hour
-  };
+  return grower ? { props: { grower } } : { notFound: true }; // Return the grower if found, or return notFound if not
 };

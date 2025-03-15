@@ -175,14 +175,14 @@ export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
               name: 'Green Ghost Menu',
               description:
                 "Explore Green Ghost's 🌿👻 complete cannabis menu, featuring premium buds, edibles, pre-rolls, accessories, and concentrates. Elevate your experience with our curated selection.",
-              url: 'https://green.gd/weed-shop',
+              url: 'https://green.gd/menu',
               hasMenuSection: [
                 {
                   '@type': 'MenuSection',
                   name: 'Buds Menu',
                   description:
                     "Explore Green Ghost's premium cannabis buds menu. Discover top-quality strains and products, expertly curated for your enjoyment and satisfaction.",
-                  url: 'https://green.gd/weed-shop',
+                  url: 'https://green.gd/menu/buds',
                 },
                 {
                   '@type': 'MenuSection',

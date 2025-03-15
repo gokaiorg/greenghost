@@ -1,4 +1,8 @@
-import type { NextPage } from 'next';
+import type { GetServerSideProps, NextPage } from 'next';
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return { props: {} };
+};
 import { MainLayout } from '../../../components/MainLayout';
 import { HeaderMenu } from '../../../components/HeaderMenu';
 import { HeaderMenuButtons } from '../../../components/HeaderMenuButtons';
@@ -67,10 +71,7 @@ const WeedShopPreRolls: NextPage = () => {
         />
         <meta property="og:image:width" content="2048" />
         <meta property="og:image:height" content="1366" />
-        <meta
-          property="og:url"
-          content="https://green.gd/menu/pre-rolls"
-        />
+        <meta property="og:url" content="https://green.gd/menu/pre-rolls" />
         <meta
           name="twitter:title"
           content="Weed Shop Premium Cannabis Pre Rolls Menu - Green Ghost 🌿👻"
@@ -83,10 +84,7 @@ const WeedShopPreRolls: NextPage = () => {
           name="twitter:image"
           content="https://green.gd/green-ghost-degen-weed-shop-preroll-joints-menu.webp"
         />
-        <meta
-          name="twitter:url"
-          content="https://green.gd/menu/pre-rolls"
-        />
+        <meta name="twitter:url" content="https://green.gd/menu/pre-rolls" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}

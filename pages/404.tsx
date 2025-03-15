@@ -6,7 +6,7 @@ import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import { Box, Text } from '@chakra-ui/react';
 import Head from 'next/head';
 
-const InstallXportal: NextPage = () => {
+const ErrorPage: NextPage = () => {
   return (
     <>
       <Head>
@@ -70,4 +70,4 @@ const InstallXportal: NextPage = () => {
   );
 };
 
-export default InstallXportal;
+export default ErrorPage;

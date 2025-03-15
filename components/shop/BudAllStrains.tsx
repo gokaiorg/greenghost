@@ -1,13 +1,12 @@
-import { Box, Input, Text } from '@chakra-ui/react';
+import { Box, Input } from '@chakra-ui/react';
 import { useState } from 'react';
 import { buds } from '../../config/buds';
-import { BudItemAll } from './BudItemAll';
+import { BudItemAllStrains } from './BudItemAllStrains';
 import MenuFilterShop from './elements/MenuFilterShop';
 import WrapperShop from './elements/WrapperShop';
 import { IconSativa } from '../media/IconSativa';
 import { IconHybrid } from '../media/IconHybrid';
 import { IconIndica } from '../media/IconIndica';
-import Link from 'next/link';
 
 type DominanceOption = 'All' | 'Sativa' | 'Indica' | 'Hybrid';
 
@@ -56,25 +55,21 @@ const FilterButton = ({
   </Box>
 );
 
-export const BudAll = () => {
+export const BudAllStrains = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [dominanceFilter, setDominanceFilter] =
     useState<DominanceOption>('All');
 
-  const filteredBuds = buds.filter((bud) => {
-    const matchesSearch = bud.name
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase());
-    const matchesDominance =
-      dominanceFilter === 'All' || bud.dominance === dominanceFilter;
-    return matchesSearch && matchesDominance;
-  });
-
-  // Shuffle the filtered buds
-  const shuffledBuds = [...filteredBuds].sort(() => 0.5 - Math.random());
-
-  // Get the first 25 random buds
-  const sortedBuds = shuffledBuds.slice(0, 25);
+  const filteredBuds = buds
+    .filter((bud) => {
+      const matchesSearch = bud.name
+        .toLowerCase()
+        .includes(searchQuery.toLowerCase());
+      const matchesDominance =
+        dominanceFilter === 'All' || bud.dominance === dominanceFilter;
+      return matchesSearch && matchesDominance;
+    })
+    .sort((a, b) => a.name.localeCompare(b.name)); // Sort alphabetically
 
   const handleDominanceChange = (dominance: DominanceOption) => {
     setDominanceFilter((prevFilter) =>
@@ -119,18 +114,18 @@ export const BudAll = () => {
           placeholder="Search strain..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          ml={'auto'}
-          mb={2}
+          ml={'auto'} // Margin left for spacing
+          mb={2} // Margin bottom for spacing
           fontSize="xl"
           fontFamily={'vt323'}
           borderRadius={0}
-          width="auto"
+          width="auto" // Adjust width as needed
           color={'ghostVerse.green.base'}
           borderColor={'ghostVerse.green.base'}
           _focus={{
             borderColor: 'ghostVerse.yellow.base',
             outline: 'none',
-            boxShadow: 'none',
+            boxShadow: 'none', // Add this line to remove the focus ring
           }}
         />
       </MenuFilterShop>
@@ -142,32 +137,10 @@ export const BudAll = () => {
         flexWrap={'wrap'}
         mx={-0.5}
       >
-        {sortedBuds.map((bud) => (
-          <BudItemAll key={bud.slug} bud={bud} />
+        {filteredBuds.map((bud) => (
+          <BudItemAllStrains key={bud.slug} bud={bud} />
         ))}
       </Box>
-      <Link href={'/strains'} passHref>
-        <Text
-          as="span"
-          display="inline-flex"
-          fontFamily="CubicFive12"
-          fontSize={{ base: 'md', md: 'lg' }}
-          px={6}
-          py={2}
-          mt={5}
-          mx="auto"
-          borderWidth={1}
-          borderColor="ghostVerse.green.base"
-          bgColor="black"
-          color="ghostVerse.green.base"
-          _hover={{
-            bgColor: 'ghostVerse.green.base',
-            color: 'black',
-          }}
-        >
-          More strains
-        </Text>
-      </Link>
     </Box>
   );
 };

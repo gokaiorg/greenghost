@@ -1,4 +1,8 @@
-import type { NextPage } from 'next';
+import type { GetServerSideProps, NextPage } from 'next';
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return { props: {} };
+};
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
@@ -368,7 +372,8 @@ const Jobs: NextPage = () => {
           <Box>
             <Image
               src="/media/green-ghost-degen-weed-shop-jobs.webp"
-              alt="Budtender Job Opening at Our Cannabis Shop - Green Ghost 🌿👻"
+              alt="Budtender Job Opening at Our Cannabis Shop"
+              title="Budtender Job Opening at Our Cannabis Shop"
               width={2048}
               height={1366}
               sizes="100%"

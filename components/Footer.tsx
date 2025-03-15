@@ -23,10 +23,11 @@ export const Footer = () => {
         <Find />
         <SocialMediaIcons />
         <Box
-          fontSize={{ base: 11, lg: 14 }}
+          fontSize={{ base: 16, lg: 16 }}
           fontWeight={'bold'}
           position={'relative'}
           zIndex={1}
+          mb={1}
           display={'flex'}
           justifyContent={'center'}
           whiteSpace={'nowrap'}

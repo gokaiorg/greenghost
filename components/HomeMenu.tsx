@@ -5,7 +5,7 @@ import { IconMenu } from './media/IconMenu';
 export const HomeMenu = () => {
   const menuItems = [
     {
-      href: '/weed-shop',
+      href: '/menu/buds',
       title: 'Weed Shop Premium Cannabis Buds Menu',
       label: 'Buds',
     },

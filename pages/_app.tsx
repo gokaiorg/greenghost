@@ -4,17 +4,23 @@ import { useNetworkSync } from '@useelven/core';
 import { theme } from '../config/chakraTheme';
 import { SWRConfig } from 'swr';
 import { useToast } from '@chakra-ui/react';
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Fonts from '../components/Fonts';
 import AgeVerification from '../components/AgeVerificationPopup';
+import PageLoader from '../components/PageLoader';
 
 const toastId = 'elven-tools-error-toast';
 
 const ElvenToolsDapp = ({ Component, pageProps }: AppProps) => {
+  const [isHydrated, setIsHydrated] = useState(false);
+
   useEffect(() => {
+    // Set the language after hydration to prevent hydration mismatch
     document.documentElement.lang = 'en';
+    setIsHydrated(true); // Set hydration to true after initial render
   }, []);
 
+  // Network Sync
   useNetworkSync({
     apiTimeout: '10000',
     chainType: process.env.NEXT_PUBLIC_MULTIVERSX_CHAIN,
@@ -43,9 +49,19 @@ const ElvenToolsDapp = ({ Component, pageProps }: AppProps) => {
     }
   }, [toast]);
 
+  // Prevent rendering child components until hydration is complete
+  if (!isHydrated) {
+    return (
+      <ChakraProvider theme={theme}>
+        <PageLoader />
+      </ChakraProvider>
+    );
+  }
+
   return (
     <SWRConfig value={{ onError: handleErrorToast }}>
       <ChakraProvider theme={theme}>
+        <PageLoader />
         <AgeVerification />
         <Fonts />
         <Component {...pageProps} />

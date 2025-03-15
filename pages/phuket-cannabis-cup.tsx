@@ -1,4 +1,8 @@
-import type { NextPage } from 'next';
+import type { GetServerSideProps, NextPage } from 'next';
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return { props: {} };
+};
 import { useRouter } from 'next/router';
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
