@@ -103,8 +103,8 @@ export default function GrowerPage({ grower }: GrowerPageProps) {
                 src={grower.logo}
                 width={320}
                 height={320}
-                alt={`Weed Grower in Thailand {grower.name} - Green Ghost 🌿👻`}
-                title={`Weed Grower in Thailand {grower.name} - Green Ghost 🌿👻`}
+                alt={`Weed Grower in Thailand {grower.name}`}
+                title={`Weed Grower in Thailand {grower.name}`}
                 quality={75}
               />
             </Box>

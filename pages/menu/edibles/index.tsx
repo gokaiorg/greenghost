@@ -98,8 +98,8 @@ const WeedShopEdibles: NextPage = () => {
           <Box w={{ base: '100%' }}>
             <Image
               src="/media/green-ghost-degen-weed-shop-cannabis-edibles-menu.webp"
-              alt="Weed Shop Premium Cannabis Edibles Menu - Green Ghost 🌿👻"
-              title="Weed Shop Premium Cannabis Edibles Menu - Green Ghost 🌿👻"
+              alt="Weed Shop Premium Cannabis Edibles Menu"
+              title="Weed Shop Premium Cannabis Edibles Menu"
               width={2048}
               height={1366}
               sizes="100%"

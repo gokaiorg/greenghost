@@ -85,8 +85,8 @@ const Weed: NextPage = () => {
           <Box>
             <Image
               src="/media/green-ghost-degen-weed-guide-premium-cannabis.webp"
-              alt="Your Weed Guide to Cannabis Excellence - Green Ghost 🌿👻"
-              title="Your Weed Guide to Cannabis Excellence - Green Ghost 🌿👻"
+              alt="Your Weed Guide to Cannabis Excellence"
+              title="Your Weed Guide to Cannabis Excellence"
               width={2048}
               height={1366}
               sizes="100%"

@@ -49,6 +49,501 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/weed-shop',
+        destination: '/menu/buds',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/snoop-punch',
+        destination: '/strains/snoop-punch',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/black-cherry-punch',
+        destination: '/strains/black-cherry-punch',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/mimosa',
+        destination: '/strains/mimosa',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/mandarin-cookies',
+        destination: '/strains/mandarin-cookies',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/lemon-berry-candy',
+        destination: '/strains/lemon-berry-candy',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/platinum-punch',
+        destination: '/strains/platinum-punch',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/orange-velvet',
+        destination: '/strains/orange-velvet',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/moon-fruit',
+        destination: '/strains/moon-fruit',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/banana-kush',
+        destination: '/strains/banana-kush',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/white-runtz',
+        destination: '/strains/white-runtz',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/gelato-dream',
+        destination: '/strains/gelato-dream',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/og-poison',
+        destination: '/strains/og-poison',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/mac-1',
+        destination: '/strains/mac-1',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/bubble-mango',
+        destination: '/strains/bubble-mango',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/sorbet-4',
+        destination: '/strains/sorbet-4',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/skunk',
+        destination: '/strains/skunk',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/sherbert',
+        destination: '/strains/sherbert',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/dosidos',
+        destination: '/strains/dosidos',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/platinum-oreoz',
+        destination: '/strains/platinum-oreoz',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/fruit-spirit',
+        destination: '/strains/fruit-spirit',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/c-vibez',
+        destination: '/strains/c-vibez',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/mac-and-jack',
+        destination: '/strains/mac-and-jack',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/royal-moby',
+        destination: '/strains/royal-moby',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/critical-kush',
+        destination: '/strains/critical-kush',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/cherry-garcia',
+        destination: '/strains/cherry-garcia',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/lemon-zkittlez',
+        destination: '/strains/lemon-zkittlez',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/eleven-roses',
+        destination: '/strains/eleven-roses',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/kings-juice',
+        destination: '/strains/kings-juice',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/mimosa-evo',
+        destination: '/strains/mimosa-evo',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/critical-plus-20',
+        destination: '/strains/critical-plus-20',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/wedding-cake',
+        destination: '/strains/wedding-cake',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/mandarin-zkittlez',
+        destination: '/strains/mandarin-zkittlez',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/tangerine-dream',
+        destination: '/strains/tangerine-dream',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/stardawg',
+        destination: '/strains/stardawg',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/mango-gelato',
+        destination: '/strains/mango-gelato',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/bruce-banner',
+        destination: '/strains/bruce-banner',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/buddy-critical',
+        destination: '/strains/buddy-critical',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/purple-zkittlez',
+        destination: '/strains/purple-zkittlez',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/pink-sunset',
+        destination: '/strains/pink-sunset',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/phantom-cookies',
+        destination: '/strains/phantom-cookies',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/hulkberry',
+        destination: '/strains/hulkberry',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/sweet-zkittlez',
+        destination: '/strains/sweet-zkittlez',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/cbd-charlottes-angel',
+        destination: '/strains/cbd-charlottes-angel',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/next-level',
+        destination: '/strains/next-level',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/mommys-milk',
+        destination: '/strains/mommys-milk',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/purple-queen',
+        destination: '/strains/purple-queen',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/banana-daddy',
+        destination: '/strains/banana-daddy',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/amnesia',
+        destination: '/strains/amnesia',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/gelato-runtz',
+        destination: '/strains/gelato-runtz',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/green-gelato',
+        destination: '/strains/green-gelato',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/royal-runtz',
+        destination: '/strains/royal-runtz',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/bubble-zkittlez',
+        destination: '/strains/bubble-zkittlez',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/chemdawg',
+        destination: '/strains/chemdawg',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/silver-fox',
+        destination: '/strains/silver-fox',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/white-widow',
+        destination: '/strains/white-widow',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/grandmaster-kush',
+        destination: '/strains/grandmaster-kush',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/jack-herer',
+        destination: '/strains/jack-herer',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/gorilla-goo',
+        destination: '/strains/gorilla-goo',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/end-game',
+        destination: '/strains/end-game',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/north-thunderfuck',
+        destination: '/strains/north-thunderfuck',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/fat-banana',
+        destination: '/strains/fat-banana',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/mango-sticky-rice',
+        destination: '/strains/mango-sticky-rice',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/kd-mango-tail',
+        destination: '/strains/kd-mango-tail',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/cbd-auto-tune',
+        destination: '/strains/cbd-auto-tune',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/toasted-toffee',
+        destination: '/strains/toasted-toffee',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/pink-runtz',
+        destination: '/strains/pink-runtz',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/poppin-fresh',
+        destination: '/strains/poppin-fresh',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/strawneapple',
+        destination: '/strains/strawneapple',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/medellin',
+        destination: '/strains/medellin',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/on-point',
+        destination: '/strains/on-point',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/pitaya',
+        destination: '/strains/pitaya',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/scotty-2-hotty',
+        destination: '/strains/scotty-2-hotty',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/apricot-oreoz',
+        destination: '/strains/apricot-oreoz',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/forbidden-fruit',
+        destination: '/strains/forbidden-fruit',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/el-chapo-og',
+        destination: '/strains/el-chapo-og',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/slaphappy',
+        destination: '/strains/slaphappy',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/ben-garys',
+        destination: '/strains/ben-garys',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/super-boof',
+        destination: '/strains/super-boof',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/sour-diesel',
+        destination: '/strains/sour-diesel',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/popanonymous',
+        destination: '/strains/popanonymous',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/pop-star',
+        destination: '/strains/pop-star',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/runtz',
+        destination: '/strains/runtz',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/drippin-aint-eazy',
+        destination: '/strains/drippin-aint-eazy',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/the-queen-s1',
+        destination: '/strains/the-queen-s1',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/super-lemon-haze',
+        destination: '/strains/super-lemon-haze',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/northern-lights',
+        destination: '/strains/northern-lights',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/frosted-jungle',
+        destination: '/strains/frosted-jungle',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/la-haze',
+        destination: '/strains/la-haze',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/fried-applez',
+        destination: '/strains/fried-applez',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/royal-cheese',
+        destination: '/strains/royal-cheese',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/amnesia-haze',
+        destination: '/strains/amnesia-haze',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/og-kush',
+        destination: '/strains/og-kush',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/master-og',
+        destination: '/strains/master-og',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/orange-sherbert',
+        destination: '/strains/orange-sherbert',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/pink-zkittlez',
+        destination: '/strains/pink-zkittlez',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/cherry-z',
+        destination: '/strains/cherry-z',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/hawaiian',
+        destination: '/strains/hawaiian',
+        permanent: true,
+      },
+      {
+        source: '/weed-shop/thai-stick',
+        destination: '/strains/thai-stick',
+        permanent: true,
+      },
+      {
         source: '/weed-shop-degen/pure-kief',
         destination: '/concentrates/pure-kief',
         permanent: true,

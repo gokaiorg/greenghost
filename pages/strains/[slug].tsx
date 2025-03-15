@@ -49,7 +49,7 @@ export default function BudPage({ bud }: BudPageProps) {
         bud?.quantity > 0
           ? 'https://schema.org/InStock'
           : 'https://schema.org/OutOfStock',
-      url: `https://green.gd/weed-shop/${bud?.slug}`,
+      url: `https://green.gd/strains/${bud?.slug}`,
       seller: {
         '@type': 'Organization',
         name: 'Green Ghost 🌿👻',
@@ -89,23 +89,29 @@ export default function BudPage({ bud }: BudPageProps) {
   return (
     <>
       <Head>
-        <title>{bud.imgDesc}</title>
+        <title>{`${bud.imgDesc} - Green Ghost 🌿👻`}</title>
         <meta name="description" content={bud.descSeo} />
-        <meta property="og:title" content={bud.imgDesc} />
+        <meta
+          property="og:title"
+          content={`${bud.imgDesc} - Green Ghost 🌿👻`}
+        />
         <meta property="og:description" content={bud.descSeo} />
         <meta property="og:image" content={bud.images[1]} />
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="1000" />
         <meta
           property="og:url"
-          content={`https://green.gd/weed-shop/${bud.slug}`}
+          content={`https://green.gd/strains/${bud.slug}`}
         />
-        <meta name="twitter:title" content={bud.imgDesc} />
+        <meta
+          name="twitter:title"
+          content={`${bud.imgDesc} - Green Ghost 🌿👻`}
+        />
         <meta name="twitter:description" content={bud.descSeo} />
         <meta name="twitter:image" content={bud.images[1]} />
         <meta
           name="twitter:url"
-          content={`https://green.gd/weed-shop/${bud.slug}`}
+          content={`https://green.gd/strains/${bud.slug}`}
         />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Head>

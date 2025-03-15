@@ -134,7 +134,8 @@ const BuyWeed: NextPage = () => {
           <Box>
             <Image
               src="/media/green-ghost-degen-weed-shop-contact-us.webp"
-              alt="Contact Our Weed Shop Team To Order - Green Ghost 🌿👻"
+              alt="Contact Our Weed Shop Team To Order"
+              title="Contact Our Weed Shop Team To Order"
               width={2048}
               height={1366}
               sizes="100%"

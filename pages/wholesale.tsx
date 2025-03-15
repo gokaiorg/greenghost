@@ -80,7 +80,8 @@ const BuyWholesaleWeed: NextPage = () => {
           <Box>
             <Image
               src="/media/green-ghost-degen-weed-shop-wholesale-cannabis.webp"
-              alt="Wholesale Cannabis Premium Strains in Phuket - Green Ghost 🌿👻"
+              alt="Wholesale Cannabis Premium Strains in Phuket"
+              title="Wholesale Cannabis Premium Strains in Phuket"
               width={2048}
               height={1366}
               sizes="100%"

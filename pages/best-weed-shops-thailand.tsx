@@ -252,7 +252,8 @@ const BestWeedShops: NextPage = () => {
           <Box>
             <Image
               src="/media/best-weed-shops-green-ghost.webp"
-              alt="Best Weed Shops Thailand - Green Ghost 🌿👻"
+              alt="Best Weed Shops Thailand"
+              title="Best Weed Shops Thailand"
               width={2048}
               height={1366}
               sizes="100%"

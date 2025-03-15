@@ -218,7 +218,7 @@ const WeedDelivery: NextPage = () => {
           mb={4}
         >
           <SectionLink
-            href="/weed-shop"
+            href="/menu/buds"
             title="Weed Shop Premium Cannabis Buds Menu"
             heading="Explore Our Premium Cannabis Selection"
             text="Whether you're looking for flowers, edibles, concentrates or gadgets, we have it for you."
@@ -300,8 +300,8 @@ const WeedDelivery: NextPage = () => {
             src="/media/green-ghost-weed-shop-delivery.webp"
             width={2048}
             height={1366}
-            alt="Best Weed Delivery Service in Phuket - Green Ghost 🌿👻"
-            title="Best Weed Delivery Service in Phuket - Green Ghost 🌿👻"
+            alt="Best Weed Delivery Service in Phuket"
+            title="Best Weed Delivery Service in Phuket"
             sizes="100%"
             quality={75}
           />

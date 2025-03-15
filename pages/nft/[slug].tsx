@@ -89,8 +89,8 @@ export default function NFTPage({ nft, previousSlug, nextSlug }: NFTPageProps) {
                 src={nft.logo}
                 width={500}
                 height={500}
-                alt={`${nft.name} - Green Ghost 🌿👻`}
-                title={`${nft.name} - Green Ghost 🌿👻`}
+                alt={`${nft.name}`}
+                title={`${nft.name}👻`}
                 quality={75}
               />
             </Box>

@@ -1,4 +1,4 @@
-// BudItemAll.tsx
+// BudItemAllStrains.tsx
 import React from 'react';
 import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
@@ -6,12 +6,13 @@ import { Bud } from '../../config/buds';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import Image from 'next/image';
 
-type BudItemAllProps = {
+type BudItemAllStrainsProps = {
   bud: Bud;
 };
 
-export const BudItemAll = ({ bud }: BudItemAllProps) => {
+export const BudItemAllStrains = ({ bud }: BudItemAllStrainsProps) => {
   return (
     <Box
       as="li"
@@ -25,6 +26,18 @@ export const BudItemAll = ({ bud }: BudItemAllProps) => {
         title={`Order ${bud.name} Cannabis Strain Online`}
         passHref
       >
+        {bud.images.length > 1 && (
+          <Image
+            src={bud.images[0]}
+            width={250}
+            height={250}
+            alt={bud.imgDesc}
+            title={bud.imgDesc}
+            sizes="(max-width: 600px) 160px, (max-width: 1200px) 240px, 240px"
+            quality={75}
+            style={{ objectFit: 'cover' }}
+          />
+        )}
         <Text
           itemProp="name"
           as={'h3'}

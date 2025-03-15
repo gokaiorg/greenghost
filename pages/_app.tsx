@@ -7,6 +7,7 @@ import { useToast } from '@chakra-ui/react';
 import { useCallback, useEffect } from 'react';
 import Fonts from '../components/Fonts';
 import AgeVerification from '../components/AgeVerificationPopup';
+import PageLoader from '../components/PageLoader';
 
 const toastId = 'elven-tools-error-toast';
 
@@ -46,6 +47,7 @@ const ElvenToolsDapp = ({ Component, pageProps }: AppProps) => {
   return (
     <SWRConfig value={{ onError: handleErrorToast }}>
       <ChakraProvider theme={theme}>
+        <PageLoader />
         <AgeVerification />
         <Fonts />
         <Component {...pageProps} />
