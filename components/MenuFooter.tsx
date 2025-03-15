@@ -28,7 +28,7 @@ export const MenuFooter = () => {
     },
     {
       href: '/strains',
-      title: 'Your Weed Guide to Cannabis Excellence',
+      title: 'Buy Premium Cannabis Strains Online',
       label: 'All the strains',
       ariaLabel: 'All the strains',
     },

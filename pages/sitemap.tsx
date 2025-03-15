@@ -1,17 +1,17 @@
 import { GetServerSideProps, NextPage } from 'next';
-export const getServerSideProps: GetServerSideProps = async () => {
-  return { props: {} };
-};
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-// import xml2js from 'xml2js';
 const xml2js = require('xml2js');
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import Link from 'next/link';
-import { Box } from '@chakra-ui/react';
+import { Box, UnorderedList, ListItem, Text } from '@chakra-ui/react';
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return { props: {} };
+};
 
 const SitemapPage: NextPage = () => {
   const [sitemapLinks, setSitemapLinks] = useState<string[]>([]);
@@ -67,18 +67,22 @@ const SitemapPage: NextPage = () => {
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
         <HomeSectionTitle title="Sitemap - All you need is links!" />
-        {sitemapLinks.map((link) => (
-          <Box
-            key={link}
-            color={'ghostVerse.green.base'}
-            fontFamily={'vt323'}
-            fontSize={'2xl'}
-          >
-            <Link href={link} title={link} passHref>
-              {link}
-            </Link>
-          </Box>
-        ))}
+        <UnorderedList>
+          {sitemapLinks.map((link) => (
+            <ListItem key={link}>
+              <Link href={link} passHref>
+                <Text
+                  color={'ghostVerse.green.base'}
+                  fontFamily={'vt323'}
+                  fontSize={'2xl'}
+                  _hover={{ textDecoration: 'underline' }}
+                >
+                  {link}
+                </Text>
+              </Link>
+            </ListItem>
+          ))}
+        </UnorderedList>
       </MainLayout>
     </>
   );
