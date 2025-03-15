@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { getBuds, Bud } from '../../config/buds';
 import { MainLayout } from '../../components/MainLayout';
@@ -482,39 +482,13 @@ export default function BudPage({ bud }: BudPageProps) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const buds = getBuds();
-
-  const paths = buds.map((bud) => ({
-    params: { slug: bud.slug },
-  }));
-
-  return { paths, fallback: 'blocking' };
-};
-
-export const getStaticProps: GetStaticProps<BudPageProps> = async ({
+export const getServerSideProps: GetServerSideProps<BudPageProps> = async ({
   params,
 }) => {
-  if (!params) {
-    return {
-      notFound: true,
-    };
-  }
+  if (!params) return { notFound: true };
 
-  const buds = getBuds();
+  const buds = getBuds(); // Fetch buds using the getBuds function
+  const bud = buds.find((p) => p.slug === params.slug); // Find the bud based on the slug from params
 
-  const bud = buds.find((p) => p.slug === params?.slug);
-
-  if (!bud) {
-    return {
-      notFound: true,
-    };
-  }
-
-  return {
-    props: {
-      bud,
-    },
-    revalidate: 60 * 60, // 1 hour
-  };
+  return bud ? { props: { bud } } : { notFound: true }; // Return the bud if found, or return notFound if not
 };

@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { getGadgets, Gadget } from '../../config/gadgets';
@@ -253,38 +253,11 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  //console.log('Generating paths...');
-  const gadgets = getGadgets();
-
-  const paths = gadgets.map((gadget) => ({
-    params: { slug: gadget.slug },
-  }));
-
-  return { paths, fallback: 'blocking' };
-};
-
-export const getStaticProps: GetStaticProps<GadgetsPageProps> = async ({
+export const getServerSideProps: GetServerSideProps<GadgetsPageProps> = async ({
   params,
 }) => {
-  if (!params) {
-    return {
-      notFound: true,
-    };
-  }
+  if (!params) return { notFound: true };
   const gadgets = getGadgets();
-  const gadget = gadgets.find((p) => p.slug === params?.slug);
-
-  if (!gadget) {
-    return {
-      notFound: true,
-    };
-  }
-
-  return {
-    props: {
-      gadget,
-    },
-    revalidate: 60 * 60, // 1 hour
-  };
+  const gadget = gadgets.find((p) => p.slug === params.slug);
+  return gadget ? { props: { gadget } } : { notFound: true };
 };

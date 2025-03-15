@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { getNFTs, NFT } from '../../config/nfts';
@@ -294,30 +294,28 @@ export default function NFTPage({ nft, previousSlug, nextSlug }: NFTPageProps) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const nfts = getNFTs();
-  const paths = nfts.map((nft) => ({
-    params: { slug: nft.slug },
-  }));
-  return { paths, fallback: 'blocking' };
-};
+export const getServerSideProps: GetServerSideProps<NFTPageProps> = async ({
+  params,
+}) => {
+  if (!params) return { notFound: true };
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const { slug } = context.params!;
-  const nfts = getNFTs();
-  const currentIndex = nfts.findIndex((nft) => nft.slug === slug);
+  const nfts = getNFTs(); // Fetch NFTs using the getNFTs function
+  const currentIndex = nfts.findIndex((nft) => nft.slug === params.slug); // Find the current NFT by slug
 
+  // Determine the previous and next slugs
   const previousSlug = currentIndex > 0 ? nfts[currentIndex - 1].slug : null;
   const nextSlug =
     currentIndex < nfts.length - 1 ? nfts[currentIndex + 1].slug : null;
 
-  const nft = nfts[currentIndex];
+  const nft = nfts[currentIndex]; // Get the current NFT object
 
-  return {
-    props: {
-      nft,
-      previousSlug,
-      nextSlug,
-    },
-  };
+  return nft
+    ? {
+        props: {
+          nft,
+          previousSlug,
+          nextSlug,
+        },
+      }
+    : { notFound: true };
 };
