@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  functions = "out_functions"
+  publish = "out"
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/next"
+  status = 200
