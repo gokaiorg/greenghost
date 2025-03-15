@@ -42,6 +42,7 @@ const nextConfig = {
       'testnet-media.elrond.com',
     ],
   },
+  reactStrictMode: true,
   experimental: {
     scrollRestoration: true,
     esmExternals: false,
