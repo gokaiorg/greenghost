@@ -82,6 +82,7 @@ export const MenuFooter = () => {
         as="nav"
         mr={{ base: '0', md: '0' }}
         ml={{ base: 'auto' }}
+        mt={10}
         aria-label="Footer Navigation"
         textAlign={'left'}
       >

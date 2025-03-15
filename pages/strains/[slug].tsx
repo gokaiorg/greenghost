@@ -474,7 +474,6 @@ export default function BudPage({ bud }: BudPageProps) {
               </Link>
             </Box>
           )}
-
           <HomeTopInfos />
         </Box>
       </MainLayout>

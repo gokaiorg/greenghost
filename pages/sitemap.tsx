@@ -1,4 +1,7 @@
-import { NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
+export const getServerSideProps: GetServerSideProps = async () => {
+  return { props: {} };
+};
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 // import xml2js from 'xml2js';

@@ -6,14 +6,18 @@ import Head from 'next/head';
 import { MenuFullList } from '../../components/shop/elements/MenuFullList';
 import { Box, Text } from '@chakra-ui/react';
 import { HomeSectionTitle } from '../../components/HomeSectionTitle';
-import Image from 'next/image';
 import { ImgMenu } from '../../components/media/ImgMenu';
+import Image from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export const getServerSideProps: GetServerSideProps = async () => {
   return { props: {} };
 };
 
 const MenuFull: NextPage = () => {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 300], [0, -100]);
+
   return (
     <>
       <Head>
@@ -55,42 +59,65 @@ const MenuFull: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <Box
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          textAlign="center"
-          my={4}
-          lineHeight={1}
-        >
-          <ImgMenu />
-          <HomeSectionTitle title="Menu" />
-        </Box>
         <Box as="main">
-          <Text
-            as="p"
-            fontSize={{ base: '30px', md: '35px' }}
-            lineHeight={{ base: '25px', md: '30px' }}
-            fontFamily="vt323"
+          <Box
+            as="section"
+            aria-label="Banner"
+            position="relative"
+            height="100%"
+            width="100%"
+            overflow="hidden"
             mb={10}
-            textAlign={'center'}
           >
-            At Green Ghost, we&apos;re passionate about providing our customers
-            with the best cannabis products available. Our menu is constantly
-            updated with new and exciting strains, as well as a range of CBD and
-            THC products to suit every need and preference.
-          </Text>
-          <MenuFullList />
-          <Box>
-            <Image
-              src="/media/green-ghost-best-degen-weed-shop-menu.webp"
-              alt="Weed & Cannabis Products Menu"
-              width={2048}
-              height={1366}
-              sizes="100%"
-              quality={75}
-            />
+            <motion.div
+              style={{
+                y,
+                position: 'absolute',
+                top: '-65%',
+                left: 0,
+                width: '100%',
+                height: '200%',
+                zIndex: -1,
+              }}
+            >
+              <Image
+                src="/media/green-ghost-best-degen-weed-shop-menu.webp"
+                alt="Weed & Cannabis Products Menu"
+                title="Weed & Cannabis Products Menu"
+                layout="fill"
+                objectFit="cover"
+                quality={75}
+                priority
+              />
+            </motion.div>
+            <Box
+              bg="rgba(0, 0, 0, 0.8)"
+              p={2}
+              display={'flex'}
+              flexDir={'column'}
+              justifyContent={'center'}
+              alignItems={'center'}
+              h={'100%'}
+              minHeight={{ base: 'auto', md: '400px' }}
+            >
+              <ImgMenu />
+              <HomeSectionTitle title="Menu" />
+              <Text
+                as="p"
+                fontSize={{ base: '30px', md: '34px' }}
+                lineHeight={{ base: '25px', md: '30px' }}
+                fontFamily="vt323"
+                mt={5}
+                textAlign={'center'}
+              >
+                At Green Ghost, we&apos;re passionate about providing our
+                customers with the best cannabis products available. Our menu is
+                constantly updated with new and exciting strains, as well as a
+                range of CBD and THC products to suit every need and preference.
+              </Text>
+            </Box>
           </Box>
+          <MenuFullList />
         </Box>
       </MainLayout>
     </>

@@ -13,8 +13,12 @@ import { buds } from '../../config/buds';
 import { BudAllStrains } from '../../components/shop/BudAllStrains';
 import { ImgMenu } from '../../components/media/ImgMenu';
 import { HomeSectionTitle } from '../../components/HomeSectionTitle';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Strains: NextPage = () => {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 300], [0, -100]);
+
   const itemListJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -64,7 +68,7 @@ const Strains: NextPage = () => {
         />
         <meta
           property="og:image"
-          content="https://green.gd/media/green-ghost-degen-weed-shop-buds-menu.webp"
+          content="https://green.gd/media/green-ghost-best-degen-weed-shop-strains.webp"
         />
         <meta property="og:image:width" content="2048" />
         <meta property="og:image:height" content="1366" />
@@ -79,7 +83,7 @@ const Strains: NextPage = () => {
         />
         <meta
           name="twitter:image"
-          content="https://green.gd/media/green-ghost-degen-weed-shop-buds-menu.webp"
+          content="https://green.gd/media/green-ghost-best-degen-weed-shop-strains.webp"
         />
         <meta name="twitter:url" content="https://green.gd/strains" />
         <script
@@ -91,45 +95,67 @@ const Strains: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <Box
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          textAlign="center"
-          my={4}
-          lineHeight={1}
-        >
-          <ImgMenu />
-          <HomeSectionTitle title="Strains" />
-        </Box>
         <Box as="main">
-          <Text
-            as="p"
-            fontSize={{ base: '30px', md: '35px' }}
-            lineHeight={{ base: '25px', md: '30px' }}
-            fontFamily="vt323"
+          <Box
+            as="section"
+            aria-label="Banner"
+            position="relative"
+            height="100%"
+            width="100%"
+            overflow="hidden"
             mb={10}
-            textAlign={'center'}
           >
-            At Green Ghost, we believe that everyone deserves access to
-            high-quality cannabis. That&apos;s why we&apos;ve curated a
-            selection of premium strains that cater to all tastes and
-            preferences. From beginners to seasoned enthusiasts, our strains
-            page is the perfect place to start your cannabis journey. Browse,
-            learn, and discover the perfect strain for you.
-          </Text>
-          <BudAllStrains />
-          <Box w={{ base: '100%' }}>
-            <Image
-              src="/media/green-ghost-degen-weed-shop-buds-menu.webp"
-              alt="Buy Premium Cannabis Strains Online"
-              title="Buy Premium Cannabis Strains Online"
-              width={2048}
-              height={1366}
-              sizes="100%"
-              quality={75}
-            />
+            <motion.div
+              style={{
+                y,
+                position: 'absolute',
+                top: '-65%',
+                left: 0,
+                width: '100%',
+                height: '200%',
+                zIndex: -1,
+              }}
+            >
+              <Image
+                src="/media/green-ghost-best-degen-weed-shop-strains.webp"
+                alt="Buy Premium Cannabis Strains Online"
+                title="Buy Premium Cannabis Strains Online"
+                layout="fill"
+                objectFit="cover"
+                quality={75}
+                priority
+              />
+            </motion.div>
+            <Box
+              bg="rgba(0, 0, 0, 0.8)"
+              p={2}
+              display={'flex'}
+              flexDir={'column'}
+              justifyContent={'center'}
+              alignItems={'center'}
+              h={'100%'}
+              minHeight={{ base: 'auto', md: '400px' }}
+            >
+              <ImgMenu />
+              <HomeSectionTitle title="Strains" />
+              <Text
+                as="p"
+                fontSize={{ base: '30px', md: '34px' }}
+                lineHeight={{ base: '25px', md: '30px' }}
+                fontFamily="vt323"
+                mt={5}
+                textAlign={'center'}
+              >
+                At Green Ghost, we believe that everyone deserves access to
+                high-quality cannabis. That&apos;s why we&apos;ve curated a
+                selection of premium strains that cater to all tastes and
+                preferences. From beginners to seasoned enthusiasts, our strains
+                page is the perfect place to start your cannabis journey.
+                Browse, learn, and discover the perfect strain for you.
+              </Text>
+            </Box>
           </Box>
+          <BudAllStrains />
         </Box>
       </MainLayout>
     </>
