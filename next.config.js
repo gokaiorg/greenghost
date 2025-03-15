@@ -45,6 +45,7 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
     esmExternals: false,
+    outputStandalone: true,
   },
   async redirects() {
     return [
