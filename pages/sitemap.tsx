@@ -98,7 +98,13 @@ const SitemapPage: NextPage<{ allLinks: string[] }> = ({ allLinks }) => {
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
         <HomeSectionTitle title="Sitemap - All you need is links!" />
-        <Box as="ul" listStyleType="none" p={0} aria-label="Sitemap links list" mt={5}>
+        <Box
+          as="ul"
+          listStyleType="none"
+          p={0}
+          aria-label="Sitemap links list"
+          mt={5}
+        >
           {allLinks.length > 0 ? (
             allLinks.map((link) => (
               <Box as="li" aria-label={link} key={link}>
