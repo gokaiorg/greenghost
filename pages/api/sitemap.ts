@@ -1,54 +1,14 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import xml2js from 'xml2js';
 
-const SITE_URL = 'https://green.gd';
-// Define the expected response structure for slugs
-interface SlugResponse {
-  slug: string;
-}
+const BASE_URL = 'https://green.gd';
 
-// Fetch dynamic slugs
-const fetchSlugs = async (type: string): Promise<string[]> => {
+/**
+ * Fetch dynamic slugs from different categories.
+ */
+const fetchSlugs = async (): Promise<string[]> => {
   try {
-    const res = await fetch(`${SITE_URL}/api/${type}`);
-    const data: SlugResponse[] = await res.json();
-
-    if (!Array.isArray(data)) {
-      console.error(`Unexpected response from ${type} API:`, data);
-      return [];
-    }
-
-    return data.map((item) => `${SITE_URL}/${type}/${item.slug}`);
-  } catch (err) {
-    console.error(`Error fetching ${type} slugs:`, err);
-    return [];
-  }
-};
-
-// Define XML URL structure
-interface XmlUrl {
-  loc: string[];
-}
-
-// Generate the sitemap XML
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  try {
-    // Fetch static sitemap
-    const sitemapRes = await fetch(`${SITE_URL}/sitemap-0.xml`);
-    const xmlData = await sitemapRes.text();
-    const jsonData = (await xml2js.parseStringPromise(xmlData)) as {
-      urlset: { url: XmlUrl[] };
-    };
-
-    const staticLinks = jsonData.urlset.url.map((url) => url.loc[0]);
-
-    console.log('Fetched Static Sitemap:', staticLinks);
-
-    // Fetch dynamic slugs
-    const slugTypes = [
+    const categories = [
       'gadgets',
       'concentrates',
       'strains',
@@ -56,30 +16,68 @@ export default async function handler(
       'nft',
       'weed-grower',
     ];
-    const dynamicLinksArray = await Promise.all(slugTypes.map(fetchSlugs));
 
-    // Merge all URLs
-    const allLinks: string[] = [...staticLinks, ...dynamicLinksArray.flat()];
-
-    console.log('Final Sitemap XML Links:', allLinks);
-
-    // Build XML
-    const builder = new xml2js.Builder({ headless: true });
-    const xml = builder.buildObject({
-      urlset: {
-        $: { xmlns: 'http://www.sitemaps.org/schemas/sitemap/0.9' },
-        url: allLinks.map((link) => ({
-          loc: link,
-          lastmod: new Date().toISOString().split('T')[0],
-        })),
-      },
+    const fetchPromises = categories.map(async (category) => {
+      const res = await fetch(`${BASE_URL}/api/${category}/slugs`);
+      const data = await res.json();
+      return data.slugs.map((slug: string) => `/${category}/${slug}`);
     });
 
-    // Set headers & return XML
+    const slugs = await Promise.all(fetchPromises);
+    return slugs.flat(); // Flatten array to a single list of slugs
+  } catch (error) {
+    console.error('Error fetching slugs:', error);
+    return [];
+  }
+};
+
+/**
+ * Generate XML for a given list of URLs.
+ */
+const generateSitemapXml = (urls: { loc: string; lastmod: string }[]) => {
+  const builder = new xml2js.Builder({ headless: true, rootName: 'urlset' });
+  return builder.buildObject({
+    $: { xmlns: 'http://www.sitemaps.org/schemas/sitemap/0.9' },
+    url: urls.map(({ loc, lastmod }) => ({
+      loc,
+      lastmod,
+    })),
+  });
+};
+
+/**
+ * API Handler for generating the sitemap dynamically.
+ */
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const slugs = await fetchSlugs();
+
+    const staticUrls = [
+      '/',
+      '/about',
+      '/contact',
+      '/membership',
+      '/shop',
+    ].map((path) => ({
+      loc: `${BASE_URL}${path}`,
+      lastmod: new Date().toISOString(),
+    }));
+
+    const dynamicUrls = slugs.map((slug) => ({
+      loc: `${BASE_URL}${slug}`,
+      lastmod: new Date().toISOString(),
+    }));
+
+    const allUrls = [...staticUrls, ...dynamicUrls];
+
+    console.log('Total URLs in Sitemap:', allUrls.length);
+
+    const sitemapXml = generateSitemapXml(allUrls);
+
     res.setHeader('Content-Type', 'application/xml');
-    res.status(200).send(xml);
-  } catch (err) {
-    console.error('Error generating sitemap XML:', err);
-    res.status(500).send('Failed to generate sitemap');
+    res.status(200).send(sitemapXml);
+  } catch (error) {
+    console.error('Error generating sitemap:', error);
+    res.status(500).end();
   }
 }
