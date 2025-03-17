@@ -1,33 +1,67 @@
-import { NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-// import xml2js from 'xml2js';
 const xml2js = require('xml2js');
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import Link from 'next/link';
-import { Box } from '@chakra-ui/react';
+import { Text, Box } from '@chakra-ui/react';
 
-const SitemapPage: NextPage = () => {
-  const [sitemapLinks, setSitemapLinks] = useState<string[]>([]);
+// Function to fetch slugs dynamically
+const fetchSlugs = async (type: string) => {
+  try {
+    const res = await fetch(`https://green.gd/api/${type}`); // Adjust API endpoint
+    const data = await res.json();
 
-  useEffect(() => {
-    const fetchSitemap = async () => {
-      try {
-        const res = await fetch('/sitemap-0.xml');
-        const xmlData = await res.text();
-        const jsonData = await xml2js.parseStringPromise(xmlData);
-        const links = jsonData.urlset.url.map((url: any) => url.loc[0]);
-        setSitemapLinks(links);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    fetchSitemap();
-  }, []);
+    console.log(`Fetched ${type} slugs:`, data); // DEBUG LOG
 
+    if (!Array.isArray(data)) {
+      console.error(`Unexpected response from ${type} API:`, data);
+      return [];
+    }
+
+    return data.map((item: any) => `https://green.gd/${type}/${item.slug}`);
+  } catch (err) {
+    console.error(`Error fetching ${type} slugs:`, err);
+    return [];
+  }
+};
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  try {
+    // Fetch sitemap XML
+    const sitemapRes = await fetch('https://green.gd/sitemap-0.xml');
+    const xmlData = await sitemapRes.text();
+    const jsonData = await xml2js.parseStringPromise(xmlData);
+    const sitemapLinks = jsonData.urlset.url.map((url: any) => url.loc[0]);
+
+    console.log('Fetched XML Sitemap:', sitemapLinks); // DEBUG LOG
+
+    // Fetch slugs from different categories
+    const slugTypes = [
+      'gadgets',
+      'concentrates',
+      'strains',
+      'edibles',
+      'nft',
+      'weed-grower',
+    ];
+    const slugLinksArray = await Promise.all(slugTypes.map(fetchSlugs));
+
+    // Merge both sets of links
+    const allLinks = [...sitemapLinks, ...slugLinksArray.flat()];
+
+    console.log('Final Merged Sitemap Links:', allLinks); // DEBUG LOG
+
+    return { props: { allLinks } };
+  } catch (err) {
+    console.error('Error generating sitemap:', err);
+    return { props: { allLinks: [] } };
+  }
+};
+
+const SitemapPage: NextPage<{ allLinks: string[] }> = ({ allLinks }) => {
   return (
     <>
       <Head>
@@ -64,18 +98,33 @@ const SitemapPage: NextPage = () => {
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
         <HomeSectionTitle title="Sitemap - All you need is links!" />
-        {sitemapLinks.map((link) => (
-          <Box
-            key={link}
-            color={'ghostVerse.green.base'}
-            fontFamily={'vt323'}
-            fontSize={'2xl'}
-          >
-            <Link href={link} title={link} passHref>
-              {link}
-            </Link>
-          </Box>
-        ))}
+        <Box
+          as="ul"
+          listStyleType="none"
+          p={0}
+          aria-label="Sitemap links list"
+          mt={5}
+        >
+          {allLinks.length > 0 ? (
+            allLinks.map((link) => (
+              <Box as="li" aria-label={link} key={link}>
+                <Link href={link} passHref>
+                  <Text
+                    as={'span'}
+                    color={'ghostVerse.green.base'}
+                    fontFamily={'vt323'}
+                    fontSize={'2xl'}
+                    _hover={{ textDecoration: 'underline' }}
+                  >
+                    {link}
+                  </Text>
+                </Link>
+              </Box>
+            ))
+          ) : (
+            <Text>No links found. Check console logs.</Text>
+          )}
+        </Box>
       </MainLayout>
     </>
   );

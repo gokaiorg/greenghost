@@ -1,4 +1,8 @@
-import type { NextPage } from 'next';
+import type { GetServerSideProps, NextPage } from 'next';
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return { props: {} };
+};
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
@@ -92,7 +96,7 @@ const WeedDriveThru: NextPage = () => {
             width={{ base: '100%', lg: '50%' }}
             mb={2}
           >
-            <Link href={'/weed-shop'} title={'Weed Shop'} passHref>
+            <Link href={'/menu/buds'} title={'Weed Shop'} passHref>
               <Text
                 as={'h2'}
                 fontSize={{ base: 'xl', lg: '2xl' }}

@@ -13,7 +13,7 @@ type Route = {
 
 const Links: Route[] = [
   {
-    path: '/weed-shop',
+    path: '/menu/buds',
     image: '/media/buds-menu-weed-shop-green-ghost.webp',
     label: 'Buds',
     title: 'Weed Shop Premium Cannabis Buds Menu',
@@ -86,7 +86,7 @@ export const MenuFullList = () => {
       >
         {Links.map((link) => (
           <Box
-            w={{ base: '100%', sm: '50%', md: '33.33333%', lg: '25%' }}
+            w={{ base: '100%', sm: '100%', md: '33.33333%', lg: '25%' }}
             as="li"
             aria-label={`${link.label} Menu`}
             key={link.label}
@@ -112,27 +112,36 @@ export const MenuFullList = () => {
                   display={'flex'}
                   alignItems={'end'}
                   lineHeight={1}
+                  my={1}
                 >
                   {link.label} Menu
                 </Box>
-                <Image
-                  src={`${link.image}`}
-                  alt={`${link.title}`}
-                  width={1366}
-                  height={1366}
-                  sizes="100%"
-                  quality={75}
-                />
-                <Text
-                  as="p"
-                  fontSize={{ base: '25px', md: '30px' }}
-                  lineHeight={{ base: '20px', md: '25px' }}
-                  fontFamily="vt323"
-                  w={{ base: '100%', md: '100%' }}
-                  whiteSpace={'normal'}
+                <Box
+                  display={'flex'}
+                  flexDirection={{ base: 'row', md: 'column' }}
                 >
-                  {link.description}
-                </Text>
+                  <Box w={{ base: '50%', md: '100%' }} mr={{ base: 2, md: 0 }}>
+                    <Image
+                      src={`${link.image}`}
+                      alt={`${link.title}`}
+                      width={1366}
+                      height={1366}
+                      sizes="100%"
+                      quality={75}
+                    />
+                  </Box>
+                  <Text
+                    as="p"
+                    fontSize={{ base: '25px' }}
+                    lineHeight={{ base: '20px' }}
+                    fontFamily="vt323"
+                    w={{ base: '50%', md: '100%' }}
+                    whiteSpace={'normal'}
+                    my={1}
+                  >
+                    {link.description}
+                  </Text>
+                </Box>
               </Box>
             </Link>
           </Box>

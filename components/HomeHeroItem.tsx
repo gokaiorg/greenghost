@@ -18,9 +18,6 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
   image,
   imageAlt,
   description,
-  // link,
-  // linkTitle,
-  // linkLabel,
 }) => {
   return (
     <Box as="div" display="flex" flexDirection="column" position="relative">
@@ -77,34 +74,12 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
           {description}
         </Text>
         <Box
-          aria-label="Learn about weed"
+          aria-label="Contact us now"
           display={'flex'}
           flexWrap={'wrap'}
           gap={2}
           mx={'auto'}
         >
-          {/* <Link href={link} title={linkTitle} passHref>
-            <Text
-              as="span"
-              display="inline-flex"
-              fontSize={{ base: 'lg', md: 'xl' }}
-              borderWidth={1}
-              px={6}
-              pb={2}
-              mt={10}
-              fontFamily="CubicFive12"
-              color="black"
-              borderColor="ghostVerse.green.base"
-              bgColor="ghostVerse.green.base"
-              _hover={{
-                bgColor: 'black',
-                color: 'ghostVerse.green.base',
-              }}
-              mx="auto"
-            >
-              {linkLabel}
-            </Text>
-          </Link> */}
           <Link
             href={'/contact'}
             title={'Contact Our Weed Shop Team To Order'}

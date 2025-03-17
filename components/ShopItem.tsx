@@ -118,7 +118,7 @@ export const ShopItem = ({ shop }: ShopItemProps) => {
                 mr={1}
                 mb={1}
                 key={social.label}
-                px={1}
+                p={1}
                 color={'black'}
                 bgColor={'ghostVerse.green.base'}
                 _hover={{

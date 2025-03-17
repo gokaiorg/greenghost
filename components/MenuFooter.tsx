@@ -27,6 +27,12 @@ export const MenuFooter = () => {
       ariaLabel: 'Learn about weed',
     },
     {
+      href: '/strains',
+      title: 'Buy Premium Cannabis Strains Online',
+      label: 'All the strains',
+      ariaLabel: 'All the strains',
+    },
+    {
       href: '/wholesale',
       title: 'Wholesale Cannabis Premium Strains in Phuket',
       label: 'Bulk ordering',
@@ -37,6 +43,12 @@ export const MenuFooter = () => {
       title: 'Budtender Job Opening at Our Cannabis Shop',
       label: 'We are hiring',
       ariaLabel: 'We are hiring',
+    },
+    {
+      href: '/cannabis-club',
+      title: 'Best Cannabis Social Club in Phuket Thailand',
+      label: 'Join the club',
+      ariaLabel: 'Join the club',
     },
     {
       href: '/about',
@@ -70,6 +82,7 @@ export const MenuFooter = () => {
         as="nav"
         mr={{ base: '0', md: '0' }}
         ml={{ base: 'auto' }}
+        mt={10}
         aria-label="Footer Navigation"
         textAlign={'left'}
       >
