@@ -19,12 +19,23 @@ const fetchSlugs = async (): Promise<string[]> => {
 
     const fetchPromises = categories.map(async (category) => {
       const res = await fetch(`${BASE_URL}/api/${category}/slugs`);
+      if (!res.ok) {
+        console.error(`Failed to fetch slugs for ${category}: ${res.status}`);
+        return [];
+      }
       const data = await res.json();
+      console.log(`Fetched slugs for ${category}:`, data.slugs); // Debug log
+      if (!Array.isArray(data.slugs)) {
+        console.error(`Invalid slug data for ${category}:`, data);
+        return [];
+      }
       return data.slugs.map((slug: string) => `/${category}/${slug}`);
     });
 
     const slugs = await Promise.all(fetchPromises);
-    return slugs.flat(); // Flatten array to a single list of slugs
+    const flatSlugs = slugs.flat();
+    console.log('All fetched slugs:', flatSlugs); // Debug log
+    return flatSlugs;
   } catch (error) {
     console.error('Error fetching slugs:', error);
     return [];
@@ -71,6 +82,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const allUrls = [...staticUrls, ...dynamicUrls];
 
     console.log('Total URLs in Sitemap:', allUrls.length);
+    console.log('Sample of all URLs:', allUrls.slice(0, 10)); // Debug log
 
     const sitemapXml = generateSitemapXml(allUrls);
 
