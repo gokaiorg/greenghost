@@ -1,62 +1,87 @@
 import { GetServerSideProps, NextPage } from 'next';
 import Head from 'next/head';
-const xml2js = require('xml2js');
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import Link from 'next/link';
 import { Text, Box } from '@chakra-ui/react';
+import fs from 'fs';
+import path from 'path';
 
-// Function to fetch slugs dynamically
-const fetchSlugs = async (type: string) => {
+const BASE_URL = 'https://green.gd';
+
+const fetchSlugs = async (category: string): Promise<string[]> => {
   try {
-    const res = await fetch(`https://green.gd/api/${type}`); // Adjust API endpoint
-    const data = await res.json();
-
-    console.log(`Fetched ${type} slugs:`, data); // DEBUG LOG
-
-    if (!Array.isArray(data)) {
-      console.error(`Unexpected response from ${type} API:`, data);
+    const res = await fetch(`${BASE_URL}/api/${category}`);
+    if (!res.ok) {
       return [];
     }
-
-    return data.map((item: any) => `https://green.gd/${type}/${item.slug}`);
+    const data = await res.json();
+    let slugs: string[] = [];
+    if (Array.isArray(data)) {
+      slugs = data.map((item: any) => item.slug);
+    } else if (data.slugs && Array.isArray(data.slugs)) {
+      slugs = data.slugs;
+    } else {
+      return [];
+    }
+    return slugs.map((slug: string) => `${BASE_URL}/${category}/${slug}`);
   } catch (err) {
-    console.error(`Error fetching ${type} slugs:`, err);
     return [];
   }
 };
 
+const getStaticUrls = (): string[] => {
+  const pagesDir = path.join(process.cwd(), 'pages');
+  const staticUrls: string[] = [];
+
+  const scanDirectory = (dir: string, prefix: string = '') => {
+    const items = fs.readdirSync(dir, { withFileTypes: true });
+    items.forEach((item) => {
+      if (item.isDirectory() && item.name !== 'api') {
+        scanDirectory(path.join(dir, item.name), `${prefix}${item.name}/`);
+      } else if (
+        item.name.endsWith('.tsx') &&
+        !item.name.startsWith('[') &&
+        !item.name.startsWith('_')
+      ) {
+        const baseRoute =
+          item.name === 'index.tsx'
+            ? prefix || '/'
+            : `${prefix}${item.name.replace('.tsx', '')}`;
+        const route = baseRoute.endsWith('/')
+          ? baseRoute.slice(0, -1)
+          : baseRoute;
+        staticUrls.push(
+          `${BASE_URL}${route.startsWith('/') ? '' : '/'}${route}`
+        );
+      }
+    });
+  };
+
+  scanDirectory(pagesDir);
+  return staticUrls;
+};
+
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    // Fetch sitemap XML
-    const sitemapRes = await fetch('https://green.gd/sitemap-0.xml');
-    const xmlData = await sitemapRes.text();
-    const jsonData = await xml2js.parseStringPromise(xmlData);
-    const sitemapLinks = jsonData.urlset.url.map((url: any) => url.loc[0]);
-
-    console.log('Fetched XML Sitemap:', sitemapLinks); // DEBUG LOG
-
-    // Fetch slugs from different categories
-    const slugTypes = [
+    const staticUrls = getStaticUrls();
+    const categories = [
       'gadgets',
       'concentrates',
       'strains',
       'edibles',
+      'locations',
       'nft',
       'weed-grower',
     ];
-    const slugLinksArray = await Promise.all(slugTypes.map(fetchSlugs));
-
-    // Merge both sets of links
-    const allLinks = [...sitemapLinks, ...slugLinksArray.flat()];
-
-    console.log('Final Merged Sitemap Links:', allLinks); // DEBUG LOG
-
+    const slugPromises = categories.map((category) => fetchSlugs(category));
+    const slugLinksArray = await Promise.all(slugPromises);
+    const dynamicUrls = slugLinksArray.flat();
+    const allLinks = [...staticUrls, ...dynamicUrls];
     return { props: { allLinks } };
   } catch (err) {
-    console.error('Error generating sitemap:', err);
     return { props: { allLinks: [] } };
   }
 };
@@ -68,12 +93,12 @@ const SitemapPage: NextPage<{ allLinks: string[] }> = ({ allLinks }) => {
         <title>Sitemap - Green Ghost 🌿👻</title>
         <meta
           name="description"
-          content="Looking for a quick and easy way to navigate the Green Ghost website? Check out our sitemap page, where you can find links to all of our main pages and subsections. From our cannabis products to our membership program and more, our sitemap makes it easy to find what you're looking for. Browse through our website with ease and discover all that Green Ghost has to offer."
+          content="Navigate the Green Ghost website easily with our sitemap. Find links to all main pages and dynamic content like gadgets, strains, edibles, and more."
         />
         <meta property="og:title" content="Sitemap - Green Ghost 🌿👻" />
         <meta
           property="og:description"
-          content="Looking for a quick and easy way to navigate the Green Ghost website? Check out our sitemap page, where you can find links to all of our main pages and subsections. From our cannabis products to our membership program and more, our sitemap makes it easy to find what you're looking for. Browse through our website with ease and discover all that Green Ghost has to offer."
+          content="Navigate the Green Ghost website easily with our sitemap. Find links to all main pages and dynamic content like gadgets, strains, edibles, and more."
         />
         <meta
           property="og:image"
@@ -85,7 +110,7 @@ const SitemapPage: NextPage<{ allLinks: string[] }> = ({ allLinks }) => {
         <meta name="twitter:title" content="Sitemap - Green Ghost 🌿👻" />
         <meta
           name="twitter:description"
-          content="Looking for a quick and easy way to navigate the Green Ghost website? Check out our sitemap page, where you can find links to all of our main pages and subsections. From our cannabis products to our membership program and more, our sitemap makes it easy to find what you're looking for. Browse through our website with ease and discover all that Green Ghost has to offer."
+          content="Navigate the Green Ghost website easily with our sitemap. Find links to all main pages and dynamic content like gadgets, strains, edibles, and more."
         />
         <meta
           name="twitter:image"
@@ -110,10 +135,10 @@ const SitemapPage: NextPage<{ allLinks: string[] }> = ({ allLinks }) => {
               <Box as="li" aria-label={link} key={link}>
                 <Link href={link} passHref>
                   <Text
-                    as={'span'}
-                    color={'ghostVerse.green.base'}
-                    fontFamily={'vt323'}
-                    fontSize={'2xl'}
+                    as="span"
+                    color="ghostVerse.green.base"
+                    fontFamily="vt323"
+                    fontSize="2xl"
                     _hover={{ textDecoration: 'underline' }}
                   >
                     {link}
@@ -122,7 +147,7 @@ const SitemapPage: NextPage<{ allLinks: string[] }> = ({ allLinks }) => {
               </Box>
             ))
           ) : (
-            <Text>No links found. Check console logs.</Text>
+            <Text>No links found. Check server logs for details.</Text>
           )}
         </Box>
       </MainLayout>
