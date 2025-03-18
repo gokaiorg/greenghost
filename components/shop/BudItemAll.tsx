@@ -21,8 +21,8 @@ export const BudItemAll = ({ bud }: BudItemAllProps) => {
       p={0.5}
     >
       <Link
-        href={`weed-shop/${bud.slug}`}
-        title={`${bud.name} Cannabis Strain`}
+        href={`/strains/${bud.slug}`}
+        title={`Order ${bud.name} Cannabis Strain Online`}
         passHref
       >
         <Text

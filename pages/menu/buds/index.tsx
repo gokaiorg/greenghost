@@ -1,17 +1,21 @@
-import type { NextPage } from 'next';
-import { MainLayout } from '../../components/MainLayout';
-import { HeaderMenu } from '../../components/HeaderMenu';
-import { HeaderMenuButtons } from '../../components/HeaderMenuButtons';
-import { Bud } from '../../components/shop/Bud';
+import type { GetServerSideProps, NextPage } from 'next';
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return { props: {} };
+};
+import { MainLayout } from '../../../components/MainLayout';
+import { HeaderMenu } from '../../../components/HeaderMenu';
+import { HeaderMenuButtons } from '../../../components/HeaderMenuButtons';
+import { Bud } from '../../../components/shop/Bud';
 import Head from 'next/head';
-import { MenuWeedShop } from '../../components/shop/elements/MenuWeedShop';
-import { HomeFeature } from '../../components/HomeFeatures';
-import { BuyOnline } from '../../components/BuyOnline';
+import { MenuWeedShop } from '../../../components/shop/elements/MenuWeedShop';
+import { HomeFeature } from '../../../components/HomeFeatures';
+import { BuyOnline } from '../../../components/BuyOnline';
 import { Box } from '@chakra-ui/react';
 import Image from 'next/image';
-import { buds } from '../../config/buds';
+import { buds } from '../../../config/buds';
 
-const WeedShop: NextPage = () => {
+const Buds: NextPage = () => {
   const itemListJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -65,7 +69,7 @@ const WeedShop: NextPage = () => {
         />
         <meta property="og:image:width" content="2048" />
         <meta property="og:image:height" content="1366" />
-        <meta property="og:url" content="https://green.gd/weed-shop" />
+        <meta property="og:url" content="https://green.gd/menu/buds" />
         <meta
           name="twitter:title"
           content="Weed Shop Premium Cannabis Buds Menu - Green Ghost 🌿👻"
@@ -78,7 +82,7 @@ const WeedShop: NextPage = () => {
           name="twitter:image"
           content="https://green.gd/media/green-ghost-degen-weed-shop-buds-menu.webp"
         />
-        <meta name="twitter:url" content="https://green.gd/weed-shop" />
+        <meta name="twitter:url" content="https://green.gd/menu/buds" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
@@ -96,8 +100,8 @@ const WeedShop: NextPage = () => {
           <Box w={{ base: '100%' }}>
             <Image
               src="/media/green-ghost-degen-weed-shop-buds-menu.webp"
-              alt="Weed Shop Premium Cannabis Buds Menu - Green Ghost 🌿👻"
-              title="Weed Shop Premium Cannabis Buds Menu - Green Ghost 🌿👻"
+              alt="Weed Shop Premium Cannabis Buds Menu"
+              title="Weed Shop Premium Cannabis Buds Menu"
               width={2048}
               height={1366}
               sizes="100%"
@@ -110,4 +114,4 @@ const WeedShop: NextPage = () => {
   );
 };
 
-export default WeedShop;
+export default Buds;

@@ -12,7 +12,7 @@ type Route = {
 
 const Links: Route[] = [
   {
-    path: '/weed-shop',
+    path: '/menu/buds',
     image: '/media/green-ghost-degen-weed-shop-menu-buds.png',
     label: 'Buds',
     title: 'Weed Shop Premium Cannabis Buds Menu',

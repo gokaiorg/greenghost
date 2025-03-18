@@ -28,7 +28,7 @@ export const BudItem = ({ bud }: BudItemProps) => {
       width={{ base: '50%', md: '33.33333%', lg: '25%', xl: '20%' }}
       p={0.5}
     >
-      <Link href={`weed-shop/${bud.slug}`} title={bud.imgDesc} passHref>
+      <Link href={`/strains/${bud.slug}`} title={bud.imgDesc} passHref>
         <BoxItemShop>
           <Swiper
             spaceBetween={10}

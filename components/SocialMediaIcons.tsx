@@ -9,7 +9,8 @@ export const SocialMediaIcons = () => {
         <Box w={'50px'}>
           <Image
             src="/media/green-ghost-degen-weed-shop-heart.webp"
-            alt="Weed Menu - Weed delivery Phuket - Green Ghost Degen Community"
+            alt="Green Ghost Degen Community Love"
+            title="Green Ghost Degen Community Love"
             width={190}
             height={152}
             sizes="50px"

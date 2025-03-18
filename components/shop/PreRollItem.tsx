@@ -19,7 +19,7 @@ export const PreRollItem = ({ bud }: PreRollItemProps) => {
       lineHeight={1}
       pos={'relative'}
     >
-      <Link href={`/weed-shop/${bud.slug}`} title={bud.imgDesc} passHref>
+      <Link href={`/strains/${bud.slug}`} title={bud.imgDesc} passHref>
         <Box
           as="ul"
           aria-label="Product Details"
