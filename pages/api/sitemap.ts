@@ -59,20 +59,19 @@ const generateSitemapXml = (urls: { loc: string; lastmod: string }[]) => {
 /**
  * API Handler for generating the sitemap dynamically.
  */
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   try {
     const slugs = await fetchSlugs();
 
-    const staticUrls = [
-      '/',
-      '/about',
-      '/contact',
-      '/membership',
-      '/shop',
-    ].map((path) => ({
-      loc: `${BASE_URL}${path}`,
-      lastmod: new Date().toISOString(),
-    }));
+    const staticUrls = ['/', '/about', '/contact', '/membership', '/shop'].map(
+      (path) => ({
+        loc: `${BASE_URL}${path}`,
+        lastmod: new Date().toISOString(),
+      })
+    );
 
     const dynamicUrls = slugs.map((slug) => ({
       loc: `${BASE_URL}${slug}`,

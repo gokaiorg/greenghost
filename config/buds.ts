@@ -502,7 +502,7 @@ export const buds: Bud[] = [
     growerSlug: '',
     environment: 'Organic Indoor',
     grade: 'AAA Grade',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Runtz, also referred to as "Runtz OG," is a rare and highly sought-after hybrid marijuana strain created by the Cookies Fam by crossing Zkittlez with Gelato. It\'s recognized for its exceptional fruity flavor profile that mimics the aroma of sugary candy we all love. \n\n Its popularity has been rising steadily, and it was named Leafly Strain of the Year in 2020. According to growers, Runtz has resinous buds that range in color from deep purple to vibrant lime green. \n\n It boasts a smooth and creamy smoke that is easy to inhale. This strain is famous for its long-lasting uplifting effects and euphoric highs. Purple Caper Seeds also produced the same cross and marketed it as Gelato Zkittlez.',
@@ -548,10 +548,10 @@ export const buds: Bud[] = [
   {
     slug: 'popanonymous',
     name: 'Popanonymous',
-    price: 400,
-    dominance: 'Sativa',
-    indica: '40',
-    sativa: '60',
+    price: 300,
+    dominance: 'Hybrid',
+    indica: '50',
+    sativa: '50',
     THC: '29',
     CBD: '0',
     effects: 'Relaxed, Giggly, Aroused',
@@ -560,10 +560,10 @@ export const buds: Bud[] = [
     growerSlug: '',
     environment: 'Indoor',
     grade: 'AAAA Grade',
-    quantity: 0,
+    quantity: 50,
     origin: 'Phuket',
     description:
-      'Popanonymous is a potent sativa-dominant hybrid, boasting an impressive THC content of 29%. This strain is an unknown and unique cross of Gary Poppins, creating a powerful, energizing experience. With its strong lineage, Popanonymous delivers a combination of uplifting effects and rich flavors, making it a standout choice for sativa enthusiasts looking for both potency and a balanced, enjoyable high. \n\n Growers and users alike will appreciate Popanonymous for its resin-heavy buds, ideal for concentrates and extraction. The strain produces large, dense flowers coated in sticky trichomes, making it visually appealing and highly effective. Its robust growth structure also makes it a reliable strain for both indoor and outdoor cultivation, with generous yields and a relatively short flowering time. \n\n Popanonymous is celebrated for its complex flavor profile. Expect a refreshing burst of citrus and tropical fruit notes, followed by subtle earthy undertones. Its aromatic blend of sweet and earthy scents, combined with its energizing effects, make this strain perfect for daytime use, helping to keep you focused, creative, and motivated.',
+      'Popanonymous is a potent hybrid, boasting an impressive THC content of 29%. This strain is an unknown and unique cross of Gary Poppins, creating a powerful, energizing experience. With its strong lineage, Popanonymous delivers a combination of uplifting effects and rich flavors, making it a standout choice for sativa enthusiasts looking for both potency and a balanced, enjoyable high. \n\n Growers and users alike will appreciate Popanonymous for its resin-heavy buds, ideal for concentrates and extraction. The strain produces large, dense flowers coated in sticky trichomes, making it visually appealing and highly effective. Its robust growth structure also makes it a reliable strain for both indoor and outdoor cultivation, with generous yields and a relatively short flowering time. \n\n Popanonymous is celebrated for its complex flavor profile. Expect a refreshing burst of citrus and tropical fruit notes, followed by subtle earthy undertones. Its aromatic blend of sweet and earthy scents, combined with its energizing effects, make this strain perfect for daytime use, helping to keep you focused, creative, and motivated.',
     descSeo:
       'Popanonymous strain delivers 29% THC with uplifting, creative effects and sweet citrus flavors. Perfect for stress, depression, and fatigue relief.',
     images: [
