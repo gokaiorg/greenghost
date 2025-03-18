@@ -27,8 +27,8 @@ const dominanceData = [
 export const Dominances = () => {
   return (
     <Box
-      as="section"
-      aria-labelledby="Cannabis Dominance"
+      as="ul"
+      aria-labelledby="Cannabis Dominance List"
       display={'flex'}
       flexDirection={{ base: 'column', lg: 'row' }}
       alignItems={'stretch'}

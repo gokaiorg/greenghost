@@ -24,7 +24,12 @@ export const Shop = () => {
       >
         Find us
       </Text>
-      <Box display={'flex'} flexWrap={'wrap'}>
+      <Box
+        as="ul"
+        aria-label="Weed Shops Phuket Contact List"
+        display={'flex'}
+        flexWrap={'wrap'}
+      >
         {shops.map((shop) => (
           <ShopItem key={shop.slug} shop={shop} />
         ))}

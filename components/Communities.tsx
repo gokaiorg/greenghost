@@ -113,14 +113,14 @@ export const Communities = () => {
               href="/crypto-weed-shop-relax-and-earn"
               passHref
             >
-              Read More&nbsp;
+              Relax and earn
             </Link>
             <Link
               title="Community-driven collectible NFT DAO on MultiversX"
               href="https://ghostverse.org/mxghosts"
               passHref
             >
-              Buy Now
+              Get a Mr Ghost NFT
             </Link>
           </Box>
         </Box>
@@ -176,7 +176,7 @@ export const Communities = () => {
               href="https://card.weed.th/en/verified-cannabis-card-dispensaries"
               passHref
             >
-              Read More&nbsp;
+              Get cannabis card
             </Link>
             <Link
               title="Medicinal Cannabis Card for Thailand"

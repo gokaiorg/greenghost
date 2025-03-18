@@ -10,6 +10,9 @@ import { IconIndica } from '../media/IconIndica';
 
 type DominanceOption = 'All' | 'Sativa' | 'Indica' | 'Hybrid';
 
+const slugs = buds.map((bud) => bud.slug);
+console.log(slugs);
+
 const filterOptions: { label: DominanceOption; icon: JSX.Element }[] = [
   { label: 'Sativa', icon: <IconSativa /> },
   { label: 'Hybrid', icon: <IconHybrid /> },

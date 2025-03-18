@@ -39,7 +39,7 @@ export const BestWeedShops = () => {
       </Text>
       <Box
         as="ul"
-        aria-label="Best Weed Shops Phuket"
+        aria-label="Best Weed Shops Phuket List"
         listStyleType={'none'}
         w={'100%'}
         display={'flex'}
