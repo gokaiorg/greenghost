@@ -98,6 +98,8 @@ const generateSitemapXml = (urls: { loc: string; lastmod: string }[]) => {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { req, res, query } = context;
+  console.log('Query:', query); // Log the query object
+  console.log('Format:', query.format); // Log the format value
   const baseUrl =
     process.env.NODE_ENV === 'production'
       ? 'https://green.gd'
@@ -112,8 +114,10 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       (slug) => `${baseUrl}${slug.startsWith('/') ? '' : '/'}${slug}`
     ),
   ];
+  console.log('All links:', allLinks); // Log combined URLs
 
   if (query.format === 'xml') {
+    console.log('Serving XML'); // Confirm XML path
     const xmlUrls = allLinks.map((url) => ({
       loc: url,
       lastmod: new Date().toISOString(),
@@ -126,6 +130,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     return { props: {} };
   }
 
+  console.log('Serving HTML'); // Confirm HTML path
   return { props: { allLinks } };
 };
 
