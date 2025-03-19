@@ -8,25 +8,48 @@ import Link from 'next/link';
 import { Text, Box } from '@chakra-ui/react';
 import fs from 'fs';
 import path from 'path';
+import xml2js from 'xml2js';
 
-const BASE_URL = 'https://green.gd';
+interface Strain {
+  slug: string;
+  [key: string]: unknown;
+}
 
-const fetchSlugs = async (category: string): Promise<string[]> => {
+const fetchSlugs = async (): Promise<string[]> => {
   try {
-    const res = await fetch(`${BASE_URL}/api/${category}`);
-    if (!res.ok) {
-      return [];
-    }
-    const data = await res.json();
-    let slugs: string[] = [];
-    if (Array.isArray(data)) {
-      slugs = data.map((item: any) => item.slug);
-    } else if (data.slugs && Array.isArray(data.slugs)) {
-      slugs = data.slugs;
-    } else {
-      return [];
-    }
-    return slugs.map((slug: string) => `${BASE_URL}/${category}/${slug}`);
+    const categories = [
+      'locations',
+      'edibles',
+      'concentrates',
+      'strains',
+      'gadgets',
+      'weed-grower',
+      'nft',
+    ];
+    const baseUrl =
+      process.env.NODE_ENV === 'production'
+        ? 'https://green.gd'
+        : 'http://localhost:3000';
+    const fetchPromises = categories.map(async (category) => {
+      const res = await fetch(`${baseUrl}/api/${category}`);
+      if (!res.ok) {
+        return [];
+      }
+      const data = await res.json();
+
+      let slugs: string[] = [];
+      if (Array.isArray(data)) {
+        slugs = data.map((item: Strain) => item.slug);
+      } else if (data.slugs && Array.isArray(data.slugs)) {
+        slugs = data.slugs;
+      } else {
+        return [];
+      }
+      return slugs.map((slug: string) => `/${category}/${slug}`);
+    });
+
+    const slugs = await Promise.all(fetchPromises);
+    return slugs.flat();
   } catch (err) {
     return [];
   }
@@ -53,9 +76,7 @@ const getStaticUrls = (): string[] => {
         const route = baseRoute.endsWith('/')
           ? baseRoute.slice(0, -1)
           : baseRoute;
-        staticUrls.push(
-          `${BASE_URL}${route.startsWith('/') ? '' : '/'}${route}`
-        );
+        staticUrls.push(route);
       }
     });
   };
@@ -64,26 +85,48 @@ const getStaticUrls = (): string[] => {
   return staticUrls;
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  try {
-    const staticUrls = getStaticUrls();
-    const categories = [
-      'gadgets',
-      'concentrates',
-      'strains',
-      'edibles',
-      'locations',
-      'nft',
-      'weed-grower',
-    ];
-    const slugPromises = categories.map((category) => fetchSlugs(category));
-    const slugLinksArray = await Promise.all(slugPromises);
-    const dynamicUrls = slugLinksArray.flat();
-    const allLinks = [...staticUrls, ...dynamicUrls];
-    return { props: { allLinks } };
-  } catch (err) {
-    return { props: { allLinks: [] } };
+const generateSitemapXml = (urls: { loc: string; lastmod: string }[]) => {
+  const builder = new xml2js.Builder({ headless: true, rootName: 'urlset' });
+  return builder.buildObject({
+    $: { xmlns: 'http://www.sitemaps.org/schemas/sitemap/0.9' },
+    url: urls.map(({ loc, lastmod }) => ({
+      loc,
+      lastmod,
+    })),
+  });
+};
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const { req, res, query } = context;
+  const baseUrl =
+    process.env.NODE_ENV === 'production'
+      ? 'https://green.gd'
+      : 'http://localhost:3000';
+  const staticUrls = getStaticUrls();
+  const dynamicUrls = await fetchSlugs();
+  const allLinks = [
+    ...staticUrls.map(
+      (path) => `${baseUrl}${path.startsWith('/') ? '' : '/'}${path}`
+    ),
+    ...dynamicUrls.map(
+      (slug) => `${baseUrl}${slug.startsWith('/') ? '' : '/'}${slug}`
+    ),
+  ];
+
+  if (query.format === 'xml') {
+    const xmlUrls = allLinks.map((url) => ({
+      loc: url,
+      lastmod: new Date().toISOString(),
+    }));
+    const sitemapXml = generateSitemapXml(xmlUrls);
+
+    res.setHeader('Content-Type', 'application/xml');
+    res.write(sitemapXml);
+    res.end();
+    return { props: {} };
   }
+
+  return { props: { allLinks } };
 };
 
 const SitemapPage: NextPage<{ allLinks: string[] }> = ({ allLinks }) => {
