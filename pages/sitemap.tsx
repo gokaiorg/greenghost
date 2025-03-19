@@ -6,9 +6,6 @@ import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import Link from 'next/link';
 import { Text, Box } from '@chakra-ui/react';
-import fs from 'fs';
-import path from 'path';
-import xml2js from 'xml2js';
 
 interface Strain {
   slug: string;
@@ -32,79 +29,47 @@ const fetchSlugs = async (): Promise<string[]> => {
         : 'http://localhost:3000';
     const fetchPromises = categories.map(async (category) => {
       const res = await fetch(`${baseUrl}/api/${category}`);
-      if (!res.ok) {
-        return [];
-      }
+      if (!res.ok) return [];
       const data = await res.json();
-
       let slugs: string[] = [];
       if (Array.isArray(data)) {
         slugs = data.map((item: Strain) => item.slug);
       } else if (data.slugs && Array.isArray(data.slugs)) {
         slugs = data.slugs;
-      } else {
-        return [];
       }
       return slugs.map((slug: string) => `/${category}/${slug}`);
     });
-
-    const slugs = await Promise.all(fetchPromises);
-    return slugs.flat();
+    return (await Promise.all(fetchPromises)).flat();
   } catch (err) {
+    console.error('Error fetching slugs:', err);
     return [];
   }
 };
 
-const getStaticUrls = (): string[] => {
-  const pagesDir = path.join(process.cwd(), 'pages');
-  const staticUrls: string[] = [];
-
-  const scanDirectory = (dir: string, prefix: string = '') => {
-    const items = fs.readdirSync(dir, { withFileTypes: true });
-    items.forEach((item) => {
-      if (item.isDirectory() && item.name !== 'api') {
-        scanDirectory(path.join(dir, item.name), `${prefix}${item.name}/`);
-      } else if (
-        item.name.endsWith('.tsx') &&
-        !item.name.startsWith('[') &&
-        !item.name.startsWith('_')
-      ) {
-        const baseRoute =
-          item.name === 'index.tsx'
-            ? prefix || '/'
-            : `${prefix}${item.name.replace('.tsx', '')}`;
-        const route = baseRoute.endsWith('/')
-          ? baseRoute.slice(0, -1)
-          : baseRoute;
-        staticUrls.push(route);
-      }
-    });
-  };
-
-  scanDirectory(pagesDir);
-  return staticUrls;
+const getStaticUrls = async (): Promise<string[]> => {
+  try {
+    const baseUrl =
+      process.env.NODE_ENV === 'production'
+        ? 'https://green.gd'
+        : 'http://localhost:3000';
+    const res = await fetch(`${baseUrl}/api/static-urls`);
+    if (!res.ok) {
+      console.error('Failed to fetch static URLs:', res.status);
+      return [];
+    }
+    return await res.json();
+  } catch (err) {
+    console.error('Error fetching static URLs:', err);
+    return [];
+  }
 };
 
-const generateSitemapXml = (urls: { loc: string; lastmod: string }[]) => {
-  const builder = new xml2js.Builder({ headless: true, rootName: 'urlset' });
-  return builder.buildObject({
-    $: { xmlns: 'http://www.sitemaps.org/schemas/sitemap/0.9' },
-    url: urls.map(({ loc, lastmod }) => ({
-      loc,
-      lastmod,
-    })),
-  });
-};
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { req, res, query } = context;
-  console.log('Query:', query); // Log the query object
-  console.log('Format:', query.format); // Log the format value
+export const getServerSideProps: GetServerSideProps = async () => {
   const baseUrl =
     process.env.NODE_ENV === 'production'
       ? 'https://green.gd'
       : 'http://localhost:3000';
-  const staticUrls = getStaticUrls();
+  const staticUrls = await getStaticUrls();
   const dynamicUrls = await fetchSlugs();
   const allLinks = [
     ...staticUrls.map(
@@ -114,23 +79,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       (slug) => `${baseUrl}${slug.startsWith('/') ? '' : '/'}${slug}`
     ),
   ];
-  console.log('All links:', allLinks); // Log combined URLs
-
-  if (query.format === 'xml') {
-    console.log('Serving XML'); // Confirm XML path
-    const xmlUrls = allLinks.map((url) => ({
-      loc: url,
-      lastmod: new Date().toISOString(),
-    }));
-    const sitemapXml = generateSitemapXml(xmlUrls);
-
-    res.setHeader('Content-Type', 'application/xml');
-    res.write(sitemapXml);
-    res.end();
-    return { props: {} };
-  }
-
-  console.log('Serving HTML'); // Confirm HTML path
   return { props: { allLinks } };
 };
 
@@ -195,7 +143,7 @@ const SitemapPage: NextPage<{ allLinks: string[] }> = ({ allLinks }) => {
               </Box>
             ))
           ) : (
-            <Text>No links found. Check server logs for details.</Text>
+            <Text>No links found.</Text>
           )}
         </Box>
       </MainLayout>
