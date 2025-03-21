@@ -42,9 +42,16 @@ export const WholesaleWeed = () => {
         fontFamily={'vt323'}
         mb={4}
       >
-        Discover premium cannabis strains available for wholesale, starting at
-        just 50 THB per gram with a minimum purchase of 100g. Perfect for bulk
-        buyers!
+        Discover premium cannabis strains available for wholesale,
+        <Box as="span" color={'ghostVerse.green.base'}>
+          {' '}
+          starting at just 50 THB
+        </Box>{' '}
+        per gram with a{' '}
+        <Box as="span" color={'ghostVerse.green.base'}>
+          minimum purchase of 100g
+        </Box>
+        . Perfect for bulk buyers!
       </Text>
       <Box as="nav" aria-label="Best Weed Navigation">
         <Box

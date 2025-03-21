@@ -96,7 +96,10 @@ export default function BudPage({ bud }: BudPageProps) {
           content={`${bud.imgDesc} - Green Ghost 🌿👻`}
         />
         <meta property="og:description" content={bud.descSeo} />
-        <meta property="og:image" content={bud.images[1]} />
+        <meta
+          property="og:image"
+          content={`https://green.gd${bud.images[1]}`}
+        />
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="1000" />
         <meta
@@ -108,7 +111,10 @@ export default function BudPage({ bud }: BudPageProps) {
           content={`${bud.imgDesc} - Green Ghost 🌿👻`}
         />
         <meta name="twitter:description" content={bud.descSeo} />
-        <meta name="twitter:image" content={bud.images[1]} />
+        <meta
+          name="twitter:image"
+          content={`https://green.gd${bud.images[1]}`}
+        />
         <meta
           name="twitter:url"
           content={`https://green.gd/strains/${bud.slug}`}
