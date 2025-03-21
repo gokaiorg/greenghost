@@ -97,7 +97,10 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
           content={`${gadget.name} Cannabis Concentrate - Green Ghost 🌿👻`}
         />
         <meta property="og:description" content={gadget.descSeo} />
-        <meta property="og:image" content={gadget.images[1]} />
+        <meta
+          property="og:image"
+          content={`https://green.gd${gadget.images[1]}`}
+        />
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="1000" />
         <meta
@@ -109,7 +112,10 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
           content={`${gadget.name} Cannabis Concentrate - Green Ghost 🌿👻`}
         />
         <meta name="twitter:description" content={gadget.descSeo} />
-        <meta name="twitter:image" content={gadget.images[1]} />
+        <meta
+          name="twitter:image"
+          content={`https://green.gd${gadget.images[1]}`}
+        />
         <meta
           name="twitter:url"
           content={`https://green.gd/menu/gadgets/${gadget.slug}`}

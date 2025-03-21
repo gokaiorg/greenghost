@@ -99,7 +99,10 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
           content={`Order Online Best ${edible.name} Cannabis Edible - Green Ghost 🌿👻`}
         />
         <meta property="og:description" content={edible.descSeo} />
-        <meta property="og:image" content={edible.images[1]} />
+        <meta
+          property="og:image"
+          content={`https://green.gd${edible.images[1]}`}
+        />
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="1000" />
         <meta
@@ -111,7 +114,10 @@ export default function EdiblesPage({ edible }: EdiblesPageProps) {
           content={`Order Online Best ${edible.name} Cannabis Edible - Green Ghost 🌿👻`}
         />
         <meta name="twitter:description" content={edible.descSeo} />
-        <meta name="twitter:image" content={edible.images[1]} />
+        <meta
+          name="twitter:image"
+          content={`https://green.gd${edible.images[1]}`}
+        />
         <meta
           name="twitter:url"
           content={`https://green.gd/menu/edibles/${edible.slug}`}

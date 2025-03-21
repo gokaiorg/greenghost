@@ -7,12 +7,12 @@ export const HomeTopInfos = () => {
     <Box
       display="flex"
       my={{ base: 5, lg: 10 }}
-      flexDirection={{ base: 'column', lg: 'row' }}
+      flexDirection={{ base: 'column', md: 'row' }}
     >
       <Box
         as="section"
         aria-labelledby="New cannabis gadget in store"
-        w={{ base: '100%', lg: '65%' }}
+        w={{ base: '100%', md: '60%', lg: '65%' }}
         display="flex"
         bgColor="ghostVerse.dark.lighter"
         p={5}
@@ -51,7 +51,7 @@ export const HomeTopInfos = () => {
           </Text>
           <Text
             as="p"
-            fontSize={26}
+            fontSize={{ base: 26 }}
             lineHeight={1}
             fontFamily="vt323"
             mb="auto"
@@ -82,9 +82,10 @@ export const HomeTopInfos = () => {
               display="inline-flex"
               fontFamily="CubicFive12"
               fontSize={{ base: 'md', md: 'lg' }}
+              whiteSpace={'nowrap'}
               px={6}
               py={2}
-              mt={10}
+              mt={5}
               mx="auto"
               color="black"
               borderWidth={1}
@@ -105,7 +106,7 @@ export const HomeTopInfos = () => {
         aria-labelledby="Cannabis Club"
         display="flex"
         flexDirection="column"
-        w={{ base: '100%', lg: '35%' }}
+        w={{ base: '100%', md: '40%', lg: '35%' }}
         bgColor="ghostVerse.green.base"
         color="black"
         p={5}
@@ -126,13 +127,15 @@ export const HomeTopInfos = () => {
         <Box
           mt={5}
           display={'flex'}
-          alignItems={{ base: 'left', md: 'center' }}
-          justifyContent={{ base: 'left', md: 'center' }}
+          flexWrap={'wrap'}
+          alignItems={{ base: 'left', lg: 'center' }}
+          justifyContent={{ base: 'left', lg: 'center' }}
         >
           <Link
             href="/cannabis-club"
             passHref
             title="Best Cannabis Social Club in Phuket Thailand"
+            aria-label="Join the club"
           >
             <Text
               as="span"
@@ -165,6 +168,7 @@ export const HomeTopInfos = () => {
             ml={{ base: 2, md: 0 }}
             fontWeight={'bold'}
             whiteSpace={'nowrap'}
+            aria-label="Grab your NFT"
           >
             <Link href="/nft" passHref title="Green Ghost Degen NFT Collection">
               {'GET NFT!'}

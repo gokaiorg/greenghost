@@ -1,8 +1,4 @@
 import type { GetServerSideProps, NextPage } from 'next';
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  return { props: {} };
-};
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
@@ -12,8 +8,15 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
 import { ImgJobs } from '../components/media/ImgJobs';
+import { motion, useScroll, useTransform } from 'framer-motion';
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return { props: {} };
+};
 
 const Jobs: NextPage = () => {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 300], [0, -100]);
   return (
     <>
       <Head>
@@ -57,30 +60,63 @@ const Jobs: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth']} />
         </HeaderMenu>
-        <Box as="section" my={4}>
+        <Box as="main" my={4}>
           <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            textAlign="center"
-            my={4}
-            lineHeight={1}
-          >
-            <ImgJobs />
-            <HomeSectionTitle title="Jobs" />
-          </Box>
-          <Text
-            as="p"
-            fontSize={{ base: '3xl' }}
-            lineHeight={1}
-            fontFamily="vt323"
+            as="section"
+            aria-label="Banner"
+            position="relative"
+            height="100%"
+            width="100%"
+            overflow="hidden"
             mb={10}
-            textAlign={'center'}
           >
-            {
-              "At Green Ghost 🌿👻, we pride ourselves on providing premium cannabis products and exceptional service. As part of our team, you'll play a vital role in creating an inviting and educational experience for our customers while promoting our commitment to quality and compliance."
-            }
-          </Text>
+            <motion.div
+              style={{
+                y,
+                position: 'absolute',
+                top: '-65%',
+                left: 0,
+                width: '100%',
+                height: '200%',
+                zIndex: -1,
+              }}
+            >
+              <Image
+                src="/media/green-ghost-degen-weed-shop-jobs.webp"
+                alt="Budtender Job Opening at Our Cannabis Shop"
+                title="Budtender Job Opening at Our Cannabis Shop"
+                layout="fill"
+                objectFit="cover"
+                quality={75}
+                priority
+              />
+            </motion.div>
+            <Box
+              bg="rgba(0, 0, 0, 0.8)"
+              p={2}
+              display={'flex'}
+              flexDir={'column'}
+              justifyContent={'center'}
+              alignItems={'center'}
+              h={'100%'}
+              minHeight={{ base: 'auto', md: '400px' }}
+            >
+              <ImgJobs />
+              <HomeSectionTitle title="Jobs" />
+              <Text
+                as="p"
+                fontSize={{ base: '30px', md: '34px' }}
+                lineHeight={{ base: '25px', md: '30px' }}
+                fontFamily="vt323"
+                mt={5}
+                textAlign={'center'}
+              >
+                {
+                  "At Green Ghost 🌿👻, we pride ourselves on providing premium cannabis products and exceptional service. As part of our team, you'll play a vital role in creating an inviting and educational experience for our customers while promoting our commitment to quality and compliance."
+                }
+              </Text>
+            </Box>
+          </Box>
           <Box
             display="flex"
             flexDirection={{ base: 'column', lg: 'row' }}
@@ -368,17 +404,6 @@ const Jobs: NextPage = () => {
                 Apply
               </Link>
             </Text>
-          </Box>
-          <Box>
-            <Image
-              src="/media/green-ghost-degen-weed-shop-jobs.webp"
-              alt="Budtender Job Opening at Our Cannabis Shop"
-              title="Budtender Job Opening at Our Cannabis Shop"
-              width={2048}
-              height={1366}
-              sizes="100%"
-              quality={75}
-            />
           </Box>
         </Box>
       </MainLayout>

@@ -29,7 +29,7 @@ export const HomeFeature = () => {
         fontSize={{ base: 26, lg: 44 }}
         lineHeight={1}
         fontFamily="vt323"
-        w={{ base: '60%', md: '70%' }}
+        w={{ base: '100%', md: '70%' }}
         mb={5}
       >
         Experience the best weed delivery service in Phuket with Green Ghost. We
@@ -48,7 +48,7 @@ export const HomeFeature = () => {
           fontSize={{ base: 'md', md: 'lg' }}
           px={6}
           py={2}
-          mt={10}
+          mt={5}
           mx="auto"
           color="black"
           borderWidth={1}

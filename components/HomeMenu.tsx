@@ -100,7 +100,7 @@ export const HomeMenu = () => {
               </Box>
             ))}
           </Box>
-          <Box ml="auto" mt={4}>
+          <Box ml="auto" mt={4} aria-label="Explore our menu">
             <Link href="/menu" passHref title="Weed & Cannabis Products Menu">
               <Text
                 as="span"
