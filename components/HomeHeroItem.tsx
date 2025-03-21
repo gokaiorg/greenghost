@@ -2,6 +2,7 @@ import { Box, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 interface HomeHeroItemProps {
   title: string;
@@ -19,37 +20,50 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
   imageAlt,
   description,
 }) => {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 300], [0, -100]);
   return (
-    <Box as="div" display="flex" flexDirection="column" position="relative">
-      <Box
-        as="span"
-        w="100%"
-        h={{ base: '300px', md: '400px' }}
-        position="relative"
+    <Box
+      as="section"
+      aria-label="Banner"
+      position="relative"
+      height="100%"
+      width="100%"
+      overflow="hidden"
+      mb={10}
+    >
+      <motion.div
+        style={{
+          y,
+          position: 'absolute',
+          top: '-65%',
+          left: 0,
+          width: '100%',
+          height: '200%',
+          zIndex: -1,
+        }}
       >
         <Image
           src={image}
           alt={imageAlt}
           title={imageAlt}
-          fill
-          style={{ objectFit: 'cover' }}
-          priority
-          sizes="(max-width: 600px) 768px, (max-width: 1200px) 984px, 1240px"
+          layout="fill"
+          objectFit="cover"
           quality={75}
+          priority
         />
-      </Box>
+      </motion.div>
       <Box
-        pos="absolute"
-        top={0}
-        left={0}
-        right={0}
-        h="100%"
-        display="flex"
-        flexDirection="column"
-        justifyContent="center"
+        bg="rgba(0, 0, 0, 0.8)"
+        px={2}
+        py={10}
+        display={'flex'}
+        flexDir={'column'}
+        justifyContent={'center'}
+        alignItems={'center'}
         textAlign="center"
-        fontWeight="black"
-        bgColor="rgba(0, 0, 0, 0.8)" // Semi-transparent background for contrast
+        h={'100%'}
+        minHeight={{ base: 'auto', md: '400px' }}
       >
         <Text
           as="h1"
@@ -59,7 +73,7 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
           fontFamily="CubicFive12"
           color="ghostVerse.green.base"
           mx="auto"
-          w={{ base: '100%', md: '65%', lg: '70%', xl: '58%' }}
+          w={{ base: '100%', md: '65%', lg: '70%', xl: '60%' }}
         >
           {title}
         </Text>
@@ -92,7 +106,7 @@ export const HomeHeroItem: FC<HomeHeroItemProps> = ({
               fontSize={{ base: 'md', md: 'lg' }}
               px={6}
               py={2}
-              mt={10}
+              mt={5}
               mx="auto"
               color="black"
               borderWidth={1}
