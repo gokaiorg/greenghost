@@ -86,7 +86,13 @@ export const MenuFullList = () => {
       >
         {Links.map((link) => (
           <Box
-            w={{ base: '100%', sm: '100%', md: '33.33333%', lg: '25%' }}
+            w={{
+              base: '100%',
+              sm: '100%',
+              md: '33.33333%',
+              lg: '25%',
+              xl: '20%',
+            }}
             as="li"
             aria-label={`${link.label} Menu`}
             key={link.label}
@@ -106,21 +112,21 @@ export const MenuFullList = () => {
                 h={{ base: '100%', md: '100%' }}
               >
                 <Box
-                  as="h2"
-                  whiteSpace={'wrap'}
-                  color={'ghostVerse.green.base'}
-                  display={'flex'}
-                  alignItems={'end'}
-                  lineHeight={1}
-                  my={1}
-                >
-                  {link.label} Menu
-                </Box>
-                <Box
                   display={'flex'}
                   flexDirection={{ base: 'row', md: 'column' }}
                 >
                   <Box w={{ base: '50%', md: '100%' }} mr={{ base: 2, md: 0 }}>
+                    <Box
+                      as="h2"
+                      whiteSpace={'wrap'}
+                      color={'ghostVerse.green.base'}
+                      display={'flex'}
+                      alignItems={'end'}
+                      lineHeight={1}
+                      my={1}
+                    >
+                      {link.label}
+                    </Box>
                     <Image
                       src={`${link.image}`}
                       alt={`${link.title}`}

@@ -43,8 +43,8 @@ export const GadgetItem = ({ gadget }: GadgetItemProps) => {
                 itemProp="name"
                 as={'h2'}
                 fontFamily={'CubicFive12'}
-                fontSize={{ base: 16 }}
                 display={'flex'}
+                fontSize={{ base: 'sm', md: 'lg' }}
                 flexDirection={'column'}
                 marginRight={1}
               >
@@ -60,7 +60,7 @@ export const GadgetItem = ({ gadget }: GadgetItemProps) => {
               listStyleType={'none'}
               display={'flex'}
               fontFamily={'vt323'}
-              fontSize={'2xl'}
+              fontSize={{ base: 'xl', md: '2xl' }}
               color={'ghostVerse.grey.base'}
               mb={1}
             >
