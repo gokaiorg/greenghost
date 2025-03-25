@@ -82,7 +82,7 @@ export const EdibleItem = ({ edible }: EdibleItemProps) => {
                 itemProp="name"
                 as={'h2'}
                 fontFamily={'CubicFive12'}
-                fontSize={{ base: 16 }}
+                fontSize={{ base: 'sm', md: 'lg' }}
                 display={'flex'}
                 flexDirection={'column'}
                 marginRight={1}
@@ -98,22 +98,27 @@ export const EdibleItem = ({ edible }: EdibleItemProps) => {
               aria-label={`Product THC level`}
               listStyleType={'none'}
               display={'flex'}
+              flexWrap={'wrap'}
               fontFamily={'vt323'}
-              fontSize={'2xl'}
+              fontSize={{ base: 'xl', md: '2xl' }}
               color={'ghostVerse.grey.base'}
               mb={1}
             >
-              <Box as={'h3'} color={'ghostVerse.yellow.base'} marginRight={2}>
+              <Box
+                as={'h3'}
+                color={'ghostVerse.yellow.base'}
+                marginRight={2}
+                whiteSpace={'nowrap'}
+              >
                 {`${edible.packaging}`}
               </Box>
               <Box
                 as="h3"
                 display={'flex'}
-                fontSize={'2xl'}
-                flexWrap={'wrap'}
                 mb={1}
                 ml={'auto'}
                 color={'ghostVerse.grey.base'}
+                whiteSpace={'nowrap'}
               >
                 {edible.THC >= edible.CBD && <>{`THC ${edible.THC}mg`}</>}
                 {edible.THC <= edible.CBD && edible.CBD !== '0' && (

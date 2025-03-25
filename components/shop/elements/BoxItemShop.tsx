@@ -13,7 +13,7 @@ const BoxItemShop: FC<BoxItemProps> = ({ children }) => {
       p={1}
       pos={'relative'}
       fontWeight={'bold'}
-      fontSize={'lg'}
+      fontSize={{ base: 'md', md: 'lg' }}
       bgColor={'ghostVerse.dark.lighter'}
       display={'flex'}
       flexDirection={{ base: 'column' }}

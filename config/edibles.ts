@@ -129,7 +129,7 @@ export const edibles: Edible[] = [
     CBD: '0',
     effects: 'Creative, Happy, Euphoric',
     ingretiens: 'Cannabutter, Eggs, Flour',
-    quantity: 0,
+    quantity: 1,
     description:
       "Experience a delightful dose of relaxation with our THC Gummies! Each package contains 5 gummies, with each bite-sized treat delivering 10mg of premium THC for a total of 50mg per pack. These gummies are crafted to offer a consistent and enjoyable high, whether you're looking to unwind after a long day, enhance your creativity, or simply add a little fun to your routine. The perfect combination of flavor and potency, our THC Gummies are a discreet and tasty way to enjoy the benefits of cannabis wherever you are. \n\n Our THC Gummies are ideal for both beginners and seasoned cannabis enthusiasts. With a mild, controlled dose in each gummy, they allow you to easily find your sweet spot, whether you're microdosing or seeking a moderate high. Made with high-quality ingredients, these gummies are as delicious as they are effective, offering a burst of flavor in every bite. Enjoy the flexibility of a low-dose edible that you can adjust to your personal needs, all while savoring a tasty treat.",
     descSeo:

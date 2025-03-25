@@ -58,7 +58,7 @@ export const PreRollItem = ({ bud }: PreRollItemProps) => {
             listStyleType={'none'}
             display={'flex'}
             fontFamily={'vt323'}
-            fontSize={'2xl'}
+            fontSize={{ base: 'xl', md: '2xl' }}
             w={{ base: '60%', lg: '20%' }}
           >
             {bud.dominance == 'Indica' && (
@@ -91,7 +91,6 @@ export const PreRollItem = ({ bud }: PreRollItemProps) => {
             <Box
               as="h3"
               display={'flex'}
-              fontSize={'2xl'}
               flexWrap={'wrap'}
               ml={'auto'}
               color={'ghostVerse.grey.base'}

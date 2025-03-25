@@ -10,6 +10,7 @@ export const BuyOnline = () => {
       mb={5}
       p={5}
       pt={0}
+      h={'full'}
       flexWrap={'wrap'}
       alignItems={'stretch'}
       backgroundColor={'ghostVerse.green.base'}

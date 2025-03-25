@@ -10,8 +10,8 @@ const WrapperShop: FC<BoxItemProps> = ({ children }) => {
     <Box
       as="header"
       display={'flex'}
-      flexDirection={{ base: 'column', lg: 'row' }}
-      alignItems={{ base: 'start', lg: 'center' }}
+      flexDirection={{ base: 'column', md: 'row' }}
+      alignItems={{ base: 'start', md: 'center' }}
       lineHeight={1}
     >
       {children}

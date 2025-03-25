@@ -80,7 +80,7 @@ export const BudItem = ({ bud }: BudItemProps) => {
                 itemProp="name"
                 as={'h2'}
                 fontFamily={'CubicFive12'}
-                fontSize={{ base: 16 }}
+                fontSize={{ base: 'sm', md: 'lg' }}
                 display={'flex'}
                 flexDirection={'column'}
                 marginRight={1}
@@ -118,7 +118,7 @@ export const BudItem = ({ bud }: BudItemProps) => {
               listStyleType={'none'}
               display={'flex'}
               fontFamily={'vt323'}
-              fontSize={'2xl'}
+              fontSize={{ base: 'xl', md: '2xl' }}
               mb={1}
             >
               {bud.dominance == 'Indica' && (
@@ -151,7 +151,6 @@ export const BudItem = ({ bud }: BudItemProps) => {
               <Box
                 as="h3"
                 display={'flex'}
-                fontSize={'2xl'}
                 flexWrap={'wrap'}
                 mb={1}
                 ml={'auto'}
