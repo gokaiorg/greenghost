@@ -13,7 +13,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import BoxInfoProduct from '../../components/box/BoxInfoProduct';
 import BoxDescription from '../../components/box/BoxDescription';
-import { HomeFeature } from '../../components/HomeFeatures';
 import { HomeTopInfos } from '../../components/HomeTopInfos';
 import { IconIndica } from '../../components/media/IconIndica';
 import { IconSativa } from '../../components/media/IconSativa';
@@ -410,8 +409,6 @@ export default function BudPage({ bud }: BudPageProps) {
               )}
             </BoxDescription>
           </Box>
-          <HomeFeature />
-
           {bud.quantity > 0 && (
             <Box
               as="section"

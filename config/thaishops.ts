@@ -40,7 +40,7 @@ export const thaishops: ThaiShop[] = [
     name: 'Sweed Dreams',
     city: 'Rawai',
     logo: '/media/green-ghost-weed-shop-sweed-dreams.webp',
-    map: 'https://maps.app.goo.gl/Rf7NzFBecD2eH65E9',
+    map: 'https://maps.app.goo.gl/4R45zTshy7BtPL7XA',
   },
   {
     name: 'High Roller Club Thailand',

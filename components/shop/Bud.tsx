@@ -120,6 +120,7 @@ export const Bud = () => {
           fontSize={'2xl'}
           py={{ base: '2', md: '3' }}
           fontFamily={'vt323'}
+          display={{ base: 'none', md: 'flex' }}
         >
           Hide Sold Out
         </Checkbox>
