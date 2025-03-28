@@ -13,10 +13,10 @@ export type Gadget = {
 export const gadgets: Gadget[] = [
   {
     slug: 'metal-grinder-50mm-2-layer',
-    name: 'Metal Grinder',
+    name: 'Metal Grinder 2 layer',
     price: 200,
     packaging: '50x17mm, 2-layer',
-    quantity: 2,
+    quantity: 0,
     description:
       'The perfect tool for herb enthusiasts. With its compact size of 50x17mm and two layers, this grinder offers convenience and efficiency. Crafted from high-quality metal, it guarantees durability and longevity. Say goodbye to manual grinding and embrace the effortless process provided by this sleek and reliable tool.',
     descSeo:
@@ -28,7 +28,24 @@ export const gadgets: Gadget[] = [
       '/media/green-ghost-degen-weed-shop-menu-gadget-metal-grinder-50mm-2-layer-03.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-metal-grinder-50mm-2-layer-02.webp',
     ],
-    imgDesc: 'Degen Weed Shop Metal Grinder',
+    imgDesc: 'Buy Metal Grinder cannabis accessory',
+  },
+  {
+    slug: 'metal-grinder-40-mm-4-layers',
+    name: 'Metal Grinder 4 layer',
+    price: 250,
+    packaging: '40x35mm, 4-layer',
+    quantity: 2,
+    description:
+      'Crafted for convenience and durability, this 40mm 4-Layer Zinc Alloy Hand Movement Tobacco Grinder is a must-have for herb enthusiasts. Compact and portable at just 4 x 4 x 3.5 cm and a lightweight 68g, it slips effortlessly into your pocket or kitchen drawer, ready to tackle any grinding task. Forged from premium zinc alloy, this grinder boasts a sleek, resilient build that resists wear while maintaining a timeless look. \n\n Its four-layer design ensures a seamless experience—sharp teeth shred herbs or spices with ease, a mesh screen filters fine particles, and a bottom chamber collects the goods. Perfect for tobacco, herbs, or kitchen spices, it’s as versatile as it is user-friendly: just a few twists of the hand deliver a consistent grind. Packaged neatly in a box, this small yet mighty tool combines practicality with portability, making it an ideal companion for home cooks or on-the-go grinders seeking quality in a pint-sized package.',
+    descSeo:
+      'Compact 40mm 4-layer zinc alloy grinder. Durable, portable, and easy to use for tobacco, herbs, and spices. Lightweight at 68g, perfect for home or on-the-go.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-menu-gadget-metal-grinder-50mm-2-layer-01.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-metal-grinder-50mm-2-layer-cover.webp',
+      '/media/green-ghost-degen-weed-shop-menu-gadget-metal-grinder-50mm-2-layer-02.webp',
+    ],
+    imgDesc: 'Buy Metal Grinder 4 layer cannabis accessory',
   },
   {
     slug: 'classic-ice-bong',
@@ -46,7 +63,7 @@ export const gadgets: Gadget[] = [
       '/media/green-ghost-degen-weed-shop-menu-gadget-classic-ice-bong-qr-code.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-classic-ice-bong-03.webp',
     ],
-    imgDesc: 'Degen Weed Shop Classic Ice Bong',
+    imgDesc: 'Buy Classic Ice Bong cannabis accessory',
   },
   {
     slug: 'clipper-lighter',
@@ -63,7 +80,7 @@ export const gadgets: Gadget[] = [
       '/media/green-ghost-degen-weed-shop-menu-gadget-clipper-lighter-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-clipper-lighter-qr-code.webp',
     ],
-    imgDesc: 'Degen Weed Shop Clipper Lighter',
+    imgDesc: 'Buy Clipper Lighter cannabis accessory',
   },
   {
     slug: 'wood-grinder-68mm-2-layer',
@@ -82,7 +99,7 @@ export const gadgets: Gadget[] = [
       '/media/green-ghost-degen-weed-shop-menu-gadget-wood-grinder-68mm-2-layer-03.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-wood-grinder-68mm-2-layer-02.webp',
     ],
-    imgDesc: 'Degen Weed Shop Wood Grinder',
+    imgDesc: 'Buy Wood Grinder cannabis accessory',
   },
   {
     slug: 'wizman-rolling-papers',
@@ -99,7 +116,7 @@ export const gadgets: Gadget[] = [
       '/media/green-ghost-degen-weed-shop-menu-gadget-wizman-rolling-paper-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-wizman-rolling-paper-qr-code.webp',
     ],
-    imgDesc: 'Degen Weed Shop Wizman Rolling Paper',
+    imgDesc: 'Buy Wizman Rolling Paper cannabis accessory',
   },
   {
     slug: 'slimjim-rolling-papers',
@@ -116,7 +133,7 @@ export const gadgets: Gadget[] = [
       '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-qr-code.webp',
     ],
-    imgDesc: 'Degen Weed Shop SlimJim Rolling Paper',
+    imgDesc: 'Buy SlimJim Rolling Paper cannabis accessory',
   },
   {
     slug: 'slimjim-rolling-papers-tips',
@@ -133,7 +150,7 @@ export const gadgets: Gadget[] = [
       '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-tips-01.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-slimjim-rolling-paper-tips-qr-code.webp',
     ],
-    imgDesc: 'Degen Weed Shop SlimJim Rolling Paper + Tips',
+    imgDesc: 'Buy SlimJim Rolling Paper + Tips cannabis accessory',
   },
   {
     slug: 'weed-th-rolling-papers-tips',
@@ -152,7 +169,7 @@ export const gadgets: Gadget[] = [
       '/media/green-ghost-degen-weed-shop-menu-gadget-weed-th-rolling-paper-tips-04.webp',
       '/media/green-ghost-degen-weed-shop-menu-gadget-weed-th-rolling-paper-tips-05.webp',
     ],
-    imgDesc: 'Degen Weed Shop WEED.TH Rolling Paper + Tips',
+    imgDesc: 'Buy WEED.TH Rolling Paper + Tips cannabis accessory',
   },
 ];
 

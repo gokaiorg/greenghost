@@ -90,11 +90,13 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
   return (
     <>
       <Head>
-        <title>{gadget.name} Cannabis Concentrate - Green Ghost 🌿👻</title>
+        <title>
+          Buy {gadget.name} Cannabis Gadgets Online - Green Ghost 🌿👻
+        </title>
         <meta name="description" content={gadget.descSeo} />
         <meta
           property="og:title"
-          content={`${gadget.name} Cannabis Concentrate - Green Ghost 🌿👻`}
+          content={`Buy ${gadget.name} Cannabis Gadgets Online - Green Ghost 🌿👻`}
         />
         <meta property="og:description" content={gadget.descSeo} />
         <meta
@@ -105,11 +107,11 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
         <meta property="og:image:height" content="1000" />
         <meta
           property="og:url"
-          content={`https://green.gd/menu/gadgets/${gadget.slug}`}
+          content={`https://green.gd/gadgets/${gadget.slug}`}
         />
         <meta
           name="twitter:title"
-          content={`${gadget.name} Cannabis Concentrate - Green Ghost 🌿👻`}
+          content={`Buy ${gadget.name} Cannabis Gadgets Online - Green Ghost 🌿👻`}
         />
         <meta name="twitter:description" content={gadget.descSeo} />
         <meta
@@ -118,7 +120,7 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
         />
         <meta
           name="twitter:url"
-          content={`https://green.gd/menu/gadgets/${gadget.slug}`}
+          content={`https://green.gd/gadgets/${gadget.slug}`}
         />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Head>
@@ -131,22 +133,12 @@ export default function GadgetsPage({ gadget }: GadgetsPageProps) {
             as="span"
             cursor={'pointer'}
             color={'ghostVerse.green.base'}
+            display={'flex'}
+            fontFamily={'CubicFive12'}
             onClick={handleBack}
             title={'BACK'}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="#13DE00"
-              width="30px"
-              height="30px"
-            >
-              <path
-                fillRule="evenodd"
-                d="M12.5 9.75A2.75 2.75 0 0 0 9.75 7H4.56l2.22 2.22a.75.75 0 1 1-1.06 1.06l-3.5-3.5a.75.75 0 0 1 0-1.06l3.5-3.5a.75.75 0 0 1 1.06 1.06L4.56 5.5h5.19a4.25 4.25 0 0 1 0 8.5h-1a.75.75 0 0 1 0-1.5h1a2.75 2.75 0 0 0 2.75-2.75Z"
-                clipRule="evenodd"
-              />
-            </svg>
+            {'< Back'}
           </Box>
           <Box as="article">
             <Box

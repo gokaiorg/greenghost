@@ -7,7 +7,7 @@ import WrapperShop from './elements/WrapperShop';
 
 export const Gadget = () => {
   const filteredProducts = gadgets
-    .filter((gadget) => gadget.price !== 999)
+    .filter((gadget) => gadget.quantity !== 0)
     .sort((a, b) => Number(a.price) - Number(b.price));
 
   return (
