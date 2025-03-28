@@ -1,6 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
 import { BudItemBest } from './shop/BudItemBest';
 import { buds } from '../config/buds';
+import Link from 'next/link';
 
 const selectedStrains = [
   'Scotty 2 Hotty',
@@ -60,6 +61,34 @@ export const BestWeed = () => {
           ))}
         </Box>
       </Box>
+      <Link
+        href="/strains"
+        passHref
+        title="Buy Premium Cannabis Strains Online"
+        aria-label="All the strains"
+      >
+        <Text
+          as="span"
+          display="inline-flex"
+          fontFamily="CubicFive12"
+          fontSize={{ base: 'md', md: 'lg' }}
+          px={6}
+          py={2}
+          my={5}
+          mx="auto"
+          borderWidth={1}
+          borderColor="ghostVerse.green.base"
+          bgColor="black"
+          whiteSpace={'nowrap'}
+          color="ghostVerse.green.base"
+          _hover={{
+            bgColor: 'ghostVerse.green.base',
+            color: 'black',
+          }}
+        >
+          {'All the strains'}
+        </Text>
+      </Link>
     </Box>
   );
 };
