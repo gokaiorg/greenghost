@@ -82,7 +82,7 @@ export const PreRoll = () => {
     <Box as={'section'} aria-labelledby="Pre Roll Joints Menu" mb="10">
       <WrapperShop>
         <HomeSectionTitle title="Pre-rolls Menu" />
-        <ListTitle title="Pre-Roll on demand. +20THB on take away. Free on store" />
+        <ListTitle title="On demand. +20THB on delivery. Free on store" />
       </WrapperShop>
       <Box
         as="ul"
