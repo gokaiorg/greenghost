@@ -17,6 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       'c-vibez',
       'cbd-auto-tune',
       'cbd-charlottes-angel',
+      'cereal-milk',
       'chemdawg',
       'cherry-garcia',
       'cherry-z',

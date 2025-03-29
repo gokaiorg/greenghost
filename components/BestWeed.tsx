@@ -62,10 +62,10 @@ export const BestWeed = () => {
         </Box>
       </Box>
       <Link
-        href="/strains"
+        href="/weed"
         passHref
-        title="Buy Premium Cannabis Strains Online"
-        aria-label="All the strains"
+        title="Your Weed Guide to Cannabis Excellence"
+        aria-label="Learn about weed"
       >
         <Text
           as="span"
@@ -86,7 +86,7 @@ export const BestWeed = () => {
             color: 'black',
           }}
         >
-          {'All the strains'}
+          {'Dive Into Weed'}
         </Text>
       </Link>
     </Box>

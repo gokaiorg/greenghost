@@ -11,6 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       'clipper-lighter',
       'classic-ice-bong',
       'metal-grinder-50mm-2-layer',
+      'metal-grinder-40-mm-4-layers',
     ],
   });
 }

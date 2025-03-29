@@ -7,7 +7,6 @@ import { Box, Text } from '@chakra-ui/react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { HomeMenu } from '../components/HomeMenu';
-import { BestWeed } from '../components/BestWeed';
 import { Dominances } from '../components/Dominances';
 import { BudAll } from '../components/shop/BudAll';
 import { ImgWeed } from '../components/media/ImgWeed';
@@ -121,8 +120,54 @@ const Weed: NextPage = () => {
           </Box>
           <Dominances />
           <BudAll />
+          <Box
+            display={'flex'}
+            flexDirection={{ base: 'column', md: 'row' }}
+            gap={2}
+          >
+            <Box w={{ base: '100%', md: '60%' }}>
+              <Text
+                as="h2"
+                fontSize={{ base: '20', md: '30' }}
+                fontFamily={'CubicFive12'}
+              >
+                How to Enjoy Weed (Legally and Safely)
+              </Text>
+              <Text
+                as="p"
+                fontSize={{ base: '2xl' }}
+                lineHeight={1}
+                fontFamily="vt323"
+                mb={10}
+              >
+                {
+                  'Ready to enjoy weed in Thailand the right way? Since 2022, cannabis has been decriminalized here, but there’s a catch—keep it legal and safe! First, buy from licensed dispensaries, in some spots like Bangkok or Chiang Mai—street vendors are a no-go. Stick to buds or edibles with under 0.2% THC unless you’ve got a medical prescription for the strong stuff.'
+                }
+              </Text>
+              <Text
+                as="p"
+                fontSize={{ base: '2xl' }}
+                lineHeight={1}
+                fontFamily="vt323"
+                mb={10}
+              >
+                {
+                  'Smoking? Take it private—puffing in public, like on Khao San or Bangla Road, can land you a 25,000 baht fine under nuisance laws. Edibles are a tasty bet—try cannabis-infused mango sticky rice from a legit cafe—but start low, as effects hit slow and hard. Growing your own? Register on the Plook Ganja app first. Age 20+ only, no preggo or breastfeeding folks allowed. Bonus tip: pair your buzz with a Thai massage for ultimate vibes—just don’t drive after. Stay smart, respect the rules, and enjoy the green scene!'
+                }
+              </Text>
+            </Box>
+            <Box w={{ base: '100%', md: '40%' }}>
+              <Image
+                src="/media/enjoy-legal-cannabis-weed-shop-green-ghost.webp"
+                width={1366}
+                height={1366}
+                alt="Enjoy Legal Cannabis Weed Shop Green Ghost"
+                title="Enjoy Legal Cannabis Weed Shop Green Ghost"
+                quality={75}
+              />
+            </Box>
+          </Box>
           <HomeMenu />
-          <BestWeed />
         </Box>
       </MainLayout>
     </>
