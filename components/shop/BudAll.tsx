@@ -86,8 +86,8 @@ export const BudAll = () => {
     <Box as="section" aria-labelledby="All Cannabis Strains" mb="10">
       <WrapperShop>
         <Box
-          as="h2"
-          fontSize={{ base: 24, lg: 30 }}
+          as="h3"
+          fontSize={{ base: '20', md: '24' }}
           lineHeight={1}
           fontFamily={'CubicFive12'}
         >
