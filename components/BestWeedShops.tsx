@@ -68,12 +68,13 @@ export const BestWeedShops = () => {
           borderWidth={1}
           borderColor="ghostVerse.green.base"
           backgroundColor="ghostVerse.green.base"
+          aria-label="Visit our locations"
           _hover={{
             bg: 'black',
             color: 'ghostVerse.green.base',
           }}
         >
-          Visit our locations
+          Find a shop
         </Text>
       </Link>
       <Box

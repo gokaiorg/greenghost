@@ -190,9 +190,9 @@ export const buds: Bud[] = [
     descSeo:
       'Cereal Milk: a balanced hybrid with sweet, creamy flavors and a euphoric, focused high. Perfect for stress, pain, and lazy days. THC 18-25%. Cookies family gem.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-cereal-milk-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-cereal-milk-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-cereal-milk-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-cereal-milk-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-cereal-milk-bud-02.webp',
     ],
     imgDesc: 'Order Cereal Milk Cannabis Strain Online',
     source: 'https://www.leafly.com/strains/cereal-milk',
@@ -596,9 +596,9 @@ export const buds: Bud[] = [
     descSeo:
       'Popanonymous strain delivers 29% THC with uplifting, creative effects and sweet citrus flavors. Perfect for stress, depression, and fatigue relief.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-popanonymous-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-popanonymous-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-popanonymous-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-popanonymous-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-popanonymous-bud-02.webp',
     ],
     imgDesc: 'Order Popanonymous Cannabis Strain Online',
     source: 'undefined',

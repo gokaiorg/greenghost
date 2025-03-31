@@ -5,10 +5,10 @@ import Link from 'next/link';
 
 const selectedStrains = [
   'Scotty 2 Hotty',
-  'Thai Stick',
-  'Pink Zkittlez',
-  'Slaphappy',
   'Mango Sticky Rice',
+  'Popanonymous',
+  "Ben & Gary's",
+  'Thai Stick',
 ];
 
 export const BestWeed = () => {
@@ -25,7 +25,7 @@ export const BestWeed = () => {
     .join(', ')}`;
 
   return (
-    <Box as="section" aria-labelledby="The best weed in Phuket" mb="10">
+    <Box as="section" aria-labelledby="Top 5 Must-Try Weed Strains" mb="10">
       <Text
         as={'h2'}
         fontSize={{ base: 24, lg: 30 }}
@@ -34,7 +34,7 @@ export const BestWeed = () => {
         my={{ base: 2 }}
         textAlign={'left'}
       >
-        The best weed in Phuket
+        Top 5 Must-Try Weed Strains
       </Text>
       <Text
         as={'p'}
