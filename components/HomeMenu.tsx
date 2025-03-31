@@ -51,7 +51,7 @@ export const HomeMenu = () => {
           my={2}
           textAlign="center"
         >
-          Weed Menu
+          Shop Our Weed Menu
         </Text>
       </Box>
 
@@ -121,7 +121,7 @@ export const HomeMenu = () => {
                   color: 'ghostVerse.green.base',
                 }}
               >
-                Menu
+                Browse menu
               </Text>
             </Link>
           </Box>
