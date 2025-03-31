@@ -11,7 +11,6 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import BoxItemShop from './elements/BoxItemShop';
 import BoxItemDescShop from './elements/BoxItemDescShop';
-import BoxItemPriceShop from './elements/BoxItemPriceShop';
 
 type BudItemBestProps = {
   bud: Bud;
@@ -74,30 +73,6 @@ export const BudItemBest = ({ bud }: BudItemBestProps) => {
             )}
           </Swiper>
           <BoxItemDescShop>
-            <BoxItemPriceShop>
-              {bud.price == 999 ? (
-                <Box
-                  as="span"
-                  fontSize={{ base: 14, lg: 16 }}
-                  color={'ghostVerse.green.base'}
-                >
-                  Coming Soon
-                </Box>
-              ) : bud.quantity === 0 ? (
-                <Box
-                  as="span"
-                  fontSize={{ base: 14, lg: 16 }}
-                  margin={'-0.5rem'}
-                  padding={'0.5rem'}
-                  color={'white'}
-                  backgroundColor={'ghostVerse.red.base'}
-                >
-                  Sold Out
-                </Box>
-              ) : (
-                <>{`${bud.price} THB`}</>
-              )}
-            </BoxItemPriceShop>
             <Box as="li" listStyleType={'none'}>
               <Text
                 as={'h3'}

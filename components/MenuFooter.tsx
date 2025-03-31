@@ -39,6 +39,12 @@ export const MenuFooter = () => {
       ariaLabel: 'Bulk ordering',
     },
     {
+      href: '/payment',
+      title: 'Make a payment for your cannabis order',
+      label: 'Make a payment',
+      ariaLabel: 'Make a payment',
+    },
+    {
       href: '/jobs',
       title: 'Budtender Job Opening at Our Cannabis Shop',
       label: 'We are hiring',
@@ -80,9 +86,9 @@ export const MenuFooter = () => {
     <>
       <Box
         as="nav"
-        mr={{ base: '0', md: '0' }}
-        ml={{ base: 'auto' }}
         mt={10}
+        mx={'auto'}
+        maxW={{ base: '480px', md: '675px', lg: '675px', xl: '675px' }}
         aria-label="Footer Navigation"
         textAlign={'left'}
       >
@@ -106,8 +112,8 @@ export const MenuFooter = () => {
               display="flex"
               m={{ base: '1' }}
               p={1}
-              w={{ base: '100px' }}
-              h={{ base: '100px' }}
+              w={{ base: '104px' }}
+              h={{ base: '104px' }}
               color={
                 isActive(item.href)
                   ? 'ghostVerse.green.base'
