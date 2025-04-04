@@ -156,7 +156,7 @@ const Payment: NextPage = () => {
                     borderColor: 'ghostVerse.green.base',
                   }}
                 >
-                  Crypto
+                  Russian QR
                 </Tab>
                 <Tab
                   _selected={{
@@ -167,6 +167,16 @@ const Payment: NextPage = () => {
                 >
                   Wise
                 </Tab>
+                <Tab
+                  _selected={{
+                    bg: 'ghostVerse.dark.lighter',
+                    color: 'ghostVerse.green.base',
+                    borderColor: 'ghostVerse.green.base',
+                  }}
+                >
+                  Crypto
+                </Tab>
+                
                 <Tab
                   _selected={{
                     bg: 'ghostVerse.dark.lighter',
@@ -191,22 +201,27 @@ const Payment: NextPage = () => {
                   <Box mt={4} display="flex" justifyContent="center">
                     <Image
                       src="/media/thai-qr-payment-green-ghost.webp"
-                      alt="Scan QR Payment"
+                      alt="Thai QR Payment"
                       width={200}
                       height={200}
                     />
                   </Box>
                   <Text>MRS. NATI DOUCHAMPS</Text>
-                </TabPanel>
+                </TabPanel> 
                 <TabPanel>
                   <Text>
-                    Pay with cryptocurrency (BTC, ETH, etc.) for fast, anonymous
-                    transactions.
+                    Scan the QR code below to pay quickly and securely with your
+                    mobile device.
                   </Text>
                   <Box mt={4} display="flex" justifyContent="center">
-                    Binance User ID: 81449832
+                    <Image
+                      src="/media/russian-qr-payment-green-ghost.webp"
+                      alt="Russian QR Payment"
+                      width={200}
+                      height={200}
+                    />
                   </Box>
-                </TabPanel>
+                </TabPanel> 
                 <TabPanel>
                   <Text>
                     Use Wise for international payments with low fees and
@@ -222,6 +237,16 @@ const Payment: NextPage = () => {
                   </Box>
                   <Text>@jeremyd240</Text>
                 </TabPanel>
+                <TabPanel>
+                  <Text>
+                    Pay with cryptocurrency (BTC, ETH, etc.) for fast, anonymous
+                    transactions.
+                  </Text>
+                  <Box mt={4} display="flex" justifyContent="center">
+                    Binance User ID: 81449832
+                  </Box>
+                </TabPanel>
+               
                 <TabPanel>
                   <Text>
                     Pay securely with PayPal—just click below to complete your

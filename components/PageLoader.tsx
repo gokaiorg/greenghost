@@ -52,7 +52,6 @@ const PageLoader = () => {
         <Box
           w="50px"
           h="50px"
-          borderRadius="full"
           backgroundColor="#13DE00"
           boxShadow="0 0 15px #13DE00"
           animation={`${pulse} 1s infinite ease-in-out`}
