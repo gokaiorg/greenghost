@@ -1037,7 +1037,7 @@ export const buds: Bud[] = [
       '/media/green-ghost-degen-weed-shop-strain-toasted-toffee-bud-02.webp',
     ],
     imgDesc: 'Order Toasted Toffee Cannabis Strain Online',
-    source: '',
+    source: 'undefined',
   },
   {
     slug: 'cbd-auto-tune',
