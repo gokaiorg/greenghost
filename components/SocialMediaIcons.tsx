@@ -20,7 +20,7 @@ export const SocialMediaIcons = () => {
         </Box>
         <Text
           as={'h3'}
-          fontSize={'xl'}
+          fontSize={'md'}
           color={'white'}
           fontFamily={'CubicFive12'}
           mt={4}
@@ -31,8 +31,8 @@ export const SocialMediaIcons = () => {
           as={'h4'}
           display={'flex'}
           justifyContent={'center'}
-          fontSize={'3xl'}
-          mt={-4}
+          fontSize={'xl'}
+          mt={0}
           mb={2}
           w={'full'}
           color={'ghostVerse.grey.lighter'}
@@ -42,6 +42,9 @@ export const SocialMediaIcons = () => {
         </Box>
       </Box>
       <Box
+        as="ul"
+        listStyleType={'none'}
+        aria-label="Social Media Icons List"
         display={'inline-flex'}
         flexWrap={'wrap'}
         alignItems={'center'}
@@ -49,7 +52,16 @@ export const SocialMediaIcons = () => {
         gap={3}
         mx={'auto'}
       >
-        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
+        <Box as={'li'} aria-label="Follow Us on X" borderRadius={'100%'}>
+          <SocialIcon
+            url="https://x.com/greenghostdegen"
+            bgColor={'black'}
+            style={{ width: 40, height: 40 }}
+            title="Follow Us on X"
+            network="x"
+          />
+        </Box>
+        <Box as={'li'} aria-label="Subscribe on Youtube" borderRadius={'100%'}>
           <SocialIcon
             url="https://www.youtube.com/@greenghostdegen"
             bgColor={'black'}
@@ -57,39 +69,35 @@ export const SocialMediaIcons = () => {
             title="Subscribe on Youtube"
           />
         </Box>{' '}
-        {/* <Box bgColor={'#13DE00'} borderRadius={'100%'}>
+        <Box
+          as={'li'}
+          aria-label="Follow Us on Instagram"
+          borderRadius={'100%'}
+        >
           <SocialIcon
-            url="https://www.instagram.com/greenghostdegen"
+            url="https://www.instagram.com/greenghost_degen"
             bgColor={'black'}
             style={{ width: 40, height: 40 }}
             title="Follow Us on Instagram"
           />
-        </Box> */}
-        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
+        </Box>
+        <Box as={'li'} aria-label="Join Us on Telegram" borderRadius={'100%'}>
           <SocialIcon
-            url="https://x.com/greenghostdegen"
+            url="https://t.me/greenghost_degen"
             bgColor={'black'}
             style={{ width: 40, height: 40 }}
-            title="Follow Us on X"
+            title="Join Us on Telegram"
           />
         </Box>
-        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
+        <Box as={'li'} aria-label="Join Us on Telegram" borderRadius={'100%'}>
           <SocialIcon
-            url="https://warpcast.com/greenghostdegen"
+            url="https://opensea.io/collection/greenghostdegen"
             bgColor={'black'}
             style={{ width: 40, height: 40 }}
-            title="Follow Us on Warpcast"
+            title="Follow Us on Opensea"
           />
         </Box>
-        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
-          <SocialIcon
-            url="https://t.me/greenghostdegens"
-            bgColor={'black'}
-            style={{ width: 40, height: 40 }}
-            title="Follow Us on Telegram"
-          />
-        </Box>
-        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
+        <Box as={'li'} aria-label="Follow Us on TikTok" borderRadius={'100%'}>
           <SocialIcon
             url="https://www.tiktok.com/@greenghostdegen"
             bgColor={'black'}
@@ -97,7 +105,15 @@ export const SocialMediaIcons = () => {
             title="Follow Us on TikTok"
           />
         </Box>
-        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
+        <Box as={'li'} aria-label="Follow Us on Warpcast" borderRadius={'100%'}>
+          <SocialIcon
+            url="https://warpcast.com/greenghostdegen"
+            bgColor={'black'}
+            style={{ width: 40, height: 40 }}
+            title="Follow Us on Warpcast"
+          />
+        </Box>
+        <Box as={'li'} aria-label="Follow Us on Facebook" borderRadius={'100%'}>
           <SocialIcon
             url="https://www.facebook.com/greenghostdegen"
             bgColor={'black'}
@@ -105,7 +121,7 @@ export const SocialMediaIcons = () => {
             title="Follow Us on Facebook"
           />
         </Box>
-        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
+        <Box as={'li'} aria-label="Join Us on Reddit" borderRadius={'100%'}>
           <SocialIcon
             url="https://www.reddit.com/r/greenghostdegen"
             bgColor={'black'}
@@ -113,7 +129,7 @@ export const SocialMediaIcons = () => {
             title="Join Us on Reddit"
           />
         </Box>
-        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
+        <Box as={'li'} aria-label="Join Us on Linkedin" borderRadius={'100%'}>
           <SocialIcon
             url="https://www.linkedin.com/company/green-ghost"
             bgColor={'black'}
@@ -121,7 +137,7 @@ export const SocialMediaIcons = () => {
             title="Join Us on Linkedin"
           />
         </Box>
-        <Box bgColor={'#13DE00'} borderRadius={'100%'}>
+        <Box as={'li'} aria-label="Join Us on Discord" borderRadius={'100%'}>
           <SocialIcon
             url="https://discord.gg/tXSeJfVVnH"
             bgColor={'black'}

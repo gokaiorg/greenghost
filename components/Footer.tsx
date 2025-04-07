@@ -12,7 +12,7 @@ export const Footer = () => {
       display={'flex'}
       flexDirection={'column'}
       alignItems={'center'}
-      mt={{ base: '4' }}
+      mt={{ base: '5' }}
     >
       <MenuFooter />
       <Find />
@@ -22,7 +22,7 @@ export const Footer = () => {
         fontWeight={'bold'}
         position={'relative'}
         zIndex={1}
-        mb={1}
+        my={2}
         display={'flex'}
         justifyContent={'center'}
         whiteSpace={'nowrap'}

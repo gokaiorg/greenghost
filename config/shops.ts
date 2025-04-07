@@ -54,6 +54,10 @@ export const shops: Shop[] = [
         link: 'https://www.wongnai.com/restaurants/3106120Va-green-ghost-best-degen-weed-shop-and-delivery-rawai',
       },
       {
+        label: 'High Thailand',
+        link: 'https://www.highthailand.com/location/green-ghost-2',
+      },
+      {
         label: 'Apple Map',
         link: 'https://maps.apple.com/?address=26/16%204024,%20Phuket,%20Phuket%2083130,%20Thailand&auid=3541566368782066682&ll=7.804892,98.336731&lsp=9902&q=Green%20Ghost',
       },
@@ -95,6 +99,10 @@ export const shops: Shop[] = [
       {
         label: 'Wongnai',
         link: 'https://www.wongnai.com/restaurants/3138274cx-green-ghost-best-degen-weed-shop-and-delivery-karon',
+      },
+      {
+        label: 'High Thailand',
+        link: 'https://www.highthailand.com/location/green-ghost',
       },
       {
         label: 'Apple Map',
