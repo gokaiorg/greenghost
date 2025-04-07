@@ -174,9 +174,8 @@ const Payment: NextPage = () => {
                     borderColor: 'ghostVerse.green.base',
                   }}
                 >
-                  Crypto
+                  Paypal
                 </Tab>
-                
                 <Tab
                   _selected={{
                     bg: 'ghostVerse.dark.lighter',
@@ -184,7 +183,7 @@ const Payment: NextPage = () => {
                     borderColor: 'ghostVerse.green.base',
                   }}
                 >
-                  PayPal
+                  Binance
                 </Tab>
               </TabList>
               <TabPanels
@@ -207,7 +206,7 @@ const Payment: NextPage = () => {
                     />
                   </Box>
                   <Text>MRS. NATI DOUCHAMPS</Text>
-                </TabPanel> 
+                </TabPanel>
                 <TabPanel>
                   <Text>
                     Scan the QR code below to pay quickly and securely with your
@@ -221,7 +220,7 @@ const Payment: NextPage = () => {
                       height={200}
                     />
                   </Box>
-                </TabPanel> 
+                </TabPanel>
                 <TabPanel>
                   <Text>
                     Use Wise for international payments with low fees and
@@ -239,16 +238,6 @@ const Payment: NextPage = () => {
                 </TabPanel>
                 <TabPanel>
                   <Text>
-                    Pay with cryptocurrency (BTC, ETH, etc.) for fast, anonymous
-                    transactions.
-                  </Text>
-                  <Box mt={4} display="flex" justifyContent="center">
-                    Binance User ID: 81449832
-                  </Box>
-                </TabPanel>
-               
-                <TabPanel>
-                  <Text>
                     Pay securely with PayPal—just click below to complete your
                     order!
                   </Text>
@@ -259,6 +248,15 @@ const Payment: NextPage = () => {
                   >
                     http://paypal.me/greenghostdegen
                   </Link>
+                </TabPanel>
+                <TabPanel>
+                  <Text>
+                    Pay with cryptocurrency (BTC, ETH, etc.) for fast, anonymous
+                    transactions.
+                  </Text>
+                  <Box mt={4} display="flex" justifyContent="center">
+                    Binance User ID: 81449832
+                  </Box>
                 </TabPanel>
               </TabPanels>
             </Tabs>

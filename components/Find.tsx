@@ -6,19 +6,22 @@ import { Box, Text } from '@chakra-ui/react';
 export const Find = () => {
   if (!Array.isArray(find)) return null;
   return (
-    <>
+    <Box>
       <Text
         as={'h3'}
-        fontSize={'xl'}
+        fontSize={'md'}
         mx={'auto'}
         fontFamily={'CubicFive12'}
         mt={10}
         textAlign={'center'}
-        color={'ghostverse.color2.darker'}
+        color={'white'}
       >
         Find Us Also On
       </Text>
       <Box
+        as="ul"
+        listStyleType={'none'}
+        aria-label="Find Us Also List"
         display={'flex'}
         flexWrap={'wrap'}
         alignItems={'center'}
@@ -32,6 +35,6 @@ export const Find = () => {
           <FindItem key={index} {...homeHeroItem} />
         ))}
       </Box>
-    </>
+    </Box>
   );
 };

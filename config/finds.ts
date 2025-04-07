@@ -19,10 +19,6 @@ export const find = [
       'https://www.thailandweed.com/directory-dispensaries/listing/green-ghost/',
   },
   {
-    name: 'High Thailand',
-    findUsLink: 'https://www.highthailand.com/location/green-ghost/',
-  },
-  {
     name: 'Smoking Skunk',
     findUsLink:
       'https://smokingskunk.com/weed-in-thailand/green-ghost-degen-weed-shop-karon/',
