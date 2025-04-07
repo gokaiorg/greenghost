@@ -10,6 +10,8 @@ interface FindItemProps {
 export const FindItem: FC<FindItemProps> = ({ name, findUsLink }) => {
   return (
     <Box
+      as="li"
+      aria-label={`Find Us on ${name}`}
       m={2}
       px={2}
       fontSize={22}
