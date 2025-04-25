@@ -14,8 +14,8 @@ export const ImgCoffeeshop = () => {
         src="/media/green-ghost-coffeeshop-phuket.webp"
         width={342}
         height={531}
-        alt="Best Coffeeshop in Rawai Phuket"
-        title="Best Coffeeshop in Rawai Phuket"
+        alt="Best Coffee shop in Rawai Phuket"
+        title="Best Coffee shop in Rawai Phuket"
         sizes="(max-width: 768px) 60px, 120px"
         quality={75}
       />

@@ -113,7 +113,7 @@ export const buds: Bud[] = [
   {
     slug: 'pink-zkittlez',
     name: 'Pink Zkittlez',
-    price: 200,
+    price: 150,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -154,7 +154,7 @@ export const buds: Bud[] = [
     growerSlug: '/',
     environment: 'Organic Greenhouse',
     grade: 'AAA Grade',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Orange Sherbert is a deliciously enticing hybrid strain from Barney’s Farm, born from a masterful cross of Orange Cream, Purple Urkle, and Cherry Pie. This vibrant combination offers a unique flavor profile that blends the sweet and tangy essence of oranges with a hint of creamy indulgence. Developed by a group of skilled American breeders, Orange Sherbert delivers a candy-like experience, making it a favorite among cannabis connoisseurs seeking a flavorful treat. \n\n The strain’s visual appeal is equally captivating, featuring dense buds with a striking mix of green and deep purple hues. Bright orange pistils weave through the buds, enhancing its aesthetic charm. Beyond its looks, Orange Sherbert provides a balanced high that leans towards relaxation and euphoria, perfect for unwinding after a long day or socializing with friends. \n\n With a terpene profile that highlights its citrus and sweet undertones, Orange Sherbert entices both recreational and medicinal users. It’s praised for its uplifting effects, which can help alleviate stress and mild depression, while its calming properties ease physical discomfort and tension. Whether you’re savoring its delightful flavor or enjoying its soothing effects, Orange Sherbert is a strain that satisfies on all fronts.',
@@ -1013,7 +1013,7 @@ export const buds: Bud[] = [
   {
     slug: 'toasted-toffee',
     name: 'Toasted Toffee',
-    price: 450,
+    price: 500,
     dominance: 'Hybrid',
     indica: '50',
     sativa: '50',
@@ -1025,7 +1025,7 @@ export const buds: Bud[] = [
     growerSlug: '',
     environment: 'Indoor',
     grade: 'AAAA Grade',
-    quantity: 0,
+    quantity: 50,
     origin: 'Phuket',
     description:
       "Toasted Toffee is a balanced hybrid strain, born from the cross of White Truffles and Gary Poppins. Known for its rich terpene profile featuring b-Caryophyllene, Limonene, and a-Humulene, this strain offers a smooth blend of relaxation and mood elevation. With its toffee-like aroma and subtle earthy undertones, Toasted Toffee delivers a unique sensory experience. \n\n The effects are both uplifting and relaxing, making it perfect for relieving stress while maintaining a happy, carefree mood. \n\n Whether you're dealing with pain, depression, anxiety, or stress, this strain offers relief with a euphoric touch. Its balanced nature makes it suitable for day or night use, allowing users to unwind without feeling overly sedated.",
