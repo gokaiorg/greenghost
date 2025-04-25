@@ -5,7 +5,7 @@ export const Coffeeshop = () => {
   return (
     <Box
       as="section"
-      aria-labelledby="Coffeeshop"
+      aria-labelledby="Coffee shop section"
       display="flex"
       my={10}
       p={{ base: 5, lg: 10 }}
@@ -23,7 +23,7 @@ export const Coffeeshop = () => {
           mt={{ base: 5 }}
           textAlign="left"
         >
-          Coffeeshop
+          Coffee shop Rawai
         </Text>
         <Text
           as="p"
@@ -31,7 +31,7 @@ export const Coffeeshop = () => {
           lineHeight="1"
           fontFamily="vt323"
         >
-          Our coffeeshop offers a selection of expertly brewed espresso,
+          Our coffee shop offers a selection of expertly brewed espresso,
           americano, and café latte. Perfect for a quick pick-me-up or a
           relaxing break.
         </Text>
