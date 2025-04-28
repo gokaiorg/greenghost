@@ -88,6 +88,49 @@ export const Fwen = () => {
               </Box>
             </Link>
             <Link
+              href="https://www.bangkokpost.com/thailand/pr/2470009/best-cannabis-shops-in-phuket-2025"
+              passHref
+              title="Best Cannabis Shops in Phuket 2025 - Bangkok Post"
+            >
+              <Box
+                h={'100%'}
+                fontSize={{ base: 'xl' }}
+                color={'ghostVerse.color2.darker'}
+                fontFamily={'CubicFive12'}
+                mx={2}
+                textAlign={'center'}
+                p={2}
+                display={'flex'}
+                justifyContent={'center'}
+                flexDirection={'column'}
+                alignItems={'center'}
+                transition={'all .3s'}
+                _hover={{
+                  bgColor: 'ghostVerse.dark.lighter',
+                  color: 'ghostVerse.green.base',
+                }}
+              >
+                <Box w={'60px'} h={'60px'}>
+                  <Image
+                    src="/media/green-ghost-top-dispensary-bangkok-post.webp"
+                    width={60}
+                    height={60}
+                    alt="Green Ghost Top Dispensary Phuket Thailand - Bangkok Post"
+                    sizes="(max-width: 60px) 60px, 60px"
+                    style={{ objectFit: 'cover' }}
+                    quality={75}
+                  />
+                </Box>
+                <Text
+                  as={'h4'}
+                  fontSize={{ base: 10, md: 10 }}
+                  lineHeight={'12px'}
+                >
+                  Bangkok Post
+                </Text>
+              </Box>
+            </Link>
+            <Link
               href="https://weed.th/best-dispensaries-in-thailand"
               passHref
               title="Top Dispensaries In Thailand - Best Weed In Thailand - WEED.TH"
