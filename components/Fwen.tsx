@@ -5,6 +5,54 @@ import { ImgPartners } from './media/ImgPartners';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// config/dispensaries.ts
+export const dispensaries = [
+  {
+    href: 'https://www.tripadvisor.com/Attractions-g293920-eriories-c20-t170-Phuket.html',
+    title: 'THE 5 BEST Phuket Coffeehouses (2025) - Tripadvisor',
+    imageSrc: '/media/green-ghost-top-dispensary-tripadvisor.webp',
+    alt: 'Green Ghost Top Dispensary Phuket Thailand - Tripadvisor',
+    label: 'Tripadvisor',
+  },
+  {
+    href: 'https://www.bangkokpost.com/thailand/pr/2470009/best-cannabis-shops-in-phuket-2025',
+    title: 'Best Cannabis Shops in Phuket 2025 - Bangkok Post',
+    imageSrc: '/media/green-ghost-top-dispensary-bangkok-post.webp',
+    alt: 'Green Ghost Top Dispensary Phuket Thailand - Bangkok Post',
+    label: 'Bangkok Post',
+  },
+  {
+    href: 'https://weed.th/best-dispensaries-in-thailand',
+    title: 'Top Dispensaries In Thailand - Best Weed In Thailand - WEED.TH',
+    imageSrc: '/media/green-ghost-top-dispensary-weed-th.webp',
+    alt: 'Green Ghost Top Dispensary Phuket Thailand - Weed.th',
+    label: 'Weed.th',
+  },
+  {
+    href: 'https://www.cleverthai.com/best-cannabis-shops-in-phuket/',
+    title:
+      "Phuket's Finest: Exploring the Top 11 Cannabis Destinations [2025 ]",
+    imageSrc: '/media/green-ghost-top-dispensary-cleverthai.webp',
+    alt: 'Green Ghost Top Dispensary Phuket Thailand - CleverThai',
+    label: 'Cleverthai',
+  },
+  {
+    href: 'https://www.thailandnomads.com/cannabis-shops-phuket/',
+    title: '25 Cannabis Shops & Cafes to Buy Weed in Phuket 2025',
+    imageSrc: '/media/green-ghost-top-dispensary-thailand-nomads.webp',
+    alt: 'Green Ghost Top Dispensary Phuket Thailand - Thailand Nomads',
+    label: 'Thailand Nomads',
+  },
+  {
+    href: 'https://thai.news/news/thailand/top-20-cannabis-shops-where-to-buy-weed-in-phuket-vol-1-2024',
+    title:
+      'Top 20 Cannabis Shops: Where to Buy Weed in Phuket Vol 1, 2024 – THAI.NEWS – Thailand Breaking News',
+    imageSrc: '/media/green-ghost-top-dispensary-thai-news.webp',
+    alt: 'Green Ghost Top Dispensary Phuket Thailand - Thai News',
+    label: 'Thai News',
+  },
+];
+
 export const Fwen = () => {
   if (!Array.isArray(fwen)) return null;
   return (
@@ -18,6 +66,8 @@ export const Fwen = () => {
     >
       <Box display={'flex'} flexDir={{ base: 'column', md: 'row' }}>
         <Box
+          as="section"
+          aria-label="Top Dispensary in Phuket Thailand 2025"
           display={'flex'}
           flexDir={'column'}
           w={'100%'}
@@ -31,7 +81,7 @@ export const Fwen = () => {
             mb={{ base: 2 }}
             textAlign={'left'}
           >
-            Top dispensary in Phuket Thailand
+            Top dispensary in Phuket Thailand 2025
           </Text>
           <Text
             as={'p'}
@@ -41,267 +91,63 @@ export const Fwen = () => {
             mb={4}
           >
             See where Green Ghost stands among the best dispensaries in Phuket
-            Thailand.
+            Thailand in 2025.
           </Text>
-          <Box display={'flex'} flexWrap={'wrap'}>
-            <Link
-              href="https://www.tripadvisor.com/Attractions-g293920-Activities-c20-t170-Phuket.html"
-              passHref
-              title="THE 5 BEST Phuket Coffeehouses (2025) - Tripadvisor"
-            >
+          <Box
+            as="ul"
+            listStyleType={'none'}
+            aria-label="Listing of best dispensaries in 2025 list"
+            display={'flex'}
+            flexWrap={'wrap'}
+          >
+            {dispensaries.map((dispensary, index) => (
               <Box
-                h={'100%'}
-                fontSize={{ base: 'xl' }}
-                color={'ghostVerse.color2.darker'}
-                fontFamily={'CubicFive12'}
-                mx={2}
-                textAlign={'center'}
-                p={2}
-                display={'flex'}
-                justifyContent={'center'}
-                flexDirection={'column'}
-                alignItems={'center'}
-                transition={'all .3s'}
-                _hover={{
-                  bgColor: 'ghostVerse.dark.lighter',
-                  color: 'ghostVerse.green.base',
-                }}
+                as="li"
+                key={index}
+                aria-label={`${dispensary.label} cannabis stores listing 2025`}
               >
-                <Box w={'60px'} h={'60px'}>
-                  <Image
-                    src="/media/green-ghost-top-dispensary-tripadvisor.webp"
-                    width={60}
-                    height={60}
-                    alt="Green Ghost Top Dispensary Phuket Thailand - Tripadvisor"
-                    sizes="(max-width: 60px) 60px, 60px"
-                    style={{ objectFit: 'cover' }}
-                    quality={75}
-                  />
-                </Box>
-                <Text
-                  as={'h4'}
-                  fontSize={{ base: 10, md: 10 }}
-                  lineHeight={'12px'}
-                >
-                  Tripadvisor
-                </Text>
+                <Link href={dispensary.href} passHref title={dispensary.title}>
+                  <Box
+                    as="span"
+                    h={'100%'}
+                    fontSize={{ base: 'xl' }}
+                    color={'ghostVerse.color2.darker'}
+                    fontFamily={'CubicFive12'}
+                    mx={2}
+                    textAlign={'center'}
+                    p={2}
+                    display={'flex'}
+                    justifyContent={'center'}
+                    flexDirection={'column'}
+                    alignItems={'center'}
+                    transition={'all .3s'}
+                    _hover={{
+                      bgColor: 'ghostVerse.dark.lighter',
+                      color: 'ghostVerse.green.base',
+                    }}
+                  >
+                    <Box w={'60px'} h={'60px'}>
+                      <Image
+                        src={dispensary.imageSrc}
+                        width={60}
+                        height={60}
+                        alt={dispensary.alt}
+                        sizes="(max-width: 60px) 60px, 60px"
+                        style={{ objectFit: 'cover' }}
+                        quality={75}
+                      />
+                    </Box>
+                    <Text
+                      as={'h4'}
+                      fontSize={{ base: 10, md: 10 }}
+                      lineHeight={'12px'}
+                    >
+                      {dispensary.label}
+                    </Text>
+                  </Box>
+                </Link>
               </Box>
-            </Link>
-            <Link
-              href="https://www.bangkokpost.com/thailand/pr/2470009/best-cannabis-shops-in-phuket-2025"
-              passHref
-              title="Best Cannabis Shops in Phuket 2025 - Bangkok Post"
-            >
-              <Box
-                h={'100%'}
-                fontSize={{ base: 'xl' }}
-                color={'ghostVerse.color2.darker'}
-                fontFamily={'CubicFive12'}
-                mx={2}
-                textAlign={'center'}
-                p={2}
-                display={'flex'}
-                justifyContent={'center'}
-                flexDirection={'column'}
-                alignItems={'center'}
-                transition={'all .3s'}
-                _hover={{
-                  bgColor: 'ghostVerse.dark.lighter',
-                  color: 'ghostVerse.green.base',
-                }}
-              >
-                <Box w={'60px'} h={'60px'}>
-                  <Image
-                    src="/media/green-ghost-top-dispensary-bangkok-post.webp"
-                    width={60}
-                    height={60}
-                    alt="Green Ghost Top Dispensary Phuket Thailand - Bangkok Post"
-                    sizes="(max-width: 60px) 60px, 60px"
-                    style={{ objectFit: 'cover' }}
-                    quality={75}
-                  />
-                </Box>
-                <Text
-                  as={'h4'}
-                  fontSize={{ base: 10, md: 10 }}
-                  lineHeight={'12px'}
-                >
-                  Bangkok Post
-                </Text>
-              </Box>
-            </Link>
-            <Link
-              href="https://weed.th/best-dispensaries-in-thailand"
-              passHref
-              title="Top Dispensaries In Thailand - Best Weed In Thailand - WEED.TH"
-            >
-              <Box
-                h={'100%'}
-                fontSize={{ base: 'xl' }}
-                color={'ghostVerse.color2.darker'}
-                fontFamily={'CubicFive12'}
-                mx={2}
-                textAlign={'center'}
-                p={2}
-                display={'flex'}
-                justifyContent={'center'}
-                flexDirection={'column'}
-                alignItems={'center'}
-                transition={'all .3s'}
-                _hover={{
-                  bgColor: 'ghostVerse.dark.lighter',
-                  color: 'ghostVerse.green.base',
-                }}
-              >
-                <Box w={'60px'} h={'60px'}>
-                  <Image
-                    src="/media/green-ghost-top-dispensary-weed-th.webp"
-                    width={60}
-                    height={60}
-                    alt="Green Ghost Top Dispensary Phuket Thailand - Weed.th"
-                    sizes="(max-width: 60px) 60px, 60px"
-                    style={{ objectFit: 'cover' }}
-                    quality={75}
-                  />
-                </Box>
-                <Text
-                  as={'h4'}
-                  fontSize={{ base: 10, md: 10 }}
-                  lineHeight={'12px'}
-                >
-                  Weed.th
-                </Text>
-              </Box>
-            </Link>
-            <Link
-              href="https://www.cleverthai.com/best-cannabis-shops-in-phuket/"
-              passHref
-              title="Phuket's Finest: Exploring the Top 11 Cannabis Destinations [2025 ]"
-            >
-              <Box
-                h={'100%'}
-                fontSize={{ base: 'xl' }}
-                color={'ghostVerse.color2.darker'}
-                fontFamily={'CubicFive12'}
-                mx={2}
-                textAlign={'center'}
-                p={2}
-                display={'flex'}
-                justifyContent={'center'}
-                flexDirection={'column'}
-                alignItems={'center'}
-                transition={'all .3s'}
-                _hover={{
-                  bgColor: 'ghostVerse.dark.lighter',
-                  color: 'ghostVerse.green.base',
-                }}
-              >
-                <Box w={'60px'} h={'60px'}>
-                  <Image
-                    src="/media/green-ghost-top-dispensary-cleverthai.webp"
-                    width={60}
-                    height={60}
-                    alt="Green Ghost Top Dispensary Phuket Thailand - CleverThai"
-                    sizes="(max-width: 60px) 60px, 60px"
-                    style={{ objectFit: 'cover' }}
-                    quality={75}
-                  />
-                </Box>
-                <Text
-                  as={'h4'}
-                  fontSize={{ base: 10, md: 10 }}
-                  lineHeight={'12px'}
-                >
-                  Cleverthai
-                </Text>
-              </Box>
-            </Link>
-            <Link
-              href="https://www.thailandnomads.com/cannabis-shops-phuket/"
-              passHref
-              title="25 Cannabis Shops & Cafes to Buy Weed in Phuket 2025"
-            >
-              <Box
-                h={'100%'}
-                fontSize={{ base: 'xl' }}
-                color={'ghostVerse.color2.darker'}
-                fontFamily={'CubicFive12'}
-                mx={2}
-                textAlign={'center'}
-                p={2}
-                display={'flex'}
-                justifyContent={'center'}
-                flexDirection={'column'}
-                alignItems={'center'}
-                transition={'all .3s'}
-                _hover={{
-                  bgColor: 'ghostVerse.dark.lighter',
-                  color: 'ghostVerse.green.base',
-                }}
-              >
-                <Box w={'60px'} h={'60px'}>
-                  <Image
-                    src="/media/green-ghost-top-dispensary-thailand-nomads.webp"
-                    width={60}
-                    height={60}
-                    alt="Green Ghost Top Dispensary Phuket Thailand - Thailand Nomads"
-                    sizes="(max-width: 60px) 60px, 60px"
-                    style={{ objectFit: 'cover' }}
-                    quality={75}
-                  />
-                </Box>
-                <Text
-                  as={'h4'}
-                  fontSize={{ base: 10, md: 10 }}
-                  lineHeight={'12px'}
-                >
-                  Thailand Nomads
-                </Text>
-              </Box>
-            </Link>
-            <Link
-              href="https://thai.news/news/thailand/top-20-cannabis-shops-where-to-buy-weed-in-phuket-vol-1-2024"
-              passHref
-              title="Top 20 Cannabis Shops: Where to Buy Weed in Phuket Vol 1, 2024 – THAI.NEWS – Thailand Breaking News"
-            >
-              <Box
-                h={'100%'}
-                fontSize={{ base: 'xl' }}
-                color={'ghostVerse.color2.darker'}
-                fontFamily={'CubicFive12'}
-                mx={2}
-                textAlign={'center'}
-                p={2}
-                display={'flex'}
-                justifyContent={'center'}
-                flexDirection={'column'}
-                alignItems={'center'}
-                transition={'all .3s'}
-                _hover={{
-                  bgColor: 'ghostVerse.dark.lighter',
-                  color: 'ghostVerse.green.base',
-                }}
-              >
-                <Box w={'60px'} h={'60px'}>
-                  <Image
-                    src="/media/green-ghost-top-dispensary-thai-news.webp"
-                    width={60}
-                    height={60}
-                    alt="Green Ghost Top Dispensary Phuket Thailand - Thai News"
-                    sizes="(max-width: 60px) 60px, 60px"
-                    style={{ objectFit: 'cover' }}
-                    quality={75}
-                  />
-                </Box>
-                <Text
-                  as={'h4'}
-                  fontSize={{ base: 10, md: 10 }}
-                  lineHeight={'12px'}
-                >
-                  Thai News
-                </Text>
-              </Box>
-            </Link>
+            ))}
           </Box>
         </Box>
         <Box
