@@ -8,13 +8,6 @@ import Link from 'next/link';
 // config/dispensaries.ts
 export const dispensaries = [
   {
-    href: 'https://www.tripadvisor.com/Attractions-g293920-eriories-c20-t170-Phuket.html',
-    title: 'THE 5 BEST Phuket Coffeehouses (2025) - Tripadvisor',
-    imageSrc: '/media/green-ghost-top-dispensary-tripadvisor.webp',
-    alt: 'Green Ghost Top Dispensary Phuket Thailand - Tripadvisor',
-    label: 'Tripadvisor',
-  },
-  {
     href: 'https://www.bangkokpost.com/thailand/pr/2470009/best-cannabis-shops-in-phuket-2025',
     title: 'Best Cannabis Shops in Phuket 2025 - Bangkok Post',
     imageSrc: '/media/green-ghost-top-dispensary-bangkok-post.webp',
