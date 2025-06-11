@@ -7,13 +7,13 @@ import Link from 'next/link';
 
 // config/dispensaries.ts
 export const dispensaries = [
-  {
-    href: 'https://www.bangkokpost.com/thailand/pr/2470009/best-cannabis-shops-in-phuket-2025',
-    title: 'Best Cannabis Shops in Phuket 2025 - Bangkok Post',
-    imageSrc: '/media/green-ghost-top-dispensary-bangkok-post.webp',
-    alt: 'Green Ghost Top Dispensary Phuket Thailand - Bangkok Post',
-    label: 'Bangkok Post',
-  },
+  // {
+  //   href: 'https://www.bangkokpost.com/thailand/pr/2470009/best-cannabis-shops-in-phuket-2025',
+  //   title: 'Best Cannabis Shops in Phuket 2025 - Bangkok Post',
+  //   imageSrc: '/media/green-ghost-top-dispensary-bangkok-post.webp',
+  //   alt: 'Green Ghost Top Dispensary Phuket Thailand - Bangkok Post',
+  //   label: 'Bangkok Post',
+  // },
   {
     href: 'https://weed.th/best-dispensaries-in-thailand',
     title: 'Top Dispensaries In Thailand - Best Weed In Thailand - WEED.TH',

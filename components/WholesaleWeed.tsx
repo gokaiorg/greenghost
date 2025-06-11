@@ -3,9 +3,7 @@ import { BudItemWholesale } from './shop/BudItemWholesale';
 import { buds } from '../config/buds';
 
 const selectedStrains = [
-  'Hawaiian',
-  'Orange Sherbert',
-  'OG Kush',
+  'Pineapple Express',
   'Super Lemon Haze',
   'Pink Zkittlez',
 ];
