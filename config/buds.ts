@@ -103,9 +103,9 @@ export const buds: Bud[] = [
     descSeo:
       'Pineapple Express: Sativa-dominant hybrid (20-25% THC) with pineapple-citrus flavor. Energizing, creative high for depression, pain, fatigue. Perfect for daytime use.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-pineapple-express-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-pineapple-express-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-pineapple-express-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-pineapple-express-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-pineapple-express-bud-02.webp',
     ],
     imgDesc: 'Order Pineapple Express Cannabis Strain Online',
     source: 'https://www.leafly.com/strains/pineapple-express',
@@ -161,9 +161,9 @@ export const buds: Bud[] = [
     descSeo:
       'Sha-Boink: Exotic Genetix hybrid (25-28% THC) with tart berry, earth, and pine flavors. Uplifting, creative high eases stress and pain. Vibrant buds, high yields.',
     images: [
+      '/media/green-ghost-degen-weed-shop-strain-sha-boink-bud-01.webp',
       '/media/green-ghost-degen-weed-shop-strain-sha-boink-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-sha-boink-cover.webp',
-      '/media/green-ghost-degen-weed-shop-strain-sha-boink-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-sha-boink-bud-02.webp',
     ],
     imgDesc: 'Order Sha-Boink Cannabis Strain Online',
     source: 'https://www.leafly.com/strains/sha-boink',
