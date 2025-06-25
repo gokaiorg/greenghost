@@ -4,7 +4,7 @@ import { buds } from '../config/buds';
 import Link from 'next/link';
 
 const selectedStrains = [
-  'Scotty 2 Hotty',
+  'Slaphappy',
   'Mango Sticky Rice',
   'Popanonymous',
   "Ben & Gary's",

@@ -6,6 +6,14 @@ const selectedStrains = [
   'Pineapple Express',
   'Super Lemon Haze',
   'Pink Zkittlez',
+  'Popanonymous',
+  'Pop Star',
+  'Slaphappy',
+  'On point',
+  'Toasted toffee',
+  'Strawneapple',
+  "Ben & Gary's",
+  'Poppin fresh',
 ];
 
 export const WholesaleWeed = () => {

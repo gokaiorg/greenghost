@@ -11,6 +11,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import BoxItemShop from './elements/BoxItemShop';
 import BoxItemDescShop from './elements/BoxItemDescShop';
+import BoxItemPriceShop from './elements/BoxItemPriceShop';
 
 type BudItemWholesaleProps = {
   bud: Bud;
@@ -73,6 +74,7 @@ export const BudItemWholesale = ({ bud }: BudItemWholesaleProps) => {
             )}
           </Swiper>
           <BoxItemDescShop>
+            <BoxItemPriceShop>{`${bud.priceWholesale} THB`}</BoxItemPriceShop>
             <Box as="li" listStyleType={'none'}>
               <Text
                 as={'h3'}
