@@ -11,6 +11,7 @@ export type Bud = {
   grower: string;
   growerSlug: string;
   price: number;
+  priceWholesale: number;
   description: string;
   descSeo: string;
   images: string[];
@@ -26,6 +27,7 @@ export const buds: Bud[] = [
   {
     slug: 'thai-stick',
     name: 'Thai Stick',
+    priceWholesale: 50,
     price: 100,
     dominance: 'Sativa',
     indica: '0',
@@ -55,6 +57,7 @@ export const buds: Bud[] = [
   {
     slug: 'hawaiian',
     name: 'Hawaiian',
+    priceWholesale: 50,
     price: 100,
     dominance: 'Sativa',
     indica: '40',
@@ -84,6 +87,7 @@ export const buds: Bud[] = [
   {
     slug: 'pineapple-express',
     name: 'Pineapple Express',
+    priceWholesale: 50,
     price: 100,
     dominance: 'Sativa',
     indica: '40',
@@ -113,6 +117,7 @@ export const buds: Bud[] = [
   {
     slug: 'cherry-z',
     name: 'Cherry Z',
+    priceWholesale: 50,
     price: 250,
     dominance: 'Hybrid',
     indica: '50',
@@ -142,6 +147,7 @@ export const buds: Bud[] = [
   {
     slug: 'sha-boink',
     name: 'Sha-Boink',
+    priceWholesale: 50,
     price: 250,
     dominance: 'Hybrid',
     indica: '50',
@@ -171,6 +177,7 @@ export const buds: Bud[] = [
   {
     slug: 'pink-zkittlez',
     name: 'Pink Zkittlez',
+    priceWholesale: 50,
     price: 150,
     dominance: 'Hybrid',
     indica: '50',
@@ -200,6 +207,7 @@ export const buds: Bud[] = [
   {
     slug: 'orange-sherbert',
     name: 'Orange Sherbert',
+    priceWholesale: 50,
     price: 150,
     dominance: 'Hybrid',
     indica: '50',
@@ -229,6 +237,7 @@ export const buds: Bud[] = [
   {
     slug: 'cereal-milk',
     name: 'Cereal Milk',
+    priceWholesale: 50,
     price: 250,
     dominance: 'Hybrid',
     indica: '50',
@@ -258,6 +267,7 @@ export const buds: Bud[] = [
   {
     slug: 'master-og',
     name: 'Master OG',
+    priceWholesale: 50,
     price: 250,
     dominance: 'Indica',
     indica: '90',
@@ -287,6 +297,7 @@ export const buds: Bud[] = [
   {
     slug: 'og-kush',
     name: 'OG Kush',
+    priceWholesale: 50,
     price: 200,
     dominance: 'Indica',
     indica: '55',
@@ -316,6 +327,7 @@ export const buds: Bud[] = [
   {
     slug: 'amnesia-haze',
     name: 'Amnesia Haze',
+    priceWholesale: 50,
     price: 150,
     dominance: 'Sativa',
     indica: '20',
@@ -345,6 +357,7 @@ export const buds: Bud[] = [
   {
     slug: 'royal-cheese',
     name: 'Royal Cheese',
+    priceWholesale: 50,
     price: 150,
     dominance: 'Hybrid',
     indica: '50',
@@ -374,6 +387,7 @@ export const buds: Bud[] = [
   {
     slug: 'fried-applez',
     name: 'Fried Applez',
+    priceWholesale: 50,
     price: 250,
     dominance: 'Hybrid',
     indica: '50',
@@ -403,6 +417,7 @@ export const buds: Bud[] = [
   {
     slug: 'la-haze',
     name: 'L.A. Haze',
+    priceWholesale: 50,
     price: 300,
     dominance: 'Sativa',
     indica: '20',
@@ -432,6 +447,7 @@ export const buds: Bud[] = [
   {
     slug: 'frosted-jungle',
     name: 'Frosted Jungle',
+    priceWholesale: 50,
     price: 250,
     dominance: 'Sativa',
     indica: '40',
@@ -461,6 +477,7 @@ export const buds: Bud[] = [
   {
     slug: 'northern-lights',
     name: 'Northern Lights',
+    priceWholesale: 50,
     price: 200,
     dominance: 'Indica',
     indica: '90',
@@ -490,6 +507,7 @@ export const buds: Bud[] = [
   {
     slug: 'super-lemon-haze',
     name: 'Super Lemon Haze',
+    priceWholesale: 50,
     price: 150,
     dominance: 'Sativa',
     indica: '30',
@@ -519,6 +537,7 @@ export const buds: Bud[] = [
   {
     slug: 'the-queen-s1',
     name: 'The Queen S1',
+    priceWholesale: 50,
     price: 250,
     dominance: 'Indica',
     indica: '70',
@@ -548,6 +567,7 @@ export const buds: Bud[] = [
   {
     slug: 'drippin-aint-eazy',
     name: 'Drippin’ Aint Eazy',
+    priceWholesale: 50,
     price: 400,
     dominance: 'Indica',
     indica: '70',
@@ -577,6 +597,7 @@ export const buds: Bud[] = [
   {
     slug: 'runtz',
     name: 'Runtz',
+    priceWholesale: 50,
     price: 300,
     dominance: 'Hybrid',
     indica: '50',
@@ -606,6 +627,7 @@ export const buds: Bud[] = [
   {
     slug: 'pop-star',
     name: 'Pop Star',
+    priceWholesale: 100,
     price: 250,
     dominance: 'Indica',
     indica: '80',
@@ -635,6 +657,7 @@ export const buds: Bud[] = [
   {
     slug: 'popanonymous',
     name: 'Popanonymous',
+    priceWholesale: 100,
     price: 300,
     dominance: 'Hybrid',
     indica: '50',
@@ -664,6 +687,7 @@ export const buds: Bud[] = [
   {
     slug: 'sour-diesel',
     name: 'Sour Diesel',
+    priceWholesale: 50,
     price: 350,
     dominance: 'Sativa',
     indica: '10',
@@ -694,6 +718,7 @@ export const buds: Bud[] = [
   {
     slug: 'super-boof',
     name: 'Super Boof',
+    priceWholesale: 50,
     price: 400,
     dominance: 'Hybrid',
     indica: '50',
@@ -723,6 +748,7 @@ export const buds: Bud[] = [
   {
     slug: 'ben-garys',
     name: "Ben & Gary's",
+    priceWholesale: 150,
     price: 400,
     dominance: 'Indica',
     indica: '70',
@@ -752,6 +778,7 @@ export const buds: Bud[] = [
   {
     slug: 'slaphappy',
     name: 'Slaphappy',
+    priceWholesale: 150,
     price: 400,
     dominance: 'Indica',
     indica: '70',
@@ -781,6 +808,7 @@ export const buds: Bud[] = [
   {
     slug: 'el-chapo-og',
     name: 'El Chapo OG',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '70',
@@ -810,6 +838,7 @@ export const buds: Bud[] = [
   {
     slug: 'forbidden-fruit',
     name: 'Forbidden Fruit',
+    priceWholesale: 50,
     price: 350,
     dominance: 'Indica',
     indica: '70',
@@ -839,6 +868,7 @@ export const buds: Bud[] = [
   {
     slug: 'apricot-oreoz',
     name: 'Apricot Oreoz',
+    priceWholesale: 50,
     price: 350,
     dominance: 'Hybrid',
     indica: '50',
@@ -868,6 +898,7 @@ export const buds: Bud[] = [
   {
     slug: 'scotty-2-hotty',
     name: 'Scotty 2 Hotty',
+    priceWholesale: 50,
     price: 500,
     dominance: 'Indica',
     indica: '70',
@@ -880,7 +911,7 @@ export const buds: Bud[] = [
     growerSlug: '/sweed-dreams',
     environment: 'Indoor',
     grade: 'AAAA Grade',
-    quantity: 43,
+    quantity: 0,
     origin: 'Krabi',
     description:
       'Scotty 2 Hotty is an indica-dominant hybrid that emerges from the genetic fusion of Biscotti and Rainbow Chip. This strain features tightly-packed olive and fern green buds, showcasing the rich and complex characteristics of its Cookies family lineage. The aroma and flavor of Scotty 2 Hotty are captivating, delivering a sensory experience that cannabis enthusiasts will appreciate. With each inhale, this strain reveals layers of earthy sweetness and hints of spice, making it a delightful choice for those seeking both potency and flavor. \n\n The effects of Scotty 2 Hotty are as balanced as they are powerful. As an indica-dominant strain, it excels at inducing a state of deep relaxation, helping to ease tension and promote tranquility. Despite its calming effects, Scotty 2 Hotty also has a noticeable sativa influence that sparks a wave of euphoria, lifting the mood and enhancing overall well-being. This combination makes it an excellent choice for those looking to unwind while still enjoying a subtle mental uplift, perfect for evening use or moments of stress. \n\n Scotty 2 Hotty’s terpene profile plays a crucial role in shaping its effects. Dominated by caryophyllene, a terpene known for its anti-inflammatory and analgesic properties, this strain not only relaxes the body but also helps to alleviate pain. The presence of myrcene, another key terpene associated with sedation, further enhances the strain’s calming effects. Together, these terpenes create a well-rounded experience that soothes the body and mind, making Scotty 2 Hotty a popular choice for both recreational and medicinal use.',
@@ -897,6 +928,7 @@ export const buds: Bud[] = [
   {
     slug: 'pitaya',
     name: 'Pitaya',
+    priceWholesale: 50,
     price: 450,
     dominance: 'Indica',
     indica: '100',
@@ -926,6 +958,7 @@ export const buds: Bud[] = [
   {
     slug: 'on-point',
     name: 'On Point',
+    priceWholesale: 100,
     price: 300,
     dominance: 'Indica',
     indica: '60',
@@ -955,6 +988,7 @@ export const buds: Bud[] = [
   {
     slug: 'medellin',
     name: 'Medellin',
+    priceWholesale: 50,
     price: 550,
     dominance: 'Hybrid',
     indica: '50',
@@ -982,8 +1016,39 @@ export const buds: Bud[] = [
     source: 'https://www.leafly.com/strains/medellin',
   },
   {
+    slug: 'blood-honey',
+    name: 'Blood Honey',
+    priceWholesale: 50,
+    price: 350,
+    dominance: 'Hybrid',
+    indica: '50',
+    sativa: '50',
+    THC: '23',
+    CBD: '0',
+    effects: 'Creative, Energetic, Talkative',
+    relieves: 'Lack of appetite, Stress, Depression',
+    grower: 'Green Ghost',
+    growerSlug: '',
+    environment: 'Indoor',
+    grade: 'AAAA Grade',
+    quantity: 50,
+    origin: 'Phuket',
+    description:
+      'Blood Honey, a perfectly balanced hybrid (50% indica/50% sativa) from the tantalizing cross of Forbidden Fruit and Red Runtz, is a sensory and therapeutic masterpiece. Its name reflects its stunning appearance: fluffy, spade-shaped minty green buds with deep purple undertones, adorned with furry amber hairs and a glistening coat of chunky, golden-white trichomes that promise potency. \n\n Breaking apart these nuggets releases a vibrant aroma, blending sweet honey with spicy oranges and juicy cherries, amplified by a zesty kick that intensifies with each toke. The flavor mirrors this brilliance, bursting with vivid blood orange notes, sugary candy sweetness, and a touch of fresh honey, creating a delightful palate adventure. With a potent 19-23% THC, Blood Honey’s high starts with a sociable, euphoric lift, sparking outgoing energy and chatty vibes perfect for social settings. \n\n This mental buzz gradually gives way to a soothing body high that anchors you to the couch, easing tension without draining your spirit. A gentle, sleepy finish makes it ideal for evening use. Medical users prize Blood Honey for relieving insomnia, chronic stress, anxiety, depression, chronic pain, and headaches. Grown with care, its dense, resinous buds deliver a harmonious blend of uplift and calm, making Blood Honey a must-try for those seeking flavor, potency, and therapeutic relief in one exquisite package.',
+    descSeo:
+      'Blood Honey: Balanced hybrid (19-23% THC) with blood orange, honey flavor. Sociable, euphoric high eases stress, pain, insomnia. Stunning purple-green buds.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-blood-honey-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-blood-honey-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-blood-honey-cover.webp',
+    ],
+    imgDesc: 'Order Blood Honey Cannabis Strain Online',
+    source: 'https://www.leafly.com/strains/blood-honey',
+  },
+  {
     slug: 'strawneapple',
     name: 'Strawneapple',
+    priceWholesale: 150,
     price: 350,
     dominance: 'Hybrid',
     indica: '50',
@@ -1013,6 +1078,7 @@ export const buds: Bud[] = [
   {
     slug: 'poppin-fresh',
     name: 'Poppin Fresh',
+    priceWholesale: 50,
     price: 350,
     dominance: 'Indica',
     indica: '70',
@@ -1042,6 +1108,7 @@ export const buds: Bud[] = [
   {
     slug: 'pink-runtz',
     name: 'Pink Runtz',
+    priceWholesale: 50,
     price: 400,
     dominance: 'Hybrid',
     indica: '50',
@@ -1071,6 +1138,7 @@ export const buds: Bud[] = [
   {
     slug: 'toasted-toffee',
     name: 'Toasted Toffee',
+    priceWholesale: 50,
     price: 500,
     dominance: 'Hybrid',
     indica: '50',
@@ -1100,6 +1168,7 @@ export const buds: Bud[] = [
   {
     slug: 'cbd-auto-tune',
     name: 'CBD Auto tune',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -1129,6 +1198,7 @@ export const buds: Bud[] = [
   {
     slug: 'kd-mango-tail',
     name: 'KD Mango Tail',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Sativa',
     indica: '0',
@@ -1159,6 +1229,7 @@ export const buds: Bud[] = [
   {
     slug: 'mango-sticky-rice',
     name: 'Mango Sticky Rice',
+    priceWholesale: 50,
     price: 450,
     dominance: 'Sativa',
     indica: '30',
@@ -1188,6 +1259,7 @@ export const buds: Bud[] = [
   {
     slug: 'fat-banana',
     name: 'Fat Banana',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -1217,6 +1289,7 @@ export const buds: Bud[] = [
   {
     slug: 'north-thunderfuck',
     name: 'North Thunderfuck',
+    priceWholesale: 50,
     price: 200,
     dominance: 'Hybrid',
     indica: '50',
@@ -1246,6 +1319,7 @@ export const buds: Bud[] = [
   {
     slug: 'end-game',
     name: 'End Game',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -1275,6 +1349,7 @@ export const buds: Bud[] = [
   {
     slug: 'gorilla-goo',
     name: 'Gorilla Goo',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Sativa',
     indica: '30',
@@ -1305,6 +1380,7 @@ export const buds: Bud[] = [
   {
     slug: 'jack-herer',
     name: 'Jack Herer',
+    priceWholesale: 50,
     price: 300,
     dominance: 'Sativa',
     indica: '20',
@@ -1334,6 +1410,7 @@ export const buds: Bud[] = [
   {
     slug: 'grandmaster-kush',
     name: 'Grandmaster Kush',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '90',
@@ -1363,6 +1440,7 @@ export const buds: Bud[] = [
   {
     slug: 'white-widow',
     name: 'White Widow',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -1392,6 +1470,7 @@ export const buds: Bud[] = [
   {
     slug: 'silver-fox',
     name: 'Silver Fox',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Sativa',
     indica: '30',
@@ -1422,6 +1501,7 @@ export const buds: Bud[] = [
   {
     slug: 'chemdawg',
     name: 'Chemdawg',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '55',
@@ -1452,6 +1532,7 @@ export const buds: Bud[] = [
   {
     slug: 'bubble-zkittlez',
     name: 'Bubble Zkittlez',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '70',
@@ -1481,6 +1562,7 @@ export const buds: Bud[] = [
   {
     slug: 'royal-runtz',
     name: 'Royal Runtz',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -1510,6 +1592,7 @@ export const buds: Bud[] = [
   {
     slug: 'green-gelato',
     name: 'Green Gelato',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '55',
@@ -1539,6 +1622,7 @@ export const buds: Bud[] = [
   {
     slug: 'gelato-runtz',
     name: 'Gelato Runtz',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -1568,6 +1652,7 @@ export const buds: Bud[] = [
   {
     slug: 'amnesia',
     name: 'Amnesia',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Sativa',
     indica: '30',
@@ -1597,6 +1682,7 @@ export const buds: Bud[] = [
   {
     slug: 'banana-daddy',
     name: 'Banana Daddy',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -1626,6 +1712,7 @@ export const buds: Bud[] = [
   {
     slug: 'purple-queen',
     name: 'Purple Queen',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '75',
@@ -1655,6 +1742,7 @@ export const buds: Bud[] = [
   {
     slug: 'mommys-milk',
     name: "Mommy's Milk",
+    priceWholesale: 50,
     price: 420,
     dominance: 'Sativa',
     indica: '40',
@@ -1684,6 +1772,7 @@ export const buds: Bud[] = [
   {
     slug: 'next-level',
     name: 'Next Level',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Sativa',
     indica: '40',
@@ -1713,6 +1802,7 @@ export const buds: Bud[] = [
   {
     slug: 'cbd-charlottes-angel',
     name: "CBD Charlotte's Angel",
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -1742,6 +1832,7 @@ export const buds: Bud[] = [
   {
     slug: 'sweet-zkittlez',
     name: 'Sweet Zkittlez',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '80',
@@ -1771,6 +1862,7 @@ export const buds: Bud[] = [
   {
     slug: 'hulkberry',
     name: 'Hulkberry',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Sativa',
     indica: '35',
@@ -1801,6 +1893,7 @@ export const buds: Bud[] = [
   {
     slug: 'phantom-cookies',
     name: 'Phantom Cookies',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Sativa',
     indica: '30',
@@ -1830,6 +1923,7 @@ export const buds: Bud[] = [
   {
     slug: 'pink-sunset',
     name: 'Pink Sunset',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '70',
@@ -1859,6 +1953,7 @@ export const buds: Bud[] = [
   {
     slug: 'purple-zkittlez',
     name: 'Purple Zkittlez',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '60',
@@ -1888,6 +1983,7 @@ export const buds: Bud[] = [
   {
     slug: 'buddy-critical',
     name: 'Buddy Critical',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '60',
@@ -1917,6 +2013,7 @@ export const buds: Bud[] = [
   {
     slug: 'bruce-banner',
     name: 'Bruce Banner',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -1946,6 +2043,7 @@ export const buds: Bud[] = [
   {
     slug: 'mango-gelato',
     name: 'Mango Gelato',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '60',
@@ -1975,6 +2073,7 @@ export const buds: Bud[] = [
   {
     slug: 'stardawg',
     name: 'Stardawg',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -2004,6 +2103,7 @@ export const buds: Bud[] = [
   {
     slug: 'tangerine-dream',
     name: 'Tangerine Dream',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -2033,6 +2133,7 @@ export const buds: Bud[] = [
   {
     slug: 'mandarin-zkittlez',
     name: 'Mandarin Zkittlez',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '60',
@@ -2062,6 +2163,7 @@ export const buds: Bud[] = [
   {
     slug: 'wedding-cake',
     name: 'Wedding Cake',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '60',
@@ -2091,6 +2193,7 @@ export const buds: Bud[] = [
   {
     slug: 'critical-plus-20',
     name: 'Critical Plus 2.0',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '70',
@@ -2120,6 +2223,7 @@ export const buds: Bud[] = [
   {
     slug: 'mimosa-evo',
     name: 'Mimosa Evo',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '60',
@@ -2149,6 +2253,7 @@ export const buds: Bud[] = [
   {
     slug: 'kings-juice',
     name: 'King’s Juice',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '60',
@@ -2178,6 +2283,7 @@ export const buds: Bud[] = [
   {
     slug: 'eleven-roses',
     name: 'Eleven Roses',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '90',
@@ -2207,6 +2313,7 @@ export const buds: Bud[] = [
   {
     slug: 'lemon-zkittlez',
     name: 'Lemon Zkittlez',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '70',
@@ -2236,6 +2343,7 @@ export const buds: Bud[] = [
   {
     slug: 'cherry-garcia',
     name: 'Cherry Garcia',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -2265,6 +2373,7 @@ export const buds: Bud[] = [
   {
     slug: 'critical-kush',
     name: 'Critical Kush',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '90',
@@ -2294,6 +2403,7 @@ export const buds: Bud[] = [
   {
     slug: 'royal-moby',
     name: 'Royal Moby',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Sativa',
     indica: '35',
@@ -2324,6 +2434,7 @@ export const buds: Bud[] = [
   {
     slug: 'mac-and-jack',
     name: 'MAC and Jack',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -2353,6 +2464,7 @@ export const buds: Bud[] = [
   {
     slug: 'c-vibez',
     name: 'C-Vibez',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Sativa',
     indica: '40',
@@ -2382,6 +2494,7 @@ export const buds: Bud[] = [
   {
     slug: 'fruit-spirit',
     name: 'Fruit Spirit',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Sativa',
     indica: '40',
@@ -2411,6 +2524,7 @@ export const buds: Bud[] = [
   {
     slug: 'platinum-oreoz',
     name: 'Platinum Oreoz',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '60',
@@ -2441,6 +2555,7 @@ export const buds: Bud[] = [
   {
     slug: 'dosidos',
     name: 'Dosidos',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '70',
@@ -2470,6 +2585,7 @@ export const buds: Bud[] = [
   {
     slug: 'sherbert',
     name: 'Sherbert',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '85',
@@ -2499,6 +2615,7 @@ export const buds: Bud[] = [
   {
     slug: 'skunk',
     name: 'Skunk',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '65',
@@ -2528,6 +2645,7 @@ export const buds: Bud[] = [
   {
     slug: 'sorbet-4',
     name: 'Sorbet #4',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '60',
@@ -2557,6 +2675,7 @@ export const buds: Bud[] = [
   {
     slug: 'bubble-mango',
     name: 'Bubble Mango',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '70',
@@ -2586,6 +2705,7 @@ export const buds: Bud[] = [
   {
     slug: 'mac-1',
     name: 'MAC 1',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -2615,6 +2735,7 @@ export const buds: Bud[] = [
   {
     slug: 'og-poison',
     name: 'OG Poison',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '70',
@@ -2644,6 +2765,7 @@ export const buds: Bud[] = [
   {
     slug: 'gelato-dream',
     name: 'Gelato Dream',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Sativa',
     indica: '30',
@@ -2673,6 +2795,7 @@ export const buds: Bud[] = [
   {
     slug: 'white-runtz',
     name: 'White Runtz',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -2702,6 +2825,7 @@ export const buds: Bud[] = [
   {
     slug: 'banana-kush',
     name: 'Banana Kush',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '60',
@@ -2731,6 +2855,7 @@ export const buds: Bud[] = [
   {
     slug: 'moon-fruit',
     name: 'Moon Fruit',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -2760,6 +2885,7 @@ export const buds: Bud[] = [
   {
     slug: 'orange-velvet',
     name: 'Orange Velvet',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -2789,6 +2915,7 @@ export const buds: Bud[] = [
   {
     slug: 'platinum-punch',
     name: 'Platinum Punch',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Sativa',
     indica: '30',
@@ -2818,6 +2945,7 @@ export const buds: Bud[] = [
   {
     slug: 'lemon-berry-candy',
     name: 'Lemon Berry Candy',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -2847,6 +2975,7 @@ export const buds: Bud[] = [
   {
     slug: 'mandarin-cookies',
     name: 'Mandarin Cookies',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -2876,6 +3005,7 @@ export const buds: Bud[] = [
   {
     slug: 'mimosa',
     name: 'Mimosa',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
@@ -2905,6 +3035,7 @@ export const buds: Bud[] = [
   {
     slug: 'black-cherry-punch',
     name: 'Black Cherry Punch',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Indica',
     indica: '80',
@@ -2934,6 +3065,7 @@ export const buds: Bud[] = [
   {
     slug: 'snoop-punch',
     name: 'Snoop Punch',
+    priceWholesale: 50,
     price: 420,
     dominance: 'Hybrid',
     indica: '50',
