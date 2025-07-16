@@ -30,24 +30,24 @@ const Links: Route[] = [
       'Enjoy perfectly rolled joints made from premium cannabis, ready to elevate your smoking experience instantly.',
     imageW: '8px',
   },
-  {
-    path: '/menu/edibles',
-    image: '/media/edibles-menu-weed-shop-green-ghost.webp',
-    label: 'Edibles',
-    title: 'Weed Shop Premium Cannabis Edibles Menu',
-    description:
-      'A curated selection of organic, locally sourced cannabis-infused treats like brownies, gummies, and artisanal cookies.',
-    imageW: '18px',
-  },
-  {
-    path: '/menu/concentrates',
-    image: '/media/concentrates-menu-weed-shop-green-ghost.webp',
-    label: 'Concentrates',
-    title: 'Weed Shop Premium Cannabis Concentrates Menu',
-    description:
-      'Menu offering premium cannabis extracts like hash, wax, kiev and oil. Elevate your experience with our potent, curated selection.',
-    imageW: '7px',
-  },
+  // {
+  //   path: '/menu/edibles',
+  //   image: '/media/edibles-menu-weed-shop-green-ghost.webp',
+  //   label: 'Edibles',
+  //   title: 'Weed Shop Premium Cannabis Edibles Menu',
+  //   description:
+  //     'A curated selection of organic, locally sourced cannabis-infused treats like brownies, gummies, and artisanal cookies.',
+  //   imageW: '18px',
+  // },
+  // {
+  //   path: '/menu/concentrates',
+  //   image: '/media/concentrates-menu-weed-shop-green-ghost.webp',
+  //   label: 'Concentrates',
+  //   title: 'Weed Shop Premium Cannabis Concentrates Menu',
+  //   description:
+  //     'Menu offering premium cannabis extracts like hash, wax, kiev and oil. Elevate your experience with our potent, curated selection.',
+  //   imageW: '7px',
+  // },
   {
     path: '/menu/gadgets',
     image: '/media/gadgets-menu-weed-shop-green-ghost.webp',

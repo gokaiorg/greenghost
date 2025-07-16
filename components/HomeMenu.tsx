@@ -14,16 +14,16 @@ export const HomeMenu = () => {
       title: 'Weed Shop Premium Cannabis Pre-Rolls Menu',
       label: 'Pre-Rolls',
     },
-    {
-      href: '/menu/edibles',
-      title: 'Weed Shop Premium Cannabis Edibles Menu',
-      label: 'Edibles',
-    },
-    {
-      href: '/menu/concentrates',
-      title: 'Weed Shop Premium Cannabis Concentrates Menu',
-      label: 'Concentrates',
-    },
+    // {
+    //   href: '/menu/edibles',
+    //   title: 'Weed Shop Premium Cannabis Edibles Menu',
+    //   label: 'Edibles',
+    // },
+    // {
+    //   href: '/menu/concentrates',
+    //   title: 'Weed Shop Premium Cannabis Concentrates Menu',
+    //   label: 'Concentrates',
+    // },
     {
       href: '/menu/gadgets',
       title: 'Weed Shop Premium Cannabis Gadgets Menu',
