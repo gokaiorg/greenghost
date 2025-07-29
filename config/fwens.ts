@@ -1,8 +1,8 @@
 export const fwen = [
   {
-    name: 'Cosmic Temple Vibes',
-    fwenLogo: '/media/green-ghost-weed-grower-cosmic-temple-vibes.webp',
-    fwenLink: 'https://cosmictemplevibes.com/',
+    name: 'ILGM',
+    fwenLogo: '/media/green-ghost-cannabis-seeds-ilgm.webp',
+    fwenLink: 'https://ilgm.com/?aff=7877',
   },
   {
     name: 'ThaiGreenLab',

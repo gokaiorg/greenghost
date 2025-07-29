@@ -29,6 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/weed-drive-thru-phuket',
     '/weed-grower',
     '/wholesale',
+    '/seeds',
   ];
   res.status(200).json(staticUrls);
 }
