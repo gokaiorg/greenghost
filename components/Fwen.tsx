@@ -176,6 +176,23 @@ export const Fwen = () => {
               Best Cannabis Growers
             </Link>
           </Box>
+          <Box
+            mx={2}
+            fontFamily={'vt323'}
+            fontSize={{ base: 'xl' }}
+            lineHeight={1}
+            px={{ base: 4, md: 0 }}
+            pb={{ base: 2, md: 2 }}
+            color={'ghostVerse.green.base'}
+          >
+            <Link
+              title="Premium Cannabis Seeds Partners"
+              href="/seeds"
+              passHref
+            >
+              Get some seeds
+            </Link>
+          </Box>
         </Box>
       </Box>
       {fwen.map((homeHeroItem, index) => (
