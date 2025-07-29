@@ -1078,8 +1078,8 @@ export const buds: Bud[] = [
   {
     slug: 'poppin-fresh',
     name: 'Poppin Fresh',
-    priceWholesale: 50,
-    price: 350,
+    priceWholesale: 100,
+    price: 250,
     dominance: 'Indica',
     indica: '70',
     sativa: '0',
@@ -1091,7 +1091,7 @@ export const buds: Bud[] = [
     growerSlug: '/',
     environment: 'Indoor',
     grade: 'AAAA Grade',
-    quantity: 0,
+    quantity: 50,
     origin: 'Phuket',
     description:
       'Poppin Fresh by Exotic Genetix is an indica-dominant hybrid (70/30) born from a unique collaboration between Compound Genetics, Family Cookies, and rapper Quavo Huncho. \n\n Created by crossing Pavé (Paris OG x The Menthol) with Gary Poppins, this rare strain delivers a flavorful and potent experience. \n\n Poppin Fresh offers a complex aroma profile that blends sweet, woody, fuel, and gas notes, making it a favorite among seasoned cannabis enthusiasts. With a THC content of 26%, it provides a powerful, relaxing effect that is ideal for unwinding. Its terpene profile includes spicy, sweet, and ice cream-like aromas with a hint of gas, reminiscent of Kool-Aid. This strain is easy to cultivate, offering excellent yields and exceptional quality, making it a must-try for growers and connoisseurs alike.',
