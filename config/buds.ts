@@ -160,7 +160,7 @@ export const buds: Bud[] = [
     growerSlug: '/',
     environment: 'Organic Greenhouse',
     grade: 'AAA Grade',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Sha-Boink, a captivating hybrid from Exotic Genetix, is born from the dynamic cross of Bonkers (Lemon Tree x Cookies & Cream F2) and Gary Poppins (Gary Payton x Red Runtz), blending indica and sativa traits in a perfectly balanced dance. This strain dazzles with a complex flavor profile, weaving tart berry bursts with earthy undertones and a crisp pine finish, reminiscent of a forest stroll kissed by citrusy Kool-Aid vibes. \n\n Its aroma is equally enchanting, marrying fruity zest with deep, spicy notes, thanks to a rich terpene mix led by caryophyllene. Sha-Boink’s buds are a visual treat—dense, bauble-like nuggets in hues of hunter green, royal purple, and maroon, glistening with resinous trichomes. Boasting 25-28% THC, it delivers a robust, uplifting high that sparks euphoria and creativity while gently soothing the body, making it ideal for daytime inspiration or evening relaxation. \n\n Medical users seek Sha-Boink for its potential to ease stress, anxiety, and chronic pain, offering mental clarity alongside physical calm. With a flowering time of 56-63 days, it thrives indoors or out, yielding generously for growers. Sha-Boink is a sensory masterpiece, crafted for those craving bold flavors and a vibrant, balanced high that elevates both mind and spirit.',
