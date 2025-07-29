@@ -6,7 +6,6 @@ import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import { Box, Text } from '@chakra-ui/react';
 import Head from 'next/head';
 import Image from 'next/image';
-import { WholesaleWeed } from '../components/WholesaleWeed';
 import { ImgWholesale } from '../components/media/ImgWholesale';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
