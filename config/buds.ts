@@ -160,7 +160,7 @@ export const buds: Bud[] = [
     growerSlug: '/',
     environment: 'Organic Greenhouse',
     grade: 'AAA Grade',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Sha-Boink, a captivating hybrid from Exotic Genetix, is born from the dynamic cross of Bonkers (Lemon Tree x Cookies & Cream F2) and Gary Poppins (Gary Payton x Red Runtz), blending indica and sativa traits in a perfectly balanced dance. This strain dazzles with a complex flavor profile, weaving tart berry bursts with earthy undertones and a crisp pine finish, reminiscent of a forest stroll kissed by citrusy Kool-Aid vibes. \n\n Its aroma is equally enchanting, marrying fruity zest with deep, spicy notes, thanks to a rich terpene mix led by caryophyllene. Sha-Boink’s buds are a visual treat—dense, bauble-like nuggets in hues of hunter green, royal purple, and maroon, glistening with resinous trichomes. Boasting 25-28% THC, it delivers a robust, uplifting high that sparks euphoria and creativity while gently soothing the body, making it ideal for daytime inspiration or evening relaxation. \n\n Medical users seek Sha-Boink for its potential to ease stress, anxiety, and chronic pain, offering mental clarity alongside physical calm. With a flowering time of 56-63 days, it thrives indoors or out, yielding generously for growers. Sha-Boink is a sensory masterpiece, crafted for those craving bold flavors and a vibrant, balanced high that elevates both mind and spirit.',
@@ -1078,8 +1078,8 @@ export const buds: Bud[] = [
   {
     slug: 'poppin-fresh',
     name: 'Poppin Fresh',
-    priceWholesale: 50,
-    price: 350,
+    priceWholesale: 100,
+    price: 250,
     dominance: 'Indica',
     indica: '70',
     sativa: '0',
@@ -1091,7 +1091,7 @@ export const buds: Bud[] = [
     growerSlug: '/',
     environment: 'Indoor',
     grade: 'AAAA Grade',
-    quantity: 0,
+    quantity: 50,
     origin: 'Phuket',
     description:
       'Poppin Fresh by Exotic Genetix is an indica-dominant hybrid (70/30) born from a unique collaboration between Compound Genetics, Family Cookies, and rapper Quavo Huncho. \n\n Created by crossing Pavé (Paris OG x The Menthol) with Gary Poppins, this rare strain delivers a flavorful and potent experience. \n\n Poppin Fresh offers a complex aroma profile that blends sweet, woody, fuel, and gas notes, making it a favorite among seasoned cannabis enthusiasts. With a THC content of 26%, it provides a powerful, relaxing effect that is ideal for unwinding. Its terpene profile includes spicy, sweet, and ice cream-like aromas with a hint of gas, reminiscent of Kool-Aid. This strain is easy to cultivate, offering excellent yields and exceptional quality, making it a must-try for growers and connoisseurs alike.',
