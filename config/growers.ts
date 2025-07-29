@@ -24,18 +24,6 @@ export const growers: Grower[] = [
     telegram: '0',
   },
   {
-    slug: 'cosmic-temple-vibes',
-    name: 'Cosmic Temple Vibes',
-    description:
-      'Cannabis brand dedicated to healing and inspiring people through the cultivation of premium quality cannabis in Phuket, Thailand.',
-    logo: '/media/green-ghost-weed-grower-cosmic-temple-vibes.webp',
-    website: 'https://cosmictemplevibes.com/',
-    facebook: 'https://www.facebook.com/profile.php?id=100088275630884',
-    instagram: '0',
-    twitter: '0',
-    telegram: '0',
-  },
-  {
     slug: 'greenlabunicorn',
     name: 'Green Lab Unicorn',
     description: 'Licensed Cannabis Shop and Farm from Phuket, Thailand 🦄',
@@ -45,18 +33,6 @@ export const growers: Grower[] = [
     instagram: 'https://www.instagram.com/greenlabunicorn420',
     twitter: '0',
     telegram: 'https://t.me/GreenLabUnicornShop',
-  },
-  {
-    slug: 'ohigho',
-    name: 'Ohigho',
-    description:
-      'Discover Ohigho Weed Farm, a licensed cannabis paradise in Phuket, Thailand! Farm with #NoPGR Certification.',
-    logo: '/media/green-ghost-weed-grower-ohigho.webp',
-    website: '0',
-    facebook: '0',
-    instagram: 'https://www.instagram.com/ohigho_',
-    twitter: '0',
-    telegram: 'https://t.me/ohighochannel',
   },
   {
     slug: 'growland',
@@ -89,30 +65,6 @@ export const growers: Grower[] = [
     logo: '/media/green-ghost-weed-grower-cbd-cannabiz-farm.webp',
     website: 'https://www.cbdcannabizfarm.com',
     facebook: 'https://www.facebook.com/cbdcannabiz/',
-    instagram: '0',
-    twitter: '0',
-    telegram: '0',
-  },
-  {
-    slug: 'buddy-bud-weed',
-    name: 'Buddy Bud Weed',
-    description:
-      'The Buddy Bud takes pride in growing and harvesting only the finest cannabis plants. Plants are carefully tended with love and attention, ensuring that every bud is the highest quality.',
-    logo: '/media/green-ghost-weed-grower-buddy-bud-weed.webp',
-    website: 'https://buddybudweed.com/',
-    facebook: 'https://www.facebook.com/profile.php?id=100090227299714',
-    instagram: 'https://www.instagram.com/buddybudweed/',
-    twitter: '0',
-    telegram: '0',
-  },
-  {
-    slug: 'my-weed',
-    name: 'My Weed',
-    description:
-      'MW Solutions is a company that believes in its customers and believes in the right to live life their way.',
-    logo: '/media/green-ghost-grower-my-weed-solutions.webp',
-    website: 'https://myweed.in/',
-    facebook: 'https://www.facebook.com/profile.php?id=100085363101043',
     instagram: '0',
     twitter: '0',
     telegram: '0',
