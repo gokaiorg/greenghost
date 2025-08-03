@@ -165,15 +165,6 @@ const Payment: NextPage = () => {
                     borderColor: 'ghostVerse.green.base',
                   }}
                 >
-                  Wise
-                </Tab>
-                <Tab
-                  _selected={{
-                    bg: 'ghostVerse.dark.lighter',
-                    color: 'ghostVerse.green.base',
-                    borderColor: 'ghostVerse.green.base',
-                  }}
-                >
                   Paypal
                 </Tab>
                 <Tab
@@ -220,21 +211,6 @@ const Payment: NextPage = () => {
                       height={200}
                     />
                   </Box>
-                </TabPanel>
-                <TabPanel>
-                  <Text>
-                    Use Wise for international payments with low fees and
-                    real-time rates.
-                  </Text>
-                  <Box mt={4} display="flex" justifyContent="center">
-                    <Image
-                      src="/media/wise-qr-payment-green-ghost.webp"
-                      alt="Wise QR Payment"
-                      width={200}
-                      height={200}
-                    />
-                  </Box>
-                  <Text>@jeremyd240</Text>
                 </TabPanel>
                 <TabPanel>
                   <Text>
