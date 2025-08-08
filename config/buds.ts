@@ -941,7 +941,7 @@ export const buds: Bud[] = [
     growerSlug: '/',
     environment: 'Indoor',
     grade: 'AAAA Grade',
-    quantity: 89,
+    quantity: 0,
     origin: 'Phuket',
     description:
       "Pitaya, a 100% Indica dominant hybrid, is a mesmerizing fusion of OG Kush, OG Kush Breath, and Girl Scout Cookies. This exquisite strain captivates connoisseurs with its exceptional flavor profile, blending the sweetness of nutty cookies with the robust undertones of rich, earthy pine. Each toke tantalizes the palate, offering a mouthwatering experience that leaves a lasting impression. With a THC content averaging at an impressive 26%, Pitaya promises a potent and memorable high, showcasing the best of its genetic lineage. \n\n Originating from the United States, Pitaya's aroma mirrors its delectable flavor profile, exuding a captivating blend of sweet and earthy notes. As the nugs are ignited, a pungent herbal twist unfolds, intensifying the aromatic journey. This strain invites users into a realm of euphoria and upliftment, enveloping the mind in a blissful haze. While the experience may be somewhat stoney and unfocused, it offers a profound sense of relaxation and contentment that resonates deeply with enthusiasts. \n\n Beyond its delightful flavor and aroma, Pitaya boasts a versatile terpene profile that may manifest in a range of tastes, from fruity and spicy to earthy, sour, and piney. Its therapeutic potential is equally diverse, offering relief from various ailments such as pain, anxiety, and lack of appetite. While the strain's euphoric and calming effects are widely celebrated, users should be mindful of potential side effects, including mild anxiety and dry mouth, ensuring a balanced and enjoyable experience.",
