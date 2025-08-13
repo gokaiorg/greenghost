@@ -101,6 +101,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       'thai-stick',
       'the-queen-s1',
       'toasted-toffee',
+      'tropical-sunrise',
       'wedding-cake',
       'white-runtz',
       'white-widow',
