@@ -11,7 +11,7 @@ export const HomeTopInfos = () => {
     >
       <Box
         as="section"
-        aria-labelledby="New cannabis gadget in store"
+        aria-labelledby="Green Ghost CBD, Premier Online CBD Experience"
         w={{ base: '100%', md: '60%', lg: '65%' }}
         display="flex"
         bgColor="ghostVerse.dark.lighter"
@@ -20,23 +20,17 @@ export const HomeTopInfos = () => {
         mb={{ base: 2, lg: 0 }}
       >
         <Box w={{ base: '50%', lg: '30%' }} mr={4} mb={{ base: 4, md: 0 }}>
-          <Link
-            href="/gadgets/weed-th-rolling-papers-tips"
-            passHref
-            title="WEED.TH Rolling Papers + Tips"
-          >
-            <Image
-              src="/media/green-ghost-degen-weed-shop-menu-gadget-weed-th-rolling-paper-tips-03.webp"
-              width={828}
-              height={828}
-              style={{ objectFit: 'contain' }}
-              priority
-              alt="WEED.TH Rolling Papers + Tips"
-              title="WEED.TH Rolling Papers + Tips"
-              sizes="200px"
-              quality={75}
-            />
-          </Link>
+          <Image
+            src="/media/cbd/logo-green-ghost-cbd.webp"
+            width={2000}
+            height={2000}
+            style={{ objectFit: 'contain' }}
+            priority
+            alt="Green Ghost CBD, Premier Online CBD Experience"
+            title="Green Ghost CBD, Premier Online CBD Experience"
+            sizes="200px"
+            quality={75}
+          />
         </Box>
         <Box display="flex" flexDirection="column" w="100%" alignItems="start">
           <Text
@@ -47,7 +41,7 @@ export const HomeTopInfos = () => {
             mb={2}
             textAlign="left"
           >
-            New cannabis gadget in store
+            Green Ghost CBD, Premier Online CBD Experience
           </Text>
           <Text
             as="p"
@@ -56,24 +50,25 @@ export const HomeTopInfos = () => {
             fontFamily="vt323"
             mb="auto"
           >
-            Experience smooth, natural smoking with{' '}
+            Discover the ultimate CBD experience with{' '}
             <Link
-              href="https://weed.th/"
+              href="https://greenghostcbd.fr/en"
               passHref
-              title="WEED.TH WeedMaps for Thailand"
+              title="Fast CBD Delivery –  Best Degen CBD Online Shop in France"
             >
               <Text
                 as="span"
                 color="ghostVerse.green.base"
                 textDecoration="underline"
               >
-                WEED.TH
+                Green Ghost CBD
               </Text>
-            </Link>{' '}
-            Rolling Papers + Tips.
+            </Link>
+            , France’s top online store for premium CBD sourced from trusted
+            partners
           </Text>
           <Link
-            href="/gadgets/weed-th-rolling-papers-tips"
+            href="/cbd-france"
             passHref
             title="WEED.TH Rolling Papers + Tips"
           >
