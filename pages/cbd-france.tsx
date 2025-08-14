@@ -1,11 +1,11 @@
 import type { GetServerSideProps, NextPage } from 'next';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { MainLayout } from '../components/MainLayout';
 import { HeaderMenu } from '../components/HeaderMenu';
 import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { Cbd } from '../components/shop/Cbd';
 import Head from 'next/head';
-import { Box, Text } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { cbds } from '../config/cbds';
 
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -13,8 +13,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
 };
 
 const Cbds: NextPage = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const handleClick = () => setIsOpen(!isOpen);
+  // const [isOpen, setIsOpen] = useState(false);
+  // const handleClick = () => setIsOpen(!isOpen);
 
   const itemListJsonLd = {
     '@context': 'https://schema.org',

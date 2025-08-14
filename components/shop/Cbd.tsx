@@ -1,4 +1,4 @@
-import { Box, Checkbox } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { useState } from 'react';
 import { cbds } from '../../config/cbds';
 import { CbdItem } from './CbdItem';
@@ -21,7 +21,6 @@ const filterOptions: { label: DominanceOption; icon: JSX.Element }[] = [
 
 const FilterButton = ({
   label,
-  icon,
   isActive,
   onClick,
 }: {
@@ -52,7 +51,7 @@ const FilterButton = ({
 );
 
 export const Cbd = () => {
-  const [showUnavailable, setShowUnavailable] = useState(false);
+  const [showUnavailable] = useState(false);
   const [dominanceFilter, setDominanceFilter] =
     useState<DominanceOption>('All');
 
@@ -75,9 +74,9 @@ export const Cbd = () => {
     );
   };
 
-  const handleShowUnavailableChange = () => {
-    setShowUnavailable((prevValue) => !prevValue);
-  };
+  // const handleShowUnavailableChange = () => {
+  //   setShowUnavailable((prevValue) => !prevValue);
+  // };
 
   return (
     <Box as="section" aria-labelledby="Cbd France" mb="10">
