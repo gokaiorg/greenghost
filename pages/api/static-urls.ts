@@ -30,6 +30,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/weed-grower',
     '/wholesale',
     '/seeds',
+    '/cbd-france',
   ];
   res.status(200).json(staticUrls);
 }
