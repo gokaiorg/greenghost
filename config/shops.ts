@@ -2,6 +2,7 @@ export type Shop = {
   slug: string;
   name: string;
   hours: string;
+  phone: string;
   address: string;
   addresLink: string;
   reviewLink: string;
@@ -20,6 +21,7 @@ export const shops: Shop[] = [
     slug: 'rawai',
     name: 'Best Degen Weed Shop and Delivery in Rawai',
     hours: 'Everyday 14h-2h.',
+    phone: '+66936459898',
     address: '26, 19 Wiset Rd, Rawai, Amphoe Mueang Phuket, Phuket 83130',
     addresLink: 'https://maps.app.goo.gl/5AGqxpdoqxMN6iSHA',
     reviewLink: 'https://g.page/r/CYOr82juHaKhEBM/review',
@@ -67,6 +69,7 @@ export const shops: Shop[] = [
     slug: 'karon',
     name: 'Best Degen Weed Shop and Delivery in Karon',
     hours: 'Monday/Saturday 18h-00h.',
+    phone: '+66936459898',
     address: '452 Patak Road, Karon, Mueang Phuket District, Phuket 83100',
     addresLink: 'https://maps.app.goo.gl/bcFR9XFSS9M29HK7A',
     reviewLink: 'https://g.page/r/CcPCrFf7RfRNEBM/review',
@@ -114,6 +117,7 @@ export const shops: Shop[] = [
     slug: 'phuket',
     name: 'Best Degen Weed Shop and Delivery in Phuket',
     hours: 'Everyday 8h-2h.',
+    phone: '+66936459898',
     address: '17 Thalang Rd, Talat Yai, Mueang Phuket District, Phuket 83000',
     addresLink: 'https://maps.app.goo.gl/BcFn7La6ayi8jUh46',
     reviewLink: 'https://g.page/r/CdEZf4I4iGn8EBE/review',
@@ -142,6 +146,38 @@ export const shops: Shop[] = [
       {
         label: 'Apple Map',
         link: 'https://maps.apple.com/?address=17%20Thalang%20Rd.,%20Phuket,%20Phuket%2083000,%20Thailand&auid=4961311243724311645&ll=7.884924,98.387895&lsp=9902&q=Green%20Ghost%20Phuket%20Town%20%7C%20Weed%20Delivery',
+      },
+    ],
+  },
+  {
+    slug: 'paris',
+    name: 'Best Degen CBD Shop and Delivery in Paris',
+    hours: 'Always open.',
+    phone: '+33651368196',
+    address: '1 Square du Thimerais, 75017 Paris',
+    addresLink: 'https://maps.app.goo.gl/knQqzvWWzKkgY7339',
+    reviewLink: '#',
+    details: 'Delivery Only. No in-store shopping 🚚',
+    description:
+      'Discover Green Ghost CBD France 🌿👻, the premier online destination for premium CBD flowers, oils, concentrates, and gummies, delivered straight to your door across France. Operating exclusively online, we offer lab-tested products with THC < 0.3%, sourced from trusted EU partners to ensure unmatched purity and potency. Our curated selection caters to all lifestyles, blending quality with the vibrant energy of Paris’ CBD scene. Enjoy fast, discreet delivery with secure, neutral packaging, perfect for seamless wellness integration. From bustling city apartments to serene countryside homes, Green Ghost CBD brings relaxation to every corner of France. Our user-friendly platform makes ordering effortless, with a commitment to transparency and excellence. Join the degen vibe and explore our top-tier CBD offerings, crafted to elevate your daily experience with authenticity and quality. For orders in France only, Green Ghost CBD is your trusted source for a unique, high-quality CBD journey.',
+    descSeo:
+      'Green Ghost CBD France 🌿👻, your online shop for premium CBD flowers, oils, and gummies. Lab-tested, THC < 0.3%, with fast, discreet delivery.',
+    mapLink:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5246.8940370656155!2d2.2946603769076264!3d48.887817398634546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f99e4c3057f%3A0xd556d93ffc59e7c5!2s1%20Sq.%20du%20Thimerais%2C%2075017%20Paris!5e0!3m2!1sen!2sfr!4v1755346094441!5m2!1sen!2sfr',
+    videoLink: 'https://www.youtube.com/embed/8x0aKDRP4q4',
+    imagesOg: 'green-ghost-best-degen-weed-shop-delivery-phuket-thailand.webp',
+    images: [
+      '/media/green-ghost-degen-weed-shop-phuket-thailand-cannabis-delivery-01.webp',
+      '/media/green-ghost-degen-weed-shop-phuket-thailand-cannabis-delivery-02.webp',
+      '/media/green-ghost-degen-weed-shop-phuket-thailand-cannabis-delivery-03.webp',
+      '/media/green-ghost-degen-weed-shop-phuket-thailand-cannabis-delivery-04.webp',
+      '/media/green-ghost-degen-weed-shop-phuket-thailand-cannabis-delivery-05.webp',
+      '/media/green-ghost-degen-weed-shop-phuket-thailand-cannabis-delivery-06.webp',
+    ],
+    socialLinks: [
+      {
+        label: 'Website',
+        link: 'https://greenghostcbd.fr',
       },
     ],
   },

@@ -10,6 +10,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       'banana-kush',
       'ben-and-garys',
       'black-cherry-punch',
+      'blackberry',
       'blood-honey',
       'bruce-banner',
       'bubble-mango',
