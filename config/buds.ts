@@ -1064,7 +1064,7 @@ export const buds: Bud[] = [
     quantity: 50,
     origin: 'Phuket',
     description:
-      'Savor Tropical Sunrise, a vibrant hybrid (50% indica/50% sativa) from Grape God and Mandarin Sunset strains, crafted on a GACP-certified farm in Thailand. Its summery aroma blends sweet tropical citrus with juicy grape notes, woody pine, and subtle spices, igniting the senses. The flavor bursts with zesty citrus, followed by a smooth, sweet grape finish that lingers delightfully. Grown under Thailand’s GACP standards, ensuring rigorous quality, safety, and traceability, this strain boasts 17-21% THC for an uplifting, euphoric high that sparks creativity and eases the body. Its neon-green buds, adorned with orange hairs and frosty golden trichomes, reflect premium craftsmanship. Sourced from Thailand’s tropical climate, ideal for potent hybrids, Tropical Sunrise evokes a serene beach sunset, blending energy and relaxation. This GACP-certified gem, compliant with Thai FDA standards, delivers an authentic, high-quality experience for cannabis enthusiasts seeking Thailand’s finest.',
+      'Savor Tropical Sunrise, a vibrant hybrid (50% indica/50% sativa) from Grape God and Mandarin Sunset strains, crafted on a GACP-certified farm in Thailand. Its summery aroma blends sweet tropical citrus with juicy grape notes, woody pine, and subtle spices, igniting the senses. The flavor bursts with zesty citrus, followed by a smooth, sweet grape finish that lingers delightfully. \n\n Grown under Thailand’s GACP standards, ensuring rigorous quality, safety, and traceability, this strain boasts 17-21% THC for an uplifting, euphoric high that sparks creativity and eases the body. Its neon-green buds, adorned with orange hairs and frosty golden trichomes, reflect premium craftsmanship. Sourced from Thailand’s tropical climate, ideal for potent hybrids, Tropical Sunrise evokes a serene beach sunset, blending energy and relaxation. This GACP-certified gem, compliant with Thai FDA standards, delivers an authentic, high-quality experience for cannabis enthusiasts seeking Thailand’s finest.',
     descSeo:
       'Tropical Sunrise, a GACP-certified hybrid, blends citrus and grape flavors with 17-21% THC. Grown in Thailand for euphoric highs.',
     images: [
@@ -1074,6 +1074,36 @@ export const buds: Bud[] = [
     ],
     imgDesc: 'Order Tropical Sunrise Cannabis Strain Online',
     source: 'https://www.leafly.com/strains/tropical-sunrise',
+  },
+  {
+    slug: 'blackberry',
+    name: 'Blackberry',
+    priceWholesale: 50,
+    price: 300,
+    dominance: 'Hybrid',
+    indica: '50',
+    sativa: '50',
+    THC: '20',
+    CBD: '0',
+    effects: 'Sleepy, Relaxed, Aroused',
+    relieves: 'Fatigue, Inflammation, Depression',
+    grower: 'Green Ghost',
+    growerSlug: '',
+    environment: 'Indoor',
+    grade: 'AAAA Grade',
+    quantity: 50,
+    origin: 'Phuket',
+    description:
+      'Savor Blackberry, a hybrid strain from Black Domina and Raspberry Cough, grown on a GACP-certified farm in Thailand. Its bold aroma blends juicy fruit and fuel, with earthy undertones, evoking ripe berries. The flavor delights with smooth, sweet berry notes. With 20% THC, Blackberry delivers a buzzy, relaxing high, sparking energy, talkativeness, and sociability. Its purple-hued buds, dotted with white crystals and orange hairs, shine with quality. \n\n Crafted under Thailand’s GACP standards for safety and traceability, it’s free from pesticides and heavy metals. Less dense but visually stunning, Blackberry thrives in Thailand’s tropical climate, perfect for daytime vibes. This strain offers a cerebral and body high, ideal for social settings or creative bursts, evoking a lively Thai beach festival. Its GACP-certified purity and vibrant effects make Blackberry a top pick for cannabis enthusiasts seeking an authentic, fruit-forward experience in Thailand’s dynamic weed culture.',
+    descSeo:
+      'Blackberry, a GACP-certified hybrid, blends berry and fuel flavors with 20% THC. Grown in Thailand for a buzzy, social high. ',
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-blackberry-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-blackberry-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-blackberry-cover.webp',
+    ],
+    imgDesc: 'Order Blackberry Cannabis Strain Online',
+    source: 'https://www.leafly.com/strains/blackberry',
   },
   {
     slug: 'strawneapple',

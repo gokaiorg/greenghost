@@ -225,11 +225,11 @@ export default function ShopPage({ shop }: ShopPageProps) {
                   mb={2}
                 >
                   <Link
-                    title={`Call: +66936459898`}
-                    href="tel:+66936459898"
+                    title={`Call: ${shop.phone}`}
+                    href={`tel:${shop.phone}`}
                     passHref
                   >
-                    +66936459898
+                    {shop.phone}
                   </Link>
                 </Text>
                 <Text
