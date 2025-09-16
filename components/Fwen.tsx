@@ -15,6 +15,13 @@ export const dispensaries = [
   //   label: 'Bangkok Post',
   // },
   {
+    href: 'https://asq.in.th/question/where-can-i-find-the-best-cannabis-dispensary-in-phuket/phuket',
+    title: 'Where can I find the best cannabis dispensary in Phuket?',
+    imageSrc: '/media/green-ghost-top-dispensary-asq-thailand.webp',
+    alt: 'Green Ghost Top Dispensary Phuket Thailand - ASQ:THAILAND',
+    label: 'ASQ:THAILAND',
+  },
+  {
     href: 'https://weed.th/best-dispensaries-in-thailand',
     title: 'Top Dispensaries In Thailand - Best Weed In Thailand - WEED.TH',
     imageSrc: '/media/green-ghost-top-dispensary-weed-th.webp',
