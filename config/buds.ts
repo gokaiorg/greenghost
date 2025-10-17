@@ -25,6 +25,36 @@ export type Bud = {
 
 export const buds: Bud[] = [
   {
+    slug: 'star-point',
+    name: 'Star Point',
+    priceWholesale: 50,
+    price: 250,
+    dominance: 'Sativa',
+    indica: '40',
+    sativa: '60',
+    THC: '25',
+    CBD: '0',
+    effects: 'Energetic, Creative, Focused',
+    relieves: 'Stress, Fatigue, Depression',
+    grower: 'Green Ghost',
+    growerSlug: '/',
+    environment: 'Organic Indoor',
+    grade: 'AAA Grade',
+    quantity: 50,
+    origin: 'Phuket',
+    description:
+      "Star Point is a captivating pure sativa strain originating from the lush highlands of Phuket, Thailand. Bred by expert cultivators at Green Ghost, this strain stands out with its unique starry bud structure, where trichomes form constellations on the dense, resinous flowers. The aroma is a burst of fresh citrus and pine, reminiscent of a walk through a tropical forest at dawn. With THC levels around 20%, Star Point offers a cerebral lift that sparks creativity and enhances focus, making it ideal for artists, writers, and anyone needing mental stimulation.\n\nUpon consumption, the high begins with a gentle euphoria that builds into an energetic wave, promoting motivation and sociability without anxiety. Users report improved mood, reduced fatigue, and a sense of well-being that lasts for hours. This strain is perfect for daytime use, helping with tasks that require concentration and imagination. The flavor profile is sweet and tangy, with notes of lemon and spice that linger pleasantly.\n\nMedically, Star Point is beneficial for alleviating stress, depression, and fatigue. Its uplifting effects can help manage mild pain and provide relief from anxiety-related conditions. Grown organically in indoor environments, Star Point achieves AAA grade quality, ensuring purity and potency. Whether you're exploring new ideas or simply enjoying a productive day, Star Point delivers a stellar experience that lives up to its name.",
+    descSeo:
+      'Star Point, a pure sativa from Green Ghost in Phuket, features starry trichome-covered buds with citrus-pine aroma. Energizes mind, boosts creativity, relieves stress and fatigue for daytime productivity.',
+    images: [
+      '/media/green-ghost-degen-weed-shop-strain-star-point-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-star-point-cover.webp',
+      '/media/green-ghost-degen-weed-shop-strain-star-point-cover.webp',
+    ],
+    imgDesc: 'Order Star Point Cannabis Strain Online',
+    source: 'undefined',
+  },
+  {
     slug: 'thai-stick',
     name: 'Thai Stick',
     priceWholesale: 50,
@@ -520,7 +550,7 @@ export const buds: Bud[] = [
     growerSlug: '/my-weed-solutions',
     environment: 'Organic Indoor',
     grade: 'AAA Grade',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Super Lemon Haze is a sativa-dominant hybrid cannabis strain that is the result of the crossing of Lemon Skunk and Super Silver Haze strains. This award-winning strain has gained popularity due to its multi-colored appearance and intense lemony flavor profile. Super Lemon Haze is known for its unique, energetic and lively effects, making it a popular choice among cannabis enthusiasts. \n\n The aroma of Super Lemon Haze is zesty, citrusy, and slightly sweet. The taste is tart and sweet, reminiscent of lemon candy, but not too sharp. This strain is kief-caked and visually striking with its array of colors. \n\n Super Lemon Haze has a high THC content, making it a potent strain that may not be suitable for those with low tolerance levels. Its effects are said to be uplifting, euphoric, and stimulating, making it a great choice for daytime use. It is often used to treat symptoms related to stress, depression, and fatigue. \n\n Overall, Super Lemon Haze is a top-rated strain with a unique flavor and powerful effects that have won it several awards, including two Cannabis Cup awards. It is a strain that is sure to impress cannabis connoisseurs looking for a flavorful and energetic high.',
@@ -714,7 +744,7 @@ export const buds: Bud[] = [
     imgDesc: 'Order Sour Diesel Cannabis Strain Online',
     source:
       'https://www.allbud.com/marijuana-strains/sativa-dominant-hybrid/sour-diesel',
-  }, 
+  },
   {
     slug: 'lime-skunk',
     name: 'Lime Skunk',
@@ -736,15 +766,14 @@ export const buds: Bud[] = [
     description:
       'Immerse yourself in Lime Skunk, a sativa-dominant hybrid (60% sativa/40% indica) crafted from Lemon Skunk and Green Ribbon BX. This strain dazzles with a vibrant aroma of sour lemon-lime, infused with skunky herbs and a touch of earthy spiciness that awakens the senses. Its flavor bursts with tangy citrus, delivering a bold, zesty punch followed by a subtle, spicy earthiness that lingers smoothly on the palate, offering a refreshing and invigorating experience. Boasting 17-23% THC, Lime Skunk ignites a lively, uplifting high, perfect for daytime adventures or vibrant social moments. \n\n Its pepper-shaped, lime-green buds, adorned with vivid orange hairs and a thick coating of golden-amber trichomes, showcase exceptional craftsmanship. Grown organically in Thailand’s lush, tropical climate, free from pesticides and heavy metals, this strain ensures purity and premium quality. Lime Skunk captures the essence of Thailand’s dynamic cannabis culture, evoking the exhilarating vibe of a sun-drenched beach festival. \n\n Its bold, citrusy profile and potent effects make it a standout choice for enthusiasts seeking a thrilling, fruit-forward experience that elevates every moment with authenticity and energy.',
     descSeo:
-      "Lime Skunk, a sativa hybrid, blends tangy lime and skunky flavors with 17-23% THC for an energizing, creative high in Thailand’s cannabis scene.",
+      'Lime Skunk, a sativa hybrid, blends tangy lime and skunky flavors with 17-23% THC for an energizing, creative high in Thailand’s cannabis scene.',
     images: [
       '/media/green-ghost-degen-weed-shop-strain-lime-skunk-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-lime-skunk-cover.webp',
       '/media/green-ghost-degen-weed-shop-strain-lime-skunk-cover.webp',
     ],
     imgDesc: 'Order Lime Skunk Cannabis Strain Online',
-    source:
-      'https://www.leafly.com/strains/lime-skunk',
+    source: 'https://www.leafly.com/strains/lime-skunk',
   },
   {
     slug: 'super-boof',
