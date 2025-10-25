@@ -700,7 +700,7 @@ export const buds: Bud[] = [
     growerSlug: '',
     environment: 'Indoor',
     grade: 'AAAA Grade',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Popanonymous is a potent hybrid, boasting an impressive THC content of 29%. This strain is an unknown and unique cross of Gary Poppins, creating a powerful, energizing experience. With its strong lineage, Popanonymous delivers a combination of uplifting effects and rich flavors, making it a standout choice for hybrid enthusiasts looking for both potency and a balanced, enjoyable high. \n\n Growers and users alike will appreciate Popanonymous for its resin-heavy buds, ideal for concentrates and extraction. The strain produces large, dense flowers coated in sticky trichomes, making it visually appealing and highly effective. Its robust growth structure also makes it a reliable strain for both indoor and outdoor cultivation, with generous yields and a relatively short flowering time. \n\n Popanonymous is celebrated for its complex flavor profile. Expect a refreshing burst of citrus and tropical fruit notes, followed by subtle earthy undertones. Its aromatic blend of sweet and earthy scents, combined with its energizing effects, make this strain perfect for daytime use, helping to keep you focused, creative, and motivated.',
@@ -1091,7 +1091,7 @@ export const buds: Bud[] = [
     growerSlug: '',
     environment: 'Indoor',
     grade: 'AAAA Grade',
-    quantity: 50,
+    quantity: 0,
     origin: 'Phuket',
     description:
       'Blood Honey, a perfectly balanced hybrid (50% indica/50% sativa) from the tantalizing cross of Forbidden Fruit and Red Runtz, is a sensory and therapeutic masterpiece. Its name reflects its stunning appearance: fluffy, spade-shaped minty green buds with deep purple undertones, adorned with furry amber hairs and a glistening coat of chunky, golden-white trichomes that promise potency. \n\n Breaking apart these nuggets releases a vibrant aroma, blending sweet honey with spicy oranges and juicy cherries, amplified by a zesty kick that intensifies with each toke. The flavor mirrors this brilliance, bursting with vivid blood orange notes, sugary candy sweetness, and a touch of fresh honey, creating a delightful palate adventure. With a potent 19-23% THC, Blood Honey’s high starts with a sociable, euphoric lift, sparking outgoing energy and chatty vibes perfect for social settings. \n\n This mental buzz gradually gives way to a soothing body high that anchors you to the couch, easing tension without draining your spirit. A gentle, sleepy finish makes it ideal for evening use. Medical users prize Blood Honey for relieving insomnia, chronic stress, anxiety, depression, chronic pain, and headaches. Grown with care, its dense, resinous buds deliver a harmonious blend of uplift and calm, making Blood Honey a must-try for those seeking flavor, potency, and therapeutic relief in one exquisite package.',
