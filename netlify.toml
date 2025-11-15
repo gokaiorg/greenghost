@@ -1,0 +1,33 @@
+# netlify.toml
+
+# Force all traffic to use the custom domain
+[[redirects]]
+  from = "https://greengd-main.netlify.app/*"
+  to = "/403"
+  status = 403
+  force = true
+
+[[redirects]]
+  from = "https://greengd-dev.netlify.app/*"
+  to = "/403"
+  status = 403
+  force = true
+
+# Optional: Also block HTTP versions and www subdomains if needed
+[[redirects]]
+  from = "http://greengd-main.netlify.app/*"
+  to = "/403"
+  status = 403
+  force = true
+
+[[redirects]]
+  from = "http://greengd-dev.netlify.app/*"
+  to = "/403"
+  status = 403
+  force = true
+
+# Optional: Create a simple 403 page (create _static/403.html or use a function)
+# Or just let Netlify return default 403
+
+# Ensure your custom domain works (no redirect needed)
+# Netlify automatically serves content on custom domain if DNS is set up
