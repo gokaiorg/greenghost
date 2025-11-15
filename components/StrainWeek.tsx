@@ -78,7 +78,7 @@ export const StrainWeek = () => {
                 clipRule="evenodd"
               />
             </svg>
-            +66874201144
+            +6687-420-1144
           </Box>
         </Link>
       </Box>
