@@ -14,7 +14,7 @@ export interface MetaHeadProps {
 export const MetaHead: FC<MetaHeadProps> = memo(({ metaName, metaUrl }) => {
   const router = useRouter();
   const canonicalUrl = `https://green.gd${router.asPath}`;
-  
+
   const jsonLdData = {
     '@context': 'https://schema.org',
     '@type': ['Store', 'LocalBusiness'],

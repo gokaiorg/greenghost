@@ -39,6 +39,12 @@ const BuyWeed: NextPage = () => {
   const y = useTransform(scrollY, [0, 300], [0, -100]);
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(contactJSONLD),
+        }}
+      />
       <Head>
         <title>Contact Our Weed Shop Team To Order - Green Ghost 🌿👻</title>
         <meta
