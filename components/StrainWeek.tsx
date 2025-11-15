@@ -53,7 +53,7 @@ export const StrainWeek = () => {
             Whatsapp
           </Box>
         </Link>
-        <Link href="tel:+66936459898" passHref title="Call us at +66936459898">
+        <Link href="tel:+66874201144" passHref title="Call us at +66874201144">
           <Box
             as="span"
             display="flex"
@@ -78,7 +78,7 @@ export const StrainWeek = () => {
                 clipRule="evenodd"
               />
             </svg>
-            +66936459898
+            +66874201144
           </Box>
         </Link>
       </Box>

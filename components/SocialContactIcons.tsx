@@ -120,7 +120,7 @@ export const SocialContactIcons = () => {
       >
         <Box
           as="a"
-          href="https://t.me/+66936459898"
+          href="https://t.me/+66874201144"
           color={'ghostVerse.green.base'}
           title="Contact Green Ghost 🌿👻 on Telegram"
         >
