@@ -20,7 +20,7 @@ export const shops: Shop[] = [
   {
     slug: 'rawai',
     name: 'Best Degen Weed Shop and Delivery in Rawai',
-    hours: 'Everyday 9am-2am. Sunday 2pm-2am',
+    hours: 'Everyday 9am-2am. Sunday 2pm-2am.',
     phone: '+66874201144',
     address: '26, 19 Wiset Rd, Rawai, Amphoe Mueang Phuket, Phuket 83130',
     addresLink: 'https://maps.app.goo.gl/5AGqxpdoqxMN6iSHA',
@@ -68,7 +68,7 @@ export const shops: Shop[] = [
   {
     slug: 'karon',
     name: 'Best Degen Weed Shop and Delivery in Karon',
-    hours: 'Monday/Saturday 2pm-12pm.',
+    hours: 'Everyday 2pm-12pm. Sunday 4pm-12pm.',
     phone: '+66874201144',
     address: '452 Patak Road, Karon, Mueang Phuket District, Phuket 83100',
     addresLink: 'https://maps.app.goo.gl/bcFR9XFSS9M29HK7A',
