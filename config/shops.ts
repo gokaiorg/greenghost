@@ -20,8 +20,8 @@ export const shops: Shop[] = [
   {
     slug: 'rawai',
     name: 'Best Degen Weed Shop and Delivery in Rawai',
-    hours: 'Everyday 14h-2h.',
-    phone: '+66936459898',
+    hours: 'Everyday 9am-2am. Sunday 2pm-2am',
+    phone: '+66874201144',
     address: '26, 19 Wiset Rd, Rawai, Amphoe Mueang Phuket, Phuket 83130',
     addresLink: 'https://maps.app.goo.gl/5AGqxpdoqxMN6iSHA',
     reviewLink: 'https://g.page/r/CYOr82juHaKhEBM/review',
@@ -68,8 +68,8 @@ export const shops: Shop[] = [
   {
     slug: 'karon',
     name: 'Best Degen Weed Shop and Delivery in Karon',
-    hours: 'Monday/Saturday 18h-00h.',
-    phone: '+66936459898',
+    hours: 'Monday/Saturday 2pm-12pm.',
+    phone: '+66874201144',
     address: '452 Patak Road, Karon, Mueang Phuket District, Phuket 83100',
     addresLink: 'https://maps.app.goo.gl/bcFR9XFSS9M29HK7A',
     reviewLink: 'https://g.page/r/CcPCrFf7RfRNEBM/review',
@@ -116,8 +116,8 @@ export const shops: Shop[] = [
   {
     slug: 'phuket',
     name: 'Best Degen Weed Shop and Delivery in Phuket',
-    hours: 'Everyday 8h-2h.',
-    phone: '+66936459898',
+    hours: 'Everyday 9am-2am.',
+    phone: '+66874201144',
     address: '17 Thalang Rd, Talat Yai, Mueang Phuket District, Phuket 83000',
     addresLink: 'https://maps.app.goo.gl/BcFn7La6ayi8jUh46',
     reviewLink: 'https://g.page/r/CdEZf4I4iGn8EBE/review',
