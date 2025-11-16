@@ -83,7 +83,7 @@ export const SocialMediaIcons = () => {
         </Box>
         <Box as={'li'} aria-label="Join Us on Telegram" borderRadius={'100%'}>
           <SocialIcon
-            url="https://t.me/greenghost_degen"
+            url="https://t.me/greenghost_channel"
             bgColor={'black'}
             style={{ width: 40, height: 40 }}
             title="Join Us on Telegram"
@@ -115,7 +115,7 @@ export const SocialMediaIcons = () => {
         </Box>
         <Box as={'li'} aria-label="Follow Us on Facebook" borderRadius={'100%'}>
           <SocialIcon
-            url="https://www.facebook.com/greenghostdegen"
+            url="https://www.facebook.com/greenghostdegenCBD"
             bgColor={'black'}
             style={{ width: 40, height: 40 }}
             title="Follow Us on Facebook"

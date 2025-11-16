@@ -6,6 +6,7 @@ import { HomeSectionTitle } from '../components/HomeSectionTitle';
 import { Box, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import Head from 'next/head';
+import { MetaHead } from '../components/MetaHead';
 import { SocialContactIcons } from '../components/SocialContactIcons';
 import Image from 'next/image';
 import { ImgContact } from '../components/media/ImgContact';
@@ -19,7 +20,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 const contactJSONLD = {
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+66 93 645 9898',
+    telephone: '+66 87 420 1144',
     contactType: 'Customer Service',
     areaServed: 'TH',
     availableLanguage: 'English',
@@ -38,6 +39,12 @@ const BuyWeed: NextPage = () => {
   const y = useTransform(scrollY, [0, 300], [0, -100]);
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(contactJSONLD),
+        }}
+      />
       <Head>
         <title>Contact Our Weed Shop Team To Order - Green Ghost 🌿👻</title>
         <meta
@@ -72,9 +79,7 @@ const BuyWeed: NextPage = () => {
           content="https://green.gd/media/green-ghost-degen-weed-shop-contact-us.webp"
         />
         <meta name="twitter:url" content="https://green.gd/contact" />
-        <script type="application/ld+json">
-          {JSON.stringify(contactJSONLD)}
-        </script>
+        <MetaHead />
       </Head>
       <MainLayout>
         <HeaderMenu>
@@ -158,11 +163,11 @@ const BuyWeed: NextPage = () => {
                 bgColor="ghostVerse.dark.lighter"
               >
                 <Link
-                  title={`Call: +66936459898`}
-                  href="tel:+66936459898"
+                  title={`Call: +66874201144`}
+                  href="tel:+66874201144"
                   passHref
                 >
-                  +66936459898
+                  +6687-420-1144
                 </Link>
               </Text>
             </Box>

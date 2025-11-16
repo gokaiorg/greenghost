@@ -26,7 +26,7 @@ export const StrainWeek = () => {
     >
       <Box display="flex" flexDirection="row" alignItems="center" flex={1}>
         <Link
-          href="https://wa.me/message/XUOXIOUI4MZAJ1"
+          href="https://wa.me/66874201144"
           passHref
           title="Contact Our Weed Shop Team To Order on Whatsapp"
         >
@@ -53,7 +53,7 @@ export const StrainWeek = () => {
             Whatsapp
           </Box>
         </Link>
-        <Link href="tel:+66936459898" passHref title="Call us at +66936459898">
+        <Link href="tel:+66874201144" passHref title="Call us at +66874201144">
           <Box
             as="span"
             display="flex"
@@ -78,7 +78,7 @@ export const StrainWeek = () => {
                 clipRule="evenodd"
               />
             </svg>
-            +66936459898
+            +6687-420-1144
           </Box>
         </Link>
       </Box>
