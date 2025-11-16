@@ -6,7 +6,7 @@ import Link from 'next/link';
 const selectedStrains = [
   'Slaphappy',
   'Mango Sticky Rice',
-  'Popanonymous',
+  'Strawneapple',
   "Ben & Gary's",
   'Thai Stick',
 ];
