@@ -1,4 +1,4 @@
-import { getPages } from '../pages';
+import { getPagesServerSide as getPages } from '../pages-server';
 
 export interface BannerData {
   title: string;

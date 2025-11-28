@@ -56,7 +56,7 @@ async function getWholesaleData(): Promise<WholesaleItem[]> {
         values.push(currentValue.trim().replace(/^"|"$/g, ''));
 
         if (values.length >= headers.length) {
-            const item: any = {};
+            const item: Record<string, string> = {};
             headers.forEach((header, index) => {
                 const key = header.toLowerCase();
                 item[key] = values[index] || '';
@@ -75,7 +75,7 @@ async function getWholesaleData(): Promise<WholesaleItem[]> {
                     .replace(/(^-|-$)/g, '');
             }
 
-            items.push(item as WholesaleItem);
+            items.push(item as unknown as WholesaleItem);
         }
     }
 

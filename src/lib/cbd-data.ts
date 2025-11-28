@@ -16,13 +16,13 @@ export async function getCBDProducts(): Promise<CBD[]> {
     const filePath = path.join(process.cwd(), 'public/datas/cbds.csv');
     const fileContent = fs.readFileSync(filePath, 'utf8');
 
-    const { data } = Papa.parse<any>(fileContent, {
+    const { data } = Papa.parse<Record<string, string>>(fileContent, {
         header: true,
         skipEmptyLines: true,
     });
 
     // Map CSV columns to interface properties
-    return data.map((row: any) => ({
+    return data.map((row: Record<string, string>) => ({
         itemName: row['Item name'] || '',
         type: row['Type'] || '',
         price: row['Price'] || '',
