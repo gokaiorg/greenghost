@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Banner from '@/components/Banner';
 import { getBannerData } from '@/lib/utils/bannerUtils';
 import { getPagesServerSide as getPages } from '@/lib/pages-server';
-import WholesaleList from '@/components/WholesaleList';
+import WholesalesList from '@/components/WholesalesList';
 
 export const metadata: Metadata = {
   title: 'Wholesale Cannabis Premium Strains in Phuket - Green Ghost 🌿👻',
@@ -69,7 +69,7 @@ export default async function WholesalePage() {
           />
         )}
 
-        <WholesaleList />
+        <WholesalesList />
       </div>
     </>
   );

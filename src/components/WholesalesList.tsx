@@ -82,50 +82,52 @@ async function getWholesaleData(): Promise<WholesaleItem[]> {
     return items;
 }
 
-export default async function WholesaleList() {
+export default async function WholesalesList() {
     const items = await getWholesaleData();
 
     return (
         <section className="py-12">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" aria-label="Wholesale Products List">
                 {items.map((item, index) => {
                     const imagePath = `/images/strains/green-ghost-degen-weed-shop-strain-${item.slug}-bud-01.avif`;
 
                     return (
-                        <Link
-                            href={`/strains/${item.slug}`}
-                            key={index}
-                            className="group block bg-[#111] overflow-hidden border border-gray-800 hover:border-[#13DE00] transition-colors"
-                        >
-                            <div className="relative aspect-square w-full overflow-hidden">
-                                <Image
-                                    src={imagePath}
-                                    alt={item.strain}
-                                    fill
-                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                />
-                                <div className="absolute top-2 right-2 bg-[#13DE00] text-black px-2 py-1 text-sm font-bold">
-                                    ฿{Number(item.price).toLocaleString()} / 100g
-                                </div>
-                            </div>
-
-                            <div className="p-4">
-                                <h3 className="text-lg font-bold text-white mb-4 font-['Cubicfive12']" title={item.strain}>
-                                    {item.strain}
-                                </h3>
-
-                                <div className="flex justify-between items-center text-xs text-gray-400">
-                                    <p className={`text-[10px] sm:text-xs whitespace-nowrap mb-1 ${item.dominance && item.dominance.startsWith('Sativa') ? 'text-[#d1fee5]' : item.dominance && item.dominance.startsWith('Hybrid') ? 'text-[#c0ef24]' : item.dominance && item.dominance.startsWith('Indica') ? 'text-[#ee9cc9]' : 'text-gray-400'}`}>{item.dominance}</p>
-                                    <div className="flex items-center gap-1">
-                                        <span className="text-gray-400">THC</span>
-                                        <span className="font-bold text-gray-400">{item.thc}</span>
+                        <li key={index} className="list-none">
+                            <Link
+                                href={`/strains/${item.slug}`}
+                                className="group block bg-[#111] overflow-hidden border border-gray-800 hover:border-[#13DE00] transition-colors h-full"
+                                title={`${item.strain} - ${item.dominance} - THC ${item.thc}`}
+                            >
+                                <div className="relative aspect-square w-full overflow-hidden">
+                                    <Image
+                                        src={imagePath}
+                                        alt={item.strain}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                    <div className="absolute top-2 right-2 bg-[#13DE00] text-black px-2 py-1 text-sm font-bold">
+                                        {Number(item.price).toLocaleString()}฿ / 100g
                                     </div>
                                 </div>
-                            </div>
-                        </Link>
+
+                                <div className="p-4">
+                                    <h3 className="text-lg font-bold text-white mb-4 font-['Cubicfive12']" title={item.strain}>
+                                        {item.strain}
+                                    </h3>
+
+                                    <div className="flex justify-between items-center text-xs text-gray-400">
+                                        <p className={`text-[10px] sm:text-xs whitespace-nowrap mb-1 ${item.dominance && item.dominance.startsWith('Sativa') ? 'text-[#d1fee5]' : item.dominance && item.dominance.startsWith('Hybrid') ? 'text-[#c0ef24]' : item.dominance && item.dominance.startsWith('Indica') ? 'text-[#ee9cc9]' : 'text-gray-400'}`}>{item.dominance}</p>
+                                        <div className="flex items-center gap-1">
+                                            <span className="text-gray-400">THC</span>
+                                            <span className="font-bold text-gray-400">{item.thc}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
+                        </li>
                     );
                 })}
-            </div>
+            </ul>
         </section>
     );
 }
