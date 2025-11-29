@@ -24,14 +24,14 @@ export default async function LocationsPage() {
       <Banner {...bannerData} />
 
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" aria-label="Store Locations List">
           {locations.map((location) => {
             const isOpen = isLocationOpen(location.hours, location.slug);
 
             return (
-              <div
+              <li
                 key={location.id}
-                className="bg-gradient-to-br from-[#13DE00]/10 to-transparent border border-[#13DE00]/30 overflow-hidden hover:border-[#13DE00]/60 transition-all duration-300 group"
+                className="bg-gradient-to-br from-[#13DE00]/10 to-transparent border border-[#13DE00]/30 overflow-hidden hover:border-[#13DE00]/60 transition-all duration-300 group list-none"
               >
                 {/* Map Preview */}
                 <div className="relative h-56 w-full overflow-hidden">
@@ -87,10 +87,10 @@ export default async function LocationsPage() {
                     </a>
                   </div>
                 </div>
-              </div>
+              </li>
             );
           })}
-        </div>
+        </ul>
       </div>
     </>
   );
