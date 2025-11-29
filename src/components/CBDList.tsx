@@ -41,7 +41,7 @@ export default function CBDList({ products }: CBDListProps) {
                 ))}
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" aria-label="CBD Products List">
                 {filteredProducts.map((product, index) => {
                     // Generate image path based on product name
                     // Convert name to lowercase and replace spaces with hyphens
@@ -57,56 +57,58 @@ export default function CBDList({ products }: CBDListProps) {
                     const isInStock = product.status.toLowerCase() === 'in stock';
 
                     return (
-                        <a
-                            key={index}
-                            href={`https://greenghostcbd.fr/en/products/${slug}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-[#13DE00]/5 border border-[#13DE00]/20 overflow-hidden hover:border-[#13DE00]/50 transition-all group block"
-                        >
-                            {/* Image */}
-                            <div className="relative w-full aspect-square bg-black">
-                                <Image
-                                    src={imagePath}
-                                    alt={product.itemName}
-                                    fill
-                                    className="object-cover group-hover:opacity-80 transition-opacity"
-                                />
+                        <li key={index} className="list-none">
+                            <a
+                                href={`https://greenghostcbd.fr/en/products/${slug}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-[#13DE00]/5 border border-[#13DE00]/20 overflow-hidden hover:border-[#13DE00]/50 transition-all group block h-full"
+                                title={`${product.itemName} - ${product.type} - ${product.cbd}% CBD`}
+                            >
+                                {/* Image */}
+                                <div className="relative w-full aspect-square bg-black">
+                                    <Image
+                                        src={imagePath}
+                                        alt={product.itemName}
+                                        fill
+                                        className="object-cover group-hover:opacity-80 transition-opacity"
+                                    />
 
-                                {/* Price or Sold Out - Top Right */}
-                                <div className="absolute top-2 right-2">
-                                    {isInStock ? (
-                                        <div className="bg-[#13DE00] text-black px-3 py-2 text-lg font-bold">
-                                            €{product.price}
-                                        </div>
-                                    ) : (
-                                        <div className="bg-red-600 text-white px-3 py-2 text-sm font-bold">
-                                            SOLD OUT
-                                        </div>
-                                    )}
+                                    {/* Price or Sold Out - Top Right */}
+                                    <div className="absolute top-2 right-2">
+                                        {isInStock ? (
+                                            <div className="bg-[#13DE00] text-black px-3 py-2 text-lg font-bold">
+                                                €{product.price}
+                                            </div>
+                                        ) : (
+                                            <div className="bg-red-600 text-white px-3 py-2 text-sm font-bold">
+                                                SOLD OUT
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
-                            </div>
 
-                            {/* Content */}
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-white mb-3">
-                                    {product.itemName}
-                                </h3>
+                                {/* Content */}
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold text-white mb-3">
+                                        {product.itemName}
+                                    </h3>
 
-                                {/* Type and CBD Info */}
-                                <div className="flex gap-3 items-center">
-                                    <span className="text-[#13DE00] text-sm font-bold">
-                                        {product.type}
-                                    </span>
-                                    <span className="ml-auto text-gray-400 text-sm font-bold">
-                                        {product.cbd}% CBD
-                                    </span>
+                                    {/* Type and CBD Info */}
+                                    <div className="flex gap-3 items-center">
+                                        <span className="text-[#13DE00] text-sm font-bold">
+                                            {product.type}
+                                        </span>
+                                        <span className="ml-auto text-gray-400 text-sm font-bold">
+                                            {product.cbd}% CBD
+                                        </span>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </li>
                     );
                 })}
-            </div>
+            </ul>
         </div>
     );
 }

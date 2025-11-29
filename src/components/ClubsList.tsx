@@ -15,7 +15,7 @@ interface ClubsListProps {
 export default function ClubsList({ clubs }: ClubsListProps) {
     return (
         <section className="container mx-auto px-4 py-8">
-            <h2 className="text-xl md:text-2xl font-bold text-[#13DE00] mb-6">Join Our Cannabis Clubs</h2>
+            <h2 className="text-xl md:text-2xl font-bold mb-6">Join Our <span className="text-[#13DE00]">Cannabis Clubs</span></h2>
             <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" aria-label="Cannabis Clubs List">
                 {clubs.map((club, index) => {
                     // Generate image path based on club name

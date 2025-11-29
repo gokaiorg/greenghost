@@ -95,7 +95,7 @@ export default async function PromotesList() {
                             {/* Overlay */}
                             <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center p-4 transition-opacity duration-300">
                                 <h3 className="text-xl xl:text-2xl font-bold text-white mb-3 font-pixel">{item.title}</h3>
-                                <p className="text-xs lg:text-md xl:text-lg text-gray-200 mb-6">{item.description}</p>
+                                <p className="text-xs lg:text-sm text-gray-200 mb-6">{item.description}</p>
                                 <Link
                                     href={item.link}
                                     className="inline-block bg-[#13DE00] hover:bg-[#10c500] text-black font-bold py-3 px-8 transition-colors uppercase text-sm tracking-wider"
