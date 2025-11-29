@@ -5,7 +5,7 @@ import { getPageBySlugServer as getPageBySlug, getPagesServerSide as getPages } 
 import { getBannerData } from '@/lib/utils/bannerUtils';
 import { getClubs } from '@/lib/organization-data';
 import Banner from '@/components/Banner';
-import ClubList from '@/components/ClubList';
+import ClubsList from '@/components/ClubsList';
 
 export const metadata: Metadata = {
   title: 'Best Cannabis Social Club in Phuket Thailand - Green Ghost 🌿👻',
@@ -85,7 +85,7 @@ async function CannabisClubContent() {
       </div>
 
       {/* Club List */}
-      <ClubList clubs={clubs} />
+      <ClubsList clubs={clubs} />
     </>
   );
 }

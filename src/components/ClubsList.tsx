@@ -8,15 +8,15 @@ interface Club {
     link: string;
 }
 
-interface ClubListProps {
+interface ClubsListProps {
     clubs: Club[];
 }
 
-export default function ClubList({ clubs }: ClubListProps) {
+export default function ClubsList({ clubs }: ClubsListProps) {
     return (
-        <div className="container mx-auto px-4 py-8">
+        <section className="container mx-auto px-4 py-8">
             <h2 className="text-xl md:text-2xl font-bold text-[#13DE00] mb-6">Join Our Cannabis Clubs</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" aria-label="Cannabis Clubs List">
                 {clubs.map((club, index) => {
                     // Generate image path based on club name
                     // Convert name to lowercase and replace spaces with hyphens
@@ -27,7 +27,7 @@ export default function ClubList({ clubs }: ClubListProps) {
                     const isExternal = club.link.startsWith('http');
 
                     return (
-                        <div key={index} className="bg-[#13DE00]/5 border border-[#13DE00]/20 overflow-hidden hover:border-[#13DE00]/50 transition-all group">
+                        <li key={index} className="bg-[#13DE00]/5 border border-[#13DE00]/20 overflow-hidden hover:border-[#13DE00]/50 transition-all group list-none">
                             {/* Image */}
                             <div className="relative w-full h-48 bg-black">
                                 <Image
@@ -64,10 +64,10 @@ export default function ClubList({ clubs }: ClubListProps) {
                                     </Link>
                                 )}
                             </div>
-                        </div>
+                        </li>
                     );
                 })}
-            </div>
-        </div>
+            </ul>
+        </section>
     );
 }
