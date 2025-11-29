@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getTops } from '@/lib/organization-data';
 
-export default async function TopsHome() {
+export default async function TopsList() {
     const tops = await getTops();
 
     return (
@@ -28,36 +28,40 @@ export default async function TopsHome() {
                     </Link>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <ul
+                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"
+                    aria-label="Top Dispensaries List"
+                >
                     {tops.map((top) => {
                         const slug = top.name.toLowerCase().replace(/\s+/g, '-');
                         const imagePath = `/images/partners/green-ghost-top-dispensary-${slug}.avif`;
 
                         return (
-                            <a
-                                key={top.name}
-                                href={top.link}
-                                title={top.name}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group block bg-[#111] border border-gray-800 hover:border-[#13DE00]/50 p-4 transition-all duration-300 flex flex-col items-center justify-center gap-3"
-                            >
-                                <div className="relative w-full aspect-[3/2] grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100">
-                                    <Image
-                                        src={imagePath}
-                                        alt={`${top.name} - Top Dispensary`}
-                                        fill
-                                        className="object-contain"
-                                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
-                                    />
-                                </div>
-                                <span className="text-xs font-bold text-gray-300 group-hover:text-white transition-colors text-center">
-                                    {top.name}
-                                </span>
-                            </a>
+                            <li key={top.name}>
+                                <a
+                                    href={top.link}
+                                    title={top.name}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group block bg-[#111] border border-gray-800 hover:border-[#13DE00]/50 p-4 transition-all duration-300 flex flex-col items-center justify-center gap-3 h-full"
+                                >
+                                    <div className="relative w-full aspect-[3/2] grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100">
+                                        <Image
+                                            src={imagePath}
+                                            alt={`${top.name} - Top Dispensary`}
+                                            fill
+                                            className="object-contain"
+                                            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
+                                        />
+                                    </div>
+                                    <span className="text-xs font-bold text-gray-300 group-hover:text-white transition-colors text-center">
+                                        {top.name}
+                                    </span>
+                                </a>
+                            </li>
                         );
                     })}
-                </div>
+                </ul>
             </div>
         </section>
     );

@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_OPTIONS='--max-old-space-size=4096' next dev",
-    "dev:turbo": "NODE_OPTIONS='--max-old-space-size=4096' next dev --turbopack",
-    "build": "NODE_OPTIONS='--max-old-space-size=4096' next build",
-    "build:turbo": "NODE_OPTIONS='--max-old-space-size=4096' next build --turbopack",
-    "start": "NODE_OPTIONS='--max-old-space-size=4096' next start",
+    "dev": "next dev",
+    "dev:turbo": "next dev --turbopack",
+    "build": "next build",
+    "build:turbo": "next build --turbopack",
+    "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {

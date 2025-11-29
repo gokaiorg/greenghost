@@ -8,7 +8,7 @@ import FeaturedProducts from '@/components/FeaturedProducts';
 import Reviews from '@/components/Reviews';
 import AboutUsBlock from '@/components/AboutUsBlock';
 import LocationsHome from '@/components/LocationsHome';
-import TopsHome from '@/components/TopsHome';
+import TopsList from '@/components/TopsList';
 import Promote from '@/components/Promote';
 import { PHONE_NUMBER } from '@/lib/constants';
 
@@ -87,7 +87,7 @@ export default function Home() {
         <FeaturedProducts />
         <AboutUsBlock />
         <LocationsHome />
-        <TopsHome />
+        <TopsList />
         <Promote />
         <Reviews />
         <ContactBlock />
