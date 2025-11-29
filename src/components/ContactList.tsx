@@ -24,23 +24,25 @@ export default async function ContactList() {
     const contacts = await getContacts();
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 max-w-4xl mx-auto">
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 max-w-4xl mx-auto" aria-label="Contact Methods List">
             {contacts.map((contact) => (
-                <Link
-                    key={contact.name}
-                    href={contact.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center gap-4 p-4 bg-black border-2 border-[#13DE00]/30 hover:border-[#13DE00] hover:bg-[#13DE00]/10 transition-all duration-300"
-                >
-                    <div className="text-[#13DE00] group-hover:scale-110 transition-transform duration-300">
-                        {getIcon(contact.name)}
-                    </div>
-                    <span className="text-lg font-bold text-white group-hover:text-[#13DE00] transition-colors font-pixel">
-                        {contact.name}
-                    </span>
-                </Link>
+                <li key={contact.name} className="list-none">
+                    <Link
+                        href={contact.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-center gap-4 p-4 bg-black border-2 border-[#13DE00]/30 hover:border-[#13DE00] hover:bg-[#13DE00]/10 transition-all duration-300"
+                        title={`Contact us via ${contact.name}`}
+                    >
+                        <div className="text-[#13DE00] group-hover:scale-110 transition-transform duration-300">
+                            {getIcon(contact.name)}
+                        </div>
+                        <span className="text-lg font-bold text-white group-hover:text-[#13DE00] transition-colors font-pixel">
+                            {contact.name}
+                        </span>
+                    </Link>
+                </li>
             ))}
-        </div>
+        </ul>
     );
 }
