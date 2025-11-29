@@ -21,7 +21,7 @@ export default function AboutUsBlock() {
               <span className="text-white">Our Cannabis</span> <span className="text-[#13DE00]">Club Story</span>
             </h2>
 
-            <p className="text-mdmd:text-lg lg:text-xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-md lg:text-lg xl:text-xl text-gray-300 mb-8 leading-relaxed">
               Born in the heart of Thailand, Green Ghost is your premier Thailand cannabis shop dedicated to cultivating premium organic cannabis. Our Thai-grown strains embody our commitment to quality, sustainability, and the rich heritage of Thai cannabis culture. As a leading premium weed Thailand provider, we combine traditional cultivation methods with modern expertise to deliver exceptional products that honor both nature and our local community.
             </p>
 

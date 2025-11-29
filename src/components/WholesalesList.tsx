@@ -105,7 +105,7 @@ export default async function WholesalesList() {
                                         fill
                                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                                     />
-                                    <div className="absolute top-2 right-2 bg-[#13DE00] text-black px-2 py-1 text-sm font-bold">
+                                    <div className="absolute top-2 right-2 bg-black text-[#13DE00] px-2 py-1 text-sm font-bold">
                                         {Number(item.price).toLocaleString()}฿ / 100g
                                     </div>
                                 </div>
