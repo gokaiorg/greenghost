@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { getBannerData } from '@/lib/utils/bannerUtils';
 import { getPagesServerSide as getPages } from '@/lib/pages-server';
 import Banner from '@/components/Banner';
-import Promote from '@/components/Promote';
+import PromotesList from '@/components/PromotesList';
 
 export const metadata: Metadata = {
   title: 'About Cannabis Culture in Thailand - Green Ghost 🌿👻',
@@ -11,12 +11,23 @@ export const metadata: Metadata = {
     title: 'About Cannabis Culture in Thailand - Green Ghost 🌿👻',
     description: 'Discover Green Ghost, a leading cannabis social club in Phuket, championing local culture, top-quality weed, and a thriving community for enthusiasts.',
     type: 'website',
-    url: 'https://green-ghost-crypto-weed-shop.vercel.app/about',
+    locale: 'en_US',
+    url: '/about',
+    siteName: 'Green Ghost',
+    images: [
+      {
+        url: '/images/banners/green-ghost-best-degen-weed-shop-about.avif',
+        width: 1920,
+        height: 1080,
+        alt: 'Green Ghost About Cannabis Culture',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'About Cannabis Culture in Thailand - Green Ghost 🌿👻',
     description: 'Discover Green Ghost, a leading cannabis social club in Phuket, championing local culture, top-quality weed, and a thriving community for enthusiasts.',
+    images: ['/images/banners/green-ghost-best-degen-weed-shop-about.avif'],
   },
 };
 
@@ -57,7 +68,7 @@ export default async function AboutPage() {
           />
         )}
 
-        <Promote />
+        <PromotesList />
       </div>
     </>
   )

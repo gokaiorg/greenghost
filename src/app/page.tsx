@@ -9,7 +9,7 @@ import Reviews from '@/components/Reviews';
 import AboutUsBlock from '@/components/AboutUsBlock';
 import LocationsHome from '@/components/LocationsHome';
 import TopsList from '@/components/TopsList';
-import Promote from '@/components/Promote';
+import PromotesList from '@/components/PromotesList';
 import { PHONE_NUMBER } from '@/lib/constants';
 
 export const metadata: Metadata = {
@@ -88,7 +88,7 @@ export default function Home() {
         <AboutUsBlock />
         <LocationsHome />
         <TopsList />
-        <Promote />
+        <PromotesList />
         <Reviews />
         <ContactBlock />
       </div>

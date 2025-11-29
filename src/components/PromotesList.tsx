@@ -72,18 +72,18 @@ async function getPromoteData(): Promise<PromoteItem[]> {
     return items;
 }
 
-export default async function Promote() {
+export default async function PromotesList() {
     const items = await getPromoteData();
 
     return (
         <section className="container mx-auto px-4 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" aria-label="Promotions List">
                 {items.map((item, index) => {
                     const imageKey = imageMapping[item.title] || item.title.toLowerCase().replace(/\s+/g, '-');
                     const imagePath = `/images/icons/green-ghost-${imageKey}.avif`;
 
                     return (
-                        <div key={index} className="relative aspect-square w-full overflow-hidden group">
+                        <li key={index} className="relative aspect-square w-full overflow-hidden group list-none">
                             {/* Background Image */}
                             <Image
                                 src={imagePath}
@@ -93,9 +93,9 @@ export default async function Promote() {
                             />
 
                             {/* Overlay */}
-                            <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center p-6 transition-opacity duration-300">
-                                <h3 className="text-2xl font-bold text-white mb-3 font-pixel">{item.title}</h3>
-                                <p className="text-gray-200 mb-6">{item.description}</p>
+                            <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center p-4 transition-opacity duration-300">
+                                <h3 className="text-xl xl:text-2xl font-bold text-white mb-3 font-pixel">{item.title}</h3>
+                                <p className="text-xs lg:text-md xl:text-lg text-gray-200 mb-6">{item.description}</p>
                                 <Link
                                     href={item.link}
                                     className="inline-block bg-[#13DE00] hover:bg-[#10c500] text-black font-bold py-3 px-8 transition-colors uppercase text-sm tracking-wider"
@@ -103,10 +103,10 @@ export default async function Promote() {
                                     {item.link_label}
                                 </Link>
                             </div>
-                        </div>
+                        </li>
                     );
                 })}
-            </div>
+            </ul>
         </section>
     );
 }
