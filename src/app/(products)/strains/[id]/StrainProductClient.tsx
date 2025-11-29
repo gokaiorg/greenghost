@@ -76,12 +76,12 @@ export default function StrainProductClient({ product }: StrainProductClientProp
 
         {/* Desktop Layout - Price on right, info on left */}
         <div className="hidden md:flex justify-between items-start mb-4">
-          <div className="flex flex-col text-sm text-gray-400 space-y-1">
-            <span className={`whitespace-nowrap ${product.dominance && product.dominance.startsWith('Sativa') ? 'text-[#d1fee5]' : product.dominance && product.dominance.startsWith('Hybrid') ? 'text-[#c0ef24]' : product.dominance && product.dominance.startsWith('Indica') ? 'text-[#ee9cc9]' : ''}`}>{product.dominance || 'Unknown'}</span>
-            <span className="whitespace-nowrap">{product.cbd > 0 ? `CBD ${product.cbd}%` : `THC ${product.thc}%`}</span>
-            {product.effects && <span><span className="text-gray-400">Feelings:</span> <span className="text-yellow-600">{product.effects}</span></span>}
-            {product.relieves && <span><span className="text-gray-400">Relieves:</span> <span className="text-yellow-600">{product.relieves}</span></span>}
-          </div>
+          <ul className="flex flex-col text-sm text-gray-400 space-y-1" aria-label="Product Information">
+            <li className={`whitespace-nowrap ${product.dominance && product.dominance.startsWith('Sativa') ? 'text-[#d1fee5]' : product.dominance && product.dominance.startsWith('Hybrid') ? 'text-[#c0ef24]' : product.dominance && product.dominance.startsWith('Indica') ? 'text-[#ee9cc9]' : ''}`}>{product.dominance || 'Unknown'}</li>
+            <li className="whitespace-nowrap">{product.cbd > 0 ? `CBD ${product.cbd}%` : `THC ${product.thc}%`}</li>
+            {product.effects && <li><span className="text-gray-400">Feelings:</span> <span className="text-yellow-600">{product.effects}</span></li>}
+            {product.relieves && <li><span className="text-gray-400">Relieves:</span> <span className="text-yellow-600">{product.relieves}</span></li>}
+          </ul>
           {product.status === 'In stock' ? (
             <div className="flex flex-col items-end">
               <div className="text-right mb-2">
@@ -113,12 +113,12 @@ export default function StrainProductClient({ product }: StrainProductClientProp
 
         {/* Mobile Product Info - Shows below price on mobile */}
         <div className="md:hidden mb-4">
-          <div className="flex flex-col text-sm text-gray-400 space-y-1">
-            <span className={`whitespace-nowrap ${product.dominance && product.dominance.startsWith('Sativa') ? 'text-[#d1fee5]' : product.dominance && product.dominance.startsWith('Hybrid') ? 'text-[#c0ef24]' : product.dominance && product.dominance.startsWith('Indica') ? 'text-[#ee9cc9]' : ''}`}>{product.dominance || 'Unknown'}</span>
-            <span className="whitespace-nowrap">{product.cbd > 0 ? `CBD ${product.cbd}%` : `THC ${product.thc}%`}</span>
-            {product.effects && <span><span className="text-gray-400">Feelings:</span> <span className="text-yellow-600">{product.effects}</span></span>}
-            {product.relieves && <span><span className="text-gray-400">Relieves:</span> <span className="text-yellow-600">{product.relieves}</span></span>}
-          </div>
+          <ul className="flex flex-col text-sm text-gray-400 space-y-1" aria-label="Product Information">
+            <li className={`whitespace-nowrap ${product.dominance && product.dominance.startsWith('Sativa') ? 'text-[#d1fee5]' : product.dominance && product.dominance.startsWith('Hybrid') ? 'text-[#c0ef24]' : product.dominance && product.dominance.startsWith('Indica') ? 'text-[#ee9cc9]' : ''}`}>{product.dominance || 'Unknown'}</li>
+            <li className="whitespace-nowrap">{product.cbd > 0 ? `CBD ${product.cbd}%` : `THC ${product.thc}%`}</li>
+            {product.effects && <li><span className="text-gray-400">Feelings:</span> <span className="text-yellow-600">{product.effects}</span></li>}
+            {product.relieves && <li><span className="text-gray-400">Relieves:</span> <span className="text-yellow-600">{product.relieves}</span></li>}
+          </ul>
         </div>
         {product.description && (
           <div className="mb-4">
