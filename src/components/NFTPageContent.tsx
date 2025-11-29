@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { NFT } from '@/lib/nft-data';
-import NFTList from './NFTList';
+import NFTsList from './NFTsList';
 import NFTModal from './NFTModal';
 import Banner from './Banner';
 
@@ -48,7 +48,7 @@ export default function NFTPageContent({ nfts, initialSlug }: NFTPageContentProp
         <div className="min-h-screen bg-[#111] text-white">
             <Banner
                 title="NFT"
-                description="Thailand’s Top Cannabis Club Meets NFT Innovation"
+                description="Thailand's Top Cannabis Club Meets NFT Innovation"
                 bgSrc="/banners/green-ghost-best-degen-weed-shop-nft.avif"
                 iconSrc="/images/icons/nft-green-ghost.avif"
                 iconAlt="NFT Green Ghost"
@@ -83,7 +83,7 @@ export default function NFTPageContent({ nfts, initialSlug }: NFTPageContentProp
                     </div>
                 </div>
 
-                <NFTList nfts={nfts} onSelect={handleSelect} />
+                <NFTsList nfts={nfts} onSelect={handleSelect} />
 
                 {selectedNFT && (
                     <NFTModal nft={selectedNFT} onClose={handleClose} />

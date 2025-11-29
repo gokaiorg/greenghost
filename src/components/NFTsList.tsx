@@ -3,18 +3,18 @@
 import Image from 'next/image';
 import { NFT } from '@/lib/nft-data';
 
-interface NFTListProps {
+interface NFTsListProps {
     nfts: NFT[];
     onSelect: (slug: string) => void;
 }
 
-export default function NFTList({ nfts, onSelect }: NFTListProps) {
+export default function NFTsList({ nfts, onSelect }: NFTsListProps) {
     return (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4">
+        <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4" aria-label="NFT Collection List">
             {nfts.map((nft) => (
-                <div
+                <li
                     key={nft.slug}
-                    className="cursor-pointer group relative flex flex-col items-center bg-black/20 overflow-hidden border border-[#13DE00] hover:border-[#13DE00] transition-all duration-300 hover:shadow-[0_0_20px_#13DE00]"
+                    className="cursor-pointer group relative flex flex-col items-center bg-black/20 overflow-hidden border border-[#13DE00] hover:border-[#13DE00] transition-all duration-300 hover:shadow-[0_0_20px_#13DE00] list-none"
                     onClick={() => onSelect(nft.slug)}
                 >
                     <div className="relative w-full aspect-square overflow-hidden">
@@ -32,8 +32,8 @@ export default function NFTList({ nfts, onSelect }: NFTListProps) {
                             {nft.name}
                         </h3>
                     </div>
-                </div>
+                </li>
             ))}
-        </div>
+        </ul>
     );
 }
