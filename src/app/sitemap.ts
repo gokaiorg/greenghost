@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getLocations } from '@/lib/organization-data'
+import { getProductsByCategory } from '@/lib/products'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://green.gd'
 
@@ -137,68 +138,45 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
     dynamicPages = [...dynamicPages, ...locationPages]
 
-    // Fetch products for dynamic URLs using the API
-    const apiBase = process.env.NEXT_PUBLIC_API_URL || baseUrl
-
     // Fetch strains
-    const strainsRes = await fetch(`${apiBase}/api/products/strains`, {
-      next: { revalidate: 3600 } // Cache for 1 hour
-    })
-    if (strainsRes.ok) {
-      const strains = await strainsRes.json()
-      const strainPages: MetadataRoute.Sitemap = strains.map((strain: { id: string }) => ({
-        url: `${baseUrl}/strains/${strain.id}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.7,
-      }))
-      dynamicPages = [...dynamicPages, ...strainPages]
-    }
+    const strains = await getProductsByCategory('Strains')
+    const strainPages: MetadataRoute.Sitemap = strains.map((strain: { id: string }) => ({
+      url: `${baseUrl}/strains/${strain.id}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    }))
+    dynamicPages = [...dynamicPages, ...strainPages]
 
     // Fetch edibles
-    const ediblesRes = await fetch(`${apiBase}/api/products/edibles`, {
-      next: { revalidate: 3600 }
-    })
-    if (ediblesRes.ok) {
-      const edibles = await ediblesRes.json()
-      const ediblePages: MetadataRoute.Sitemap = edibles.map((edible: { id: string }) => ({
-        url: `${baseUrl}/edibles/${edible.id}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.7,
-      }))
-      dynamicPages = [...dynamicPages, ...ediblePages]
-    }
+    const edibles = await getProductsByCategory('Edibles')
+    const ediblePages: MetadataRoute.Sitemap = edibles.map((edible: { id: string }) => ({
+      url: `${baseUrl}/edibles/${edible.id}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    }))
+    dynamicPages = [...dynamicPages, ...ediblePages]
 
     // Fetch concentrates
-    const concentratesRes = await fetch(`${apiBase}/api/products/concentrates`, {
-      next: { revalidate: 3600 }
-    })
-    if (concentratesRes.ok) {
-      const concentrates = await concentratesRes.json()
-      const concentratePages: MetadataRoute.Sitemap = concentrates.map((concentrate: { id: string }) => ({
-        url: `${baseUrl}/concentrates/${concentrate.id}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.7,
-      }))
-      dynamicPages = [...dynamicPages, ...concentratePages]
-    }
+    const concentrates = await getProductsByCategory('Concentrates')
+    const concentratePages: MetadataRoute.Sitemap = concentrates.map((concentrate: { id: string }) => ({
+      url: `${baseUrl}/concentrates/${concentrate.id}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    }))
+    dynamicPages = [...dynamicPages, ...concentratePages]
 
     // Fetch gadgets
-    const gadgetsRes = await fetch(`${apiBase}/api/products/gadgets`, {
-      next: { revalidate: 3600 }
-    })
-    if (gadgetsRes.ok) {
-      const gadgets = await gadgetsRes.json()
-      const gadgetPages: MetadataRoute.Sitemap = gadgets.map((gadget: { id: string }) => ({
-        url: `${baseUrl}/gadgets/${gadget.id}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.7,
-      }))
-      dynamicPages = [...dynamicPages, ...gadgetPages]
-    }
+    const gadgets = await getProductsByCategory('Gadgets')
+    const gadgetPages: MetadataRoute.Sitemap = gadgets.map((gadget: { id: string }) => ({
+      url: `${baseUrl}/gadgets/${gadget.id}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    }))
+    dynamicPages = [...dynamicPages, ...gadgetPages]
 
   } catch (error) {
     console.error('Error generating sitemap:', error)
