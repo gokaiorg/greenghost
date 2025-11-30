@@ -188,6 +188,11 @@ const nextConfig: NextConfig = {
         destination: '/growers',
         permanent: true,
       },
+      {
+        source: '/gadgets/classic-ice-bong',
+        destination: '/gadgets/glass-ice-bong',
+        permanent: true,
+      },
     ]
   },
 };

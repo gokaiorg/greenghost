@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import Banner from '@/components/Banner';
 import { getBannerData } from '@/lib/utils/bannerUtils';
 import { getPagesServerSide as getPages } from '@/lib/pages-server';
+import WeedsBlock from '@/components/WeedsBlock';
+import { getWeedsData } from '@/lib/weeds-data';
 
 export const metadata: Metadata = {
   title: 'Your Weed Guide to Cannabis Excellence - Green Ghost 🌿👻',
@@ -41,6 +43,8 @@ export default async function WeedPage() {
     bgSrc: weedPage?.image || "/banners/green-ghost-best-degen-weed-shop-weed.avif"
   });
 
+  const weedsData = await getWeedsData();
+
   return (
     <>
       <Banner {...bannerData} />
@@ -67,6 +71,12 @@ export default async function WeedPage() {
             dangerouslySetInnerHTML={{ __html: bannerData.sectionDescription }}
           />
         )}
+
+        <WeedsBlock
+          strains={weedsData.strains}
+          compounds={weedsData.compounds}
+          info={weedsData.info}
+        />
       </div>
     </>
   );
