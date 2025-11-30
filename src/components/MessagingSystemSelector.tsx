@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { CartItem } from '@/lib/types'
+import Link from 'next/link'
 
 interface MessagingSystemSelectorProps {
   items: CartItem[]
@@ -11,22 +12,30 @@ interface MessagingSystemSelectorProps {
 const MessagingSystemSelector = ({ items, total, onClose }: MessagingSystemSelectorProps) => {
   const [name, setName] = useState('')
   const [location, setLocation] = useState('')
-  const [activeTab, setActiveTab] = useState<'whatsapp' | 'messenger' | 'instagram' | 'telegram'>('whatsapp')
+  const [addressInfo, setAddressInfo] = useState('')
+  const [paymentMethod, setPaymentMethod] = useState<'prepaid' | 'cod'>('prepaid')
+  const [activeTab, setActiveTab] = useState<'whatsapp' | 'messenger' | 'telegram'>('whatsapp')
 
   const getItemTotal = (item: CartItem) => {
     if (item.menuType === 'Buds' || item.menuType === 'Pre-rolls') {
+      // Add 20฿ to pre-rolls base price
+      const basePrice = item.menuType === 'Pre-rolls' ? item.price + 20 : item.price;
+
       if (item.quantity >= 30) {
-        return item.price * item.quantity * 0.875
+        return basePrice * item.quantity * 0.7; // 30% off
+      } else if (item.quantity >= 10) {
+        return basePrice * item.quantity * 0.8; // 20% off
+      } else if (item.quantity >= 5) {
+        // 5g-9g: (qty - 1) * basePrice (Buy 4 Get 1 Free style)
+        return basePrice * (item.quantity - 1);
       } else {
-        const free = Math.floor(item.quantity / 5)
-        const paid = item.quantity - free
-        return item.price * paid
+        return basePrice * item.quantity;
       }
     }
     return item.price * item.quantity
   }
 
-  const orderDetails = `Name: ${name}\nLocation: ${location}\n\nOrder Details:\n${items
+  const orderDetails = `Name: ${name}\nAddress Info: ${addressInfo}\nLocation: ${location}\nPayment Method: ${paymentMethod === 'prepaid' ? 'Pre-payment (Bank Transfer)' : 'Cash on Delivery'}\n\nOrder Details:\n${items
     .map((item) => {
       const itemTotal = getItemTotal(item);
       return `${item.quantity} x ${item.name} (${item.menuType}) - ${itemTotal}฿`;
@@ -40,11 +49,9 @@ const MessagingSystemSelector = ({ items, total, onClose }: MessagingSystemSelec
       case 'whatsapp':
         return `https://wa.me/66874201144?text=${message}`
       case 'messenger':
-        return `https://m.me/your_page_username?text=${message}`
-      case 'instagram':
-        return `https://www.instagram.com/direct/new/?text=${message}`
+        return `https://m.me/greenghostdegenCBD?text=${message}`
       case 'telegram':
-        return `https://t.me/your_username?text=${message}`
+        return `https://t.me/+66874201144?text=${message}`
       default:
         return `https://wa.me/66874201144?text=${message}`
     }
@@ -88,6 +95,20 @@ const MessagingSystemSelector = ({ items, total, onClose }: MessagingSystemSelec
             </div>
 
             <div>
+              <label htmlFor="addressInfo" className="block text-sm font-medium text-white mb-1">
+                Address Info (Floor, Room, Door Code)
+              </label>
+              <input
+                type="text"
+                id="addressInfo"
+                value={addressInfo}
+                onChange={(e) => setAddressInfo(e.target.value)}
+                placeholder="e.g. 3rd Floor, Room 304"
+                className="w-full p-2 border-2 border-[#13DE00] bg-black text-white focus:ring-2 focus:ring-[#13DE00] focus:border-transparent"
+              />
+            </div>
+
+            <div>
               <label htmlFor="location" className="block text-sm font-medium text-white mb-1">
                 Pinned location (Maps Link) *
               </label>
@@ -102,9 +123,39 @@ const MessagingSystemSelector = ({ items, total, onClose }: MessagingSystemSelec
               />
             </div>
 
+            <div>
+              <label className="block text-sm font-medium text-white mb-2">
+                Payment Method *
+              </label>
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  type="button"
+                  onClick={() => setPaymentMethod('prepaid')}
+                  className={`p-2 text-sm border-2 ${paymentMethod === 'prepaid' ? 'bg-[#13DE00] text-black border-[#13DE00]' : 'bg-black text-white border-gray-600'} hover:border-[#13DE00] transition-colors`}
+                >
+                  Pre-payment
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setPaymentMethod('cod')}
+                  className={`p-2 text-sm border-2 ${paymentMethod === 'cod' ? 'bg-[#13DE00] text-black border-[#13DE00]' : 'bg-black text-white border-gray-600'} hover:border-[#13DE00] transition-colors`}
+                >
+                  Cash on Delivery
+                </button>
+              </div>
+
+              <div className="mt-2 p-2 bg-gray-900 border border-gray-700 rounded text-xs text-gray-300">
+                {paymentMethod === 'prepaid' ? (
+                  <p>Please attach the payment slip in the chat after sending your order. <Link href="/payment" target="_blank" className="text-[#13DE00] underline hover:text-white">See bank details</Link></p>
+                ) : (
+                  <p>Please prepare the exact amount in cash for the driver.</p>
+                )}
+              </div>
+            </div>
+
             <div className="pt-4">
               <h3 className="text-sm font-medium text-white mb-2">Send Order Via</h3>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-3 gap-2">
                 <button
                   type="button"
                   onClick={() => setActiveTab('whatsapp')}
@@ -125,15 +176,6 @@ const MessagingSystemSelector = ({ items, total, onClose }: MessagingSystemSelec
 
                 <button
                   type="button"
-                  onClick={() => setActiveTab('instagram')}
-                  className={`p-3 flex items-center justify-center space-x-2 text-white ${activeTab === 'instagram' ? 'bg-black border-2 border-[#13DE00]' : 'bg-black border-2 border-gray-600'
-                    } hover:border-[#13DE00] cursor-pointer`}
-                >
-                  <span>Instagram</span>
-                </button>
-
-                <button
-                  type="button"
                   onClick={() => setActiveTab('telegram')}
                   className={`p-3 flex items-center justify-center space-x-2 text-white ${activeTab === 'telegram' ? 'bg-black border-2 border-[#13DE00]' : 'bg-black border-2 border-gray-600'
                     } hover:border-[#13DE00] cursor-pointer`}
@@ -141,6 +183,9 @@ const MessagingSystemSelector = ({ items, total, onClose }: MessagingSystemSelec
                   <span>Telegram</span>
                 </button>
               </div>
+              <p className="text-xs text-gray-400 mt-2 text-center italic">
+                Or screenshot and send on the chat you want
+              </p>
             </div>
 
             <div className="pt-4 flex space-x-3 justify-end">
