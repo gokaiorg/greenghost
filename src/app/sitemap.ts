@@ -139,7 +139,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     dynamicPages = [...dynamicPages, ...locationPages]
 
     // Fetch strains
+    console.log('Fetching strains for sitemap...')
     const strains = await getProductsByCategory('Strains')
+    console.log(`Found ${strains.length} strains`)
     const strainPages: MetadataRoute.Sitemap = strains.map((strain: { id: string }) => ({
       url: `${baseUrl}/strains/${strain.id}`,
       lastModified: new Date(),
