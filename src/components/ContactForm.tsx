@@ -18,18 +18,17 @@ export default function ContactForm() {
         setErrorMessage('');
 
         try {
-            const response = await fetch('/api/contact', {
+            const response = await fetch('/', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({
+                    'form-name': 'contact',
+                    ...formData,
+                }).toString(),
             });
 
-            const data = await response.json();
-
             if (!response.ok) {
-                throw new Error(data.error || 'Failed to send message');
+                throw new Error('Failed to send message');
             }
 
             setStatus('success');
@@ -60,7 +59,14 @@ export default function ContactForm() {
                     Send us a Message
                 </h2>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    onSubmit={handleSubmit}
+                    className="space-y-6"
+                >
+                    <input type="hidden" name="form-name" value="contact" />
                     <div>
                         <label htmlFor="name" className="block text-black mb-2 font-bold font-pixel text-sm">
                             NAME
