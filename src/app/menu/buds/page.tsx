@@ -8,6 +8,7 @@ import MenuTypes from '@/components/MenuTypes'
 import StrainFilter from '@/components/StrainFilter'
 import MiniSlider from '@/components/MiniSlider'
 import BannerMenu from '@/components/BannerMenu'
+import AddToCartButton from '@/components/AddToCartButton'
 
 export default function BudsPage() {
   const { addItem } = useCart()
@@ -39,7 +40,7 @@ export default function BudsPage() {
         <StrainFilter selectedDominances={selectedDominances} onFilterChange={setSelectedDominances} />
         <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 list-none m-0 p-0" aria-label="Buds menu">
           {buds.map((bud) => (
-            <li key={bud.id}>
+            <li key={bud.id} className="relative">
               <Link href={`/strains/${bud.id}`} title={bud.name}>
                 <div className={`hover:bg-[#13DE00]/13 p-1 flex flex-col relative cursor-pointer`}>
                   <div className="relative mb-2">
@@ -53,16 +54,6 @@ export default function BudsPage() {
                       height={100}
                       autoRotate={true}
                     />
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault()
-                        e.stopPropagation()
-                        addItem(bud, 'Buds')
-                      }}
-                      className="absolute bottom-1 right-1 !bg-[#13DE00] text-black px-3 py-2 text-xs hover:!bg-black hover:text-[#13DE00] cursor-pointer z-10"
-                    >
-                      Buy 1g
-                    </button>
                   </div>
                   <ul className="list-none m-0 p-0" aria-label="Product details">
                     <li>
@@ -92,6 +83,10 @@ export default function BudsPage() {
                   </ul>
                 </div>
               </Link>
+              <div className="mt-8 md:mt-0 md:absolute md:top-1 md:left-1 md:right-1 md:h-[232px]  lg:h-[185px] xl:h-[236px] pointer-events-none z-10">                <div className="absolute bottom-1 right-1 pointer-events-auto">
+                <AddToCartButton product={bud} category="Buds" compact />
+              </div>
+              </div>
             </li>
           ))}
         </ul>

@@ -85,14 +85,18 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   const getTotal = () => state.items.reduce((total, item) => {
     if (item.menuType === 'Buds' || item.menuType === 'Pre-rolls') {
+      // Add 20฿ to pre-rolls base price
+      const basePrice = item.menuType === 'Pre-rolls' ? item.price + 20 : item.price;
+
       if (item.quantity >= 30) {
-        // Apply flat 30% discount for quantities >= 30
-        return total + item.price * item.quantity * 0.875;
+        return total + (basePrice * item.quantity * 0.7); // 30% off
+      } else if (item.quantity >= 10) {
+        return total + (basePrice * item.quantity * 0.8); // 20% off
+      } else if (item.quantity >= 5) {
+        // 5g-9g: (qty - 1) * basePrice (Buy 4 Get 1 Free style)
+        return total + (basePrice * (item.quantity - 1));
       } else {
-        // Apply "buy 5 get 1 free" logic for quantities < 30
-        const free = Math.floor(item.quantity / 5);
-        const paid = item.quantity - free;
-        return total + item.price * paid;
+        return total + (basePrice * item.quantity);
       }
     }
     return total + item.price * item.quantity

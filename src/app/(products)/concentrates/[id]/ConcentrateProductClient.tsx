@@ -6,6 +6,7 @@ import { Product } from '@/lib/types'
 import MenuTypes from '@/components/MenuTypes'
 import ImageSlider from '@/components/ImageSlider'
 import BackButton from '@/components/BackButton'
+import AddToCartButton from '@/components/AddToCartButton'
 
 interface ConcentrateProductClientProps {
   product: Product
@@ -48,12 +49,7 @@ export default function ConcentrateProductClient({ product }: ConcentrateProduct
               <div className="text-center">
                 <p className="text-sm text-[#13DE00]">{product.price}฿</p>
               </div>
-              <button
-                onClick={() => addItem(product, 'Concentrates')}
-                className="!bg-[#13DE00] text-black px-3 py-2 text-sm hover:!bg-black hover:text-[#13DE00] cursor-pointer w-full"
-              >
-                Add to Cart
-              </button>
+              <AddToCartButton product={product} category="Concentrates" className="w-full" compact />
             </div>
           ) : (
             <div className="text-center">
@@ -74,12 +70,7 @@ export default function ConcentrateProductClient({ product }: ConcentrateProduct
               <div className="text-right mb-2">
                 <p className="text-sm text-[#13DE00]">{product.price}฿</p>
               </div>
-              <button
-                onClick={() => addItem(product, 'Concentrates')}
-                className="!bg-[#13DE00] text-black px-3 py-2 text-sm hover:!bg-black hover:text-[#13DE00] cursor-pointer"
-              >
-                Add to Cart
-              </button>
+              <AddToCartButton product={product} category="Concentrates" compact />
             </div>
           ) : (
             <p className="text-red-500 text-right">Sold out</p>

@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react'
 import MenuTypes from '@/components/MenuTypes'
 import StrainFilter from '@/components/StrainFilter'
 import BannerMenu from '@/components/BannerMenu'
+import AddToCartButton from '@/components/AddToCartButton'
 
 export default function PreRollsPage() {
   const { addItem } = useCart()
@@ -36,9 +37,9 @@ export default function PreRollsPage() {
         <StrainFilter selectedDominances={selectedDominances} onFilterChange={setSelectedDominances} />
         <ul className="space-y-2 list-none m-0 p-0" aria-label="Pre-rolls menu">
           {preRolls.map((roll) => (
-            <li key={roll.id}>
+            <li key={roll.id} className="relative">
               <Link href={`/strains/${roll.id}`} title={roll.name}>
-                <div className="bg-black p-2 transition-all flex items-center justify-between mb-2 sm:mb-0">
+                <div className="bg-black p-2 transition-all flex items-center justify-between mb-2 sm:mb-0 pr-32">
                   <ul className="flex flex-col flex-grow list-none m-0 p-0" aria-label="Product details">
                     <li className="flex items-baseline space-x-2">
                       <h2 className="text-base md:text-lg font-semibold text-sm leading-tight">{roll.name}</h2>
@@ -56,23 +57,14 @@ export default function PreRollsPage() {
                   </ul>
                   <ul className="flex items-center sm:space-x-2 list-none m-0 p-0" aria-label="Product price and actions">
                     <li>
-                      <p className="text-sm text-[#13DE00] font-bold whitespace-nowrap mr-2">{roll.price}฿</p>
-                    </li>
-                    <li>
-                      <button
-                        onClick={(e) => {
-                          e.preventDefault()
-                          e.stopPropagation()
-                          addItem(roll, 'Pre-rolls')
-                        }}
-                        className="!bg-[#13DE00] text-black px-3 py-2 text-xs hover:!bg-black hover:text-[#13DE00] cursor-pointer flex-shrink-0"
-                      >
-                        Buy 1g
-                      </button>
+                      <p className="text-sm text-[#13DE00] font-bold whitespace-nowrap mr-2">{roll.price + 20}฿</p>
                     </li>
                   </ul>
                 </div>
               </Link>
+              <div className="absolute right-2 top-1/2 -translate-y-1/2 z-10">
+                <AddToCartButton product={roll} category="Pre-rolls" compact />
+              </div>
             </li>
           ))}
         </ul>

@@ -9,6 +9,7 @@ import MenuTypes from '@/components/MenuTypes'
 import ImageSlider from '@/components/ImageSlider'
 import BackButton from '@/components/BackButton'
 import FeaturedProducts from '@/components/FeaturedProducts'
+import AddToCartButton from '@/components/AddToCartButton'
 
 interface StrainProductClientProps {
   product: Product
@@ -52,12 +53,7 @@ export default function StrainProductClient({ product }: StrainProductClientProp
                 <p className="text-sm"><span className="text-white">5g</span> <span className="text-[#13DE00]">{product.price * 4}฿</span></p>
                 <p className="text-sm"><span className="text-white">30g</span> <span className="text-[#13DE00]">{product.price * 21}฿</span></p>
               </div>
-              <button
-                onClick={() => addItem(product, isPreRoll ? 'Pre-rolls' : 'Buds')}
-                className="!bg-[#13DE00] text-black px-3 py-2 text-sm hover:!bg-black hover:text-[#13DE00] cursor-pointer w-full"
-              >
-                Buy 1g
-              </button>
+              <AddToCartButton product={product} category={isPreRoll ? 'Pre-rolls' : 'Buds'} className="w-full" compact />
               <div className="flex items-center space-x-2 mt-2">
                 <input
                   type="checkbox"
@@ -89,12 +85,7 @@ export default function StrainProductClient({ product }: StrainProductClientProp
                 <p className="text-sm"><span className="text-white">5g</span> <span className="text-[#13DE00]">{product.price * 4}฿</span></p>
                 <p className="text-sm"><span className="text-white">30g</span> <span className="text-[#13DE00]">{product.price * 21}฿</span></p>
               </div>
-              <button
-                onClick={() => addItem(product, isPreRoll ? 'Pre-rolls' : 'Buds')}
-                className="!bg-[#13DE00] text-black px-3 py-2 text-sm hover:!bg-black hover:text-[#13DE00] cursor-pointer"
-              >
-                Buy 1g
-              </button>
+              <AddToCartButton product={product} category={isPreRoll ? 'Pre-rolls' : 'Buds'} compact />
               <div className="flex items-center space-x-2 mt-2">
                 <input
                   type="checkbox"

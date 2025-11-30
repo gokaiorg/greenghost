@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useCart } from '@/contexts/CartContext'
 import { CartItem } from '@/lib/types'
 import MessagingSystemSelector from './MessagingSystemSelector'
+import QuantitySelector from './QuantitySelector'
 
 interface CartPopupProps {
   isOpen: boolean
@@ -20,14 +21,18 @@ export default function CartPopup({ isOpen, onClose }: CartPopupProps) {
 
   const getItemTotal = (item: CartItem) => {
     if (item.menuType === 'Buds' || item.menuType === 'Pre-rolls') {
+      // Add 20฿ to pre-rolls base price
+      const basePrice = item.menuType === 'Pre-rolls' ? item.price + 20 : item.price;
+
       if (item.quantity >= 30) {
-        // Apply flat 30% discount for quantities >= 30
-        return item.price * item.quantity * 0.875;
+        return basePrice * item.quantity * 0.7; // 30% off
+      } else if (item.quantity >= 10) {
+        return basePrice * item.quantity * 0.8; // 20% off
+      } else if (item.quantity >= 5) {
+        // 5g-9g: (qty - 1) * basePrice (Buy 4 Get 1 Free style)
+        return basePrice * (item.quantity - 1);
       } else {
-        // Apply "buy 5 get 1 free" logic for quantities < 30
-        const free = Math.floor(item.quantity / 5);
-        const paid = item.quantity - free;
-        return item.price * paid;
+        return basePrice * item.quantity;
       }
     }
     return item.price * item.quantity
@@ -55,13 +60,23 @@ export default function CartPopup({ isOpen, onClose }: CartPopupProps) {
       const maxQuantity = 30; // Strains have a max of 30
 
       if (requestedNewQuantity > oldQuantity) { // Incrementing
-        if (oldQuantity < 10) {
+        // Skip 4g and 9g when incrementing
+        if (oldQuantity === 3) {
+          newQuantity = 5;
+        } else if (oldQuantity === 8) {
+          newQuantity = 10;
+        } else if (oldQuantity < 10) {
           newQuantity = oldQuantity + 1;
         } else { // oldQuantity >= 10
           newQuantity = oldQuantity + 5;
         }
       } else { // Decrementing
-        if (oldQuantity <= 10) {
+        // Skip 4g and 9g when decrementing
+        if (oldQuantity === 5) {
+          newQuantity = 3;
+        } else if (oldQuantity === 10) {
+          newQuantity = 8;
+        } else if (oldQuantity <= 10) {
           newQuantity = oldQuantity - 1;
         } else { // oldQuantity > 10
           newQuantity = oldQuantity - 5;
@@ -122,25 +137,16 @@ export default function CartPopup({ isOpen, onClose }: CartPopupProps) {
                       <p className="text-xs text-gray-400">{item.menuType}</p>
                       <p className="text-[#13DE00] font-semibold text-sm">{getItemTotal(item)}฿</p>
                     </div>
-                    <div className="flex items-center space-x-1 mb-2">
-                      <button
-                        onClick={() => handleQuantityChange(item.id, item.quantity - 1, item.quantity, item.menuType)}
-                        className="w-5 h-5 bg-[#13DE00] text-black rounded-full flex items-center justify-center text-xs hover:bg-green-700 cursor-pointer"
-                        aria-label={`Decrease quantity of ${item.name}`}
-                      >
-                        -
-                      </button>
-                      <span className="text-xs font-medium w-6 text-center">{item.quantity}</span>
-                      <button
-                        onClick={() => handleQuantityChange(item.id, item.quantity + 1, item.quantity, item.menuType)}
-                        className="w-5 h-5 bg-[#13DE00] text-black rounded-full flex items-center justify-center text-xs hover:bg-green-700 cursor-pointer"
-                        aria-label={`Increase quantity of ${item.name}`}
-                      >
-                        +
-                      </button>
+                    <div className="flex items-center mb-2">
+                      <QuantitySelector
+                        quantity={item.quantity}
+                        onIncrease={() => handleQuantityChange(item.id, item.quantity + 1, item.quantity, item.menuType)}
+                        onDecrease={() => handleQuantityChange(item.id, item.quantity - 1, item.quantity, item.menuType)}
+                        size="sm"
+                      />
                       <button
                         onClick={() => removeItem(item.id, item.menuType)}
-                        className="text-red-500 text-right hover:text-red-700 text-xl ml-1 cursor-pointer font-pixel"
+                        className="text-red-500 text-right hover:text-red-700 text-xl ml-4 cursor-pointer font-pixel"
                         aria-label={`Remove ${item.name} from cart`}
                       >
                         X
