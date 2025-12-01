@@ -7,20 +7,3 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
 
-# Deploy Preview headers
-[context.deploy-preview.headers]
-  for = "/*"
-  [context.deploy-preview.headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-# Branch Deploy headers
-[context.branch-deploy.headers]
-  for = "/*"
-  [context.branch-deploy.headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-# Dev environment (if applicable, though usually handled by local dev server)
-[context.dev.headers]
-  for = "/*"
-  [context.dev.headers.values]
-    X-Robots-Tag = "noindex, nofollow"
