@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useCart } from '@/contexts/CartContext'
+
 import { Product } from '@/lib/types'
 import { useState, useEffect } from 'react'
 import MenuTypes from '@/components/MenuTypes'
@@ -10,7 +10,7 @@ import BannerMenu from '@/components/BannerMenu'
 import AddToCartButton from '@/components/AddToCartButton'
 
 export default function PreRollsPage() {
-  const { addItem } = useCart()
+
   const [allPreRolls, setAllPreRolls] = useState<Product[]>([])
   const [selectedDominances, setSelectedDominances] = useState<string[]>([])
   const [loading, setLoading] = useState(true)

@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react'
 import { Product } from '@/lib/types'
 import StrainImage from './StrainImage'
 import Link from 'next/link'
-import { useCart } from '@/contexts/CartContext'
+
 import AddToCartButton from './AddToCartButton'
 
 interface ProductSliderProps {
@@ -17,7 +17,7 @@ export default function ProductSlider({ products, category = 'Buds' }: ProductSl
   const [isDragging, setIsDragging] = useState(false)
   const [startPos, setStartPos] = useState(0)
   const [scrollLeft, setScrollLeft] = useState(0)
-  const { addItem } = useCart()
+
   const sliderRef = useRef<HTMLDivElement>(null)
 
   // Get number of items to show based on screen size
@@ -57,11 +57,7 @@ export default function ProductSlider({ products, category = 'Buds' }: ProductSl
     goToSlide(newIndex)
   }
 
-  const handleAddToCart = (e: React.MouseEvent, product: Product) => {
-    e.preventDefault()
-    e.stopPropagation()
-    addItem(product, category)
-  }
+
 
   const handleTouchStart = (e: React.TouchEvent) => {
     setIsDragging(true)

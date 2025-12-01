@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Product } from '@/lib/types'
-import { useCart } from '@/contexts/CartContext'
+
 import MiniSlider from '@/components/MiniSlider'
 import JsonLd from '@/components/JsonLd'
 import AddToCartButton from '@/components/AddToCartButton'
@@ -18,7 +18,7 @@ const featuredStrainNames = [
 ]
 
 export default function FeaturedProducts() {
-  const { addItem } = useCart()
+
   const [featuredStrains, setFeaturedStrains] = useState<Product[]>([])
   const [loading, setLoading] = useState(true)
 

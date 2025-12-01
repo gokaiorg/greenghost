@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 
-import { useCart } from '@/contexts/CartContext'
+
 import { Product } from '@/lib/types'
 import MenuTypes from '@/components/MenuTypes'
 import ImageSlider from '@/components/ImageSlider'
@@ -16,7 +16,7 @@ interface StrainProductClientProps {
 }
 
 export default function StrainProductClient({ product }: StrainProductClientProps) {
-  const { addItem } = useCart()
+
   const [isPreRoll, setIsPreRoll] = useState(false)
 
   return (

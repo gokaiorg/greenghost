@@ -1,7 +1,7 @@
 'use client'
 
 
-import { useCart } from '@/contexts/CartContext'
+
 import { Product } from '@/lib/types'
 import MenuTypes from '@/components/MenuTypes'
 import ImageSlider from '@/components/ImageSlider'
@@ -13,7 +13,7 @@ interface EdibleProductClientProps {
 }
 
 export default function EdibleProductClient({ product }: EdibleProductClientProps) {
-  const { addItem } = useCart()
+
 
   return (
     <div className="relative">
