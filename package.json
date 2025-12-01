@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "dev:turbo": "next dev --turbopack",
-    "build": "next build",
-    "build:turbo": "next build --turbopack",
+    "build": "if [ \"$CONTEXT\" = \"production\" ]; then cp public/robots.txt public/robots.txt; else cp public/robots.dev.txt public/robots.txt; fi && next build",
+    "build:turbo": "if [ \"$CONTEXT\" = \"production\" ]; then cp public/robots.txt public/robots.txt; else cp public/robots.dev.txt public/robots.txt; fi && next build --turbopack",
     "start": "next start",
     "lint": "eslint"
   },

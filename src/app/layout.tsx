@@ -7,6 +7,8 @@ import Chatbox from "@/components/Chatbox";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { CartProvider } from "@/contexts/CartContext";
 import OrganizationStructuredData from "@/components/OrganizationStructuredData";
+import GoogleTagManager from "@/components/GoogleTagManager";
+import { getOrganizationData, getSocials } from "@/lib/organization-data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +34,9 @@ export const viewport: Viewport = {
   colorScheme: 'dark',
 };
 
+// Determine if we are in production based on environment variables
+const isProduction = process.env.NEXT_PUBLIC_SITE_URL === 'https://green.gd' || process.env.CONTEXT === 'production';
+
 export const metadata: Metadata = {
   title: 'Green Ghost 🌿👻',
   description: 'Premium cannabis products in Thailand. Fast, discreet delivery.',
@@ -40,17 +45,26 @@ export const metadata: Metadata = {
   authors: [{ name: 'Green Ghost' }],
   creator: 'Green Ghost',
   publisher: 'Green Ghost',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+  robots: isProduction
+    ? {
       index: true,
       follow: true,
-      'max-snippet': -1,
-      'max-image-preview': 'large',
-      'max-video-preview': -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-snippet': -1,
+        'max-image-preview': 'large',
+        'max-video-preview': -1,
+      },
+    }
+    : {
+      index: false,
+      follow: false,
+      googleBot: {
+        index: false,
+        follow: false,
+      },
     },
-  },
 
   openGraph: {
     type: 'website',
@@ -94,10 +108,6 @@ export const metadata: Metadata = {
   },
 };
 
-import { getOrganizationData, getSocials } from "@/lib/organization-data";
-
-// ...
-
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -105,12 +115,12 @@ export default async function RootLayout({
 }>) {
   const organizationData = await getOrganizationData();
   const socials = await getSocials();
-  // const organizationData = {};
 
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
       <body className={`${geistSans.variable} ${geistMono.variable} ${pressStart2P.variable} antialiased bg-black text-white min-h-screen flex flex-col`}>
+        <GoogleTagManager />
         <OrganizationStructuredData data={organizationData} />
         <CartProvider>
           <Header />
@@ -125,3 +135,4 @@ export default async function RootLayout({
     </html>
   );
 }
+
