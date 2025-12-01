@@ -1,6 +1,3 @@
-'use client'
-
-import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Product } from '@/lib/types'
 
@@ -8,34 +5,14 @@ import MiniSlider from '@/components/MiniSlider'
 import JsonLd from '@/components/JsonLd'
 import AddToCartButton from '@/components/AddToCartButton'
 
-const featuredStrainNames = [
-  'Strawneapple',
-  'Mango Sticky Rice',
-  'Toasted Toffee',
-  "Ben & Gary's",
-  'Thai Stick',
-  'Slaphappy',
-]
+interface FeaturedProductsProps {
+  products: Product[];
+}
 
-export default function FeaturedProducts() {
-
-  const [featuredStrains, setFeaturedStrains] = useState<Product[]>([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    fetch('/api/products/strains')
-      .then(res => res.json())
-      .then(data => {
-        const filtered = data
-          .filter(
-            (strain: Product) =>
-              featuredStrainNames.includes(strain.name) && strain.status === 'In stock'
-          )
-          .slice(0, 6) // Ensure only 6 are shown
-        setFeaturedStrains(filtered)
-        setLoading(false)
-      })
-  }, [])
+export default function FeaturedProducts({ products }: FeaturedProductsProps) {
+  if (products.length === 0) {
+    return null
+  }
 
   const itemListSchema = {
     '@context': 'https://schema.org',
@@ -43,7 +20,7 @@ export default function FeaturedProducts() {
     name: 'Top 6 Must-Try Weed Strains in 2026',
     description:
       'Explore the best weed in Phuket in 2026 with our curated selection of top-quality strains. Handpicked for their superior effects and flavors, these strains include a variety of Sativa, Hybrid, and Indica dominances, each chosen to elevate your experience.',
-    itemListElement: featuredStrains.map((product, index) => ({
+    itemListElement: products.map((product, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       item: {
@@ -71,10 +48,6 @@ export default function FeaturedProducts() {
     })),
   }
 
-  if (loading || featuredStrains.length === 0) {
-    return null // Don't show anything if loading or no products found
-  }
-
   return (
     <div className="container mx-auto px-4 py-8">
       <JsonLd data={itemListSchema} />
@@ -86,7 +59,7 @@ export default function FeaturedProducts() {
         className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 list-none m-0 p-0"
         aria-label="Top 6 Must-Try Weed Strains"
       >
-        {featuredStrains.map(bud => (
+        {products.map(bud => (
           <li key={bud.id} className="relative">
             <Link href={`/strains/${bud.id}`} title={bud.name}>
               <div className={`hover:bg-[#13DE00]/13 p-1 flex flex-col relative cursor-pointer`}>
