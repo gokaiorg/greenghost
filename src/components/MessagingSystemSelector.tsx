@@ -65,7 +65,7 @@ const MessagingSystemSelector = ({ items, total, onClose }: MessagingSystemSelec
   }
 
   return (
-    <div className="fixed text-sm inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+    <div className="fixed text-sm h-screen inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="border-4 border-[#13DE00] shadow-xl max-w-lg w-full max-h-[95vh] overflow-hidden flex flex-col bg-black">
         <div className="flex justify-between items-center p-4 bg-[#13DE00] border-b-4 border-[#13DE00]">
           <h2 className="text-base md:text-lg font-bold text-black">Complete Your Order</h2>
@@ -159,7 +159,7 @@ const MessagingSystemSelector = ({ items, total, onClose }: MessagingSystemSelec
                 <button
                   type="button"
                   onClick={() => setActiveTab('whatsapp')}
-                  className={`p-3 flex items-center justify-center space-x-2 text-white ${activeTab === 'whatsapp' ? 'bg-black border-2 border-[#13DE00]' : 'bg-black border-2 border-gray-600'
+                  className={`p-3 flex items-center justify-center space-x-2 text-[10px] md:text-sm text-white ${activeTab === 'whatsapp' ? 'bg-black border-2 border-[#13DE00]' : 'bg-black border-2 border-gray-600'
                     } hover:border-[#13DE00] cursor-pointer`}
                 >
                   <span>WhatsApp</span>
@@ -168,7 +168,7 @@ const MessagingSystemSelector = ({ items, total, onClose }: MessagingSystemSelec
                 <button
                   type="button"
                   onClick={() => setActiveTab('messenger')}
-                  className={`p-3 flex items-center justify-center space-x-2 text-white ${activeTab === 'messenger' ? 'bg-black border-2 border-[#13DE00]' : 'bg-black border-2 border-gray-600'
+                  className={`p-3 flex items-center justify-center space-x-2 text-[10px] md:text-sm text-white ${activeTab === 'messenger' ? 'bg-black border-2 border-[#13DE00]' : 'bg-black border-2 border-gray-600'
                     } hover:border-[#13DE00] cursor-pointer`}
                 >
                   <span>Messenger</span>
@@ -177,7 +177,7 @@ const MessagingSystemSelector = ({ items, total, onClose }: MessagingSystemSelec
                 <button
                   type="button"
                   onClick={() => setActiveTab('telegram')}
-                  className={`p-3 flex items-center justify-center space-x-2 text-white ${activeTab === 'telegram' ? 'bg-black border-2 border-[#13DE00]' : 'bg-black border-2 border-gray-600'
+                  className={`p-3 flex items-center justify-center space-x-2 text-[10px] md:text-sm text-white ${activeTab === 'telegram' ? 'bg-black border-2 border-[#13DE00]' : 'bg-black border-2 border-gray-600'
                     } hover:border-[#13DE00] cursor-pointer`}
                 >
                   <span>Telegram</span>
