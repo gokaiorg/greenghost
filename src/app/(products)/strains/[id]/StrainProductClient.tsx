@@ -8,7 +8,6 @@ import { Product } from '@/lib/types'
 import MenuTypes from '@/components/MenuTypes'
 import ImageSlider from '@/components/ImageSlider'
 import BackButton from '@/components/BackButton'
-import FeaturedProducts from '@/components/FeaturedProducts'
 import AddToCartButton from '@/components/AddToCartButton'
 
 interface StrainProductClientProps {
@@ -124,7 +123,6 @@ export default function StrainProductClient({ product }: StrainProductClientProp
           </div>
         )}
       </div>
-      <FeaturedProducts />
     </div>
   )
 }
