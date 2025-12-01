@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     description: 'Explore the world of cannabis with Green Ghost, your weed source for premium strains, educational resources, and crypto community connection. Discover the art and science of cannabis here.',
     images: ['/images/banners/green-ghost-best-degen-weed-shop-weed.avif'],
   },
+  alternates: {
+    canonical: '/weed',
+  },
 };
 
 export default async function WeedPage() {

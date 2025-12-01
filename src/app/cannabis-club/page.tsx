@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     description: 'Join Green Ghost, Phuket\'s top Cannabis Social Club. Discover a vibrant community, premium cannabis, exclusive events, and the best weed culture in Thailand.',
     images: ['/images/banners/green-ghost-best-degen-weed-shop-cannabis-club.avif'],
   },
+  alternates: {
+    canonical: '/cannabis-club',
+  },
 };
 
 // Server component that fetches data

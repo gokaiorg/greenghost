@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     description: 'Explore Green Ghost CBD France, your premier online shop for premium CBD flowers, oils, concentrates, and gummies. Lab-tested, THC < 0.3%, with fast, discreet delivery. For orders in France only. Join the degen vibe!',
     images: ['/images/banners/green-ghost-best-degen-weed-shop-cbd-france.avif'],
   },
+  alternates: {
+    canonical: '/cbd-france',
+  },
 };
 
 // Server component that fetches data

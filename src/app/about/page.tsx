@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     description: 'Discover Green Ghost, a leading cannabis social club in Phuket, championing local culture, top-quality weed, and a thriving community for enthusiasts.',
     images: ['/images/banners/green-ghost-best-degen-weed-shop-about.avif'],
   },
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 export default async function AboutPage() {

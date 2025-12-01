@@ -121,4 +121,7 @@ export const metadata = {
     description: 'Visit Green Ghost Weed Shop near me today for the best selection of locally sourced organic cannabis products. With multiple locations in Phuket, Thailand, we offer fast and convenient delivery options as well. Browse our menu and order online now!',
     images: ['/images/banners/green-ghost-best-degen-weed-shop-locations.avif'],
   },
+  alternates: {
+    canonical: '/locations',
+  },
 };

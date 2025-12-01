@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     description: 'Get in touch with the Green Ghost team 🌿👻 for all your weed shop inquiries and orders. We\'re here to assist with your cannabis needs and provide exceptional service.',
     images: ['/images/banners/green-ghost-best-degen-weed-shop-contact.avif'],
   },
+  alternates: {
+    canonical: '/contact',
+  },
 };
 
 export default async function ContactPage() {

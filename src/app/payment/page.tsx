@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     description: 'Pay easily with Scan QR, Crypto, Wise, or PayPal. Secure, fast options for your weed orders at our shops!',
     images: ['/images/banners/green-ghost-best-degen-weed-shop-payment.avif'],
   },
+  alternates: {
+    canonical: '/payment',
+  },
 };
 
 export default async function PaymentPage() {

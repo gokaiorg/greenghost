@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     description: 'Green Ghost offers the best weed delivery in Phuket Thailand, bringing premium cannabis straight to your doorstep with fast, reliable service. Order now for top-quality buds.',
     images: ['/images/banners/green-ghost-best-degen-weed-shop-delivery.avif'],
   },
+  alternates: {
+    canonical: '/delivery',
+  },
 };
 
 export default async function Delivery() {

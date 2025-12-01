@@ -8,6 +8,31 @@ import Banner from '@/components/Banner';
 export const metadata: Metadata = {
   title: 'Best Weed Shops in Thailand - Green Ghost 🌿👻',
   description: 'Discover the top-rated cannabis dispensaries across Thailand. Handpicked for quality, service, and vibe.',
+  openGraph: {
+    title: 'Best Weed Shops in Thailand - Green Ghost 🌿👻',
+    description: 'Discover the top-rated cannabis dispensaries across Thailand. Handpicked for quality, service, and vibe.',
+    url: '/best-weed-shops-thailand',
+    siteName: 'Green Ghost',
+    images: [
+      {
+        url: '/images/banners/best-weed-shops-green-ghost.avif',
+        width: 1920,
+        height: 1080,
+        alt: 'Best Weed Shops in Thailand',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best Weed Shops in Thailand - Green Ghost 🌿👻',
+    description: 'Discover the top-rated cannabis dispensaries across Thailand. Handpicked for quality, service, and vibe.',
+    images: ['/images/banners/best-weed-shops-green-ghost.avif'],
+  },
+  alternates: {
+    canonical: '/best-weed-shops-thailand',
+  },
 };
 
 export default async function BestShopsPage() {

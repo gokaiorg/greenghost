@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     description: 'Passionate about cannabis? Green Ghost 🌿👻 is hiring a Budtender! Join our team, share your expertise, and deliver exceptional service to our community. Apply now!',
     images: ['/images/banners/green-ghost-best-degen-weed-shop-jobs.avif'],
   },
+  alternates: {
+    canonical: '/jobs',
+  },
 };
 
 export default async function JobsPage() {

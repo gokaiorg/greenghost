@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     description: 'Order premium cannabis wholesale from Green Ghost 🌿👻. Strains start at 50 THB/gram for 100g minimum. Quality and variety for your business in Phuket!',
     images: ['/images/banners/green-ghost-best-degen-weed-shop-wholesale.avif'],
   },
+  alternates: {
+    canonical: '/wholesale',
+  },
 };
 
 export default async function WholesalePage() {
