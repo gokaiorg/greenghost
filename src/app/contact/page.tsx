@@ -5,7 +5,6 @@ import Banner from '@/components/Banner';
 import ContactList from '@/components/ContactList';
 import LocationsHome from '@/components/LocationsHome';
 import ContactForm from '@/components/ContactForm';
-import ListingsList from '@/components/ListingsList';
 
 export const metadata: Metadata = {
   title: 'Contact Our Weed Shop Team To Order - Green Ghost 🌿👻',
@@ -73,7 +72,6 @@ export default async function ContactPage() {
         <ContactList />
         <ContactForm />
         <LocationsHome />
-        <ListingsList />
       </div>
     </>
   );

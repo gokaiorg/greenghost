@@ -3,6 +3,7 @@ import { getBannerData } from '@/lib/utils/bannerUtils';
 import { getPagesServerSide as getPages } from '@/lib/pages-server';
 import Banner from '@/components/Banner';
 import PromotesList from '@/components/PromotesList';
+import ListingsList from '@/components/ListingsList';
 
 export const metadata: Metadata = {
   title: 'About Cannabis Culture in Thailand - Green Ghost 🌿👻',
@@ -72,6 +73,7 @@ export default async function AboutPage() {
         )}
 
         <PromotesList />
+        <ListingsList />
       </div>
     </>
   )
