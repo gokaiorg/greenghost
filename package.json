@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "dev:turbo": "next dev --turbopack",
-    "build": "if [ \"$CONTEXT\" = \"production\" ]; then cp public/robots.prod.txt public/robots.txt && cp public/_headers.prod public/_headers; else cp public/robots.dev.txt public/robots.txt && cp public/_headers.dev public/_headers; fi && next build",
-    "build:turbo": "if [ \"$CONTEXT\" = \"production\" ]; then cp public/robots.prod.txt public/robots.txt && cp public/_headers.prod public/_headers; else cp public/robots.dev.txt public/robots.txt && cp public/_headers.dev public/_headers; fi && next build --turbopack",
+    "build": "if [ \"$BRANCH\" = \"main\" ] || [ \"$BRANCH\" = \"prod\" ]; then cp public/robots.prod.txt public/robots.txt && cp public/_headers.prod public/_headers; else cp public/robots.dev.txt public/robots.txt && cp public/_headers.dev public/_headers; fi && next build",
+    "build:turbo": "if [ \"$BRANCH\" = \"main\" ] || [ \"$BRANCH\" = \"prod\" ]; then cp public/robots.prod.txt public/robots.txt && cp public/_headers.prod public/_headers; else cp public/robots.dev.txt public/robots.txt && cp public/_headers.dev public/_headers; fi && next build --turbopack",
     "start": "next start",
     "lint": "eslint"
   },
