@@ -1,6 +1,8 @@
 import Script from 'next/script';
 import type { Organization } from '@/lib/types/organization';
 
+import { toJsonLd } from '@/lib/utils/json-ld';
+
 interface StructuredDataProps {
   data: Organization | Record<string, unknown>;
 }
@@ -11,7 +13,7 @@ export function StructuredData({ data }: StructuredDataProps) {
       id="structured-data"
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(data, null, 2)
+        __html: toJsonLd(data)
       }}
     />
   );

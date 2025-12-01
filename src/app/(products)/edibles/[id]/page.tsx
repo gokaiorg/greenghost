@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import { toJsonLd } from '@/lib/utils/json-ld';
 import type { Metadata } from 'next'
 import EdibleProductClient from './EdibleProductClient'
 import { Product } from '@/lib/types'
@@ -78,7 +79,7 @@ export default async function EdibleProductPage({ params }: { params: Promise<{ 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(schema)
+          __html: toJsonLd(schema)
         }}
       />
       <EdibleProductClient product={product} />

@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { toJsonLd } from '@/lib/utils/json-ld';
 import type { Metadata } from 'next';
 import { generateLocalBusinessSchema, generateFAQSchema } from '@/lib/utils/structuredData';
 import BackButton from '@/components/BackButton';
@@ -38,7 +39,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([localBusinessSchema, faqSchema])
+          __html: toJsonLd([localBusinessSchema, faqSchema])
         }}
       />
 

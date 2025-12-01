@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import { toJsonLd } from '@/lib/utils/json-ld';
 import type { Metadata, Viewport } from 'next'
 import StrainProductClient from './StrainProductClient'
 import { Product } from '@/lib/types'
@@ -69,7 +70,7 @@ export default async function StrainProductPage({ params }: { params: Promise<{ 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(schema)
+          __html: toJsonLd(schema)
         }}
       />
       <StrainProductClient product={product} />

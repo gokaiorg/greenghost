@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import { toJsonLd } from '@/lib/utils/json-ld';
 import type { Metadata } from 'next'
 import ConcentrateProductClient from './ConcentrateProductClient'
 import { Product } from '@/lib/types'
@@ -78,7 +79,7 @@ export default async function ConcentrateProductPage({ params }: { params: Promi
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(schema)
+          __html: toJsonLd(schema)
         }}
       />
       <ConcentrateProductClient product={product} />

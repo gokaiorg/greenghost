@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import { toJsonLd } from '@/lib/utils/json-ld';
 import type { Metadata } from 'next'
 import GadgetProductClient from './GadgetProductClient'
 import { Product } from '@/lib/types'
@@ -78,7 +79,7 @@ export default async function GadgetProductPage({ params }: { params: Promise<{ 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(schema)
+          __html: toJsonLd(schema)
         }}
       />
       <GadgetProductClient product={product} />
