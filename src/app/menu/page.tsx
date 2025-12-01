@@ -114,7 +114,7 @@ export default async function Menu() {
           {categories.map((category) => (
             <li key={category.path}>
               <Link href={category.path} className="group" title={category.name}>
-                <div className="relative p-6 aspect-square flex flex-col justify-end text-white overflow-hidden">
+                <div className="relative p-6 pt-[26%] md:pt-24 lg:pt-20 xl:pt-32 aspect-square flex flex-col text-white overflow-hidden">
                   {category.image && (
                     <NextImage
                       src={category.image}
