@@ -8,6 +8,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { CartProvider } from "@/contexts/CartContext";
 import OrganizationStructuredData from "@/components/OrganizationStructuredData";
 import GoogleTagManager from "@/components/GoogleTagManager";
+import AgeVerification from "@/components/AgeVerification";
 import { getOrganizationData, getSocials } from "@/lib/organization-data";
 
 const geistSans = Geist({
@@ -121,12 +122,13 @@ export default async function RootLayout({
       <head />
       <body className={`${geistSans.variable} ${geistMono.variable} ${pressStart2P.variable} antialiased bg-black text-white min-h-screen flex flex-col`}>
         <GoogleTagManager />
+        <AgeVerification />
         <OrganizationStructuredData data={organizationData} />
         <CartProvider>
           <Header />
           <main className="flex-grow">{children}</main>
           <Footer socials={socials} />
-          <div className="fixed bottom-4 right-4 z-50 flex flex-row space-x-4">
+          <div className="fixed bottom-4 right-4 z-30 flex flex-row space-x-4">
             <WhatsAppButton />
             <Chatbox />
           </div>

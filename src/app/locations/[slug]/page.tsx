@@ -47,6 +47,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         <div className="relative py-4 overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+
               {/* Left Side: Back Button & Title */}
               <div className="flex flex-col gap-4">
                 <div className="flex items-center">

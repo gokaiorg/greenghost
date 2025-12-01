@@ -100,7 +100,7 @@ export default function CartPopup({ isOpen, onClose }: CartPopupProps) {
   }
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="border-4 border-[#13DE00] shadow-xl max-w-lg w-full max-h-[95vh] overflow-hidden flex flex-col">
         <div className="flex justify-between items-center p-4 bg-[#13DE00] border-b-4 border-[#13DE00]">
           <h2 className="text-base md:text-lg font-bold text-black">Your Bag</h2>
@@ -113,7 +113,7 @@ export default function CartPopup({ isOpen, onClose }: CartPopupProps) {
           </button>
         </div>
 
-        <div className="p-4 flex-1 overflow-y-auto min-h-[300px] flex flex-col">
+        <div className="p-4 flex-1 overflow-y-auto min-h-[300px] flex flex-col bg-black">
           {items.length === 0 ? (
             <div className="flex-1 flex flex-col items-center justify-center">
               <p className="text-gray-400 text-center mb-4">Your bag is empty</p>

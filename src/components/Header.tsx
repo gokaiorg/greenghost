@@ -41,7 +41,7 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-40 text-white py-2 px-4 bg-black border-b border-[#13DE00]/20">
+    <header className="sticky top-0 z-40 text-white py-2 px-4 bg-black/80 backdrop-blur-sm border-b border-[#13DE00]/20">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <Link href="/" className="flex-shrink-0" title="Green Ghost Home">
