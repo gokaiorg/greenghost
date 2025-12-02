@@ -29,7 +29,7 @@ export default function BestShopsList({ shops }: BestShopsListProps) {
               px-4 py-2 text-sm font-bold uppercase tracking-wider transition-all duration-300 border cursor-pointer
               ${selectedLocation === location
                                 ? 'bg-[#13DE00] text-black border-[#13DE00]'
-                                : 'bg-black text-gray-400 border-gray-800 hover:border-[#13DE00] hover:text-[#13DE00]'
+                                : 'bg-black text-gray-400 border-[#13DE00]/21 hover:border-[#13DE00] hover:text-[#13DE00]'
                             }
             `}
                     >
@@ -50,7 +50,7 @@ export default function BestShopsList({ shops }: BestShopsListProps) {
                     return (
                         <li
                             key={`${shop.name}-${index}`}
-                            className="bg-[#111] border border-gray-800 p-6 hover:border-[#13DE00]/50 transition-all duration-300 group relative overflow-hidden flex flex-col"
+                            className="bg-[#13DE00]/13 border border-[#13DE00]/21 p-6 hover:border-[#13DE00]/50 transition-all duration-300 group relative overflow-hidden flex flex-col"
                         >
                             <div className="absolute top-0 left-0 w-1 h-full bg-[#13DE00] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
 
@@ -68,12 +68,12 @@ export default function BestShopsList({ shops }: BestShopsListProps) {
                                 <h3 className="text-xl font-bold text-white group-hover:text-[#13DE00] transition-colors">
                                     {shop.name}
                                 </h3>
-                                <span className="text-xs font-bold bg-[#13DE00]/10 text-[#13DE00] px-2 py-1 border border-[#13DE00]/20">
+                                <span className="text-xs font-bold bg-[#13DE00]/13 text-[#13DE00] px-2 py-1 border border-[#13DE00]/21">
                                     {shop.location}
                                 </span>
                             </div>
 
-                            <div className="mt-auto pt-4 border-t border-gray-800 group-hover:border-gray-700 transition-colors">
+                            <div className="mt-auto pt-4 border-t border-[#13DE00]/21 group-hover:border-gray-700 transition-colors">
                                 <a
                                     href={shop.mapLink}
                                     target="_blank"

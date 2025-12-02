@@ -33,7 +33,7 @@ export default function WeedNavigation() {
                     <Link
                         key={item.title}
                         href={item.href}
-                        className="group flex flex-col items-center p-6 bg-[#111] border border-gray-800 hover:border-[#13DE00] transition-all duration-300 hover:bg-[#13DE00]/5"
+                        className="group flex flex-col items-center p-6 bg-[#13DE00]/13 border border-[#13DE00]/21 hover:border-[#13DE00] transition-all duration-300 hover:bg-[#13DE00]/5"
                     >
                         <div className="relative w-24 h-24 mb-4">
                             <Image

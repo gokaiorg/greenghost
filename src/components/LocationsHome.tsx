@@ -39,7 +39,7 @@ export default async function LocationsHome() {
                     {locations.map((location) => (
                         <li
                             key={location.slug}
-                            className="bg-[#111] border border-gray-800 p-8 hover:border-[#13DE00]/50 transition-all duration-300 group relative overflow-hidden"
+                            className="bg-[#13DE00]/13 border border-[#13DE00]/21 p-8 hover:border-[#13DE00]/50 transition-all duration-300 group relative overflow-hidden"
                         >
                             <div className="absolute top-0 left-0 w-1 h-full bg-[#13DE00] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
 

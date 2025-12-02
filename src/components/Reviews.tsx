@@ -225,7 +225,7 @@ export default function Reviews() {
                       .map((review, index) => (
                         <div
                           key={index}
-                          className="bg-[#13DE00]/10 p-6 flex flex-col justify-between"
+                          className="bg-[#13DE00]/13 p-6 flex flex-col justify-between"
                         >
                           <div>
                             <div className="flex items-center mb-4">

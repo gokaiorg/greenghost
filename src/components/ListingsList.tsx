@@ -18,7 +18,7 @@ export default async function ListingsList() {
                             href={listing.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group flex items-center justify-between p-4 bg-black border-2 border-[#13DE00]/30 hover:border-[#13DE00] hover:bg-[#13DE00]/10 transition-all duration-300"
+                            className="group flex items-center justify-between p-4 bg-black border-2 border-[#13DE00]/30 hover:border-[#13DE00] hover:bg-[#13DE00]/13 transition-all duration-300"
                             title={`Find us on ${listing.name}`}
                         >
                             <span className="text-xs font-bold text-white group-hover:text-[#13DE00] transition-colors font-pixel truncate mr-2">

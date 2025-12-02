@@ -96,7 +96,7 @@ export default function ParallaxHero() {
             </Link>
             <Link
               href="/delivery"
-              className="bg-transparent border-2 border-[#13DE00] text-[#13DE00] hover:bg-[#13DE00]/10 font-bold py-4 px-8 text-lg transition-colors duration-300"
+              className="bg-transparent border-2 border-[#13DE00] text-[#13DE00] hover:bg-[#13DE00]/13 font-bold py-4 px-8 text-lg transition-colors duration-300"
               title="Order Online"
             >
               Order Online

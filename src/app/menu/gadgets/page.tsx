@@ -65,7 +65,7 @@ export default function GadgetsPage() {
                 </div>
               </Link>
               {gadget.status === 'In stock' && (
-                <div className="mt-8 md:mt-0 md:absolute md:top-1 md:left-1 md:right-1 md:h-[232px]  lg:h-[185px] xl:h-[236px] pointer-events-none z-10">                  <div className="absolute bottom-1 right-1 pointer-events-auto">
+                <div className="mt-8 md:mt-0 md:absolute md:top-1 md:left-1 md:right-1 md:h-[232px] lg:h-[185px] xl:h-[193px] 2xl:h-[236px] pointer-events-none z-10">                  <div className="absolute bottom-1 right-1 pointer-events-auto">
                   <AddToCartButton product={gadget} category="Gadgets" compact />
                 </div>
                 </div>

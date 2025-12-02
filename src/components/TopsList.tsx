@@ -20,7 +20,7 @@ export default async function TopsList() {
 
                     <Link
                         href="/best-weed-shops-thailand"
-                        className="shrink-0 inline-flex items-center gap-2 text-[#13DE00] hover:text-white font-bold text-sm transition-colors group border border-[#13DE00]/20 hover:border-[#13DE00] px-4 py-2 rounded-none bg-[#13DE00]/5 hover:bg-[#13DE00]/10"
+                        className="shrink-0 inline-flex items-center gap-2 text-[#13DE00] hover:text-white font-bold text-sm transition-colors group border border-[#13DE00]/21 hover:border-[#13DE00] px-4 py-2 rounded-none bg-[#13DE00]/5 hover:bg-[#13DE00]/13"
                         title="Best weed shops in Thailand"
                     >
                         Best weed shops in Thailand
@@ -43,7 +43,7 @@ export default async function TopsList() {
                                     title={top.name}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group block bg-[#111] border border-gray-800 hover:border-[#13DE00]/50 p-4 transition-all duration-300 flex flex-col items-center justify-center gap-3 h-full"
+                                    className="group block bg-[#13DE00]/13 border border-[#13DE00]/21 hover:border-[#13DE00]/50 p-4 transition-all duration-300 flex flex-col items-center justify-center gap-3 h-full"
                                 >
                                     <div className="relative w-full aspect-[3/2] grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100">
                                         <Image

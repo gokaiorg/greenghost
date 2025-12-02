@@ -17,7 +17,7 @@ const WeedsBlock: React.FC<WeedsBlockProps> = ({ strains, compounds, info }) => 
                 <h2 id="strains-heading" className="sr-only">Cannabis Strains</h2>
                 <ul className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8" aria-label="Cannabis Strains List">
                     {strains.map((item, index) => (
-                        <li key={index} className="flex flex-col items-center text-center bg-[#1a1a1a] p-6 border border-[#333] hover:border-[#13DE00] transition-colors duration-300">
+                        <li key={index} className="flex flex-col items-center text-center bg-[#13DE00]/13 p-6 border border-[#13DE00]/21 transition-colors duration-300">
                             {item.image && (
                                 <div className="relative w-50 h-50 mb-4">
                                     <Image
@@ -28,7 +28,7 @@ const WeedsBlock: React.FC<WeedsBlockProps> = ({ strains, compounds, info }) => 
                                     />
                                 </div>
                             )}
-                            <h3 className="text-xl font-bold text-[#13DE00] mb-3">{item.title}</h3>
+                            <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                             <p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
                         </li>
                     ))}
@@ -40,9 +40,9 @@ const WeedsBlock: React.FC<WeedsBlockProps> = ({ strains, compounds, info }) => 
                 <h2 id="compounds-heading" className="sr-only">Cannabis Compounds</h2>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8" aria-label="Cannabis Compounds List">
                     {compounds.map((item, index) => (
-                        <li key={index} className="flex flex-col md:flex-row items-center md:items-start bg-[#1a1a1a] p-6 border border-[#333] hover:border-[#13DE00] transition-colors duration-300">
+                        <li key={index} className="flex flex-col md:flex-row items-center md:items-start bg-[#13DE00]/13 p-6 border border-[#13DE00]/21 transition-colors duration-300">
                             <div className="flex-1 text-center md:text-left">
-                                <h3 className="text-xl font-bold text-[#13DE00] mb-2">{item.title}</h3>
+                                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                                 <p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
                             </div>
                         </li>
@@ -55,7 +55,7 @@ const WeedsBlock: React.FC<WeedsBlockProps> = ({ strains, compounds, info }) => 
                 <h2 id="info-heading" className="sr-only">Cannabis Information</h2>
                 <ul className="space-y-8 md:space-y-12" aria-label="Cannabis Information List">
                     {info.map((item, index) => (
-                        <li key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-12 items-center bg-[#1a1a1a] p-6 md:p-8 border border-[#333]`}>
+                        <li key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-12 items-center bg-[#13DE00]/13 p-6 md:p-8 border border-[#13DE00]/21`}>
                             {item.image && (
                                 <div className="w-full md:w-1/3 relative aspect-square overflow-hidden shrink-0">
                                     <Image
@@ -67,7 +67,7 @@ const WeedsBlock: React.FC<WeedsBlockProps> = ({ strains, compounds, info }) => 
                                 </div>
                             )}
                             <div className="flex-1 text-center md:text-left">
-                                <h3 className="text-2xl font-bold text-[#13DE00] mb-4">{item.title}</h3>
+                                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
                                 <div
                                     className="text-gray-300 text-sm md:text-base leading-relaxed space-y-4 whitespace-pre-line"
                                     dangerouslySetInnerHTML={{ __html: item.description.replace(/\n/g, '<br/>') }}

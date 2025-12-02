@@ -23,7 +23,7 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
                 {images.map((src, index) => (
                     <div
                         key={src}
-                        className="flex-none w-[80vw] md:w-[60vw] lg:w-[40vw] aspect-video relative snap-center border border-[#13DE00]/20 bg-[#13DE00]/5"
+                        className="flex-none w-[80vw] md:w-[60vw] lg:w-[40vw] aspect-video relative snap-center border border-[#13DE00]/21 bg-[#13DE00]/5"
                     >
                         <Image
                             src={src}

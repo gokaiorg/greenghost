@@ -39,7 +39,7 @@ export default function LocationFAQ({ location }: LocationFAQProps) {
                 <h2 className="text-2xl font-bold text-[#13DE00] mb-6">Frequently Asked Questions</h2>
                 <ul className="space-y-4 list-none m-0 p-0">
                     {faqs.map((faq, index) => (
-                        <li key={index} className="bg-[#13DE00]/5 border border-[#13DE00]/20 overflow-hidden">
+                        <li key={index} className="bg-[#13DE00]/5 border border-[#13DE00]/21 overflow-hidden">
                             <details className="group">
                                 <summary className="flex justify-between items-center font-medium cursor-pointer list-none p-4 text-white hover:text-[#13DE00] transition-colors">
                                     <span>{faq.question}</span>

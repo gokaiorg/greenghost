@@ -19,7 +19,7 @@ export default async function GrowersList() {
                                 href={grower.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group flex flex-col items-center justify-between p-6 bg-[#111] border border-gray-800 hover:border-[#13DE00] transition-all duration-300 h-full gap-4"
+                                className="group flex flex-col items-center justify-between p-6 bg-[#13DE00]/13 border border-[#13DE00]/21 hover:border-[#13DE00] transition-all duration-300 h-full gap-4"
                                 title={`Visit ${grower.name}`}
                             >
                                 <div className="relative w-full aspect-square bg-black/50 rounded-md overflow-hidden p-4">

@@ -56,7 +56,7 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
         Explore the best weed in Phuket in 2026 with our curated selection of top-quality strains. Handpicked for their superior effects and flavors, these strains include a variety of Sativa, Hybrid, and Indica dominances, each chosen to elevate your experience.
       </p>
       <ul
-        className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 list-none m-0 p-0"
+        className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2 list-none m-0 p-0"
         aria-label="Top 6 Must-Try Weed Strains"
       >
         {products.map(bud => (
@@ -85,7 +85,7 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
                 </p>
               </div>
             </Link>
-            <div className="mt-8 md:mt-0 md:absolute md:top-1 md:left-1 md:right-1 md:h-[232px]  lg:h-[185px] xl:h-[236px] pointer-events-none z-10">              <div className="absolute bottom-1 right-1 pointer-events-auto">
+            <div className="mt-8 md:mt-0 md:absolute md:top-1 md:left-1 md:right-1 md:h-[232px] lg:h-[317px] xl:h-[193px] 2xl:h-[236px] pointer-events-none z-10">              <div className="absolute bottom-1 right-1 pointer-events-auto">
               <AddToCartButton product={bud} category="Buds" compact />
             </div>
             </div>
@@ -96,7 +96,7 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
         <Link
           href="/weed"
           title="Dive into weed"
-          className="bg-transparent border-2 border-[#13DE00] text-[#13DE00] hover:bg-[#13DE00]/10 font-bold py-3 px-6 text-base transition-colors duration-300 text-center"
+          className="bg-transparent border-2 border-[#13DE00] text-[#13DE00] hover:bg-[#13DE00]/13 font-bold py-3 px-6 text-base transition-colors duration-300 text-center"
         >
           Dive into weed
         </Link>

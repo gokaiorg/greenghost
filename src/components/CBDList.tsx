@@ -62,7 +62,7 @@ export default function CBDList({ products }: CBDListProps) {
                                 href={`https://greenghostcbd.fr/en/products/${slug}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-[#13DE00]/5 border border-[#13DE00]/20 overflow-hidden hover:border-[#13DE00]/50 transition-all group block h-full"
+                                className="bg-[#13DE00]/5 border border-[#13DE00]/21 overflow-hidden hover:border-[#13DE00]/50 transition-all group block h-full"
                                 title={`${product.itemName} - ${product.type} - ${product.cbd}% CBD`}
                             >
                                 {/* Image */}

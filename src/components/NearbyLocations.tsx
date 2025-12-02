@@ -30,7 +30,7 @@ export default function NearbyLocations({ currentSlug, allLocations }: NearbyLoc
                             key={loc.slug}
                             href={`/locations/${loc.slug}`}
                             title={loc.name}
-                            className="block p-4 bg-[#13DE00]/5 border border-[#13DE00]/20 hover:bg-[#13DE00]/10 hover:border-[#13DE00]/50 transition-all text-center group"
+                            className="block p-4 bg-[#13DE00]/5 border border-[#13DE00]/21 hover:bg-[#13DE00]/13 hover:border-[#13DE00]/50 transition-all text-center group"
                         >
                             <span className="text-white font-medium group-hover:text-[#13DE00] transition-colors capitalize">
                                 {loc.slug}

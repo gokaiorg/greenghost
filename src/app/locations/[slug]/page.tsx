@@ -82,7 +82,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
               {/* Video */}
               {location.videoLink && (
-                <div className="aspect-video w-full overflow-hidden border border-[#13DE00]/20 bg-black">
+                <div className="aspect-video w-full overflow-hidden border border-[#13DE00]/21 bg-black">
                   <iframe
                     width="100%"
                     height="100%"
@@ -97,7 +97,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
               {/* Description */}
               {location.description && (
-                <section className="bg-gradient-to-br from-[#13DE00]/5 to-transparent border border-[#13DE00]/20 p-5">
+                <section className="bg-gradient-to-br from-[#13DE00]/5 to-transparent border border-[#13DE00]/21 p-5">
                   <h2 className="text-xl font-bold text-[#13DE00] mb-6">About This Location</h2>
                   <p
                     className="text-gray-300 leading-relaxed text-xs lg:text-sm xl:text-base"
@@ -117,7 +117,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               {/* Sidebar Content */}
               <div className="space-y-4">
                 {/* Location Details */}
-                <section className="bg-[#13DE00]/5 border border-[#13DE00]/20 p-5">
+                <section className="bg-[#13DE00]/5 border border-[#13DE00]/21 p-5">
                   <h2 className="text-xl font-bold text-[#13DE00] mb-4 flex items-center gap-2">
                     Location Details
                   </h2>
@@ -165,7 +165,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                           return (
                             <div
                               key={day}
-                              className={`flex justify-between py-1.5 px-2 ${isToday ? 'bg-[#13DE00]/10 border border-[#13DE00]/30' : 'bg-black/20'
+                              className={`flex justify-between py-1.5 px-2 ${isToday ? 'bg-[#13DE00]/13 border border-[#13DE00]/30' : 'bg-black/20'
                                 }`}
                             >
                               <span className={`capitalize text-xs font-medium ${isToday ? 'text-[#13DE00]' : 'text-gray-300'}`}>
@@ -184,7 +184,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
                 {/* Map - Moved to Sidebar Column */}
                 {location.mapLink && (
-                  <div className="aspect-video w-full overflow-hidden border border-[#13DE00]/20 bg-[#13DE00]/5">
+                  <div className="aspect-video w-full overflow-hidden border border-[#13DE00]/21 bg-[#13DE00]/5">
                     <iframe
                       src={location.mapLink}
                       title={`${location.name} Location Map`}
@@ -200,7 +200,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 )}
 
                 {/* Quick Links */}
-                <section className="bg-[#13DE00]/5 border border-[#13DE00]/20 p-5">
+                <section className="bg-[#13DE00]/5 border border-[#13DE00]/21 p-5">
                   <h2 className="text-xl font-bold text-[#13DE00] mb-4 flex items-center gap-2">
                     Quick Links
                   </h2>
@@ -235,19 +235,19 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                     {/* Social Links - Condensed */}
                     <div className="grid md:grid-cols-2 gap-2 mt-2">
                       {location.tripAdvisor && location.tripAdvisor !== '#' && (
-                        <a href={location.tripAdvisor} target="_blank" rel="noopener noreferrer" title="TripAdvisor" className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/10 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all">TripAdvisor</a>
+                        <a href={location.tripAdvisor} target="_blank" rel="noopener noreferrer" title="TripAdvisor" className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all">TripAdvisor</a>
                       )}
                       {location.weedTh && location.weedTh !== '#' && (
-                        <a href={location.weedTh} target="_blank" rel="noopener noreferrer" title="WEED.TH" className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/10 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all">WEED.TH</a>
+                        <a href={location.weedTh} target="_blank" rel="noopener noreferrer" title="WEED.TH" className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all">WEED.TH</a>
                       )}
                       {location.wongnai && location.wongnai !== '#' && (
-                        <a href={location.wongnai} target="_blank" rel="noopener noreferrer" title="Wongnai" className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/10 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all">Wongnai</a>
+                        <a href={location.wongnai} target="_blank" rel="noopener noreferrer" title="Wongnai" className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all">Wongnai</a>
                       )}
                       {location.highThailand && location.highThailand !== '#' && (
-                        <a href={location.highThailand} target="_blank" rel="noopener noreferrer" title="High Thailand" className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/10 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all">High Thailand</a>
+                        <a href={location.highThailand} target="_blank" rel="noopener noreferrer" title="High Thailand" className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all">High Thailand</a>
                       )}
                       {location.appleMap && location.appleMap !== '#' && (
-                        <a href={location.appleMap} target="_blank" rel="noopener noreferrer" title="Apple Maps" className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/10 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all">Apple Maps</a>
+                        <a href={location.appleMap} target="_blank" rel="noopener noreferrer" title="Apple Maps" className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all">Apple Maps</a>
                       )}
                     </div>
 

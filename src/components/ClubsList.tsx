@@ -27,7 +27,7 @@ export default function ClubsList({ clubs }: ClubsListProps) {
                     const isExternal = club.link.startsWith('http');
 
                     return (
-                        <li key={index} className="bg-[#13DE00]/5 border border-[#13DE00]/20 overflow-hidden hover:border-[#13DE00]/50 transition-all group list-none">
+                        <li key={index} className="bg-[#13DE00]/5 border border-[#13DE00]/21 overflow-hidden hover:border-[#13DE00]/50 transition-all group list-none">
                             {/* Image */}
                             <div className="relative w-full h-48 bg-black">
                                 <Image

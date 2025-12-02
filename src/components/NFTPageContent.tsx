@@ -45,7 +45,7 @@ export default function NFTPageContent({ nfts, initialSlug }: NFTPageContentProp
     const selectedNFT = selectedSlug ? nfts.find((n) => n.slug === selectedSlug) : undefined;
 
     return (
-        <div className="min-h-screen bg-[#111] text-white">
+        <div className="min-h-screen bg-[#13DE00]/13 text-white">
             <Banner
                 title="NFT"
                 description="Thailand's Top Cannabis Club Meets NFT Innovation"

@@ -25,7 +25,7 @@ export default function DeliveryList({ steps }: DeliveryListProps) {
                 <h2 className="text-2xl font-bold text-[#13DE00] mb-6">How to Order Online</h2>
                 <ol className="space-y-6" aria-label="How to order online steps">
                     {steps.map((step, index) => (
-                        <li key={index} className="bg-[#13DE00]/5 border border-[#13DE00]/20 p-6">
+                        <li key={index} className="bg-[#13DE00]/5 border border-[#13DE00]/21 p-6">
                             <div className="flex items-start gap-4">
                                 {/* Number Badge */}
                                 <div className="flex-shrink-0 w-10 h-10 bg-[#13DE00] text-black font-bold text-xl flex items-center justify-center">
@@ -56,7 +56,7 @@ export default function DeliveryList({ steps }: DeliveryListProps) {
 
             {/* Hints Section */}
             {hints.length > 0 && (
-                <section className="bg-[#13DE00]/5 border border-[#13DE00]/20 p-6 mb-12">
+                <section className="bg-[#13DE00]/5 border border-[#13DE00]/21 p-6 mb-12">
                     <h2 className="text-2xl font-bold text-[#13DE00] mb-4">Best Delivery Service</h2>
                     <div className="grid md:grid-cols-3 gap-4">
                         {hints.map((hint, index) => (
@@ -78,7 +78,7 @@ export default function DeliveryList({ steps }: DeliveryListProps) {
                     <h2 className="text-2xl font-bold text-[#13DE00] mb-6">Weed Delivery in Phuket Thailand</h2>
                     {steps.map((step, index) => (
                         step.video && (
-                            <div key={index} className="aspect-video w-full overflow-hidden border border-[#13DE00]/20 bg-black">
+                            <div key={index} className="aspect-video w-full overflow-hidden border border-[#13DE00]/21 bg-black">
                                 <iframe
                                     width="100%"
                                     height="100%"

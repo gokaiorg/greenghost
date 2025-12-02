@@ -95,7 +95,7 @@ export default async function WholesalesList() {
                         <li key={index} className="list-none">
                             <Link
                                 href={`/strains/${item.slug}`}
-                                className="group block bg-[#111] overflow-hidden border border-gray-800 hover:border-[#13DE00] transition-colors h-full"
+                                className="group block bg-[#13DE00]/13 overflow-hidden border border-[#13DE00]/21 hover:border-[#13DE00] transition-colors h-full"
                                 title={`${item.strain} - ${item.dominance} - THC ${item.thc}`}
                             >
                                 <div className="relative aspect-square w-full overflow-hidden">

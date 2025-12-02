@@ -31,7 +31,7 @@ export default async function ContactList() {
                         href={contact.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex items-center gap-4 p-4 bg-black border-2 border-[#13DE00]/30 hover:border-[#13DE00] hover:bg-[#13DE00]/10 transition-all duration-300"
+                        className="group flex items-center gap-4 p-4 bg-black border-2 border-[#13DE00]/30 hover:border-[#13DE00] hover:bg-[#13DE00]/13 transition-all duration-300"
                         title={`Contact us via ${contact.name}`}
                     >
                         <div className="text-[#13DE00] group-hover:scale-110 transition-transform duration-300">

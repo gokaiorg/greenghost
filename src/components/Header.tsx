@@ -41,7 +41,7 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-40 text-white py-2 px-4 bg-black/80 backdrop-blur-sm border-b border-[#13DE00]/20">
+    <header className="sticky top-0 z-40 text-white py-2 px-4 bg-black/80 backdrop-blur-sm border-b border-[#13DE00]/21">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <Link href="/" className="flex-shrink-0" title="Green Ghost Home">
@@ -74,7 +74,7 @@ export default function Header() {
                   <Link
                     href="/menu"
                     title="Explore our menu"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/10 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/menu' ? 'bg-[#13DE00]/10 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/menu' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Explore our menu
@@ -84,7 +84,7 @@ export default function Header() {
                   <Link
                     href="/delivery"
                     title="Get delivered"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/10 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/delivery' ? 'bg-[#13DE00]/10 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/delivery' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Get delivered
@@ -94,7 +94,7 @@ export default function Header() {
                   <Link
                     href="/wholesale"
                     title="Bulk ordering"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/10 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/wholesale' ? 'bg-[#13DE00]/10 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/wholesale' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Bulk ordering
@@ -104,7 +104,7 @@ export default function Header() {
                   <Link
                     href="/payment"
                     title="Make a payment"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/10 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/payment' ? 'bg-[#13DE00]/10 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/payment' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Make a payment
@@ -114,7 +114,7 @@ export default function Header() {
                   <Link
                     href="/strains"
                     title="All the strains"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/10 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/strains' ? 'bg-[#13DE00]/10 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/strains' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     All the strains
@@ -124,7 +124,7 @@ export default function Header() {
                   <Link
                     href="/weed"
                     title="Learn about weed"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/10 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/weed' ? 'bg-[#13DE00]/10 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/weed' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Learn about weed
@@ -134,7 +134,7 @@ export default function Header() {
                   <Link
                     href="/about"
                     title="Cannabis culture"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/10 hover:text-[#13DE00] whitespace-nowrap ${pathname.startsWith('/about') ? 'bg-[#13DE00]/10 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname.startsWith('/about') ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Cannabis culture
@@ -144,7 +144,7 @@ export default function Header() {
                   <Link
                     href="/jobs"
                     title="We are hiring"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/10 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/jobs' ? 'bg-[#13DE00]/10 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/jobs' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     We are hiring
@@ -154,7 +154,7 @@ export default function Header() {
                   <Link
                     href="/cannabis-club"
                     title="Join the club"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/10 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/cannabis-club' ? 'bg-[#13DE00]/10 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/cannabis-club' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Join the club
@@ -164,7 +164,7 @@ export default function Header() {
                   <Link
                     href="/nft"
                     title="Mint your NFT"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/10 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/nft' ? 'bg-[#13DE00]/10 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/nft' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Mint your NFT
@@ -174,7 +174,7 @@ export default function Header() {
                   <Link
                     href="/locations"
                     title="Visit our locations"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/10 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/locations' ? 'bg-[#13DE00]/10 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/locations' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Visit our locations
@@ -184,7 +184,7 @@ export default function Header() {
                   <Link
                     href="/contact"
                     title="Contact us now"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/10 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/contact' ? 'bg-[#13DE00]/10 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/contact' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Contact us now
