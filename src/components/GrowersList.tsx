@@ -22,7 +22,7 @@ export default async function GrowersList() {
                                 className="group flex flex-col items-center justify-between p-6 bg-[#13DE00]/13 border border-[#13DE00]/21 hover:border-[#13DE00] transition-all duration-300 h-full gap-4"
                                 title={`Visit ${grower.name}`}
                             >
-                                <div className="relative w-full aspect-square bg-black/50 rounded-md overflow-hidden p-4">
+                                <div className="relative w-full aspect-square bg-black/50  overflow-hidden p-4">
                                     <Image
                                         src={imagePath}
                                         alt={`${grower.name} logo`}

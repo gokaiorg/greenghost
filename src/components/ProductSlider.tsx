@@ -160,7 +160,7 @@ export default function ProductSlider({ products, category = 'Buds' }: ProductSl
         <>
           <button
             onClick={goToPrevious}
-            className="absolute left-1 bottom-1 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all z-10 cursor-pointer"
+            className="absolute left-1 bottom-1 bg-black bg-opacity-50 text-white p-2  hover:bg-opacity-75 transition-all z-10 cursor-pointer"
             aria-label="Previous slide"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -169,7 +169,7 @@ export default function ProductSlider({ products, category = 'Buds' }: ProductSl
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-1 bottom-1 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all z-10 cursor-pointer"
+            className="absolute right-1 bottom-1 bg-black bg-opacity-50 text-white p-2  hover:bg-opacity-75 transition-all z-10 cursor-pointer"
             aria-label="Next slide"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

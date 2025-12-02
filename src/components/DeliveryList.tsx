@@ -62,7 +62,7 @@ export default function DeliveryList({ steps }: DeliveryListProps) {
                         {hints.map((hint, index) => (
                             <div key={index} className="flex items-start gap-3">
                                 {/* Info Icon */}
-                                <div className="flex-shrink-0 w-6 h-6 bg-[#13DE00] text-black font-bold text-sm flex items-center justify-center rounded-full">
+                                <div className="flex-shrink-0 w-6 h-6 bg-[#13DE00] text-black font-bold text-sm flex items-center justify-center">
                                     ℹ
                                 </div>
                                 <h4 className="text-gray-300 text-sm">{hint}</h4>

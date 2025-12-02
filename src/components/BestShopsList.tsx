@@ -54,7 +54,7 @@ export default function BestShopsList({ shops }: BestShopsListProps) {
                         >
                             <div className="absolute top-0 left-0 w-1 h-full bg-[#13DE00] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
 
-                            <div className="mb-4 relative h-48 w-full overflow-hidden rounded bg-black/50">
+                            <div className="mb-4 relative h-48 w-full overflow-hidden  bg-black/50">
                                 <Image
                                     src={imagePath}
                                     alt={`${shop.name} - Best Weed Shop in ${shop.location}`}

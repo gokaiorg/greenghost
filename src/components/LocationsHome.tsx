@@ -9,8 +9,8 @@ export default async function LocationsHome() {
         <section className="py-20 bg-black relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-[#13DE00]/5 rounded-full blur-[100px]"></div>
-                <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-[#13DE00]/5 rounded-full blur-[100px]"></div>
+                <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-[#13DE00]/5  blur-[100px]"></div>
+                <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-[#13DE00]/5  blur-[100px]"></div>
             </div>
 
             <div className="container mx-auto px-4 relative z-10">

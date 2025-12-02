@@ -59,7 +59,7 @@ export default function StrainProductClient({ product }: StrainProductClientProp
                   id="mobile-pre-roll"
                   checked={isPreRoll}
                   onChange={(e) => setIsPreRoll(e.target.checked)}
-                  className="w-4 h-4 text-[#13DE00] bg-gray-700 border-gray-600 rounded focus:ring-[#13DE00] focus:ring-2"
+                  className="w-4 h-4 text-[#13DE00] bg-gray-700 border-gray-600  focus:ring-[#13DE00] focus:ring-2"
                 />
                 <label htmlFor="mobile-pre-roll" className="text-sm text-white">Pre-roll</label>
               </div>
@@ -91,7 +91,7 @@ export default function StrainProductClient({ product }: StrainProductClientProp
                   id="desktop-pre-roll"
                   checked={isPreRoll}
                   onChange={(e) => setIsPreRoll(e.target.checked)}
-                  className="w-4 h-4 text-[#13DE00] bg-gray-700 border-gray-600 rounded focus:ring-[#13DE00] focus:ring-2"
+                  className="w-4 h-4 text-[#13DE00] bg-gray-700 border-gray-600  focus:ring-[#13DE00] focus:ring-2"
                 />
                 <label htmlFor="desktop-pre-roll" className="text-sm text-white">Pre-roll</label>
               </div>
