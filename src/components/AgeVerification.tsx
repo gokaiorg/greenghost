@@ -55,9 +55,7 @@ export default function AgeVerification() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <button
                         onClick={handleYes}
-                        className="bg-[#13DE00] hover:bg-[#10c500] text-black font-bold py-3 px-8 cursor-pointer transition-colors duration-200 font-pixel text-sm"
-                        autoFocus
-                    >
+                        className="bg-[#13DE00] hover:bg-[#10c500] text-black font-bold py-3 px-8 cursor-pointer transition-colors duration-200 font-pixel text-sm">
                         YES
                     </button>
                     <button

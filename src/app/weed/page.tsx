@@ -3,6 +3,7 @@ import Banner from '@/components/Banner';
 import { getBannerData } from '@/lib/utils/bannerUtils';
 import { getPagesServerSide as getPages } from '@/lib/pages-server';
 import WeedsBlock from '@/components/WeedsBlock';
+import WeedNavigation from '@/components/WeedNavigation';
 import { getWeedsData } from '@/lib/weeds-data';
 
 export const metadata: Metadata = {
@@ -80,6 +81,7 @@ export default async function WeedPage() {
           compounds={weedsData.compounds}
           info={weedsData.info}
         />
+        <WeedNavigation />
       </div>
     </>
   );

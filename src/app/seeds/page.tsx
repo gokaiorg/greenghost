@@ -1,6 +1,7 @@
 import { getBannerData } from '@/lib/utils/bannerUtils';
 import { getPagesServerSide as getPages } from '@/lib/pages-server';
 import Banner from '@/components/Banner';
+import SeedsList from '@/components/SeedsList';
 
 export default async function SeedsPage() {
   const allPages = await getPages();
@@ -35,6 +36,7 @@ export default async function SeedsPage() {
             dangerouslySetInnerHTML={{ __html: seedsPage.section_description }}
           />
         )}
+        <SeedsList />
       </div>
     </>
   );
