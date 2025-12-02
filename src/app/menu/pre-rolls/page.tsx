@@ -42,10 +42,10 @@ export default function PreRollsPage() {
                 <div className="p-2 flex items-center justify-between mb-2 sm:mb-0 pr-20">
                   <ul className="flex flex-col flex-grow list-none m-0 p-0" aria-label="Product details">
                     <li className="flex items-baseline flex-col sm:flex-row space-x-2">
-                      <h2 className="text-base md:text-lg font-semibold text-sm leading-tight">{roll.name}</h2>
+                      <h2 className="text-base md:text-lg font-semibold text-sm leading-tight md:min-w-[300px]">{roll.name}</h2>
                       <ul className="flex items-center space-x-1 list-none m-0 p-0" aria-label="Product attributes">
                         <li>
-                          <p className={`text-[10px] sm:text-xs whitespace-nowrap mb-1 sm:mb-0 ${roll.dominance && roll.dominance.startsWith('Sativa') ? 'text-[#d1fee5]' : roll.dominance && roll.dominance.startsWith('Hybrid') ? 'text-[#c0ef24]' : roll.dominance && roll.dominance.startsWith('Indica') ? 'text-[#ee9cc9]' : 'text-gray-400'}`}>
+                          <p className={`text-[10px] sm:text-xs whitespace-nowrap mb-1 sm:mb-0 md:min-w-[140px] ${roll.dominance && roll.dominance.startsWith('Sativa') ? 'text-[#d1fee5]' : roll.dominance && roll.dominance.startsWith('Hybrid') ? 'text-[#c0ef24]' : roll.dominance && roll.dominance.startsWith('Indica') ? 'text-[#ee9cc9]' : 'text-gray-400'}`}>
                             {roll.dominance || 'Unknown'}
                           </p>
                         </li>

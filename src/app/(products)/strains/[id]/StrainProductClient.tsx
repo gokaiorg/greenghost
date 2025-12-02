@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import NextImage from 'next/image'
 
 
 
@@ -72,7 +73,21 @@ export default function StrainProductClient({ product }: StrainProductClientProp
         {/* Desktop Layout - Price on right, info on left */}
         <div className="hidden md:flex justify-between items-start mb-4">
           <ul className="flex flex-col text-sm text-gray-400 space-y-1" aria-label="Product Information">
-            <li className={`whitespace-nowrap ${product.dominance && product.dominance.startsWith('Sativa') ? 'text-[#d1fee5]' : product.dominance && product.dominance.startsWith('Hybrid') ? 'text-[#c0ef24]' : product.dominance && product.dominance.startsWith('Indica') ? 'text-[#ee9cc9]' : ''}`}>{product.dominance || 'Unknown'}</li>
+            <li className={`flex items-center whitespace-nowrap ${product.dominance && product.dominance.startsWith('Sativa') ? 'text-[#d1fee5]' : product.dominance && product.dominance.startsWith('Hybrid') ? 'text-[#c0ef24]' : product.dominance && product.dominance.startsWith('Indica') ? 'text-[#ee9cc9]' : ''}`}>
+              {product.dominance && (
+                <div className="relative w-4 h-4 mr-2">
+                  <NextImage
+                    src={`/images/icons/${product.dominance.toLowerCase().split(' ')[0]}-green-ghost.avif`}
+                    alt=""
+                    fill
+                    className="object-contain"
+                    aria-hidden="true"
+                    sizes="16px"
+                  />
+                </div>
+              )}
+              {product.dominance || 'Unknown'}
+            </li>
             <li className="whitespace-nowrap">{product.cbd > 0 ? `CBD ${product.cbd}%` : `THC ${product.thc}%`}</li>
             {product.effects && <li><span className="text-gray-400">Feelings:</span> <span className="text-yellow-600">{product.effects}</span></li>}
             {product.relieves && <li><span className="text-gray-400">Relieves:</span> <span className="text-yellow-600">{product.relieves}</span></li>}
@@ -104,7 +119,21 @@ export default function StrainProductClient({ product }: StrainProductClientProp
         {/* Mobile Product Info - Shows below price on mobile */}
         <div className="md:hidden mb-4">
           <ul className="flex flex-col text-sm text-gray-400 space-y-1" aria-label="Product Information">
-            <li className={`whitespace-nowrap ${product.dominance && product.dominance.startsWith('Sativa') ? 'text-[#d1fee5]' : product.dominance && product.dominance.startsWith('Hybrid') ? 'text-[#c0ef24]' : product.dominance && product.dominance.startsWith('Indica') ? 'text-[#ee9cc9]' : ''}`}>{product.dominance || 'Unknown'}</li>
+            <li className={`flex items-center whitespace-nowrap ${product.dominance && product.dominance.startsWith('Sativa') ? 'text-[#d1fee5]' : product.dominance && product.dominance.startsWith('Hybrid') ? 'text-[#c0ef24]' : product.dominance && product.dominance.startsWith('Indica') ? 'text-[#ee9cc9]' : ''}`}>
+              {product.dominance && (
+                <div className="relative w-4 h-4 mr-2">
+                  <NextImage
+                    src={`/images/icons/${product.dominance.toLowerCase().split(' ')[0]}-green-ghost.avif`}
+                    alt=""
+                    fill
+                    className="object-contain"
+                    aria-hidden="true"
+                    sizes="16px"
+                  />
+                </div>
+              )}
+              {product.dominance || 'Unknown'}
+            </li>
             <li className="whitespace-nowrap">{product.cbd > 0 ? `CBD ${product.cbd}%` : `THC ${product.thc}%`}</li>
             {product.effects && <li><span className="text-gray-400">Feelings:</span> <span className="text-yellow-600">{product.effects}</span></li>}
             {product.relieves && <li><span className="text-gray-400">Relieves:</span> <span className="text-yellow-600">{product.relieves}</span></li>}
