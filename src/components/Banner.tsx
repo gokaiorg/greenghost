@@ -21,7 +21,7 @@ export default function Banner({ title, description, bgSrc, iconSrc, iconAlt }: 
   }, []);
 
   return (
-    <div className="relative min-h-[250px] md:min-h-[400px] flex flex-col items-center justify-center text-white md:p-8 mb-4 md:mb-8 overflow-hidden">
+    <div className="relative sm:min-h-[250px] md:min-h-[400px] flex flex-col items-center justify-center text-white md:p-8 mb-4 md:mb-8 overflow-hidden">
       <Image
         src={`/images${bgSrc}`}
         alt={title}
@@ -34,7 +34,7 @@ export default function Banner({ title, description, bgSrc, iconSrc, iconAlt }: 
         }}
       />
 
-      <div className="relative z-10 flex flex-col items-center">
+      <div className="relative z-10 flex flex-col items-center mt-6">
         {iconSrc && (
           <Image
             src={iconSrc}
@@ -46,9 +46,9 @@ export default function Banner({ title, description, bgSrc, iconSrc, iconAlt }: 
             style={{ width: 'auto', height: 'auto' }}
           />
         )}
-        <div className="bg-black/50 p-4 text-center">
+        <div className="bg-black/69 p-4 text-center">
           <h1 className="text-2xl md:text-3xl font-bold text-shadow-lg/50">{title}</h1>
-          <p className="banner-description text-sm md:text-base text-shadow-lg/50">{description}</p>
+          <p className="banner-description text-xs sm:text-sm md:text-base text-shadow-lg/50">{description}</p>
         </div>
       </div>
     </div>

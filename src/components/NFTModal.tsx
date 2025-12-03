@@ -49,7 +49,7 @@ export default function NFTModal({ nft, onClose }: NFTModalProps) {
             <div className="relative w-full max-w-4xl bg-black border border-[#13DE00] shadow-2xl overflow-hidden flex flex-col md:flex-row max-h-[90vh] md:max-h-[80vh] animate-in fade-in zoom-in-95 duration-200">
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 z-10 p-2 bg-black/50 hover:bg-white/10 text-white/70 hover:text-white transition-colors"
+                    className="absolute top-4 right-4 z-10 p-2 bg-black/69 hover:bg-white/10 text-white/70 hover:text-white transition-colors"
                 >
                     <X size={24} />
                 </button>

@@ -43,7 +43,7 @@ export default function BannerHero() {
   return (
     <div
       ref={parallaxRef}
-      className="relative py-24 flex flex-col items-center justify-center overflow-hidden"
+      className="relative md:py-24 2xl:py-32 flex flex-col items-center justify-center overflow-hidden"
     >
       {/* Background with parallax effect */}
       <div className="absolute inset-0 z-0">
@@ -74,39 +74,36 @@ export default function BannerHero() {
       </div>
 
       {/* Content */}
-      <div className="absolute inset-0 bg-black/69 z-20"></div>
-      <div className="container mx-auto px-4 relative z-30 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-[30px] md:text-[55px] lg:text-[60px] font-bold mb-6 leading-tight">
-            <span className="text-[#13DE00]">Best Degen Weed Shop and Delivery</span>
-          </h1>
+      <div className="container md:max-w-4xl md:px-4 bg-black/69 p-5 md:mx-auto z-30 text-center">
+        <h1 className="text-[25px] sm:text-[30px] md:text-[55px] lg:text-[60px] font-bold mb-6 leading-tight">
+          <span className="text-[#13DE00]">Best Degen Weed Shop and Delivery</span>
+        </h1>
 
-          <p className="text-md md:text-xl text-gray-300 mb-10 max-w-5xl mx-auto">
-            Discover the top-rated cannabis dispensary in Thailand, offering premium quality weed hand-picked from the finest growers.
-            Enjoy fast and reliable weed delivery in Phuket and all over Thailand but also the best CBD in France!
-          </p>
+        <p className="text-sm sm:text-md md:text-xl text-gray-300 mb-10 max-w-5xl mx-auto">
+          Discover the top-rated cannabis dispensary in Thailand, offering premium quality weed hand-picked from the finest growers.
+          Enjoy fast and reliable weed delivery in Phuket and all over Thailand but also the best CBD in France!
+        </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link
-              href="/menu"
-              className="bg-[#13DE00] hover:bg-[#10c500] text-black font-bold py-4 px-8 text-lg transition-colors duration-300"
-              title="Shop Now"
-            >
-              Shop Now
-            </Link>
-            <Link
-              href="/delivery"
-              className="bg-transparent border-2 border-[#13DE00] text-[#13DE00] hover:bg-[#13DE00]/13 font-bold py-4 px-8 text-lg transition-colors duration-300"
-              title="Order Online"
-            >
-              Order Online
-            </Link>
-          </div>
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <Link
+            href="/menu"
+            className="bg-[#13DE00] hover:bg-[#10c500] text-black font-bold py-4 px-8 text-lg transition-colors duration-300"
+            title="Shop Now"
+          >
+            Shop Now
+          </Link>
+          <Link
+            href="/delivery"
+            className="bg-transparent border-2 border-[#13DE00] text-[#13DE00] hover:bg-[#13DE00]/13 font-bold py-4 px-8 text-lg transition-colors duration-300"
+            title="Order Online"
+          >
+            Order Online
+          </Link>
+        </div>
 
-          {/* Products Menu */}
-          <div className="my-10 mx-auto">
-            <MenuCategories />
-          </div>
+        {/* Products Menu */}
+        <div className="my-10 mx-auto">
+          <MenuCategories />
         </div>
       </div>
 

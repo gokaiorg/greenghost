@@ -212,7 +212,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                         title="Leave a Review"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-between p-3 bg-black/30 hover:bg-black/50 border border-white/10 hover:border-[#13DE00]/50 transition-all group"
+                        className="flex items-center justify-between p-3 bg-black/30 hover:bg-black/69 border border-white/10 hover:border-[#13DE00]/50 transition-all group"
                       >
                         <span className="font-medium text-sm">Leave a Review</span>
                         <span className="text-[#13DE00] group-hover:translate-x-1 transition-transform">{'>'}</span>
@@ -225,7 +225,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                         title="Visit Website"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-between p-3 bg-black/30 hover:bg-black/50 border border-white/10 hover:border-[#13DE00]/50 transition-all group"
+                        className="flex items-center justify-between p-3 bg-black/30 hover:bg-black/69 border border-white/10 hover:border-[#13DE00]/50 transition-all group"
                       >
                         <span className="font-medium text-sm">Visit Website</span>
                         <span className="text-[#13DE00] group-hover:translate-x-1 transition-transform">{'>'}</span>
