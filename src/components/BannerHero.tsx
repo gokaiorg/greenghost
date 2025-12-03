@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import MenuTypes from '@/components/MenuTypes';
+import MenuCategories from '@/components/MenuCategories';
 
 const HERO_IMAGES = [
   '/images/banners/green-ghost-best-degen-weed-shop-delivery-01.avif',
@@ -11,7 +11,7 @@ const HERO_IMAGES = [
   '/images/banners/green-ghost-best-degen-weed-shop-delivery-03.avif',
 ];
 
-export default function ParallaxHero() {
+export default function BannerHero() {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -43,7 +43,7 @@ export default function ParallaxHero() {
   return (
     <div
       ref={parallaxRef}
-      className="relative py-24 flex flex-col items-center justify-center overflow-hidden min-h-screen"
+      className="relative py-24 flex flex-col items-center justify-center overflow-hidden"
     >
       {/* Background with parallax effect */}
       <div className="absolute inset-0 z-0">
@@ -105,7 +105,7 @@ export default function ParallaxHero() {
 
           {/* Products Menu */}
           <div className="my-10 mx-auto">
-            <MenuTypes />
+            <MenuCategories />
           </div>
         </div>
       </div>

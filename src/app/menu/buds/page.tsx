@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import { Product } from '@/lib/types'
 import { useState, useEffect } from 'react'
-import MenuTypes from '@/components/MenuTypes'
+import MenuCategories from '@/components/MenuCategories'
 import StrainFilter from '@/components/StrainFilter'
 import MiniSlider from '@/components/MiniSlider'
 import BannerMenu from '@/components/BannerMenu'
@@ -32,8 +32,8 @@ export default function BudsPage() {
 
   return (
     <div className="relative">
-      <MenuTypes />
       <div className="container mx-auto px-4">
+        <div className="sm:ml-auto sm:w-fit"><MenuCategories /></div>
         <div className="flex  md:flex-row flex-col md:items-center space-x-2 mb-2">
           <h1 className="text-xl lg:text-2xl font-bold text-left">Buds Menu</h1><p className="text-xs text-gray-400">Buds price for 1 gram.</p>
         </div>

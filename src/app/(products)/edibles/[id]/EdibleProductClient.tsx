@@ -3,7 +3,7 @@
 
 
 import { Product } from '@/lib/types'
-import MenuTypes from '@/components/MenuTypes'
+import MenuCategories from '@/components/MenuCategories'
 import ImageSlider from '@/components/ImageSlider'
 import BackButton from '@/components/BackButton'
 import AddToCartButton from '@/components/AddToCartButton'
@@ -17,7 +17,7 @@ export default function EdibleProductClient({ product }: EdibleProductClientProp
 
   return (
     <div className="relative">
-      <MenuTypes />
+      <MenuCategories />
       <div className="container mx-auto px-4">
         <div className="flex items-center mb-4">
           <BackButton />

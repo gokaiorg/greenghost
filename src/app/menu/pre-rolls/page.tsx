@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import { Product } from '@/lib/types'
 import { useState, useEffect } from 'react'
-import MenuTypes from '@/components/MenuTypes'
+import MenuCategories from '@/components/MenuCategories'
 import StrainFilter from '@/components/StrainFilter'
 import BannerMenu from '@/components/BannerMenu'
 import AddToCartButton from '@/components/AddToCartButton'
@@ -29,8 +29,8 @@ export default function PreRollsPage() {
 
   return (
     <div className="relative">
-      <MenuTypes />
       <div className="container mx-auto px-4">
+        <div className="sm:ml-auto sm:w-fit"><MenuCategories /></div>
         <div className="flex  md:flex-row flex-col md:items-center space-x-2 mb-2">
           <h1 className="text-xl lg:text-2xl font-bold text-left">Pre-rolls Menu</h1><p className="text-xs text-gray-400">On demand. +20THB on delivery. Free on store.</p>
         </div>
@@ -39,30 +39,30 @@ export default function PreRollsPage() {
           {preRolls.map((roll) => (
             <li key={roll.id} className="relative bg-black hover:bg-[#13DE00]/13 transition-all">
               <Link href={`/strains/${roll.id}`} title={roll.name}>
-                <div className="p-2 flex items-center justify-between mb-2 sm:mb-0 pr-20">
+                <div className="p-2 flex items-start sm:items-center justify-between mb-2 sm:mb-0 sm:pr-24">
                   <ul className="flex flex-col flex-grow list-none m-0 p-0" aria-label="Product details">
                     <li className="flex items-baseline flex-col sm:flex-row space-x-2">
                       <h2 className="text-base md:text-lg font-semibold text-sm leading-tight md:min-w-[300px]">{roll.name}</h2>
-                      <ul className="flex items-center space-x-1 list-none m-0 p-0" aria-label="Product attributes">
+                      <ul className="flex flex-col sm:flex-row sm:items-center space-x-1 list-none m-0 p-0" aria-label="Product attributes">
                         <li>
-                          <p className={`text-[10px] sm:text-xs whitespace-nowrap mb-1 sm:mb-0 md:min-w-[140px] ${roll.dominance && roll.dominance.startsWith('Sativa') ? 'text-[#d1fee5]' : roll.dominance && roll.dominance.startsWith('Hybrid') ? 'text-[#c0ef24]' : roll.dominance && roll.dominance.startsWith('Indica') ? 'text-[#ee9cc9]' : 'text-gray-400'}`}>
+                          <p className={`text-xs whitespace-nowrap mb-1 sm:mb-0 md:min-w-[140px] ${roll.dominance && roll.dominance.startsWith('Sativa') ? 'text-[#d1fee5]' : roll.dominance && roll.dominance.startsWith('Hybrid') ? 'text-[#c0ef24]' : roll.dominance && roll.dominance.startsWith('Indica') ? 'text-[#ee9cc9]' : 'text-gray-400'}`}>
                             {roll.dominance || 'Unknown'}
                           </p>
                         </li>
                         <li>
-                          <p className="text-[10px] sm:text-xs text-gray-400 whitespace-nowrap">THC {roll.thc}%</p>
+                          <p className="text-xs text-gray-400 whitespace-nowrap">THC {roll.thc}%</p>
                         </li>
                       </ul>
                     </li>
                   </ul>
                   <ul className="flex items-center sm:space-x-2 list-none m-0 p-0" aria-label="Product price and actions">
                     <li>
-                      <p className="text-sm text-[#13DE00] font-bold whitespace-nowrap mr-2">{roll.price + 20}฿</p>
+                      <p className="text-sm text-[#13DE00] font-bold whitespace-nowrap sm:mr-2">{roll.price + 20}฿</p>
                     </li>
                   </ul>
                 </div>
               </Link>
-              <div className="absolute right-2 top-1/2 -translate-y-1/2 z-10">
+              <div className="absolute right-2 top-12 sm:top-1/2 -translate-y-1/2 z-10">
                 <AddToCartButton product={roll} category="Pre-rolls" compact />
               </div>
             </li>

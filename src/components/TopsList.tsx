@@ -11,10 +11,10 @@ export default async function TopsList() {
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-8">
                     <div className="text-center md:text-left">
                         <h2 className="text-2xl font-bold text-white mb-2">
-                            Top dispensary in <span className="text-[#13DE00]">Phuket Thailand 2025</span>
+                            Top dispensary in <span className="text-[#13DE00]">Phuket Thailand 2026</span>
                         </h2>
                         <p className="text-gray-400 text-sm max-w-xl">
-                            See where Green Ghost stands among the best dispensaries in Phuket Thailand in 2025.
+                            See where Green Ghost stands among the best dispensaries in Phuket Thailand in 2026.
                         </p>
                     </div>
 

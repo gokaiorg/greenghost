@@ -1,6 +1,6 @@
 
 import ContactBlock from '@/components/ContactBlock';
-import ParallaxHero from '@/components/ParallaxHero';
+import BannerHero from '@/components/BannerHero';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
 import MenuBlock from '@/components/MenuBlock';
@@ -103,7 +103,7 @@ export default async function Home() {
     <>
       <JsonLd data={organizationSchema} />
       <div className="min-h-screen bg-black text-white">
-        <ParallaxHero />
+        <BannerHero />
         <MenuBlock />
         <FeaturedProducts products={featuredProducts} />
         <AboutUsBlock />

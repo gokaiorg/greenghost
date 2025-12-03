@@ -3,7 +3,7 @@
 
 
 import { Product } from '@/lib/types'
-import MenuTypes from '@/components/MenuTypes'
+import MenuCategories from '@/components/MenuCategories'
 import ImageSlider from '@/components/ImageSlider'
 import BackButton from '@/components/BackButton'
 import AddToCartButton from '@/components/AddToCartButton'
@@ -17,8 +17,8 @@ export default function GadgetProductClient({ product }: GadgetProductClientProp
 
   return (
     <div className="relative">
-      <MenuTypes />
-      <div className="container mx-auto px-4">
+      <MenuCategories />
+      <div className="container mx-auto px-4 py-8">
         <div className="flex items-center mb-4">
           <BackButton />
           <h1 className="text-xl md:text-2xl font-bold">{product.name}</h1>

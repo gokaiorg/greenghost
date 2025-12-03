@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef } from 'react'
 
-export default function MenuTypes() {
+export default function MenuCategories() {
   const pathname = usePathname()
   const navRef = useRef<HTMLDivElement>(null)
 
@@ -26,7 +26,7 @@ export default function MenuTypes() {
   }, [pathname])
 
   return (
-    <div className="w-full px-4 py-2 mb-2">
+    <div className="w-full py-2 mb-2">
       <nav ref={navRef}>
         <ul
           className="flex space-x-4 whitespace-nowrap overflow-x-auto sm:overflow-visible sm:justify-center list-none m-0 p-0"

@@ -96,7 +96,7 @@ export default function Footer({ socials }: FooterProps) {
           </nav>
         </div>
         <div className="mt-8 pt-8 border-t border-[#13DE00]/21 text-center text-gray-400">
-          <p>&copy; 2025 Green Ghost. All rights reserved.</p>
+          <p>&copy; 2026 Green Ghost. All rights reserved.</p>
           <p className="mt-2">
             <Link href="https://gokai.org/" className="text-[#13DE00] hover:text-[#13DE00]/80 transition-colors text-sm inline-block py-3 px-2" title="Made with weed by Gokai Labs">
               Made with weed by Gokai Labs
