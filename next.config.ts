@@ -149,6 +149,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/phuket-cannabis-cup',
+        destination: '/cannabis-club',
+        permanent: true,
+      },
+      {
         source: '/contact-us-buy-weed-online',
         destination: '/contact-green-ghost',
         permanent: true,

@@ -4,15 +4,15 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useCart } from '@/contexts/CartContext'
 import { CartItem } from '@/lib/types'
-import MessagingSystemSelector from './MessagingSystemSelector'
-import QuantitySelector from './QuantitySelector'
+import BagMessaging from './BagMessaging'
+import BagQuantity from './BagQuantity'
 
-interface CartPopupProps {
+interface BagPopupProps {
   isOpen: boolean
   onClose: () => void
 }
 
-export default function CartPopup({ isOpen, onClose }: CartPopupProps) {
+export default function BagPopup({ isOpen, onClose }: BagPopupProps) {
   const router = useRouter()
   const { state, removeItem, updateQuantity, getTotal } = useCart()
   const { items } = state
@@ -42,7 +42,7 @@ export default function CartPopup({ isOpen, onClose }: CartPopupProps) {
 
   if (showMessagingSelector) {
     return (
-      <MessagingSystemSelector
+      <BagMessaging
         items={items}
         total={total}
         onClose={() => setShowMessagingSelector(false)}
@@ -100,7 +100,10 @@ export default function CartPopup({ isOpen, onClose }: CartPopupProps) {
   }
 
   return (
-    <div className="fixed h-screen inset-0 bg-black/80 backdrop-blur-sm z-[60] flex items-center justify-center p-4">
+    <div className="fixed h-screen inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-xl"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="bag-process">
       <div className="relative bg-black shadow-xl max-w-lg w-full max-h-[90vh] overflow-hidden flex flex-col">
         <span className="absolute z-50 bg-black top-13 right-0 w-2 h-2"></span>
         <span className="absolute z-50 bg-black top-13 left-0 w-2 h-2"></span>
@@ -141,7 +144,7 @@ export default function CartPopup({ isOpen, onClose }: CartPopupProps) {
                       <p className="text-[#13DE00] font-semibold text-sm">{getItemTotal(item)}฿</p>
                     </div>
                     <div className="flex items-center mb-2">
-                      <QuantitySelector
+                      <BagQuantity
                         quantity={item.quantity}
                         onIncrease={() => handleQuantityChange(item.id, item.quantity + 1, item.quantity, item.menuType)}
                         onDecrease={() => handleQuantityChange(item.id, item.quantity - 1, item.quantity, item.menuType)}

@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { getLocations } from '@/lib/organization-data'
 import { getProductsByCategory } from '@/lib/products'
+import { getNFTs } from '@/lib/nft-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://green.gd'
 
@@ -179,6 +180,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     }))
     dynamicPages = [...dynamicPages, ...gadgetPages]
+
+    // Fetch NFTs
+    const nfts = await getNFTs()
+    const nftPages: MetadataRoute.Sitemap = nfts.map((nft: { slug: string }) => ({
+      url: `${baseUrl}/nft/${nft.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    }))
+    dynamicPages = [...dynamicPages, ...nftPages]
 
   } catch (error) {
     console.error('Error generating sitemap:', error)

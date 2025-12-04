@@ -5,7 +5,7 @@ import { Product } from '@/lib/types'
 import StrainImage from './StrainImage'
 import Link from 'next/link'
 
-import AddToCartButton from './AddToCartButton'
+import BagAddButton from './BagAddButton'
 
 interface ProductSliderProps {
   products: Product[]
@@ -144,7 +144,7 @@ export default function ProductSlider({ products, category = 'Buds' }: ProductSl
                     </Link>
                     <div className="absolute top-6 left-6 right-6 h-[100px] pointer-events-none z-10">
                       <div className="absolute bottom-1 left-1 pointer-events-auto">
-                        <AddToCartButton product={product} category={category} compact />
+                        <BagAddButton product={product} category={category} compact />
                       </div>
                     </div>
                   </div>

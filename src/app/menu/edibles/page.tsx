@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react'
 import MenuCategories from '@/components/MenuCategories'
 import MiniSlider from '@/components/MiniSlider'
 import BannerMenu from '@/components/BannerMenu'
-import AddToCartButton from '@/components/AddToCartButton'
+import BagAddButton from '@/components/BagAddButton'
 
 export default function EdiblesPage() {
 
@@ -69,7 +69,7 @@ export default function EdiblesPage() {
               </Link>
               {edible.status === 'In stock' && (
                 <div className="mt-8 md:mt-0 md:absolute md:top-1 md:left-1 md:right-1 md:h-[232px] lg:h-[185px] xl:h-[193px] 2xl:h-[236px] pointer-events-none z-10">                  <div className="absolute bottom-1 right-1 pointer-events-auto">
-                  <AddToCartButton product={edible} category="Edibles" compact />
+                  <BagAddButton product={edible} category="Edibles" compact />
                 </div>
                 </div>
               )}

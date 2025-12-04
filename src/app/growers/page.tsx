@@ -2,6 +2,36 @@ import { getBannerData } from '@/lib/utils/bannerUtils';
 import { getPagesServerSide as getPages } from '@/lib/pages-server';
 import Banner from '@/components/Banner';
 import GrowersList from '@/components/GrowersList';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Premium Cannabis Growers in Thailand - Green Ghost 🌿👻',
+  description: 'Discover the finest cannabis growers in Thailand. Green Ghost partners with top-quality cultivators to bring you premium, hand-picked strains from trusted local growers.',
+  openGraph: {
+    title: 'Premium Cannabis Growers in Thailand - Green Ghost 🌿👻',
+    description: 'Discover the finest cannabis growers in Thailand. Green Ghost partners with top-quality cultivators to bring you premium, hand-picked strains from trusted local growers.',
+    url: '/growers',
+    siteName: 'Green Ghost',
+    images: [
+      {
+        url: '/images/banners/green-ghost-best-degen-weed-shop-growers.avif',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Premium Cannabis Growers in Thailand - Green Ghost 🌿👻',
+    description: 'Discover the finest cannabis growers in Thailand. Green Ghost partners with top-quality cultivators to bring you premium, hand-picked strains from trusted local growers.',
+    images: ['/images/banners/green-ghost-best-degen-weed-shop-growers.avif'],
+  },
+  alternates: {
+    canonical: '/growers',
+  },
+};
+
 
 export default async function WeedGrowerPage() {
   const allPages = await getPages();

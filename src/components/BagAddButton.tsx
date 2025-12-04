@@ -3,16 +3,16 @@
 import React from 'react';
 import { useCart } from '@/contexts/CartContext';
 import { Product } from '@/lib/types';
-import QuantitySelector from './QuantitySelector';
+import BagQuantity from './BagQuantity';
 
-interface AddToCartButtonProps {
+interface BagAddButtonProps {
     product: Product;
     category?: string;
     className?: string;
     compact?: boolean;
 }
 
-const AddToCartButton: React.FC<AddToCartButtonProps> = ({
+const BagAddButton: React.FC<BagAddButtonProps> = ({
     product,
     category,
     className = '',
@@ -78,7 +78,7 @@ const AddToCartButton: React.FC<AddToCartButtonProps> = ({
     if (cartItem) {
         return (
             <div className={`flex items-center justify-center relative z-20 ${className}`}>
-                <QuantitySelector
+                <BagQuantity
                     quantity={cartItem.quantity}
                     onIncrease={() => handleQuantityChange(cartItem.quantity + 1)}
                     onDecrease={() => handleQuantityChange(cartItem.quantity - 1)}
@@ -108,4 +108,4 @@ const AddToCartButton: React.FC<AddToCartButtonProps> = ({
     );
 };
 
-export default AddToCartButton;
+export default BagAddButton;

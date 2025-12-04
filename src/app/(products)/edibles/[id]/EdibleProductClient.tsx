@@ -6,7 +6,7 @@ import { Product } from '@/lib/types'
 import MenuCategories from '@/components/MenuCategories'
 import ImageSlider from '@/components/ImageSlider'
 import BackButton from '@/components/BackButton'
-import AddToCartButton from '@/components/AddToCartButton'
+import BagAddButton from '@/components/BagAddButton'
 
 interface EdibleProductClientProps {
   product: Product
@@ -52,7 +52,7 @@ export default function EdibleProductClient({ product }: EdibleProductClientProp
               <div className="text-center">
                 <p className="text-sm text-[#13DE00]">{product.price}฿</p>
               </div>
-              <AddToCartButton product={product} category="Edibles" className="w-full" compact />
+              <BagAddButton product={product} category="Edibles" className="w-full" compact />
             </div>
           ) : (
             <div className="text-center">
@@ -73,7 +73,7 @@ export default function EdibleProductClient({ product }: EdibleProductClientProp
               <div className="text-right mb-2">
                 <p className="text-sm text-[#13DE00]">{product.price}฿</p>
               </div>
-              <AddToCartButton product={product} category="Edibles" compact />
+              <BagAddButton product={product} category="Edibles" compact />
             </div>
           ) : (
             <p className="text-red-500 text-right">Sold out</p>

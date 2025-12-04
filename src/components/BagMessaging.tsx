@@ -4,12 +4,12 @@ import { useState } from 'react'
 import { CartItem } from '@/lib/types'
 import Link from 'next/link'
 
-interface MessagingSystemSelectorProps {
+interface BagMessagingProps {
   items: CartItem[]
   total: number
   onClose: () => void
 }
-const MessagingSystemSelector = ({ items, total, onClose }: MessagingSystemSelectorProps) => {
+const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
   const [name, setName] = useState('')
   const [location, setLocation] = useState('')
   const [addressInfo, setAddressInfo] = useState('')
@@ -65,8 +65,10 @@ const MessagingSystemSelector = ({ items, total, onClose }: MessagingSystemSelec
   }
 
   return (
-    <div className="fixed text-sm h-screen inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="border-4 border-[#13DE00] shadow-xl max-w-lg w-full max-h-[95vh] overflow-hidden flex flex-col bg-black">
+    <div className="fixed text-sm h-screen inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+      <div className="relative shadow-xl max-w-lg w-full max-h-[95vh] overflow-hidden flex flex-col bg-black">
+        <span className="absolute z-50 bg-black top-13 right-0 w-2 h-2"></span>
+        <span className="absolute z-50 bg-black top-13 left-0 w-2 h-2"></span>
         <div className="flex justify-between items-center p-4 bg-[#13DE00] border-b-4 border-[#13DE00]">
           <h2 className="text-base md:text-lg font-bold text-black">Complete Your Order</h2>
           <button
@@ -77,7 +79,7 @@ const MessagingSystemSelector = ({ items, total, onClose }: MessagingSystemSelec
             X
           </button>
         </div>
-        <div className="p-4 flex-1 overflow-y-auto bg-black text-white">
+        <div className="p-4 flex-1 overflow-y-auto border-4 border-[#13DE00] bg-black text-white">
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
@@ -211,4 +213,4 @@ const MessagingSystemSelector = ({ items, total, onClose }: MessagingSystemSelec
   )
 }
 
-export default MessagingSystemSelector
+export default BagMessaging

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Product } from '@/lib/types'
 import { getProducts } from '@/lib/products'
 import MiniSlider from '@/components/MiniSlider'
-import AddToCartButton from '@/components/AddToCartButton'
+import BagAddButton from '@/components/BagAddButton'
 
 const featuredStrainNames = [
     'Strawneapple',
@@ -65,7 +65,7 @@ export default async function StrainFeatured() {
                             </div>
                         </Link>
                         <div className="mt-8 md:mt-0 md:absolute md:top-1 md:left-1 md:right-1 md:h-[232px] lg:h-[317px] xl:h-[193px] 2xl:h-[236px] pointer-events-none z-10">              <div className="absolute bottom-1 right-1 pointer-events-auto">
-                            <AddToCartButton product={bud} category="Buds" compact />
+                            <BagAddButton product={bud} category="Buds" compact />
                         </div>
                         </div>
                     </li>

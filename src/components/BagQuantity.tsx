@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface QuantitySelectorProps {
+interface BagQuantityProps {
     quantity: number;
     onIncrease: () => void;
     onDecrease: () => void;
@@ -8,7 +8,7 @@ interface QuantitySelectorProps {
     size?: 'sm' | 'md';
 }
 
-const QuantitySelector: React.FC<QuantitySelectorProps> = ({
+const BagQuantity: React.FC<BagQuantityProps> = ({
     quantity,
     onIncrease,
     onDecrease,
@@ -47,4 +47,4 @@ const QuantitySelector: React.FC<QuantitySelectorProps> = ({
     );
 };
 
-export default QuantitySelector;
+export default BagQuantity;

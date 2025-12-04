@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useCart } from '@/contexts/CartContext'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect, useRef } from 'react'
-import CartPopup from '@/components/CartPopup'
+import BagPopup from '@/components/BagPopup'
 import { Menu, X } from 'lucide-react'
 
 export default function Header() {
@@ -245,7 +245,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <CartPopup isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+      <BagPopup isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </header>
   )
 }

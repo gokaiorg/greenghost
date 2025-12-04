@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 import MenuCategories from '@/components/MenuCategories'
 import StrainFilter from '@/components/StrainFilter'
 import BannerMenu from '@/components/BannerMenu'
-import AddToCartButton from '@/components/AddToCartButton'
+import BagAddButton from '@/components/BagAddButton'
 
 export default function PreRollsPage() {
 
@@ -63,7 +63,7 @@ export default function PreRollsPage() {
                 </div>
               </Link>
               <div className="absolute right-2 top-12 sm:top-1/2 -translate-y-1/2 z-10">
-                <AddToCartButton product={roll} category="Pre-rolls" compact />
+                <BagAddButton product={roll} category="Pre-rolls" compact />
               </div>
             </li>
           ))}
