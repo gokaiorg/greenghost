@@ -80,7 +80,7 @@ export default function BannerHero() {
         </h1>
 
         <p className="text-sm sm:text-md md:text-lg text-gray-300 mb-10 max-w-5xl mx-auto">
-          Discover Thailand's top-rated cannabis dispensary offering premium quality weed hand-picked from the finest local growers. Green Ghost delivers exceptional strains, edibles, concentrates, and accessories across Phuket, Bangkok, and nationwide. Experience fast, reliable weed delivery with expert service, competitive prices, and organic products. From Rawai to Karon, we're your trusted source for authentic Thai cannabis. Also serving premium CBD products in France!
+          Discover Thailand&apos;s top-rated cannabis dispensary offering premium quality weed hand-picked from the finest local growers. Green Ghost delivers exceptional strains, edibles, concentrates, and accessories across Phuket, Bangkok, and nationwide. Experience fast, reliable weed delivery with expert service, competitive prices, and organic products. From Rawai to Karon, we&apos;re your trusted source for authentic Thai cannabis. Also serving premium CBD products in France!
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
