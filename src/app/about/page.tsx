@@ -52,10 +52,18 @@ export default async function AboutPage() {
       <div className="container mx-auto px-4 bg-black text-white">
         {/* Original description from the page */}
         {aboutPage?.description && (
-          <div
-            className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8"
-            dangerouslySetInnerHTML={{ __html: aboutPage.description }}
-          />
+          <>
+            <h2
+              id="who-are-we"
+              className="text-xl md:text-2xl font-bold text-center mb-4 mt-8 text-[#13DE00]"
+            >
+              Who are we?
+            </h2>
+            <div
+              className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8"
+              dangerouslySetInnerHTML={{ __html: aboutPage.description }}
+            />
+          </>
         )}
 
         {/* Section title and description from pages.csv */}

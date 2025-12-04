@@ -88,6 +88,14 @@ export default function BestShopsList({ shops }: BestShopsListProps) {
                     );
                 })}
             </ul>
-        </div>
+            <div className="mt-12 pt-8 border-t border-[#13DE00]/21 text-center text-gray-400 text-sm">
+                <p className="mb-2">
+                    Curated by <a href="https://gokai.org/" target="_blank" rel="noopener noreferrer" className="text-[#13DE00] hover:underline">Gokai Labs</a> for fun (nothing serious, just good weed 🇹🇭 🌿).
+                </p>
+                <p>
+                    Data sourced from <a href="https://weed.th/best-dispensaries-in-thailand?locale=en" target="_blank" rel="noopener noreferrer" className="text-[#13DE00] hover:underline">Weed.th</a>, Google Maps reviews, and other community lists.
+                </p>
+            </div>
+        </div >
     );
 }
