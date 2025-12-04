@@ -21,9 +21,9 @@ export default function StrainProductClient({ product }: StrainProductClientProp
 
   return (
     <div className="relative">
-      <MenuCategories />
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex items-center mb-4">
+      <div className="container mx-auto px-4">
+        <div className="sm:ml-auto sm:w-fit"><MenuCategories /></div>
+        <div className="flex items-center mb-2">
           <BackButton />
           <h1 className="text-xl md:text-2xl font-bold">{product.name}</h1>
         </div>

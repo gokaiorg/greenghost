@@ -42,7 +42,7 @@ export default function Banner({ title, description, bgSrc, iconSrc, iconAlt }: 
             width={120}
             height={120}
             priority
-            className="max-h-[80px] md:max-h-[120px] w-auto"
+            className="max-h-[100px] md:max-h-[150px] w-auto"
             style={{ width: 'auto', height: 'auto' }}
           />
         )}
