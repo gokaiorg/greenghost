@@ -35,7 +35,7 @@ export default function ConcentratesPage() {
       <div className="container mx-auto px-4">
         <div className="sm:ml-auto sm:w-fit"><MenuCategories /></div>
         <div className="flex  md:flex-row flex-col md:items-center space-x-2 mb-2">
-          <h1 className="text-xl lg:text-2xl font-bold text-left">Concentrates Menu</h1><p className="text-xs text-gray-400">Concentrates price for 1 gram.</p>
+          <h1 className="text-xl lg:text-2xl font-bold text-left whitespace-nowrap">Concentrates Menu</h1><p className="text-xs text-gray-400">Concentrates price for 1 gram.</p>
         </div>
         <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 list-none m-0 p-0" aria-label="Concentrates menu">
           {concentrates.map((concentrate) => (

@@ -65,7 +65,7 @@ export default function DeliveryList({ steps }: DeliveryListProps) {
                                 <div className="flex-shrink-0 w-6 h-6 bg-[#13DE00] text-black font-bold text-sm flex items-center justify-center">
                                     ℹ
                                 </div>
-                                <h4 className="text-gray-300 text-sm">{hint}</h4>
+                                <h3 className="text-gray-300 text-sm">{hint}</h3>
                             </div>
                         ))}
                     </div>

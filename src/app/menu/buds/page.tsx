@@ -35,7 +35,7 @@ export default function BudsPage() {
       <div className="container mx-auto px-4">
         <div className="sm:ml-auto sm:w-fit"><MenuCategories /></div>
         <div className="flex  md:flex-row flex-col md:items-center space-x-2 mb-2">
-          <h1 className="text-xl lg:text-2xl font-bold text-left">Buds Menu</h1><p className="text-xs text-gray-400">Buds price for 1 gram.</p>
+          <h1 className="text-xl lg:text-2xl font-bold text-left whitespace-nowrap">Buds Menu</h1><p className="text-xs text-gray-400">Buds price for 1 gram.</p>
         </div>
         <StrainFilter selectedDominances={selectedDominances} onFilterChange={setSelectedDominances} />
         <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 list-none m-0 p-0" aria-label="Buds menu">

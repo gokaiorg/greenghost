@@ -32,7 +32,7 @@ export default function PreRollsPage() {
       <div className="container mx-auto px-4">
         <div className="sm:ml-auto sm:w-fit"><MenuCategories /></div>
         <div className="flex  md:flex-row flex-col md:items-center space-x-2 mb-2">
-          <h1 className="text-xl lg:text-2xl font-bold text-left">Pre-rolls Menu</h1><p className="text-xs text-gray-400">On demand. +20THB on delivery. Free on store.</p>
+          <h1 className="text-xl lg:text-2xl font-bold text-left whitespace-nowrap">Pre-rolls Menu</h1><p className="text-xs text-gray-400">On demand. +20THB on delivery. Free on store.</p>
         </div>
         <StrainFilter selectedDominances={selectedDominances} onFilterChange={setSelectedDominances} />
         <ul className="space-y-2 list-none m-0 p-0" aria-label="Pre-rolls menu">
