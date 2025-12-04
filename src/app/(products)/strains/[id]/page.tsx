@@ -5,6 +5,7 @@ import StrainProductClient from './StrainProductClient'
 import { Product } from '@/lib/types'
 import { generateProductMetadata, generateProductSchema } from '@/lib/config/product-metadata'
 import { getProductById } from '@/lib/products'
+import StrainFeatured from '@/components/StrainFeatured'
 
 interface PageProps {
   params: Promise<{ id: string }>
@@ -74,6 +75,7 @@ export default async function StrainProductPage({ params }: { params: Promise<{ 
         }}
       />
       <StrainProductClient product={product} />
+      <StrainFeatured />
     </>
   )
 }

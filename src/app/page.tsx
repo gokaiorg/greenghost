@@ -4,15 +4,14 @@ import BannerHero from '@/components/BannerHero';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
 import MenuBlock from '@/components/MenuBlock';
-import FeaturedProducts from '@/components/FeaturedProducts';
+import StrainFeatured from '@/components/StrainFeatured';
 import Reviews from '@/components/Reviews';
 import AboutUsBlock from '@/components/AboutUsBlock';
 import LocationsHome from '@/components/LocationsHome';
 import TopsList from '@/components/TopsList';
 import PromotesList from '@/components/PromotesList';
 import { PHONE_NUMBER } from '@/lib/constants';
-import { getProducts } from '@/lib/products';
-import { Product } from '@/lib/types';
+
 
 export const metadata: Metadata = {
   title: 'Best Degen Weed Shop and Delivery - Green Ghost 🌿👻',
@@ -79,25 +78,8 @@ const organizationSchema = {
   },
 };
 
-const featuredStrainNames = [
-  'Strawneapple',
-  'Mango Sticky Rice',
-  'Toasted Toffee',
-  "Ben & Gary's",
-  'Thai Stick',
-  'Slaphappy',
-];
-
 export default async function Home() {
-  const allProducts = await getProducts();
-  const featuredProducts = allProducts
-    .filter(
-      (product: Product) =>
-        product.type === 'Strains' &&
-        featuredStrainNames.includes(product.name) &&
-        product.status === 'In stock'
-    )
-    .slice(0, 6);
+
 
   return (
     <>
@@ -105,7 +87,7 @@ export default async function Home() {
       <div className="min-h-screen bg-black text-white">
         <BannerHero />
         <MenuBlock />
-        <FeaturedProducts products={featuredProducts} />
+        <StrainFeatured />
         <AboutUsBlock />
         <LocationsHome />
         <TopsList />
