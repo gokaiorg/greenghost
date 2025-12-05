@@ -8,6 +8,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { CartProvider } from "@/contexts/CartContext";
 import OrganizationStructuredData from "@/components/OrganizationStructuredData";
 import GoogleTagManager from "@/components/GoogleTagManager";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import AgeVerification from "@/components/AgeVerification";
 import { getOrganizationData, getSocials } from "@/lib/organization-data";
 
@@ -130,6 +131,7 @@ export default async function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${pressStart2P.variable} antialiased bg-black text-white min-h-screen flex flex-col`}>
         <GoogleTagManager />
+        <GoogleAnalytics />
         <AgeVerification />
         <OrganizationStructuredData data={organizationData} />
         <CartProvider>
