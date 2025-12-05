@@ -1,0 +1,40 @@
+export interface Location {
+  id: string;
+  slug: string;
+  name: string;
+  hours: {
+    monday: string;
+    tuesday: string;
+    wednesday: string;
+    thursday: string;
+    friday: string;
+    saturday: string;
+    sunday: string;
+  };
+  phone: string;
+  address: string;
+  addressLink: string;
+  mapLink: string;
+  videoLink: string;
+  reviewLink: string;
+  website: string;
+  tripAdvisor: string;
+  weedTh: string;
+  wongnai: string;
+  highThailand: string;
+  appleMap: string;
+  gmapLink: string;
+  youtubeLink: string;
+  description: string;
+  details: string;
+  descSeo: string;
+  images: string[];
+  facebookLink?: string;
+  instagramLink?: string;
+  twitterLink?: string;
+  email?: string;
+  lat: number;
+  lng: number;
+  region: string;
+  country: string;
+}

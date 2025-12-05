@@ -1,72 +1,59 @@
-### Elven Tools Dapp
+# Green Ghost - Weed Shop Menu App
 
-- Docs: [elven.tools/docs/minter-dapp-introduction.html](https://www.elven.tools/docs/minter-dapp-introduction.html)
-- Dapp's React hooks and components [elven.tools/docs/dapp-react-hooks-and-components.html](https://www.elven.tools/docs/dapp-react-hooks-and-components.html)
-- Demo: [dapp-demo.elven.tools](https://dapp-demo.elven.tools)
-- Elven Tools intro (including the Dapp): [youtu.be/Jou5jn8PFz8](https://youtu.be/Jou5jn8PFz8)
+A Next.js application for Green Ghost, a weed shop menu with cart functionality synced to Google Spreadsheet data.
 
-The Dapp is built using Nextjs and a couple of helpful tools. It allows you to interact with the MultiversX blockchain and smart contracts, and especially it is prepared for the [Elven Tools Smart Contract](https://github.com/ElvenTools/elven-nft-minter-sc). But you can always modify it and adjust it for your needs.
+## Features
 
-### It provides:
+- **Menu Categories**: Buds, Pre-rolls, and Gadgets
+- **Product Displays**:
+  - Buds: Grid layout with images
+  - Pre-rolls: Full-width row layout (no images)
+  - Gadgets: Grid layout with images
+- **Cart System**: Add items, view cart, update quantities
+- **Responsive Design**: Built with Tailwind CSS
+- **Google Sheets Integration**: Sync product data from spreadsheet
 
-- Signing with 4 MultiversX blockchain [providers](https://docs.multiversx.com/sdk-and-tools/sdk-js/)
-  - Web Wallet
-  - xPortal mobile app
-  - MultiversX DeFi browser extension
-  - Ledger Nano
-- [Guarderd transactions](https://docs.multiversx.com/sdk-and-tools/sdk-dapp/internal-processes/guardians/#specifications-of-a-guarded-transaction)
-- React hooks for making transactions
-- React hooks for querying smart contracts
-- Tools and React hooks for app state synchronization
-- Optional API endpoint rewrites
-- Preconfigured UI based on [Chakra UI](https://chakra-ui.com/)
-- The template with sections mainly used on minter dapps (it will be developed further)
+## Getting Started
 
-### @useElven/core
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-The template is based on `@useelven/core` npm library.
+3. Set up Google Sheets API (optional):
+   - Get a Google API key from Google Cloud Console
+   - Make the spreadsheet publicly viewable (Share > Anyone with the link can view)
+   - Set environment variable:
+     ```
+     GOOGLE_API_KEY=your-api-key-here
+     ```
+     (Or the API key is hardcoded for development)
+   - Spreadsheet URL: https://docs.google.com/spreadsheets/d/1_tPKbwLkZHYZB99lOs91NhlW1YjkiP7UOsp9hIuVRnc/edit?gid=1335065453#gid=1335065453
+   - Columns: Item ID (used as slug), Item name, Type (Buds/Pre-rolls/Gadgets), Price, Stock, Status
 
-- [@useelven/core docs](https://www.useElven.com) - React hooks for MultiversX blockchain
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-Besides that, there are custom React components and hooks that will help you with development.
+Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-### Elven Tools Dapp docs
+## Project Structure
 
-For more docs on how to use it check the link above, and for more examples see: [elven.tools/docs/dapp-react-hooks-and-components.html](https://elven.tools/docs/dapp-react-hooks-and-components.html)
+- `/app/menu`: Menu pages
+- `/app/menu/buds`: Buds listing and individual pages
+- `/app/menu/pre-rolls`: Pre-rolls listing and individual pages
+- `/app/menu/gadgets`: Gadgets listing and individual pages
+- `/app/cart`: Cart page
+- `/components`: Reusable components
+- `/contexts`: React contexts (Cart)
+- `/lib`: Utility functions and data handling
+- `/types`: TypeScript type definitions
 
-### Tracking the progress
+## Technologies
 
-- [Elven Tools Dapp kanban](https://github.com/orgs/ElvenTools/projects/2)
-
-### How to start it locally:
-1. npm install -g elven-tools
-2. elven-tools init-dapp
-3. cd your-dapp-directory
-5. npm run dev
-
---- or ---
-
-1. clone or download the repo code
-2. cd elven-tools-dapp
-3. npm install
-4. configure .env.local (you can copy the contents of the .env.example)
-6. npm run dev
-
-Check detailed docs on it here: [How to start with the Dapp](https://www.elven.tools/docs/how-to-start-with-the-dapp.html)
-
-### Main assumption for the dapp:
-
-- it works on Nextjs
-- it uses the newest version of [sdk-core](https://github.com/multiversx/mx-sdk-js-core) without the [sdk-dapp](https://github.com/multiversx/mx-sdk-dapp) library.
-- optionally it uses backend-side rewrites to hide the API endpoint, then the only exposed one is `/api`
-- it uses .env file - there is an example in the repo
-- it uses [chakra-ui](https://chakra-ui.com/)
-
-More docs on it: [Minter Dapp introduction](https://www.elven.tools/docs/minter-dapp-introduction.html)
-
-### Other tools
-
-- [useElven](https://www.useElven.com) - React core hooks for MultiversX blockchain
-- [elven.js](https://www.elvenjs.com) - standalone lite SDK for browsers without build steps
-- [Buildo Begins](https://github.com/xdevguild/buildo-begins) - CLI helper tools - interaction with APIs, smart contracts and protocol
-- [Nextjs Dapp Template](https://github.com/xdevguild/nextjs-dapp-template) - Open source Dapp template for the MultiversX blockchain (more general one).
+- Next.js 15 (App Router)
+- TypeScript
+- Tailwind CSS
+- Google Sheets API
