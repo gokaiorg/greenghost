@@ -59,7 +59,7 @@ const staticUrls = [
 
 module.exports = {
   siteUrl: 'https://green.gd',
-  generateRobotsTxt: true,
+  generateRobotsTxt: false,
   changefreq: 'daily',
   priority: 0.7,
   additionalPaths: async (config) => {
