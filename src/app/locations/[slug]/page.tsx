@@ -3,7 +3,7 @@ import { toJsonLd } from '@/lib/utils/json-ld';
 import type { Metadata } from 'next';
 import { generateLocalBusinessSchema, generateFAQSchema } from '@/lib/utils/structuredData';
 import BackButton from '@/components/BackButton';
-import { isLocationOpen } from '@/lib/utils/hours';
+import OpenStatusBadge from '@/components/OpenStatusBadge';
 import { getLocations } from '@/lib/organization-data';
 
 import { getLocationImages } from '@/lib/utils/images';
@@ -31,7 +31,6 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
   const localBusinessSchema = generateLocalBusinessSchema(location);
   const faqSchema = generateFAQSchema(location);
-  const isOpen = isLocationOpen(location.hours, location.slug);
   const today = new Date().toLocaleDateString('en-US', { weekday: 'long', timeZone: 'Asia/Bangkok' }).toLowerCase() as keyof typeof location.hours;
 
   return (
@@ -50,21 +49,21 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
 
               {/* Left Side: Back Button & Title */}
-              <div className="flex flex-col gap-4">
-                <div className="flex items-center">
+              <div className="flex flex-col">
+                <div className="flex items-center mb-2">
                   <BackButton />
                   <h1 className="text-xl md:text-2xl font-bold">
                     {location.name}
                   </h1>
                 </div>
+                <p className="text-[10px] md:text-xs lg:text-sm text-gray-400">
+                  {location.descSeo}
+                </p>
               </div>
 
               {/* Right Side: Status Badge */}
-              <div className={`inline-flex items-center gap-2 px-3 py-1 mt-2 md:mt-0 ml-auto ${isOpen ? 'bg-[#13DE00]/90' : 'bg-red-500/90'}`}>
-                <span className={`w-3 h-3 ${isOpen ? 'bg-black' : 'bg-white'} animate-pulse`}></span>
-                <span className={`text-sm font-bold uppercase tracking-widest ${isOpen ? 'text-black' : 'text-white'}`}>
-                  {isOpen ? 'OPEN NOW' : 'CLOSED'}
-                </span>
+              <div className="mt-2 md:mt-0 ml-auto">
+                <OpenStatusBadge hours={location.hours} slug={location.slug} />
               </div>
             </div>
           </div>

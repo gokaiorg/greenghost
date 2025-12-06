@@ -14,7 +14,7 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
     if (!images || images.length === 0) return null;
 
     return (
-        <div className="w-full overflow-hidden py-4">
+        <div className="w-full overflow-hidden pb-4">
             <div
                 ref={scrollContainerRef}
                 className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 px-4 no-scrollbar"

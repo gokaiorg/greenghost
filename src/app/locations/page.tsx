@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { isLocationOpen } from '@/lib/utils/hours';
+import OpenStatusBadge from '@/components/OpenStatusBadge';
 import Banner from '@/components/Banner';
 import { getBannerData } from '@/lib/utils/bannerUtils';
 import { getPagesServerSide as getPages } from '@/lib/pages-server';
@@ -26,8 +26,6 @@ export default async function LocationsPage() {
       <div className="container mx-auto px-4 py-16">
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" aria-label="Store Locations List">
           {locations.map((location) => {
-            const isOpen = isLocationOpen(location.hours, location.slug);
-
             return (
               <li
                 key={location.id}
@@ -52,10 +50,7 @@ export default async function LocationsPage() {
 
                   {/* Status Badge */}
                   <div className="absolute top-4 right-4">
-                    <span className={`inline-flex items-center gap-2 px-3 py-1 text-xs font-bold uppercase tracking-widest ${isOpen ? 'bg-[#13DE00]/90 text-black' : 'bg-red-500/90 text-white'}`}>
-                      <span className={`w-3 h-3 ${isOpen ? 'bg-black' : 'bg-white'} animate-pulse`}></span>
-                      {isOpen ? 'OPEN NOW' : 'CLOSED'}
-                    </span>
+                    <OpenStatusBadge hours={location.hours} slug={location.slug} />
                   </div>
                 </div>
 
