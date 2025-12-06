@@ -1,5 +1,5 @@
 export const SITE_NAME = 'Green Ghost 🌿👻';
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://green.gd';
 
 type MetadataProps = {
   title?: string;
