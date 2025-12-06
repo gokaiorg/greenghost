@@ -142,16 +142,6 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/jobs"
-                    title="We are hiring"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/jobs' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    We are hiring
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     href="/cannabis-club"
                     title="Join the club"
                     className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/cannabis-club' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
@@ -168,6 +158,16 @@ export default function Header() {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Mint your NFT
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/jobs"
+                    title="We are hiring"
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/jobs' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    We are hiring
                   </Link>
                 </li>
                 <li>

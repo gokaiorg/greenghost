@@ -68,11 +68,6 @@ export default function Footer({ socials }: FooterProps) {
                 </Link>
               </li>
               <li>
-                <Link href="/jobs" className={`bg-[#13DE00] h-[110px] max-w-[110px] flex items-center justify-center hover:bg-[#13DE00]/13 hover:text-[#13DE00] transition-colors text-xs font-medium p-1 tracking-tight ${pathname === '/jobs' ? 'bg-[#13DE00]/13 text-[#13DE00]' : 'text-black'}`} aria-label="View job openings" title="We are hiring">
-                  We are hiring
-                </Link>
-              </li>
-              <li>
                 <Link href="/cannabis-club" className={`bg-[#13DE00] h-[110px] max-w-[110px] flex items-center justify-center hover:bg-[#13DE00]/13 hover:text-[#13DE00] transition-colors text-xs font-medium p-1 tracking-tight ${pathname === '/cannabis-club' ? 'bg-[#13DE00]/13 text-[#13DE00]' : 'text-black'}`} aria-label="Join the cannabis club" title="Join the club">
                   Join the club
                 </Link>
@@ -80,6 +75,11 @@ export default function Footer({ socials }: FooterProps) {
               <li>
                 <Link href="/nft" className={`bg-[#13DE00] h-[110px] max-w-[110px] flex items-center justify-center hover:bg-[#13DE00]/13 hover:text-[#13DE00] transition-colors text-xs font-medium p-1 tracking-tight ${pathname === '/nft' ? 'bg-[#13DE00]/13 text-[#13DE00]' : 'text-black'}`} aria-label="Mint your Green Ghost NFT" title="Mint your NFT">
                   Mint your NFT
+                </Link>
+              </li>
+              <li>
+                <Link href="/jobs" className={`bg-[#13DE00] h-[110px] max-w-[110px] flex items-center justify-center hover:bg-[#13DE00]/13 hover:text-[#13DE00] transition-colors text-xs font-medium p-1 tracking-tight ${pathname === '/jobs' ? 'bg-[#13DE00]/13 text-[#13DE00]' : 'text-black'}`} aria-label="View job openings" title="We are hiring">
+                  We are hiring
                 </Link>
               </li>
               <li>
