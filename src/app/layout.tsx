@@ -42,7 +42,7 @@ const isProduction = process.env.NEXT_PUBLIC_SITE_URL === 'https://green.gd' || 
 export const metadata: Metadata = {
   title: 'Green Ghost 🌿👻',
   description: 'Premium cannabis products in Thailand. Fast, discreet delivery.',
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://green.gd'),
   keywords: ['cannabis', 'weed', 'buds', 'pre-rolls', 'concentrates', 'edibles', 'gadgets', 'Thailand', 'online shop'],
   authors: [{ name: 'Green Ghost' }],
   creator: 'Green Ghost',
