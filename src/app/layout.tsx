@@ -11,6 +11,7 @@ import GoogleTagManager from "@/components/GoogleTagManager";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import AgeVerification from "@/components/AgeVerification";
 import { getOrganizationData, getSocials } from "@/lib/organization-data";
+import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -142,6 +143,7 @@ export default async function RootLayout({
             <WhatsAppButton />
             <Chatbox />
           </div>
+          <ServiceWorkerRegister />
         </CartProvider>
       </body>
     </html>
