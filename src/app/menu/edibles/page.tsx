@@ -59,7 +59,11 @@ export default function EdiblesPage() {
                       <h2 className="text-base lg:text-lg font-semibold mb-1 text-sm leading-tight">{edible.name}</h2>
                     </li>
                     <li>
-                      <p className="text-[10px] sm:text-xs text-gray-400 whitespace-nowrap">THC {edible.thc}mg</p>
+                      {edible.thc && edible.thc > 0 ? (
+                        <p className="text-[10px] sm:text-xs text-gray-400 whitespace-nowrap">THC {edible.thc}mg</p>
+                      ) : edible.cbd && edible.cbd > 0 ? (
+                        <p className="text-[10px] sm:text-xs text-gray-400 whitespace-nowrap">CBD {edible.cbd}mg</p>
+                      ) : null}
                     </li>
                     <li className="absolute top-2 right-2">
                       <p className={`px-2 py-1 text-sm ${edible.status === 'In stock' ? 'bg-black text-[#13DE00]' : 'bg-black text-red-500'}`}>{edible.status === 'In stock' ? `${edible.price}฿` : 'Sold out'}</p>

@@ -64,7 +64,11 @@ export default function EdibleProductClient({ product }: EdibleProductClientProp
         {/* Desktop Layout - Price on right, info on left */}
         <div className="hidden md:flex justify-between items-center mb-4">
           <div className="flex flex-col text-sm text-gray-400">
-            <span className="whitespace-nowrap">THC {product.thc}%</span>
+            {product.thc && product.thc > 0 ? (
+              <span className="whitespace-nowrap">THC {product.thc}mg</span>
+            ) : product.cbd && product.cbd > 0 ? (
+              <span className="whitespace-nowrap">CBD {product.cbd}mg</span>
+            ) : null}
             {product.effects && <span><span className="text-gray-400">Feelings:</span> <span className="text-yellow-600">{product.effects}</span></span>}
             {product.relieves && <span><span className="text-gray-400">Relieves:</span> <span className="text-yellow-600">{product.relieves}</span></span>}
           </div>
@@ -83,7 +87,11 @@ export default function EdibleProductClient({ product }: EdibleProductClientProp
         {/* Mobile Product Info - Shows below price on mobile */}
         <div className="md:hidden mb-4">
           <div className="flex flex-col text-sm text-gray-400 space-y-1">
-            <span className="whitespace-nowrap">THC {product.thc}%</span>
+            {product.thc && product.thc > 0 ? (
+              <span className="whitespace-nowrap">THC {product.thc}mg</span>
+            ) : product.cbd && product.cbd > 0 ? (
+              <span className="whitespace-nowrap">CBD {product.cbd}mg</span>
+            ) : null}
             {product.effects && <span><span className="text-gray-500">Feelings:</span> <span className="text-yellow-600">{product.effects}</span></span>}
             {product.relieves && <span><span className="text-gray-500">Relieves:</span> <span className="text-yellow-600">{product.relieves}</span></span>}
           </div>
