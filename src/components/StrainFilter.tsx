@@ -39,7 +39,7 @@ export default function StrainFilter({ selectedDominances, onFilterChange }: Str
             <div className="relative w-4 h-4 mr-1 sm:mr-2">
               <Image
                 src={`/images/icons/${filter.value.toLowerCase()}-green-ghost.avif`}
-                alt=""
+                alt={filter.label}
                 fill
                 className="object-contain"
                 aria-hidden="true"

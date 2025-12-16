@@ -2,6 +2,37 @@ import { getBannerData } from '@/lib/utils/bannerUtils';
 import { getPagesServerSide as getPages } from '@/lib/pages-server';
 import Banner from '@/components/Banner';
 import SeedsList from '@/components/SeedsList';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Premium Cannabis Seeds Partners - Green Ghost 🌿👻',
+  description: 'Shop high-quality cannabis seeds from trusted partners at Green Ghost. Find feminized & autoflower varieties with guaranteed germination. Start growing today with Green Ghost 🌿👻',
+  openGraph: {
+    title: 'Premium Cannabis Seeds Partners - Green Ghost 🌿👻',
+    description: 'Shop high-quality cannabis seeds from trusted partners at Green Ghost. Find feminized & autoflower varieties with guaranteed germination. Start growing today with Green Ghost 🌿👻',
+    type: 'website',
+    locale: 'en_US',
+    url: '/seeds',
+    siteName: 'Green Ghost',
+    images: [
+      {
+        url: '/images/banners/green-ghost-best-degen-weed-shop-seeds.avif',
+        width: 1920,
+        height: 1080,
+        alt: 'Green Ghost Seeds',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Premium Cannabis Seeds Partners - Green Ghost 🌿👻',
+    description: 'Shop high-quality cannabis seeds from trusted partners at Green Ghost. Find feminized & autoflower varieties with guaranteed germination. Start growing today with Green Ghost 🌿👻',
+    images: ['/images/banners/green-ghost-best-degen-weed-shop-seeds.avif'],
+  },
+  alternates: {
+    canonical: '/seeds',
+  },
+};
 
 export default async function SeedsPage() {
   const allPages = await getPages();
