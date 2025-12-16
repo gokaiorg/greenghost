@@ -155,7 +155,7 @@ export default function Reviews() {
       <div className="absolute top-10 left-10 opacity-80 pointer-events-none hidden md:block">
         <Image
           src="/images/icons/green-ghost-degen-weed-shop-cannabis-leaf.avif"
-          alt=""
+          alt="Leaf Green Ghost"
           width={150}
           height={150}
           className="rotate-12 animate-pulse"
@@ -164,7 +164,7 @@ export default function Reviews() {
       <div className="absolute bottom-10 right-10 opacity-80 pointer-events-none hidden md:block">
         <Image
           src="/images/icons/indica-green-ghost.avif"
-          alt=""
+          alt="Indica Green Ghost"
           width={120}
           height={120}
           className="-rotate-12 animate-pulse"
@@ -174,7 +174,7 @@ export default function Reviews() {
       <div className="absolute top-1/2 left-5 opacity-50 pointer-events-none hidden lg:block">
         <Image
           src="/images/icons/hybrid-green-ghost.avif"
-          alt=""
+          alt="Hybrid Green Ghost"
           width={80}
           height={80}
           className="rotate-45"
@@ -183,7 +183,7 @@ export default function Reviews() {
       <div className="absolute top-1/3 right-5 opacity-50 pointer-events-none hidden lg:block">
         <Image
           src="/images/icons/sativa-green-ghost.avif"
-          alt=""
+          alt="Sativa Green Ghost"
           width={100}
           height={100}
           className="-rotate-45"
