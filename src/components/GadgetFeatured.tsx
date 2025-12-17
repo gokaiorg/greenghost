@@ -41,7 +41,7 @@ export default async function GadgetFeatured() {
             >
                 {products.map(gadget => (
                     <li key={gadget.id} className="relative">
-                        <Link href={`/menu/gadgets`} title={gadget.name}>
+                        <Link href={`/gadgets/${gadget.id}`} title={gadget.name}>
                             <div className={`hover:bg-[#13DE00]/13 p-1 flex flex-col relative cursor-pointer`}>
                                 <div className="relative mb-2">
                                     <MiniSlider
@@ -69,6 +69,14 @@ export default async function GadgetFeatured() {
                     </li>
                 ))}
             </ul>
+            <div className="mt-8 text-center">
+                <Link
+                    href="/menu/gadgets"
+                    className="inline-block px-8 py-3 bg-[#13DE00] text-black font-bold text-lg hover:bg-[#13DE00]/80 transition-colors uppercase font-pixel shadow-[4px_4px_0px_#000000] border border-black hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#000000] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
+                >
+                    View all Gadgets
+                </Link>
+            </div>
         </div>
     )
 }
