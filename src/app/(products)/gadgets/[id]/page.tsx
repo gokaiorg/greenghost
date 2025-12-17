@@ -64,6 +64,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return generateProductMetadata(product)
 }
 
+import GadgetFeatured from '@/components/GadgetFeatured'
+
+// ... existing imports ...
+
 export default async function GadgetProductPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const product = await getProduct(id)
@@ -82,7 +86,10 @@ export default async function GadgetProductPage({ params }: { params: Promise<{ 
           __html: toJsonLd(schema)
         }}
       />
-      <GadgetProductClient product={product} />
+      <GadgetProductClient
+        product={product}
+      />
+      <GadgetFeatured />
     </>
   )
 }

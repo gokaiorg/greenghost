@@ -10,9 +10,10 @@ import BagAddButton from '@/components/BagAddButton'
 
 interface GadgetProductClientProps {
   product: Product
+  featuredSection?: React.ReactNode
 }
 
-export default function GadgetProductClient({ product }: GadgetProductClientProps) {
+export default function GadgetProductClient({ product, featuredSection }: GadgetProductClientProps) {
 
 
   return (
@@ -92,6 +93,8 @@ export default function GadgetProductClient({ product }: GadgetProductClientProp
             ></p>
           </div>
         )}
+
+        {featuredSection}
       </div>
     </div>
   )

@@ -30,7 +30,7 @@ export default async function StrainFeatured() {
 
     return (
         <div className="container mx-auto px-4 py-8">
-            <h2 className="text-xl lg:text-2xl font-bold text-left mb-2">Top 6 Must-Try Weed Strains in 2026</h2>
+            <h2 className="text-xl lg:text-2xl font-bold text-left mb-2"><span className="text-[#13DE00]">Top 6 Must-Try</span> Weed Strains in 2026</h2>
             <p className="text-gray-400 mb-4">
                 Explore the best weed in Phuket in 2026 with our curated selection of top-quality strains. Handpicked for their superior effects and flavors, these strains include a variety of Sativa, Hybrid, and Indica dominances, each chosen to elevate your experience.
             </p>
