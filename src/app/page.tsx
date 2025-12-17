@@ -6,6 +6,7 @@ import JsonLd from '@/components/JsonLd';
 import MenuBlock from '@/components/MenuBlock';
 import StrainFeatured from '@/components/StrainFeatured';
 import Reviews from '@/components/Reviews';
+import GardenBlock from '@/components/GardenBlock';
 import AboutUsBlock from '@/components/AboutUsBlock';
 import LocationsHome from '@/components/LocationsHome';
 import TopsList from '@/components/TopsList';
@@ -78,9 +79,9 @@ const organizationSchema = {
   },
 };
 
+import GadgetFeatured from '@/components/GadgetFeatured';
+
 export default async function Home() {
-
-
   return (
     <>
       <JsonLd data={organizationSchema} />
@@ -90,8 +91,10 @@ export default async function Home() {
         <StrainFeatured />
         <AboutUsBlock />
         <LocationsHome />
+        <GadgetFeatured />
         <TopsList />
         <PromotesList />
+        <GardenBlock />
         <Reviews />
         <ContactBlock />
       </div>
