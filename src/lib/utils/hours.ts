@@ -1,23 +1,7 @@
 const getBangkokTime = (): { hours: number; minutes: number; dayOfWeek: number } => {
   const now = new Date();
 
-  // Use Intl.DateTimeFormat to get the time in Bangkok
-  const formatter = new Intl.DateTimeFormat('en-US', {
-    timeZone: 'Asia/Bangkok',
-    hour: 'numeric',
-    minute: 'numeric',
-    weekday: 'short', // We'll convert string to numeric day later or map it
-    hour12: false
-  });
-
-  const parts = formatter.formatToParts(now);
-  const hourPart = parts.find(p => p.type === 'hour')?.value;
-  const minutePart = parts.find(p => p.type === 'minute')?.value;
-
-  // To get the correct day of week index (0-6), we can create a date string from the parts
-  // But a simpler way is to just use getDay() on the shifted date object, or rely on string parsing?
-  // Actually, creating a new Date object from the Bangkok time string is reliable.
-
+  // Use toLocaleString to get the time in Bangkok timezone
   const bangkokDateString = now.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' });
   const bangkokDate = new Date(bangkokDateString);
 

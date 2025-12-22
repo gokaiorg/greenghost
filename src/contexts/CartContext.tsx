@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useReducer, ReactNode, useEffect } from 'react'
+import { createContext, useContext, useReducer, ReactNode, useEffect, useState } from 'react'
 import { Product, CartItem } from '@/lib/types'
 
 interface CartState {
@@ -69,14 +69,37 @@ const CartContext = createContext<{
 } | null>(null)
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
-  const savedCart = typeof window !== 'undefined' ? localStorage.getItem('cart') : null
-  const initialState: CartState = savedCart ? JSON.parse(savedCart) : { items: [] }
+  // Always start with empty cart to prevent hydration mismatch
+  const [state, dispatch] = useReducer(cartReducer, { items: [] })
+  const [isHydrated, setIsHydrated] = useState(false)
 
-  const [state, dispatch] = useReducer(cartReducer, initialState)
-
+  // Hydrate from localStorage after mount
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(state))
-  }, [state])
+    const savedCart = localStorage.getItem('cart')
+    if (savedCart) {
+      try {
+        const parsed = JSON.parse(savedCart)
+        // Restore each item to the cart
+        parsed.items?.forEach((item: CartItem) => {
+          dispatch({ type: 'ADD_ITEM', product: item, menuType: item.menuType })
+          // Adjust quantity if needed
+          if (item.quantity > 1) {
+            dispatch({ type: 'UPDATE_QUANTITY', id: item.id, quantity: item.quantity, menuType: item.menuType })
+          }
+        })
+      } catch (e) {
+        console.error('Failed to parse saved cart:', e)
+      }
+    }
+    setIsHydrated(true)
+  }, [])
+
+  // Save to localStorage whenever cart changes (only after hydration)
+  useEffect(() => {
+    if (isHydrated) {
+      localStorage.setItem('cart', JSON.stringify(state))
+    }
+  }, [state, isHydrated])
 
   const addItem = (product: Product, menuType: string) => dispatch({ type: 'ADD_ITEM', product, menuType })
   const removeItem = (id: string, menuType: string) => dispatch({ type: 'REMOVE_ITEM', id, menuType })
