@@ -4,9 +4,18 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 export default function AgeVerification() {
+    const [mounted, setMounted] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
 
+    // First useEffect: Mark component as mounted (client-side only)
     useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    // Second useEffect: Check verification status after mounting
+    useEffect(() => {
+        if (!mounted) return;
+
         // Check if user has already verified
         const hasVerified = sessionStorage.getItem('age-verified');
 
@@ -17,7 +26,7 @@ export default function AgeVerification() {
         if (!hasVerified && !isBot) {
             setIsVisible(true);
         }
-    }, []);
+    }, [mounted]);
 
     const handleYes = () => {
         sessionStorage.setItem('age-verified', 'true');
@@ -28,7 +37,8 @@ export default function AgeVerification() {
         window.location.href = 'https://ghostverse.org/';
     };
 
-    if (!isVisible) return null;
+    // Don't render anything until mounted (prevents hydration mismatch)
+    if (!mounted || !isVisible) return null;
 
     return (
         <div

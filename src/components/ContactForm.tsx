@@ -48,6 +48,21 @@ export default function ContactForm() {
 
     return (
         <div className="w-full max-w-2xl mx-auto mt-12 mb-12">
+            {/* Hidden static form for Netlify detection at build time */}
+            <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                hidden
+            >
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
+                <input type="text" name="name" />
+                <input type="email" name="email" />
+                <textarea name="message"></textarea>
+            </form>
+
             <div className="bg-[#13DE00] p-6 md:p-8 relative">
                 {/* Pixel Art Corners */}
                 <div className="absolute top-0 left-0 w-2 h-2 bg-[#13DE00]" />
@@ -63,10 +78,18 @@ export default function ContactForm() {
                     name="contact"
                     method="POST"
                     data-netlify="true"
+                    data-netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
                     className="space-y-6"
                 >
+                    {/* Hidden fields for Netlify */}
                     <input type="hidden" name="form-name" value="contact" />
+                    <div hidden>
+                        <label>
+                            Don't fill this out if you're human: <input name="bot-field" />
+                        </label>
+                    </div>
+
                     <div>
                         <label htmlFor="name" className="block text-black mb-2 font-bold font-pixel text-sm">
                             NAME
@@ -139,14 +162,14 @@ export default function ContactForm() {
                     </button>
 
                     {status === 'success' && (
-                        <p className="text-[#13DE00] text-center font-mono animate-pulse">
-                            Thanks for reaching out! We&apos;ll get back to you soon.
+                        <p className="text-black text-center font-mono font-bold">
+                            ✅ Thanks for reaching out! We&apos;ll get back to you soon.
                         </p>
                     )}
 
                     {status === 'error' && (
-                        <p className="text-red-500 text-center font-mono">
-                            {errorMessage}
+                        <p className="text-red-600 text-center font-mono font-bold">
+                            ❌ {errorMessage}
                         </p>
                     )}
                 </form>
