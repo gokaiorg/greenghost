@@ -1,0 +1,28 @@
+{
+    "accountAssociation": {
+        "header": "eyJmaWQiO... (placeholder)",
+        "payload": "eyJkb21haW4iOiJ... (placeholder)",
+        "signature": "MHhj... (placeholder)"
+    },
+    "miniapp": {
+        "version": "1",
+        "name": "Green Ghost 🌿👻",
+        "description": "Premium cannabis shop featuring buds and pre-rolls with exclusive x402 payments and NFT-gated member pricing",
+        "iconUrl": "https://green.gd/images/logo512.png",
+        "homeUrl": "https://green.gd",
+        "splashImageUrl": "https://green.gd/green-ghost-degen-weed-shop.png",
+        "splashBackgroundColor": "#000000",
+        "primaryCategory": "commerce",
+        "tags": [
+            "cannabis",
+            "shop",
+            "x402",
+            "NFT-gated"
+        ],
+        "triggers": [
+            {
+                "type": "composer"
+            }
+        ]
+    }
+}
