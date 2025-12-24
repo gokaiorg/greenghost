@@ -13,6 +13,7 @@ import AgeVerification from "@/components/AgeVerification";
 import { getOrganizationData, getSocials } from "@/lib/organization-data";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import FarcasterProvider from "@/components/FarcasterProvider";
+import WalletProvider from "@/components/WalletProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -137,16 +138,18 @@ export default async function RootLayout({
         <AgeVerification />
         <OrganizationStructuredData data={organizationData} />
         <FarcasterProvider>
-          <CartProvider>
-            <Header />
-            <main className="flex-grow">{children}</main>
-            <Footer socials={socials} />
-            <div className="fixed bottom-4 right-4 z-30 flex flex-row space-x-4">
-              <WhatsAppButton />
-              <Chatbox />
-            </div>
-            <ServiceWorkerRegister />
-          </CartProvider>
+          <WalletProvider>
+            <CartProvider>
+              <Header />
+              <main className="flex-grow">{children}</main>
+              <Footer socials={socials} />
+              <div className="fixed bottom-4 right-4 z-30 flex flex-row space-x-4">
+                <WhatsAppButton />
+                <Chatbox />
+              </div>
+              <ServiceWorkerRegister />
+            </CartProvider>
+          </WalletProvider>
         </FarcasterProvider>
       </body>
     </html>
