@@ -51,7 +51,7 @@ export default function SocialIcons({ socials }: SocialIconsProps) {
             className="flex justify-center md:justify-start space-x-4 list-none m-0 p-0"
             aria-label="Social media links"
         >
-            {socials.map((social, index) => {
+            {socials?.map((social, index) => {
                 const icon = getSocialIcon(social.name);
                 if (!icon) return null;
 

@@ -510,36 +510,43 @@ export interface Social {
 export async function parseSocialsCSV(): Promise<Social[]> {
     const path = (await import('path')).default;
     const fs = (await import('fs')).default;
+    try {
+        const csvPath = path.join(process.cwd(), 'public/datas/socials.csv');
+        if (!fs.existsSync(csvPath)) return [];
 
-    const csvPath = path.join(process.cwd(), 'public/datas/socials.csv');
-    const csvContent = fs.readFileSync(csvPath, 'utf-8');
+        const csvContent = fs.readFileSync(csvPath, 'utf-8');
 
-    const lines = csvContent.split('\n').filter(line => line.trim() !== '');
-    const headers = lines[0].split(',').map(h => h.trim().replace(/^\"|\"$/g, '').toLowerCase());
-    const socials: Social[] = [];
+        const lines = csvContent.split('\n').filter(line => line.trim() !== '');
+        if (lines.length === 0) return [];
 
-    for (let i = 1; i < lines.length; i++) {
-        const line = lines[i];
-        if (!line) continue;
+        const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, '').toLowerCase());
+        const socials: Social[] = [];
 
-        const values = line.split(',').map(v => v.trim().replace(/^\"|\"$/g, '').replace(/\r$/g, ''));
+        for (let i = 1; i < lines.length; i++) {
+            const line = lines[i];
+            if (!line) continue;
 
-        if (values.length >= headers.length) {
-            const social: Record<string, string> = {};
-            headers.forEach((header, index) => {
-                social[header] = values[index] || '';
-            });
+            const values = line.split(',').map(v => v.trim().replace(/^"|"$/g, '').replace(/\r$/g, ''));
 
-            socials.push(social as unknown as Social);
+            if (values.length >= headers.length) {
+                const social: Record<string, string> = {};
+                headers.forEach((header, index) => {
+                    social[header] = values[index] || '';
+                });
+
+                socials.push(social as unknown as Social);
+            }
         }
-    }
 
-    return socials;
+        return socials;
+    } catch (error) {
+        console.error('Error parsing socials.csv:', error);
+        return [];
+    }
 }
 
 export async function getSocials(): Promise<Social[]> {
     return parseSocialsCSV();
 }
-
 
 
