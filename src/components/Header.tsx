@@ -135,7 +135,7 @@ export default function Header() {
                   <Link
                     href="/about"
                     title="Cannabis culture"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname.startsWith('/about') ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname?.startsWith('/about') ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Cannabis culture

@@ -46,23 +46,31 @@ type ItemData = {
 };
 
 async function getCsvData() {
-    // Determine path safely
-    const publicDir = path.join(process.cwd(), 'public');
-    const lawsCsvPath = path.join(publicDir, 'datas', 'laws.csv');
-    const lawsFaqCsvPath = path.join(publicDir, 'datas', 'laws-faq.csv');
+    try {
+        // Determine path safely
+        const publicDir = path.join(process.cwd(), 'public');
+        const lawsCsvPath = path.join(publicDir, 'datas', 'laws.csv');
+        const lawsFaqCsvPath = path.join(publicDir, 'datas', 'laws-faq.csv');
 
-    // Read files
-    const lawsFile = fs.readFileSync(lawsCsvPath, 'utf8');
-    const lawsFaqFile = fs.readFileSync(lawsFaqCsvPath, 'utf8');
+        // Read files asynchronously
+        const lawsFile = await fs.promises.readFile(lawsCsvPath, 'utf8');
+        const lawsFaqFile = await fs.promises.readFile(lawsFaqCsvPath, 'utf8');
 
-    // Parse CSVs
-    const lawsData = Papa.parse<ItemData>(lawsFile, { header: true, skipEmptyLines: true }).data;
-    const lawsFaqData = Papa.parse<ItemData>(lawsFaqFile, { header: true, skipEmptyLines: true }).data;
+        // Parse CSVs
+        const lawsData = Papa.parse<ItemData>(lawsFile, { header: true, skipEmptyLines: true }).data;
+        const lawsFaqData = Papa.parse<ItemData>(lawsFaqFile, { header: true, skipEmptyLines: true }).data;
 
-    return {
-        lawsData,
-        lawsFaqData,
-    };
+        return {
+            lawsData,
+            lawsFaqData,
+        };
+    } catch (error) {
+        console.error('Error in getCsvData:', error);
+        return {
+            lawsData: [],
+            lawsFaqData: [],
+        };
+    }
 }
 
 export default async function LegalLawsPage() {
