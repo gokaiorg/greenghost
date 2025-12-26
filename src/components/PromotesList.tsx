@@ -11,6 +11,7 @@ interface PromoteItem {
 }
 
 const imageMapping: Record<string, string> = {
+    "Cannabis Medical Prescription": "legal-laws",
     "Coffee shop Rawai": "coffeeshop",
     "Weed Delivery Phuket": "delivery",
     "Green Ghost CBD": "cbd-france"
@@ -77,7 +78,7 @@ export default async function PromotesList() {
 
     return (
         <section className="container mx-auto px-4 py-12">
-            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" aria-label="Promotions List">
+            <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4" aria-label="Promotions List">
                 {items.map((item, index) => {
                     const imageKey = imageMapping[item.title] || item.title.toLowerCase().replace(/\s+/g, '-');
                     const imagePath = `/images/icons/green-ghost-${imageKey}.avif`;

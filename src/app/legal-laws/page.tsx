@@ -4,6 +4,7 @@ import path from 'path';
 import Papa from 'papaparse';
 import Laws from '@/components/Laws';
 import LawsFAQ from '@/components/LawsFAQ';
+import WeedNavigation from '@/components/WeedNavigation';
 import { getBannerData } from '@/lib/utils/bannerUtils';
 import { getPagesServerSide as getPages } from '@/lib/pages-server';
 import Banner from '@/components/Banner';
@@ -119,6 +120,9 @@ export default async function LegalLawsPage() {
                     <LawsFAQ items={lawsFaqData} />
                 </section>
 
+                <div className="w-full h-px bg-[#13DE00]/20 my-8" />
+
+                <WeedNavigation />
             </div>
         </>
     );

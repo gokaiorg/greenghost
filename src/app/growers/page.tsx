@@ -2,6 +2,7 @@ import { getBannerData } from '@/lib/utils/bannerUtils';
 import { getPagesServerSide as getPages } from '@/lib/pages-server';
 import Banner from '@/components/Banner';
 import GrowersList from '@/components/GrowersList';
+import WeedNavigation from '@/components/WeedNavigation';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -67,6 +68,7 @@ export default async function WeedGrowerPage() {
           />
         )}
         <GrowersList />
+        <WeedNavigation />
       </div>
     </>
   );
