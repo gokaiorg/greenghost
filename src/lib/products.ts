@@ -39,11 +39,19 @@ function parseCSVLine(line: string): string[] {
 async function fetchProductsFromCSV(): Promise<Product[]> {
     try {
         const filePath = path.join(process.cwd(), 'public', 'datas', 'products.csv')
-        if (!fs.existsSync(filePath)) {
+
+        // Use promises for file access
+        const fsPromises = (await import('fs/promises')).default;
+
+        // Check if file exists asynchronously
+        try {
+            await fsPromises.access(filePath);
+        } catch (err) {
             console.error('CSV file not found at:', filePath)
             return []
         }
-        const data = fs.readFileSync(filePath, 'utf-8')
+
+        const data = await fsPromises.readFile(filePath, 'utf-8')
         const lines = data.trim().split('\n')
 
         if (lines.length < 2) return [] // No data or only header
