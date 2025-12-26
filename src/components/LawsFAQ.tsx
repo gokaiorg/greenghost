@@ -16,7 +16,7 @@ const LawsFAQ: React.FC<LawsFAQProps> = ({ items }) => {
             <div className="space-y-4">
                 {items.map((item, index) => (
                     <details key={index} className="group bg-black border border-[#13DE00]/30 overflow-hidden">
-                        <summary className="flex cursor-pointer items-center justify-between p-4 bg-zinc-900/80 hover:bg-zinc-900 text-lg font-medium text-white transition-colors">
+                        <summary className="flex cursor-pointer items-center justify-between p-4 bg-[#13DE00]/13 hover:bg-[#13DE00]/20 text-lg font-medium text-white transition-colors">
                             <span className="font-bold text-[#13DE00]">{item.title}</span>
                             <span className="transition group-open:rotate-180">
                                 <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24">

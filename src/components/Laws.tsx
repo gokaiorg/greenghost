@@ -13,11 +13,11 @@ const Laws: React.FC<LawsProps> = ({ items }) => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
             {items.map((item, index) => (
-                <div key={index} className="bg-zinc-900/50 border border-[#13DE00]/30 p-6 shadow-lg hover:border-[#13DE00]/60 transition-colors">
+                <div key={index} className="bg-[#13DE00]/13 border border-[#13DE00]/30 p-6 shadow-lg hover:border-[#13DE00]/60 transition-colors">
                     <img
                         src={`/images/banners/legal-laws-cannabis-weed-shop-thailand-green-ghost-${(index + 1).toString().padStart(2, '0')}.avif`}
                         alt={item.title}
-                        className="w-full aspect-square object-cover mb-6 rounded border border-[#13DE00]/20"
+                        className="w-full aspect-square object-cover mb-6 border border-[#13DE00]/20"
                     />
                     <h3 className="text-xl font-bold text-[#13DE00] mb-4">{item.title}</h3>
                     <div className="text-gray-300 text-xs leading-relaxed whitespace-pre-wrap font-pixel">
