@@ -7,3 +7,5 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
 
+[build.environment]
+  NODE_OPTIONS = "--max_old_space_size=4096"
