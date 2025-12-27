@@ -26,6 +26,7 @@ export default function Banner({ title, description, bgSrc, iconSrc, iconAlt }: 
         src={`/images${bgSrc}`}
         alt={title}
         fill
+        sizes="100vw"
         priority
         fetchPriority="high"
         className="object-cover z-0"

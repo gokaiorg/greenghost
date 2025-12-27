@@ -3,6 +3,7 @@ import Banner from '@/components/Banner';
 import { getBannerData } from '@/lib/utils/bannerUtils';
 import { getPagesServerSide as getPages } from '@/lib/pages-server';
 import GardensList from '@/components/GardensList';
+import WeedNavigation from '@/components/WeedNavigation';
 
 export const metadata: Metadata = {
     title: "Green Ghost's Garden Indoor Cannabis Grow in Thailand - Green Ghost 🌿👻",
@@ -73,6 +74,7 @@ export default async function GardenPage() {
                 )}
 
                 <GardensList />
+                <WeedNavigation />
             </div>
         </>
     );

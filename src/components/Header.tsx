@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation'
 import { useState, useEffect, useRef } from 'react'
 import BagPopup from '@/components/BagPopup'
 import { Menu, X } from 'lucide-react'
+import ConnectMenu from '@/components/ConnectMenu'
 
 export default function Header() {
   const { getItemCount } = useCart()
@@ -134,7 +135,7 @@ export default function Header() {
                   <Link
                     href="/about"
                     title="Cannabis culture"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname.startsWith('/about') ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname?.startsWith('/about') ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Cannabis culture
@@ -190,6 +191,9 @@ export default function Header() {
                     Contact us now
                   </Link>
                 </li>
+                <li className="px-4 py-2 md:hidden">
+                  <ConnectMenu />
+                </li>
               </ul>
             )}
           </div>
@@ -197,14 +201,14 @@ export default function Header() {
 
         <div className="flex items-center">
           <ul
-            className="hidden md:flex items-center space-x-7 mr-5 list-none m-0 p-0"
+            className="hidden md:flex items-center space-x-7 mr-3 list-none m-0 p-0"
             aria-label="Desktop navigation menu"
           >
             <li>
               <Link
                 href="/menu"
                 title="Menu"
-                className={`hover:text-[#13DE00] transition-colors whitespace-nowrap font-medium ${pathname === '/menu' ? 'text-[#13DE00]' : ''}`}
+                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname === '/menu' ? 'text-[#13DE00]' : ''}`}
               >
                 Menu
               </Link>
@@ -213,7 +217,7 @@ export default function Header() {
               <Link
                 href="/delivery"
                 title="Delivery"
-                className={`hover:text-[#13DE00] transition-colors whitespace-nowrap font-medium ${pathname === '/delivery' ? 'text-[#13DE00]' : ''}`}
+                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname === '/delivery' ? 'text-[#13DE00]' : ''}`}
               >
                 Delivery
               </Link>
@@ -222,7 +226,7 @@ export default function Header() {
               <Link
                 href="/contact"
                 title="Contact"
-                className={`hover:text-[#13DE00] transition-colors whitespace-nowrap font-medium ${pathname === '/contact' ? 'text-[#13DE00]' : ''}`}
+                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname === '/contact' ? 'text-[#13DE00]' : ''}`}
               >
                 Contact
               </Link>
@@ -232,7 +236,7 @@ export default function Header() {
           <div>
             <button
               onClick={() => setIsCartOpen(true)}
-              className="hover:text-[#13DE00] transition-colors relative cursor-pointer p-2"
+              className="hover:text-[#13DE00] text-sm transition-colors relative cursor-pointer p-2"
               aria-label="Shopping cart"
             >
               Bag
@@ -242,6 +246,10 @@ export default function Header() {
                 </span>
               )}
             </button>
+          </div>
+
+          <div className="ml-4">
+            <ConnectMenu />
           </div>
         </div>
       </div>

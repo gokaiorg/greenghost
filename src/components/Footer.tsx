@@ -33,7 +33,7 @@ export default function Footer({ socials }: FooterProps) {
               aria-label="Footer links"
             >
               <li>
-                <Link href="/menu" className={`bg-[#13DE00] h-[110px] max-w-[110px] flex items-center justify-center hover:bg-[#13DE00]/13 hover:text-[#13DE00] transition-colors text-xs font-medium p-1 tracking-tight ${pathname.startsWith('/menu') ? 'bg-[#13DE00]/13 text-[#13DE00]' : 'text-black'}`} aria-label="Explore our cannabis menu" title="Explore our menu">
+                <Link href="/menu" className={`bg-[#13DE00] h-[110px] max-w-[110px] flex items-center justify-center hover:bg-[#13DE00]/13 hover:text-[#13DE00] transition-colors text-xs font-medium p-1 tracking-tight ${pathname?.startsWith('/menu') ? 'bg-[#13DE00]/13 text-[#13DE00]' : 'text-black'}`} aria-label="Explore our cannabis menu" title="Explore our menu">
                   Explore our menu
                 </Link>
               </li>

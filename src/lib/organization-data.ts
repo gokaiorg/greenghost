@@ -4,76 +4,81 @@ import type { Location } from '@/lib/types/location';
 
 export async function parseLocationsCSV(): Promise<LocationData[]> {
     const path = (await import('path')).default;
-    const fs = (await import('fs')).default;
+    const fs = (await import('fs/promises')).default;
 
-    const csvPath = path.join(process.cwd(), 'public/datas/locations.csv');
-    const csvContent = fs.readFileSync(csvPath, 'utf-8');
+    try {
+        const csvPath = path.join(process.cwd(), 'public/datas/locations.csv');
+        const csvContent = await fs.readFile(csvPath, 'utf-8');
 
-    // Split by lines but keep quoted fields with line breaks intact
-    const lines: string[] = [];
-    let currentLine = '';
-    let inQuotes = false;
-
-    for (let i = 0; i < csvContent.length; i++) {
-        const char = csvContent[i];
-
-        if (char === '"') {
-            inQuotes = !inQuotes;
-            currentLine += char;
-        } else if (char === '\n' && !inQuotes) {
-            if (currentLine.trim()) {
-                lines.push(currentLine.trim());
-            }
-            currentLine = '';
-        } else {
-            currentLine += char;
-        }
-    }
-
-    // Add the last line
-    if (currentLine.trim()) {
-        lines.push(currentLine.trim());
-    }
-
-    const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
-    const locations: LocationData[] = [];
-
-    for (let i = 1; i < lines.length; i++) {
-        const line = lines[i];
-        if (!line) continue;
-
-        // Handle CSV with quoted fields that may contain commas
-        const values: string[] = [];
-        let currentValue = '';
+        // Split by lines but keep quoted fields with line breaks intact
+        const lines: string[] = [];
+        let currentLine = '';
         let inQuotes = false;
 
-        for (let j = 0; j < line.length; j++) {
-            const char = line[j];
+        for (let i = 0; i < csvContent.length; i++) {
+            const char = csvContent[i];
 
             if (char === '"') {
                 inQuotes = !inQuotes;
-            } else if (char === ',' && !inQuotes) {
-                values.push(currentValue.trim().replace(/^"|"$/g, ''));
-                currentValue = '';
+                currentLine += char;
+            } else if (char === '\n' && !inQuotes) {
+                if (currentLine.trim()) {
+                    lines.push(currentLine.trim());
+                }
+                currentLine = '';
             } else {
-                currentValue += char;
+                currentLine += char;
             }
         }
 
-        // Add the last value
-        values.push(currentValue.trim().replace(/^"|"$/g, ''));
-
-        if (values.length >= headers.length) {
-            const location: Record<string, string> = {};
-            headers.forEach((header, index) => {
-                location[header] = values[index] || '';
-            });
-
-            locations.push(location as unknown as LocationData);
+        // Add the last line
+        if (currentLine.trim()) {
+            lines.push(currentLine.trim());
         }
-    }
 
-    return locations;
+        const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+        const locations: LocationData[] = [];
+
+        for (let i = 1; i < lines.length; i++) {
+            const line = lines[i];
+            if (!line) continue;
+
+            // Handle CSV with quoted fields that may contain commas
+            const values: string[] = [];
+            let currentValue = '';
+            let inQuotes = false;
+
+            for (let j = 0; j < line.length; j++) {
+                const char = line[j];
+
+                if (char === '"') {
+                    inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                    values.push(currentValue.trim().replace(/^"|"$/g, ''));
+                    currentValue = '';
+                } else {
+                    currentValue += char;
+                }
+            }
+
+            // Add the last value
+            values.push(currentValue.trim().replace(/^"|"$/g, ''));
+
+            if (values.length >= headers.length) {
+                const location: Record<string, string> = {};
+                headers.forEach((header, index) => {
+                    location[header] = values[index] || '';
+                });
+
+                locations.push(location as unknown as LocationData);
+            }
+        }
+
+        return locations;
+    } catch (error) {
+        console.error('Error parsing locations.csv:', error);
+        return [];
+    }
 }
 
 export function parseHours(hoursString: string): { monday: string; tuesday: string; wednesday: string; thursday: string; friday: string; saturday: string; sunday: string } {
@@ -298,29 +303,33 @@ export interface TopDispensary {
 
 export async function parseTopsCSV(): Promise<TopDispensary[]> {
     const path = (await import('path')).default;
-    const fs = (await import('fs')).default;
+    const fs = (await import('fs/promises')).default;
 
-    const csvPath = path.join(process.cwd(), 'public/datas/tops.csv');
-    const csvContent = fs.readFileSync(csvPath, 'utf-8');
+    try {
+        const csvPath = path.join(process.cwd(), 'public/datas/tops.csv');
+        const csvContent = await fs.readFile(csvPath, 'utf-8');
 
-    const lines = csvContent.split('\n').filter(line => line.trim() !== '');
-    // Skip header
-    const tops: TopDispensary[] = [];
+        const lines = csvContent.split('\n').filter(line => line.trim() !== '');
+        // Skip header
+        const tops: TopDispensary[] = [];
 
-    for (let i = 1; i < lines.length; i++) {
-        const line = lines[i];
-        // Simple split by comma, assuming no commas in fields for this simple CSV
-        // If fields have commas, we'd need the more robust parser used above
-        const parts = line.split(',');
-        if (parts.length >= 2) {
-            tops.push({
-                name: parts[0].trim(),
-                link: parts[1].trim()
-            });
+        for (let i = 1; i < lines.length; i++) {
+            const line = lines[i];
+            // Simple split by comma, assuming no commas in fields for this simple CSV
+            const parts = line.split(',');
+            if (parts.length >= 2) {
+                tops.push({
+                    name: parts[0].trim(),
+                    link: parts[1].trim()
+                });
+            }
         }
-    }
 
-    return tops;
+        return tops;
+    } catch (error) {
+        console.error('Error parsing tops.csv:', error);
+        return [];
+    }
 }
 
 export async function getTops(): Promise<TopDispensary[]> {
@@ -335,46 +344,51 @@ export interface BestShop {
 
 export async function parseBestShopsCSV(): Promise<BestShop[]> {
     const path = (await import('path')).default;
-    const fs = (await import('fs')).default;
+    const fs = (await import('fs/promises')).default;
 
-    const csvPath = path.join(process.cwd(), 'public/datas/best_shops_thailand.csv');
-    const csvContent = fs.readFileSync(csvPath, 'utf-8');
+    try {
+        const csvPath = path.join(process.cwd(), 'public/datas/best_shops_thailand.csv');
+        const csvContent = await fs.readFile(csvPath, 'utf-8');
 
-    const lines = csvContent.split('\n').filter(line => line.trim() !== '');
-    // Skip header
-    const shops: BestShop[] = [];
+        const lines = csvContent.split('\n').filter(line => line.trim() !== '');
+        // Skip header
+        const shops: BestShop[] = [];
 
-    for (let i = 1; i < lines.length; i++) {
-        const line = lines[i];
-        // Use the same robust parsing as locations CSV to handle potential commas in fields
-        const values: string[] = [];
-        let currentValue = '';
-        let inQuotes = false;
+        for (let i = 1; i < lines.length; i++) {
+            const line = lines[i];
+            // Use the same robust parsing as locations CSV to handle potential commas in fields
+            const values: string[] = [];
+            let currentValue = '';
+            let inQuotes = false;
 
-        for (let j = 0; j < line.length; j++) {
-            const char = line[j];
+            for (let j = 0; j < line.length; j++) {
+                const char = line[j];
 
-            if (char === '"') {
-                inQuotes = !inQuotes;
-            } else if (char === ',' && !inQuotes) {
-                values.push(currentValue.trim().replace(/^"|"$/g, ''));
-                currentValue = '';
-            } else {
-                currentValue += char;
+                if (char === '"') {
+                    inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                    values.push(currentValue.trim().replace(/^"|"$/g, ''));
+                    currentValue = '';
+                } else {
+                    currentValue += char;
+                }
+            }
+            values.push(currentValue.trim().replace(/^"|"$/g, ''));
+
+            if (values.length >= 3) {
+                shops.push({
+                    name: values[0],
+                    mapLink: values[1],
+                    location: values[2]
+                });
             }
         }
-        values.push(currentValue.trim().replace(/^"|"$/g, ''));
 
-        if (values.length >= 3) {
-            shops.push({
-                name: values[0],
-                mapLink: values[1],
-                location: values[2]
-            });
-        }
+        return shops;
+    } catch (error) {
+        console.error('Error parsing best_shops_thailand.csv:', error);
+        return [];
     }
-
-    return shops;
 }
 
 export async function getBestShops(): Promise<BestShop[]> {
@@ -392,51 +406,55 @@ export interface DeliveryStep {
 
 export async function parseDeliveryCSV(): Promise<DeliveryStep[]> {
     const path = (await import('path')).default;
-    const fs = (await import('fs')).default;
+    const fs = (await import('fs/promises')).default;
 
-    const csvPath = path.join(process.cwd(), 'public/datas/delivery.csv');
-    const csvContent = fs.readFileSync(csvPath, 'utf-8');
+    try {
+        const csvPath = path.join(process.cwd(), 'public/datas/delivery.csv');
+        const csvContent = await fs.readFile(csvPath, 'utf-8');
 
-    const lines = csvContent.split('\n').filter(line => line.trim() !== '');
-    const headers = lines[0].split(',').map(h => h.trim().replace(/^\"|\"$/g, ''));
-    const steps: DeliveryStep[] = [];
+        const lines = csvContent.split('\n').filter(line => line.trim() !== '');
+        if (lines.length === 0) return [];
+        const headers = lines[0].split(',').map(h => h.trim().replace(/^\"|\"$/g, ''));
+        const steps: DeliveryStep[] = [];
 
-    for (let i = 1; i < lines.length; i++) {
-        const line = lines[i];
-        if (!line) continue;
+        for (let i = 1; i < lines.length; i++) {
+            const line = lines[i];
+            if (!line) continue;
 
-        // Handle CSV with quoted fields that may contain commas
-        const values: string[] = [];
-        let currentValue = '';
-        let inQuotes = false;
+            const values: string[] = [];
+            let currentValue = '';
+            let inQuotes = false;
 
-        for (let j = 0; j < line.length; j++) {
-            const char = line[j];
+            for (let j = 0; j < line.length; j++) {
+                const char = line[j];
 
-            if (char === '"') {
-                inQuotes = !inQuotes;
-            } else if (char === ',' && !inQuotes) {
-                values.push(currentValue.trim().replace(/^\"|\"$/g, '').replace(/\r$/g, ''));
-                currentValue = '';
-            } else {
-                currentValue += char;
+                if (char === '"') {
+                    inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                    values.push(currentValue.trim().replace(/^\"|\"$/g, '').replace(/\r$/g, ''));
+                    currentValue = '';
+                } else {
+                    currentValue += char;
+                }
+            }
+
+            values.push(currentValue.trim().replace(/^\"|\"$/g, '').replace(/\r$/g, ''));
+
+            if (values.length >= headers.length) {
+                const step: Record<string, string> = {};
+                headers.forEach((header, index) => {
+                    step[header] = values[index] || '';
+                });
+
+                steps.push(step as unknown as DeliveryStep);
             }
         }
 
-        // Add the last value
-        values.push(currentValue.trim().replace(/^\"|\"$/g, '').replace(/\r$/g, ''));
-
-        if (values.length >= headers.length) {
-            const step: Record<string, string> = {};
-            headers.forEach((header, index) => {
-                step[header] = values[index] || '';
-            });
-
-            steps.push(step as unknown as DeliveryStep);
-        }
+        return steps;
+    } catch (error) {
+        console.error('Error parsing delivery.csv:', error);
+        return [];
     }
-
-    return steps;
 }
 
 export async function getDeliverySteps(): Promise<DeliveryStep[]> {
@@ -451,51 +469,55 @@ export interface Club {
 
 export async function parseClubsCSV(): Promise<Club[]> {
     const path = (await import('path')).default;
-    const fs = (await import('fs')).default;
+    const fs = (await import('fs/promises')).default;
 
-    const csvPath = path.join(process.cwd(), 'public/datas/clubs.csv');
-    const csvContent = fs.readFileSync(csvPath, 'utf-8');
+    try {
+        const csvPath = path.join(process.cwd(), 'public/datas/clubs.csv');
+        const csvContent = await fs.readFile(csvPath, 'utf-8');
 
-    const lines = csvContent.split('\n').filter(line => line.trim() !== '');
-    const headers = lines[0].split(',').map(h => h.trim().replace(/^\"|\"$/g, ''));
-    const clubs: Club[] = [];
+        const lines = csvContent.split('\n').filter(line => line.trim() !== '');
+        if (lines.length === 0) return [];
+        const headers = lines[0].split(',').map(h => h.trim().replace(/^\"|\"$/g, ''));
+        const clubs: Club[] = [];
 
-    for (let i = 1; i < lines.length; i++) {
-        const line = lines[i];
-        if (!line) continue;
+        for (let i = 1; i < lines.length; i++) {
+            const line = lines[i];
+            if (!line) continue;
 
-        // Handle CSV with quoted fields that may contain commas
-        const values: string[] = [];
-        let currentValue = '';
-        let inQuotes = false;
+            const values: string[] = [];
+            let currentValue = '';
+            let inQuotes = false;
 
-        for (let j = 0; j < line.length; j++) {
-            const char = line[j];
+            for (let j = 0; j < line.length; j++) {
+                const char = line[j];
 
-            if (char === '"') {
-                inQuotes = !inQuotes;
-            } else if (char === ',' && !inQuotes) {
-                values.push(currentValue.trim().replace(/^\"|\"$/g, '').replace(/\r$/g, ''));
-                currentValue = '';
-            } else {
-                currentValue += char;
+                if (char === '"') {
+                    inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                    values.push(currentValue.trim().replace(/^\"|\"$/g, '').replace(/\r$/g, ''));
+                    currentValue = '';
+                } else {
+                    currentValue += char;
+                }
+            }
+
+            values.push(currentValue.trim().replace(/^\"|\"$/g, '').replace(/\r$/g, ''));
+
+            if (values.length >= headers.length) {
+                const club: Record<string, string> = {};
+                headers.forEach((header, index) => {
+                    club[header] = values[index] || '';
+                });
+
+                clubs.push(club as unknown as Club);
             }
         }
 
-        // Add the last value
-        values.push(currentValue.trim().replace(/^\"|\"$/g, '').replace(/\r$/g, ''));
-
-        if (values.length >= headers.length) {
-            const club: Record<string, string> = {};
-            headers.forEach((header, index) => {
-                club[header] = values[index] || '';
-            });
-
-            clubs.push(club as unknown as Club);
-        }
+        return clubs;
+    } catch (error) {
+        console.error('Error parsing clubs.csv:', error);
+        return [];
     }
-
-    return clubs;
 }
 
 export async function getClubs(): Promise<Club[]> {
@@ -509,37 +531,42 @@ export interface Social {
 
 export async function parseSocialsCSV(): Promise<Social[]> {
     const path = (await import('path')).default;
-    const fs = (await import('fs')).default;
+    const fs = (await import('fs/promises')).default;
+    try {
+        const csvPath = path.join(process.cwd(), 'public/datas/socials.csv');
+        const csvContent = await fs.readFile(csvPath, 'utf-8');
 
-    const csvPath = path.join(process.cwd(), 'public/datas/socials.csv');
-    const csvContent = fs.readFileSync(csvPath, 'utf-8');
+        const lines = csvContent.split('\n').filter(line => line.trim() !== '');
+        if (lines.length === 0) return [];
 
-    const lines = csvContent.split('\n').filter(line => line.trim() !== '');
-    const headers = lines[0].split(',').map(h => h.trim().replace(/^\"|\"$/g, '').toLowerCase());
-    const socials: Social[] = [];
+        const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, '').toLowerCase());
+        const socials: Social[] = [];
 
-    for (let i = 1; i < lines.length; i++) {
-        const line = lines[i];
-        if (!line) continue;
+        for (let i = 1; i < lines.length; i++) {
+            const line = lines[i];
+            if (!line) continue;
 
-        const values = line.split(',').map(v => v.trim().replace(/^\"|\"$/g, '').replace(/\r$/g, ''));
+            const values = line.split(',').map(v => v.trim().replace(/^"|"$/g, '').replace(/\r$/g, ''));
 
-        if (values.length >= headers.length) {
-            const social: Record<string, string> = {};
-            headers.forEach((header, index) => {
-                social[header] = values[index] || '';
-            });
+            if (values.length >= headers.length) {
+                const social: Record<string, string> = {};
+                headers.forEach((header, index) => {
+                    social[header] = values[index] || '';
+                });
 
-            socials.push(social as unknown as Social);
+                socials.push(social as unknown as Social);
+            }
         }
-    }
 
-    return socials;
+        return socials;
+    } catch (error) {
+        console.error('Error parsing socials.csv:', error);
+        return [];
+    }
 }
 
 export async function getSocials(): Promise<Social[]> {
     return parseSocialsCSV();
 }
-
 
 

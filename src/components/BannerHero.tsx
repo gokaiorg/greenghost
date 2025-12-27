@@ -64,6 +64,7 @@ export default function BannerHero() {
                 src={src}
                 alt="Green Ghost - Best Degen Weed Shop"
                 fill
+                sizes="100vw"
                 className="object-cover"
                 priority={index === 0}
               />

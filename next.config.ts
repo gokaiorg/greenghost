@@ -6,6 +6,13 @@ const nextConfig: NextConfig = {
     unoptimized: true, // Disable image optimization to prevent memory errors
     qualities: [25, 50, 75, 100],
   },
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@react-native-async-storage/async-storage': false,
+    };
+    return config;
+  },
   async redirects() {
     return [
       {
