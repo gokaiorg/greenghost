@@ -110,6 +110,20 @@ export const metadata: Metadata = {
     'application-name': 'Green Ghost 🌿👻',
     'format-detection': 'telephone=no',
     'theme-color': '#13DE00',
+    'fc:frame': JSON.stringify({
+      version: "next",
+      imageUrl: "https://green.gd/green-ghost-degen-weed-shop.png",
+      button: {
+        title: "Order Now",
+        action: {
+          type: "launch_app",
+          name: "Green Ghost 🌿👻",
+          url: "https://green.gd",
+          splashImageUrl: "https://green.gd/green-ghost-degen-weed-shop.png",
+          splashBackgroundColor: "#000000",
+        },
+      },
+    }),
   },
 };
 
