@@ -110,13 +110,13 @@ export const metadata: Metadata = {
     'application-name': 'Green Ghost 🌿👻',
     'format-detection': 'telephone=no',
     'theme-color': '#13DE00',
-    'fc:frame': JSON.stringify({
-      version: "next",
+    'fc:miniapp': JSON.stringify({
+      version: "1",
       imageUrl: "https://green.gd/green-ghost-degen-weed-shop.png",
       button: {
         title: "Order Now",
         action: {
-          type: "launch_app",
+          type: "launch_frame",
           name: "Green Ghost 🌿👻",
           url: "https://green.gd",
           splashImageUrl: "https://green.gd/green-ghost-degen-weed-shop.png",
