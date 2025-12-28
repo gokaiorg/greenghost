@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 interface BannerMenuProps {
@@ -11,6 +11,7 @@ interface BannerMenuProps {
 export default function BannerMenu({ imageSrc, alt = "Green Ghost Menu Banner" }: BannerMenuProps) {
     const [offsetY, setOffsetY] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
+    const ticking = useRef(false);
 
     useEffect(() => {
         // Check if mobile on mount and resize
@@ -20,17 +21,21 @@ export default function BannerMenu({ imageSrc, alt = "Green Ghost Menu Banner" }
 
         checkMobile();
 
-        const handleScroll = () => {
-            if (window.innerWidth >= 768) {
-                setOffsetY(window.pageYOffset);
+        const onScroll = () => {
+            if (!ticking.current && window.innerWidth >= 768) {
+                window.requestAnimationFrame(() => {
+                    setOffsetY(window.pageYOffset);
+                    ticking.current = false;
+                });
+                ticking.current = true;
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', onScroll);
         window.addEventListener('resize', checkMobile);
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', onScroll);
             window.removeEventListener('resize', checkMobile);
         };
     }, []);
