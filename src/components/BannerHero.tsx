@@ -67,6 +67,8 @@ export default function BannerHero() {
                 sizes="100vw"
                 className="object-cover"
                 priority={index === 0}
+                fetchPriority={index === 0 ? "high" : "low"}
+                loading={index === 0 ? "eager" : "lazy"}
               />
             </div>
           ))}

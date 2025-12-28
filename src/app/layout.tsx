@@ -124,13 +124,28 @@ export default async function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link
-          rel="preload"
-          href="/fonts/cubicfive12.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
+        <style dangerouslySetInnerHTML={{
+          __html: `
+          @font-face {
+            font-family: 'Cubicfive12';
+            src: url('/fonts/cubicfive12.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+          }
+          :root {
+            --background: #000000;
+            --foreground: #e2e8f0;
+          }
+          body {
+            background: #000000;
+            color: #e2e8f0;
+            font-family: var(--font-pixel), monospace;
+          }
+          h1, h2, .font-cubic {
+            font-family: 'Cubicfive12', monospace;
+          }
+        `}} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${pressStart2P.variable} antialiased bg-black text-white min-h-screen flex flex-col`}>
         <GoogleTagManager />

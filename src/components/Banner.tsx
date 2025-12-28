@@ -29,6 +29,7 @@ export default function Banner({ title, description, bgSrc, iconSrc, iconAlt }: 
         sizes="100vw"
         priority
         fetchPriority="high"
+        loading="eager"
         className="object-cover z-0"
         style={{
           objectPosition: `center ${offsetY * 0.5}px`,

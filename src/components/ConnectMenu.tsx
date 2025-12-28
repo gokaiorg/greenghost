@@ -44,8 +44,8 @@ export default function ConnectMenu() {
         return null;
     }
 
-    // Filter available connectors (hide Farcaster Mini App on desktop if redundant)
-    const availableConnectors = connectors.filter(c => c.id !== 'farcaster-miniapp');
+    // Filter available connectors (use all connectors in the order defined in wagmi config)
+    const availableConnectors = connectors;
 
     return (
         <div className="relative" ref={menuRef}>

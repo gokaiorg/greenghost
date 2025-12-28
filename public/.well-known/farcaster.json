@@ -1,28 +1,36 @@
 {
-    "accountAssociation": {
-        "header": "eyJmaWQiO... (placeholder)",
-        "payload": "eyJkb21haW4iOiJ... (placeholder)",
-        "signature": "MHhj... (placeholder)"
-    },
-    "miniapp": {
-        "version": "1",
+    "frame": {
         "name": "Green Ghost 🌿👻",
-        "description": "Premium cannabis shop featuring buds and pre-rolls with exclusive x402 payments and NFT-gated member pricing",
+        "version": "1",
         "iconUrl": "https://green.gd/images/logo512.png",
         "homeUrl": "https://green.gd",
+        "imageUrl": "https://green.gd/green-ghost-degen-weed-shop.png",
+        "buttonTitle": "Order Now",
         "splashImageUrl": "https://green.gd/green-ghost-degen-weed-shop.png",
         "splashBackgroundColor": "#000000",
-        "primaryCategory": "commerce",
+        "webhookUrl": "https://green.gd/api/webhook",
+        "description": "Premium cannabis shop featuring buds and pre-rolls with exclusive x402 payments and NFT-gated member pricing.",
+        "screenshotUrls": [
+            "https://green.gd/green-ghost-degen-weed-shop.png"
+        ],
+        "heroImageUrl": "https://green.gd/green-ghost-degen-weed-shop.png",
+        "primaryCategory": "shopping",
+        "subtitle": "Best Degen Weed Shop and Delivery",
         "tags": [
+            "nft-gated",
+            "x402",
             "cannabis",
             "shop",
-            "x402",
-            "NFT-gated"
+            "delivery"
         ],
-        "triggers": [
-            {
-                "type": "composer"
-            }
-        ]
+        "tagline": "Weed Shop and Delivery",
+        "ogTitle": "Green Ghost",
+        "ogDescription": "Premium cannabis shop featuring buds and pre-rolls.",
+        "ogImageUrl": "https://green.gd/green-ghost-degen-weed-shop.png"
+    },
+    "accountAssociation": {
+        "header": "eyJmaWQiOjY4NTA4NCwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDllMDYyODVFM2QyZDlFOTdiODMyRTY1OTE2QzJDNDVEYzM3NDA3NWQifQ",
+        "payload": "eyJkb21haW4iOiJncmVlbi5nZCJ9",
+        "signature": "CMz5PdjhviuCU/gpS4636V1t2qfsIrpyobDEMIHT6Bplj625eHE8tRfMoNAnNZwpgzJMKxPsDBsiu0at5xMjeBw="
     }
 }
