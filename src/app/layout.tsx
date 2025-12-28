@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Press_Start_2P } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -29,6 +30,18 @@ const pressStart2P = Press_Start_2P({
   variable: "--font-pixel",
   subsets: ["latin"],
   weight: "400",
+});
+
+const cubicFive = localFont({
+  src: [
+    {
+      path: '../../public/fonts/cubicfive12.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-cubic',
+  display: 'swap',
 });
 
 export const viewport: Viewport = {
@@ -140,13 +153,6 @@ export default async function RootLayout({
       <head>
         <style dangerouslySetInnerHTML={{
           __html: `
-          @font-face {
-            font-family: 'Cubicfive12';
-            src: url('/fonts/cubicfive12.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-          }
           :root {
             --background: #000000;
             --foreground: #e2e8f0;
@@ -157,11 +163,11 @@ export default async function RootLayout({
             font-family: var(--font-pixel), monospace;
           }
           h1, h2, .font-cubic {
-            font-family: 'Cubicfive12', monospace;
+            font-family: var(--font-cubic), monospace;
           }
         `}} />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${pressStart2P.variable} antialiased bg-black text-white min-h-screen flex flex-col`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${pressStart2P.variable} ${cubicFive.variable} antialiased bg-black text-white min-h-screen flex flex-col`}>
         <GoogleTagManager />
         <GoogleAnalytics />
         <AgeVerification />

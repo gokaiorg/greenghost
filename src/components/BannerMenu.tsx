@@ -42,6 +42,7 @@ export default function BannerMenu({ imageSrc, alt = "Green Ghost Menu Banner" }
                 alt={alt}
                 fill
                 priority
+                fetchPriority="high"
                 className="object-cover"
                 style={{
                     objectPosition: isMobile ? '50% 0' : `50% ${-offsetY * 0.1}px`,

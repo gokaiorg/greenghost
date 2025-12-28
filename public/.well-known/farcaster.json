@@ -8,6 +8,7 @@
         "buttonTitle": "Order Now",
         "splashImageUrl": "https://green.gd/green-ghost-degen-weed-shop.png",
         "splashBackgroundColor": "#000000",
+        "castShareUrl": "https://green.gd",
         "webhookUrl": "https://green.gd/api/webhook",
         "description": "Premium cannabis shop featuring buds and pre-rolls with exclusive x402 payments and NFT-gated member pricing.",
         "screenshotUrls": [
@@ -15,7 +16,7 @@
         ],
         "heroImageUrl": "https://green.gd/green-ghost-degen-weed-shop.png",
         "primaryCategory": "shopping",
-        "subtitle": "Best Degen Weed Shop and Delivery",
+        "subtitle": "Best Degen Weed Shop and Delivery in Thailand - Best CBD France",
         "tags": [
             "nft-gated",
             "x402",
