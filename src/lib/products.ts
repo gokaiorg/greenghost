@@ -1,6 +1,5 @@
 import { Product } from '@/lib/types'
 import path from 'path'
-import fs from 'fs'
 
 // Helper function to parse CSV line with proper handling of quoted fields
 function parseCSVLine(line: string): string[] {
