@@ -4,9 +4,14 @@
 import { Product } from '@/lib/types'
 
 const SPREADSHEET_ID = '1_tPKbwLkZHYZB99lOs91NhlW1YjkiP7UOsp9hIuVRnc'
-const API_KEY = process.env.GOOGLE_API_KEY || 'AIzaSyCA_1JQVocS0t4U0m0FSrpD0BIbOGb60T8'
+const API_KEY = process.env.GOOGLE_API_KEY
 
 export async function fetchProductsFromSheets(): Promise<Product[]> {
+  if (!API_KEY) {
+    console.warn('Google API key is missing, skipping Sheets fetch.')
+    return []
+  }
+
   try {
     const { google } = await import('googleapis')
     const sheets = google.sheets({ version: 'v4' })

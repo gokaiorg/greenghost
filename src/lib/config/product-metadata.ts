@@ -79,7 +79,7 @@ export function generateProductMetadata(product: Product): Metadata {
       images: [coverImage],
     },
     verification: {
-      google: 'dOuCZqslG5Lkw8i3jVwoGcedgH6-nIGGQ71qYu',
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || 'dOuCZqslG5Lkw8i3jVwoGcedgH6-nIGGQ71qYu',
     },
     alternates: {
       canonical: url,
