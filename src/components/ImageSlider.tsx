@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import StrainImage from './StrainImage'
 
 interface ImageSliderProps {
@@ -16,7 +16,8 @@ interface ImageSliderProps {
 function MobileSlider({ images, width, height, currentIndex, goToSlide }: ImageSliderProps & { currentIndex: number, goToSlide: (index: number) => void }) {
   const [isDragging, setIsDragging] = useState(false)
   const [startPos, setStartPos] = useState(0)
-  const [scrollLeft, setScrollLeft] = useState(0)
+  const scrollLeft = useRef(0)
+  const sliderRef = useRef<HTMLDivElement>(null)
 
   const goToPrevious = () => {
     const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1
@@ -37,22 +38,43 @@ function MobileSlider({ images, width, height, currentIndex, goToSlide }: ImageS
     if (!isDragging) return
     const currentPos = e.touches[0].clientX
     const diff = startPos - currentPos
-    setScrollLeft(diff)
+    scrollLeft.current = diff
+
+    // Update transform immediately without state change for performance
+    if (sliderRef.current) {
+      const translateX = -(currentIndex * 100)
+      // We convert the pixel diff to percentage relative to the container width
+      const containerWidth = sliderRef.current.offsetWidth
+      const diffPercentage = (diff / containerWidth) * 100
+
+      sliderRef.current.style.transform = `translateX(calc(${translateX}% - ${diffPercentage}%))`
+      sliderRef.current.style.transition = 'none' // Disable transition during drag for immediate response
+    }
   }
 
   const handleTouchEnd = () => {
     if (!isDragging) return
     setIsDragging(false)
 
+    // Restore transition
+    if (sliderRef.current) {
+      sliderRef.current.style.transition = 'transform 300ms ease-in-out'
+    }
+
     const threshold = 50 // minimum drag distance to trigger slide change
-    if (Math.abs(scrollLeft) > threshold) {
-      if (scrollLeft > 0) {
+    if (Math.abs(scrollLeft.current) > threshold) {
+      if (scrollLeft.current > 0) {
         goToNext()
       } else {
         goToPrevious()
       }
+    } else {
+        // If we didn't switch slides, we need to snap back to the current slide
+        if (sliderRef.current) {
+             sliderRef.current.style.transform = `translateX(-${currentIndex * 100}%)`
+        }
     }
-    setScrollLeft(0)
+    scrollLeft.current = 0
   }
 
   return (
@@ -64,6 +86,7 @@ function MobileSlider({ images, width, height, currentIndex, goToSlide }: ImageS
     >
       <div className="overflow-hidden">
         <div
+          ref={sliderRef}
           className="flex transition-transform duration-300 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >

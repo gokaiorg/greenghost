@@ -16,7 +16,7 @@ export default function ProductSlider({ products, category = 'Buds' }: ProductSl
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
   const [startPos, setStartPos] = useState(0)
-  const [scrollLeft, setScrollLeft] = useState(0)
+  const scrollLeft = useRef(0)
 
   const sliderRef = useRef<HTMLDivElement>(null)
 
@@ -33,12 +33,19 @@ export default function ProductSlider({ products, category = 'Buds' }: ProductSl
   const [itemsToShow, setItemsToShow] = useState(getItemsToShow())
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout
     const handleResize = () => {
-      setItemsToShow(getItemsToShow())
+      clearTimeout(timeoutId)
+      timeoutId = setTimeout(() => {
+        setItemsToShow(getItemsToShow())
+      }, 150)
     }
 
     window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      clearTimeout(timeoutId)
+    }
   }, [])
 
   const totalSlides = Math.ceil(products.length / itemsToShow)
@@ -68,22 +75,48 @@ export default function ProductSlider({ products, category = 'Buds' }: ProductSl
     if (!isDragging) return
     const currentPos = e.touches[0].clientX
     const diff = startPos - currentPos
-    setScrollLeft(diff)
+    scrollLeft.current = diff
+
+    // Update transform immediately without state change for performance
+    if (sliderRef.current) {
+      const translateX = -(currentIndex * 100)
+      // We convert the pixel diff to percentage relative to the container width
+      const containerWidth = sliderRef.current.offsetWidth
+      const diffPercentage = (diff / containerWidth) * 100
+
+      sliderRef.current.style.transform = `translateX(calc(${translateX}% - ${diffPercentage}%))`
+      sliderRef.current.style.transition = 'none' // Disable transition during drag for immediate response
+    }
   }
 
   const handleTouchEnd = () => {
     if (!isDragging) return
     setIsDragging(false)
 
+    // Restore transition
+    if (sliderRef.current) {
+      sliderRef.current.style.transition = 'transform 300ms ease-in-out'
+      // We need to temporarily set the style back to the current index position
+      // so that React's render cycle picks up from there or the transition happens correctly
+      // However, we rely on the state update (goToNext/Prev) to trigger the re-render with new position
+      // If we don't change slide, we need to snap back manually
+    }
+
     const threshold = 50
-    if (Math.abs(scrollLeft) > threshold) {
-      if (scrollLeft > 0) {
+    if (Math.abs(scrollLeft.current) > threshold) {
+      if (scrollLeft.current > 0) {
         goToNext()
       } else {
         goToPrevious()
       }
+    } else {
+        // If we didn't switch slides, we need to snap back to the current slide
+        // Because we manually messed with the style.transform
+        if (sliderRef.current) {
+             sliderRef.current.style.transform = `translateX(-${currentIndex * 100}%)`
+        }
     }
-    setScrollLeft(0)
+    scrollLeft.current = 0
   }
 
   if (products.length === 0) {
