@@ -186,10 +186,15 @@ export default function Chatbox() {
                         : 'bg-[#13DE00]/13 text-white'
                       }`}
                   >
-                    <p
-                      className="text-xs"
-                      dangerouslySetInnerHTML={{ __html: message.text }}
-                    />
+                    {/* Security: Only render HTML for bot messages (trusted). User messages must be escaped. */}
+                    {message.sender === 'bot' ? (
+                      <p
+                        className="text-xs"
+                        dangerouslySetInnerHTML={{ __html: message.text }}
+                      />
+                    ) : (
+                      <p className="text-xs whitespace-pre-wrap">{message.text}</p>
+                    )}
                     <p className="text-xs opacity-60 mt-1">
                       {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                     </p>
