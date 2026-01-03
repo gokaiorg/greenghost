@@ -83,6 +83,7 @@ const BagAddButton: React.FC<BagAddButtonProps> = ({
                     onIncrease={() => handleQuantityChange(cartItem.quantity + 1)}
                     onDecrease={() => handleQuantityChange(cartItem.quantity - 1)}
                     size={compact ? 'sm' : 'md'}
+                    itemName={product.name}
                 />
             </div>
         );

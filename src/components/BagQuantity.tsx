@@ -6,6 +6,7 @@ interface BagQuantityProps {
     onDecrease: () => void;
     className?: string;
     size?: 'sm' | 'md';
+    itemName?: string;
 }
 
 const BagQuantity: React.FC<BagQuantityProps> = ({
@@ -13,10 +14,14 @@ const BagQuantity: React.FC<BagQuantityProps> = ({
     onIncrease,
     onDecrease,
     className = '',
-    size = 'md'
+    size = 'md',
+    itemName
 }) => {
     const buttonSize = size === 'sm' ? 'w-6 h-6 text-xs' : 'w-8 h-8 text-lg';
     const textSize = size === 'sm' ? 'text-sm w-6' : 'text-xl w-8';
+
+    const decreaseLabel = itemName ? `Decrease quantity for ${itemName}` : "Decrease quantity";
+    const increaseLabel = itemName ? `Increase quantity for ${itemName}` : "Increase quantity";
 
     return (
         <div className={`flex items-center space-x-2 bg-black ${className}`}>
@@ -26,7 +31,7 @@ const BagQuantity: React.FC<BagQuantityProps> = ({
                     onDecrease();
                 }}
                 className={`${buttonSize} bg-[#13DE00] text-black flex items-center justify-center hover:bg-green-700 cursor-pointer transition-colors font-bold`}
-                aria-label="Decrease quantity"
+                aria-label={decreaseLabel}
             >
                 -
             </button>
@@ -39,7 +44,7 @@ const BagQuantity: React.FC<BagQuantityProps> = ({
                     onIncrease();
                 }}
                 className={`${buttonSize} bg-[#13DE00] text-black flex items-center justify-center hover:bg-green-700 cursor-pointer transition-colors font-bold`}
-                aria-label="Increase quantity"
+                aria-label={increaseLabel}
             >
                 +
             </button>
