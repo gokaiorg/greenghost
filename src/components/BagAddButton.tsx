@@ -83,6 +83,7 @@ const BagAddButton: React.FC<BagAddButtonProps> = ({
                     onIncrease={() => handleQuantityChange(cartItem.quantity + 1)}
                     onDecrease={() => handleQuantityChange(cartItem.quantity - 1)}
                     size={compact ? 'sm' : 'md'}
+                    itemName={product.name}
                 />
             </div>
         );
@@ -96,12 +97,14 @@ const BagAddButton: React.FC<BagAddButtonProps> = ({
                 addItem(product, itemCategory);
             }}
             disabled={product.status !== 'In stock'}
+
             className={`
         bg-[#13DE00] text-black font-bold hover:bg-white hover:text-[#13DE00] transition-colors cursor-pointer relative z-20
         ${compact ? 'px-3 py-1 text-sm' : 'px-6 py-2 text-base'}
         ${product.status !== 'In stock' ? 'opacity-50 cursor-not-allowed bg-gray-500' : ''}
         ${className}
       `}
+            aria-label={product.status === 'In stock' ? `Add ${product.name} to bag` : `${product.name} is sold out`}
         >
             {product.status === 'In stock' ? 'Buy' : 'Sold Out'}
         </button>
