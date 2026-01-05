@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import StrainImage from './StrainImage'
 
 interface ImageSliderProps {
@@ -14,9 +14,10 @@ interface ImageSliderProps {
 
 // Mobile Slider Component - 1 image per slide
 function MobileSlider({ images, width, height, currentIndex, goToSlide }: ImageSliderProps & { currentIndex: number, goToSlide: (index: number) => void }) {
-  const [isDragging, setIsDragging] = useState(false)
-  const [startPos, setStartPos] = useState(0)
-  const [scrollLeft, setScrollLeft] = useState(0)
+  const isDragging = useRef(false)
+  const startPos = useRef(0)
+  const scrollLeft = useRef(0)
+  const sliderRef = useRef<HTMLDivElement>(null)
 
   const goToPrevious = () => {
     const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1
@@ -29,30 +30,45 @@ function MobileSlider({ images, width, height, currentIndex, goToSlide }: ImageS
   }
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    setIsDragging(true)
-    setStartPos(e.touches[0].clientX)
+    isDragging.current = true
+    startPos.current = e.touches[0].clientX
+    if (sliderRef.current) {
+      sliderRef.current.style.transition = 'none'
+    }
   }
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging) return
+    if (!isDragging.current) return
     const currentPos = e.touches[0].clientX
-    const diff = startPos - currentPos
-    setScrollLeft(diff)
+    const diff = startPos.current - currentPos
+    scrollLeft.current = diff
+
+    if (sliderRef.current) {
+      sliderRef.current.style.transform = `translateX(calc(-${currentIndex * 100}% - ${diff}px))`
+    }
   }
 
   const handleTouchEnd = () => {
-    if (!isDragging) return
-    setIsDragging(false)
+    if (!isDragging.current) return
+    isDragging.current = false
+
+    if (sliderRef.current) {
+      sliderRef.current.style.transition = 'transform 300ms ease-in-out'
+    }
 
     const threshold = 50 // minimum drag distance to trigger slide change
-    if (Math.abs(scrollLeft) > threshold) {
-      if (scrollLeft > 0) {
+    if (Math.abs(scrollLeft.current) > threshold) {
+      if (scrollLeft.current > 0) {
         goToNext()
       } else {
         goToPrevious()
       }
+    } else {
+      if (sliderRef.current) {
+        sliderRef.current.style.transform = `translateX(-${currentIndex * 100}%)`
+      }
     }
-    setScrollLeft(0)
+    scrollLeft.current = 0
   }
 
   return (
@@ -64,6 +80,7 @@ function MobileSlider({ images, width, height, currentIndex, goToSlide }: ImageS
     >
       <div className="overflow-hidden">
         <div
+          ref={sliderRef}
           className="flex transition-transform duration-300 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
