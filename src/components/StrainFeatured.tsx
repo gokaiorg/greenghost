@@ -5,7 +5,7 @@ import MiniSlider from '@/components/MiniSlider'
 import BagAddButton from '@/components/BagAddButton'
 
 const featuredStrainNames = [
-    'Strawneapple',
+    'Tropical Sunrise',
     'Mango Sticky Rice',
     'Toasted Toffee',
     "Ben & Gary's",
