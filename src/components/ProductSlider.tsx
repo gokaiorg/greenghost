@@ -33,12 +33,19 @@ export default function ProductSlider({ products, category = 'Buds' }: ProductSl
   const [itemsToShow, setItemsToShow] = useState(getItemsToShow())
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout
     const handleResize = () => {
-      setItemsToShow(getItemsToShow())
+      clearTimeout(timeoutId)
+      timeoutId = setTimeout(() => {
+        setItemsToShow(getItemsToShow())
+      }, 150)
     }
 
     window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      clearTimeout(timeoutId)
+    }
   }, [])
 
   const totalSlides = Math.ceil(products.length / itemsToShow)
@@ -84,6 +91,15 @@ export default function ProductSlider({ products, category = 'Buds' }: ProductSl
 
     if (sliderRef.current) {
       sliderRef.current.style.transition = 'transform 300ms ease-in-out'
+    }
+
+    // Restore transition
+    if (sliderRef.current) {
+      sliderRef.current.style.transition = 'transform 300ms ease-in-out'
+      // We need to temporarily set the style back to the current index position
+      // so that React's render cycle picks up from there or the transition happens correctly
+      // However, we rely on the state update (goToNext/Prev) to trigger the re-render with new position
+      // If we don't change slide, we need to snap back manually
     }
 
     const threshold = 50

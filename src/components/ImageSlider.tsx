@@ -56,6 +56,11 @@ function MobileSlider({ images, width, height, currentIndex, goToSlide }: ImageS
       sliderRef.current.style.transition = 'transform 300ms ease-in-out'
     }
 
+    // Restore transition
+    if (sliderRef.current) {
+      sliderRef.current.style.transition = 'transform 300ms ease-in-out'
+    }
+
     const threshold = 50 // minimum drag distance to trigger slide change
     if (Math.abs(scrollLeft.current) > threshold) {
       if (scrollLeft.current > 0) {
