@@ -14,8 +14,8 @@ interface ProductSliderProps {
 
 export default function ProductSlider({ products, category = 'Buds' }: ProductSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [isDragging, setIsDragging] = useState(false)
-  const [startPos, setStartPos] = useState(0)
+  const isDragging = useRef(false)
+  const startPos = useRef(0)
   const scrollLeft = useRef(0)
 
   const sliderRef = useRef<HTMLDivElement>(null)
@@ -67,31 +67,31 @@ export default function ProductSlider({ products, category = 'Buds' }: ProductSl
 
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    setIsDragging(true)
-    setStartPos(e.touches[0].clientX)
+    isDragging.current = true
+    startPos.current = e.touches[0].clientX
+    if (sliderRef.current) {
+      sliderRef.current.style.transition = 'none'
+    }
   }
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging) return
+    if (!isDragging.current) return
     const currentPos = e.touches[0].clientX
-    const diff = startPos - currentPos
+    const diff = startPos.current - currentPos
     scrollLeft.current = diff
 
-    // Update transform immediately without state change for performance
     if (sliderRef.current) {
-      const translateX = -(currentIndex * 100)
-      // We convert the pixel diff to percentage relative to the container width
-      const containerWidth = sliderRef.current.offsetWidth
-      const diffPercentage = (diff / containerWidth) * 100
-
-      sliderRef.current.style.transform = `translateX(calc(${translateX}% - ${diffPercentage}%))`
-      sliderRef.current.style.transition = 'none' // Disable transition during drag for immediate response
+      sliderRef.current.style.transform = `translateX(calc(-${currentIndex * 100}% - ${diff}px))`
     }
   }
 
   const handleTouchEnd = () => {
-    if (!isDragging) return
-    setIsDragging(false)
+    if (!isDragging.current) return
+    isDragging.current = false
+
+    if (sliderRef.current) {
+      sliderRef.current.style.transition = 'transform 300ms ease-in-out'
+    }
 
     // Restore transition
     if (sliderRef.current) {
@@ -110,11 +110,10 @@ export default function ProductSlider({ products, category = 'Buds' }: ProductSl
         goToPrevious()
       }
     } else {
-        // If we didn't switch slides, we need to snap back to the current slide
-        // Because we manually messed with the style.transform
-        if (sliderRef.current) {
-             sliderRef.current.style.transform = `translateX(-${currentIndex * 100}%)`
-        }
+      // Snap back if threshold not met
+      if (sliderRef.current) {
+        sliderRef.current.style.transform = `translateX(-${currentIndex * 100}%)`
+      }
     }
     scrollLeft.current = 0
   }

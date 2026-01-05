@@ -149,6 +149,7 @@ export default function BagPopup({ isOpen, onClose }: BagPopupProps) {
                         onIncrease={() => handleQuantityChange(item.id, item.quantity + 1, item.quantity, item.menuType)}
                         onDecrease={() => handleQuantityChange(item.id, item.quantity - 1, item.quantity, item.menuType)}
                         size="sm"
+                        itemName={item.name}
                       />
                       <button
                         onClick={() => removeItem(item.id, item.menuType)}
