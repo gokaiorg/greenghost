@@ -13,9 +13,7 @@ export async function fetchProductsFromSheets(): Promise<Product[]> {
   }
 
   try {
-    if (!API_KEY) {
-      throw new Error('GOOGLE_API_KEY environment variable is missing')
-    }
+
 
     const { google } = await import('googleapis')
     const sheets = google.sheets({ version: 'v4' })

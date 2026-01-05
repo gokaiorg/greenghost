@@ -93,14 +93,7 @@ export default function ProductSlider({ products, category = 'Buds' }: ProductSl
       sliderRef.current.style.transition = 'transform 300ms ease-in-out'
     }
 
-    // Restore transition
-    if (sliderRef.current) {
-      sliderRef.current.style.transition = 'transform 300ms ease-in-out'
-      // We need to temporarily set the style back to the current index position
-      // so that React's render cycle picks up from there or the transition happens correctly
-      // However, we rely on the state update (goToNext/Prev) to trigger the re-render with new position
-      // If we don't change slide, we need to snap back manually
-    }
+
 
     const threshold = 50
     if (Math.abs(scrollLeft.current) > threshold) {

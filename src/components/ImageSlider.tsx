@@ -56,10 +56,7 @@ function MobileSlider({ images, width, height, currentIndex, goToSlide }: ImageS
       sliderRef.current.style.transition = 'transform 300ms ease-in-out'
     }
 
-    // Restore transition
-    if (sliderRef.current) {
-      sliderRef.current.style.transition = 'transform 300ms ease-in-out'
-    }
+
 
     const threshold = 50 // minimum drag distance to trigger slide change
     if (Math.abs(scrollLeft.current) > threshold) {
@@ -114,8 +111,8 @@ function MobileSlider({ images, width, height, currentIndex, goToSlide }: ImageS
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-4 h-4 p-2 transition-all cursor-pointer ${currentIndex === index
-                ? 'bg-[#13DE00] w-10'
-                : 'bg-gray-400 hover:bg-gray-600'
+              ? 'bg-[#13DE00] w-10'
+              : 'bg-gray-400 hover:bg-gray-600'
               }`}
             aria-label={`Go to slide ${index + 1}`}
           />
