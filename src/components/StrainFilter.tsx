@@ -35,6 +35,7 @@ export default function StrainFilter({ selectedDominances, onFilterChange }: Str
               }`}
             style={isSelected ? { borderColor: filter.color, color: filter.color } : { color: filter.color }}
             aria-label={filter.label}
+            aria-pressed={isSelected}
           >
             <div className="relative w-4 h-4 mr-1 sm:mr-2">
               <Image
