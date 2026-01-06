@@ -98,6 +98,7 @@ export default function ContactForm() {
                             type="text"
                             id="name"
                             name="name"
+                            autoComplete="name"
                             required
                             value={formData.name}
                             onChange={handleChange}
@@ -114,6 +115,7 @@ export default function ContactForm() {
                             type="email"
                             id="email"
                             name="email"
+                            autoComplete="email"
                             required
                             value={formData.email}
                             onChange={handleChange}
@@ -141,6 +143,7 @@ export default function ContactForm() {
                     <button
                         type="submit"
                         disabled={status === 'loading' || status === 'success'}
+                        aria-busy={status === 'loading'}
                         className={`w-full border-2 border-black cursor-pointer py-4 px-6 font-bold font-pixel text-lg flex items-center justify-center gap-2 transition-all duration-300 ${status === 'success'
                             ? 'bg-[#13DE00] border-2 text-black border-black'
                             : 'bg-black border-2 border-[#13DE00] text-[#13DE00] hover:bg-[#13DE00] hover:text-black'
@@ -162,13 +165,13 @@ export default function ContactForm() {
                     </button>
 
                     {status === 'success' && (
-                        <p className="text-black text-center font-mono font-bold">
+                        <p role="status" aria-live="polite" className="text-black text-center font-mono font-bold">
                             ✅ Thanks for reaching out! We&apos;ll get back to you soon.
                         </p>
                     )}
 
                     {status === 'error' && (
-                        <p className="text-red-600 text-center font-mono font-bold">
+                        <p role="alert" aria-live="assertive" className="text-red-600 text-center font-mono font-bold">
                             ❌ {errorMessage}
                         </p>
                     )}
