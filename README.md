@@ -28,8 +28,6 @@ A Next.js application for Green Ghost, a weed shop menu with cart functionality 
      ```
      GOOGLE_API_KEY=your-api-key-here
      ```
-     (Or the API key is hardcoded for development)
-   - Spreadsheet URL: https://docs.google.com/spreadsheets/d/1_tPKbwLkZHYZB99lOs91NhlW1YjkiP7UOsp9hIuVRnc/edit?gid=1335065453#gid=1335065453
    - Columns: Item ID (used as slug), Item name, Type (Buds/Pre-rolls/Gadgets), Price, Stock, Status
 
 4. Run the development server:

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Star } from 'lucide-react'
@@ -69,6 +69,16 @@ async function getReviews(): Promise<Review[]> {
   }
 }
 
+// Fisher-Yates shuffle
+function shuffleArray<T>(array: T[]): T[] {
+  const newArray = [...array];
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+}
+
 export default function Reviews() {
   const [reviews, setReviews] = useState<Review[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -76,9 +86,14 @@ export default function Reviews() {
   const [isDragging, setIsDragging] = useState(false)
   const [startX, setStartX] = useState(0)
   const [currentX, setCurrentX] = useState(0)
+  const navScrollContainerRef = useRef<HTMLDivElement>(null)
+  // For verify we are not in infinite loop
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    getReviews().then(setReviews)
+    getReviews().then(fetchedReviews => {
+      setReviews(shuffleArray(fetchedReviews))
+    })
 
     const updateItemsPerPage = () => {
       setItemsPerPage(window.innerWidth >= 768 ? 3 : 1)
@@ -89,6 +104,46 @@ export default function Reviews() {
 
     return () => window.removeEventListener('resize', updateItemsPerPage)
   }, [])
+
+  const totalSlides = Math.ceil(reviews.length / itemsPerPage)
+
+  const goToSlide = useCallback((index: number) => {
+    setCurrentIndex(index)
+  }, [])
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSlides)
+  }, [totalSlides])
+
+  // Auto-play logic
+  useEffect(() => {
+    if (totalSlides <= 1 || isDragging) return
+
+    const startAutoPlay = () => {
+      timeoutRef.current = setTimeout(() => {
+        nextSlide()
+      }, 5000)
+    }
+
+    startAutoPlay()
+
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    }
+  }, [currentIndex, totalSlides, isDragging, nextSlide])
+
+  // Scroll active dot into view
+  useEffect(() => {
+    if (navScrollContainerRef.current) {
+      const activeDot = navScrollContainerRef.current.children[currentIndex] as HTMLElement
+      if (activeDot) {
+        const container = navScrollContainerRef.current
+        const scrollLeft = activeDot.offsetLeft - (container.clientWidth / 2) + (activeDot.clientWidth / 2)
+        container.scrollTo({ left: scrollLeft, behavior: 'smooth' })
+      }
+    }
+  }, [currentIndex])
+
 
   const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
     setIsDragging(true)
@@ -101,15 +156,6 @@ export default function Reviews() {
 
     const x = 'touches' in e ? e.touches[0].clientX : e.clientX
     setCurrentX(x)
-
-    // Add visual feedback during drag
-    const dragOffset = x - startX
-    const sliderElement = document.getElementById('reviews-slider')
-    if (sliderElement) {
-      const baseTransform = -currentIndex * 100
-      const dragTransform = baseTransform + (dragOffset / sliderElement.offsetWidth) * 100
-      sliderElement.style.transform = `translateX(${dragTransform}%)`
-    }
   }
 
   const handleDragEnd = () => {
@@ -118,19 +164,19 @@ export default function Reviews() {
     const diff = startX - currentX
     const threshold = 50 // Minimum drag distance to trigger slide change
 
-    // Reset transform before updating index
-    const sliderElement = document.getElementById('reviews-slider')
-    if (sliderElement) {
-      sliderElement.style.transform = `translateX(-${currentIndex * 100}%)`
-    }
-
     if (Math.abs(diff) > threshold) {
       if (diff > 0 && currentIndex < totalSlides - 1) {
         // Dragged left, go to next slide
         setCurrentIndex(currentIndex + 1)
+      } else if (diff > 0 && currentIndex === totalSlides - 1) {
+        // Wrap around to first
+        setCurrentIndex(0)
       } else if (diff < 0 && currentIndex > 0) {
         // Dragged right, go to previous slide
         setCurrentIndex(currentIndex - 1)
+      } else if (diff < 0 && currentIndex === 0) {
+        // Wrap around to last
+        setCurrentIndex(totalSlides - 1)
       }
     }
 
@@ -141,12 +187,6 @@ export default function Reviews() {
 
   if (reviews.length === 0) {
     return null
-  }
-
-  const totalSlides = Math.ceil(reviews.length / itemsPerPage)
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index)
   }
 
   return (
@@ -194,7 +234,10 @@ export default function Reviews() {
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 text-white">
           <span className="text-[#13DE00]">Green</span> Ghosted Peeps
         </h2>
-        <div className="relative">
+        <div className="relative group"
+          onMouseEnter={() => { if (timeoutRef.current) clearTimeout(timeoutRef.current) }}
+          onMouseLeave={() => { /* Effect will restart loop naturally */ nextSlide() }} // Trigger restart
+        >
           <div
             className="overflow-hidden cursor-grab active:cursor-grabbing"
             onMouseDown={handleDragStart}
@@ -207,15 +250,16 @@ export default function Reviews() {
           >
             <ul
               id="reviews-slider"
-              className="flex transition-transform duration-300 ease-in-out list-none m-0 p-0"
-              style={{
-                transform: `translateX(-${currentIndex * 100}%)`,
-                transition: isDragging ? 'none' : 'transform 0.3s ease-in-out'
-              }}
+              className="grid grid-cols-1 list-none m-0 p-0"
               aria-label="Customer reviews"
             >
               {Array.from({ length: totalSlides }).map((_, slideIndex) => (
-                <li key={slideIndex} className="w-full shrink-0 px-2">
+                <li
+                  key={slideIndex}
+                  className={`w-full col-start-1 row-start-1 transition-opacity duration-1000 ease-in-out ${currentIndex === slideIndex ? 'opacity-100 z-10 relative' : 'opacity-0 z-0 absolute top-0 left-0 pointer-events-none'
+                    }`}
+                  aria-hidden={currentIndex !== slideIndex}
+                >
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {reviews
                       .slice(
@@ -225,7 +269,7 @@ export default function Reviews() {
                       .map((review, index) => (
                         <div
                           key={index}
-                          className="bg-[#13DE00]/13 p-6 flex flex-col justify-between"
+                          className="bg-[#13DE00]/13 p-6 flex flex-col justify-between h-full"
                         >
                           <div>
                             <div className="flex items-center mb-4">
@@ -260,16 +304,23 @@ export default function Reviews() {
             </ul>
           </div>
           {totalSlides > 1 && (
-            <div className="flex justify-center mt-8 space-x-2">
-              {Array.from({ length: totalSlides }).map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-4 h-4 p-2 transition-all cursor-pointer ${currentIndex === index ? 'bg-[#13DE00] w-10' : 'bg-gray-700 hover:bg-gray-500'
-                    }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
+            <div className="mt-8 px-4">
+              <div
+                ref={navScrollContainerRef}
+                className="flex justify-start md:justify-center space-x-2 overflow-x-auto pb-4 md:pb-0 scrollbar-hide snap-x"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                {Array.from({ length: totalSlides }).map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    className={`shrink-0 w-4 h-4 transition-all cursor-pointer snap-center ${currentIndex === index ? 'bg-[#13DE00] w-10' : 'bg-gray-700 hover:bg-gray-500'
+                      }`}
+                    aria-label={`Go to slide ${index + 1} of ${totalSlides}`}
+                    aria-current={currentIndex === index ? 'true' : 'false'}
+                  />
+                ))}
+              </div>
             </div>
           )}
         </div>

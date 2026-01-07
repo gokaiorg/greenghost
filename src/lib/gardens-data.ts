@@ -45,8 +45,12 @@ export async function getGardensData(): Promise<GardenItem[]> {
         for (let i = 1; i < lines.length; i++) {
             const values = parseCSVLine(lines[i]);
             if (values.length >= 2) {
-                // Pad index with leading zero for image filename (1 -> 01, 2 -> 02, etc.)
-                const imageIndex = i.toString().padStart(2, '0');
+                // Pad index with leading zero for image filename.
+                // Since CSV is now Newest -> Oldest, we need to invert the image mapping
+                // so the newest entry (first in CSV) gets the highest image number
+                // and the oldest entry (last in CSV) gets image 01.
+                const invertedIndex = lines.length - i;
+                const imageIndex = invertedIndex.toString().padStart(2, '0');
 
                 gardenItems.push({
                     date: values[0].trim(),
