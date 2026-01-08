@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { CartItem } from '@/lib/types'
 import Link from 'next/link'
 
@@ -15,6 +15,21 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
   const [addressInfo, setAddressInfo] = useState('')
   const [paymentMethod, setPaymentMethod] = useState<'prepaid' | 'cod'>('prepaid')
   const [activeTab, setActiveTab] = useState<'whatsapp' | 'messenger' | 'telegram'>('whatsapp')
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose()
+      }
+    }
+
+    // BagMessaging is always "open" when it's rendered, so we don't need an isOpen prop
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [onClose])
 
   const getItemTotal = (item: CartItem) => {
     if (item.menuType === 'Buds' || item.menuType === 'Pre-rolls') {
