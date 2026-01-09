@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useReducer, ReactNode, useEffect, useState } from 'react'
+import { createContext, useContext, useReducer, ReactNode, useEffect, useState, useMemo, useCallback } from 'react'
 import { Product, CartItem } from '@/lib/types'
 
 interface CartState {
@@ -101,12 +101,13 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     }
   }, [state, isHydrated])
 
-  const addItem = (product: Product, menuType: string) => dispatch({ type: 'ADD_ITEM', product, menuType })
-  const removeItem = (id: string, menuType: string) => dispatch({ type: 'REMOVE_ITEM', id, menuType })
-  const updateQuantity = (id: string, quantity: number, menuType: string) => dispatch({ type: 'UPDATE_QUANTITY', id, quantity, menuType })
-  const clearCart = () => dispatch({ type: 'CLEAR_CART' })
+  const addItem = useCallback((product: Product, menuType: string) => dispatch({ type: 'ADD_ITEM', product, menuType }), [])
+  const removeItem = useCallback((id: string, menuType: string) => dispatch({ type: 'REMOVE_ITEM', id, menuType }), [])
+  const updateQuantity = useCallback((id: string, quantity: number, menuType: string) => dispatch({ type: 'UPDATE_QUANTITY', id, quantity, menuType }), [])
+  const clearCart = useCallback(() => dispatch({ type: 'CLEAR_CART' }), [])
 
-  const getTotal = () => state.items.reduce((total, item) => {
+  // Calculate totals only when items change
+  const total = useMemo(() => state.items.reduce((total, item) => {
     if (item.menuType === 'Buds' || item.menuType === 'Pre-rolls') {
       // Add 20฿ to pre-rolls base price
       const basePrice = item.menuType === 'Pre-rolls' ? item.price + 20 : item.price;
@@ -123,20 +124,26 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       }
     }
     return total + item.price * item.quantity
-  }, 0)
-  const getItemCount = () => state.items.reduce((count, item) => count + item.quantity, 0)
+  }, 0), [state.items])
+
+  const itemCount = useMemo(() => state.items.reduce((count, item) => count + item.quantity, 0), [state.items])
+
+  const getTotal = useCallback(() => total, [total])
+  const getItemCount = useCallback(() => itemCount, [itemCount])
+
+  const contextValue = useMemo(() => ({
+    state,
+    dispatch,
+    addItem,
+    removeItem,
+    updateQuantity,
+    clearCart,
+    getTotal,
+    getItemCount
+  }), [state, addItem, removeItem, updateQuantity, clearCart, getTotal, getItemCount])
 
   return (
-    <CartContext.Provider value={{
-      state,
-      dispatch,
-      addItem,
-      removeItem,
-      updateQuantity,
-      clearCart,
-      getTotal,
-      getItemCount
-    }}>
+    <CartContext.Provider value={contextValue}>
       {children}
     </CartContext.Provider>
   )

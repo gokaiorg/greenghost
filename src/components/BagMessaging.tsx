@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { CartItem } from '@/lib/types'
 import Link from 'next/link'
 
@@ -15,6 +15,21 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
   const [addressInfo, setAddressInfo] = useState('')
   const [paymentMethod, setPaymentMethod] = useState<'prepaid' | 'cod'>('prepaid')
   const [activeTab, setActiveTab] = useState<'whatsapp' | 'messenger' | 'telegram'>('whatsapp')
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose()
+      }
+    }
+
+    // BagMessaging is always "open" when it's rendered, so we don't need an isOpen prop
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [onClose])
 
   const getItemTotal = (item: CartItem) => {
     if (item.menuType === 'Buds' || item.menuType === 'Pre-rolls') {
@@ -126,12 +141,18 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-white mb-2">
+              <label id="payment-method-label" className="block text-sm font-medium text-white mb-2">
                 Payment Method *
               </label>
-              <div className="grid grid-cols-2 gap-2">
+              <div
+                className="grid grid-cols-2 gap-2"
+                role="radiogroup"
+                aria-labelledby="payment-method-label"
+              >
                 <button
                   type="button"
+                  role="radio"
+                  aria-checked={paymentMethod === 'prepaid'}
                   onClick={() => setPaymentMethod('prepaid')}
                   className={`p-2 text-sm border-2 ${paymentMethod === 'prepaid' ? 'bg-[#13DE00] text-black border-[#13DE00]' : 'bg-black text-white border-gray-600'} hover:border-[#13DE00] transition-colors`}
                 >
@@ -139,6 +160,8 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
                 </button>
                 <button
                   type="button"
+                  role="radio"
+                  aria-checked={paymentMethod === 'cod'}
                   onClick={() => setPaymentMethod('cod')}
                   className={`p-2 text-sm border-2 ${paymentMethod === 'cod' ? 'bg-[#13DE00] text-black border-[#13DE00]' : 'bg-black text-white border-gray-600'} hover:border-[#13DE00] transition-colors`}
                 >
@@ -156,10 +179,16 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
             </div>
 
             <div className="pt-4">
-              <h3 className="text-sm font-medium text-white mb-2">Send Order Via</h3>
-              <div className="grid grid-cols-3 gap-2">
+              <h3 id="send-order-label" className="text-sm font-medium text-white mb-2">Send Order Via</h3>
+              <div
+                className="grid grid-cols-3 gap-2"
+                role="radiogroup"
+                aria-labelledby="send-order-label"
+              >
                 <button
                   type="button"
+                  role="radio"
+                  aria-checked={activeTab === 'whatsapp'}
                   onClick={() => setActiveTab('whatsapp')}
                   className={`p-3 flex items-center justify-center space-x-2 text-[10px] md:text-sm text-white ${activeTab === 'whatsapp' ? 'bg-black border-2 border-[#13DE00]' : 'bg-black border-2 border-gray-600'
                     } hover:border-[#13DE00] cursor-pointer`}
@@ -169,6 +198,8 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
 
                 <button
                   type="button"
+                  role="radio"
+                  aria-checked={activeTab === 'messenger'}
                   onClick={() => setActiveTab('messenger')}
                   className={`p-3 flex items-center justify-center space-x-2 text-[10px] md:text-sm text-white ${activeTab === 'messenger' ? 'bg-black border-2 border-[#13DE00]' : 'bg-black border-2 border-gray-600'
                     } hover:border-[#13DE00] cursor-pointer`}
@@ -178,6 +209,8 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
 
                 <button
                   type="button"
+                  role="radio"
+                  aria-checked={activeTab === 'telegram'}
                   onClick={() => setActiveTab('telegram')}
                   className={`p-3 flex items-center justify-center space-x-2 text-[10px] md:text-sm text-white ${activeTab === 'telegram' ? 'bg-black border-2 border-[#13DE00]' : 'bg-black border-2 border-gray-600'
                     } hover:border-[#13DE00] cursor-pointer`}
