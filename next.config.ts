@@ -238,6 +238,11 @@ const nextConfig: NextConfig = {
         destination: '/gadgets/glass-ice-bong',
         permanent: true,
       },
+      {
+        source: '/gadgets/weed-th-rolling-papers-tips',
+        destination: '/gadgets/weedth-rolling-papers-tips',
+        permanent: true,
+      },
     ]
   },
 };
