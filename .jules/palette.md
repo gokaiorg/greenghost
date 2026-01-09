@@ -1,3 +1,3 @@
-## 2024-05-23 - Micro-interactions Matter: Keyboard Accessibility for Modals
-**Learning:** Users who rely on keyboard navigation (or power users) expect the 'Escape' key to close modals, such as shopping carts or popups. Missing this interaction makes the application feel "stuck" or less responsive.
-**Action:** Always include a `useEffect` hook that listens for `keydown` events (specifically 'Escape') in any modal or overlay component to trigger the close action. Clean up the event listener on unmount.
+## 2024-05-22 - Skip to Content Pattern
+**Learning:** This app uses a global `Header` component inside `src/components/Header.tsx` which appears on every page. The main content is wrapped in a `<main>` tag in `src/app/layout.tsx`. To implement a "Skip to content" link, the `Header` must contain the anchor, and the `layout.tsx` must provide the matching `id`. The Age Verification modal (z-50) can obscure this link (z-40) during testing, requiring a session bypass.
+**Action:** When adding skip links in this architecture, ensure the target `id` is on the layout's `<main>` tag and test with `sessionStorage.setItem('age-verified', 'true')` to bypass overlays.
