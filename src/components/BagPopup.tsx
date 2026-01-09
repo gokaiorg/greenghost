@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useCart } from '@/contexts/CartContext'
 import { CartItem } from '@/lib/types'
@@ -18,6 +18,22 @@ export default function BagPopup({ isOpen, onClose }: BagPopupProps) {
   const { items } = state
   const total = getTotal()
   const [showMessagingSelector, setShowMessagingSelector] = useState(false)
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose()
+      }
+    }
+
+    if (isOpen) {
+      window.addEventListener('keydown', handleKeyDown)
+    }
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [isOpen, onClose])
 
   const getItemTotal = (item: CartItem) => {
     if (item.menuType === 'Buds' || item.menuType === 'Pre-rolls') {
