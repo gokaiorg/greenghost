@@ -20,6 +20,11 @@ export default function Header() {
 
   useEffect(() => {
     setIsHydrated(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isMenuOpen) return
+
     // Close menu when clicking outside
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -39,7 +44,7 @@ export default function Header() {
       document.removeEventListener('mousedown', handleClickOutside)
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [isMenuOpen])
 
   return (
     <header className="sticky top-0 z-40 text-white py-2 px-4 bg-black/80 backdrop-blur-sm border-b border-[#13DE00]/21">
