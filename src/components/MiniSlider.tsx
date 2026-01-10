@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, memo } from 'react'
 import StrainImage from './StrainImage'
 
 interface MiniSliderProps {
@@ -11,7 +11,7 @@ interface MiniSliderProps {
   autoRotate?: boolean
 }
 
-export default function MiniSlider({ images, alt, width = 100, height = 100, autoRotate = false }: MiniSliderProps) {
+function MiniSlider({ images, alt, width = 100, height = 100, autoRotate = false }: MiniSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
   const [startPos, setStartPos] = useState(0)
@@ -124,3 +124,5 @@ export default function MiniSlider({ images, alt, width = 100, height = 100, aut
     </div>
   )
 }
+
+export default memo(MiniSlider)
