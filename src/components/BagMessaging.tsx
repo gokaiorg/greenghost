@@ -75,7 +75,7 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (!name || !location) return
-    window.open(getMessagingLink(), '_blank')
+    window.open(getMessagingLink(), '_blank', 'noopener,noreferrer')
     onClose()
   }
 
