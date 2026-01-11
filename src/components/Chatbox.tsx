@@ -212,11 +212,13 @@ export default function Chatbox() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Type your message..."
+                aria-label="Type your message"
                 className="w-full flex-1 bg-[#13DE00]/13 text-white text-sm px-3 py-2 focus:outline-none focus:border-2 focus:border-[#13DE00]"
               />
               <button
                 type="submit"
-                className="bg-[#13DE00] text-black p-2 hover:bg-[#13DE00]/90 transition-colors border-2 border-[#13DE00] cursor-pointer"
+                disabled={!input.trim()}
+                className={`bg-[#13DE00] text-black p-2 transition-colors border-2 border-[#13DE00] ${!input.trim() ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#13DE00]/90 cursor-pointer'}`}
                 aria-label="Send message"
               >
                 <Send size={18} />

@@ -176,7 +176,7 @@ export default async function RootLayout({
           <WalletProvider>
             <CartProvider>
               <Header />
-              <main className="flex-grow">{children}</main>
+              <main id="main-content" className="flex-grow">{children}</main>
               <Footer socials={socials} />
               <div className="fixed bottom-4 right-4 z-30 flex flex-row space-x-4">
                 <WhatsAppButton />

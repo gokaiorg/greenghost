@@ -20,6 +20,11 @@ export default function Header() {
 
   useEffect(() => {
     setIsHydrated(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isMenuOpen) return
+
     // Close menu when clicking outside
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -39,10 +44,16 @@ export default function Header() {
       document.removeEventListener('mousedown', handleClickOutside)
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [isMenuOpen])
 
   return (
     <header className="sticky top-0 z-40 text-white py-2 px-4 bg-black/80 backdrop-blur-sm border-b border-[#13DE00]/21">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-[#13DE00] text-black px-4 py-2 font-bold font-pixel"
+      >
+        Skip to content
+      </a>
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <Link href="/" className="flex-shrink-0" title="Green Ghost Home">
