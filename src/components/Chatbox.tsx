@@ -173,7 +173,13 @@ export default function Chatbox() {
             </button>
           </div>
 
-          <div className="flex-1 p-4 overflow-y-auto bg-black text-white">
+          <div
+            className="flex-1 p-4 overflow-y-auto bg-black text-white"
+            role="log"
+            aria-live="polite"
+            aria-label="Chat history"
+            tabIndex={0}
+          >
             <div className="space-y-4">
               {messages.map((message) => (
                 <div
