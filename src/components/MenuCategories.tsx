@@ -33,27 +33,52 @@ export default function MenuCategories() {
           aria-label="Menu categories"
         >
           <li>
-            <Link href="/menu/buds" className={`px-2 py-1 transition-colors  ${pathname === '/menu/buds' ? 'text-black !bg-[#13DE00]' : 'text-[#13DE00] hover:bg-[#13DE00]/13'}`} title="Buds">
+            <Link
+              href="/menu/buds"
+              className={`px-2 py-1 transition-colors  ${pathname === '/menu/buds' ? 'text-black !bg-[#13DE00]' : 'text-[#13DE00] hover:bg-[#13DE00]/13'}`}
+              title="Buds"
+              aria-current={pathname === '/menu/buds' ? 'page' : undefined}
+            >
               Buds
             </Link>
           </li>
           <li>
-            <Link href="/menu/pre-rolls" className={`px-2 py-1 transition-colors  ${pathname === '/menu/pre-rolls' ? 'text-black !bg-[#13DE00]' : 'text-[#13DE00] hover:bg-[#13DE00]/13'}`} title="Pre-rolls">
+            <Link
+              href="/menu/pre-rolls"
+              className={`px-2 py-1 transition-colors  ${pathname === '/menu/pre-rolls' ? 'text-black !bg-[#13DE00]' : 'text-[#13DE00] hover:bg-[#13DE00]/13'}`}
+              title="Pre-rolls"
+              aria-current={pathname === '/menu/pre-rolls' ? 'page' : undefined}
+            >
               Pre-rolls
             </Link>
           </li>
           <li>
-            <Link href="/menu/concentrates" className={`px-2 py-1 transition-colors  ${pathname === '/menu/concentrates' ? 'text-black !bg-[#13DE00]' : 'text-[#13DE00] hover:bg-[#13DE00]/13'}`} title="Concentrates">
+            <Link
+              href="/menu/concentrates"
+              className={`px-2 py-1 transition-colors  ${pathname === '/menu/concentrates' ? 'text-black !bg-[#13DE00]' : 'text-[#13DE00] hover:bg-[#13DE00]/13'}`}
+              title="Concentrates"
+              aria-current={pathname === '/menu/concentrates' ? 'page' : undefined}
+            >
               Concentrates
             </Link>
           </li>
           <li>
-            <Link href="/menu/edibles" className={`px-2 py-1 transition-colors  ${pathname === '/menu/edibles' ? 'text-black !bg-[#13DE00]' : 'text-[#13DE00] hover:bg-[#13DE00]/13'}`} title="Edibles">
+            <Link
+              href="/menu/edibles"
+              className={`px-2 py-1 transition-colors  ${pathname === '/menu/edibles' ? 'text-black !bg-[#13DE00]' : 'text-[#13DE00] hover:bg-[#13DE00]/13'}`}
+              title="Edibles"
+              aria-current={pathname === '/menu/edibles' ? 'page' : undefined}
+            >
               Edibles
             </Link>
           </li>
           <li>
-            <Link href="/menu/gadgets" className={`px-2 py-1 transition-colors  ${pathname === '/menu/gadgets' ? 'text-black !bg-[#13DE00]' : 'text-[#13DE00] hover:bg-[#13DE00]/13'}`} title="Gadgets">
+            <Link
+              href="/menu/gadgets"
+              className={`px-2 py-1 transition-colors  ${pathname === '/menu/gadgets' ? 'text-black !bg-[#13DE00]' : 'text-[#13DE00] hover:bg-[#13DE00]/13'}`}
+              title="Gadgets"
+              aria-current={pathname === '/menu/gadgets' ? 'page' : undefined}
+            >
               Gadgets
             </Link>
           </li>

@@ -78,6 +78,7 @@ export default function WeedNavigation() {
                             <Link
                                 href={item.href}
                                 className={styles.container}
+                                aria-current={pathname === item.href ? 'page' : undefined}
                             >
                                 <div className="relative w-24 h-24 mb-4">
                                     <Image
@@ -108,6 +109,7 @@ export default function WeedNavigation() {
                             <Link
                                 href={item.href}
                                 className={styles.container}
+                                aria-current={pathname === item.href ? 'page' : undefined}
                             >
                                 <div className="relative w-24 h-24 mb-4">
                                     <Image
