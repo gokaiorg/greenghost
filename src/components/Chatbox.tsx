@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, memo } from 'react';
 import { Send, MessageSquare, X } from 'lucide-react';
 import { getStrains, findStrain, formatStrainInfo } from '@/lib/strains';
 
@@ -35,12 +35,56 @@ const RESPONSES = {
   default: `I'm here to help! You can ask me about our ${createLink('/menu', 'products')}, ${createLink('/strains', 'strains')}, ${createLink('/delivery', 'delivery')}, or ${createLink('/wholesale', 'wholesale options')}. For example, you could ask 'What strains do you have for relaxation?' or 'Tell me about Pineapple Express'.`,
 };
 
+// Memoized MessageList component to prevent re-renders on input change
+const MessageList = memo(function MessageList({ messages }: { messages: Message[] }) {
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
+  return (
+    <div className="space-y-4">
+      {messages.map((message) => (
+        <div
+          key={message.id}
+          className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+        >
+          <div
+            className={`max-w-[80%] p-3 ${message.sender === 'user'
+                ? 'bg-[#13DE00] text-black'
+                : 'bg-[#13DE00]/13 text-white'
+              }`}
+          >
+            {/* Security Fix: Only render bot messages as HTML, render user messages as text */}
+            {message.sender === 'user' ? (
+              <p className="text-xs whitespace-pre-wrap">{message.text}</p>
+            ) : (
+              <p
+                className="text-xs"
+                dangerouslySetInnerHTML={{ __html: message.text }}
+              />
+            )}
+            <p className="text-xs opacity-60 mt-1">
+              {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+            </p>
+          </div>
+        </div>
+      ))}
+      <div ref={messagesEndRef} />
+    </div>
+  );
+});
+
 export default function Chatbox() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>(INITIAL_MESSAGES);
   const [input, setInput] = useState('');
   const [strains, setStrains] = useState<Awaited<ReturnType<typeof getStrains>>>([]);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
   const hasLoadedStrains = useRef(false);
 
   // Load strains only when chat is opened
@@ -54,14 +98,6 @@ export default function Chatbox() {
       loadStrains();
     }
   }, [isOpen]);
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -184,35 +220,7 @@ export default function Chatbox() {
             aria-label="Chat history"
             tabIndex={0}
           >
-            <div className="space-y-4">
-              {messages.map((message) => (
-                <div
-                  key={message.id}
-                  className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-                >
-                  <div
-                    className={`max-w-[80%] p-3 ${message.sender === 'user'
-                        ? 'bg-[#13DE00] text-black'
-                        : 'bg-[#13DE00]/13 text-white'
-                      }`}
-                  >
-                    {/* Security Fix: Only render bot messages as HTML, render user messages as text */}
-                    {message.sender === 'user' ? (
-                      <p className="text-xs whitespace-pre-wrap">{message.text}</p>
-                    ) : (
-                      <p
-                        className="text-xs"
-                        dangerouslySetInnerHTML={{ __html: message.text }}
-                      />
-                    )}
-                    <p className="text-xs opacity-60 mt-1">
-                      {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                    </p>
-                  </div>
-                </div>
-              ))}
-              <div ref={messagesEndRef} />
-            </div>
+            <MessageList messages={messages} />
           </div>
 
           <form onSubmit={handleSubmit} className="p-3 bg-[#13DE00]/13">
