@@ -41,15 +41,19 @@ export default function Chatbox() {
   const [input, setInput] = useState('');
   const [strains, setStrains] = useState<Awaited<ReturnType<typeof getStrains>>>([]);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const hasLoadedStrains = useRef(false);
 
-  // Load strains on component mount
+  // Load strains only when chat is opened
   useEffect(() => {
-    const loadStrains = async () => {
-      const loadedStrains = await getStrains();
-      setStrains(loadedStrains);
-    };
-    loadStrains();
-  }, []);
+    if (isOpen && !hasLoadedStrains.current) {
+      hasLoadedStrains.current = true;
+      const loadStrains = async () => {
+        const loadedStrains = await getStrains();
+        setStrains(loadedStrains);
+      };
+      loadStrains();
+    }
+  }, [isOpen]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
