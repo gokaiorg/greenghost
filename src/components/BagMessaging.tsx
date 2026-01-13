@@ -171,7 +171,7 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
 
               <div className="mt-2 p-2 bg-gray-900 border border-gray-700  text-xs text-gray-300">
                 {paymentMethod === 'prepaid' ? (
-                  <p>Please attach the payment slip in the chat after sending your order. <Link href="/payment" target="_blank" className="text-[#13DE00] underline hover:text-white">See bank details</Link></p>
+                  <p>Please attach the payment slip in the chat after sending your order. <Link href="/payment" target="_blank" rel="noopener noreferrer" className="text-[#13DE00] underline hover:text-white">See bank details</Link></p>
                 ) : (
                   <p>Please prepare the exact amount in cash for the driver.</p>
                 )}
