@@ -92,7 +92,7 @@ export default function ContactForm() {
 
                     <div>
                         <label htmlFor="name" className="block text-black mb-2 font-bold font-pixel text-sm">
-                            NAME
+                            NAME <span className="text-black" aria-hidden="true">*</span>
                         </label>
                         <input
                             type="text"
@@ -109,7 +109,7 @@ export default function ContactForm() {
 
                     <div>
                         <label htmlFor="email" className="block text-black mb-2 font-bold font-pixel text-sm">
-                            EMAIL
+                            EMAIL <span className="text-black" aria-hidden="true">*</span>
                         </label>
                         <input
                             type="email"
@@ -126,7 +126,7 @@ export default function ContactForm() {
 
                     <div>
                         <label htmlFor="message" className="block text-black mb-2 font-bold font-pixel text-sm">
-                            MESSAGE
+                            MESSAGE <span className="text-black" aria-hidden="true">*</span>
                         </label>
                         <textarea
                             id="message"
