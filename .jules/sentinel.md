@@ -13,3 +13,10 @@
 **Prevention:**
 1. Use an HTML escaping helper function for all dynamic values when constructing HTML strings manually.
 2. Verify that escaping occurs BEFORE concatenation to prevent breaking HTML structure while neutralizing scripts.
+
+## 2026-01-14 - WeedsBlock Unnecessary dangerouslySetInnerHTML
+**Vulnerability:** The `WeedsBlock` component used `dangerouslySetInnerHTML` to render descriptions after replacing newline characters with `<br/>`. This exposed the application to Stored XSS if the source CSV data (`weeds.csv`) was compromised, as it would render any HTML tags present in the description.
+**Learning:** Developers often reach for `dangerouslySetInnerHTML` to handle simple formatting like line breaks, unaware that CSS offers a safer alternative. Manual string manipulation (like `replace(/\n/g, '<br/>')`) combined with `dangerouslySetInnerHTML` is a code smell indicating a likely security gap.
+**Prevention:**
+1. Use CSS `white-space: pre-line` or `white-space: pre-wrap` to render text with newlines natively.
+2. Only use `dangerouslySetInnerHTML` when actual HTML parsing is strictly required (e.g., for rich text content with links/bolding).
