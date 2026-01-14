@@ -52,12 +52,21 @@ export default function ConnectMenu() {
             <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="cursor-pointer px-3 py-1 bg-[#13DE00]/20 hover:bg-[#13DE00]/40 text-[#13DE00] border border-[#13DE00]/50 font-pixel text-xs transition-transform active:scale-95 whitespace-nowrap"
+                aria-expanded={isOpen}
+                aria-haspopup="true"
+                aria-controls="connect-menu"
+                aria-label="Connect wallet"
             >
                 Connect
             </button>
 
             {isOpen && (
-                <div className="absolute right-0 top-full mt-2 w-48 bg-black border border-[#13DE00] shadow-lg z-50 py-1">
+                <div
+                    id="connect-menu"
+                    className="absolute right-0 top-full mt-2 w-48 bg-black border border-[#13DE00] shadow-lg z-50 py-1"
+                    role="menu"
+                    aria-label="Wallet options"
+                >
                     {availableConnectors.map((connector) => (
                         <button
                             key={connector.uid}
@@ -66,6 +75,7 @@ export default function ConnectMenu() {
                                 setIsOpen(false);
                             }}
                             className="w-full text-left px-4 py-2 text-xs cursor-pointer text-gray-300 hover:bg-[#13DE00]/20 hover:text-[#13DE00] transition-colors"
+                            role="menuitem"
                         >
                             {connector.name}
                         </button>

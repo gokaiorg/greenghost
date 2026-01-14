@@ -5,3 +5,7 @@
 ## 2025-05-22 - Chatbox Accessibility Live Regions
 **Learning:** Chat interfaces like `src/components/Chatbox.tsx` must use `role="log"` and `aria-live="polite"` on the message container to ensure screen readers announce new incoming messages automatically. Additionally, adding `tabIndex={0}` to the scrolling container is essential for keyboard-only users to scroll back through history.
 **Action:** When implementing or fixing chat components, always wrap the message list in a container with `role="log"`, `aria-live="polite"`, and `tabIndex={0}`.
+
+## 2025-05-22 - Connect Menu Accessibility
+**Learning:** Interactive dropdowns like `ConnectMenu.tsx` require `aria-expanded`, `aria-haspopup`, and `aria-controls` on the trigger, and `role="menu"` with `role="menuitem"` on the content to be accessible. Playwright's `get_by_role` is excellent for verifying these structure changes.
+**Action:** When implementing dropdowns, ensure these ARIA attributes are present and use `get_by_role` in verification scripts to confirm the accessibility tree structure.
