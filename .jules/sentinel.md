@@ -20,3 +20,8 @@
 **Prevention:**
 1. Use CSS `white-space: pre-line` or `white-space: pre-wrap` to render text with newlines natively.
 2. Only use `dangerouslySetInnerHTML` when actual HTML parsing is strictly required (e.g., for rich text content with links/bolding).
+
+## 2026-10-24 - Pages CSV Stored XSS
+**Vulnerability:** Multiple pages (Garden, Seeds, etc.) rendered descriptions from `pages.csv` using `dangerouslySetInnerHTML`. While the CSV currently contains safe text, treating it as trusted HTML source exposes the site to Stored XSS if the file is modified maliciously.
+**Learning:** Content from "static" files like CSVs often gets treated as implicitly trusted. However, if the content is just text, using HTML rendering is an unnecessary risk.
+**Prevention:** Default to standard React text rendering with `whitespace-pre-wrap` for preserving line breaks. Only use `dangerouslySetInnerHTML` if the content *must* contain HTML tags.

@@ -52,10 +52,9 @@ export default async function SeedsPage() {
 
       <div className="container mx-auto px-4 bg-black text-white">
         {seedsPage?.description && (
-          <div
-            className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8"
-            dangerouslySetInnerHTML={{ __html: seedsPage.description }}
-          />
+          <div className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8 whitespace-pre-wrap">
+            {seedsPage.description}
+          </div>
         )}
         {seedsPage?.section_title && (
           <h2 className="text-2xl font-bold mt-8 mb-4">
@@ -63,10 +62,9 @@ export default async function SeedsPage() {
           </h2>
         )}
         {seedsPage?.section_description && (
-          <div
-            className="text-base text-gray-200 text-center"
-            dangerouslySetInnerHTML={{ __html: seedsPage.section_description }}
-          />
+          <div className="text-base text-gray-200 text-center whitespace-pre-wrap">
+            {seedsPage.section_description}
+          </div>
         )}
         <SeedsList />
         <WeedNavigation />
