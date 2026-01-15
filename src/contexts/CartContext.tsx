@@ -12,9 +12,12 @@ type CartAction =
   | { type: 'REMOVE_ITEM'; id: string; menuType: string }
   | { type: 'UPDATE_QUANTITY'; id: string; quantity: number; menuType: string }
   | { type: 'CLEAR_CART' }
+  | { type: 'HYDRATE_CART'; items: CartItem[] }
 
 const cartReducer = (state: CartState, action: CartAction): CartState => {
   switch (action.type) {
+    case 'HYDRATE_CART':
+      return { ...state, items: action.items }
     case 'ADD_ITEM': {
       const existingItem = state.items.find(item => item.id === action.product.id && item.menuType === action.menuType)
       if (existingItem) {
@@ -79,14 +82,10 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     if (savedCart) {
       try {
         const parsed = JSON.parse(savedCart)
-        // Restore each item to the cart
-        parsed.items?.forEach((item: CartItem) => {
-          dispatch({ type: 'ADD_ITEM', product: item, menuType: item.menuType })
-          // Adjust quantity if needed
-          if (item.quantity > 1) {
-            dispatch({ type: 'UPDATE_QUANTITY', id: item.id, quantity: item.quantity, menuType: item.menuType })
-          }
-        })
+        // Optimization: Batch hydration into a single dispatch to prevent N+1 re-renders
+        if (Array.isArray(parsed.items) && parsed.items.length > 0) {
+          dispatch({ type: 'HYDRATE_CART', items: parsed.items })
+        }
       } catch (e) {
         console.error('Failed to parse saved cart:', e)
       }
