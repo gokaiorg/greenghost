@@ -68,10 +68,9 @@ const WeedsBlock: React.FC<WeedsBlockProps> = ({ strains, compounds, info }) => 
                             )}
                             <div className="flex-1 text-center md:text-left">
                                 <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                                <div
-                                    className="text-gray-300 text-sm md:text-base leading-relaxed space-y-4 whitespace-pre-line"
-                                    dangerouslySetInnerHTML={{ __html: item.description.replace(/\n/g, '<br/>') }}
-                                />
+                                <div className="text-gray-300 text-sm md:text-base leading-relaxed space-y-4 whitespace-pre-line">
+                                    {item.description}
+                                </div>
                             </div>
                         </li>
                     ))}
