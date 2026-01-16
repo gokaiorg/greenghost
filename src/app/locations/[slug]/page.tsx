@@ -98,14 +98,9 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               {location.description && (
                 <section className="bg-gradient-to-br from-[#13DE00]/5 to-transparent border border-[#13DE00]/21 p-5">
                   <h2 className="text-xl font-bold text-[#13DE00] mb-6">About This Location</h2>
-                  <p
-                    className="text-gray-300 leading-relaxed text-xs lg:text-sm xl:text-base"
-                    dangerouslySetInnerHTML={{
-                      __html: location.description
-                        .replace(/\\n\\n/g, '<br><br>')
-                        .replace(/\n\n/g, '<br><br>')
-                    }}
-                  />
+                  <p className="text-gray-300 leading-relaxed text-xs lg:text-sm xl:text-base whitespace-pre-wrap">
+                    {location.description.replace(/\\n/g, '\n')}
+                  </p>
                 </section>
               )}
             </div>

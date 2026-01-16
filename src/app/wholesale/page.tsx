@@ -52,10 +52,9 @@ export default async function WholesalePage() {
       <div className="container mx-auto px-4 bg-black text-white">
         {/* Original description from the page */}
         {wholesalePage?.description && (
-          <div
-            className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8"
-            dangerouslySetInnerHTML={{ __html: wholesalePage.description }}
-          />
+          <div className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8 whitespace-pre-wrap">
+            {wholesalePage.description}
+          </div>
         )}
 
         {/* Section title and description from pages.csv */}
@@ -66,10 +65,9 @@ export default async function WholesalePage() {
         )}
 
         {bannerData.sectionDescription && bannerData.sectionDescription.trim() !== '' && (
-          <div
-            className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8"
-            dangerouslySetInnerHTML={{ __html: bannerData.sectionDescription }}
-          />
+          <div className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8 whitespace-pre-wrap">
+            {bannerData.sectionDescription}
+          </div>
         )}
 
         <WholesalesList />

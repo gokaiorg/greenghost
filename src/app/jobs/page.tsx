@@ -51,10 +51,9 @@ export default async function JobsPage() {
       <div className="container mx-auto px-4 bg-black text-white">
         {/* Original description from the page */}
         {jobsPage?.description && (
-          <div
-            className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8"
-            dangerouslySetInnerHTML={{ __html: jobsPage.description }}
-          />
+          <div className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8 whitespace-pre-wrap">
+            {jobsPage.description}
+          </div>
         )}
 
         {/* Section title and description from pages.csv */}
@@ -65,10 +64,9 @@ export default async function JobsPage() {
         )}
 
         {bannerData.sectionDescription && bannerData.sectionDescription.trim() !== '' && (
-          <div
-            className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8"
-            dangerouslySetInnerHTML={{ __html: bannerData.sectionDescription }}
-          />
+          <div className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8 whitespace-pre-wrap">
+            {bannerData.sectionDescription}
+          </div>
         )}
 
         <div className="text-center my-6">

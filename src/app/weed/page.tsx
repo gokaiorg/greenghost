@@ -56,10 +56,9 @@ export default async function WeedPage() {
       <div className="container mx-auto px-4 bg-black text-white">
         {/* Original description from the page */}
         {weedPage?.description && (
-          <div
-            className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8"
-            dangerouslySetInnerHTML={{ __html: weedPage.description }}
-          />
+          <div className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8 whitespace-pre-wrap">
+            {weedPage.description}
+          </div>
         )}
 
         {/* Section title and description from pages.csv */}
@@ -70,10 +69,9 @@ export default async function WeedPage() {
         )}
 
         {bannerData.sectionDescription && bannerData.sectionDescription.trim() !== '' && (
-          <div
-            className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8"
-            dangerouslySetInnerHTML={{ __html: bannerData.sectionDescription }}
-          />
+          <div className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8 whitespace-pre-wrap">
+            {bannerData.sectionDescription}
+          </div>
         )}
 
         <WeedsBlock

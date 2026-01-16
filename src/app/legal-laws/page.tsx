@@ -94,10 +94,9 @@ export default async function LegalLawsPage() {
 
                 {/* Page Description / Intro Content */}
                 {pageInfo?.description && (
-                    <div
-                        className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8"
-                        dangerouslySetInnerHTML={{ __html: pageInfo.description }}
-                    />
+                    <div className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8 whitespace-pre-wrap">
+                        {pageInfo.description}
+                    </div>
                 )}
 
                 {/* Section title and description from pages.csv (if any - mirroring jobs page logic) */}
@@ -108,10 +107,9 @@ export default async function LegalLawsPage() {
                 )}
 
                 {bannerData.sectionDescription && bannerData.sectionDescription.trim() !== '' && (
-                    <div
-                        className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8"
-                        dangerouslySetInnerHTML={{ __html: bannerData.sectionDescription }}
-                    />
+                    <div className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8 whitespace-pre-wrap">
+                        {bannerData.sectionDescription}
+                    </div>
                 )}
 
                 <div className="w-full h-px bg-[#13DE00]/20 my-8" />

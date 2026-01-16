@@ -50,10 +50,9 @@ export default async function BestShopsPage() {
 
       <div className="container mx-auto px-4 bg-black text-white">
         {pageData?.description && (
-          <div
-            className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8"
-            dangerouslySetInnerHTML={{ __html: pageData.description }}
-          />
+          <div className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8 whitespace-pre-wrap">
+            {pageData.description}
+          </div>
         )}
 
         {pageData?.section_title && (
@@ -63,10 +62,9 @@ export default async function BestShopsPage() {
         )}
 
         {pageData?.section_description && (
-          <div
-            className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8"
-            dangerouslySetInnerHTML={{ __html: pageData.section_description }}
-          />
+          <div className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8 whitespace-pre-wrap">
+            {pageData.section_description}
+          </div>
         )}
 
         <BestShopsList shops={shops} />

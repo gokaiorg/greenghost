@@ -59,10 +59,9 @@ export default async function AboutPage() {
             >
               Who are we?
             </h2>
-            <div
-              className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8"
-              dangerouslySetInnerHTML={{ __html: aboutPage.description }}
-            />
+            <div className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8 whitespace-pre-wrap">
+              {aboutPage.description}
+            </div>
           </>
         )}
 
@@ -74,10 +73,9 @@ export default async function AboutPage() {
         )}
 
         {bannerData.sectionDescription && bannerData.sectionDescription.trim() !== '' && (
-          <div
-            className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8"
-            dangerouslySetInnerHTML={{ __html: bannerData.sectionDescription }}
-          />
+          <div className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8 whitespace-pre-wrap">
+            {bannerData.sectionDescription}
+          </div>
         )}
 
         <PromotesList />

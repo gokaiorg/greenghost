@@ -51,10 +51,9 @@ export default async function WeedGrowerPage() {
 
       <div className="container mx-auto px-4 bg-black text-white">
         {weedGrowerPage?.description && (
-          <div
-            className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8"
-            dangerouslySetInnerHTML={{ __html: weedGrowerPage.description }}
-          />
+          <div className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8 whitespace-pre-wrap">
+            {weedGrowerPage.description}
+          </div>
         )}
         {weedGrowerPage?.section_title && (
           <h2 className="text-2xl font-bold mt-8 mb-4">
@@ -62,10 +61,9 @@ export default async function WeedGrowerPage() {
           </h2>
         )}
         {weedGrowerPage?.section_description && (
-          <div
-            className="text-base text-gray-200 text-center"
-            dangerouslySetInnerHTML={{ __html: weedGrowerPage.section_description }}
-          />
+          <div className="text-base text-gray-200 text-center whitespace-pre-wrap">
+            {weedGrowerPage.section_description}
+          </div>
         )}
         <GrowersList />
         <WeedNavigation />
