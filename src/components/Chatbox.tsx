@@ -86,6 +86,18 @@ export default function Chatbox() {
   const [input, setInput] = useState('');
   const [strains, setStrains] = useState<Awaited<ReturnType<typeof getStrains>>>([]);
   const hasLoadedStrains = useRef(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Auto-focus input when chat opens
+  useEffect(() => {
+    if (isOpen) {
+      // Small timeout to ensure DOM is ready and transition is complete
+      const timer = setTimeout(() => {
+        inputRef.current?.focus();
+      }, 50);
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen]);
 
   // Load strains only when chat is opened
   useEffect(() => {
@@ -226,6 +238,7 @@ export default function Chatbox() {
           <form onSubmit={handleSubmit} className="p-3 bg-[#13DE00]/13">
             <div className="flex space-x-2">
               <input
+                ref={inputRef}
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
