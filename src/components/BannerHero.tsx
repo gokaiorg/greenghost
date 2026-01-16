@@ -13,7 +13,7 @@ const HERO_IMAGES = [
 
 export default function BannerHero() {
   const parallaxRef = useRef<HTMLDivElement>(null);
-  const [offset, setOffset] = useState(0);
+  const bgRef = useRef<HTMLDivElement>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -25,18 +25,22 @@ export default function BannerHero() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (parallaxRef.current) {
+      if (parallaxRef.current && bgRef.current) {
         const rect = parallaxRef.current.getBoundingClientRect();
-        const scrolled = window.scrollY;
 
         // Only apply parallax when hero section is in view
         if (rect.top < window.innerHeight && rect.bottom > 0) {
-          setOffset(scrolled * 0.5);
+          const scrolled = window.scrollY;
+          const offset = scrolled * 0.5;
+          bgRef.current.style.transform = `translateY(${offset}px)`;
         }
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Initial calculation in case we start scrolled down
+    handleScroll();
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -48,9 +52,10 @@ export default function BannerHero() {
       {/* Background with parallax effect */}
       <div className="absolute inset-0 z-0">
         <div
+          ref={bgRef}
           className="absolute inset-0 w-full h-full"
           style={{
-            transform: `translateY(${offset}px)`,
+            transform: 'translateY(0px)', // Initial state
             transition: 'transform 0.1s ease-out',
           }}
         >
