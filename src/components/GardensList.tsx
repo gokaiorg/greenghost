@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { getGardensData } from '@/lib/gardens-data';
+import { toJsonLd } from '@/lib/utils/json-ld';
 
 export default async function GardensList() {
     const gardens = await getGardensData();
@@ -45,7 +46,7 @@ export default async function GardensList() {
         <div className="w-full max-w-4xl mx-auto py-12 px-4">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                dangerouslySetInnerHTML={{ __html: toJsonLd(jsonLd) }}
             />
             <ul aria-label="Garden Updates Timeline" className="relative border-l-2 border-[#13DE00]/30 ml-3 md:ml-6 space-y-12">
                 {sortedGroups.map(([date, items], groupIndex) => (
