@@ -9,3 +9,11 @@
 ## 2025-05-22 - Connect Menu Accessibility
 **Learning:** Interactive dropdowns like `ConnectMenu.tsx` require `aria-expanded`, `aria-haspopup`, and `aria-controls` on the trigger, and `role="menu"` with `role="menuitem"` on the content to be accessible. Playwright's `get_by_role` is excellent for verifying these structure changes.
 **Action:** When implementing dropdowns, ensure these ARIA attributes are present and use `get_by_role` in verification scripts to confirm the accessibility tree structure.
+
+## 2025-05-22 - Accessible Product Sliders
+**Learning:** Custom product sliders like `ProductSlider.tsx` often lack keyboard navigation, making them inaccessible to non-mouse users. Adding `tabIndex={0}`, `role="region"`, `aria-roledescription="carousel"`, and handling `ArrowLeft`/`ArrowRight` keys significantly improves accessibility without changing the visual design.
+**Action:** Always wrap custom sliders in a focusable container with proper ARIA roles and keyboard event listeners for navigation.
+
+## 2025-05-22 - Z-Index Management for Fixed Elements
+**Learning:** When adding fixed elements like a "Scroll to Top" button, ensure the `z-index` is higher than interactive content (e.g., `MiniSlider` images at `z-10`) and other overlays (e.g., Age Verification at `z-50`). In this app, `z-[60]` was required to ensure the button remained clickable and wasn't intercepted by content or modals.
+**Action:** Always verify clickability of fixed elements over complex content areas using automated tests that simulate clicks (`.click()`) rather than just checking visibility.

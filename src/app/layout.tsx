@@ -15,6 +15,7 @@ import { getOrganizationData, getSocials } from "@/lib/organization-data";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import FarcasterProvider from "@/components/FarcasterProvider";
 import WalletProvider from "@/components/WalletProvider";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -178,7 +179,8 @@ export default async function RootLayout({
               <Header />
               <main id="main-content" className="flex-grow">{children}</main>
               <Footer socials={socials} />
-              <div className="fixed bottom-4 right-4 z-30 flex flex-row space-x-4">
+              <div className="fixed bottom-4 right-4 z-[60] flex flex-row space-x-4 items-end">
+                <ScrollToTop />
                 <WhatsAppButton />
                 <Chatbox />
               </div>
