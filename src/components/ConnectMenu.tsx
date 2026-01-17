@@ -3,6 +3,7 @@
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
 import { useFarcaster } from '@/components/FarcasterProvider';
 import { useState, useRef, useEffect } from 'react';
+import { Copy, Check } from 'lucide-react';
 
 export default function ConnectMenu() {
     const { address, isConnected } = useAccount();
@@ -10,6 +11,7 @@ export default function ConnectMenu() {
     const { disconnect } = useDisconnect();
     const { context } = useFarcaster();
     const [isOpen, setIsOpen] = useState(false);
+    const [isCopied, setIsCopied] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
 
     // Close dropdown when clicking outside
@@ -23,15 +25,38 @@ export default function ConnectMenu() {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
+    const handleCopyAddress = async () => {
+        if (!address) return;
+        try {
+            await navigator.clipboard.writeText(address);
+            setIsCopied(true);
+            setTimeout(() => setIsCopied(false), 2000);
+        } catch (err) {
+            console.error('Failed to copy address:', err);
+        }
+    };
+
     if (isConnected) {
         return (
-            <div className="flex gap-2 items-center ">
-                <span className="hidden md:inline text-xs font-mono text-[#13DE00]">
-                    {address?.slice(0, 6)}...{address?.slice(-4)}
-                </span>
+            <div className="flex gap-2 items-center">
+                <button
+                    onClick={handleCopyAddress}
+                    className="hidden md:flex items-center gap-2 px-2 py-1 rounded hover:bg-[#13DE00]/10 transition-colors group cursor-pointer"
+                    title="Copy address"
+                    aria-label={isCopied ? "Address copied" : "Copy wallet address"}
+                >
+                    <span className="text-xs font-mono text-[#13DE00]">
+                        {address?.slice(0, 6)}...{address?.slice(-4)}
+                    </span>
+                    {isCopied ? (
+                        <Check size={14} className="text-[#13DE00]" />
+                    ) : (
+                        <Copy size={14} className="text-[#13DE00]/50 group-hover:text-[#13DE00]" />
+                    )}
+                </button>
                 <button
                     onClick={() => disconnect()}
-                    className="px-2 py-1 text-xs bg-red-900/50 hover:bg-red-900 text-red-200 border border-red-700 transition-colors"
+                    className="cursor-pointer px-2 py-1 text-xs bg-red-900/50 hover:bg-red-900 text-red-200 border border-red-700 transition-colors"
                 >
                     Log Out
                 </button>
