@@ -158,7 +158,7 @@ export function findStrain(strains: Strain[], query: string): Strain | null {
   return effectMatch || null;
 }
 
-function escapeHtml(unsafe: string): string {
+export function escapeHtml(unsafe: string): string {
   return unsafe
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
