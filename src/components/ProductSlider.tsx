@@ -110,6 +110,17 @@ export default function ProductSlider({
     scrollLeft.current = 0;
   };
 
+  // Keyboard navigation
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      goToPrevious();
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      goToNext();
+    }
+  };
+
   if (products.length === 0) {
     return (
       <div className="w-full py-8">
@@ -120,10 +131,15 @@ export default function ProductSlider({
 
   return (
     <div
-      className="relative w-full py-8"
+      className="relative w-full py-8 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#13DE00]"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      role="region"
+      aria-roledescription="carousel"
+      aria-label={`Featured products in ${category}`}
     >
       {/* Slider Container */}
       <div className="overflow-hidden">
