@@ -2,21 +2,29 @@ import { BigQuery } from "@google-cloud/bigquery";
 
 import path from "path";
 
+const credentials =
+  process.env.GOOGLE_CLIENT_EMAIL && process.env.GOOGLE_PRIVATE_KEY
+    ? {
+      client_email: process.env.GOOGLE_CLIENT_EMAIL,
+      private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+    }
+    : undefined;
+
 const bigquery = new BigQuery({
-  projectId: "green-ghost-432101",
-  location: "europe-west1",
+  projectId: process.env.GOOGLE_PROJECT_ID || 'green-ghost-432101',
+  location: 'europe-west1',
   scopes: [
-    "https://www.googleapis.com/auth/bigquery",
-    "https://www.googleapis.com/auth/drive",
+    'https://www.googleapis.com/auth/bigquery',
+    'https://www.googleapis.com/auth/drive',
   ],
-  ...(process.env.GOOGLE_CREDENTIALS
-    ? { credentials: JSON.parse(process.env.GOOGLE_CREDENTIALS) }
+  ...(credentials
+    ? { credentials }
     : {
-        keyFilename: path.join(
-          process.cwd(),
-          "green-ghost-432101-58ca22dd1b4c.json",
-        ),
-      }),
+      keyFilename: path.join(
+        process.cwd(),
+        'green-ghost-432101-58ca22dd1b4c.json'
+      ),
+    }),
 });
 
 export interface PageData {
