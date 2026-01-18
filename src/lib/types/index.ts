@@ -1,12 +1,18 @@
 export interface Product {
   id: string;
   name: string;
-  type: 'Strains' | 'Edibles' | 'Concentrates' | 'Gadgets' | 'Pre-rolls' | string;
+  type:
+    | "Strains"
+    | "Edibles"
+    | "Concentrates"
+    | "Gadgets"
+    | "Pre-rolls"
+    | string;
   price: number;
   stock: number;
   initial: number;
   wholesale: number;
-  status: 'In stock' | 'Sold out' | string;
+  status: "In stock" | "Sold out" | string;
   dominance: string;
   thc: number;
   cbd: number;

@@ -1,40 +1,47 @@
-'use client'
+"use client";
 
-import React, { memo } from 'react'
-import Image from 'next/image'
+import React, { memo } from "react";
+import Image from "next/image";
 
 interface StrainFilterProps {
-  selectedDominances: string[]
-  onFilterChange: (dominances: string[]) => void
+  selectedDominances: string[];
+  onFilterChange: (dominances: string[]) => void;
 }
 
 const FILTERS = [
-  { label: 'Sativa', value: 'Sativa', color: '#d1fee5' },
-  { label: 'Hybrid', value: 'Hybrid', color: '#c0ef24' },
-  { label: 'Indica', value: 'Indica', color: '#ee9cc9' }
-]
+  { label: "Sativa", value: "Sativa", color: "#d1fee5" },
+  { label: "Hybrid", value: "Hybrid", color: "#c0ef24" },
+  { label: "Indica", value: "Indica", color: "#ee9cc9" },
+];
 
-function StrainFilter({ selectedDominances, onFilterChange }: StrainFilterProps) {
+function StrainFilter({
+  selectedDominances,
+  onFilterChange,
+}: StrainFilterProps) {
   const toggleFilter = (value: string) => {
-    const newSelected = selectedDominances.includes(value) && selectedDominances.length === 1
-      ? []
-      : [value]
-    onFilterChange(newSelected)
-  }
+    const newSelected =
+      selectedDominances.includes(value) && selectedDominances.length === 1
+        ? []
+        : [value];
+    onFilterChange(newSelected);
+  };
 
   return (
     <div className="flex space-x-2 mb-2">
       {FILTERS.map((filter) => {
-        const isSelected = selectedDominances.includes(filter.value)
+        const isSelected = selectedDominances.includes(filter.value);
         return (
           <button
             key={filter.label}
             onClick={() => toggleFilter(filter.value)}
-            className={`flex items-center px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium rounded-none transition-colors border-2 cursor-pointer ${isSelected
-              ? ''
-              : 'border-black'
-              }`}
-            style={isSelected ? { borderColor: filter.color, color: filter.color } : { color: filter.color }}
+            className={`flex items-center px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium rounded-none transition-colors border-2 cursor-pointer ${
+              isSelected ? "" : "border-black"
+            }`}
+            style={
+              isSelected
+                ? { borderColor: filter.color, color: filter.color }
+                : { color: filter.color }
+            }
             aria-label={filter.label}
             aria-pressed={isSelected}
           >
@@ -50,10 +57,10 @@ function StrainFilter({ selectedDominances, onFilterChange }: StrainFilterProps)
             </div>
             {filter.label}
           </button>
-        )
+        );
       })}
     </div>
-  )
+  );
 }
 
-export default memo(StrainFilter)
+export default memo(StrainFilter);

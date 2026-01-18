@@ -19,7 +19,7 @@ This directory contains all shared utilities, types, configurations, and data fe
 │   ├── bannerUtils.ts      # Banner data fetching utilities
 │   ├── hours.ts            # Business hours calculations
 │   ├── metadataUtils.ts    # Metadata helper functions
-│   ├── pageUtils.ts        # Page data utilities
+
 │   └── structuredData.ts   # JSON-LD structured data generation
 │
 └── [data files]         # Data fetching and constants
@@ -38,30 +38,32 @@ All imports now use the `@/lib/` prefix:
 
 ```typescript
 // Types
-import { Product, CartItem } from '@/lib/types'
-import { Location } from '@/lib/types/location'
+import { Product, CartItem } from "@/lib/types";
+import { Location } from "@/lib/types/location";
 
 // Config
-import { generateMetadata } from '@/lib/config/site-metadata'
-import { generateProductMetadata } from '@/lib/config/product-metadata'
+import { generateMetadata } from "@/lib/config/site-metadata";
+import { generateProductMetadata } from "@/lib/config/product-metadata";
 
 // Utils
-import { getBannerData } from '@/lib/utils/bannerUtils'
-import { isLocationOpen } from '@/lib/utils/hours'
+import { getBannerData } from "@/lib/utils/bannerUtils";
+import { isLocationOpen } from "@/lib/utils/hours";
 
 // Data
-import { getProductById } from '@/lib/products'
-import { PHONE_NUMBER } from '@/lib/constants'
+import { getProductById } from "@/lib/products";
+import { PHONE_NUMBER } from "@/lib/constants";
 ```
 
 ## Migration Notes
 
 Previously, code was split across:
+
 - `/config/` - Now in `/lib/config/`
 - `/types/` - Now in `/lib/types/`
 - `/utils/` - Now in `/lib/utils/`
 
 This consolidation:
+
 - ✅ Follows Next.js conventions
 - ✅ Reduces cognitive overhead
 - ✅ Eliminates duplicate file names

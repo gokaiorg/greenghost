@@ -1,39 +1,26 @@
-import { getNFTs } from '@/lib/nft-data';
-import NFTPageContent from '@/components/NFTPageContent';
-import { Metadata } from 'next';
+import { getNFTs } from "@/lib/nft-data";
+import NFTPageContent from "@/components/NFTPageContent";
+import { Metadata } from "next";
+import PagesBanner from "@/components/PagesBanner";
+import PagesIntro from "@/components/PagesIntro";
+import { PagesMetadata } from "@/components/PagesMetadata";
 
-export const metadata: Metadata = {
-  title: 'Green Ghost Degen NFT Collection - Green Ghost 🌿👻',
-  description: '420 Green Ghost Degen NFT Collection to enjoy exclusive discounts and cash back on your cannabis purchases at the best degen weed shop.',
-  openGraph: {
-    title: 'Green Ghost Degen NFT Collection - Green Ghost 🌿👻',
-    description: '420 Green Ghost Degen NFT Collection to enjoy exclusive discounts and cash back on your cannabis purchases at the best degen weed shop.',
-    url: '/nft',
-    siteName: 'Green Ghost',
-    images: [
-      {
-        url: '/images/banners/green-ghost-best-degen-weed-shop-nft.avif',
-        width: 1920,
-        height: 1080,
-        alt: 'Green Ghost Degen NFT Collection',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Green Ghost Degen NFT Collection - Green Ghost 🌿👻',
-    description: '420 Green Ghost Degen NFT Collection to enjoy exclusive discounts and cash back on your cannabis purchases at the best degen weed shop.',
-    images: ['/images/banners/green-ghost-best-degen-weed-shop-nft.avif'],
-  },
-  alternates: {
-    canonical: '/nft',
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return PagesMetadata({
+    pageName: "Nft",
+  });
+}
 
 export default async function NFTPage() {
   const nfts = await getNFTs();
 
-  return <NFTPageContent nfts={nfts} />;
+  return (
+    <>
+      <PagesBanner pageName="Nft" />
+      <div className="container mx-auto px-4">
+        <PagesIntro pageName="Nft" />
+        <NFTPageContent nfts={nfts} />
+      </div>
+    </>
+  );
 }

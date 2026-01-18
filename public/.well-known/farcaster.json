@@ -1,37 +1,29 @@
 {
-    "frame": {
-        "name": "Green Ghost 🌿👻",
-        "version": "1",
-        "iconUrl": "https://green.gd/images/logo512.png",
-        "homeUrl": "https://green.gd",
-        "imageUrl": "https://green.gd/green-ghost-degen-weed-shop.png",
-        "buttonTitle": "Order Now",
-        "splashImageUrl": "https://green.gd/green-ghost-degen-weed-shop.png",
-        "splashBackgroundColor": "#000000",
-        "castShareUrl": "https://green.gd",
-        "webhookUrl": "https://green.gd/api/webhook",
-        "description": "Premium cannabis shop featuring buds and pre-rolls with exclusive x402 payments and NFT-gated member pricing.",
-        "screenshotUrls": [
-            "https://green.gd/green-ghost-degen-weed-shop.png"
-        ],
-        "heroImageUrl": "https://green.gd/green-ghost-degen-weed-shop.png",
-        "primaryCategory": "shopping",
-        "subtitle": "Best Degen Weed Shop Delivery",
-        "tags": [
-            "nft-gated",
-            "x402",
-            "cannabis",
-            "shop",
-            "delivery"
-        ],
-        "tagline": "Weed Shop and Delivery",
-        "ogTitle": "Green Ghost",
-        "ogDescription": "Premium cannabis shop featuring buds and pre-rolls.",
-        "ogImageUrl": "https://green.gd/green-ghost-degen-weed-shop.png"
-    },
-    "accountAssociation": {
-        "header": "eyJmaWQiOjY4NTA4NCwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDllMDYyODVFM2QyZDlFOTdiODMyRTY1OTE2QzJDNDVEYzM3NDA3NWQifQ",
-        "payload": "eyJkb21haW4iOiJncmVlbi5nZCJ9",
-        "signature": "CMz5PdjhviuCU/gpS4636V1t2qfsIrpyobDEMIHT6Bplj625eHE8tRfMoNAnNZwpgzJMKxPsDBsiu0at5xMjeBw="
-    }
+  "frame": {
+    "name": "Green Ghost 🌿👻",
+    "version": "1",
+    "iconUrl": "https://green.gd/images/logo512.png",
+    "homeUrl": "https://green.gd",
+    "imageUrl": "https://green.gd/green-ghost-degen-weed-shop.png",
+    "buttonTitle": "Order Now",
+    "splashImageUrl": "https://green.gd/green-ghost-degen-weed-shop.png",
+    "splashBackgroundColor": "#000000",
+    "castShareUrl": "https://green.gd",
+    "webhookUrl": "https://green.gd/api/webhook",
+    "description": "Premium cannabis shop featuring buds and pre-rolls with exclusive x402 payments and NFT-gated member pricing.",
+    "screenshotUrls": ["https://green.gd/green-ghost-degen-weed-shop.png"],
+    "heroImageUrl": "https://green.gd/green-ghost-degen-weed-shop.png",
+    "primaryCategory": "shopping",
+    "subtitle": "Best Degen Weed Shop Delivery",
+    "tags": ["nft-gated", "x402", "cannabis", "shop", "delivery"],
+    "tagline": "Weed Shop and Delivery",
+    "ogTitle": "Green Ghost",
+    "ogDescription": "Premium cannabis shop featuring buds and pre-rolls.",
+    "ogImageUrl": "https://green.gd/green-ghost-degen-weed-shop.png"
+  },
+  "accountAssociation": {
+    "header": "eyJmaWQiOjY4NTA4NCwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDllMDYyODVFM2QyZDlFOTdiODMyRTY1OTE2QzJDNDVEYzM3NDA3NWQifQ",
+    "payload": "eyJkb21haW4iOiJncmVlbi5nZCJ9",
+    "signature": "CMz5PdjhviuCU/gpS4636V1t2qfsIrpyobDEMIHT6Bplj625eHE8tRfMoNAnNZwpgzJMKxPsDBsiu0at5xMjeBw="
+  }
 }

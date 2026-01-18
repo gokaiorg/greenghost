@@ -1,50 +1,50 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import Image from 'next/image'
-import { useCart } from '@/contexts/CartContext'
-import { usePathname } from 'next/navigation'
-import { useState, useEffect, useRef } from 'react'
-import BagPopup from '@/components/BagPopup'
-import { Menu, X } from 'lucide-react'
-import ConnectMenu from '@/components/ConnectMenu'
+import Link from "next/link";
+import Image from "next/image";
+import { useCart } from "@/contexts/CartContext";
+import { usePathname } from "next/navigation";
+import { useState, useEffect, useRef } from "react";
+import BagPopup from "@/components/BagPopup";
+import { Menu, X } from "lucide-react";
+import ConnectMenu from "@/components/ConnectMenu";
 
 export default function Header() {
-  const { getItemCount } = useCart()
-  const itemCount = getItemCount()
-  const pathname = usePathname()
-  const [isHydrated, setIsHydrated] = useState(false)
-  const [isCartOpen, setIsCartOpen] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const menuRef = useRef<HTMLDivElement>(null)
+  const { getItemCount } = useCart();
+  const itemCount = getItemCount();
+  const pathname = usePathname();
+  const [isHydrated, setIsHydrated] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setIsHydrated(true)
-  }, [])
+    setIsHydrated(true);
+  }, []);
 
   useEffect(() => {
-    if (!isMenuOpen) return
+    if (!isMenuOpen) return;
 
     // Close menu when clicking outside
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsMenuOpen(false)
+        setIsMenuOpen(false);
       }
-    }
+    };
 
     // Close menu when scrolling
     const handleScroll = () => {
-      setIsMenuOpen(false)
-    }
+      setIsMenuOpen(false);
+    };
 
-    document.addEventListener('mousedown', handleClickOutside)
-    window.addEventListener('scroll', handleScroll, { passive: true })
+    document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [isMenuOpen])
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isMenuOpen]);
 
   return (
     <header className="sticky top-0 z-40 text-white py-2 px-4 bg-black/80 backdrop-blur-sm border-b border-[#13DE00]/21">
@@ -65,7 +65,7 @@ export default function Header() {
               sizes="100vw"
               className="w-auto max-h-[69px]"
               priority
-              style={{ height: 'auto' }}
+              style={{ height: "auto" }}
             />
           </Link>
           <div className="relative" ref={menuRef}>
@@ -86,9 +86,9 @@ export default function Header() {
                   <Link
                     href="/menu"
                     title="Explore our menu"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/menu' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/menu" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === '/menu' ? 'page' : undefined}
+                    aria-current={pathname === "/menu" ? "page" : undefined}
                   >
                     Explore our menu
                   </Link>
@@ -97,9 +97,9 @@ export default function Header() {
                   <Link
                     href="/delivery"
                     title="Get delivered"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/delivery' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/delivery" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === '/delivery' ? 'page' : undefined}
+                    aria-current={pathname === "/delivery" ? "page" : undefined}
                   >
                     Get delivered
                   </Link>
@@ -108,9 +108,11 @@ export default function Header() {
                   <Link
                     href="/wholesale"
                     title="Bulk ordering"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/wholesale' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/wholesale" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === '/wholesale' ? 'page' : undefined}
+                    aria-current={
+                      pathname === "/wholesale" ? "page" : undefined
+                    }
                   >
                     Bulk ordering
                   </Link>
@@ -119,9 +121,9 @@ export default function Header() {
                   <Link
                     href="/payment"
                     title="Make a payment"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/payment' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/payment" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === '/payment' ? 'page' : undefined}
+                    aria-current={pathname === "/payment" ? "page" : undefined}
                   >
                     Make a payment
                   </Link>
@@ -130,9 +132,9 @@ export default function Header() {
                   <Link
                     href="/strains"
                     title="All the strains"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/strains' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/strains" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === '/strains' ? 'page' : undefined}
+                    aria-current={pathname === "/strains" ? "page" : undefined}
                   >
                     All the strains
                   </Link>
@@ -141,9 +143,9 @@ export default function Header() {
                   <Link
                     href="/weed"
                     title="Learn about weed"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/weed' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/weed" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === '/weed' ? 'page' : undefined}
+                    aria-current={pathname === "/weed" ? "page" : undefined}
                   >
                     Learn about weed
                   </Link>
@@ -152,9 +154,11 @@ export default function Header() {
                   <Link
                     href="/about"
                     title="Cannabis culture"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname?.startsWith('/about') ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname?.startsWith("/about") ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname?.startsWith('/about') ? 'page' : undefined}
+                    aria-current={
+                      pathname?.startsWith("/about") ? "page" : undefined
+                    }
                   >
                     Cannabis culture
                   </Link>
@@ -163,9 +167,11 @@ export default function Header() {
                   <Link
                     href="/cannabis-club"
                     title="Join the club"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/cannabis-club' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/cannabis-club" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === '/cannabis-club' ? 'page' : undefined}
+                    aria-current={
+                      pathname === "/cannabis-club" ? "page" : undefined
+                    }
                   >
                     Join the club
                   </Link>
@@ -174,9 +180,9 @@ export default function Header() {
                   <Link
                     href="/nft"
                     title="Mint your NFT"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/nft' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/nft" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === '/nft' ? 'page' : undefined}
+                    aria-current={pathname === "/nft" ? "page" : undefined}
                   >
                     Mint your NFT
                   </Link>
@@ -185,9 +191,9 @@ export default function Header() {
                   <Link
                     href="/jobs"
                     title="We are hiring"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/jobs' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/jobs" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === '/jobs' ? 'page' : undefined}
+                    aria-current={pathname === "/jobs" ? "page" : undefined}
                   >
                     We are hiring
                   </Link>
@@ -196,9 +202,11 @@ export default function Header() {
                   <Link
                     href="/locations"
                     title="Visit our locations"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/locations' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/locations" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === '/locations' ? 'page' : undefined}
+                    aria-current={
+                      pathname === "/locations" ? "page" : undefined
+                    }
                   >
                     Visit our locations
                   </Link>
@@ -207,9 +215,9 @@ export default function Header() {
                   <Link
                     href="/contact"
                     title="Contact us now"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === '/contact' ? 'bg-[#13DE00]/13 text-[#13DE00]' : ''}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/contact" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === '/contact' ? 'page' : undefined}
+                    aria-current={pathname === "/contact" ? "page" : undefined}
                   >
                     Contact us now
                   </Link>
@@ -231,8 +239,8 @@ export default function Header() {
               <Link
                 href="/menu"
                 title="Menu"
-                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname === '/menu' ? 'text-[#13DE00]' : ''}`}
-                aria-current={pathname === '/menu' ? 'page' : undefined}
+                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname === "/menu" ? "text-[#13DE00]" : ""}`}
+                aria-current={pathname === "/menu" ? "page" : undefined}
               >
                 Menu
               </Link>
@@ -241,8 +249,8 @@ export default function Header() {
               <Link
                 href="/delivery"
                 title="Delivery"
-                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname === '/delivery' ? 'text-[#13DE00]' : ''}`}
-                aria-current={pathname === '/delivery' ? 'page' : undefined}
+                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname === "/delivery" ? "text-[#13DE00]" : ""}`}
+                aria-current={pathname === "/delivery" ? "page" : undefined}
               >
                 Delivery
               </Link>
@@ -251,8 +259,8 @@ export default function Header() {
               <Link
                 href="/contact"
                 title="Contact"
-                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname === '/contact' ? 'text-[#13DE00]' : ''}`}
-                aria-current={pathname === '/contact' ? 'page' : undefined}
+                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname === "/contact" ? "text-[#13DE00]" : ""}`}
+                aria-current={pathname === "/contact" ? "page" : undefined}
               >
                 Contact
               </Link>
@@ -281,5 +289,5 @@ export default function Header() {
       </div>
       <BagPopup isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </header>
-  )
+  );
 }

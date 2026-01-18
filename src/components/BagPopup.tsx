@@ -1,44 +1,45 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
-import { useCart } from '@/contexts/CartContext'
-import { CartItem } from '@/lib/types'
-import BagMessaging from './BagMessaging'
-import BagQuantity from './BagQuantity'
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useCart } from "@/contexts/CartContext";
+import { CartItem } from "@/lib/types";
+import BagMessaging from "./BagMessaging";
+import BagQuantity from "./BagQuantity";
 
 interface BagPopupProps {
-  isOpen: boolean
-  onClose: () => void
+  isOpen: boolean;
+  onClose: () => void;
 }
 
 export default function BagPopup({ isOpen, onClose }: BagPopupProps) {
-  const router = useRouter()
-  const { state, removeItem, updateQuantity, getTotal } = useCart()
-  const { items } = state
-  const total = getTotal()
-  const [showMessagingSelector, setShowMessagingSelector] = useState(false)
+  const router = useRouter();
+  const { state, removeItem, updateQuantity, getTotal } = useCart();
+  const { items } = state;
+  const total = getTotal();
+  const [showMessagingSelector, setShowMessagingSelector] = useState(false);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        onClose()
+      if (e.key === "Escape") {
+        onClose();
       }
-    }
+    };
 
     if (isOpen) {
-      window.addEventListener('keydown', handleKeyDown)
+      window.addEventListener("keydown", handleKeyDown);
     }
 
     return () => {
-      window.removeEventListener('keydown', handleKeyDown)
-    }
-  }, [isOpen, onClose])
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, onClose]);
 
   const getItemTotal = (item: CartItem) => {
-    if (item.menuType === 'Buds' || item.menuType === 'Pre-rolls') {
+    if (item.menuType === "Buds" || item.menuType === "Pre-rolls") {
       // Add 20฿ to pre-rolls base price
-      const basePrice = item.menuType === 'Pre-rolls' ? item.price + 20 : item.price;
+      const basePrice =
+        item.menuType === "Pre-rolls" ? item.price + 20 : item.price;
 
       if (item.quantity >= 30) {
         return basePrice * item.quantity * 0.7; // 30% off
@@ -51,10 +52,10 @@ export default function BagPopup({ isOpen, onClose }: BagPopupProps) {
         return basePrice * item.quantity;
       }
     }
-    return item.price * item.quantity
-  }
+    return item.price * item.quantity;
+  };
 
-  if (!isOpen) return null
+  if (!isOpen) return null;
 
   if (showMessagingSelector) {
     return (
@@ -63,19 +64,25 @@ export default function BagPopup({ isOpen, onClose }: BagPopupProps) {
         total={total}
         onClose={() => setShowMessagingSelector(false)}
       />
-    )
+    );
   }
 
-  const handleQuantityChange = (id: string, requestedNewQuantity: number, oldQuantity: number, menuType: string) => {
-    const item = items.find(i => i.id === id && i.menuType === menuType)
+  const handleQuantityChange = (
+    id: string,
+    requestedNewQuantity: number,
+    oldQuantity: number,
+    menuType: string,
+  ) => {
+    const item = items.find((i) => i.id === id && i.menuType === menuType);
     if (!item) return; // Should not happen if item is in cart
 
     let newQuantity = oldQuantity; // Start with oldQuantity and adjust
 
-    if (item.menuType === 'Buds' || item.menuType === 'Pre-rolls') {
+    if (item.menuType === "Buds" || item.menuType === "Pre-rolls") {
       const maxQuantity = 30; // Strains have a max of 30
 
-      if (requestedNewQuantity > oldQuantity) { // Incrementing
+      if (requestedNewQuantity > oldQuantity) {
+        // Incrementing
         // Skip 4g and 9g when incrementing
         if (oldQuantity === 3) {
           newQuantity = 5;
@@ -83,10 +90,12 @@ export default function BagPopup({ isOpen, onClose }: BagPopupProps) {
           newQuantity = 10;
         } else if (oldQuantity < 10) {
           newQuantity = oldQuantity + 1;
-        } else { // oldQuantity >= 10
+        } else {
+          // oldQuantity >= 10
           newQuantity = oldQuantity + 5;
         }
-      } else { // Decrementing
+      } else {
+        // Decrementing
         // Skip 4g and 9g when decrementing
         if (oldQuantity === 5) {
           newQuantity = 3;
@@ -94,37 +103,42 @@ export default function BagPopup({ isOpen, onClose }: BagPopupProps) {
           newQuantity = 8;
         } else if (oldQuantity <= 10) {
           newQuantity = oldQuantity - 1;
-        } else { // oldQuantity > 10
+        } else {
+          // oldQuantity > 10
           newQuantity = oldQuantity - 5;
         }
       }
 
       // Ensure newQuantity doesn't go below 1 and respects maxQuantity
       newQuantity = Math.max(1, Math.min(newQuantity, maxQuantity));
-
-    } else { // For other menu types, use default increment/decrement by 1
+    } else {
+      // For other menu types, use default increment/decrement by 1
       newQuantity = requestedNewQuantity;
       // Ensure newQuantity doesn't go below 1 and respects item.stock
       newQuantity = Math.max(1, Math.min(newQuantity, item.stock));
     }
 
     if (newQuantity <= 0) {
-      removeItem(id, item.menuType)
+      removeItem(id, item.menuType);
     } else {
-      updateQuantity(id, newQuantity, item.menuType)
+      updateQuantity(id, newQuantity, item.menuType);
     }
-  }
+  };
 
   return (
-    <div className="fixed h-screen inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-xl"
+    <div
+      className="fixed h-screen inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-xl"
       role="dialog"
       aria-modal="true"
-      aria-labelledby="bag-process">
+      aria-labelledby="bag-process"
+    >
       <div className="relative bg-black shadow-xl max-w-lg w-full max-h-[90vh] overflow-hidden flex flex-col">
         <span className="absolute z-50 bg-black top-13 right-0 w-2 h-2"></span>
         <span className="absolute z-50 bg-black top-13 left-0 w-2 h-2"></span>
         <div className="flex justify-between items-center p-4 bg-[#13DE00] border-b-4 border-[#13DE00]">
-          <h2 className="text-base md:text-lg font-bold text-black">Your Bag</h2>
+          <h2 className="text-base md:text-lg font-bold text-black">
+            Your Bag
+          </h2>
           <button
             onClick={onClose}
             className="text-black hover:text-gray-700 text-2xl cursor-pointer font-pixel"
@@ -132,17 +146,18 @@ export default function BagPopup({ isOpen, onClose }: BagPopupProps) {
           >
             X
           </button>
-
         </div>
 
         <div className="p-4 flex-1 overflow-y-auto min-h-[300px] flex flex-col bg-black border-4 border-[#13DE00]">
           {items.length === 0 ? (
             <div className="flex-1 flex flex-col items-center justify-center">
-              <p className="text-gray-400 text-center mb-4">Your bag is empty</p>
+              <p className="text-gray-400 text-center mb-4">
+                Your bag is empty
+              </p>
               <button
                 onClick={() => {
-                  onClose()
-                  router.push('/menu')
+                  onClose();
+                  router.push("/menu");
                 }}
                 className="bg-[#13DE00] text-black py-2 px-4 hover:bg-white hover:text-[#13DE00] text-center w-full cursor-pointer"
               >
@@ -153,17 +168,38 @@ export default function BagPopup({ isOpen, onClose }: BagPopupProps) {
             <>
               <div className="space-y-2">
                 {items.map((item: CartItem) => (
-                  <div key={`${item.id}-${item.menuType}`} className="flex items-center justify-between py-1 border-b border-gray-200">
+                  <div
+                    key={`${item.id}-${item.menuType}`}
+                    className="flex items-center justify-between py-1 border-b border-gray-200"
+                  >
                     <div className="flex-1 min-w-0 mr-2">
-                      <h3 className="font-medium text-sm truncate">{item.name}</h3>
+                      <h3 className="font-medium text-sm truncate">
+                        {item.name}
+                      </h3>
                       <p className="text-xs text-gray-400">{item.menuType}</p>
-                      <p className="text-[#13DE00] font-semibold text-sm">{getItemTotal(item)}฿</p>
+                      <p className="text-[#13DE00] font-semibold text-sm">
+                        {getItemTotal(item)}฿
+                      </p>
                     </div>
                     <div className="flex items-center mb-2">
                       <BagQuantity
                         quantity={item.quantity}
-                        onIncrease={() => handleQuantityChange(item.id, item.quantity + 1, item.quantity, item.menuType)}
-                        onDecrease={() => handleQuantityChange(item.id, item.quantity - 1, item.quantity, item.menuType)}
+                        onIncrease={() =>
+                          handleQuantityChange(
+                            item.id,
+                            item.quantity + 1,
+                            item.quantity,
+                            item.menuType,
+                          )
+                        }
+                        onDecrease={() =>
+                          handleQuantityChange(
+                            item.id,
+                            item.quantity - 1,
+                            item.quantity,
+                            item.menuType,
+                          )
+                        }
                         size="sm"
                         itemName={item.name}
                       />
@@ -197,5 +233,5 @@ export default function BagPopup({ isOpen, onClose }: BagPopupProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }

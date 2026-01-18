@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { Phone } from 'lucide-react';
-import Link from 'next/link';
-import { PHONE_NUMBER_WHATSAPP } from '@/lib/constants';
+import { Phone } from "lucide-react";
+import Link from "next/link";
+import { PHONE_NUMBER_WHATSAPP } from "@/lib/constants";
 
 export default function WhatsAppButton() {
   const whatsappUrl = `https://wa.me/${PHONE_NUMBER_WHATSAPP}`;

@@ -1,66 +1,74 @@
-'use client'
+"use client";
 
-import { useState, useEffect, memo } from 'react'
-import StrainImage from './StrainImage'
+import { useState, useEffect, memo } from "react";
+import StrainImage from "./StrainImage";
 
 interface MiniSliderProps {
-  images: string[]
-  alt: string
-  width?: number
-  height?: number
-  autoRotate?: boolean
+  images: string[];
+  alt: string;
+  width?: number;
+  height?: number;
+  autoRotate?: boolean;
 }
 
-function MiniSlider({ images, alt, width = 100, height = 100, autoRotate = false }: MiniSliderProps) {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isDragging, setIsDragging] = useState(false)
-  const [startPos, setStartPos] = useState(0)
-  const [scrollLeft, setScrollLeft] = useState(0)
+function MiniSlider({
+  images,
+  alt,
+  width = 100,
+  height = 100,
+  autoRotate = false,
+}: MiniSliderProps) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startPos, setStartPos] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
   useEffect(() => {
-    if (!autoRotate) return
+    if (!autoRotate) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
-    }, 6000) // Change image every 6 seconds
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 6000); // Change image every 6 seconds
 
-    return () => clearInterval(interval)
-  }, [images.length, autoRotate])
+    return () => clearInterval(interval);
+  }, [images.length, autoRotate]);
 
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)
-  }
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length,
+    );
+  };
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
-  }
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    setIsDragging(true)
-    setStartPos(e.touches[0].clientX)
-  }
+    setIsDragging(true);
+    setStartPos(e.touches[0].clientX);
+  };
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging) return
-    const currentPos = e.touches[0].clientX
-    const diff = startPos - currentPos
-    setScrollLeft(diff)
-  }
+    if (!isDragging) return;
+    const currentPos = e.touches[0].clientX;
+    const diff = startPos - currentPos;
+    setScrollLeft(diff);
+  };
 
   const handleTouchEnd = () => {
-    if (!isDragging) return
-    setIsDragging(false)
+    if (!isDragging) return;
+    setIsDragging(false);
 
-    const threshold = 30 // smaller threshold for mini sliders
+    const threshold = 30; // smaller threshold for mini sliders
     if (Math.abs(scrollLeft) > threshold) {
       if (scrollLeft > 0) {
-        goToNext()
+        goToNext();
       } else {
-        goToPrevious()
+        goToPrevious();
       }
     }
-    setScrollLeft(0)
-  }
+    setScrollLeft(0);
+  };
 
   if (images.length === 0) {
     return (
@@ -71,7 +79,7 @@ function MiniSlider({ images, alt, width = 100, height = 100, autoRotate = false
         height={height}
         className="w-full h-auto"
       />
-    )
+    );
   }
 
   if (images.length === 1) {
@@ -83,7 +91,7 @@ function MiniSlider({ images, alt, width = 100, height = 100, autoRotate = false
         height={height}
         className="w-full h-auto"
       />
-    )
+    );
   }
 
   return (
@@ -115,14 +123,13 @@ function MiniSlider({ images, alt, width = 100, height = 100, autoRotate = false
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-4 h-4 p-2 transition-all cursor-pointer ${currentIndex === index ? 'bg-[#13DE00] w-10' : 'bg-gray-400 hover:bg-gray-600'}`}
+            className={`w-4 h-4 p-2 transition-all cursor-pointer ${currentIndex === index ? "bg-[#13DE00] w-10" : "bg-gray-400 hover:bg-gray-600"}`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
-
     </div>
-  )
+  );
 }
 
-export default memo(MiniSlider)
+export default memo(MiniSlider);
