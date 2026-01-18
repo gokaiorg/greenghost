@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 
+export const revalidate = 3600;
+
 import BudsPageContent from "./BudsPageClient";
 
 import { PagesMetadata } from "@/components/PagesMetadata";

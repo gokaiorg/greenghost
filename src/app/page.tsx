@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 
+export const revalidate = 3600;
+
 import { PHONE_NUMBER } from "@/lib/constants";
 
 import { PagesMetadata } from "@/components/PagesMetadata";

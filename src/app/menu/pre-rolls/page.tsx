@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 
+export const revalidate = 3600;
+
 import PreRollsPageContent from "./PreRollsPageClient";
 
 import { PagesMetadata } from "@/components/PagesMetadata";
