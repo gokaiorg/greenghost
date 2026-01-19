@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useCart } from "@/contexts/CartContext";
 import { Product } from "@/lib/types";
 import BagQuantity from "./BagQuantity";
@@ -19,6 +19,7 @@ const BagAddButton: React.FC<BagAddButtonProps> = ({
   compact = false,
 }) => {
   const { state, addItem, updateQuantity, removeItem } = useCart();
+  const [userInteracted, setUserInteracted] = useState(false);
 
   // Determine the category to use (prop or product.type)
   const itemCategory = category || product.type;
@@ -27,6 +28,14 @@ const BagAddButton: React.FC<BagAddButtonProps> = ({
   const cartItem = state.items.find(
     (item) => item.id === product.id && item.menuType === itemCategory,
   );
+
+  // Track previous cart state to detect transitions
+  const wasInCartRef = useRef(!!cartItem);
+  const justAdded = !!cartItem && !wasInCartRef.current && userInteracted;
+
+  useEffect(() => {
+    wasInCartRef.current = !!cartItem;
+  }, [cartItem]);
 
   const handleQuantityChange = (newQuantity: number) => {
     if (!cartItem) return;
@@ -90,6 +99,7 @@ const BagAddButton: React.FC<BagAddButtonProps> = ({
           onDecrease={() => handleQuantityChange(cartItem.quantity - 1)}
           size={compact ? "sm" : "md"}
           itemName={product.name}
+          autoFocus={justAdded}
         />
       </div>
     );
@@ -100,6 +110,7 @@ const BagAddButton: React.FC<BagAddButtonProps> = ({
       onClick={(e) => {
         e.preventDefault();
         e.stopPropagation();
+        setUserInteracted(true);
         addItem(product, itemCategory);
       }}
       disabled={product.status !== "In stock"}
