@@ -2,7 +2,12 @@
 
 import { useState, useRef, useEffect, memo } from "react";
 import { Send, MessageSquare, X } from "lucide-react";
-import { getStrains, findStrain, formatStrainInfo } from "@/lib/strains";
+import {
+  getStrains,
+  findStrain,
+  formatStrainInfo,
+  escapeHtml,
+} from "@/lib/strains";
 
 interface Message {
   id: number;
@@ -239,7 +244,9 @@ export default function Chatbox() {
         if (matchingStrains.length > 0) {
           const topStrains = matchingStrains.slice(0, 3);
           const strainList = topStrains
-            .map((s) => `- ${s.name} (${s.effects})`)
+            .map(
+              (s) => `- ${escapeHtml(s.name)} (${escapeHtml(s.effects)})`,
+            )
             .join("\n");
           return `Here are some strains that might help with ${matchedEffect}:\n\n${strainList}\n\nYou can ask me for more details about any of these strains!`;
         }
