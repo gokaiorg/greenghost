@@ -124,15 +124,9 @@ export default function EdibleProductClient({
 
         {product.description && (
           <div className="mb-4">
-            <p
-              className="text-xs md:text-sm lg:text-base text-gray-200"
-              dangerouslySetInnerHTML={{
-                __html: product.description
-                  .replace(/\\\\n\\\\n/g, "<br><br>")
-                  .replace(/\\n\\n/g, "<br><br>")
-                  .replace(/\n\n/g, "<br><br>"),
-              }}
-            ></p>
+            <p className="text-xs md:text-sm lg:text-base text-gray-200 whitespace-pre-wrap">
+              {product.description.replace(/\\n/g, "\n")}
+            </p>
           </div>
         )}
       </div>

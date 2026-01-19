@@ -32,3 +32,12 @@
 **Vulnerability:** Multiple pages (Garden, Seeds, etc.) rendered descriptions from `pages.csv` using `dangerouslySetInnerHTML`. While the CSV currently contains safe text, treating it as trusted HTML source exposes the site to Stored XSS if the file is modified maliciously.
 **Learning:** Content from "static" files like CSVs often gets treated as implicitly trusted. However, if the content is just text, using HTML rendering is an unnecessary risk.
 **Prevention:** Default to standard React text rendering with `whitespace-pre-wrap` for preserving line breaks. Only use `dangerouslySetInnerHTML` if the content _must_ contain HTML tags.
+
+## 2027-02-27 - Product Client Components Stored XSS
+
+**Vulnerability:** Product client components (Strain, Edible, Concentrate, Gadget) and Location pages were using `dangerouslySetInnerHTML` to render descriptions just to handle newline characters by replacing them with `<br>`. This created a potential Stored XSS vector if the product/location descriptions (sourced from CSV/API) were compromised.
+**Learning:** This reinforces the pattern that `dangerouslySetInnerHTML` is often misused for simple formatting tasks. It's a common "convenience" anti-pattern that bypasses React's built-in XSS protection.
+**Prevention:**
+1. Replaced `dangerouslySetInnerHTML` with standard React text rendering.
+2. Used `whitespace-pre-wrap` CSS class to handle line breaks natively.
+3. Ensured that escaped newlines (`\\n`) from the data source are converted to actual newlines (`\n`) before rendering.
