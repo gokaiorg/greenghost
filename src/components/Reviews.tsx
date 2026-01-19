@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Star } from "lucide-react";
+import { parseCSV } from "@/lib/utils/csv";
 
 type Review = {
   name: string;
@@ -12,60 +13,28 @@ type Review = {
   shop: string;
 };
 
-// Helper function to parse CSV line with proper handling of quoted fields
-function parseCSVLineRobust(line: string): string[] {
-  const result: string[] = [];
-  let current = "";
-  let inQuotes = false;
-
-  for (let i = 0; i < line.length; i++) {
-    const char = line[i];
-    const nextChar = line[i + 1];
-
-    if (char === '"') {
-      if (inQuotes && nextChar === '"') {
-        // Escaped quote
-        current += '"';
-        i++; // Skip next quote
-      } else {
-        // Toggle quote state
-        inQuotes = !inQuotes;
-      }
-    } else if (char === "," && !inQuotes) {
-      // Field separator
-      result.push(current);
-      current = "";
-    } else {
-      current += char;
-    }
-  }
-
-  // Add last field
-  result.push(current);
-
-  return result.map((field) => field.trim().replace(/^"|"$/g, "")); // Trim and remove surrounding quotes
+interface ReviewCSVRow {
+  Name: string;
+  Comment: string;
+  Link: string;
+  Shop: string;
+  [key: string]: string | undefined;
 }
 
 async function getReviews(): Promise<Review[]> {
   try {
     const res = await fetch("/datas/reviews.csv");
     const fileContent = await res.text();
-    const lines = fileContent.trim().split("\n");
-    if (lines.length < 2) return [];
-    const headers = parseCSVLineRobust(lines[0]).map((h) => h.trim());
-    return lines.slice(1).map((line) => {
-      const values = parseCSVLineRobust(line);
-      const reviewData: Record<string, string> = {};
-      headers.forEach((header, index) => {
-        reviewData[header.toLowerCase()] = values[index];
-      });
-      return {
-        name: reviewData.name || "Anonymous",
-        comment: reviewData.comment || "",
-        link: reviewData.link || "#",
-        shop: reviewData.shop || "",
-      };
-    });
+    const parsedData = parseCSV<ReviewCSVRow>(fileContent);
+
+    if (parsedData.length === 0) return [];
+
+    return parsedData.map((row) => ({
+      name: row.Name || "Anonymous",
+      comment: row.Comment || "",
+      link: row.Link || "#",
+      shop: row.Shop || "",
+    }));
   } catch (error) {
     console.error("Error reading reviews.csv:", error);
     return [];
