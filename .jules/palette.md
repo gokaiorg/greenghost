@@ -22,3 +22,8 @@
 
 **Learning:** When adding fixed elements like a "Scroll to Top" button, ensure the `z-index` is higher than interactive content (e.g., `MiniSlider` images at `z-10`) and other overlays (e.g., Age Verification at `z-50`). In this app, `z-[60]` was required to ensure the button remained clickable and wasn't intercepted by content or modals.
 **Action:** Always verify clickability of fixed elements over complex content areas using automated tests that simulate clicks (`.click()`) rather than just checking visibility.
+
+## 2025-05-24 - Ghost Focusable Elements
+
+**Learning:** Elements that are visually hidden using `opacity-0` (like the `ScrollToTop` button) remain in the document flow and keyboard tab order, creating confusing "ghost" focus states.
+**Action:** When animating visibility with opacity, always toggle `tabIndex={-1}` and `aria-hidden="true"` when the element is visually hidden to remove it from the accessibility tree and tab sequence.

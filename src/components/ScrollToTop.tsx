@@ -38,6 +38,8 @@ export default function ScrollToTop() {
           : "translate-y-10 opacity-0 pointer-events-none"
       }`}
       aria-label="Scroll to top"
+      aria-hidden={!isVisible}
+      tabIndex={isVisible ? 0 : -1}
       title="Scroll to top"
     >
       <ArrowUp size={24} />
