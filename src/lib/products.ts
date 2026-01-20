@@ -1,38 +1,26 @@
 import { Product } from "@/lib/types";
 import path from "path";
+import { parseCSV } from "@/lib/utils/csv";
 
-// Helper function to parse CSV line with proper handling of quoted fields
-function parseCSVLine(line: string): string[] {
-  const result: string[] = [];
-  let current = "";
-  let inQuotes = false;
-
-  for (let i = 0; i < line.length; i++) {
-    const char = line[i];
-    const nextChar = line[i + 1];
-
-    if (char === '"') {
-      if (inQuotes && nextChar === '"') {
-        // Escaped quote
-        current += '"';
-        i++; // Skip next quote
-      } else {
-        // Toggle quote state
-        inQuotes = !inQuotes;
-      }
-    } else if (char === "," && !inQuotes) {
-      // Field separator
-      result.push(current);
-      current = "";
-    } else {
-      current += char;
-    }
-  }
-
-  // Add last field
-  result.push(current);
-
-  return result;
+interface ProductCSVRow {
+  "Item name": string;
+  "Item Name"?: string;
+  Type: string;
+  Wsp: string;
+  Wholesale?: string;
+  Price: string;
+  "Public Price"?: string;
+  Initial: string;
+  Stock: string;
+  Status: string;
+  Description: string;
+  SEO: string;
+  Dominance: string;
+  THC: string;
+  CBD: string;
+  effects: string;
+  relieves: string;
+  [key: string]: string | undefined;
 }
 
 async function fetchProductsFromCSV(): Promise<Product[]> {
@@ -50,58 +38,47 @@ async function fetchProductsFromCSV(): Promise<Product[]> {
     // Check if file exists asynchronously
     try {
       await fsPromises.access(filePath);
-    } catch (err) {
+    } catch (_) {
       console.error("CSV file not found at:", filePath);
       return [];
     }
 
     const data = await fsPromises.readFile(filePath, "utf-8");
-    const lines = data.trim().split("\n");
+    const parsedData = parseCSV<ProductCSVRow>(data);
 
-    if (lines.length < 2) return []; // No data or only header
+    if (parsedData.length === 0) return [];
 
     const products: Product[] = [];
     const usedIds = new Set<string>();
 
-    for (let i = 1; i < lines.length; i++) {
-      // Parse CSV line properly handling quoted fields with commas
-      const parts = parseCSVLine(lines[i]);
-      if (parts.length < 13) continue; // Skip malformed lines
-
-      // Extract fields with proper mapping for the new format
-      // Format: Item name,Type,Wsp,Price,Initial,Stock,Status,Description,SEO,Dominance,THC,CBD,effects,relieves
-      const [
-        itemName,
-        productType,
-        wsp,
-        priceStr,
-        initialStr,
-        stockStr,
-        status,
-        description,
-        seo,
-        dominance,
-        thcStr,
-        cbdStr,
-        effects,
-        relieves,
-      ] = parts;
-
+    for (const row of parsedData) {
       // Get values with fallbacks and clean them
-      const name = (itemName || "").trim();
-      const cleanType = (productType || "").trim();
-      const cleanPriceStr = (priceStr || "0").replace("฿", "").trim();
-      const cleanStockStr = (stockStr || "0").trim();
-      const cleanStatus = (status || "").trim();
-      const cleanDescription = (description || "").trim();
-      const cleanSeo = (seo || "").trim();
-      const cleanDominance = (dominance || "").trim();
-      const cleanThc = (thcStr || "0").trim();
-      const cleanCbd = (cbdStr || "0").trim();
-      const cleanEffects = (effects || "").trim();
-      const cleanRelieves = (relieves || "").trim();
-      const initial = (initialStr || "0").trim();
-      const wholesalePrice = (wsp || "0").replace("฿", "").trim();
+      const name = (row["Item name"] || row["Item Name"] || "").trim();
+      const cleanType = (row["Type"] || "").trim();
+      const cleanPriceStr = (
+        row["Price"] ||
+        row["Public Price"] ||
+        "0"
+      )
+        .replace("฿", "")
+        .trim();
+      const cleanStockStr = (row["Stock"] || "0").trim();
+      const cleanStatus = (row["Status"] || "").trim();
+      const cleanDescription = (row["Description"] || "").trim();
+      const cleanSeo = (row["SEO"] || "").trim();
+      const cleanDominance = (row["Dominance"] || "").trim();
+      const cleanThc = (row["THC"] || "0").trim();
+      const cleanCbd = (row["CBD"] || "0").trim();
+      const cleanEffects = (row["effects"] || "").trim();
+      const cleanRelieves = (row["relieves"] || "").trim();
+      const initial = (row["Initial"] || "0").trim();
+      const wholesalePrice = (
+        row["Wsp"] ||
+        row["Wholesale"] ||
+        "0"
+      )
+        .replace("฿", "")
+        .trim();
 
       // Convert string values to numbers with proper type handling
       const price = parseFloat(cleanPriceStr) || 0;
@@ -124,8 +101,7 @@ async function fetchProductsFromCSV(): Promise<Product[]> {
 
       // Generate id from name
       const words = name.split(/\s+/);
-      const processedWords = words;
-      let id = processedWords
+      let id = words
         .join("-")
         .toLowerCase()
         .replace(/[^a-z0-9-]/g, "")
