@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 interface BagQuantityProps {
   quantity: number;
@@ -7,6 +7,7 @@ interface BagQuantityProps {
   className?: string;
   size?: "sm" | "md";
   itemName?: string;
+  autoFocus?: boolean;
 }
 
 const BagQuantity: React.FC<BagQuantityProps> = ({
@@ -16,13 +17,22 @@ const BagQuantity: React.FC<BagQuantityProps> = ({
   className = "",
   size = "md",
   itemName,
+  autoFocus = false,
 }) => {
+  const decreaseBtnRef = useRef<HTMLButtonElement>(null);
   const buttonSize = size === "sm" ? "w-6 h-6 text-xs" : "w-8 h-8 text-lg";
   const textSize = size === "sm" ? "text-sm w-6" : "text-xl w-8";
+
+  useEffect(() => {
+    if (autoFocus && decreaseBtnRef.current) {
+      decreaseBtnRef.current.focus();
+    }
+  }, [autoFocus]);
 
   return (
     <div className={`flex items-center space-x-2 bg-black ${className}`}>
       <button
+        ref={decreaseBtnRef}
         onClick={(e) => {
           e.stopPropagation();
           onDecrease();
