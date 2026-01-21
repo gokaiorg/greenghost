@@ -6,6 +6,7 @@ import { Product } from "@/lib/types";
 import StrainFilter from "@/components/StrainFilter";
 import BannerMenu from "@/components/BannerMenu";
 import BudListItem from "@/components/BudListItem";
+import LoadingSpinner from "@/components/LoadingSpinner";
 
 import { ReactNode } from "react";
 
@@ -13,6 +14,7 @@ export default function BudsPageContent({ menuSlot }: { menuSlot: ReactNode }) {
   // Since it's client, fetch here
   const [allBuds, setAllBuds] = useState<Product[]>([]);
   const [selectedDominances, setSelectedDominances] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("/api/products/strains")
@@ -22,18 +24,22 @@ export default function BudsPageContent({ menuSlot }: { menuSlot: ReactNode }) {
           .filter((strain: Product) => strain.status === "In stock")
           .sort((a: Product, b: Product) => a.price - b.price);
         setAllBuds(filtered);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   }, []);
 
   const buds =
     selectedDominances.length > 0
       ? allBuds.filter((bud) =>
-          selectedDominances.some((d) => bud.dominance?.startsWith(d)),
-        )
+        selectedDominances.some((d) => bud.dominance?.startsWith(d)),
+      )
       : allBuds;
 
   return (
     <div className="relative">
+      {isLoading && <LoadingSpinner />}
       <div className="container mx-auto px-4">
         <div className="sm:ml-auto sm:w-fit">{menuSlot}</div>
         <div className="flex  md:flex-row flex-col md:items-center space-x-2 mb-2">

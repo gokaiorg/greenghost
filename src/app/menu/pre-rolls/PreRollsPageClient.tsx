@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import StrainFilter from "@/components/StrainFilter";
 import BannerMenu from "@/components/BannerMenu";
 import BagAddButton from "@/components/BagAddButton";
+import LoadingSpinner from "@/components/LoadingSpinner";
 import { ReactNode } from "react";
 
 export default function PreRollsPageContent({
@@ -16,6 +17,7 @@ export default function PreRollsPageContent({
 }) {
   const [allPreRolls, setAllPreRolls] = useState<Product[]>([]);
   const [selectedDominances, setSelectedDominances] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("/api/products/strains")
@@ -25,18 +27,22 @@ export default function PreRollsPageContent({
           .filter((strain: Product) => strain.status === "In stock")
           .sort((a: Product, b: Product) => a.price - b.price);
         setAllPreRolls(filtered);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   }, []);
 
   const preRolls =
     selectedDominances.length > 0
       ? allPreRolls.filter((roll) =>
-          selectedDominances.some((d) => roll.dominance?.startsWith(d)),
-        )
+        selectedDominances.some((d) => roll.dominance?.startsWith(d)),
+      )
       : allPreRolls;
 
   return (
     <div className="relative">
+      {isLoading && <LoadingSpinner />}
       <div className="container mx-auto px-4">
         <div className="sm:ml-auto sm:w-fit">{menuSlot}</div>
         <div className="flex  md:flex-row flex-col md:items-center space-x-2 mb-2">

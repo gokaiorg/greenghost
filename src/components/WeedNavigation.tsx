@@ -6,19 +6,19 @@ import { usePathname } from "next/navigation";
 
 const mainNavigationItems = [
   {
-    title: "Weed Growers",
+    title: "Thai Weed Growers",
     href: "/growers",
     image: "/images/icons/growers-green-ghost.avif",
     description: "Meet our premium cannabis growers",
   },
   {
-    title: "Cannabis Seeds",
+    title: "Find Cannabis Seeds",
     href: "/seeds",
     image: "/images/icons/seeds-green-ghost.avif",
     description: "Start your own growing journey",
   },
   {
-    title: "Cannabis Strains",
+    title: "Best Cannabis Strains",
     href: "/strains",
     image: "/images/icons/strains-green-ghost.avif",
     description: "Explore our curated strain collection",
@@ -33,13 +33,13 @@ const secondaryNavigationItems = [
     description: "Discover top-rated dispensaries",
   },
   {
-    title: "Green Garden",
+    title: "The Green Garden",
     href: "/garden",
     image: "/images/icons/garden-green-ghost.avif",
     description: "Shared growing journey",
   },
   {
-    title: "Legal Laws",
+    title: "Cannabis Legal Laws",
     href: "/legal-laws",
     image: "/images/icons/legal-laws-green-ghost.avif",
     description: "Thai cannabis regulations guide",
@@ -52,17 +52,14 @@ export default function WeedNavigation() {
   const getItemStyles = (href: string) => {
     const isActive = pathname === href;
     return {
-      container: `group flex flex-col items-center p-6 transition-all duration-300 h-full ${
-        isActive
-          ? "bg-[#13DE00]/5 border-[#13DE00]"
-          : "bg-[#13DE00]/13 border-[#13DE00]/21 hover:border-[#13DE00] hover:bg-[#13DE00]/5"
-      } border`,
-      title: `text-xl text-center font-bold transition-colors font-pixel mb-2 ${
-        isActive ? "text-[#13DE00]" : "text-white group-hover:text-[#13DE00]"
-      }`,
-      description: `text-center text-sm transition-colors ${
-        isActive ? "text-gray-300" : "text-gray-400 group-hover:text-gray-300"
-      }`,
+      container: `group flex flex-col items-center p-6 transition-all duration-300 h-full ${isActive
+        ? "bg-[#13DE00]/5 border-[#13DE00]"
+        : "bg-[#13DE00]/13 border-[#13DE00]/21 hover:border-[#13DE00] hover:bg-[#13DE00]/5"
+        } border`,
+      title: `text-xl text-center font-bold transition-colors font-pixel mb-2 ${isActive ? "text-[#13DE00]" : "text-white group-hover:text-[#13DE00]"
+        }`,
+      description: `text-center text-sm transition-colors ${isActive ? "text-gray-300" : "text-gray-400 group-hover:text-gray-300"
+        }`,
     };
   };
 

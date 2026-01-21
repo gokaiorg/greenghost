@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import MiniSlider from "@/components/MiniSlider";
 import BannerMenu from "@/components/BannerMenu";
 import BagAddButton from "@/components/BagAddButton";
+import LoadingSpinner from "@/components/LoadingSpinner";
 import { ReactNode } from "react";
 
 export default function GadgetsPageContent({
@@ -16,6 +17,7 @@ export default function GadgetsPageContent({
   menuSlot: ReactNode;
 }) {
   const [gadgets, setGadgets] = useState<Product[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("/api/products/gadgets")
@@ -28,11 +30,15 @@ export default function GadgetsPageContent({
           return a.price - b.price;
         });
         setGadgets(filtered);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   }, []);
 
   return (
     <div className="relative">
+      {isLoading && <LoadingSpinner />}
       <div className="container mx-auto px-4">
         <div className="sm:ml-auto sm:w-fit">{menuSlot}</div>
         <div className="flex  md:flex-row flex-col md:items-center space-x-2 mb-2">
