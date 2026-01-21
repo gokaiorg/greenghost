@@ -19,20 +19,39 @@ function MiniSlider({
   autoRotate = false,
 }: MiniSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
   const isDragging = useRef(false);
   const startPos = useRef(0);
   const scrollLeft = useRef(0);
   const sliderRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!autoRotate) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0 },
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [autoRotate]);
+
+  useEffect(() => {
+    if (!autoRotate || !isVisible) return;
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 6000); // Change image every 6 seconds
 
     return () => clearInterval(interval);
-  }, [images.length, autoRotate]);
+  }, [images.length, autoRotate, isVisible]);
 
   const goToPrevious = () => {
     setCurrentIndex(
@@ -112,6 +131,7 @@ function MiniSlider({
 
   return (
     <div
+      ref={containerRef}
       className="relative overflow-hidden"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
