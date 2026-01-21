@@ -10,7 +10,7 @@ const featuredStrainNames = [
   "Toasted Toffee",
   "Ben & Gary's",
   "Thai Stick",
-  "Slaphappy",
+  "Grandmaster Kush",
 ];
 
 export default async function StrainFeatured() {

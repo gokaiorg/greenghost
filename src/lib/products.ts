@@ -38,7 +38,7 @@ async function fetchProductsFromCSV(): Promise<Product[]> {
     // Check if file exists asynchronously
     try {
       await fsPromises.access(filePath);
-    } catch (_) {
+    } catch {
       console.error("CSV file not found at:", filePath);
       return [];
     }
