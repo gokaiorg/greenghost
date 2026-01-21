@@ -1,13 +1,13 @@
-'use client'
+"use client";
 
-import Link from 'next/link';
-import MiniSlider from '@/components/MiniSlider';
+import Link from "next/link";
+import MiniSlider from "@/components/MiniSlider";
 
 const CAROUSEL_IMAGES = [
-  '/images/banners/green-ghost-best-cannabis-club-story-01.avif',
-  '/images/banners/green-ghost-best-cannabis-club-story-02.avif',
-  '/images/banners/green-ghost-best-cannabis-club-story-03.avif',
-  '/images/banners/green-ghost-best-cannabis-club-story-04.avif',
+  "/images/banners/green-ghost-best-cannabis-club-story-01.avif",
+  "/images/banners/green-ghost-best-cannabis-club-story-02.avif",
+  "/images/banners/green-ghost-best-cannabis-club-story-03.avif",
+  "/images/banners/green-ghost-best-cannabis-club-story-04.avif",
 ];
 
 export default function AboutUsBlock() {
@@ -18,11 +18,18 @@ export default function AboutUsBlock() {
           {/* Text Column */}
           <div className="order-2 lg:order-1">
             <h2 className="text-2xl md:text-4xl font-bold mb-6 leading-tight">
-              <span className="text-white">Our Cannabis</span> <span className="text-[#13DE00]">Club Story</span>
+              <span className="text-white">Our Cannabis</span>{" "}
+              <span className="text-[#13DE00]">Club Story</span>
             </h2>
 
             <p className="text-md lg:text-lg xl:text-xl text-gray-300 mb-8 leading-relaxed">
-              Born in the heart of Thailand, Green Ghost is your premier Thailand cannabis shop dedicated to cultivating premium organic cannabis. Our Thai-grown strains embody our commitment to quality, sustainability, and the rich heritage of Thai cannabis culture. As a leading premium weed Thailand provider, we combine traditional cultivation methods with modern expertise to deliver exceptional products that honor both nature and our local community.
+              Born in the heart of Thailand, Green Ghost is your premier
+              Thailand cannabis shop dedicated to cultivating premium organic
+              cannabis. Our Thai-grown strains embody our commitment to quality,
+              sustainability, and the rich heritage of Thai cannabis culture. As
+              a leading premium weed Thailand provider, we combine traditional
+              cultivation methods with modern expertise to deliver exceptional
+              products that honor both nature and our local community.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -67,5 +74,5 @@ export default function AboutUsBlock() {
         </div>
       </div>
     </div>
-  )
+  );
 }

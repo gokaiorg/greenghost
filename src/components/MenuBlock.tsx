@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from "next/link";
+import Image from "next/image";
 
 export default function MenuBlock() {
   return (
@@ -23,9 +23,13 @@ export default function MenuBlock() {
               Shop Our Weed Menu
             </Link>
           </h2>
-          <p className="text-md md:text-lg text-gray-300 max-w-3xl mx-auto">Find the rarest strains, from top-tier selections to the cheapest weed in Phuket. Whether you seek premium quality or great value, we have something for everyone in our cannabis menu.</p>
+          <p className="text-md md:text-lg text-gray-300 max-w-3xl mx-auto">
+            Find the rarest strains, from top-tier selections to the cheapest
+            weed in Phuket. Whether you seek premium quality or great value, we
+            have something for everyone in our cannabis menu.
+          </p>
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,13 +1,15 @@
-'use client';
+"use client";
 
-import { StructuredData } from './StructuredData';
-import type { Organization } from '@/lib/types/organization';
+import { StructuredData } from "./StructuredData";
+import type { Organization } from "@/lib/types/organization";
 
 interface OrganizationStructuredDataProps {
   data: Organization;
 }
 
-export default function OrganizationStructuredData({ data }: OrganizationStructuredDataProps) {
+export default function OrganizationStructuredData({
+  data,
+}: OrganizationStructuredDataProps) {
   if (!data) {
     return null;
   }

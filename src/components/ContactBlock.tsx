@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import Link from 'next/link';
-import { PHONE_NUMBER } from '@/lib/constants';
+import Link from "next/link";
+import { PHONE_NUMBER } from "@/lib/constants";
 
 export default function ContactBlock() {
   return (
@@ -9,11 +9,13 @@ export default function ContactBlock() {
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold mb-6 leading-tight">
-            <span className="text-white">Contact</span> <span className="text-[#13DE00]">Us</span>
+            <span className="text-white">Contact</span>{" "}
+            <span className="text-[#13DE00]">Us</span>
           </h2>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
-            Have questions or need help with your order? Our team is here to assist you.
+            Have questions or need help with your order? Our team is here to
+            assist you.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -37,5 +39,5 @@ export default function ContactBlock() {
         </div>
       </div>
     </div>
-  )
+  );
 }

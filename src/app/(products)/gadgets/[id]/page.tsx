@@ -1,29 +1,33 @@
-import { notFound } from 'next/navigation'
-import { toJsonLd } from '@/lib/utils/json-ld';
-import type { Metadata } from 'next'
-import GadgetProductClient from './GadgetProductClient'
-import { Product } from '@/lib/types'
-import { generateProductMetadata, generateProductSchema } from '@/lib/config/product-metadata'
-import { getProductById } from '@/lib/products'
-import fs from 'fs/promises'
-import path from 'path'
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+
+import GadgetProductClient from "./GadgetProductClient";
+
+import { toJsonLd } from "@/lib/utils/json-ld";
+import { Product } from "@/lib/types";
+import {
+  generateProductMetadata,
+  generateProductSchema,
+} from "@/lib/config/product-metadata";
+import { getProductById } from "@/lib/products";
+import fs from "fs/promises";
+import path from "path";
+
+import GadgetFeatured from "@/components/GadgetFeatured";
+import MenuListInline from "@/components/MenuListInline";
 
 interface PageProps {
-  params: Promise<{ id: string }>
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
 async function getProduct(id: string): Promise<Product | null> {
   try {
-    const product = await getProductById(id)
-
-    if (!product || product.type !== 'Gadgets') {
-      return null
+    const product = await getProductById(id);
+    if (!product || product.type !== "Gadgets") {
+      return null;
     }
-
-    // Filter out non-existent images
     const validImages: string[] = [];
-
     const potentialImages = [
       `/images/gadgets/green-ghost-degen-weed-shop-menu-gadget-${product.id}-01.avif`,
       `/images/gadgets/green-ghost-degen-weed-shop-menu-gadget-${product.id}-02.avif`,
@@ -31,49 +35,55 @@ async function getProduct(id: string): Promise<Product | null> {
     ];
 
     for (const imgPath of potentialImages) {
-      const fullPath = path.join(process.cwd(), 'public', imgPath);
+      const fullPath = path.join(process.cwd(), "public", imgPath);
       try {
         await fs.access(fullPath);
         validImages.push(imgPath);
       } catch {
-        // Image does not exist, skip it
         console.warn(`Image not found: ${imgPath}`);
       }
     }
     product.images = validImages;
 
-    return product
+    return product;
   } catch (error) {
-    console.error('Error fetching product:', error)
-    return null
+    console.error("Error fetching product:", error);
+    return null;
   }
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { id } = await params
-  const product = await getProduct(id)
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { id } = await params;
+  const product = await getProduct(id);
 
   if (!product) {
     return {
-      title: 'Product Not Found | Green Ghost Weed Shop',
-      description: 'The requested product could not be found.'
-    }
+      title: "Product Not Found | Green Ghost Weed Shop",
+      description: "The requested product could not be found.",
+    };
   }
 
-  console.log('Generating metadata for product:', product.name, 'SEO:', product.seo)
-  return generateProductMetadata(product)
+  console.log(
+    "Generating metadata for product:",
+    product.name,
+    "SEO:",
+    product.seo,
+  );
+  return generateProductMetadata(product);
 }
 
-import GadgetFeatured from '@/components/GadgetFeatured'
-
-// ... existing imports ...
-
-export default async function GadgetProductPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params
-  const product = await getProduct(id)
+export default async function GadgetProductPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const product = await getProduct(id);
 
   if (!product) {
-    notFound()
+    notFound();
   }
 
   const schema = generateProductSchema(product);
@@ -83,13 +93,11 @@ export default async function GadgetProductPage({ params }: { params: Promise<{ 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: toJsonLd(schema)
+          __html: toJsonLd(schema),
         }}
       />
-      <GadgetProductClient
-        product={product}
-      />
+      <GadgetProductClient product={product} menuSlot={<MenuListInline />} />
       <GadgetFeatured />
     </>
-  )
+  );
 }

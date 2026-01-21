@@ -1,16 +1,20 @@
-import { notFound } from 'next/navigation';
-import { toJsonLd } from '@/lib/utils/json-ld';
-import type { Metadata } from 'next';
-import { generateLocalBusinessSchema, generateFAQSchema } from '@/lib/utils/structuredData';
-import BackButton from '@/components/BackButton';
-import OpenStatusBadge from '@/components/OpenStatusBadge';
-import { getLocations } from '@/lib/organization-data';
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
-import { getLocationImages } from '@/lib/utils/images';
-import ImageCarousel from '@/components/ImageCarousel';
-import LocationFAQ from '@/components/LocationFAQ';
-import NearbyLocations from '@/components/NearbyLocations';
-import { getCanonicalUrl } from '@/lib/utils/seo';
+import { toJsonLd } from "@/lib/utils/json-ld";
+import {
+  generateLocalBusinessSchema,
+  generateFAQSchema,
+} from "@/lib/utils/structuredData";
+import { getLocations } from "@/lib/organization-data";
+import { getLocationImages } from "@/lib/utils/images";
+import { getCanonicalUrl } from "@/lib/utils/seo";
+
+import BackButton from "@/components/BackButton";
+import LocationsStatus from "@/components/LocationsStatus";
+import ImageCarousel from "@/components/ImageCarousel";
+import LocationFAQ from "@/components/LocationFAQ";
+import NearbyLocations from "@/components/NearbyLocations";
 
 export async function generateStaticParams() {
   const locations = await getLocations();
@@ -19,10 +23,14 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function LocationPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const locations = await getLocations();
-  const location = locations.find(l => l.slug === slug);
+  const location = locations.find((l) => l.slug === slug);
   const carouselImages = await getLocationImages(slug);
 
   if (!location) {
@@ -31,14 +39,16 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
   const localBusinessSchema = generateLocalBusinessSchema(location);
   const faqSchema = generateFAQSchema(location);
-  const today = new Date().toLocaleDateString('en-US', { weekday: 'long', timeZone: 'Asia/Bangkok' }).toLowerCase() as keyof typeof location.hours;
+  const today = new Date()
+    .toLocaleDateString("en-US", { weekday: "long", timeZone: "Asia/Bangkok" })
+    .toLowerCase() as keyof typeof location.hours;
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: toJsonLd([localBusinessSchema, faqSchema])
+          __html: toJsonLd([localBusinessSchema, faqSchema]),
         }}
       />
 
@@ -47,7 +57,6 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         <div className="relative py-4 overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-
               {/* Left Side: Back Button & Title */}
               <div className="flex flex-col">
                 <div className="flex items-center mb-2">
@@ -63,7 +72,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
               {/* Right Side: Status Badge */}
               <div className="mt-2 md:mt-0 ml-auto">
-                <OpenStatusBadge hours={location.hours} slug={location.slug} />
+                <LocationsStatus hours={location.hours} slug={location.slug} />
               </div>
             </div>
           </div>
@@ -75,10 +84,8 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         {/* Main Content */}
         <div className="container mx-auto px-4 pb-12">
           <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
-
             {/* Left Column: Video & Description (Order 2 on Mobile, Order 1 on Desktop) */}
             <div className="lg:col-span-2 order-2 lg:order-1 space-y-6">
-
               {/* Video */}
               {location.videoLink && (
                 <div className="aspect-video w-full overflow-hidden border border-[#13DE00]/21 bg-black">
@@ -97,22 +104,18 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               {/* Description */}
               {location.description && (
                 <section className="bg-gradient-to-br from-[#13DE00]/5 to-transparent border border-[#13DE00]/21 p-5">
-                  <h2 className="text-xl font-bold text-[#13DE00] mb-6">About This Location</h2>
-                  <p
-                    className="text-gray-300 leading-relaxed text-xs lg:text-sm xl:text-base"
-                    dangerouslySetInnerHTML={{
-                      __html: location.description
-                        .replace(/\\n\\n/g, '<br><br>')
-                        .replace(/\n\n/g, '<br><br>')
-                    }}
-                  />
+                  <h2 className="text-xl font-bold text-[#13DE00] mb-6">
+                    About This Location
+                  </h2>
+                  <p className="text-gray-300 leading-relaxed text-xs lg:text-sm xl:text-base whitespace-pre-wrap">
+                    {location.description.replace(/\\n/g, "\n")}
+                  </p>
                 </section>
               )}
             </div>
 
             {/* Right Column: Sidebar & Map (Order 1 on Mobile, Order 2 on Desktop) */}
             <div className="lg:col-span-1 order-1 lg:order-2 space-y-6">
-
               {/* Sidebar Content */}
               <div className="space-y-4">
                 {/* Location Details */}
@@ -126,7 +129,9 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                   <div className="space-y-4">
                     {/* Address */}
                     <div>
-                      <h3 className="text-xs font-semibold text-gray-400 uppercase mb-1">Address</h3>
+                      <h3 className="text-xs font-semibold text-gray-400 uppercase mb-1">
+                        Address
+                      </h3>
                       <p className="text-white text-sm">{location.address}</p>
                       {location.addressLink && (
                         <a
@@ -136,7 +141,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                           rel="noopener noreferrer"
                           className="text-[#13DE00] hover:underline text-xs mt-1 inline-block"
                         >
-                          View on Maps {'>'}
+                          View on Maps {">"}
                         </a>
                       )}
                     </div>
@@ -144,7 +149,9 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                     {/* Phone */}
                     {location.phone && (
                       <div>
-                        <h3 className="text-xs font-semibold text-gray-400 uppercase mb-1">Phone</h3>
+                        <h3 className="text-xs font-semibold text-gray-400 uppercase mb-1">
+                          Phone
+                        </h3>
                         <a
                           href={`tel:${location.phone}`}
                           title="Call us"
@@ -157,20 +164,29 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
                     {/* Hours */}
                     <div>
-                      <h3 className="text-xs font-semibold text-gray-400 uppercase mb-2">Hours</h3>
+                      <h3 className="text-xs font-semibold text-gray-400 uppercase mb-2">
+                        Hours
+                      </h3>
                       <div className="space-y-1">
                         {Object.entries(location.hours).map(([day, hours]) => {
                           const isToday = day === today;
                           return (
                             <div
                               key={day}
-                              className={`flex justify-between py-1.5 px-2 ${isToday ? 'bg-[#13DE00]/13 border border-[#13DE00]/30' : 'bg-black/20'
-                                }`}
+                              className={`flex justify-between py-1.5 px-2 ${
+                                isToday
+                                  ? "bg-[#13DE00]/13 border border-[#13DE00]/30"
+                                  : "bg-black/20"
+                              }`}
                             >
-                              <span className={`capitalize text-xs font-medium ${isToday ? 'text-[#13DE00]' : 'text-gray-300'}`}>
+                              <span
+                                className={`capitalize text-xs font-medium ${isToday ? "text-[#13DE00]" : "text-gray-300"}`}
+                              >
                                 {day}
                               </span>
-                              <span className={`text-xs ${isToday ? 'text-white' : 'text-gray-400'}`}>
+                              <span
+                                className={`text-xs ${isToday ? "text-white" : "text-gray-400"}`}
+                              >
                                 {hours}
                               </span>
                             </div>
@@ -205,7 +221,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                   </h2>
 
                   <div className="grid grid-cols-1 gap-2">
-                    {location.reviewLink && location.reviewLink !== '#' && (
+                    {location.reviewLink && location.reviewLink !== "#" && (
                       <a
                         href={location.reviewLink}
                         title="Leave a Review"
@@ -213,12 +229,16 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                         rel="noopener noreferrer"
                         className="flex items-center justify-between p-3 bg-black/30 hover:bg-black/69 border border-white/10 hover:border-[#13DE00]/50 transition-all group"
                       >
-                        <span className="font-medium text-sm">Leave a Review</span>
-                        <span className="text-[#13DE00] group-hover:translate-x-1 transition-transform">{'>'}</span>
+                        <span className="font-medium text-sm">
+                          Leave a Review
+                        </span>
+                        <span className="text-[#13DE00] group-hover:translate-x-1 transition-transform">
+                          {">"}
+                        </span>
                       </a>
                     )}
 
-                    {location.website && location.website !== '#' && (
+                    {location.website && location.website !== "#" && (
                       <a
                         href={location.website}
                         title="Visit Website"
@@ -226,30 +246,74 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                         rel="noopener noreferrer"
                         className="flex items-center justify-between p-3 bg-black/30 hover:bg-black/69 border border-white/10 hover:border-[#13DE00]/50 transition-all group"
                       >
-                        <span className="font-medium text-sm">Visit Website</span>
-                        <span className="text-[#13DE00] group-hover:translate-x-1 transition-transform">{'>'}</span>
+                        <span className="font-medium text-sm">
+                          Visit Website
+                        </span>
+                        <span className="text-[#13DE00] group-hover:translate-x-1 transition-transform">
+                          {">"}
+                        </span>
                       </a>
                     )}
 
                     {/* Social Links - Condensed */}
                     <div className="grid md:grid-cols-2 gap-2 mt-2">
-                      {location.tripAdvisor && location.tripAdvisor !== '#' && (
-                        <a href={location.tripAdvisor} target="_blank" rel="noopener noreferrer" title="TripAdvisor" className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all">TripAdvisor</a>
+                      {location.tripAdvisor && location.tripAdvisor !== "#" && (
+                        <a
+                          href={location.tripAdvisor}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="TripAdvisor"
+                          className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all"
+                        >
+                          TripAdvisor
+                        </a>
                       )}
-                      {location.weedTh && location.weedTh !== '#' && (
-                        <a href={location.weedTh} target="_blank" rel="noopener noreferrer" title="WEED.TH" className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all">WEED.TH</a>
+                      {location.weedTh && location.weedTh !== "#" && (
+                        <a
+                          href={location.weedTh}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="WEED.TH"
+                          className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all"
+                        >
+                          WEED.TH
+                        </a>
                       )}
-                      {location.wongnai && location.wongnai !== '#' && (
-                        <a href={location.wongnai} target="_blank" rel="noopener noreferrer" title="Wongnai" className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all">Wongnai</a>
+                      {location.wongnai && location.wongnai !== "#" && (
+                        <a
+                          href={location.wongnai}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="Wongnai"
+                          className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all"
+                        >
+                          Wongnai
+                        </a>
                       )}
-                      {location.highThailand && location.highThailand !== '#' && (
-                        <a href={location.highThailand} target="_blank" rel="noopener noreferrer" title="High Thailand" className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all">High Thailand</a>
-                      )}
-                      {location.appleMap && location.appleMap !== '#' && (
-                        <a href={location.appleMap} target="_blank" rel="noopener noreferrer" title="Apple Maps" className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all">Apple Maps</a>
+                      {location.highThailand &&
+                        location.highThailand !== "#" && (
+                          <a
+                            href={location.highThailand}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="High Thailand"
+                            className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all"
+                          >
+                            High Thailand
+                          </a>
+                        )}
+                      {location.appleMap && location.appleMap !== "#" && (
+                        <a
+                          href={location.appleMap}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="Apple Maps"
+                          className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all"
+                        >
+                          Apple Maps
+                        </a>
                       )}
                     </div>
-
                   </div>
                 </section>
               </div>
@@ -268,8 +332,8 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 }
 
 interface PageProps {
-  params: Promise<{ slug: string }>
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
 // Helper function to convert YouTube embed URL to watch URL
@@ -283,15 +347,17 @@ function convertYouTubeEmbedToWatch(embedUrl: string): string {
   return embedUrl; // Return original if pattern doesn't match
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const locations = await getLocations();
-  const location = locations.find(l => l.slug === slug);
+  const location = locations.find((l) => l.slug === slug);
 
   if (!location) {
     return {
-      title: 'Location Not Found | Green Ghost',
-      description: 'The requested location could not be found.'
+      title: "Location Not Found | Green Ghost",
+      description: "The requested location could not be found.",
     };
   }
 
@@ -299,13 +365,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `${location.name} - Green Ghost 🌿👻`,
-    description: location.descSeo || `Visit Green Ghost at ${location.name}. Premium cannabis products available.`,
-    alternates: {
-      canonical: getCanonicalUrl(`locations/${slug}`),
-    },
+    description:
+      location.descSeo ||
+      `Visit Green Ghost at ${location.name}. Premium cannabis products available.`,
+    keywords: `${toCapitalizeCase(location.slug)}, ${location.region}, Cannabis Dispensary, Weed Shop, Cannabis Store, Buy Weed, Weed Delivery`,
     openGraph: {
       title: `${location.name} - Green Ghost 🌿👻`,
-      description: location.descSeo || `Visit Green Ghost at ${location.name}. Premium cannabis products available.`,
+      description:
+        location.descSeo ||
+        `Visit Green Ghost at ${location.name}. Premium cannabis products available.`,
       url: `/locations/${slug}`,
       images: [
         {
@@ -319,7 +387,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         videos: [
           {
             url: convertYouTubeEmbedToWatch(location.videoLink),
-            type: 'text/html',
+            type: "text/html",
             width: 1280,
             height: 720,
           },
@@ -327,10 +395,32 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }),
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
+      site: "@greenghostdegen",
+      creator: "@greenghostdegen",
       title: `${location.name} - Green Ghost 🌿👻`,
       description: location.descSeo || location.description,
       images: [imagePath],
     },
+    alternates: {
+      canonical: getCanonicalUrl(`locations/${slug}`),
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+      },
+    },
   };
+}
+
+function toCapitalizeCase(slug: string): string {
+  return slug
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 }

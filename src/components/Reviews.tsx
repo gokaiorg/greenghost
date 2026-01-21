@@ -1,70 +1,42 @@
-'use client'
+"use client";
 
-import { useState, useEffect, useRef, useCallback } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { Star } from 'lucide-react'
+import { useState, useEffect, useRef, useCallback } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Star } from "lucide-react";
+import { parseCSV } from "@/lib/utils/csv";
 
 type Review = {
   name: string;
-  comment: string
-  link: string
-  shop: string
-}
+  comment: string;
+  link: string;
+  shop: string;
+};
 
-// Helper function to parse CSV line with proper handling of quoted fields
-function parseCSVLineRobust(line: string): string[] {
-  const result: string[] = []
-  let current = ''
-  let inQuotes = false
-
-  for (let i = 0; i < line.length; i++) {
-    const char = line[i]
-    const nextChar = line[i + 1]
-
-    if (char === '"') {
-      if (inQuotes && nextChar === '"') { // Escaped quote
-        current += '"'
-        i++ // Skip next quote
-      } else { // Toggle quote state
-        inQuotes = !inQuotes
-      }
-    } else if (char === ',' && !inQuotes) { // Field separator
-      result.push(current)
-      current = ''
-    } else {
-      current += char
-    }
-  }
-
-  // Add last field
-  result.push(current)
-
-  return result.map(field => field.trim().replace(/^"|"$/g, '')) // Trim and remove surrounding quotes
+interface ReviewCSVRow {
+  Name: string;
+  Comment: string;
+  Link: string;
+  Shop: string;
+  [key: string]: string | undefined;
 }
 
 async function getReviews(): Promise<Review[]> {
   try {
-    const res = await fetch('/datas/reviews.csv')
-    const fileContent = await res.text()
-    const lines = fileContent.trim().split('\n');
-    if (lines.length < 2) return [];
-    const headers = parseCSVLineRobust(lines[0]).map(h => h.trim());
-    return lines.slice(1).map(line => {
-      const values = parseCSVLineRobust(line);
-      const reviewData: Record<string, string> = {};
-      headers.forEach((header, index) => {
-        reviewData[header.toLowerCase()] = values[index];
-      });
-      return {
-        name: reviewData.name || 'Anonymous',
-        comment: reviewData.comment || '',
-        link: reviewData.link || '#',
-        shop: reviewData.shop || '',
-      };
-    });
+    const res = await fetch("/datas/reviews.csv");
+    const fileContent = await res.text();
+    const parsedData = parseCSV<ReviewCSVRow>(fileContent);
+
+    if (parsedData.length === 0) return [];
+
+    return parsedData.map((row) => ({
+      name: row.Name || "Anonymous",
+      comment: row.Comment || "",
+      link: row.Link || "#",
+      shop: row.Shop || "",
+    }));
   } catch (error) {
-    console.error('Error reading reviews.csv:', error);
+    console.error("Error reading reviews.csv:", error);
     return [];
   }
 }
@@ -80,113 +52,117 @@ function shuffleArray<T>(array: T[]): T[] {
 }
 
 export default function Reviews() {
-  const [reviews, setReviews] = useState<Review[]>([])
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [itemsPerPage, setItemsPerPage] = useState(3)
-  const [isDragging, setIsDragging] = useState(false)
-  const [startX, setStartX] = useState(0)
-  const [currentX, setCurrentX] = useState(0)
-  const navScrollContainerRef = useRef<HTMLDivElement>(null)
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(3);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [currentX, setCurrentX] = useState(0);
+  const navScrollContainerRef = useRef<HTMLDivElement>(null);
   // For verify we are not in infinite loop
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    getReviews().then(fetchedReviews => {
-      setReviews(shuffleArray(fetchedReviews))
-    })
+    getReviews().then((fetchedReviews) => {
+      setReviews(shuffleArray(fetchedReviews));
+    });
 
     const updateItemsPerPage = () => {
-      setItemsPerPage(window.innerWidth >= 768 ? 3 : 1)
-    }
+      setItemsPerPage(window.innerWidth >= 768 ? 3 : 1);
+    };
 
-    updateItemsPerPage()
-    window.addEventListener('resize', updateItemsPerPage)
+    updateItemsPerPage();
+    window.addEventListener("resize", updateItemsPerPage);
 
-    return () => window.removeEventListener('resize', updateItemsPerPage)
-  }, [])
+    return () => window.removeEventListener("resize", updateItemsPerPage);
+  }, []);
 
-  const totalSlides = Math.ceil(reviews.length / itemsPerPage)
+  const totalSlides = Math.ceil(reviews.length / itemsPerPage);
 
   const goToSlide = useCallback((index: number) => {
-    setCurrentIndex(index)
-  }, [])
+    setCurrentIndex(index);
+  }, []);
 
   const nextSlide = useCallback(() => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSlides)
-  }, [totalSlides])
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSlides);
+  }, [totalSlides]);
 
   // Auto-play logic
   useEffect(() => {
-    if (totalSlides <= 1 || isDragging) return
+    if (totalSlides <= 1 || isDragging) return;
 
     const startAutoPlay = () => {
       timeoutRef.current = setTimeout(() => {
-        nextSlide()
-      }, 5000)
-    }
+        nextSlide();
+      }, 5000);
+    };
 
-    startAutoPlay()
+    startAutoPlay();
 
     return () => {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current)
-    }
-  }, [currentIndex, totalSlides, isDragging, nextSlide])
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, [currentIndex, totalSlides, isDragging, nextSlide]);
 
   // Scroll active dot into view
   useEffect(() => {
     if (navScrollContainerRef.current) {
-      const activeDot = navScrollContainerRef.current.children[currentIndex] as HTMLElement
+      const activeDot = navScrollContainerRef.current.children[
+        currentIndex
+      ] as HTMLElement;
       if (activeDot) {
-        const container = navScrollContainerRef.current
-        const scrollLeft = activeDot.offsetLeft - (container.clientWidth / 2) + (activeDot.clientWidth / 2)
-        container.scrollTo({ left: scrollLeft, behavior: 'smooth' })
+        const container = navScrollContainerRef.current;
+        const scrollLeft =
+          activeDot.offsetLeft -
+          container.clientWidth / 2 +
+          activeDot.clientWidth / 2;
+        container.scrollTo({ left: scrollLeft, behavior: "smooth" });
       }
     }
-  }, [currentIndex])
-
+  }, [currentIndex]);
 
   const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
-    setIsDragging(true)
-    setStartX('touches' in e ? e.touches[0].clientX : e.clientX)
-    setCurrentX('touches' in e ? e.touches[0].clientX : e.clientX)
-  }
+    setIsDragging(true);
+    setStartX("touches" in e ? e.touches[0].clientX : e.clientX);
+    setCurrentX("touches" in e ? e.touches[0].clientX : e.clientX);
+  };
 
   const handleDragMove = (e: React.MouseEvent | React.TouchEvent) => {
-    if (!isDragging) return
+    if (!isDragging) return;
 
-    const x = 'touches' in e ? e.touches[0].clientX : e.clientX
-    setCurrentX(x)
-  }
+    const x = "touches" in e ? e.touches[0].clientX : e.clientX;
+    setCurrentX(x);
+  };
 
   const handleDragEnd = () => {
-    if (!isDragging) return
+    if (!isDragging) return;
 
-    const diff = startX - currentX
-    const threshold = 50 // Minimum drag distance to trigger slide change
+    const diff = startX - currentX;
+    const threshold = 50; // Minimum drag distance to trigger slide change
 
     if (Math.abs(diff) > threshold) {
       if (diff > 0 && currentIndex < totalSlides - 1) {
         // Dragged left, go to next slide
-        setCurrentIndex(currentIndex + 1)
+        setCurrentIndex(currentIndex + 1);
       } else if (diff > 0 && currentIndex === totalSlides - 1) {
         // Wrap around to first
-        setCurrentIndex(0)
+        setCurrentIndex(0);
       } else if (diff < 0 && currentIndex > 0) {
         // Dragged right, go to previous slide
-        setCurrentIndex(currentIndex - 1)
+        setCurrentIndex(currentIndex - 1);
       } else if (diff < 0 && currentIndex === 0) {
         // Wrap around to last
-        setCurrentIndex(totalSlides - 1)
+        setCurrentIndex(totalSlides - 1);
       }
     }
 
-    setIsDragging(false)
-    setCurrentX(0)
-    setStartX(0)
-  }
+    setIsDragging(false);
+    setCurrentX(0);
+    setStartX(0);
+  };
 
   if (reviews.length === 0) {
-    return null
+    return null;
   }
 
   return (
@@ -208,7 +184,7 @@ export default function Reviews() {
           width={120}
           height={120}
           className="-rotate-12 animate-pulse"
-          style={{ animationDelay: '1s' }}
+          style={{ animationDelay: "1s" }}
         />
       </div>
       <div className="absolute top-1/2 left-5 opacity-50 pointer-events-none hidden lg:block">
@@ -234,9 +210,14 @@ export default function Reviews() {
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 text-white">
           <span className="text-[#13DE00]">Green</span> Ghosted Peeps
         </h2>
-        <div className="relative group"
-          onMouseEnter={() => { if (timeoutRef.current) clearTimeout(timeoutRef.current) }}
-          onMouseLeave={() => { /* Effect will restart loop naturally */ nextSlide() }} // Trigger restart
+        <div
+          className="relative group"
+          onMouseEnter={() => {
+            if (timeoutRef.current) clearTimeout(timeoutRef.current);
+          }}
+          onMouseLeave={() => {
+            /* Effect will restart loop naturally */ nextSlide();
+          }} // Trigger restart
         >
           <div
             className="overflow-hidden cursor-grab active:cursor-grabbing"
@@ -256,15 +237,18 @@ export default function Reviews() {
               {Array.from({ length: totalSlides }).map((_, slideIndex) => (
                 <li
                   key={slideIndex}
-                  className={`w-full col-start-1 row-start-1 transition-opacity duration-1000 ease-in-out ${currentIndex === slideIndex ? 'opacity-100 z-10 relative' : 'opacity-0 z-0 absolute top-0 left-0 pointer-events-none'
-                    }`}
+                  className={`w-full col-start-1 row-start-1 transition-opacity duration-1000 ease-in-out ${
+                    currentIndex === slideIndex
+                      ? "opacity-100 z-10 relative"
+                      : "opacity-0 z-0 absolute top-0 left-0 pointer-events-none"
+                  }`}
                   aria-hidden={currentIndex !== slideIndex}
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {reviews
                       .slice(
                         slideIndex * itemsPerPage,
-                        (slideIndex + 1) * itemsPerPage
+                        (slideIndex + 1) * itemsPerPage,
                       )
                       .map((review, index) => (
                         <div
@@ -287,11 +271,21 @@ export default function Reviews() {
                             </p>
                           </div>
                           <div className="flex justify-between items-center mt-4">
-                            <a href={review.link} target="_blank" rel="noopener noreferrer" className="text-sm text-[#13DE00] hover:underline" title="Read full review">
+                            <a
+                              href={review.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-sm text-[#13DE00] hover:underline"
+                              title="Read full review"
+                            >
                               Read full review
                             </a>
                             {review.shop && (
-                              <Link href={`/locations/${review.shop.toLowerCase()}`} className="text-xs bg-gray-700 text-white py-1 px-2 hover:bg-gray-600 transition-colors" title={review.shop}>
+                              <Link
+                                href={`/locations/${review.shop.toLowerCase()}`}
+                                className="text-xs bg-gray-700 text-white py-1 px-2 hover:bg-gray-600 transition-colors"
+                                title={review.shop}
+                              >
                                 {review.shop}
                               </Link>
                             )}
@@ -308,16 +302,19 @@ export default function Reviews() {
               <div
                 ref={navScrollContainerRef}
                 className="flex justify-start md:justify-center space-x-2 overflow-x-auto pb-4 md:pb-0 scrollbar-hide snap-x"
-                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
               >
                 {Array.from({ length: totalSlides }).map((_, index) => (
                   <button
                     key={index}
                     onClick={() => goToSlide(index)}
-                    className={`shrink-0 w-4 h-4 transition-all cursor-pointer snap-center ${currentIndex === index ? 'bg-[#13DE00] w-10' : 'bg-gray-700 hover:bg-gray-500'
-                      }`}
+                    className={`shrink-0 w-4 h-4 transition-all cursor-pointer snap-center ${
+                      currentIndex === index
+                        ? "bg-[#13DE00] w-10"
+                        : "bg-gray-700 hover:bg-gray-500"
+                    }`}
                     aria-label={`Go to slide ${index + 1} of ${totalSlides}`}
-                    aria-current={currentIndex === index ? 'true' : 'false'}
+                    aria-current={currentIndex === index ? "true" : "false"}
                   />
                 ))}
               </div>
@@ -326,5 +323,5 @@ export default function Reviews() {
         </div>
       </div>
     </div>
-  )
+  );
 }

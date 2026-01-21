@@ -1,19 +1,18 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import MenuCategories from '@/components/MenuCategories';
+import { useEffect, useRef, useState, ReactNode } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 const HERO_IMAGES = [
-  '/images/banners/green-ghost-best-degen-weed-shop-delivery-01.avif',
-  '/images/banners/green-ghost-best-degen-weed-shop-delivery-02.avif',
-  '/images/banners/green-ghost-best-degen-weed-shop-delivery-03.avif',
+  "/images/banners/green-ghost-best-degen-weed-shop-delivery-01.avif",
+  "/images/banners/green-ghost-best-degen-weed-shop-delivery-02.avif",
+  "/images/banners/green-ghost-best-degen-weed-shop-delivery-03.avif",
 ];
 
-export default function BannerHero() {
+export default function BannerHero({ menuSlot }: { menuSlot?: ReactNode }) {
   const parallaxRef = useRef<HTMLDivElement>(null);
-  const [offset, setOffset] = useState(0);
+  const bgRef = useRef<HTMLDivElement>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -25,19 +24,23 @@ export default function BannerHero() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (parallaxRef.current) {
+      if (parallaxRef.current && bgRef.current) {
         const rect = parallaxRef.current.getBoundingClientRect();
-        const scrolled = window.scrollY;
 
         // Only apply parallax when hero section is in view
         if (rect.top < window.innerHeight && rect.bottom > 0) {
-          setOffset(scrolled * 0.5);
+          const scrolled = window.scrollY;
+          const offset = scrolled * 0.5;
+          bgRef.current.style.transform = `translateY(${offset}px)`;
         }
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    // Initial calculation in case we start scrolled down
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -48,17 +51,19 @@ export default function BannerHero() {
       {/* Background with parallax effect */}
       <div className="absolute inset-0 z-0">
         <div
+          ref={bgRef}
           className="absolute inset-0 w-full h-full"
           style={{
-            transform: `translateY(${offset}px)`,
-            transition: 'transform 0.1s ease-out',
+            transform: "translateY(0px)", // Initial state
+            transition: "transform 0.1s ease-out",
           }}
         >
           {HERO_IMAGES.map((src, index) => (
             <div
               key={src}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                }`}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                index === currentImageIndex ? "opacity-100" : "opacity-0"
+              }`}
             >
               <Image
                 src={src}
@@ -79,11 +84,20 @@ export default function BannerHero() {
       {/* Content */}
       <div className="container md:max-w-6xl md:px-4 bg-black/69 p-5 md:mx-auto z-30 text-center">
         <h1 className="md:max-w-3xl mx-auto text-[25px] sm:text-[30px] md:text-[55px] font-bold mb-6 leading-tight">
-          <span className="text-[#13DE00]">Best Degen Weed Shop and Delivery</span>
+          <span className="text-[#13DE00]">
+            Best Degen Weed Shop and Delivery
+          </span>
         </h1>
 
         <p className="text-sm sm:text-md md:text-lg text-gray-300 mb-10 max-w-5xl mx-auto">
-          Discover Thailand&apos;s top-rated cannabis dispensary offering premium quality weed hand-picked from the finest local growers. Green Ghost delivers exceptional strains, edibles, concentrates, and accessories across Phuket, Bangkok, and nationwide. Experience fast, reliable weed delivery with expert service, competitive prices, and organic products. From Rawai to Karon, we&apos;re your trusted source for authentic Thai cannabis. Also serving premium CBD products in France!
+          Discover Thailand&apos;s top-rated cannabis dispensary offering
+          premium quality weed hand-picked from the finest local growers. Green
+          Ghost delivers exceptional strains, edibles, concentrates, and
+          accessories across Phuket, Bangkok, and nationwide. Experience fast,
+          reliable weed delivery with expert service, competitive prices, and
+          organic products. From Rawai to Karon, we&apos;re your trusted source
+          for authentic Thai cannabis. Also serving premium CBD products in
+          France!
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -104,11 +118,8 @@ export default function BannerHero() {
         </div>
 
         {/* Products Menu */}
-        <div className="my-10 mx-auto">
-          <MenuCategories />
-        </div>
+        <div className="my-10 mx-auto">{menuSlot}</div>
       </div>
-
     </div>
   );
 }

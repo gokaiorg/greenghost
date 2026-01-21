@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 
 export default function BackButton() {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <button
@@ -13,5 +13,5 @@ export default function BackButton() {
     >
       &lt;
     </button>
-  )
+  );
 }

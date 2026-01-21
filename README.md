@@ -17,6 +17,7 @@ A Next.js application for Green Ghost, a weed shop menu with cart functionality 
 
 1. Clone the repository
 2. Install dependencies:
+
    ```bash
    npm install
    ```
