@@ -49,3 +49,11 @@
 **Prevention:**
 1. Added `escapeHtml` to `createLink` text interpolation.
 2. Removed `X-XSS-Protection` from `next.config.ts` to align with modern security practices.
+
+## 2029-06-15 - BigQuery SQL Injection
+
+**Vulnerability:** The `getPagesData` function in `src/lib/bigquery.ts` interpolated the `pageTitle` argument directly into the SQL query string using a template literal. This created a SQL injection vulnerability where a malicious user could potentially manipulate the query if `pageTitle` originated from user input.
+**Learning:** Even when using "modern" data warehouses like BigQuery, SQL injection is still a risk if queries are constructed using string concatenation or interpolation. Parameterized queries are the only safe way to handle dynamic values in SQL.
+**Prevention:**
+1. Always use parameterized queries (prepared statements) when including variables in SQL.
+2. In the BigQuery Node.js client, use the `params` option in the `query` method and `@variableName` syntax in the SQL string.
