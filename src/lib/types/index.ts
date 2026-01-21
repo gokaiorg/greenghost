@@ -28,3 +28,10 @@ export interface CartItem extends Product {
   quantity: number;
   menuType: string;
 }
+
+export interface Message {
+  id: number;
+  text: string;
+  sender: "user" | "bot";
+  timestamp: Date;
+}
