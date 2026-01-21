@@ -41,3 +41,11 @@
 1. Replaced `dangerouslySetInnerHTML` with standard React text rendering.
 2. Used `whitespace-pre-wrap` CSS class to handle line breaks natively.
 3. Ensured that escaped newlines (`\\n`) from the data source are converted to actual newlines (`\n`) before rendering.
+
+## 2028-05-23 - Chatbox Helper Function XSS & Deprecated Headers
+
+**Vulnerability:** The `createLink` helper in `Chatbox.tsx` constructed HTML strings without escaping the link text, and `next.config.ts` included the deprecated `X-XSS-Protection` header.
+**Learning:** Internal helper functions generating HTML must be secure by default (defense in depth), and security headers must be kept up-to-date with modern browser standards.
+**Prevention:**
+1. Added `escapeHtml` to `createLink` text interpolation.
+2. Removed `X-XSS-Protection` from `next.config.ts` to align with modern security practices.

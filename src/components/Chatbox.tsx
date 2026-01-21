@@ -27,7 +27,7 @@ const INITIAL_MESSAGES: Message[] = [
 
 // Helper function to create links
 const createLink = (path: string, text: string) =>
-  `<a href="${path}" class="text-[#13DE00] hover:underline" title="${text}">${text}</a>`;
+  `<a href="${path}" class="text-[#13DE00] hover:underline" title="${escapeHtml(text)}">${escapeHtml(text)}</a>`;
 
 const RESPONSES = {
   greeting:
