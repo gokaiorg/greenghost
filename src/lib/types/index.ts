@@ -35,3 +35,10 @@ export interface Message {
   sender: "user" | "bot";
   timestamp: Date;
 }
+
+export interface Review {
+  name: string;
+  comment: string;
+  link: string;
+  shop: string;
+}
