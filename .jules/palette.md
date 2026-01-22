@@ -27,3 +27,8 @@
 
 **Learning:** Elements that are visually hidden using `opacity-0` (like the `ScrollToTop` button) remain in the document flow and keyboard tab order, creating confusing "ghost" focus states.
 **Action:** When animating visibility with opacity, always toggle `tabIndex={-1}` and `aria-hidden="true"` when the element is visually hidden to remove it from the accessibility tree and tab sequence.
+
+## 2025-05-27 - Nested Interactive Elements in Sliders
+
+**Learning:** The `MiniSlider` component is frequently nested within `Link` components (e.g., in product lists), creating invalid HTML and accessibility issues because it renders interactive `<button>` elements for slide indicators.
+**Action:** When using `MiniSlider` inside a `Link`, always pass `interactive={false}` to render the indicators as non-interactive `<span>` elements, preventing nested interactive controls while maintaining visual feedback.
