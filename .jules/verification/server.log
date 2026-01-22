@@ -1,0 +1,357 @@
+
+> greenghost@0.1.0 dev /app
+> next dev
+
+   ▲ Next.js 15.5.7
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.2:3000
+
+ ✓ Starting...
+ ✓ Ready in 3.2s
+ ○ Compiling / ...
+ ✓ Compiled / in 24.2s (9262 modules)
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+ ✓ Compiled in 3.1s (3657 modules)
+ GET / 200 in 27711ms
+ ✓ Compiled in 807ms (3657 modules)
+ ✓ Compiled in 647ms (3657 modules)
+ ✓ Compiled in 749ms (3657 modules)
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+ HEAD / 200 in 500ms
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+ ✓ Compiled in 1267ms (3657 modules)
+ GET / 200 in 999ms
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+ ✓ Compiled in 756ms (3657 modules)
+ GET / 200 in 794ms
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+ GET / 200 in 738ms
+ ✓ Compiled in 755ms (3657 modules)
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+ ✓ Compiled in 737ms (3657 modules)
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+ GET / 200 in 1105ms
+ ✓ Compiled in 862ms (3657 modules)
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+ GET / 200 in 1683ms
+ GET / 200 in 928ms
+ ✓ Compiled in 952ms (3657 modules)
+ GET / 200 in 166ms
+ ELIFECYCLE  Command failed.
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
+}
+[?25h
