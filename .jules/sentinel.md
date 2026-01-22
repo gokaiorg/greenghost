@@ -57,3 +57,11 @@
 **Prevention:**
 1. Always use parameterized queries (prepared statements) when including variables in SQL.
 2. In the BigQuery Node.js client, use the `params` option in the `query` method and `@variableName` syntax in the SQL string.
+
+## 2030-03-20 - Dynamic HREF Attribute XSS
+
+**Vulnerability:** Components like `Reviews`, `SocialIcons`, and `PaymentList` were rendering links from CSV data directly into the `href` attribute. This created a potential XSS vulnerability where a malicious CSV entry (e.g., `javascript:alert(1)`) could execute arbitrary code when clicked.
+**Learning:** While React automatically escapes HTML content in children, it does *not* sanitize attributes like `href` against `javascript:` protocols. Data from external sources (CSVs, APIs) must be treated as untrusted even if internal-facing.
+**Prevention:**
+1. Implemented a centralized `sanitizeUrl` utility in `src/lib/utils/url.ts` that enforces an allowlist of safe protocols (http, https, mailto, tel).
+2. Applied this sanitizer to all dynamic `href` attributes in vulnerable components.

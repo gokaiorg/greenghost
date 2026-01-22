@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Payment } from "@/lib/payment-data";
+import { sanitizeUrl } from "@/lib/utils/url";
 
 interface PaymentListProps {
   payments: Payment[];
@@ -76,7 +77,7 @@ export default function PaymentList({ payments }: PaymentListProps) {
         {activePayment.link && (
           <div className="text-center">
             <a
-              href={activePayment.link}
+              href={sanitizeUrl(activePayment.link)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-[#13DE00] text-black px-8 py-3 font-bold hover:bg-[#13DE00]/80 transition-colors"
