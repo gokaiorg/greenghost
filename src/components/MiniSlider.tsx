@@ -9,6 +9,7 @@ interface MiniSliderProps {
   width?: number;
   height?: number;
   autoRotate?: boolean;
+  interactive?: boolean;
 }
 
 function MiniSlider({
@@ -17,6 +18,7 @@ function MiniSlider({
   width = 100,
   height = 100,
   autoRotate = false,
+  interactive = true,
 }: MiniSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -156,14 +158,22 @@ function MiniSlider({
 
       {/* Dots Indicator */}
       <div className="flex justify-center mt-2 space-x-2 absolute bottom-1 left-1">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-4 h-4 p-2 transition-all cursor-pointer ${currentIndex === index ? "bg-[#13DE00] w-10" : "bg-gray-400 hover:bg-gray-600"}`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
+        {images.map((_, index) =>
+          interactive ? (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-4 h-4 p-2 transition-all cursor-pointer ${currentIndex === index ? "bg-[#13DE00] w-10" : "bg-gray-400 hover:bg-gray-600"}`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ) : (
+            <span
+              key={index}
+              className={`w-4 h-4 p-2 transition-all ${currentIndex === index ? "bg-[#13DE00] w-10" : "bg-gray-400"}`}
+              aria-hidden="true"
+            />
+          ),
+        )}
       </div>
     </div>
   );

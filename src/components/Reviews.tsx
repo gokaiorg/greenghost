@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Star } from "lucide-react";
 import { parseCSV } from "@/lib/utils/csv";
+import { sanitizeUrl } from "@/lib/utils/url";
 
 type Review = {
   name: string;
@@ -272,7 +273,7 @@ export default function Reviews() {
                           </div>
                           <div className="flex justify-between items-center mt-4">
                             <a
-                              href={review.link}
+                              href={sanitizeUrl(review.link)}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-sm text-[#13DE00] hover:underline"

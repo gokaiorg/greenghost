@@ -60,6 +60,7 @@ export default async function StrainFeatured() {
                     width={100}
                     height={100}
                     autoRotate={true}
+                    interactive={false}
                   />
                 </div>
                 <h2 className="text-base lg:text-lg font-semibold mb-1 text-sm leading-tight">

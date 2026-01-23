@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 
 export default function AgeVerification() {
   const [mounted, setMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const yesButtonRef = useRef<HTMLButtonElement>(null);
 
   // First useEffect: Mark component as mounted (client-side only)
   useEffect(() => {
@@ -28,6 +29,13 @@ export default function AgeVerification() {
     }
   }, [mounted]);
 
+  // Focus management when modal becomes visible
+  useEffect(() => {
+    if (isVisible && yesButtonRef.current) {
+      yesButtonRef.current.focus();
+    }
+  }, [isVisible]);
+
   const handleYes = () => {
     sessionStorage.setItem("age-verified", "true");
     setIsVisible(false);
@@ -46,6 +54,7 @@ export default function AgeVerification() {
       role="dialog"
       aria-modal="true"
       aria-labelledby="age-verification-title"
+      aria-describedby="age-verification-desc"
     >
       <div className="bg-black border-2 border-[#13DE00] p-8 max-w-md w-full text-center shadow-[0_0_20px_rgba(19,222,0,0.3)]">
         <div className="mb-6 flex justify-center">
@@ -68,20 +77,21 @@ export default function AgeVerification() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
+            ref={yesButtonRef}
             onClick={handleYes}
-            className="bg-[#13DE00] hover:bg-[#10c500] text-black font-bold py-3 px-8 cursor-pointer transition-colors duration-200 font-pixel text-sm"
+            className="bg-[#13DE00] hover:bg-[#10c500] text-black font-bold py-3 px-8 cursor-pointer transition-colors duration-200 font-pixel text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
           >
             YES
           </button>
           <button
             onClick={handleNo}
-            className="bg-transparent border-2 border-red-500 text-red-500 hover:bg-red-500/10 cursor-pointer font-bold py-3 px-8 transition-colors duration-200 font-pixel text-sm"
+            className="bg-transparent border-2 border-red-500 text-red-500 hover:bg-red-500/10 cursor-pointer font-bold py-3 px-8 transition-colors duration-200 font-pixel text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-black"
           >
             NO
           </button>
         </div>
 
-        <p className="mt-6 text-xs text-gray-500">
+        <p id="age-verification-desc" className="mt-6 text-xs text-gray-500">
           By entering this site, you agree to our terms and confirm you are of
           legal age.
         </p>

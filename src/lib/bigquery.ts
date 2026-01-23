@@ -53,12 +53,15 @@ SELECT
             string_field_6 AS meta_title,
               string_field_7 AS meta_description
     FROM \`green-ghost-432101.greenghostdataset.pages\`
-    WHERE string_field_0 LIKE '${pageTitle}%'
+    WHERE string_field_0 LIKE @pageTitle
     LIMIT 1
   `;
 
     try {
-      const [rows] = await bigquery.query({ query });
+      const [rows] = await bigquery.query({
+        query,
+        params: { pageTitle: `${pageTitle}%` },
+      });
       return rows.length > 0 ? (rows[0] as PageData) : null;
     } catch (error) {
       console.error("BigQuery fetching error:", error);

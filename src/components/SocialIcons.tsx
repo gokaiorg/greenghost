@@ -1,4 +1,5 @@
 import { Instagram, Facebook, Youtube } from "lucide-react";
+import { sanitizeUrl } from "@/lib/utils/url";
 
 interface SocialIconsProps {
   socials: Array<{ name: string; link: string }>;
@@ -73,7 +74,7 @@ export default function SocialIcons({ socials }: SocialIconsProps) {
         return (
           <li key={index}>
             <a
-              href={social.link}
+              href={sanitizeUrl(social.link)}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Follow us on ${social.name}`}
