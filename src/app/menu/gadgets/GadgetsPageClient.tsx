@@ -67,6 +67,7 @@ export default function GadgetsPageContent({
                       width={100}
                       height={100}
                       autoRotate={true}
+                      interactive={false}
                     />
                   </div>
                   <ul

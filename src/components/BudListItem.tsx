@@ -29,6 +29,7 @@ const BudListItem = memo(({ bud }: BudListItemProps) => {
               width={100}
               height={100}
               autoRotate={true}
+              interactive={false}
             />
           </div>
           <ul className="list-none m-0 p-0" aria-label="Product details">

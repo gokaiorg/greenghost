@@ -89,6 +89,7 @@ export default function StrainsClient() {
                       width={100}
                       height={100}
                       autoRotate={false}
+                      interactive={false}
                     />
                   </div>
                   <div className="text-white hover:text-white font-['Cubicfive12'] text-center text-sm leading-tight">
