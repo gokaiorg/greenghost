@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { toJsonLd } from "@/lib/utils/json-ld";
+import { sanitizeUrl } from "@/lib/utils/url";
 import {
   generateLocalBusinessSchema,
   generateFAQSchema,
@@ -92,7 +93,7 @@ export default async function LocationPage({
                   <iframe
                     width="100%"
                     height="100%"
-                    src={location.videoLink}
+                    src={sanitizeUrl(location.videoLink)}
                     title={`${location.name} Video Tour`}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -135,7 +136,7 @@ export default async function LocationPage({
                       <p className="text-white text-sm">{location.address}</p>
                       {location.addressLink && (
                         <a
-                          href={location.addressLink}
+                          href={sanitizeUrl(location.addressLink)}
                           title="View on Maps"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -201,7 +202,7 @@ export default async function LocationPage({
                 {location.mapLink && (
                   <div className="aspect-video w-full overflow-hidden border border-[#13DE00]/21 bg-[#13DE00]/5">
                     <iframe
-                      src={location.mapLink}
+                      src={sanitizeUrl(location.mapLink)}
                       title={`${location.name} Location Map`}
                       width="100%"
                       height="100%"
@@ -223,7 +224,7 @@ export default async function LocationPage({
                   <div className="grid grid-cols-1 gap-2">
                     {location.reviewLink && location.reviewLink !== "#" && (
                       <a
-                        href={location.reviewLink}
+                        href={sanitizeUrl(location.reviewLink)}
                         title="Leave a Review"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -240,7 +241,7 @@ export default async function LocationPage({
 
                     {location.website && location.website !== "#" && (
                       <a
-                        href={location.website}
+                        href={sanitizeUrl(location.website)}
                         title="Visit Website"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -259,7 +260,7 @@ export default async function LocationPage({
                     <div className="grid md:grid-cols-2 gap-2 mt-2">
                       {location.tripAdvisor && location.tripAdvisor !== "#" && (
                         <a
-                          href={location.tripAdvisor}
+                          href={sanitizeUrl(location.tripAdvisor)}
                           target="_blank"
                           rel="noopener noreferrer"
                           title="TripAdvisor"
@@ -270,7 +271,7 @@ export default async function LocationPage({
                       )}
                       {location.weedTh && location.weedTh !== "#" && (
                         <a
-                          href={location.weedTh}
+                          href={sanitizeUrl(location.weedTh)}
                           target="_blank"
                           rel="noopener noreferrer"
                           title="WEED.TH"
@@ -281,7 +282,7 @@ export default async function LocationPage({
                       )}
                       {location.wongnai && location.wongnai !== "#" && (
                         <a
-                          href={location.wongnai}
+                          href={sanitizeUrl(location.wongnai)}
                           target="_blank"
                           rel="noopener noreferrer"
                           title="Wongnai"
@@ -293,7 +294,7 @@ export default async function LocationPage({
                       {location.highThailand &&
                         location.highThailand !== "#" && (
                           <a
-                            href={location.highThailand}
+                            href={sanitizeUrl(location.highThailand)}
                             target="_blank"
                             rel="noopener noreferrer"
                             title="High Thailand"
@@ -304,7 +305,7 @@ export default async function LocationPage({
                         )}
                       {location.appleMap && location.appleMap !== "#" && (
                         <a
-                          href={location.appleMap}
+                          href={sanitizeUrl(location.appleMap)}
                           target="_blank"
                           rel="noopener noreferrer"
                           title="Apple Maps"
