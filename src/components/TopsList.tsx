@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getTops } from "@/lib/organization-data";
+import { sanitizeUrl } from "@/lib/utils/url";
 
 export default async function TopsList() {
   const tops = await getTops();
@@ -43,7 +44,7 @@ export default async function TopsList() {
             return (
               <li key={top.name}>
                 <a
-                  href={top.link}
+                  href={sanitizeUrl(top.link)}
                   title={top.name}
                   target="_blank"
                   rel="noopener noreferrer"
