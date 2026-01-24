@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/contexts/CartContext";
 import { CartItem } from "@/lib/types";
@@ -18,20 +18,64 @@ export default function BagPopup({ isOpen, onClose }: BagPopupProps) {
   const { items } = state;
   const total = getTotal();
   const [showMessagingSelector, setShowMessagingSelector] = useState(false);
+  const modalRef = useRef<HTMLDivElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    if (!isOpen) return;
+
+    // Save previous focus
+    previousFocusRef.current = document.activeElement as HTMLElement;
+
+    // Focus first element
+    // Small timeout to ensure DOM is ready
+    const timer = setTimeout(() => {
+      const focusableElements = modalRef.current?.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+      );
+      if (focusableElements && focusableElements.length > 0) {
+        (focusableElements[0] as HTMLElement).focus();
+      }
+    }, 10);
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         onClose();
+        return;
+      }
+
+      if (e.key === "Tab") {
+        const focusable = modalRef.current?.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+        );
+        if (!focusable || focusable.length === 0) return;
+
+        const firstElement = focusable[0] as HTMLElement;
+        const lastElement = focusable[focusable.length - 1] as HTMLElement;
+
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            lastElement.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            firstElement.focus();
+            e.preventDefault();
+          }
+        }
       }
     };
 
-    if (isOpen) {
-      window.addEventListener("keydown", handleKeyDown);
-    }
+    window.addEventListener("keydown", handleKeyDown);
 
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
+      clearTimeout(timer);
+      // Restore focus
+      if (previousFocusRef.current) {
+        previousFocusRef.current.focus();
+      }
     };
   }, [isOpen, onClose]);
 
@@ -127,6 +171,7 @@ export default function BagPopup({ isOpen, onClose }: BagPopupProps) {
 
   return (
     <div
+      ref={modalRef}
       className="fixed h-screen inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-xl"
       role="dialog"
       aria-modal="true"
