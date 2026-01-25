@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { BestShop } from "@/lib/organization-data";
+import { sanitizeUrl } from "@/lib/utils/url";
 
 interface BestShopsListProps {
   shops: BestShop[];
@@ -80,7 +81,7 @@ export default function BestShopsList({ shops }: BestShopsListProps) {
 
               <div className="mt-auto pt-4 border-t border-[#13DE00]/21 group-hover:border-gray-700 transition-colors">
                 <a
-                  href={shop.mapLink}
+                  href={sanitizeUrl(shop.mapLink)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors group/link"

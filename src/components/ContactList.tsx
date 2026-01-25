@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getContacts } from "@/lib/contacts";
+import { sanitizeUrl } from "@/lib/utils/url";
 import {
   Phone,
   Mail,
@@ -34,7 +35,7 @@ export default async function ContactList() {
       {contacts.map((contact) => (
         <li key={contact.name} className="list-none">
           <Link
-            href={contact.link}
+            href={sanitizeUrl(contact.link)}
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-4 p-4 bg-black border-2 border-[#13DE00]/30 hover:border-[#13DE00] hover:bg-[#13DE00]/13 transition-all duration-300"
