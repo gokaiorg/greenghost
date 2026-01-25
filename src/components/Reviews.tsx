@@ -4,56 +4,14 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Star } from "lucide-react";
-import { parseCSV } from "@/lib/utils/csv";
 import { sanitizeUrl } from "@/lib/utils/url";
+import { Review } from "@/lib/types";
 
-type Review = {
-  name: string;
-  comment: string;
-  link: string;
-  shop: string;
-};
-
-interface ReviewCSVRow {
-  Name: string;
-  Comment: string;
-  Link: string;
-  Shop: string;
-  [key: string]: string | undefined;
+interface ReviewsProps {
+  reviews: Review[];
 }
 
-async function getReviews(): Promise<Review[]> {
-  try {
-    const res = await fetch("/datas/reviews.csv");
-    const fileContent = await res.text();
-    const parsedData = parseCSV<ReviewCSVRow>(fileContent);
-
-    if (parsedData.length === 0) return [];
-
-    return parsedData.map((row) => ({
-      name: row.Name || "Anonymous",
-      comment: row.Comment || "",
-      link: row.Link || "#",
-      shop: row.Shop || "",
-    }));
-  } catch (error) {
-    console.error("Error reading reviews.csv:", error);
-    return [];
-  }
-}
-
-// Fisher-Yates shuffle
-function shuffleArray<T>(array: T[]): T[] {
-  const newArray = [...array];
-  for (let i = newArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-  }
-  return newArray;
-}
-
-export default function Reviews() {
-  const [reviews, setReviews] = useState<Review[]>([]);
+export default function Reviews({ reviews = [] }: ReviewsProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(3);
   const [isDragging, setIsDragging] = useState(false);
@@ -64,10 +22,6 @@ export default function Reviews() {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    getReviews().then((fetchedReviews) => {
-      setReviews(shuffleArray(fetchedReviews));
-    });
-
     const updateItemsPerPage = () => {
       setItemsPerPage(window.innerWidth >= 768 ? 3 : 1);
     };
