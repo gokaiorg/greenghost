@@ -1,24 +1,44 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ArrowUp } from "lucide-react";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  // Use a ref to track visibility state to avoid stale closures in event listener
+  const isVisibleRef = useRef(false);
 
   useEffect(() => {
+    let ticking = false;
+    let rafId: number | null = null;
+
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+      const shouldBeVisible = window.scrollY > 300;
+
+      // Only update state if the value has changed
+      if (shouldBeVisible !== isVisibleRef.current) {
+        isVisibleRef.current = shouldBeVisible;
+        setIsVisible(shouldBeVisible);
+      }
+
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        rafId = window.requestAnimationFrame(toggleVisibility);
+        ticking = true;
       }
     };
 
-    window.addEventListener("scroll", toggleVisibility);
+    // Use passive listener for better scroll performance
+    window.addEventListener("scroll", onScroll, { passive: true });
 
     return () => {
-      window.removeEventListener("scroll", toggleVisibility);
+      window.removeEventListener("scroll", onScroll);
+      if (rafId) {
+        window.cancelAnimationFrame(rafId);
+      }
     };
   }, []);
 
