@@ -2,6 +2,7 @@ import Link from "next/link";
 import LocationsStatus from "@/components/LocationsStatus";
 
 import { Hours } from "@/lib/utils/hours";
+import { sanitizeUrl } from "@/lib/utils/url";
 
 interface Location {
   id: string;
@@ -36,7 +37,7 @@ export default function LocationsList({ locations }: LocationsListProps) {
             {/* Map Preview */}
             <div className="relative h-56 w-full overflow-hidden">
               <iframe
-                src={location.gmapLink}
+                src={sanitizeUrl(location.gmapLink)}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -78,7 +79,7 @@ export default function LocationsList({ locations }: LocationsListProps) {
               {/* Address */}
               <div className="flex items-start gap-2 text-sm">
                 <a
-                  href={location.addressLink || location.gmapLink}
+                  href={sanitizeUrl(location.addressLink || location.gmapLink)}
                   title={location.address}
                   target="_blank"
                   rel="noopener noreferrer"

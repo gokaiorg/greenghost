@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getListings } from "@/lib/listings";
 import { ExternalLink } from "lucide-react";
+import { sanitizeUrl } from "@/lib/utils/url";
 
 export default async function ListingsList() {
   const listings = await getListings();
@@ -18,7 +19,7 @@ export default async function ListingsList() {
         {listings.map((listing) => (
           <li key={listing.name} className="list-none">
             <Link
-              href={listing.link}
+              href={sanitizeUrl(listing.link)}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-between p-4 bg-black border-2 border-[#13DE00]/30 hover:border-[#13DE00] hover:bg-[#13DE00]/13 transition-all duration-300"
