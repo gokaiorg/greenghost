@@ -16,7 +16,15 @@ export default function Header() {
   const [isHydrated, setIsHydrated] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isBumping, setIsBumping] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (itemCount === 0) return;
+    setIsBumping(true);
+    const timer = setTimeout(() => setIsBumping(false), 300);
+    return () => clearTimeout(timer);
+  }, [itemCount]);
 
   useEffect(() => {
     setIsHydrated(true);
@@ -271,11 +279,18 @@ export default function Header() {
             <button
               onClick={() => setIsCartOpen(true)}
               className="hover:text-[#13DE00] text-sm transition-colors relative cursor-pointer p-2"
-              aria-label="Shopping cart"
+              aria-label={
+                itemCount > 0
+                  ? `Shopping bag, ${itemCount} items`
+                  : "Shopping bag"
+              }
             >
               Bag
               {isHydrated && itemCount > 0 && (
-                <span className="absolute -top-1 -right-1 !bg-[#13DE00] !text-black text-xs font-bold w-6 h-6 flex items-center justify-center">
+                <span
+                  className={`absolute -top-1 -right-1 !bg-[#13DE00] !text-black text-xs font-bold w-6 h-6 flex items-center justify-center transition-transform duration-300 ${isBumping ? "scale-125" : "scale-100"}`}
+                  aria-hidden="true"
+                >
                   {itemCount}
                 </span>
               )}
