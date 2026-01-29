@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getContacts } from "@/lib/contacts";
+import { sanitizeUrl } from "@/lib/utils/url";
 import {
   Phone,
   Mail,
