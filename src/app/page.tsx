@@ -4,8 +4,6 @@ import { getPagesData } from "@/lib/bigquery";
 export const revalidate = 3600;
 
 import { PHONE_NUMBER } from "@/lib/constants";
-import { getReviews } from "@/lib/reviews";
-import { shuffleArray } from "@/lib/utils/array";
 
 import { PagesMetadata } from "@/components/PagesMetadata";
 import ContactBlock from "@/components/ContactBlock";
@@ -73,9 +71,7 @@ const organizationSchema = {
 };
 
 export default async function Home() {
-  const reviews = await getReviews();
   const pageData = await getPagesData("Green Ghost");
-  const shuffledReviews = shuffleArray(reviews);
 
   return (
     <>
@@ -94,7 +90,7 @@ export default async function Home() {
         <TopsList />
         <PromotesList />
         <GardenBlock />
-        <Reviews reviews={shuffledReviews} />
+        <Reviews />
         <ContactBlock />
       </div>
     </>

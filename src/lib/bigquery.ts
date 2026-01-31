@@ -11,7 +11,7 @@ const credentials =
     }
     : undefined;
 
-const bigquery = new BigQuery({
+export const bigquery = new BigQuery({
   projectId: process.env.GOOGLE_PROJECT_ID || 'green-ghost-432101',
   location: 'europe-west9', // Vérifiez que votre dataset est bien ici, sinon mettez 'US' ou enlevez la ligne
   scopes: [
@@ -115,6 +115,36 @@ export const getGardensData = cache(async (): Promise<GardenData[]> => {
     });
   } catch (error) {
     console.error("BigQuery fetching error (gardens):", error);
+    return [];
+  }
+});
+export interface ReviewData {
+  user_name: string;
+  comment: string;
+  review_link: string;
+  shop_name: string;
+}
+
+export const getReviewsData = cache(async (): Promise<ReviewData[]> => {
+  const query = `
+    SELECT
+      string_field_0 AS user_name,
+      string_field_1 AS comment,
+      string_field_2 AS review_link,
+      string_field_3 AS shop_name
+    FROM \`green-ghost-432101.greenghostdataset.reviews\`
+  `;
+
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      user_name: row.user_name,
+      comment: row.comment,
+      review_link: row.review_link,
+      shop_name: row.shop_name,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (reviews):", error);
     return [];
   }
 });
