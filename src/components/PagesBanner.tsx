@@ -13,6 +13,7 @@ export default async function PagesBanner({
 
   if (pageName) {
     const bqData = await getPagesData(pageName);
+
     if (bqData) {
       const title = bqData.title;
       const slug = title.toLowerCase().replace(/\s+/g, "-");

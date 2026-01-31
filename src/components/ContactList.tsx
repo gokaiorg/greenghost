@@ -9,7 +9,7 @@ import {
   MessageCircle,
   ExternalLink,
 } from "lucide-react";
-import { sanitizeUrl } from "@/lib/utils/url";
+
 
 const getIcon = (name: string) => {
   const lowerName = name.toLowerCase();

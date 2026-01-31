@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { getPagesData } from "@/lib/bigquery";
 
 export const revalidate = 3600;
 
@@ -57,8 +58,6 @@ const organizationSchema = {
       streetAddress: "17 Thalang Rd",
     },
   ],
-  description:
-    "Discover premium cannabis at Green Ghost in Phuket. Explore our organic selection, including flowers, edibles, and accessories, with fast, reliable delivery.",
   url: "https://green.gd",
   logo: "https://green.gd/images/logo-green-ghost-degen-weed-shop.png",
   image:
@@ -75,13 +74,18 @@ const organizationSchema = {
 
 export default async function Home() {
   const reviews = await getReviews();
+  const pageData = await getPagesData("Green Ghost");
   const shuffledReviews = shuffleArray(reviews);
 
   return (
     <>
       <JsonLd data={organizationSchema} />
       <div className="min-h-screen bg-black text-white">
-        <BannerHero menuSlot={<MenuListInline />} />
+        <BannerHero
+          menuSlot={<MenuListInline />}
+          subtitle={pageData?.subtitle}
+          description={pageData?.description}
+        />
         <MenuBlock />
         <StrainFeatured />
         <AboutUsBlock />
