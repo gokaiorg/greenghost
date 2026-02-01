@@ -93,6 +93,7 @@ export const getGardensData = cache(async (): Promise<GardenData[]> => {
     const [rows] = await bigquery.query({ query });
     const totalRows = rows.length;
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return rows.map((row: any, index: number) => {
       // BigQuery renvoie parfois un objet Date ou un objet { value: string }
       const dateVal = row.garden_date.value || row.garden_date;
@@ -141,7 +142,7 @@ export const getReviewsData = cache(async (): Promise<ReviewData[]> => {
 
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: ReviewData) => ({
       user_name: row.user_name,
       comment: row.comment,
       review_link: row.review_link,
@@ -181,7 +182,7 @@ export interface LocationData {
 }
 
 // Helper pour mapper les résultats SQL (snake_case) vers l'interface TS
-const mapLocationRow = (row: any): LocationData => ({
+const mapLocationRow = (row: LocationData): LocationData => ({
   slug: row.slug,
   name: row.name,
   hours: row.hours,
@@ -304,7 +305,7 @@ export const getBestShopsData = cache(async (): Promise<BestShopData[]> => {
   `;
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: BestShopData) => ({
       name: row.name,
       link: row.link,
       location: row.location,
@@ -330,7 +331,7 @@ export const getLawsData = cache(async (): Promise<LawData[]> => {
   `;
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: LawData) => ({
       title: row.title,
       description: row.description,
     }));
@@ -355,7 +356,7 @@ export const getLawsFAQData = cache(async (): Promise<LawFAQData[]> => {
   `;
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: LawFAQData) => ({
       title: row.title,
       description: row.description,
     }));
@@ -380,7 +381,7 @@ export const getGrowersData = cache(async (): Promise<GrowerData[]> => {
   `;
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: GrowerData) => ({
       name: row.name,
       link: row.link,
     }));
@@ -405,7 +406,7 @@ export const getSeedsData = cache(async (): Promise<SeedData[]> => {
   `;
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: SeedData) => ({
       name: row.name,
       link: row.link,
     }));
@@ -432,7 +433,7 @@ export const getWholesalesData = cache(async (): Promise<WholesaleData[]> => {
   `;
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: WholesaleData) => ({
       strain: row.strain,
       price: row.price,
       Dominance: row.Dominance,
@@ -459,7 +460,7 @@ export const getListingsData = cache(async (): Promise<ListingData[]> => {
   `;
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: ListingData) => ({
       name: row.name,
       link: row.link,
     }));
@@ -484,7 +485,7 @@ export const getTopsData = cache(async (): Promise<TopData[]> => {
   `;
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: TopData) => ({
       name: row.name,
       link: row.link,
     }));
@@ -509,7 +510,7 @@ export const getSocialsData = cache(async (): Promise<SocialData[]> => {
   `;
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: SocialData) => ({
       name: row.name,
       link: row.link,
     }));
@@ -534,7 +535,7 @@ export const getContactsData = cache(async (): Promise<ContactData[]> => {
   `;
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: ContactData) => ({
       name: row.name,
       link: row.link,
     }));
@@ -563,7 +564,7 @@ export const getDeliveryData = cache(async (): Promise<DeliveryData[]> => {
   `;
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: DeliveryData) => ({
       name: row.name,
       description: row.description,
       label: row.label,
@@ -593,7 +594,7 @@ export const getClubsData = cache(async (): Promise<ClubData[]> => {
   `;
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: ClubData) => ({
       name: row.name,
       description: row.description,
       link: row.link,
@@ -621,7 +622,7 @@ export const getPaymentsData = cache(async (): Promise<PaymentData[]> => {
   `;
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: PaymentData) => ({
       name: row.name,
       description: row.description,
       subtitle: row.subtitle,
@@ -659,7 +660,7 @@ export const getNFTsData = cache(async (): Promise<NFTData[]> => {
   `;
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: NFTData) => ({
       slug: row.slug,
       name: row.name,
       logo: row.logo.startsWith("/nft/") ? `/images${row.logo}` : row.logo,
@@ -700,7 +701,7 @@ export const getCBDsData = cache(async (): Promise<CBDData[]> => {
   `;
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: CBDData) => ({
       item_name: row.item_name,
       type: row.type,
       price: row.price,
@@ -732,7 +733,7 @@ export const getPromotesData = cache(async (): Promise<PromoteData[]> => {
   `;
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: PromoteData) => ({
       title: row.title,
       description: row.description,
       link: row.link,
@@ -760,7 +761,7 @@ export const getWeedsData = cache(async (): Promise<WeedData[]> => {
   `;
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
+    return rows.map((row: WeedData) => ({
       title: row.title,
       description: row.description,
       image: row.image,

@@ -45,8 +45,8 @@ export default async function LocationPage({
 
   // Schema generation might need adaptation if it strictly expects old Location type. 
   // For now assuming it accepts similar shape or partial.
-  const localBusinessSchema = generateLocalBusinessSchema(location as any);
-  const faqSchema = generateFAQSchema(location as any);
+  const localBusinessSchema = generateLocalBusinessSchema(location);
+  const faqSchema = generateFAQSchema(location);
 
   return (
     <>
@@ -291,7 +291,7 @@ export default async function LocationPage({
         </div>
 
         {/* FAQ Section - Passing as any for now or need to update LocationFAQ */}
-        <LocationFAQ location={location as any} />
+        <LocationFAQ location={location} />
 
         {/* Nearby Locations */}
         <NearbyLocations currentSlug={location.slug} allLocations={allLocations} />

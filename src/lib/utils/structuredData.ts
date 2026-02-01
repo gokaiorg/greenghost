@@ -157,7 +157,7 @@ export function generateFAQSchema(location: LocationData) {
     .toLowerCase(); // as keyof typeof location.hours is not valid anymore
 
   const hoursObj = parseHoursString(location.hours);
-  // @ts-ignore
+  // @ts-expect-error: accessing via formatted date key might not match strict Hours type keys
   const todayHours = hoursObj[today];
 
   const openStatusText =

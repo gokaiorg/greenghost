@@ -13,7 +13,7 @@ export default function LocationFAQ({ location }: LocationFAQProps) {
 
   // Parse hours from string
   const hoursObj = parseHoursString(location.hours);
-  // @ts-ignore
+  // @ts-expect-error: accessing via formatted date key might not match strict Hours type keys
   const todayHours = hoursObj[today];
 
   // Determine open status text

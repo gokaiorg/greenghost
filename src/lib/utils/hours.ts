@@ -99,7 +99,7 @@ export function isLocationOpen(hours: Hours | string, slug: string): boolean {
   const [openStr, closeStr] = todayHours.split("-");
   const [openHour, openMinute] = openStr.split(":").map(Number);
   // Handle closing time next day (e.g. 02:00)
-  let [closeHour, closeMinute] = closeStr.split(":").map(Number);
+  const [closeHour, closeMinute] = closeStr.split(":").map(Number);
 
   // Convert current time to minutes from midnight
   let currentTotalMinutes = currentHour * 60 + currentMinute;

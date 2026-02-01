@@ -32,7 +32,7 @@ export async function getOrganizationData(): Promise<Organization> {
     locations: locations.map((location) => {
       const hoursObj = parseHoursString(location.hours);
       const openingHours = Object.entries(hoursObj)
-        // @ts-ignore
+
         .filter(([, time]) => time && time.toLowerCase() !== "closed")
         .map(
           ([day, time]) =>
