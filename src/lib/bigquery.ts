@@ -661,7 +661,7 @@ export const getNFTsData = cache(async (): Promise<NFTData[]> => {
   try {
     const [rows] = await bigquery.query({ query });
     return rows.map((row: NFTData) => ({
-      slug: row.slug,
+      slug: String(row.slug),
       name: row.name,
       logo: row.logo.startsWith("/nft/") ? `/images${row.logo}` : row.logo,
       description: row.description,
