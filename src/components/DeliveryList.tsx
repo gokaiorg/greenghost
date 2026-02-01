@@ -1,17 +1,9 @@
 import React from "react";
 import Link from "next/link";
-
-interface DeliveryStep {
-  name: string;
-  description: string;
-  label: string;
-  link: string;
-  hint: string;
-  video: string;
-}
+import { DeliveryData } from "@/lib/bigquery";
 
 interface DeliveryListProps {
-  steps: DeliveryStep[];
+  steps: DeliveryData[];
 }
 
 export default function DeliveryList({ steps }: DeliveryListProps) {

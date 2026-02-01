@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { NFT } from "@/lib/nft-data";
+import { NFTData } from "@/lib/bigquery";
 
 interface NFTsListProps {
-  nfts: NFT[];
+  nfts: NFTData[];
   onSelect: (slug: string) => void;
 }
 

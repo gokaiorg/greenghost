@@ -2,10 +2,10 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { CBD } from "@/lib/cbd-data";
+import { CBDData } from "@/lib/bigquery";
 
 interface CBDListProps {
-  products: CBD[];
+  products: CBDData[];
 }
 
 export default function CBDList({ products }: CBDListProps) {
@@ -32,11 +32,10 @@ export default function CBDList({ products }: CBDListProps) {
           <button
             key={type}
             onClick={() => setSelectedType(type)}
-            className={`px-6 py-3 font-bold transition-colors cursor-pointer ${
-              selectedType === type
+            className={`px-6 py-3 font-bold transition-colors cursor-pointer ${selectedType === type
                 ? "bg-[#13DE00] text-black"
                 : "bg-[#13DE00]/13 text-white hover:bg-[#13DE00]/20"
-            }`}
+              }`}
           >
             {type}
           </button>
@@ -50,7 +49,7 @@ export default function CBDList({ products }: CBDListProps) {
         {filteredProducts.map((product, index) => {
           // Generate image path based on product name
           // Convert name to lowercase and replace spaces with hyphens
-          const imageName = product.itemName.toLowerCase().replace(/\s+/g, "-");
+          const imageName = product.item_name.toLowerCase().replace(/\s+/g, "-");
           const imagePath = `/images/cbd/${imageName}-cover-green-ghost.avif`;
 
           // Generate slug for external link
@@ -66,13 +65,13 @@ export default function CBDList({ products }: CBDListProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#13DE00]/5 border border-[#13DE00]/21 overflow-hidden hover:border-[#13DE00]/50 transition-all group block h-full"
-                title={`${product.itemName} - ${product.type} - ${product.cbd}% CBD`}
+                title={`${product.item_name} - ${product.type} - ${product.cbd}% CBD`}
               >
                 {/* Image */}
                 <div className="relative w-full aspect-square bg-black">
                   <Image
                     src={imagePath}
-                    alt={product.itemName}
+                    alt={product.item_name}
                     fill
                     className="object-cover group-hover:opacity-80 transition-opacity"
                   />
@@ -94,7 +93,7 @@ export default function CBDList({ products }: CBDListProps) {
                 {/* Content */}
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-3">
-                    {product.itemName}
+                    {product.item_name}
                   </h3>
 
                   {/* Type and CBD Info */}

@@ -1,12 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { NFT } from "@/lib/nft-data";
+import { NFTData } from "@/lib/bigquery";
 import NFTsList from "./NFTsList";
 import NFTModal from "./NFTModal";
 
 interface NFTPageContentProps {
-  nfts: NFT[];
+  nfts: NFTData[];
   initialSlug?: string;
 }
 

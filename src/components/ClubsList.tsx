@@ -2,15 +2,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { sanitizeUrl } from "@/lib/utils/url";
-
-interface Club {
-  name: string;
-  description: string;
-  link: string;
-}
+import { ClubData } from "@/lib/bigquery";
 
 interface ClubsListProps {
-  clubs: Club[];
+  clubs: ClubData[];
 }
 
 export default function ClubsList({ clubs }: ClubsListProps) {

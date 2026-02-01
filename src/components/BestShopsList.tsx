@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { BestShop } from "@/lib/organization-data";
+import { BestShopData } from "@/lib/bigquery";
 import { sanitizeUrl } from "@/lib/utils/url";
 
 interface BestShopsListProps {
-  shops: BestShop[];
+  shops: BestShopData[];
 }
 
 export default function BestShopsList({ shops }: BestShopsListProps) {
@@ -32,10 +32,9 @@ export default function BestShopsList({ shops }: BestShopsListProps) {
             onClick={() => setSelectedLocation(location)}
             className={`
               px-4 py-2 text-sm font-bold uppercase tracking-wider transition-all duration-300 border cursor-pointer
-              ${
-                selectedLocation === location
-                  ? "bg-[#13DE00] text-black border-[#13DE00]"
-                  : "bg-black text-gray-400 border-[#13DE00]/21 hover:border-[#13DE00] hover:text-[#13DE00]"
+              ${selectedLocation === location
+                ? "bg-[#13DE00] text-black border-[#13DE00]"
+                : "bg-black text-gray-400 border-[#13DE00]/21 hover:border-[#13DE00] hover:text-[#13DE00]"
               }
             `}
           >
@@ -81,7 +80,7 @@ export default function BestShopsList({ shops }: BestShopsListProps) {
 
               <div className="mt-auto pt-4 border-t border-[#13DE00]/21 group-hover:border-gray-700 transition-colors">
                 <a
-                  href={sanitizeUrl(shop.mapLink)}
+                  href={sanitizeUrl(shop.link)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors group/link"

@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { PagesMetadata } from "@/components/PagesMetadata";
 import PagesBanner from "@/components/PagesBanner";
 import PagesIntro from "@/components/PagesIntro";
-import { getDeliverySteps } from "@/lib/organization-data";
+import { getDeliveryData } from "@/lib/bigquery";
 import DeliveryList from "@/components/DeliveryList";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Delivery() {
-  const deliverySteps = await getDeliverySteps();
+  const deliverySteps = await getDeliveryData();
 
   return (
     <>

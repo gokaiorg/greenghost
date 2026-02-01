@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { getAllLocations } from "@/lib/bigquery";
 import { getProductsByCategory } from "@/lib/products";
-import { getNFTs } from "@/lib/nft-data";
+import { getNFTsData } from "@/lib/bigquery";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://green.gd";
 
@@ -202,7 +202,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     dynamicPages = [...dynamicPages, ...gadgetPages];
 
     // Fetch NFTs
-    const nfts = await getNFTs();
+    const nfts = await getNFTsData();
     const nftPages: MetadataRoute.Sitemap = nfts.map(
       (nft: { slug: string }) => ({
         url: `${baseUrl}/nft/${nft.slug}`,

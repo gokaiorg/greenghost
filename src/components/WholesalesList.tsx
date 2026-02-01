@@ -1,7 +1,6 @@
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
 import Image from "next/image";
+import { getWholesalesData } from "@/lib/bigquery";
 
 interface WholesaleItem {
   strain: string;
@@ -12,77 +11,35 @@ interface WholesaleItem {
 }
 
 async function getWholesaleData(): Promise<WholesaleItem[]> {
-  const csvPath = path.join(process.cwd(), "public/datas/wholesales.csv");
-  const csvContent = fs.readFileSync(csvPath, "utf-8");
+  const data = await getWholesalesData();
 
-  const lines: string[] = [];
-  let currentLine = "";
-  let inQuotes = false;
+  return data.map((item) => {
+    let slug = item.strain
+      .toLowerCase()
+      .replace(/&/g, "and")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "");
 
-  for (let i = 0; i < csvContent.length; i++) {
-    const char = csvContent[i];
-    if (char === '"') {
-      inQuotes = !inQuotes;
-      currentLine += char;
-    } else if (char === "\n" && !inQuotes) {
-      if (currentLine.trim()) lines.push(currentLine.trim());
-      currentLine = "";
-    } else {
-      currentLine += char;
+    // Handle special cases
+    if (item.strain === "Popin Fresh") {
+      slug = "poppin-fresh";
+    } else if (item.strain.includes("Ben") && item.strain.includes("Gary")) {
+      slug = "ben-garys";
     }
-  }
-  if (currentLine.trim()) lines.push(currentLine.trim());
 
-  const headers = lines[0]
-    .split(",")
-    .map((h) => h.trim().replace(/^"|"$/g, ""));
-  const items: WholesaleItem[] = [];
+    const rawThc = parseFloat(item.THC);
+    const formattedThc = !isNaN(rawThc)
+      ? `${Math.round(rawThc < 1 ? rawThc * 100 : rawThc)}%`
+      : item.THC;
 
-  for (let i = 1; i < lines.length; i++) {
-    const line = lines[i];
-    const values: string[] = [];
-    let currentValue = "";
-    let inQuotes = false;
-
-    for (let j = 0; j < line.length; j++) {
-      const char = line[j];
-      if (char === '"') {
-        inQuotes = !inQuotes;
-      } else if (char === "," && !inQuotes) {
-        values.push(currentValue.trim().replace(/^"|"$/g, ""));
-        currentValue = "";
-      } else {
-        currentValue += char;
-      }
-    }
-    values.push(currentValue.trim().replace(/^"|"$/g, ""));
-
-    if (values.length >= headers.length) {
-      const item: Record<string, string> = {};
-      headers.forEach((header, index) => {
-        const key = header.toLowerCase();
-        item[key] = values[index] || "";
-      });
-
-      // Create slug from strain name
-      // Handle special cases
-      if (item.strain === "Popin Fresh") {
-        item.slug = "poppin-fresh";
-      } else if (item.strain.includes("Ben") && item.strain.includes("Gary")) {
-        item.slug = "ben-garys";
-      } else {
-        item.slug = item.strain
-          .toLowerCase()
-          .replace(/&/g, "and")
-          .replace(/[^a-z0-9]+/g, "-")
-          .replace(/(^-|-$)/g, "");
-      }
-
-      items.push(item as unknown as WholesaleItem);
-    }
-  }
-
-  return items;
+    return {
+      strain: item.strain,
+      price: item.price,
+      dominance: item.Dominance, // Map Capitalized to lowercase
+      thc: formattedThc,         // Map Capitalized to lowercase
+      slug,
+    };
+  });
 }
 
 export default async function WholesalesList() {

@@ -1,12 +1,9 @@
 import React from "react";
 
-type FAQItem = {
-  title: string;
-  decription: string;
-};
+import { LawFAQData } from "@/lib/bigquery";
 
 interface LawsFAQProps {
-  items: FAQItem[];
+  items: LawFAQData[];
 }
 
 const LawsFAQ: React.FC<LawsFAQProps> = ({ items }) => {
@@ -40,7 +37,7 @@ const LawsFAQ: React.FC<LawsFAQProps> = ({ items }) => {
               </span>
             </summary>
             <div className="p-4 text-gray-300 bg-black/50 whitespace-pre-wrap leading-relaxed">
-              {item.decription}
+              {item.description}
             </div>
           </details>
         ))}

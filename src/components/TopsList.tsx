@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getTops } from "@/lib/organization-data";
+import { getTopsData } from "@/lib/bigquery";
 import { sanitizeUrl } from "@/lib/utils/url";
 
 export default async function TopsList() {
-  const tops = await getTops();
+  const tops = await getTopsData();
 
   return (
     <section className="py-12 bg-black">

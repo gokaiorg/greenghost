@@ -2,7 +2,6 @@ import { BigQuery } from "@google-cloud/bigquery";
 import { cache } from "react";
 import path from "path";
 
-// ... (Votre configuration BigQuery reste la même, elle est bonne) ...
 const credentials =
   process.env.GOOGLE_CLIENT_EMAIL && process.env.GOOGLE_PRIVATE_KEY
     ? {
@@ -13,7 +12,7 @@ const credentials =
 
 export const bigquery = new BigQuery({
   projectId: process.env.GOOGLE_PROJECT_ID || 'green-ghost-432101',
-  location: 'europe-west9', // Vérifiez que votre dataset est bien ici, sinon mettez 'US' ou enlevez la ligne
+  location: 'europe-west9', // Assurez-vous que votre dataset 'staging' est bien ici
   scopes: [
     'https://www.googleapis.com/auth/bigquery',
     'https://www.googleapis.com/auth/drive',
@@ -28,6 +27,9 @@ export const bigquery = new BigQuery({
     }),
 });
 
+/* =========================================
+   PAGES DATA (Correct - Utilise Staging)
+   ========================================= */
 export interface PageData {
   title: string;
   subtitle: string;
@@ -41,8 +43,6 @@ export interface PageData {
 
 export const getPagesData = cache(
   async (pageTitle: string): Promise<PageData | null> => {
-    // CORRECTION ICI : On utilise les noms propres et la vue staging
-
     const query = `
       SELECT
         title,
@@ -63,20 +63,17 @@ export const getPagesData = cache(
         query,
         params: { pageTitle: `${pageTitle}%` },
       });
-
-      console.log(`[BigQuery] Rows found for ${pageTitle}:`, rows.length);
-      if (rows.length > 0) {
-        // console.log(`[BigQuery] First row title:`, rows[0].title);
-      }
-
       return rows.length > 0 ? (rows[0] as PageData) : null;
     } catch (error) {
-      console.error("BigQuery fetching error:", error);
+      console.error("BigQuery fetching error (pages):", error);
       return null;
     }
   }
 );
 
+/* =========================================
+   GARDENS DATA (Correct - Utilise Staging)
+   ========================================= */
 export interface GardenData {
   date: string;
   description: string;
@@ -97,13 +94,14 @@ export const getGardensData = cache(async (): Promise<GardenData[]> => {
     const totalRows = rows.length;
 
     return rows.map((row: any, index: number) => {
-      // Format date from YYYY-MM-DD to DD MM YYYY
+      // BigQuery renvoie parfois un objet Date ou un objet { value: string }
       const dateVal = row.garden_date.value || row.garden_date;
-      const [year, month, day] = dateVal.split("-");
+      // Gestion robuste si c'est déjà un objet Date JS
+      const dateStr = typeof dateVal === 'string' ? dateVal : dateVal.toISOString().split('T')[0];
+
+      const [year, month, day] = dateStr.split("-");
       const formattedDate = `${day} ${month} ${year}`;
 
-      // Assign image index: Newest (first row) gets highest number (totalRows)
-      // Oldest (last row) gets 01
       const imageIndex = (totalRows - index).toString().padStart(2, "0");
       const image = `/images/gardens/green-ghost-garden-phuket-${imageIndex}.avif`;
 
@@ -118,6 +116,10 @@ export const getGardensData = cache(async (): Promise<GardenData[]> => {
     return [];
   }
 });
+
+/* =========================================
+   REVIEWS DATA (CORRIGÉ - Utilise Staging)
+   ========================================= */
 export interface ReviewData {
   user_name: string;
   comment: string;
@@ -126,13 +128,15 @@ export interface ReviewData {
 }
 
 export const getReviewsData = cache(async (): Promise<ReviewData[]> => {
+  // CORRECTION : On cible la vue staging et les vraies colonnes
   const query = `
     SELECT
-      string_field_0 AS user_name,
-      string_field_1 AS comment,
-      string_field_2 AS review_link,
-      string_field_3 AS shop_name
-    FROM \`green-ghost-432101.greenghostdataset.reviews\`
+      user_name,
+      comment,
+      review_link,
+      shop_name
+    FROM \`green-ghost-432101.staging.stg_reviews\`
+    WHERE comment IS NOT NULL
   `;
 
   try {
@@ -149,6 +153,9 @@ export const getReviewsData = cache(async (): Promise<ReviewData[]> => {
   }
 });
 
+/* =========================================
+   LOCATIONS DATA (CORRIGÉ - Utilise Staging)
+   ========================================= */
 export interface LocationData {
   slug: string;
   name: string;
@@ -173,7 +180,34 @@ export interface LocationData {
   country: string;
 }
 
+// Helper pour mapper les résultats SQL (snake_case) vers l'interface TS
+const mapLocationRow = (row: any): LocationData => ({
+  slug: row.slug,
+  name: row.name,
+  hours: row.hours,
+  phone: String(row.phone),
+  address: row.address,
+  // Ici, on utilise les noms propres définis dans stg_locations.sqlx
+  address_link: row.address_link,
+  review_link: row.review_link,
+  details_short: row.details_short,
+  description_long: row.description_long,
+  seo_description: row.seo_description,
+  map_embed_link: row.map_embed_link,
+  video_link: row.video_link,
+  tripadvisor_link: row.tripadvisor_link,
+  weed_th_link: row.weed_th_link,
+  wongnai_link: row.wongnai_link,
+  highthailand_link: row.highthailand_link,
+  apple_map_link: row.apple_map_link,
+  latitude: row.latitude, // C'est déjà un number grâce au SAFE_CAST dans Dataform
+  longitude: row.longitude,
+  region: row.region,
+  country: row.country,
+});
+
 export const getAllLocations = cache(async (): Promise<LocationData[]> => {
+  // CORRECTION : On utilise la vue staging et les colonnes snake_case
   const query = `
     SELECT
       slug,
@@ -181,50 +215,28 @@ export const getAllLocations = cache(async (): Promise<LocationData[]> => {
       hours,
       phone,
       address,
-      addresLink,
-      reviewLink,
-      details,
-      description,
-      descSeo,
-      mapLink,
-      videoLink,
-      tripAdvisor,
-      weedTh,
-      wongnai,
-      highThailand,
-      appleMap,
-      lat,
-      lng,
+      address_link,
+      review_link,
+      details_short,
+      description_long,
+      seo_description,
+      map_embed_link,
+      video_link,
+      tripadvisor_link,
+      weed_th_link,
+      wongnai_link,
+      highthailand_link,
+      apple_map_link,
+      latitude,
+      longitude,
       region,
       country
-    FROM \`green-ghost-432101.greenghostdataset.locations\`
+    FROM \`green-ghost-432101.staging.stg_locations\`
   `;
 
   try {
     const [rows] = await bigquery.query({ query });
-    return rows.map((row: any) => ({
-      slug: row.slug,
-      name: row.name,
-      hours: row.hours,
-      phone: String(row.phone),
-      address: row.address,
-      address_link: row.addresLink,
-      review_link: row.reviewLink,
-      details_short: row.details,
-      description_long: row.description,
-      seo_description: row.descSeo,
-      map_embed_link: row.mapLink,
-      video_link: row.videoLink,
-      tripadvisor_link: row.tripAdvisor,
-      weed_th_link: row.weedTh,
-      wongnai_link: row.wongnai,
-      highthailand_link: row.highThailand,
-      apple_map_link: row.appleMap,
-      latitude: row.lat,
-      longitude: row.lng,
-      region: row.region,
-      country: row.country,
-    }));
+    return rows.map(mapLocationRow);
   } catch (error) {
     console.error("BigQuery fetching error (all locations):", error);
     return [];
@@ -240,23 +252,23 @@ export const getLocationBySlug = cache(
       hours,
       phone,
       address,
-      addresLink,
-      reviewLink,
-      details,
-      description,
-      descSeo,
-      mapLink,
-      videoLink,
-      tripAdvisor,
-      weedTh,
-      wongnai,
-      highThailand,
-      appleMap,
-      lat,
-      lng,
+      address_link,
+      review_link,
+      details_short,
+      description_long,
+      seo_description,
+      map_embed_link,
+      video_link,
+      tripadvisor_link,
+      weed_th_link,
+      wongnai_link,
+      highthailand_link,
+      apple_map_link,
+      latitude,
+      longitude,
       region,
       country
-    FROM \`green-ghost-432101.greenghostdataset.locations\`
+    FROM \`green-ghost-432101.staging.stg_locations\`
     WHERE slug = @slug
     LIMIT 1
   `;
@@ -268,34 +280,493 @@ export const getLocationBySlug = cache(
       });
 
       if (rows.length === 0) return null;
-      const row = rows[0];
-
-      return {
-        slug: row.slug,
-        name: row.name,
-        hours: row.hours,
-        phone: String(row.phone),
-        address: row.address,
-        address_link: row.addresLink,
-        review_link: row.reviewLink,
-        details_short: row.details,
-        description_long: row.description,
-        seo_description: row.descSeo,
-        map_embed_link: row.mapLink,
-        video_link: row.videoLink,
-        tripadvisor_link: row.tripAdvisor,
-        weed_th_link: row.weedTh,
-        wongnai_link: row.wongnai,
-        highthailand_link: row.highThailand,
-        apple_map_link: row.appleMap,
-        latitude: row.lat,
-        longitude: row.lng,
-        region: row.region,
-        country: row.country,
-      };
+      return mapLocationRow(rows[0]);
     } catch (error) {
       console.error(`BigQuery fetching error (location: ${slug}):`, error);
       return null;
     }
   }
 );
+
+/* =========================================
+   BEST SHOPS DATA
+   ========================================= */
+export interface BestShopData {
+  name: string;
+  link: string;
+  location: string;
+}
+
+export const getBestShopsData = cache(async (): Promise<BestShopData[]> => {
+  const query = `
+    SELECT name, link, location
+    FROM \`green-ghost-432101.staging.stg_best_shops_thailand\`
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      name: row.name,
+      link: row.link,
+      location: row.location,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (best shops):", error);
+    return [];
+  }
+});
+
+/* =========================================
+   LAWS DATA
+   ========================================= */
+export interface LawData {
+  title: string;
+  description: string;
+}
+
+export const getLawsData = cache(async (): Promise<LawData[]> => {
+  const query = `
+    SELECT title, description
+    FROM \`green-ghost-432101.staging.stg_laws\`
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      title: row.title,
+      description: row.description,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (laws):", error);
+    return [];
+  }
+});
+
+/* =========================================
+   LAWS FAQ DATA
+   ========================================= */
+export interface LawFAQData {
+  title: string;
+  description: string;
+}
+
+export const getLawsFAQData = cache(async (): Promise<LawFAQData[]> => {
+  const query = `
+    SELECT title, description
+    FROM \`green-ghost-432101.staging.stg_laws_faq\`
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      title: row.title,
+      description: row.description,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (laws faq):", error);
+    return [];
+  }
+});
+
+/* =========================================
+   GROWERS DATA
+   ========================================= */
+export interface GrowerData {
+  name: string;
+  link: string;
+}
+
+export const getGrowersData = cache(async (): Promise<GrowerData[]> => {
+  const query = `
+    SELECT name, link
+    FROM \`green-ghost-432101.staging.stg_growers\`
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      name: row.name,
+      link: row.link,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (growers):", error);
+    return [];
+  }
+});
+
+/* =========================================
+   SEEDS DATA
+   ========================================= */
+export interface SeedData {
+  name: string;
+  link: string;
+}
+
+export const getSeedsData = cache(async (): Promise<SeedData[]> => {
+  const query = `
+    SELECT name, link
+    FROM \`green-ghost-432101.staging.stg_seeds\`
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      name: row.name,
+      link: row.link,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (seeds):", error);
+    return [];
+  }
+});
+
+/* =========================================
+   WHOLESALES DATA
+   ========================================= */
+export interface WholesaleData {
+  strain: string;
+  price: string;
+  Dominance: string;
+  THC: string;
+}
+
+export const getWholesalesData = cache(async (): Promise<WholesaleData[]> => {
+  const query = `
+    SELECT strain, price, Dominance, THC
+    FROM \`green-ghost-432101.staging.stg_wholesales\`
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      strain: row.strain,
+      price: row.price,
+      Dominance: row.Dominance,
+      THC: row.THC,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (wholesales):", error);
+    return [];
+  }
+});
+
+/* =========================================
+   LISTINGS DATA
+   ========================================= */
+export interface ListingData {
+  name: string;
+  link: string;
+}
+
+export const getListingsData = cache(async (): Promise<ListingData[]> => {
+  const query = `
+    SELECT name, link
+    FROM \`green-ghost-432101.staging.stg_listings\`
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      name: row.name,
+      link: row.link,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (listings):", error);
+    return [];
+  }
+});
+
+/* =========================================
+   TOPS DATA
+   ========================================= */
+export interface TopData {
+  name: string;
+  link: string;
+}
+
+export const getTopsData = cache(async (): Promise<TopData[]> => {
+  const query = `
+    SELECT name, link
+    FROM \`green-ghost-432101.staging.stg_tops\`
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      name: row.name,
+      link: row.link,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (tops):", error);
+    return [];
+  }
+});
+
+/* =========================================
+   SOCIALS DATA
+   ========================================= */
+export interface SocialData {
+  name: string;
+  link: string;
+}
+
+export const getSocialsData = cache(async (): Promise<SocialData[]> => {
+  const query = `
+    SELECT name, link
+    FROM \`green-ghost-432101.staging.stg_socials\`
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      name: row.name,
+      link: row.link,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (socials):", error);
+    return [];
+  }
+});
+
+/* =========================================
+   CONTACTS DATA
+   ========================================= */
+export interface ContactData {
+  name: string;
+  link: string;
+}
+
+export const getContactsData = cache(async (): Promise<ContactData[]> => {
+  const query = `
+    SELECT name, link
+    FROM \`green-ghost-432101.staging.stg_contacts\`
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      name: row.name,
+      link: row.link,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (contacts):", error);
+    return [];
+  }
+});
+
+/* =========================================
+   DELIVERY DATA
+   ========================================= */
+export interface DeliveryData {
+  name: string;
+  description: string;
+  label: string;
+  link: string;
+  hint: string;
+  video: string;
+}
+
+export const getDeliveryData = cache(async (): Promise<DeliveryData[]> => {
+  const query = `
+    SELECT name, description, label, link, hint, video
+    FROM \`green-ghost-432101.staging.stg_delivery\`
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      name: row.name,
+      description: row.description,
+      label: row.label,
+      link: row.link,
+      hint: row.hint,
+      video: row.video,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (delivery):", error);
+    return [];
+  }
+});
+
+/* =========================================
+   CLUBS DATA
+   ========================================= */
+export interface ClubData {
+  name: string;
+  description: string;
+  link: string;
+}
+
+export const getClubsData = cache(async (): Promise<ClubData[]> => {
+  const query = `
+    SELECT name, description, link
+    FROM \`green-ghost-432101.staging.stg_clubs\`
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      name: row.name,
+      description: row.description,
+      link: row.link,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (clubs):", error);
+    return [];
+  }
+});
+
+/* =========================================
+   PAYMENTS DATA
+   ========================================= */
+export interface PaymentData {
+  name: string;
+  description: string;
+  subtitle: string;
+  link: string;
+}
+
+export const getPaymentsData = cache(async (): Promise<PaymentData[]> => {
+  const query = `
+    SELECT name, description, subtitle, link
+    FROM \`green-ghost-432101.staging.stg_payments\`
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      name: row.name,
+      description: row.description,
+      subtitle: row.subtitle,
+      link: row.link,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (payments):", error);
+    return [];
+  }
+});
+
+/* =========================================
+   NFTS DATA
+   ========================================= */
+export interface NFTData {
+  slug: string;
+  name: string;
+  logo: string;
+  description: string;
+  opensea: string;
+  embellishments: string;
+  ghost: string;
+  headgear: string;
+  joint: string;
+  leaves: string;
+  shades: string;
+  vibe: string;
+  vibes: string;
+}
+
+export const getNFTsData = cache(async (): Promise<NFTData[]> => {
+  const query = `
+    SELECT slug, name, logo, description, opensea, embellishments, ghost, headgear, joint, leaves, shades, vibe, vibes
+    FROM \`green-ghost-432101.staging.stg_nfts\`
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      slug: row.slug,
+      name: row.name,
+      logo: row.logo.startsWith("/nft/") ? `/images${row.logo}` : row.logo,
+      description: row.description,
+      opensea: row.opensea,
+      embellishments: row.embellishments,
+      ghost: row.ghost,
+      headgear: row.headgear,
+      joint: row.joint,
+      leaves: row.leaves,
+      shades: row.shades,
+      vibe: row.vibe,
+      vibes: row.vibes,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (nfts):", error);
+    return [];
+  }
+});
+
+/* =========================================
+   CBDS DATA
+   ========================================= */
+export interface CBDData {
+  item_name: string;
+  type: string;
+  price: string;
+  status: string;
+  description: string;
+  seo: string;
+  cbd: string;
+}
+
+export const getCBDsData = cache(async (): Promise<CBDData[]> => {
+  const query = `
+    SELECT item_name, type, price, status, description, seo, cbd
+    FROM \`green-ghost-432101.staging.stg_cbds\`
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      item_name: row.item_name,
+      type: row.type,
+      price: row.price,
+      status: row.status,
+      description: row.description,
+      seo: row.seo,
+      cbd: row.cbd,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (cbds):", error);
+    return [];
+  }
+});
+
+/* =========================================
+   PROMOTES DATA
+   ========================================= */
+export interface PromoteData {
+  title: string;
+  description: string;
+  link: string;
+  link_label: string;
+}
+
+export const getPromotesData = cache(async (): Promise<PromoteData[]> => {
+  const query = `
+    SELECT title, description, link, link_label
+    FROM \`green-ghost-432101.staging.stg_promotes\`
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      title: row.title,
+      description: row.description,
+      link: row.link,
+      link_label: row.link_label,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (promotes):", error);
+    return [];
+  }
+});
+
+/* =========================================
+   WEEDS DATA
+   ========================================= */
+export interface WeedData {
+  title: string;
+  description: string;
+  image: string;
+}
+
+export const getWeedsData = cache(async (): Promise<WeedData[]> => {
+  const query = `
+    SELECT title, description, image
+    FROM \`green-ghost-432101.staging.stg_weeds\`
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      title: row.title,
+      description: row.description,
+      image: row.image,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (weeds):", error);
+    return [];
+  }
+});

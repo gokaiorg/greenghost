@@ -158,11 +158,13 @@ export default async function LocationPage({
                           Phone
                         </h3>
                         <a
-                          href={`tel:${location.phone}`}
+                          href={`tel:${location.phone.startsWith("+") ? location.phone : `+${location.phone}`}`}
                           title="Call us"
                           className="text-white hover:text-[#13DE00] transition-colors text-sm"
                         >
-                          {location.phone}
+                          {location.phone.startsWith("+")
+                            ? location.phone
+                            : `+${location.phone}`}
                         </a>
                       </div>
                     )}

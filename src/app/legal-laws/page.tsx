@@ -1,7 +1,5 @@
 import { Metadata } from "next";
-import fs from "fs";
-import path from "path";
-import Papa from "papaparse";
+import { getLawsData, getLawsFAQData } from "@/lib/bigquery";
 
 import WeedNavigation from "@/components/WeedNavigation";
 import PagesBanner from "@/components/PagesBanner";
@@ -16,48 +14,9 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-// Define types based on CSV structure
-type ItemData = {
-  title: string;
-  decription: string; // Keeping 'decription' to match CSV header
-};
-
-async function getCsvData() {
-  try {
-    // Determine path safely
-    const publicDir = path.join(process.cwd(), "public");
-    const lawsCsvPath = path.join(publicDir, "datas", "laws.csv");
-    const lawsFaqCsvPath = path.join(publicDir, "datas", "laws-faq.csv");
-
-    // Read files asynchronously
-    const lawsFile = await fs.promises.readFile(lawsCsvPath, "utf8");
-    const lawsFaqFile = await fs.promises.readFile(lawsFaqCsvPath, "utf8");
-
-    // Parse CSVs
-    const lawsData = Papa.parse<ItemData>(lawsFile, {
-      header: true,
-      skipEmptyLines: true,
-    }).data;
-    const lawsFaqData = Papa.parse<ItemData>(lawsFaqFile, {
-      header: true,
-      skipEmptyLines: true,
-    }).data;
-
-    return {
-      lawsData,
-      lawsFaqData,
-    };
-  } catch (error) {
-    console.error("Error in getCsvData:", error);
-    return {
-      lawsData: [],
-      lawsFaqData: [],
-    };
-  }
-}
-
 export default async function LegalLawsPage() {
-  const { lawsData, lawsFaqData } = await getCsvData();
+  const lawsData = await getLawsData();
+  const lawsFaqData = await getLawsFAQData();
 
   return (
     <>

@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getGrowers } from "@/lib/growers";
+import { getGrowersData } from "@/lib/bigquery";
 import { ExternalLink } from "lucide-react";
 import { sanitizeUrl } from "@/lib/utils/url";
 
 export default async function GrowersList() {
-  const growers = await getGrowers();
+  const growers = await getGrowersData();
 
   return (
     <section className="py-12 w-full max-w-6xl mx-auto">

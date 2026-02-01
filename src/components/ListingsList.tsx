@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { getListings } from "@/lib/listings";
+import { getListingsData } from "@/lib/bigquery";
 import { ExternalLink } from "lucide-react";
 import { sanitizeUrl } from "@/lib/utils/url";
 
 export default async function ListingsList() {
-  const listings = await getListings();
+  const listings = await getListingsData();
 
   return (
     <section className="py-12 w-full max-w-4xl mx-auto">

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getContacts } from "@/lib/contacts";
+import { getContactsData } from "@/lib/bigquery";
 import { sanitizeUrl } from "@/lib/utils/url";
 import {
   Phone,
@@ -26,7 +26,7 @@ const getIcon = (name: string) => {
 };
 
 export default async function ContactList() {
-  const contacts = await getContacts();
+  const contacts = await getContactsData();
 
   return (
     <ul
