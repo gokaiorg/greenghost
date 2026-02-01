@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import { Location } from "@/lib/types/location";
+import { LocationData } from "@/lib/bigquery";
 
 interface NearbyLocationsProps {
   currentSlug: string;
-  allLocations: Location[];
+  allLocations: LocationData[];
 }
 
 export default function NearbyLocations({

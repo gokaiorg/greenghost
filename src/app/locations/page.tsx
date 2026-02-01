@@ -1,6 +1,6 @@
 import PagesBanner from "@/components/PagesBanner";
 import PagesIntro from "@/components/PagesIntro";
-import { getLocations } from "@/lib/organization-data";
+import { getAllLocations } from "@/lib/bigquery";
 import { Metadata } from "next";
 import { PagesMetadata } from "@/components/PagesMetadata";
 import LocationsList from "@/components/LocationsList";
@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function LocationsPage() {
-  const locations = await getLocations();
+  const locations = await getAllLocations();
 
   return (
     <>

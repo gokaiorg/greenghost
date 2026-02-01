@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { getLocations } from "@/lib/organization-data";
+import { getAllLocations } from "@/lib/bigquery";
 import { getProductsByCategory } from "@/lib/products";
 import { getNFTs } from "@/lib/nft-data";
 
@@ -142,7 +142,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   try {
     // Fetch dynamic location pages
-    const locations = await getLocations();
+    const locations = await getAllLocations();
     const locationPages: MetadataRoute.Sitemap = locations.map((location) => ({
       url: `${baseUrl}/locations/${location.slug}`,
       lastModified: new Date(),

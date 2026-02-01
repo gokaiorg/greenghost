@@ -1,230 +1,23 @@
-import path from "path";
-import fs from "fs/promises";
+// Locations data handling is now done via BigQuery (see src/lib/bigquery.ts)
+
+
+import { getAllLocations } from "@/lib/bigquery";
+import { parseHoursString } from "@/lib/utils/hours";
+import { Organization } from "@/lib/types/organization";
 import { PHONE_NUMBER } from "@/lib/constants";
-import type { LocationData, Organization } from "@/lib/types/organization";
-import type { Location } from "@/lib/types/location";
+import fs from "fs/promises";
+import path from "path";
 
-// Global cache for CSV data to avoid repeated parsing
-const dataCache: Record<string, unknown> = {};
-
-export async function parseLocationsCSV(): Promise<LocationData[]> {
-  if (dataCache.locations) return dataCache.locations as LocationData[];
-
-  try {
-    const csvPath = path.join(process.cwd(), "public/datas/locations.csv");
-    const csvContent = await fs.readFile(csvPath, "utf-8");
-
-    // Split by lines but keep quoted fields with line breaks intact
-    const lines: string[] = [];
-    let currentLine = "";
-    let inQuotes = false;
-
-    for (let i = 0; i < csvContent.length; i++) {
-      const char = csvContent[i];
-
-      if (char === '"') {
-        inQuotes = !inQuotes;
-        currentLine += char;
-      } else if (char === "\n" && !inQuotes) {
-        if (currentLine.trim()) {
-          lines.push(currentLine.trim());
-        }
-        currentLine = "";
-      } else {
-        currentLine += char;
-      }
-    }
-
-    // Add the last line
-    if (currentLine.trim()) {
-      lines.push(currentLine.trim());
-    }
-
-    const headers = lines[0]
-      .split(",")
-      .map((h) => h.trim().replace(/^"|"$/g, ""));
-    const locations: LocationData[] = [];
-
-    for (let i = 1; i < lines.length; i++) {
-      const line = lines[i];
-      if (!line) continue;
-
-      // Handle CSV with quoted fields that may contain commas
-      const values: string[] = [];
-      let currentValue = "";
-      let inQuotes = false;
-
-      for (let j = 0; j < line.length; j++) {
-        const char = line[j];
-
-        if (char === '"') {
-          inQuotes = !inQuotes;
-        } else if (char === "," && !inQuotes) {
-          values.push(currentValue.trim().replace(/^"|"$/g, ""));
-          currentValue = "";
-        } else {
-          currentValue += char;
-        }
-      }
-
-      // Add the last value
-      values.push(currentValue.trim().replace(/^"|"$/g, ""));
-
-      if (values.length >= headers.length) {
-        const location: Record<string, string> = {};
-        headers.forEach((header, index) => {
-          location[header] = values[index] || "";
-        });
-
-        locations.push(location as unknown as LocationData);
-      }
-    }
-
-    dataCache.locations = locations;
-    return locations;
-  } catch (error) {
-    console.error("Error parsing locations.csv:", error);
-    return [];
-  }
-}
-
-export function parseHours(hoursString: string): {
-  monday: string;
-  tuesday: string;
-  wednesday: string;
-  thursday: string;
-  friday: string;
-  saturday: string;
-  sunday: string;
-} {
-  const hours: Record<string, string> = {
-    monday: "",
-    tuesday: "",
-    wednesday: "",
-    thursday: "",
-    friday: "",
-    saturday: "",
-    sunday: "",
-  };
-
-  if (!hoursString) return hours as Location["hours"];
-
-  const cleanString = hoursString.replace(/"/g, "").trim();
-  const parts = cleanString.split(",").map((p) => p.trim());
-
-  const dayMap: Record<string, string> = {
-    Mo: "monday",
-    Tu: "tuesday",
-    We: "wednesday",
-    Th: "thursday",
-    Fr: "friday",
-    Sa: "saturday",
-    Su: "sunday",
-  };
-  const daysOrder = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
-
-  parts.forEach((part) => {
-    const match = part.match(/^([A-Za-z-]+)\s+(\d{2}:\d{2}-\d{2}:\d{2})$/);
-    if (match) {
-      const [, dayRange, timeRange] = match;
-      const formattedTime = timeRange.replace("-", " - ");
-
-      if (dayRange.includes("-")) {
-        const [start, end] = dayRange.split("-");
-        const startIndex = daysOrder.indexOf(start);
-        const endIndex = daysOrder.indexOf(end);
-
-        if (startIndex !== -1 && endIndex !== -1) {
-          let i = startIndex;
-          while (true) {
-            const dayCode = daysOrder[i];
-            const fullDay = dayMap[dayCode];
-            if (fullDay) hours[fullDay] = formattedTime;
-            if (i === endIndex) break;
-            i = (i + 1) % 7;
-          }
-        }
-      } else {
-        const fullDay = dayMap[dayRange];
-        if (fullDay) hours[fullDay] = formattedTime;
-      }
-    } else {
-      const timeMatch = part.match(/(\d{2}:\d{2}-\d{2}:\d{2})/);
-      if (timeMatch) {
-        const time = timeMatch[1].replace("-", " - ");
-        daysOrder.forEach((d) => {
-          if (part.includes(d)) {
-            const fullDay = dayMap[d];
-            if (fullDay) hours[fullDay] = time;
-          }
-        });
-        if (part.includes("-") && !part.match(/^\d/)) {
-          const rangePart = part.split(" ")[0];
-          if (rangePart.includes("-")) {
-            const [start, end] = rangePart.split("-");
-            const startIndex = daysOrder.indexOf(start);
-            const endIndex = daysOrder.indexOf(end);
-            if (startIndex !== -1 && endIndex !== -1) {
-              let i = startIndex;
-              while (true) {
-                const dayCode = daysOrder[i];
-                const fullDay = dayMap[dayCode];
-                if (fullDay) hours[fullDay] = time;
-                if (i === endIndex) break;
-                i = (i + 1) % 7;
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-
-  return hours as Location["hours"];
-}
-
-export function parseImages(imagesString: string): string[] {
-  if (!imagesString) return [];
-  return imagesString
-    .split(",")
-    .map((img) => img.trim())
-    .filter((img) => img.length > 0);
-}
-
-export async function getLocations(): Promise<Location[]> {
-  const locationsData = await parseLocationsCSV();
-  return locationsData.map((data, index) => ({
-    id: (index + 1).toString(),
-    slug: data.slug,
-    name: data.name,
-    hours: parseHours(data.hours),
-    phone: data.phone,
-    address: data.address,
-    addressLink: data.addresLink,
-    mapLink: data.mapLink,
-    videoLink: data.videoLink,
-    reviewLink: data.reviewLink,
-    website: data.website,
-    tripAdvisor: data.tripAdvisor,
-    weedTh: data.weedTh,
-    wongnai: data.wongnai,
-    highThailand: data.highThailand,
-    appleMap: data.appleMap,
-    gmapLink: data.mapLink,
-    youtubeLink: data.videoLink,
-    description: data.description,
-    region: data.region,
-    country: data.country,
-    details: data.details,
-    descSeo: data.descSeo,
-    images: parseImages(data.imagesOg),
-    lat: parseFloat(data.lat) || 0,
-    lng: parseFloat(data.lng) || 0,
-  }));
-}
+const dataCache: {
+  tops?: TopDispensary[];
+  bestShops?: BestShop[];
+  delivery?: DeliveryStep[];
+  clubs?: Club[];
+  socials?: Social[];
+} = {};
 
 export async function getOrganizationData(): Promise<Organization> {
-  const locations = await getLocations();
+  const locations = await getAllLocations();
   const organization: Organization = {
     name: "Green Ghost",
     legalName: "Green Ghost",
@@ -247,38 +40,42 @@ export async function getOrganizationData(): Promise<Organization> {
       contactType: "customer service",
       availableLanguage: ["en", "th"],
     },
-    locations: locations.map((location) => ({
-      "@type": "CannabisStore",
-      name: location.name,
-      slug: location.slug,
-      description: location.description,
-      image: location.images[0]
-        ? `https://green.gd${location.images[0]}`
-        : undefined,
-      url: `https://green.gd/locations/${location.slug}`,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: location.address.split(", ")[0],
-        addressLocality: location.address.split(", ")[1] || "",
-        addressRegion: location.region,
-        postalCode: location.address.split(", ").pop()?.match(/\d+/)?.[0] || "",
-        addressCountry: location.country,
-      },
-      telephone: location.phone,
-      hasMap: location.gmapLink,
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: location.lat,
-        longitude: location.lng,
-      },
-      openingHours: Object.entries(location.hours)
-        .filter(([, time]) => time)
+    locations: locations.map((location) => {
+      const hoursObj = parseHoursString(location.hours);
+      const openingHours = Object.entries(hoursObj)
+        // @ts-ignore
+        .filter(([, time]) => time && time.toLowerCase() !== "closed")
         .map(
           ([day, time]) =>
             `${day.charAt(0).toUpperCase() + day.slice(1)} ${time}`,
-        ),
-      priceRange: "$$",
-    })),
+        );
+
+      return {
+        "@type": "CannabisStore",
+        name: location.name,
+        slug: location.slug,
+        description: location.description_long,
+        image: `https://green.gd/images/banners/green-ghost-best-degen-weed-shop-delivery-${location.slug}-01.avif`,
+        url: `https://green.gd/locations/${location.slug}`,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: location.address.split(", ")[0],
+          addressLocality: location.address.split(", ")[1] || "",
+          addressRegion: location.region,
+          postalCode: location.address.split(", ").pop()?.match(/\d+/)?.[0] || "",
+          addressCountry: location.country,
+        },
+        telephone: location.phone,
+        hasMap: location.map_embed_link,
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: location.latitude,
+          longitude: location.longitude,
+        },
+        openingHours,
+        priceRange: "$$",
+      };
+    }),
   };
 
   return organization;

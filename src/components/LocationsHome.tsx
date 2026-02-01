@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getLocations } from "@/lib/organization-data";
+import { getAllLocations } from "@/lib/bigquery";
 
 export default async function LocationsHome() {
-  const locations = await getLocations();
+  const locations = await getAllLocations();
 
   return (
     <section className="py-20 bg-black relative overflow-hidden">
@@ -57,7 +57,7 @@ export default async function LocationsHome() {
 
               <address className="not-italic text-gray-400 mb-4 space-y-2 text-xs leading-relaxed">
                 <a
-                  href={location.addressLink}
+                  href={location.address_link || "#"}
                   title={location.address}
                   target="_blank"
                   rel="noopener noreferrer"

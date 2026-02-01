@@ -1,21 +1,26 @@
 import React from "react";
-import { Location } from "@/lib/types/location";
+import { LocationData } from "@/lib/bigquery";
+import { parseHoursString } from "@/lib/utils/hours";
 
 interface LocationFAQProps {
-  location: Location;
+  location: LocationData;
 }
 
 export default function LocationFAQ({ location }: LocationFAQProps) {
   const today = new Date()
     .toLocaleDateString("en-US", { weekday: "long", timeZone: "Asia/Bangkok" })
-    .toLowerCase() as keyof typeof location.hours;
-  const todayHours = location.hours[today];
+    .toLowerCase();
+
+  // Parse hours from string
+  const hoursObj = parseHoursString(location.hours);
+  // @ts-ignore
+  const todayHours = hoursObj[today];
 
   // Determine open status text
   const openStatusText =
     todayHours &&
-    todayHours.toLowerCase() !== "closed" &&
-    todayHours.toLowerCase() !== "close"
+      todayHours.toLowerCase() !== "closed" &&
+      todayHours.toLowerCase() !== "close"
       ? `Yes, we are open today from ${todayHours}.`
       : "We are currently closed today.";
 

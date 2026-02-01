@@ -148,3 +148,154 @@ export const getReviewsData = cache(async (): Promise<ReviewData[]> => {
     return [];
   }
 });
+
+export interface LocationData {
+  slug: string;
+  name: string;
+  hours: string;
+  phone: string;
+  address: string;
+  address_link: string;
+  review_link: string;
+  details_short: string;
+  description_long: string;
+  seo_description: string;
+  map_embed_link: string;
+  video_link: string;
+  tripadvisor_link: string;
+  weed_th_link: string;
+  wongnai_link: string;
+  highthailand_link: string;
+  apple_map_link: string;
+  latitude: number;
+  longitude: number;
+  region: string;
+  country: string;
+}
+
+export const getAllLocations = cache(async (): Promise<LocationData[]> => {
+  const query = `
+    SELECT
+      slug,
+      name,
+      hours,
+      phone,
+      address,
+      addresLink,
+      reviewLink,
+      details,
+      description,
+      descSeo,
+      mapLink,
+      videoLink,
+      tripAdvisor,
+      weedTh,
+      wongnai,
+      highThailand,
+      appleMap,
+      lat,
+      lng,
+      region,
+      country
+    FROM \`green-ghost-432101.greenghostdataset.locations\`
+  `;
+
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: any) => ({
+      slug: row.slug,
+      name: row.name,
+      hours: row.hours,
+      phone: String(row.phone),
+      address: row.address,
+      address_link: row.addresLink,
+      review_link: row.reviewLink,
+      details_short: row.details,
+      description_long: row.description,
+      seo_description: row.descSeo,
+      map_embed_link: row.mapLink,
+      video_link: row.videoLink,
+      tripadvisor_link: row.tripAdvisor,
+      weed_th_link: row.weedTh,
+      wongnai_link: row.wongnai,
+      highthailand_link: row.highThailand,
+      apple_map_link: row.appleMap,
+      latitude: row.lat,
+      longitude: row.lng,
+      region: row.region,
+      country: row.country,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (all locations):", error);
+    return [];
+  }
+});
+
+export const getLocationBySlug = cache(
+  async (slug: string): Promise<LocationData | null> => {
+    const query = `
+    SELECT
+      slug,
+      name,
+      hours,
+      phone,
+      address,
+      addresLink,
+      reviewLink,
+      details,
+      description,
+      descSeo,
+      mapLink,
+      videoLink,
+      tripAdvisor,
+      weedTh,
+      wongnai,
+      highThailand,
+      appleMap,
+      lat,
+      lng,
+      region,
+      country
+    FROM \`green-ghost-432101.greenghostdataset.locations\`
+    WHERE slug = @slug
+    LIMIT 1
+  `;
+
+    try {
+      const [rows] = await bigquery.query({
+        query,
+        params: { slug },
+      });
+
+      if (rows.length === 0) return null;
+      const row = rows[0];
+
+      return {
+        slug: row.slug,
+        name: row.name,
+        hours: row.hours,
+        phone: String(row.phone),
+        address: row.address,
+        address_link: row.addresLink,
+        review_link: row.reviewLink,
+        details_short: row.details,
+        description_long: row.description,
+        seo_description: row.descSeo,
+        map_embed_link: row.mapLink,
+        video_link: row.videoLink,
+        tripadvisor_link: row.tripAdvisor,
+        weed_th_link: row.weedTh,
+        wongnai_link: row.wongnai,
+        highthailand_link: row.highThailand,
+        apple_map_link: row.appleMap,
+        latitude: row.lat,
+        longitude: row.lng,
+        region: row.region,
+        country: row.country,
+      };
+    } catch (error) {
+      console.error(`BigQuery fetching error (location: ${slug}):`, error);
+      return null;
+    }
+  }
+);

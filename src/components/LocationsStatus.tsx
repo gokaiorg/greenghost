@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { isLocationOpen, Hours } from "@/lib/utils/hours";
 
 interface LocationsStatusProps {
-  hours: Hours;
+  hours: Hours | string;
   slug: string;
 }
 
