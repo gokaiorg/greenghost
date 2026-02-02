@@ -10,11 +10,10 @@ import {
 } from "react";
 import { Send, X } from "lucide-react";
 import {
-  getStrains,
   findStrain,
   formatStrainInfo,
   escapeHtml,
-} from "@/lib/strains";
+} from "@/lib/strain-utils";
 import { Message } from "@/lib/types";
 
 // Helper function to create links
@@ -57,11 +56,10 @@ const MessageList = memo(function MessageList({
           className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
         >
           <div
-            className={`max-w-[80%] p-3 ${
-              message.sender === "user"
-                ? "bg-[#13DE00] text-black"
-                : "bg-[#13DE00]/13 text-white"
-            }`}
+            className={`max-w-[80%] p-3 ${message.sender === "user"
+              ? "bg-[#13DE00] text-black"
+              : "bg-[#13DE00]/13 text-white"
+              }`}
           >
             {/* Security Fix: Only render bot messages as HTML, render user messages as text */}
             {message.sender === "user" ? (
@@ -99,7 +97,7 @@ export default function ChatWindow({
 }: ChatWindowProps) {
   const [input, setInput] = useState("");
   const [strains, setStrains] = useState<
-    Awaited<ReturnType<typeof getStrains>>
+    import("@/lib/strain-utils").Strain[]
   >([]);
   const hasLoadedStrains = useRef(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -118,8 +116,14 @@ export default function ChatWindow({
     if (!hasLoadedStrains.current) {
       hasLoadedStrains.current = true;
       const loadStrains = async () => {
-        const loadedStrains = await getStrains();
-        setStrains(loadedStrains);
+        try {
+          const res = await fetch("/api/strains");
+          if (!res.ok) throw new Error("Failed to load strains");
+          const loadedStrains = await res.json();
+          setStrains(loadedStrains);
+        } catch (error) {
+          console.error("Error loading strains for chat:", error);
+        }
       };
       loadStrains();
     }

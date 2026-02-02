@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   htmlLimitedBots: /.*/,
+
   images: {
     unoptimized: true, // Disable image optimization to prevent memory errors
     qualities: [25, 50, 75, 100],

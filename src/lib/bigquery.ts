@@ -771,3 +771,73 @@ export const getWeedsData = cache(async (): Promise<WeedData[]> => {
     return [];
   }
 });
+
+/* =========================================
+   PRODUCTS DATA
+   ========================================= */
+export interface ProductData {
+  item_name: string;
+  type: string;
+  wholesale_price: number;
+  price: number;
+  rawai_entry: number;
+  rawai_stock: number;
+  karon_entry: number;
+  karon_stock: number;
+  status: string;
+  description: string;
+  seo_description: string;
+  dominance: string;
+  thc: string;
+  cbd: string;
+  effects: string;
+  relieves: string;
+}
+
+export const getProductsData = cache(async (): Promise<ProductData[]> => {
+  const query = `
+    SELECT
+      item_name,
+      type,
+      wholesale_price,
+      price,
+      rawai_entry,
+      rawai_stock,
+      karon_entry,
+      karon_stock,
+      status,
+      description,
+      seo_description,
+      dominance,
+      thc,
+      cbd,
+      effects,
+      relieves
+    FROM \`green-ghost-432101.staging.stg_products\`
+    ORDER BY item_name ASC
+  `;
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows.map((row: ProductData) => ({
+      item_name: row.item_name,
+      type: row.type,
+      wholesale_price: row.wholesale_price || 0,
+      price: row.price || 0,
+      rawai_entry: row.rawai_entry || 0,
+      rawai_stock: row.rawai_stock || 0,
+      karon_entry: row.karon_entry || 0,
+      karon_stock: row.karon_stock || 0,
+      status: row.status,
+      description: row.description,
+      seo_description: row.seo_description,
+      dominance: row.dominance,
+      thc: String(row.thc !== undefined ? row.thc : "0"),
+      cbd: String(row.cbd !== undefined ? row.cbd : "0"),
+      effects: row.effects,
+      relieves: row.relieves,
+    }));
+  } catch (error) {
+    console.error("BigQuery fetching error (products):", error);
+    return [];
+  }
+});
