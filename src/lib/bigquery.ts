@@ -28,7 +28,7 @@ export const bigquery = new BigQuery({
 });
 
 /* =========================================
-   PAGES DATA (Correct - Utilise Staging)
+   PAGES DATA 
    ========================================= */
 export interface PageData {
   title: string;
@@ -72,7 +72,7 @@ export const getPagesData = cache(
 );
 
 /* =========================================
-   GARDENS DATA (Correct - Utilise Staging)
+   GARDENS DATA 
    ========================================= */
 export interface GardenData {
   date: string;
@@ -119,7 +119,7 @@ export const getGardensData = cache(async (): Promise<GardenData[]> => {
 });
 
 /* =========================================
-   REVIEWS DATA (CORRIGÉ - Utilise Staging)
+   REVIEWS DATA 
    ========================================= */
 export interface ReviewData {
   user_name: string;
@@ -155,7 +155,7 @@ export const getReviewsData = cache(async (): Promise<ReviewData[]> => {
 });
 
 /* =========================================
-   LOCATIONS DATA (CORRIGÉ - Utilise Staging)
+   LOCATIONS DATA 
    ========================================= */
 export interface LocationData {
   slug: string;

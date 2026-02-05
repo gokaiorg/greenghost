@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
     unoptimized: true, // Disable image optimization to prevent memory errors
     qualities: [25, 50, 75, 100],
   },
+  experimental: {
+    workerThreads: false,
+    cpus: 1,
+  },
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
