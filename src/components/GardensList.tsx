@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getGardensData } from "@/lib/gardens-data";
+import { getGardensData } from "@/lib/bigquery";
 
 export default async function GardensList() {
   const gardens = await getGardensData();
@@ -22,8 +22,8 @@ export default async function GardensList() {
 
   const sortedGroups = Object.entries(groupedGardens).sort(
     ([dateA], [dateB]) => {
-      const [dayA, monthA, yearA] = dateA.split("/").map(Number);
-      const [dayB, monthB, yearB] = dateB.split("/").map(Number);
+      const [dayA, monthA, yearA] = dateA.split(" ").map(Number);
+      const [dayB, monthB, yearB] = dateB.split(" ").map(Number);
       return (
         new Date(yearB, monthB - 1, dayB).getTime() -
         new Date(yearA, monthA - 1, dayA).getTime()
@@ -40,9 +40,9 @@ export default async function GardensList() {
           "@type": "ListItem",
           item: {
             "@type": "Article",
-            headline: `Garden Update - ${date}`,
+            headline: `Green Garden Update - ${date}`,
             image: item.image,
-            datePublished: date.split("/").reverse().join("-"),
+            datePublished: date.split(" ").reverse().join("-"),
             articleBody: item.description,
           },
         })),
@@ -71,7 +71,7 @@ export default async function GardensList() {
             {/* Date Badge */}
             <div className="md:w-32 flex-shrink-0">
               <time
-                dateTime={date.split("/").reverse().join("-")}
+                dateTime={date.split(" ").reverse().join("-")}
                 className="inline-block px-3 py-1 bg-[#13DE00] text-black font-pixel font-bold text-sm shadow-[4px_4px_0px_#000000] border border-black"
               >
                 {date}

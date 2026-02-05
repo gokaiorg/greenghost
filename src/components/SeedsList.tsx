@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getSeeds } from "@/lib/seeds";
+import { getSeedsData } from "@/lib/bigquery";
 import { ExternalLink } from "lucide-react";
+import { sanitizeUrl } from "@/lib/utils/url";
 
 export default async function SeedsList() {
-  const seeds = await getSeeds();
+  const seeds = await getSeedsData();
 
   return (
     <section className="py-12 w-full max-w-6xl mx-auto">
@@ -19,7 +20,7 @@ export default async function SeedsList() {
           return (
             <li key={seed.name} className="list-none">
               <Link
-                href={seed.link}
+                href={sanitizeUrl(seed.link)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center justify-between p-6 bg-[#13DE00]/13 border border-[#13DE00]/21 hover:border-[#13DE00] transition-all duration-300 h-full gap-4"

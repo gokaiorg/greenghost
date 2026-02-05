@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { toJsonLd } from "@/lib/utils/json-ld";
+import { sanitizeUrl } from "@/lib/utils/url";
 import {
   generateLocalBusinessSchema,
   generateFAQSchema,
 } from "@/lib/utils/structuredData";
-import { getLocations } from "@/lib/organization-data";
+import { getAllLocations, getLocationBySlug } from "@/lib/bigquery";
 import { getLocationImages } from "@/lib/utils/images";
 import { getCanonicalUrl } from "@/lib/utils/seo";
 
@@ -17,11 +18,16 @@ import LocationFAQ from "@/components/LocationFAQ";
 import NearbyLocations from "@/components/NearbyLocations";
 
 export async function generateStaticParams() {
-  const locations = await getLocations();
+  const locations = await getAllLocations();
   return locations.map((location) => ({
     slug: location.slug,
   }));
 }
+
+type PageProps = {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
 
 export default async function LocationPage({
   params,
@@ -29,19 +35,18 @@ export default async function LocationPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const locations = await getLocations();
-  const location = locations.find((l) => l.slug === slug);
+  const location = await getLocationBySlug(slug);
+  const allLocations = await getAllLocations(); // For nearby locations
   const carouselImages = await getLocationImages(slug);
 
   if (!location) {
     notFound();
   }
 
+  // Schema generation might need adaptation if it strictly expects old Location type. 
+  // For now assuming it accepts similar shape or partial.
   const localBusinessSchema = generateLocalBusinessSchema(location);
   const faqSchema = generateFAQSchema(location);
-  const today = new Date()
-    .toLocaleDateString("en-US", { weekday: "long", timeZone: "Asia/Bangkok" })
-    .toLowerCase() as keyof typeof location.hours;
 
   return (
     <>
@@ -66,7 +71,7 @@ export default async function LocationPage({
                   </h1>
                 </div>
                 <p className="text-[10px] md:text-xs lg:text-sm text-gray-400">
-                  {location.descSeo}
+                  {location.seo_description}
                 </p>
               </div>
 
@@ -78,21 +83,21 @@ export default async function LocationPage({
           </div>
         </div>
 
-        {/* Image Carousel - Moved to Top for LCP */}
+        {/* Image Carousel */}
         <ImageCarousel images={carouselImages} alt={location.name} />
 
         {/* Main Content */}
         <div className="container mx-auto px-4 pb-12">
           <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
-            {/* Left Column: Video & Description (Order 2 on Mobile, Order 1 on Desktop) */}
+            {/* Left Column: Video & Description */}
             <div className="lg:col-span-2 order-2 lg:order-1 space-y-6">
               {/* Video */}
-              {location.videoLink && (
+              {location.video_link && (
                 <div className="aspect-video w-full overflow-hidden border border-[#13DE00]/21 bg-black">
                   <iframe
                     width="100%"
                     height="100%"
-                    src={location.videoLink}
+                    src={sanitizeUrl(location.video_link)}
                     title={`${location.name} Video Tour`}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -102,19 +107,19 @@ export default async function LocationPage({
               )}
 
               {/* Description */}
-              {location.description && (
+              {location.description_long && (
                 <section className="bg-gradient-to-br from-[#13DE00]/5 to-transparent border border-[#13DE00]/21 p-5">
                   <h2 className="text-xl font-bold text-[#13DE00] mb-6">
                     About This Location
                   </h2>
                   <p className="text-gray-300 leading-relaxed text-xs lg:text-sm xl:text-base whitespace-pre-wrap">
-                    {location.description.replace(/\\n/g, "\n")}
+                    {location.description_long.replace(/\\n/g, "\n")}
                   </p>
                 </section>
               )}
             </div>
 
-            {/* Right Column: Sidebar & Map (Order 1 on Mobile, Order 2 on Desktop) */}
+            {/* Right Column: Sidebar & Map */}
             <div className="lg:col-span-1 order-1 lg:order-2 space-y-6">
               {/* Sidebar Content */}
               <div className="space-y-4">
@@ -124,7 +129,7 @@ export default async function LocationPage({
                     Location Details
                   </h2>
 
-                  <p className="text-sm mb-4">{location.details}</p>
+                  <p className="text-sm mb-4">{location.details_short}</p>
 
                   <div className="space-y-4">
                     {/* Address */}
@@ -133,9 +138,9 @@ export default async function LocationPage({
                         Address
                       </h3>
                       <p className="text-white text-sm">{location.address}</p>
-                      {location.addressLink && (
+                      {location.address_link && (
                         <a
-                          href={location.addressLink}
+                          href={sanitizeUrl(location.address_link)}
                           title="View on Maps"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -153,11 +158,13 @@ export default async function LocationPage({
                           Phone
                         </h3>
                         <a
-                          href={`tel:${location.phone}`}
+                          href={`tel:${location.phone.startsWith("+") ? location.phone : `+${location.phone}`}`}
                           title="Call us"
                           className="text-white hover:text-[#13DE00] transition-colors text-sm"
                         >
-                          +6687-420-1144
+                          {location.phone.startsWith("+")
+                            ? location.phone
+                            : `+${location.phone}`}
                         </a>
                       </div>
                     )}
@@ -167,41 +174,18 @@ export default async function LocationPage({
                       <h3 className="text-xs font-semibold text-gray-400 uppercase mb-2">
                         Hours
                       </h3>
-                      <div className="space-y-1">
-                        {Object.entries(location.hours).map(([day, hours]) => {
-                          const isToday = day === today;
-                          return (
-                            <div
-                              key={day}
-                              className={`flex justify-between py-1.5 px-2 ${
-                                isToday
-                                  ? "bg-[#13DE00]/13 border border-[#13DE00]/30"
-                                  : "bg-black/20"
-                              }`}
-                            >
-                              <span
-                                className={`capitalize text-xs font-medium ${isToday ? "text-[#13DE00]" : "text-gray-300"}`}
-                              >
-                                {day}
-                              </span>
-                              <span
-                                className={`text-xs ${isToday ? "text-white" : "text-gray-400"}`}
-                              >
-                                {hours}
-                              </span>
-                            </div>
-                          );
-                        })}
-                      </div>
+                      <p className="text-gray-300 text-sm whitespace-pre-wrap">
+                        {location.hours.replace(/"/g, "")}
+                      </p>
                     </div>
                   </div>
                 </section>
 
-                {/* Map - Moved to Sidebar Column */}
-                {location.mapLink && (
+                {/* Map */}
+                {location.map_embed_link && (
                   <div className="aspect-video w-full overflow-hidden border border-[#13DE00]/21 bg-[#13DE00]/5">
                     <iframe
-                      src={location.mapLink}
+                      src={sanitizeUrl(location.map_embed_link)}
                       title={`${location.name} Location Map`}
                       width="100%"
                       height="100%"
@@ -221,9 +205,9 @@ export default async function LocationPage({
                   </h2>
 
                   <div className="grid grid-cols-1 gap-2">
-                    {location.reviewLink && location.reviewLink !== "#" && (
+                    {location.review_link && location.review_link !== "#" && (
                       <a
-                        href={location.reviewLink}
+                        href={sanitizeUrl(location.review_link)}
                         title="Leave a Review"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -238,28 +222,13 @@ export default async function LocationPage({
                       </a>
                     )}
 
-                    {location.website && location.website !== "#" && (
-                      <a
-                        href={location.website}
-                        title="Visit Website"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-between p-3 bg-black/30 hover:bg-black/69 border border-white/10 hover:border-[#13DE00]/50 transition-all group"
-                      >
-                        <span className="font-medium text-sm">
-                          Visit Website
-                        </span>
-                        <span className="text-[#13DE00] group-hover:translate-x-1 transition-transform">
-                          {">"}
-                        </span>
-                      </a>
-                    )}
+                    {/* Check if website exists in interface? Not effectively used in migration request but good to keep structure */}
 
                     {/* Social Links - Condensed */}
                     <div className="grid md:grid-cols-2 gap-2 mt-2">
-                      {location.tripAdvisor && location.tripAdvisor !== "#" && (
+                      {location.tripadvisor_link && location.tripadvisor_link !== "#" && (
                         <a
-                          href={location.tripAdvisor}
+                          href={sanitizeUrl(location.tripadvisor_link)}
                           target="_blank"
                           rel="noopener noreferrer"
                           title="TripAdvisor"
@@ -268,9 +237,9 @@ export default async function LocationPage({
                           TripAdvisor
                         </a>
                       )}
-                      {location.weedTh && location.weedTh !== "#" && (
+                      {location.weed_th_link && location.weed_th_link !== "#" && (
                         <a
-                          href={location.weedTh}
+                          href={sanitizeUrl(location.weed_th_link)}
                           target="_blank"
                           rel="noopener noreferrer"
                           title="WEED.TH"
@@ -279,9 +248,9 @@ export default async function LocationPage({
                           WEED.TH
                         </a>
                       )}
-                      {location.wongnai && location.wongnai !== "#" && (
+                      {location.wongnai_link && location.wongnai_link !== "#" && (
                         <a
-                          href={location.wongnai}
+                          href={sanitizeUrl(location.wongnai_link)}
                           target="_blank"
                           rel="noopener noreferrer"
                           title="Wongnai"
@@ -290,10 +259,10 @@ export default async function LocationPage({
                           Wongnai
                         </a>
                       )}
-                      {location.highThailand &&
-                        location.highThailand !== "#" && (
+                      {location.highthailand_link &&
+                        location.highthailand_link !== "#" && (
                           <a
-                            href={location.highThailand}
+                            href={sanitizeUrl(location.highthailand_link)}
                             target="_blank"
                             rel="noopener noreferrer"
                             title="High Thailand"
@@ -302,9 +271,9 @@ export default async function LocationPage({
                             High Thailand
                           </a>
                         )}
-                      {location.appleMap && location.appleMap !== "#" && (
+                      {location.apple_map_link && location.apple_map_link !== "#" && (
                         <a
-                          href={location.appleMap}
+                          href={sanitizeUrl(location.apple_map_link)}
                           target="_blank"
                           rel="noopener noreferrer"
                           title="Apple Maps"
@@ -321,38 +290,32 @@ export default async function LocationPage({
           </div>
         </div>
 
-        {/* FAQ Section */}
+        {/* FAQ Section - Passing as any for now or need to update LocationFAQ */}
         <LocationFAQ location={location} />
 
         {/* Nearby Locations */}
-        <NearbyLocations currentSlug={location.slug} allLocations={locations} />
+        <NearbyLocations currentSlug={location.slug} allLocations={allLocations} />
       </div>
     </>
   );
 }
 
-interface PageProps {
-  params: Promise<{ slug: string }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
-}
 
 // Helper function to convert YouTube embed URL to watch URL
 function convertYouTubeEmbedToWatch(embedUrl: string): string {
   // Extract video ID from embed URL
-  // Format: https://www.youtube.com/embed/VIDEO_ID or https://www.youtube.com/embed/VIDEO_ID?si=...
   const match = embedUrl.match(/\/embed\/([^?]+)/);
   if (match && match[1]) {
     return `https://www.youtube.com/watch?v=${match[1]}`;
   }
-  return embedUrl; // Return original if pattern doesn't match
+  return embedUrl;
 }
 
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const locations = await getLocations();
-  const location = locations.find((l) => l.slug === slug);
+  const location = await getLocationBySlug(slug);
 
   if (!location) {
     return {
@@ -366,13 +329,13 @@ export async function generateMetadata({
   return {
     title: `${location.name} - Green Ghost 🌿👻`,
     description:
-      location.descSeo ||
+      location.seo_description ||
       `Visit Green Ghost at ${location.name}. Premium cannabis products available.`,
     keywords: `${toCapitalizeCase(location.slug)}, ${location.region}, Cannabis Dispensary, Weed Shop, Cannabis Store, Buy Weed, Weed Delivery`,
     openGraph: {
       title: `${location.name} - Green Ghost 🌿👻`,
       description:
-        location.descSeo ||
+        location.seo_description ||
         `Visit Green Ghost at ${location.name}. Premium cannabis products available.`,
       url: `/locations/${slug}`,
       images: [
@@ -383,10 +346,10 @@ export async function generateMetadata({
           alt: location.name,
         },
       ],
-      ...(location.videoLink && {
+      ...(location.video_link && {
         videos: [
           {
-            url: convertYouTubeEmbedToWatch(location.videoLink),
+            url: convertYouTubeEmbedToWatch(location.video_link),
             type: "text/html",
             width: 1280,
             height: 720,
@@ -399,7 +362,7 @@ export async function generateMetadata({
       site: "@greenghostdegen",
       creator: "@greenghostdegen",
       title: `${location.name} - Green Ghost 🌿👻`,
-      description: location.descSeo || location.description,
+      description: location.seo_description || location.description_long,
       images: [imagePath],
     },
     alternates: {

@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Payment } from "@/lib/payment-data";
+import { PaymentData } from "@/lib/bigquery";
 import { sanitizeUrl } from "@/lib/utils/url";
 
 interface PaymentListProps {
-  payments: Payment[];
+  payments: PaymentData[];
 }
 
 export default function PaymentList({ payments }: PaymentListProps) {
@@ -29,11 +29,10 @@ export default function PaymentList({ payments }: PaymentListProps) {
           <button
             key={payment.name}
             onClick={() => setActiveTab(index)}
-            className={`px-6 py-3 font-bold transition-colors cursor-pointer ${
-              activeTab === index
+            className={`px-6 py-3 font-bold transition-colors cursor-pointer ${activeTab === index
                 ? "bg-[#13DE00] text-black"
                 : "bg-[#13DE00]/13 text-white hover:bg-[#13DE00]/20"
-            }`}
+              }`}
           >
             {payment.name}
           </button>

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { getBestShops } from "@/lib/organization-data";
+import { getBestShopsData } from "@/lib/bigquery";
 import BestShopsList from "@/components/BestShopsList";
 import PagesBanner from "@/components/PagesBanner";
 import PagesIntro from "@/components/PagesIntro";
@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function BestShopsPage() {
-  const shops = await getBestShops();
+  const shops = await getBestShopsData();
 
   return (
     <>

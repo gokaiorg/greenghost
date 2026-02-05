@@ -1,4 +1,4 @@
-import { getNFTs } from "@/lib/nft-data";
+import { getNFTsData } from "@/lib/bigquery";
 import NFTPageContent from "@/components/NFTPageContent";
 import { Metadata } from "next";
 import PagesBanner from "@/components/PagesBanner";
@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function NFTPage() {
-  const nfts = await getNFTs();
+  const nfts = await getNFTsData();
 
   return (
     <>

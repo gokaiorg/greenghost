@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { PagesMetadata } from "@/components/PagesMetadata";
 import PagesBanner from "@/components/PagesBanner";
 import PagesIntro from "@/components/PagesIntro";
-import { getCBDProducts } from "@/lib/cbd-data";
+import { getCBDsData } from "@/lib/bigquery";
 import CBDList from "@/components/CBDList";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -14,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 // Server component that fetches data
 export default async function CBDFrancePage() {
-  const products = await getCBDProducts();
+  const products = await getCBDsData();
 
   return (
     <>

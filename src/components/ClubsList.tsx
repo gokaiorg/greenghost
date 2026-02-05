@@ -1,15 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-
-interface Club {
-  name: string;
-  description: string;
-  link: string;
-}
+import { sanitizeUrl } from "@/lib/utils/url";
+import { ClubData } from "@/lib/bigquery";
 
 interface ClubsListProps {
-  clubs: Club[];
+  clubs: ClubData[];
 }
 
 export default function ClubsList({ clubs }: ClubsListProps) {
@@ -56,7 +52,7 @@ export default function ClubsList({ clubs }: ClubsListProps) {
                 {/* Link */}
                 {isExternal ? (
                   <a
-                    href={club.link}
+                    href={sanitizeUrl(club.link)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-4 py-2 bg-[#13DE00] text-black font-medium hover:bg-[#13DE00]/80 transition-colors"
@@ -66,7 +62,7 @@ export default function ClubsList({ clubs }: ClubsListProps) {
                   </a>
                 ) : (
                   <Link
-                    href={club.link}
+                    href={sanitizeUrl(club.link)}
                     className="inline-flex items-center gap-2 px-4 py-2 bg-[#13DE00] text-black font-medium hover:bg-[#13DE00]/80 transition-colors"
                   >
                     Learn More

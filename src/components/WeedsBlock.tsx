@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { WeedItem } from "@/lib/weeds-data";
+import { WeedData } from "@/lib/bigquery";
 
 interface WeedsBlockProps {
-  strains: WeedItem[];
-  compounds: WeedItem[];
-  info: WeedItem[];
+  strains: WeedData[];
+  compounds: WeedData[];
+  info: WeedData[];
 }
 
 const WeedsBlock: React.FC<WeedsBlockProps> = ({

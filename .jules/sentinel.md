@@ -65,3 +65,12 @@
 **Prevention:**
 1. Implemented a centralized `sanitizeUrl` utility in `src/lib/utils/url.ts` that enforces an allowlist of safe protocols (http, https, mailto, tel).
 2. Applied this sanitizer to all dynamic `href` attributes in vulnerable components.
+
+## 2031-03-04 - Unsanitized Links in Lists
+
+**Vulnerability:** Multiple list components (`GrowersList`, `SeedsList`, `BestShopsList`, `ClubsList`, `TopsList`, `ListingsList`, `LocationsList`, `ContactList`) were rendering `href` and `src` attributes directly from CSV data without sanitization. This was an extension of the previously identified "Dynamic HREF Attribute XSS" issue but was widespread across many specialized list components.
+**Learning:** Security fixes often target specific reported components but fail to address the systemic pattern across the entire codebase. A "grep-first" approach to identify all instances of a pattern (like dynamic `href` from data) is crucial for comprehensive remediation.
+**Prevention:**
+1. Systematically identified all components rendering links from data sources.
+2. Applied `sanitizeUrl` to all dynamic `href` and `src` attributes in these components.
+3. Reinforced the rule: "Any external data going into a URL attribute must be sanitized."

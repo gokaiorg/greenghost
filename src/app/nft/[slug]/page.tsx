@@ -1,4 +1,4 @@
-import { getNFTs, getNFTBySlug } from "@/lib/nft-data";
+import { getNFTsData } from "@/lib/bigquery";
 import NFTPageContent from "@/components/NFTPageContent";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
@@ -11,7 +11,8 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const nft = await getNFTBySlug(slug);
+  const nfts = await getNFTsData();
+  const nft = nfts.find((n) => n.slug === slug);
 
   if (!nft) {
     return {
@@ -29,7 +30,7 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  const nfts = await getNFTs();
+  const nfts = await getNFTsData();
   return nfts.map((nft) => ({
     slug: nft.slug,
   }));
@@ -37,7 +38,7 @@ export async function generateStaticParams() {
 
 export default async function NFTDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const nfts = await getNFTs();
+  const nfts = await getNFTsData();
   const nft = nfts.find((n) => n.slug === slug);
 
   if (!nft) {

@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getGrowers } from "@/lib/growers";
+import { getGrowersData } from "@/lib/bigquery";
 import { ExternalLink } from "lucide-react";
+import { sanitizeUrl } from "@/lib/utils/url";
 
 export default async function GrowersList() {
-  const growers = await getGrowers();
+  const growers = await getGrowersData();
 
   return (
     <section className="py-12 w-full max-w-6xl mx-auto">
@@ -19,7 +20,7 @@ export default async function GrowersList() {
           return (
             <li key={grower.name} className="list-none">
               <Link
-                href={grower.link}
+                href={sanitizeUrl(grower.link)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center justify-between p-6 bg-[#13DE00]/13 border border-[#13DE00]/21 hover:border-[#13DE00] transition-all duration-300 h-full gap-4"

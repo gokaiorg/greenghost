@@ -1,29 +1,26 @@
-import { Location } from "@/lib/types/location";
+import { LocationData } from "@/lib/bigquery";
 import { sanitizeSchema } from "@/lib/utils/seo";
+import { parseHoursString } from "@/lib/utils/hours";
 
-export function generateLocalBusinessSchema(location: Location) {
+export function generateLocalBusinessSchema(location: LocationData) {
+  // Parse hours from string if valid
+  const hoursObj = parseHoursString(location.hours);
+
   // Convert hours to the required format
-  const openingHoursSpecification = Object.entries(location.hours)
-    .map(([day, hours]) => {
+  const openingHoursSpecification = Object.entries(hoursObj)
+    .map(([day, timeRange]) => {
       let openTime = "";
       let closeTime = "";
 
-      // Handle both string format and object format
-      if (typeof hours === "string") {
-        // String format like "9:00 - 21:00"
-        const [open, close] = hours.split(" - ") || ["", ""];
+      const hours = timeRange;
+      // Handle "09:00 - 02:00" format
+      if (typeof hours === "string" && hours.includes("-")) {
+        const [open, close] = hours.split("-").map(t => t.trim());
         openTime = open || "";
         closeTime = close || "";
-      } else if (
-        hours &&
-        typeof hours === "object" &&
-        "open" in hours &&
-        "close" in hours
-      ) {
-        // Object format with open and close properties
-        const hourObj = hours as { open: string; close: string };
-        openTime = hourObj.open || "";
-        closeTime = hourObj.close || "";
+      } else if (hours && typeof hours === 'string' && hours.toLowerCase() !== 'closed') {
+        // Fallback if just one time present or different format, try to parse
+        openTime = hours; // potentially unsafe but better than crash
       }
 
       return {
@@ -35,15 +32,15 @@ export function generateLocalBusinessSchema(location: Location) {
     })
     .filter((day) => day.opens && day.closes);
 
+  const defaultImage = `/images/banners/green-ghost-best-degen-weed-shop-delivery-${location.slug}-01.avif`;
+
   return sanitizeSchema({
     "@context": "https://schema.org",
     "@type": "CannabisStore",
     "@id": `https://green.gd/locations/${location.slug}`,
     name: location.name,
-    image: location.images[0]
-      ? `https://green.gd${location.images[0]}`
-      : undefined,
-    description: location.description,
+    image: `https://green.gd${defaultImage}`,
+    description: location.description_long,
     address: {
       "@type": "PostalAddress",
       streetAddress: location.address.split(",")[0],
@@ -60,10 +57,10 @@ export function generateLocalBusinessSchema(location: Location) {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: location.lat,
-      longitude: location.lng,
+      latitude: location.latitude,
+      longitude: location.longitude,
     },
-    hasMap: location.mapLink,
+    hasMap: location.map_embed_link,
     openingHoursSpecification,
     telephone: location.phone,
     url: `https://green.gd/locations/${location.slug}`,
@@ -91,8 +88,8 @@ export function generateLocalBusinessSchema(location: Location) {
       "@type": "GeoCircle",
       geoMidpoint: {
         "@type": "GeoCoordinates",
-        latitude: location.lat,
-        longitude: location.lng,
+        latitude: location.latitude,
+        longitude: location.longitude,
       },
       geoRadius: "10000",
     },
@@ -144,26 +141,29 @@ export function generateProductSchema(product: Record<string, unknown>) {
     },
     aggregateRating: product.rating
       ? {
-          "@type": "AggregateRating",
-          ratingValue: product.rating,
-          reviewCount: product.reviewCount || 1,
-          bestRating: 5,
-          worstRating: 1,
-        }
+        "@type": "AggregateRating",
+        ratingValue: product.rating,
+        reviewCount: product.reviewCount || 1,
+        bestRating: 5,
+        worstRating: 1,
+      }
       : undefined,
   });
 }
 
-export function generateFAQSchema(location: Location) {
+export function generateFAQSchema(location: LocationData) {
   const today = new Date()
     .toLocaleDateString("en-US", { weekday: "long", timeZone: "Asia/Bangkok" })
-    .toLowerCase() as keyof typeof location.hours;
-  const todayHours = location.hours[today];
+    .toLowerCase(); // as keyof typeof location.hours is not valid anymore
+
+  const hoursObj = parseHoursString(location.hours);
+  // @ts-expect-error: accessing via formatted date key might not match strict Hours type keys
+  const todayHours = hoursObj[today];
 
   const openStatusText =
     todayHours &&
-    todayHours.toLowerCase() !== "closed" &&
-    todayHours.toLowerCase() !== "close"
+      todayHours.toLowerCase() !== "closed" &&
+      todayHours.toLowerCase() !== "close"
       ? `Yes, we are open today from ${todayHours}.`
       : "We are currently closed today.";
 

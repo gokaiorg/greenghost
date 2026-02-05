@@ -1,13 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-type LawItem = {
-  title: string;
-  decription: string; // Keeping the CSV typo 'decription' for key matching, but can map it.
-};
+import { LawData } from "@/lib/bigquery";
 
 interface LawsProps {
-  items: LawItem[];
+  items: LawData[];
 }
 
 const Laws: React.FC<LawsProps> = ({ items }) => {
@@ -30,7 +27,7 @@ const Laws: React.FC<LawsProps> = ({ items }) => {
             {item.title}
           </h3>
           <div className="text-gray-300 text-xs leading-relaxed whitespace-pre-wrap font-pixel">
-            {item.decription}
+            {item.description}
           </div>
         </div>
       ))}

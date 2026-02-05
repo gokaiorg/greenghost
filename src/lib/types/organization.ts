@@ -1,28 +1,5 @@
-export interface LocationData {
-  slug: string;
-  name: string;
-  hours: string;
-  phone: string;
-  address: string;
-  addresLink: string;
-  reviewLink: string;
-  details: string;
-  description: string;
-  descSeo: string;
-  mapLink: string;
-  videoLink: string;
-  imagesOg: string;
-  website: string;
-  tripAdvisor: string;
-  weedTh: string;
-  wongnai: string;
-  highThailand: string;
-  appleMap: string;
-  lat: string;
-  lng: string;
-  region: string;
-  country: string;
-}
+// LocationData is now imported from @/lib/bigquery where needed.
+
 
 export interface Organization {
   name: string;

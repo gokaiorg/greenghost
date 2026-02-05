@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import PagesBanner from "@/components/PagesBanner";
 import PaymentList from "@/components/PaymentList";
-import { getPayments } from "@/lib/payment-data";
+import { getPaymentsData } from "@/lib/bigquery";
 import PagesIntro from "@/components/PagesIntro";
 import { PagesMetadata } from "@/components/PagesMetadata";
 
@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function PaymentPage() {
-  const payments = await getPayments();
+  const payments = await getPaymentsData();
 
   return (
     <>

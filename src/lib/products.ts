@@ -1,92 +1,39 @@
 import { Product } from "@/lib/types";
-import path from "path";
-import { parseCSV } from "@/lib/utils/csv";
 
-interface ProductCSVRow {
-  "Item name": string;
-  "Item Name"?: string;
-  Type: string;
-  Wsp: string;
-  Wholesale?: string;
-  Price: string;
-  "Public Price"?: string;
-  Initial: string;
-  Stock: string;
-  Status: string;
-  Description: string;
-  SEO: string;
-  Dominance: string;
-  THC: string;
-  CBD: string;
-  effects: string;
-  relieves: string;
-  [key: string]: string | undefined;
-}
 
-async function fetchProductsFromCSV(): Promise<Product[]> {
+
+import { getProductsData } from "@/lib/bigquery";
+
+async function fetchProductsFromBigQuery(): Promise<Product[]> {
   try {
-    const filePath = path.join(
-      process.cwd(),
-      "public",
-      "datas",
-      "products.csv",
-    );
+    const bqProducts = await getProductsData();
 
-    // Use promises for file access
-    const fsPromises = (await import("fs/promises")).default;
-
-    // Check if file exists asynchronously
-    try {
-      await fsPromises.access(filePath);
-    } catch {
-      console.error("CSV file not found at:", filePath);
-      return [];
-    }
-
-    const data = await fsPromises.readFile(filePath, "utf-8");
-    const parsedData = parseCSV<ProductCSVRow>(data);
-
-    if (parsedData.length === 0) return [];
+    if (bqProducts.length === 0) return [];
 
     const products: Product[] = [];
     const usedIds = new Set<string>();
 
-    for (const row of parsedData) {
+    for (const row of bqProducts) {
       // Get values with fallbacks and clean them
-      const name = (row["Item name"] || row["Item Name"] || "").trim();
-      const cleanType = (row["Type"] || "").trim();
-      const cleanPriceStr = (
-        row["Price"] ||
-        row["Public Price"] ||
-        "0"
-      )
-        .replace("฿", "")
-        .trim();
-      const cleanStockStr = (row["Stock"] || "0").trim();
-      const cleanStatus = (row["Status"] || "").trim();
-      const cleanDescription = (row["Description"] || "").trim();
-      const cleanSeo = (row["SEO"] || "").trim();
-      const cleanDominance = (row["Dominance"] || "").trim();
-      const cleanThc = (row["THC"] || "0").trim();
-      const cleanCbd = (row["CBD"] || "0").trim();
-      const cleanEffects = (row["effects"] || "").trim();
-      const cleanRelieves = (row["relieves"] || "").trim();
-      const initial = (row["Initial"] || "0").trim();
-      const wholesalePrice = (
-        row["Wsp"] ||
-        row["Wholesale"] ||
-        "0"
-      )
-        .replace("฿", "")
-        .trim();
+      const name = (row.item_name || "").trim();
+      const cleanType = (row.type || "").trim();
+      const cleanStatus = (row.status || "").trim();
+      const cleanDescription = (row.description || "").trim();
+      const cleanSeo = (row.seo_description || "").trim();
+      const cleanDominance = (row.dominance || "").trim();
+      const cleanThc = (row.thc || "0").trim();
+      const cleanCbd = (row.cbd || "0").trim();
+      const cleanEffects = (row.effects || "").trim();
+      const cleanRelieves = (row.relieves || "").trim();
 
-      // Convert string values to numbers with proper type handling
-      const price = parseFloat(cleanPriceStr) || 0;
-      const stock = parseInt(cleanStockStr, 10) || 0;
+      // Convert values
+      const price = Number(row.price) || 0;
+      // Calculate total stock from both locations
+      const stock = (Number(row.rawai_stock) || 0) + (Number(row.karon_stock) || 0);
       const thc = parseFloat(cleanThc) || 0;
       const cbd = parseFloat(cleanCbd) || 0;
-      const initialNum = parseInt(initial, 10) || 0;
-      const wholesaleNum = parseFloat(wholesalePrice) || 0;
+      const initialNum = (Number(row.rawai_entry) || 0) + (Number(row.karon_entry) || 0);
+      const wholesaleNum = Number(row.wholesale_price) || 0;
 
       // Map types to categories
       let category: string;
@@ -99,7 +46,7 @@ async function fetchProductsFromCSV(): Promise<Product[]> {
       // Skip if no name
       if (!name) continue;
 
-      // Generate id from name
+      // Generate id from name (Keep existing logic)
       const words = name.split(/\s+/);
       let id = words
         .join("-")
@@ -115,7 +62,7 @@ async function fetchProductsFromCSV(): Promise<Product[]> {
       }
       usedIds.add(id);
 
-      // Generate images array based on category and id
+      // Generate images array based on category and id (Keep existing logic)
       let images: string[] = [];
       if (category === "Strains") {
         images = [
@@ -167,7 +114,7 @@ async function fetchProductsFromCSV(): Promise<Product[]> {
     }
     return products;
   } catch (error) {
-    console.error("Error fetching from CSV:", error);
+    console.error("Error fetching products from BigQuery:", error);
     return [];
   }
 }
@@ -177,10 +124,10 @@ let productsCache: Product[] = [];
 export async function getProducts(): Promise<Product[]> {
   if (productsCache.length > 0) return productsCache;
 
-  const csvData = await fetchProductsFromCSV();
-  if (csvData.length > 0) {
-    productsCache = csvData;
-    return csvData;
+  const data = await fetchProductsFromBigQuery();
+  if (data.length > 0) {
+    productsCache = data;
+    return data;
   }
 
   return [];

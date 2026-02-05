@@ -10,7 +10,17 @@ const HERO_IMAGES = [
   "/images/banners/green-ghost-best-degen-weed-shop-delivery-03.avif",
 ];
 
-export default function BannerHero({ menuSlot }: { menuSlot?: ReactNode }) {
+interface BannerHeroProps {
+  menuSlot?: ReactNode;
+  subtitle?: string;
+  description?: string;
+}
+
+export default function BannerHero({
+  menuSlot,
+  subtitle = "Best Degen Weed Shop and Delivery",
+  description = "Discover Thailand's top-rated cannabis dispensary offering premium quality weed hand-picked from the finest local growers. Green Ghost delivers exceptional strains, edibles, concentrates, and accessories across Phuket, Bangkok, and nationwide. Experience fast, reliable weed delivery with expert service, competitive prices, and organic products. From Rawai to Karon, we're your trusted source for authentic Thai cannabis. Also serving premium CBD products in France!",
+}: BannerHeroProps) {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -61,9 +71,8 @@ export default function BannerHero({ menuSlot }: { menuSlot?: ReactNode }) {
           {HERO_IMAGES.map((src, index) => (
             <div
               key={src}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                index === currentImageIndex ? "opacity-100" : "opacity-0"
-              }`}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentImageIndex ? "opacity-100" : "opacity-0"
+                }`}
             >
               <Image
                 src={src}
@@ -85,19 +94,12 @@ export default function BannerHero({ menuSlot }: { menuSlot?: ReactNode }) {
       <div className="container md:max-w-6xl md:px-4 bg-black/69 p-5 md:mx-auto z-30 text-center">
         <h1 className="md:max-w-3xl mx-auto text-[25px] sm:text-[30px] md:text-[55px] font-bold mb-6 leading-tight">
           <span className="text-[#13DE00]">
-            Best Degen Weed Shop and Delivery
+            {subtitle}
           </span>
         </h1>
 
         <p className="text-sm sm:text-md md:text-lg text-gray-300 mb-10 max-w-5xl mx-auto">
-          Discover Thailand&apos;s top-rated cannabis dispensary offering
-          premium quality weed hand-picked from the finest local growers. Green
-          Ghost delivers exceptional strains, edibles, concentrates, and
-          accessories across Phuket, Bangkok, and nationwide. Experience fast,
-          reliable weed delivery with expert service, competitive prices, and
-          organic products. From Rawai to Karon, we&apos;re your trusted source
-          for authentic Thai cannabis. Also serving premium CBD products in
-          France!
+          {description}
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">

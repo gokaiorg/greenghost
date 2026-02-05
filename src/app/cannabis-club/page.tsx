@@ -4,14 +4,14 @@ import { PagesMetadata } from "@/components/PagesMetadata";
 import PagesBanner from "@/components/PagesBanner";
 import PagesIntro from "@/components/PagesIntro";
 import ClubsList from "@/components/ClubsList";
-import { getClubs } from "@/lib/organization-data";
+import { getClubsData } from "@/lib/bigquery";
 
 export async function generateMetadata(): Promise<Metadata> {
   return PagesMetadata({ pageName: "Cannabis Club" });
 }
 
 export default async function CannabisClubPage() {
-  const clubs = await getClubs();
+  const clubs = await getClubsData();
 
   return (
     <>

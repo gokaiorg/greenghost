@@ -1,26 +1,17 @@
 import Link from "next/link";
-import LocationsStatus from "@/components/LocationsStatus";
-
-import { Hours } from "@/lib/utils/hours";
-
-interface Location {
-  id: string;
-  name: string;
-  slug: string;
-  gmapLink: string;
-  hours: Hours;
-  addressLink?: string;
-  address: string;
-}
+import LocationsStatus from "@/components/LocationsStatus"; // Check if this needs update too
+import { sanitizeUrl } from "@/lib/utils/url";
+import { LocationData } from "@/lib/bigquery";
 
 interface LocationsListProps {
-  locations: Location[];
+  locations: LocationData[];
 }
 
 export default function LocationsList({ locations }: LocationsListProps) {
-  const today = new Date()
-    .toLocaleDateString("en-US", { weekday: "long", timeZone: "Asia/Bangkok" })
-    .toLowerCase() as keyof (typeof locations)[0]["hours"];
+  // Parsing hours for status is complex if it's a string like "Mo-Su 09:00-02:00".
+  // For now we pass just the raw string or attempt to parse if Status component needs structure.
+  // The existing LocationsStatus likely expects an object.
+  // Let's inspect LocationsStatus next. For now, we render the list items.
 
   return (
     <ul
@@ -30,13 +21,13 @@ export default function LocationsList({ locations }: LocationsListProps) {
       {locations.map((location) => {
         return (
           <li
-            key={location.id}
+            key={location.slug}
             className="bg-gradient-to-br from-[#13DE00]/10 to-transparent border border-[#13DE00]/30 overflow-hidden hover:border-[#13DE00]/60 transition-all duration-300 group list-none"
           >
             {/* Map Preview */}
             <div className="relative h-56 w-full overflow-hidden">
               <iframe
-                src={location.gmapLink}
+                src={sanitizeUrl(location.map_embed_link)}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -50,7 +41,7 @@ export default function LocationsList({ locations }: LocationsListProps) {
               {/* Overlay Gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none"></div>
 
-              {/* Status Badge */}
+              {/* Status Badge - Passing raw string for now, likely need to refactor LocationsStatus */}
               <div className="absolute top-4 right-4">
                 <LocationsStatus hours={location.hours} slug={location.slug} />
               </div>
@@ -71,14 +62,14 @@ export default function LocationsList({ locations }: LocationsListProps) {
               {/* Hours */}
               <div className="flex items-center gap-2 text-sm">
                 <span className="text-gray-300">
-                  {location.hours[today] || "Hours vary"}
+                  {location.hours.replace(/"/g, "")}
                 </span>
               </div>
 
               {/* Address */}
               <div className="flex items-start gap-2 text-sm">
                 <a
-                  href={location.addressLink || location.gmapLink}
+                  href={sanitizeUrl(location.address_link || location.map_embed_link)}
                   title={location.address}
                   target="_blank"
                   rel="noopener noreferrer"

@@ -11,7 +11,8 @@ import OrganizationStructuredData from "@/components/OrganizationStructuredData"
 import GoogleTagManager from "@/components/GoogleTagManager";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import AgeVerification from "@/components/AgeVerification";
-import { getOrganizationData, getSocials } from "@/lib/organization-data";
+import { getOrganizationData } from "@/lib/organization-data";
+import { getSocialsData } from "@/lib/bigquery";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import FarcasterProvider from "@/components/FarcasterProvider";
 import WalletProvider from "@/components/WalletProvider";
@@ -79,24 +80,24 @@ export const metadata: Metadata = {
   publisher: "Green Ghost",
   robots: isProduction
     ? {
+      index: true,
+      follow: true,
+      googleBot: {
         index: true,
         follow: true,
-        googleBot: {
-          index: true,
-          follow: true,
-          "max-snippet": -1,
-          "max-image-preview": "large",
-          "max-video-preview": -1,
-        },
-      }
+        "max-snippet": -1,
+        "max-image-preview": "large",
+        "max-video-preview": -1,
+      },
+    }
     : {
+      index: false,
+      follow: false,
+      googleBot: {
         index: false,
         follow: false,
-        googleBot: {
-          index: false,
-          follow: false,
-        },
       },
+    },
 
   openGraph: {
     type: "website",
@@ -162,7 +163,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const organizationData = await getOrganizationData();
-  const socials = await getSocials();
+  const socials = await getSocialsData();
 
   return (
     <html lang="en" suppressHydrationWarning>
