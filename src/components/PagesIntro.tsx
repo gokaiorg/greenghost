@@ -1,8 +1,10 @@
 import React from "react";
 import { getPagesData } from "@/lib/bigquery";
+import { selectLocalizedFields } from "@/lib/i18n-helpers";
 
 interface PagesIntroProps {
   pageName?: string;
+  locale?: string;
   label?: string;
   description?: string;
   sectionTitle?: string;
@@ -11,6 +13,7 @@ interface PagesIntroProps {
 
 const PagesIntro: React.FC<PagesIntroProps> = async ({
   pageName,
+  locale = 'en',
   label,
   description,
   sectionTitle,
@@ -21,11 +24,26 @@ const PagesIntro: React.FC<PagesIntroProps> = async ({
   if (pageName) {
     const bqData = await getPagesData(pageName);
     if (bqData) {
+      // Define what fields we expect to get back localized
+      type LocalizedIntroData = {
+        label: string;
+        description: string;
+        section_title: string;
+        section_description: string;
+      };
+
+      const localizedData = selectLocalizedFields<LocalizedIntroData>(
+        bqData,
+        ['label', 'description', 'section_title', 'section_description'],
+        locale
+      );
+
+      // Map snake_case to camelCase
       content = {
-        label: bqData.label,
-        description: bqData.description,
-        sectionTitle: bqData.section_title,
-        sectionDescription: bqData.section_description,
+        label: localizedData.label,
+        description: localizedData.description,
+        sectionTitle: localizedData.section_title,
+        sectionDescription: localizedData.section_description,
       };
     }
   }

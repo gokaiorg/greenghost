@@ -121,7 +121,7 @@ export default function ReviewsClient({ reviews = [] }: ReviewsClientProps) {
     }
 
     return (
-        <div className="bg-black py-16 relative overflow-hidden">
+        <section className="bg-black py-16 relative overflow-hidden" aria-label="Green Ghosted Peeps">
             {/* Decorative Cannabis Leaves */}
             <div className="absolute top-10 left-10 opacity-80 pointer-events-none hidden md:block">
                 <Image
@@ -193,8 +193,8 @@ export default function ReviewsClient({ reviews = [] }: ReviewsClientProps) {
                                 <li
                                     key={slideIndex}
                                     className={`w-full col-start-1 row-start-1 transition-opacity duration-1000 ease-in-out ${currentIndex === slideIndex
-                                            ? "opacity-100 z-10 relative"
-                                            : "opacity-0 z-0 absolute top-0 left-0 pointer-events-none"
+                                        ? "opacity-100 z-10 relative"
+                                        : "opacity-0 z-0 absolute top-0 left-0 pointer-events-none"
                                         }`}
                                     aria-hidden={currentIndex !== slideIndex}
                                 >
@@ -263,8 +263,8 @@ export default function ReviewsClient({ reviews = [] }: ReviewsClientProps) {
                                         key={index}
                                         onClick={() => goToSlide(index)}
                                         className={`shrink-0 w-4 h-4 transition-all cursor-pointer snap-center ${currentIndex === index
-                                                ? "bg-[#13DE00] w-10"
-                                                : "bg-gray-700 hover:bg-gray-500"
+                                            ? "bg-[#13DE00] w-10"
+                                            : "bg-gray-700 hover:bg-gray-500"
                                             }`}
                                         aria-label={`Go to slide ${index + 1} of ${totalSlides}`}
                                         aria-current={currentIndex === index ? "true" : "false"}
@@ -275,6 +275,6 @@ export default function ReviewsClient({ reviews = [] }: ReviewsClientProps) {
                     )}
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

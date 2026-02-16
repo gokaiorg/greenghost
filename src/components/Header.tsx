@@ -8,11 +8,13 @@ import { useState, useEffect, useRef } from "react";
 import BagPopup from "@/components/BagPopup";
 import { Menu, X } from "lucide-react";
 import ConnectMenu from "@/components/ConnectMenu";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-export default function Header() {
+export default function Header({ locale }: { locale?: string }) {
   const { getItemCount } = useCart();
   const itemCount = getItemCount();
   const pathname = usePathname();
+  const currentLang = locale || "en";
   const [isHydrated, setIsHydrated] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,6 +56,12 @@ export default function Header() {
     };
   }, [isMenuOpen]);
 
+  // Helper to generate localized paths
+  const getLocalizedPath = (path: string) => {
+    if (currentLang === "en") return path;
+    return `/${currentLang}${path === "/" ? "" : path}`;
+  };
+
   return (
     <header className="sticky top-0 z-40 text-white py-2 px-4 bg-black/80 backdrop-blur-sm border-b border-[#13DE00]/21">
       <a
@@ -64,7 +72,7 @@ export default function Header() {
       </a>
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-4">
-          <Link href="/" className="flex-shrink-0" title="Green Ghost Home">
+          <Link href={getLocalizedPath("/")} className="flex-shrink-0" title="Green Ghost Home">
             <Image
               src="/images/green-ghost-degen-weed-shop.avif"
               alt="Green Ghost"
@@ -92,34 +100,34 @@ export default function Header() {
               >
                 <li>
                   <Link
-                    href="/menu"
+                    href={getLocalizedPath("/menu")}
                     title="Explore our menu"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/menu" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/menu" || pathname === "/fr/menu" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === "/menu" ? "page" : undefined}
+                    aria-current={pathname.includes("/menu") ? "page" : undefined}
                   >
                     Explore our menu
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/delivery"
+                    href={getLocalizedPath("/delivery")}
                     title="Get delivered"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/delivery" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname.includes("/delivery") ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === "/delivery" ? "page" : undefined}
+                    aria-current={pathname.includes("/delivery") ? "page" : undefined}
                   >
                     Get delivered
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/wholesale"
+                    href={getLocalizedPath("/wholesale")}
                     title="Bulk ordering"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/wholesale" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname.includes("/wholesale") ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
                     aria-current={
-                      pathname === "/wholesale" ? "page" : undefined
+                      pathname.includes("/wholesale") ? "page" : undefined
                     }
                   >
                     Bulk ordering
@@ -127,45 +135,45 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/payment"
+                    href={getLocalizedPath("/payment")}
                     title="Make a payment"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/payment" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname.includes("/payment") ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === "/payment" ? "page" : undefined}
+                    aria-current={pathname.includes("/payment") ? "page" : undefined}
                   >
                     Make a payment
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/strains"
+                    href={getLocalizedPath("/strains")}
                     title="All the strains"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/strains" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname.includes("/strains") ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === "/strains" ? "page" : undefined}
+                    aria-current={pathname.includes("/strains") ? "page" : undefined}
                   >
                     All the strains
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/weed"
+                    href={getLocalizedPath("/weed")}
                     title="Learn about weed"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/weed" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname.includes("/weed") ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === "/weed" ? "page" : undefined}
+                    aria-current={pathname.includes("/weed") ? "page" : undefined}
                   >
                     Learn about weed
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/about"
+                    href={getLocalizedPath("/about")}
                     title="Cannabis culture"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname?.startsWith("/about") ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname?.includes("/about") ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
                     aria-current={
-                      pathname?.startsWith("/about") ? "page" : undefined
+                      pathname?.includes("/about") ? "page" : undefined
                     }
                   >
                     Cannabis culture
@@ -173,12 +181,12 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/cannabis-club"
+                    href={getLocalizedPath("/cannabis-club")}
                     title="Join the club"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/cannabis-club" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname.includes("/cannabis-club") ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
                     aria-current={
-                      pathname === "/cannabis-club" ? "page" : undefined
+                      pathname.includes("/cannabis-club") ? "page" : undefined
                     }
                   >
                     Join the club
@@ -186,34 +194,34 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/nft"
+                    href={getLocalizedPath("/nft")}
                     title="Mint your NFT"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/nft" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname.includes("/nft") ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === "/nft" ? "page" : undefined}
+                    aria-current={pathname.includes("/nft") ? "page" : undefined}
                   >
                     Mint your NFT
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/jobs"
+                    href={getLocalizedPath("/jobs")}
                     title="We are hiring"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/jobs" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname.includes("/jobs") ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === "/jobs" ? "page" : undefined}
+                    aria-current={pathname.includes("/jobs") ? "page" : undefined}
                   >
                     We are hiring
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/locations"
+                    href={getLocalizedPath("/locations")}
                     title="Visit our locations"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/locations" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname.includes("/locations") ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
                     aria-current={
-                      pathname === "/locations" ? "page" : undefined
+                      pathname.includes("/locations") ? "page" : undefined
                     }
                   >
                     Visit our locations
@@ -221,11 +229,11 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/contact"
+                    href={getLocalizedPath("/contact")}
                     title="Contact us now"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/contact" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
+                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname.includes("/contact") ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                     onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === "/contact" ? "page" : undefined}
+                    aria-current={pathname.includes("/contact") ? "page" : undefined}
                   >
                     Contact us now
                   </Link>
@@ -245,30 +253,30 @@ export default function Header() {
           >
             <li>
               <Link
-                href="/menu"
+                href={getLocalizedPath("/menu")}
                 title="Menu"
-                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname === "/menu" ? "text-[#13DE00]" : ""}`}
-                aria-current={pathname === "/menu" ? "page" : undefined}
+                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname.includes("/menu") ? "text-[#13DE00]" : ""}`}
+                aria-current={pathname.includes("/menu") ? "page" : undefined}
               >
                 Menu
               </Link>
             </li>
             <li>
               <Link
-                href="/delivery"
+                href={getLocalizedPath("/delivery")}
                 title="Delivery"
-                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname === "/delivery" ? "text-[#13DE00]" : ""}`}
-                aria-current={pathname === "/delivery" ? "page" : undefined}
+                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname.includes("/delivery") ? "text-[#13DE00]" : ""}`}
+                aria-current={pathname.includes("/delivery") ? "page" : undefined}
               >
                 Delivery
               </Link>
             </li>
             <li>
               <Link
-                href="/contact"
+                href={getLocalizedPath("/contact")}
                 title="Contact"
-                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname === "/contact" ? "text-[#13DE00]" : ""}`}
-                aria-current={pathname === "/contact" ? "page" : undefined}
+                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname.includes("/contact") ? "text-[#13DE00]" : ""}`}
+                aria-current={pathname.includes("/contact") ? "page" : undefined}
               >
                 Contact
               </Link>
@@ -297,7 +305,8 @@ export default function Header() {
             </button>
           </div>
 
-          <div className="ml-4">
+          <div className="ml-4 flex items-center gap-4">
+            <LanguageSwitcher />
             <ConnectMenu />
           </div>
         </div>

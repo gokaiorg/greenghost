@@ -4,9 +4,10 @@ import { DeliveryData } from "@/lib/bigquery";
 
 interface DeliveryListProps {
   steps: DeliveryData[];
+  locale?: string;
 }
 
-export default function DeliveryList({ steps }: DeliveryListProps) {
+export default function DeliveryList({ steps, locale = 'en' }: DeliveryListProps) {
   // Extract unique hints
   const hints = steps.map((step) => step.hint).filter((hint) => hint);
 

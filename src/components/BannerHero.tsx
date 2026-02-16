@@ -14,12 +14,14 @@ interface BannerHeroProps {
   menuSlot?: ReactNode;
   subtitle?: string;
   description?: string;
+  locale?: string;
 }
 
 export default function BannerHero({
   menuSlot,
-  subtitle = "Best Degen Weed Shop and Delivery",
-  description = "Discover Thailand's top-rated cannabis dispensary offering premium quality weed hand-picked from the finest local growers. Green Ghost delivers exceptional strains, edibles, concentrates, and accessories across Phuket, Bangkok, and nationwide. Experience fast, reliable weed delivery with expert service, competitive prices, and organic products. From Rawai to Karon, we're your trusted source for authentic Thai cannabis. Also serving premium CBD products in France!",
+  subtitle,
+  description,
+  locale,
 }: BannerHeroProps) {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
@@ -54,9 +56,10 @@ export default function BannerHero({
   }, []);
 
   return (
-    <div
+    <section
       ref={parallaxRef}
       className="relative md:py-24 2xl:py-32 flex flex-col items-center justify-center overflow-hidden"
+      aria-label="Banner Hero"
     >
       {/* Background with parallax effect */}
       <div className="absolute inset-0 z-0">
@@ -122,6 +125,6 @@ export default function BannerHero({
         {/* Products Menu */}
         <div className="my-10 mx-auto">{menuSlot}</div>
       </div>
-    </div>
+    </section>
   );
 }

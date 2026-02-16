@@ -14,7 +14,7 @@ export default async function MenuListInline() {
     menuPages.map(async (pageName) => {
       const data = await getPagesData(pageName);
       const name =
-        data?.title.replace(" Menu", "") || pageName.replace(" Menu", "");
+        data?.title_en?.replace(" Menu", "") || pageName.replace(" Menu", "");
       const slug = name.toLowerCase().replace(/\s+/g, "-");
 
       return {
