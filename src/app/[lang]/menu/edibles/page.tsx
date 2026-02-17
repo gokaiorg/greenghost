@@ -19,6 +19,27 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
   });
 }
 
-export default function EdiblesPage() {
-  return <EdiblesPageContent menuSlot={<MenuListInline />} />;
+import { getPagesData } from "@/lib/bigquery";
+import { selectLocalizedField } from "@/lib/i18n-helpers";
+
+export default async function EdiblesPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const pageData = await getPagesData("Edibles Menu");
+
+  const rawTitle = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'title', lang) || "Edibles Menu";
+  const title = rawTitle.replace(lang === 'fr' ? "Menu " : " Menu", "");
+  const description = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'subtitle', lang) || "Edibles price per serving.";
+
+  return (
+    <EdiblesPageContent
+      menuSlot={<MenuListInline locale={lang} />}
+      locale={lang}
+      title={title}
+      description={description}
+    />
+  );
 }

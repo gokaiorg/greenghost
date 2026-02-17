@@ -10,7 +10,19 @@ import LoadingSpinner from "@/components/LoadingSpinner";
 
 import { ReactNode } from "react";
 
-export default function BudsPageContent({ menuSlot }: { menuSlot: ReactNode }) {
+interface BudsPageContentProps {
+  menuSlot: ReactNode;
+  locale?: string;
+  title?: string;
+  description?: string;
+}
+
+export default function BudsPageContent({
+  menuSlot,
+  locale = 'en',
+  title = "Buds Menu",
+  description = "Buds price for 1 gram."
+}: BudsPageContentProps) {
   // Since it's client, fetch here
   const [allBuds, setAllBuds] = useState<Product[]>([]);
   const [selectedDominances, setSelectedDominances] = useState<string[]>([]);
@@ -44,9 +56,9 @@ export default function BudsPageContent({ menuSlot }: { menuSlot: ReactNode }) {
         <div className="sm:ml-auto sm:w-fit">{menuSlot}</div>
         <div className="flex  md:flex-row flex-col md:items-center space-x-2 mb-2">
           <h1 className="text-xl lg:text-2xl font-bold text-left whitespace-nowrap">
-            Buds Menu
+            {title}
           </h1>
-          <p className="text-xs text-gray-400">Buds price for 1 gram.</p>
+          <p className="text-xs text-gray-400">{description}</p>
         </div>
         <StrainFilter
           selectedDominances={selectedDominances}
@@ -57,7 +69,7 @@ export default function BudsPageContent({ menuSlot }: { menuSlot: ReactNode }) {
           aria-label="Buds menu"
         >
           {buds.map((bud) => (
-            <BudListItem key={bud.id} bud={bud} />
+            <BudListItem key={bud.id} bud={bud} locale={locale} />
           ))}
         </ul>
       </div>

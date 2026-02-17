@@ -10,11 +10,19 @@ import MiniSlider from "@/components/MiniSlider";
 import BannerMenu from "@/components/BannerMenu";
 import BagAddButton from "@/components/BagAddButton";
 
+interface ConcentratesPageContentProps {
+  menuSlot: ReactNode;
+  locale?: string;
+  title?: string;
+  description?: string;
+}
+
 export default function ConcentratesPageContent({
   menuSlot,
-}: {
-  menuSlot: ReactNode;
-}) {
+  locale = 'en',
+  title = "Concentrates Menu",
+  description = "Concentrates price for 1 gram."
+}: ConcentratesPageContentProps) {
   const [concentrates, setConcentrates] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -37,10 +45,10 @@ export default function ConcentratesPageContent({
         <div className="sm:ml-auto sm:w-fit">{menuSlot}</div>
         <div className="flex  md:flex-row flex-col md:items-center space-x-2 mb-2">
           <h1 className="text-xl lg:text-2xl font-bold text-left whitespace-nowrap">
-            Concentrates Menu
+            {title}
           </h1>
           <p className="text-xs text-gray-400">
-            Concentrates price for 1 gram.
+            {description}
           </p>
         </div>
         <ul
@@ -50,7 +58,7 @@ export default function ConcentratesPageContent({
           {concentrates.map((concentrate) => (
             <li key={concentrate.id} className="relative">
               <Link
-                href={`/concentrates/${concentrate.id}`}
+                href={`${locale === 'en' ? '' : `/${locale}`}/concentrates/${concentrate.id}`}
                 title={concentrate.name}
               >
                 <div className="hover:bg-[#13DE00]/13 p-1 flex flex-col relative">

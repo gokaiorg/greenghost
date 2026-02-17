@@ -11,11 +11,19 @@ import BagAddButton from "@/components/BagAddButton";
 import LoadingSpinner from "@/components/LoadingSpinner";
 import { ReactNode } from "react";
 
+interface GadgetsPageContentProps {
+  menuSlot: ReactNode;
+  locale?: string;
+  title?: string;
+  description?: string;
+}
+
 export default function GadgetsPageContent({
   menuSlot,
-}: {
-  menuSlot: ReactNode;
-}) {
+  locale = 'en',
+  title = "Gadgets Menu",
+  description = "Elevate your smoking experience."
+}: GadgetsPageContentProps) {
   const [gadgets, setGadgets] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -43,10 +51,10 @@ export default function GadgetsPageContent({
         <div className="sm:ml-auto sm:w-fit">{menuSlot}</div>
         <div className="flex  md:flex-row flex-col md:items-center space-x-2 mb-2">
           <h1 className="text-xl lg:text-2xl font-bold text-left whitespace-nowrap">
-            Gadgets Menu
+            {title}
           </h1>
           <p className="text-xs text-gray-400">
-            Elevate your smoking experience.
+            {description}
           </p>
         </div>
         <ul
@@ -55,7 +63,7 @@ export default function GadgetsPageContent({
         >
           {gadgets.map((gadget) => (
             <li key={gadget.id} className="relative">
-              <Link href={`/gadgets/${gadget.id}`} title={gadget.name}>
+              <Link href={`${locale === 'en' ? '' : `/${locale}`}/gadgets/${gadget.id}`} title={gadget.name}>
                 <div className="hover:bg-[#13DE00]/13 p-1 flex flex-col relative">
                   <div className="relative mb-2">
                     <MiniSlider

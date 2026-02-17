@@ -1,242 +1,127 @@
 
-> greenghost@0.1.0 dev /app
+> greenghost@0.1.0 dev
 > next dev
 
    ▲ Next.js 15.5.7
    - Local:        http://localhost:3000
-   - Network:      http://192.168.0.2:3000
+   - Network:      http://192.168.1.71:3000
+   - Experiments (use with caution):
+     · cpus: 1
 
  ✓ Starting...
- ✓ Ready in 2.1s
- ○ Compiling /menu/buds ...
- ✓ Compiled /menu/buds in 37.3s (9246 modules)
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
- GET /menu/buds 200 in 39036ms
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
- HEAD /menu/buds 200 in 219ms
- ○ Compiling /api/products/[slug] ...
- ✓ Compiled /api/products/[slug] in 5.6s (9230 modules)
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
- GET /menu/buds 200 in 561ms
-Fetching products for category: Strains
-Found 107 products
- GET /api/products/strains 200 in 6606ms
- ✓ Compiled in 814ms (3665 modules)
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
- GET /menu/buds 200 in 870ms
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
- HEAD /menu/buds 200 in 217ms
-Fetching products for category: Strains
-Found 107 products
- GET /api/products/strains 200 in 230ms
- ✓ Compiled in 833ms (3665 modules)
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
- GET /menu/buds 200 in 300ms
-Fetching products for category: Strains
-Found 107 products
- GET /api/products/strains 200 in 378ms
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
-BigQuery fetching error: [Error: ENOENT: no such file or directory, open '/app/green-ghost-432101-58ca22dd1b4c.json'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/app/green-ghost-432101-58ca22dd1b4c.json'
-}
- HEAD /menu/buds 200 in 527ms
+ ✓ Ready in 1979ms
+ ✓ Compiled /middleware in 194ms (115 modules)
+ ○ Compiling /[lang] ...
+ ✓ Compiled /[lang] in 7.3s (9178 modules)
+[getPagesData] Fetched data for page "Green Ghost"
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[getPagesData] Fetched data for page "Buds Menu"
+[getPagesData] Fetched data for page "Concentrates Menu"
+[getPagesData] Fetched data for page "Edibles Menu"
+[getPagesData] Fetched data for page "Gadgets Menu"
+[getPagesData] Fetched data for page "Pre-Rolls Menu"
+[getPagesData] Fetched data for page "menu"
+[getPagesData] Fetched data for page "weed"
+[getPagesData] Fetched data for page "wholesale"
+[getPagesData] Fetched data for page "about"
+[getPagesData] Fetched data for page "payment"
+[getPagesData] Fetched data for page "contact"
+[getPagesData] Fetched data for page "jobs"
+[getPagesData] Fetched data for page "delivery"
+[getPagesData] Fetched data for page "strains"
+[getPagesData] Fetched data for page "locations"
+[getPagesData] Fetched data for page "nft"
+(node:42570) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+ HEAD / 200 in 15551ms
+[getPagesData] Fetched data for page "Green Ghost"
+[getPagesData] Fetched data for page "Buds Menu"
+[getPagesData] Fetched data for page "Concentrates Menu"
+[getPagesData] Fetched data for page "Gadgets Menu"
+[getPagesData] Fetched data for page "Edibles Menu"
+[getPagesData] Fetched data for page "Pre-Rolls Menu"
+[getPagesData] Fetched data for page "nft"
+[getPagesData] Fetched data for page "contact"
+[getPagesData] Fetched data for page "menu"
+[getPagesData] Fetched data for page "payment"
+[getPagesData] Fetched data for page "wholesale"
+[getPagesData] Fetched data for page "weed"
+[getPagesData] Fetched data for page "delivery"
+[getPagesData] Fetched data for page "locations"
+[getPagesData] Fetched data for page "strains"
+[getPagesData] Fetched data for page "about"
+[getPagesData] Fetched data for page "jobs"
+ GET / 200 in 4706ms
+ ○ Compiling /manifest.webmanifest ...
+ ✓ Compiled /manifest.webmanifest in 2.7s (9197 modules)
+ GET /manifest.webmanifest 200 in 2912ms
+[getPagesData] Fetched data for page "Green Ghost"
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[getPagesData] Fetched data for page "Green Ghost"
+[getPagesData] Fetched data for page "Buds Menu"
+[getPagesData] Fetched data for page "Concentrates Menu"
+[getPagesData] Fetched data for page "Buds Menu"
+[getPagesData] Fetched data for page "Concentrates Menu"
+[getPagesData] Fetched data for page "Gadgets Menu"
+[getPagesData] Fetched data for page "Edibles Menu"
+[getPagesData] Fetched data for page "Edibles Menu"
+[getPagesData] Fetched data for page "Pre-Rolls Menu"
+[getPagesData] Fetched data for page "Gadgets Menu"
+[getPagesData] Fetched data for page "Pre-Rolls Menu"
+[getPagesData] Fetched data for page "wholesale"
+[getPagesData] Fetched data for page "delivery"
+[getPagesData] Fetched data for page "locations"
+[getPagesData] Fetched data for page "menu"
+[getPagesData] Fetched data for page "contact"
+[getPagesData] Fetched data for page "jobs"
+[getPagesData] Fetched data for page "strains"
+[getPagesData] Fetched data for page "weed"
+[getPagesData] Fetched data for page "payment"
+[getPagesData] Fetched data for page "wholesale"
+[getPagesData] Fetched data for page "about"
+[getPagesData] Fetched data for page "jobs"
+[getPagesData] Fetched data for page "nft"
+[getPagesData] Fetched data for page "delivery"
+[getPagesData] Fetched data for page "menu"
+[getPagesData] Fetched data for page "payment"
+ HEAD / 200 in 8420ms
+[getPagesData] Fetched data for page "weed"
+[getPagesData] Fetched data for page "contact"
+[getPagesData] Fetched data for page "Green Ghost"
+[getPagesData] Fetched data for page "nft"
+[getPagesData] Fetched data for page "about"
+[getPagesData] Fetched data for page "strains"
+[getPagesData] Fetched data for page "locations"
+ GET / 200 in 6176ms
+[getPagesData] Fetched data for page "Pre-Rolls Menu"
+[getPagesData] Fetched data for page "Edibles Menu"
+[getPagesData] Fetched data for page "Gadgets Menu"
+[getPagesData] Fetched data for page "Concentrates Menu"
+[getPagesData] Fetched data for page "Buds Menu"
+[getPagesData] Fetched data for page "contact"
+[getPagesData] Fetched data for page "locations"
+[getPagesData] Fetched data for page "menu"
+[getPagesData] Fetched data for page "wholesale"
+[getPagesData] Fetched data for page "nft"
+[getPagesData] Fetched data for page "jobs"
+[getPagesData] Fetched data for page "strains"
+[getPagesData] Fetched data for page "delivery"
+[getPagesData] Fetched data for page "payment"
+[getPagesData] Fetched data for page "weed"
+[getPagesData] Fetched data for page "about"
+ GET /fr 200 in 5898ms
+ GET /manifest.webmanifest 200 in 18ms
+ ○ Compiling /[lang]/menu ...
+ ✓ Compiled /[lang]/menu in 2.2s (9178 modules)
+MenuPage params.lang: fr
+[getPagesData] Fetched data for page "Menu"
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ○ Compiling /manifest.webmanifest ...
+ ✓ Compiled /manifest.webmanifest in 699ms (5082 modules)
+ GET /manifest.webmanifest 200 in 868ms
+[getPagesData] Fetched data for page "Pre-Rolls Menu"
+[getPagesData] Fetched data for page "Edibles Menu"
+[getPagesData] Fetched data for page "Buds Menu"
+[getPagesData] Fetched data for page "Concentrates Menu"
+[getPagesData] Fetched data for page "Gadgets Menu"
+ GET /fr/menu 200 in 6979ms

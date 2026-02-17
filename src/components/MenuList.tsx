@@ -23,18 +23,22 @@ export default async function MenuList({ locale = 'en' }: MenuListProps = {}) {
       const title = selectLocalizedField<string>((data as unknown) as Record<string, unknown>, 'title', locale);
       const description = selectLocalizedField<string>((data as unknown) as Record<string, unknown>, 'description', locale);
 
-      const name = title?.replace(" Menu", "") || pageName.replace(" Menu", "");
-      const slug = name.toLowerCase().replace(/\s+/g, "-");
+      // Display Name (localized)
+      const displayName = title?.replace(" Menu", "") || pageName.replace(" Menu", "");
+
+      // Slug for URL (ALWAYS English)
+      const slugName = pageName.replace(" Menu", "");
+      const slug = slugName.toLowerCase().replace(/\s+/g, "-");
 
       const imageSlug = slug === "pre-rolls" ? "pre-rolls" : slug;
       const defaultImage = `/images/banners/${imageSlug}-menu-weed-shop-green-ghost.avif`;
 
       return {
         slug,
-        name,
+        name: displayName,
         defaultImage,
         defaultDescription: description || "",
-        path: `/menu/${slug}`,
+        path: locale === 'en' ? `/menu/${slug}` : `/${locale}/menu/${slug}`,
       };
     }),
   );

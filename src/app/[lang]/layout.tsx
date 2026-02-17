@@ -1,6 +1,5 @@
-import type { Metadata, Viewport } from "next";
+import type { Viewport } from "next";
 import { Geist, Geist_Mono, Press_Start_2P } from "next/font/google";
-import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -12,14 +11,54 @@ import GoogleTagManager from "@/components/GoogleTagManager";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import AgeModalSection from "@/components/AgeModalSection";
 import { getOrganizationData } from "@/lib/organization-data";
-import { getSocialsData, getSectionsData } from "@/lib/bigquery";
-import { getLocalizedSection } from "@/lib/i18n-db";
+import { getSocialsData, getSectionsData, getPagesData } from "@/lib/bigquery";
+import { getLocalizedSection, getLocalizedValue } from "@/lib/i18n-db";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
+
+const MENU_ITEMS_DEF = [
+  { path: "/menu", pageKey: "menu", defaultLabel: "Explore our menu" },
+  { path: "/delivery", pageKey: "delivery", defaultLabel: "Get delivered" },
+  { path: "/wholesale", pageKey: "wholesale", defaultLabel: "Bulk ordering" },
+  { path: "/payment", pageKey: "payment", defaultLabel: "Make a payment" },
+  { path: "/strains", pageKey: "strains", defaultLabel: "All the strains" },
+  { path: "/weed", pageKey: "weed", defaultLabel: "Learn about weed" },
+  { path: "/about", pageKey: "about", defaultLabel: "Cannabis culture" },
+  { path: "/cannabis-club", pageKey: "cannabis-club", defaultLabel: "Join the club" },
+  { path: "/nft", pageKey: "nft", defaultLabel: "Mint your NFT" },
+  { path: "/jobs", pageKey: "jobs", defaultLabel: "We are hiring" },
+  { path: "/locations", pageKey: "locations", defaultLabel: "Visit our locations" },
+  { path: "/contact", pageKey: "contact", defaultLabel: "Contact us now" },
+];
+
+async function getMenuItems(locale: string) {
+  const items = await Promise.all(
+    MENU_ITEMS_DEF.map(async (item) => {
+      // Use cache if possible or just concurrent request
+      // We assume getPagesData handles caching/batching if optimized, 
+      // or at least concurrent is better than serial.
+      const pageData = await getPagesData(item.pageKey).catch(() => null);
+      let label = item.defaultLabel;
+
+      if (pageData) {
+        const localizedLabel = getLocalizedValue(pageData, "label", locale, false);
+        if (localizedLabel) label = localizedLabel;
+        else {
+          const localizedTitle = getLocalizedValue(pageData, "title", locale);
+          if (localizedTitle) label = localizedTitle;
+        }
+      }
+      return { path: item.path, label };
+    })
+  );
+  return items;
+}
 import FarcasterProvider from "@/components/FarcasterProvider";
 import WalletProvider from "@/components/WalletProvider";
 import ScrollToTop from "@/components/ScrollToTop";
 import { LoaderProvider } from "@/contexts/LoaderContext";
 import Loading from "@/components/Loading";
+
+// ... existing fonts
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,128 +76,15 @@ const pressStart2P = Press_Start_2P({
   weight: "400",
 });
 
-const cubicFive = localFont({
-  src: [
-    {
-      path: "../../../public/fonts/cubicfive12.woff2",
-      weight: "400",
-      style: "normal",
-    },
-  ],
-  variable: "--font-cubic",
-  display: "swap",
-});
+// [DELETE] Silkscreen definition
 
 export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 5,
-  themeColor: "#13DE00",
-  colorScheme: "dark",
+  // ... existing viewport
 };
 
-// Determine if we are in production based on environment variables
-const isProduction =
-  process.env.NEXT_PUBLIC_SITE_URL === "https://green.gd" ||
-  process.env.CONTEXT === "production";
+// ... existing metadata definition
 
-export const metadata: Metadata = {
-  title: "Green Ghost 🌿👻",
-  description:
-    "Premium cannabis products in Thailand. Fast, discreet delivery.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://green.gd"),
-  keywords: [
-    "cannabis",
-    "weed",
-    "buds",
-    "pre-rolls",
-    "concentrates",
-    "edibles",
-    "gadgets",
-    "Thailand",
-    "online shop",
-  ],
-  authors: [{ name: "Green Ghost" }],
-  creator: "Green Ghost",
-  publisher: "Green Ghost",
-  robots: isProduction
-    ? {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-snippet": -1,
-        "max-image-preview": "large",
-        "max-video-preview": -1,
-      },
-    }
-    : {
-      index: false,
-      follow: false,
-      googleBot: {
-        index: false,
-        follow: false,
-      },
-    },
-
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "/",
-    siteName: "Green Ghost",
-    title: "Green Ghost 🌿👻",
-    description:
-      "Premium cannabis products in Thailand. Fast, discreet delivery.",
-    images: [
-      {
-        url: "/images/logo-green-ghost-degen-weed-shop.png",
-        width: 2000,
-        height: 2000,
-        alt: "Green Ghost Logo",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@greenghostdegen",
-    creator: "@greenghostdegen",
-    title: "Green Ghost 🌿👻",
-    description:
-      "Premium cannabis products in Thailand. Fast, discreet delivery.",
-    images: ["/images/logo-green-ghost-degen-weed-shop.png"],
-  },
-  icons: {
-    icon: [
-      { url: "/images/favicon.ico", sizes: "any" },
-      { url: "/images/logo48.png", type: "image/png", sizes: "48x48" },
-    ],
-    apple: [
-      { url: "/images/logo512.png", sizes: "512x512", type: "image/png" },
-    ],
-  },
-  other: {
-    "msapplication-TileColor": "#13DE00",
-    "apple-mobile-web-app-title": "Green Ghost 🌿👻",
-    "application-name": "Green Ghost 🌿👻",
-    "format-detection": "telephone=no",
-    "theme-color": "#13DE00",
-    "fc:miniapp": JSON.stringify({
-      version: "1",
-      imageUrl: "https://green.gd/green-ghost-degen-weed-shop.png",
-      button: {
-        title: "Order Now",
-        action: {
-          type: "launch_frame",
-          name: "Green Ghost 🌿👻",
-          url: "https://green.gd",
-          splashImageUrl: "https://green.gd/green-ghost-degen-weed-shop.png",
-          splashBackgroundColor: "#000000",
-        },
-      },
-    }),
-  },
-};
+// ... existing imports
 
 import { i18n } from "@/i18n-config";
 
@@ -188,6 +114,8 @@ export default async function RootLayout({
   const ageModalNoLabel =
     ageModalContent.links[1]?.label || (lang === "fr" ? "NON" : "NO");
 
+  const menuItems = await getMenuItems(lang);
+
   return (
     <html lang={lang} suppressHydrationWarning>
       <head>
@@ -204,14 +132,17 @@ export default async function RootLayout({
             font-family: var(--font-pixel), monospace;
           }
           h1, h2, .font-cubic {
-            font-family: var(--font-cubic), monospace;
+            font-family: var(--font-pixel), monospace; 
+            text-transform: uppercase;
+            font-weight: 700;
           }
         `,
           }}
         />
       </head>
+
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${pressStart2P.variable} ${cubicFive.variable} antialiased bg-black text-white min-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} ${pressStart2P.variable} antialiased bg-black text-white min-h-screen flex flex-col`}
       >
         <GoogleTagManager />
         <GoogleAnalytics />
@@ -227,11 +158,11 @@ export default async function RootLayout({
           <FarcasterProvider>
             <WalletProvider>
               <CartProvider>
-                <Header locale={lang} />
+                <Header locale={lang} menuItems={menuItems} />
                 <main id="main-content" className="flex-grow">
                   {children}
                 </main>
-                <Footer socials={socials} />
+                <Footer socials={socials} locale={lang} menuItems={menuItems} />
                 <div className="fixed bottom-4 right-4 z-[60] flex flex-row space-x-4 items-end">
                   <ScrollToTop />
                   <WhatsAppButton />

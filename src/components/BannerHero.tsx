@@ -95,13 +95,13 @@ export default function BannerHero({
 
       {/* Content */}
       <div className="container md:max-w-6xl md:px-4 bg-black/69 p-5 md:mx-auto z-30 text-center">
-        <h1 className="md:max-w-3xl mx-auto text-[25px] sm:text-[30px] md:text-[55px] font-bold mb-6 leading-tight">
+        <h1 className="md:max-w-3xl mx-auto text-[25px] sm:text-[30px] md:text-[40px] font-bold mb-6 leading-tight">
           <span className="text-[#13DE00]">
             {subtitle}
           </span>
         </h1>
 
-        <p className="text-sm sm:text-md md:text-lg text-gray-300 mb-10 max-w-5xl mx-auto">
+        <p className="text-sm sm:text-md md:text-[1rem] text-gray-300 mb-10 max-w-5xl mx-auto">
           {description}
         </p>
 
@@ -109,16 +109,16 @@ export default function BannerHero({
           <Link
             href="/menu"
             className="bg-[#13DE00] hover:bg-[#10c500] text-black font-bold py-4 px-8 text-lg transition-colors duration-300"
-            title="Shop Now"
+            title="Cannabis Thailand"
           >
-            Shop Now
+            CANNABIS THAILAND
           </Link>
           <Link
-            href="/delivery"
+            href="/cbd-france"
             className="bg-transparent border-2 border-[#13DE00] text-[#13DE00] hover:bg-[#13DE00]/13 font-bold py-4 px-8 text-lg transition-colors duration-300"
-            title="Order Online"
+            title="CBD France"
           >
-            Order Online
+            CBD FRANCE
           </Link>
         </div>
 

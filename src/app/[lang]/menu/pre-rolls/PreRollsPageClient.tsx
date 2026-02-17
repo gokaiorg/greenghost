@@ -10,11 +10,19 @@ import BagAddButton from "@/components/BagAddButton";
 import LoadingSpinner from "@/components/LoadingSpinner";
 import { ReactNode } from "react";
 
+interface PreRollsPageContentProps {
+  menuSlot: ReactNode;
+  locale?: string;
+  title?: string;
+  description?: string;
+}
+
 export default function PreRollsPageContent({
   menuSlot,
-}: {
-  menuSlot: ReactNode;
-}) {
+  locale = 'en',
+  title = "Pre-rolls Menu",
+  description = "On demand. +20THB on delivery. Free on store."
+}: PreRollsPageContentProps) {
   const [allPreRolls, setAllPreRolls] = useState<Product[]>([]);
   const [selectedDominances, setSelectedDominances] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -47,10 +55,10 @@ export default function PreRollsPageContent({
         <div className="sm:ml-auto sm:w-fit">{menuSlot}</div>
         <div className="flex  md:flex-row flex-col md:items-center space-x-2 mb-2">
           <h1 className="text-xl lg:text-2xl font-bold text-left whitespace-nowrap">
-            Pre-rolls Menu
+            {title}
           </h1>
           <p className="text-xs text-gray-400">
-            On demand. +20THB on delivery. Free on store.
+            {description}
           </p>
         </div>
         <StrainFilter
@@ -63,7 +71,7 @@ export default function PreRollsPageContent({
               key={roll.id}
               className="relative bg-black hover:bg-[#13DE00]/13 transition-all"
             >
-              <Link href={`/strains/${roll.id}`} title={roll.name}>
+              <Link href={`${locale === 'en' ? '' : `/${locale}`}/strains/${roll.id}`} title={roll.name}>
                 <div className="p-2 flex items-start sm:items-center justify-between mb-2 sm:mb-0 sm:pr-24">
                   <ul
                     className="flex flex-col flex-grow list-none m-0 p-0"

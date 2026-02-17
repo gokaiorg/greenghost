@@ -19,6 +19,27 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
   });
 }
 
-export default function PreRollsPage() {
-  return <PreRollsPageContent menuSlot={<MenuListInline />} />;
+import { getPagesData } from "@/lib/bigquery";
+import { selectLocalizedField } from "@/lib/i18n-helpers";
+
+export default async function PreRollsPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const pageData = await getPagesData("Pre-Rolls Menu");
+
+  const rawTitle = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'title', lang) || "Pre-Rolls Menu";
+  const title = rawTitle.replace(lang === 'fr' ? "Menu " : " Menu", "");
+  const description = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'subtitle', lang) || "On demand. +20THB on delivery. Free on store.";
+
+  return (
+    <PreRollsPageContent
+      menuSlot={<MenuListInline locale={lang} />}
+      locale={lang}
+      title={title}
+      description={description}
+    />
+  );
 }

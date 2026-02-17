@@ -19,6 +19,27 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
   });
 }
 
-export default function ConcentratesPage() {
-  return <ConcentratesPageContent menuSlot={<MenuListInline />} />;
+import { getPagesData } from "@/lib/bigquery";
+import { selectLocalizedField } from "@/lib/i18n-helpers";
+
+export default async function ConcentratesPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const pageData = await getPagesData("Concentrates Menu");
+
+  const rawTitle = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'title', lang) || "Concentrates Menu";
+  const title = rawTitle.replace(lang === 'fr' ? "Menu " : " Menu", "");
+  const description = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'subtitle', lang) || "Concentrates price for 1 gram.";
+
+  return (
+    <ConcentratesPageContent
+      menuSlot={<MenuListInline locale={lang} />}
+      locale={lang}
+      title={title}
+      description={description}
+    />
+  );
 }

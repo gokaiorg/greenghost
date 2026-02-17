@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { getPagesData } from "@/lib/bigquery";
+import { selectLocalizedField } from "@/lib/i18n-helpers";
 
 export const revalidate = 3600;
 
@@ -81,15 +82,15 @@ export default async function Home({
   const pageData = await getPagesData("Green Ghost");
 
   // Use correct localized fields matching the language
-  const bannerSubtitle = lang === 'fr' ? (pageData?.subtitle_fr || pageData?.subtitle_en) : pageData?.subtitle_en;
-  const bannerDescription = lang === 'fr' ? (pageData?.description_fr || pageData?.description_en) : pageData?.description_en;
+  const bannerSubtitle = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'subtitle', lang);
+  const bannerDescription = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'description', lang);
 
   return (
     <>
       <JsonLd data={organizationSchema} />
       <div className="min-h-screen bg-black text-white">
         <BannerHero
-          menuSlot={<MenuListInline />}
+          menuSlot={<MenuListInline locale={lang} />}
           subtitle={bannerSubtitle}
           description={bannerDescription}
           locale={lang}

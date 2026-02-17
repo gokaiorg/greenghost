@@ -10,11 +10,19 @@ import BannerMenu from "@/components/BannerMenu";
 import BagAddButton from "@/components/BagAddButton";
 import { ReactNode } from "react";
 
+interface EdiblesPageContentProps {
+  menuSlot: ReactNode;
+  locale?: string;
+  title?: string;
+  description?: string;
+}
+
 export default function EdiblesPageContent({
   menuSlot,
-}: {
-  menuSlot: ReactNode;
-}) {
+  locale = 'en',
+  title = "Edibles Menu",
+  description = "Edibles price per serving."
+}: EdiblesPageContentProps) {
   const [edibles, setEdibles] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -37,9 +45,9 @@ export default function EdiblesPageContent({
         <div className="sm:ml-auto sm:w-fit">{menuSlot}</div>
         <div className="flex  md:flex-row flex-col md:items-center space-x-2 mb-2">
           <h1 className="text-xl lg:text-2xl font-bold text-left whitespace-nowrap">
-            Edibles Menu
+            {title}
           </h1>
-          <p className="text-xs text-gray-400">Edibles price per serving.</p>
+          <p className="text-xs text-gray-400">{description}</p>
         </div>
         <ul
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 list-none m-0 p-0"
@@ -47,7 +55,7 @@ export default function EdiblesPageContent({
         >
           {edibles.map((edible) => (
             <li key={edible.id} className="relative">
-              <Link href={`/edibles/${edible.id}`} title={edible.name}>
+              <Link href={`${locale === 'en' ? '' : `/${locale}`}/edibles/${edible.id}`} title={edible.name}>
                 <div className="hover:bg-[#13DE00]/13 p-1 flex flex-col relative">
                   <div className="relative mb-2">
                     <MiniSlider
