@@ -21,7 +21,6 @@ export default function BannerHero({
   menuSlot,
   subtitle,
   description,
-  locale,
 }: BannerHeroProps) {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);

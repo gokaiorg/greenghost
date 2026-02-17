@@ -139,3 +139,9 @@ Generating metadata for product: Rozay SEO: Sip on Rozay, a premium 50/50 Hybrid
 Generating metadata for product: Rozay SEO: Sip on Rozay, a premium 50/50 Hybrid with 22% THC. Experience sweet berry champagne flavors and a happy, sleepy high. Perfect for deep relaxation and stress relief.
  GET /fr/strains/rozay 200 in 10144ms
  GET /manifest.webmanifest 200 in 77ms
+ ✓ Compiled in 23.1s (9238 modules)
+Generating metadata for product: Rozay SEO: Sip on Rozay, a premium 50/50 Hybrid with 22% THC. Experience sweet berry champagne flavors and a happy, sleepy high. Perfect for deep relaxation and stress relief.
+ GET /fr/strains/rozay 200 in 6993ms
+ ○ Compiling /manifest.webmanifest ...
+ ✓ Compiled /manifest.webmanifest in 1038ms (5117 modules)
+ GET /manifest.webmanifest 200 in 1648ms
