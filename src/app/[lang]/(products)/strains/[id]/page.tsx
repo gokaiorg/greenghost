@@ -84,7 +84,7 @@ export default async function StrainProductPage({
           __html: toJsonLd(schema),
         }}
       />
-      <StrainProductClient product={product} menuSlot={<MenuListInline />} />
+      <StrainProductClient product={product} menuSlot={<MenuListInline locale={lang} />} />
       <StrainSection locale={lang} />
     </>
   );

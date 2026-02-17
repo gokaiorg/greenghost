@@ -92,7 +92,7 @@ export default async function StrainSection({
                     interactive={false}
                   />
                 </div>
-                <h2 className="text-base lg:text-lg font-semibold mb-1 text-sm leading-tight">
+                <h2 className="text-base lg:text-md font-semibold mb-1 text-sm leading-tight">
                   {bud.name}
                 </h2>
                 <div className="flex justify-between flex-wrap">

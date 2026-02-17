@@ -78,7 +78,7 @@ export default function PreRollsPageContent({
                     aria-label="Product details"
                   >
                     <li className="flex items-baseline flex-col sm:flex-row space-x-2">
-                      <h2 className="text-base md:text-lg font-semibold text-sm leading-tight md:min-w-[300px]">
+                      <h2 className="text-base md:text-md font-semibold text-sm leading-tight md:min-w-[300px]">
                         {roll.name}
                       </h2>
                       <ul

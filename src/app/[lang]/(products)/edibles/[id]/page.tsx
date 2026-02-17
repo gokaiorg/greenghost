@@ -77,9 +77,9 @@ export async function generateMetadata({
 export default async function EdibleProductPage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ id: string; lang: string }>;
 }) {
-  const { id } = await params;
+  const { id, lang } = await params;
   const product = await getProduct(id);
   if (!product) {
     notFound();
@@ -94,7 +94,7 @@ export default async function EdibleProductPage({
           __html: toJsonLd(schema),
         }}
       />
-      <EdibleProductClient product={product} menuSlot={<MenuListInline />} />
+      <EdibleProductClient product={product} menuSlot={<MenuListInline locale={lang} />} />
     </>
   );
 }

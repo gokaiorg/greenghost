@@ -37,3 +37,115 @@ Found 110 strains
    Generating static pages (665/904) 
    Generating static pages (678/904) 
    Generating static pages (753/904) 
+   Generating static pages (825/904) 
+   Generating static pages (900/904) 
+ ✓ Generating static pages (904/904)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS  Revalidate  Expire
+┌ ○ /_not-found                             1 kB         103 kB
+├ ● /[lang]                              6.35 kB         117 kB          1h      1y
+├   ├ /en                                                                1h      1y
+├   └ /fr                                                                1h      1y
+├ ● /[lang]/about                          785 B         111 kB
+├   ├ /en/about
+├   └ /fr/about
+├ ● /[lang]/best-weed-shops-thailand     1.96 kB         109 kB
+├   ├ /en/best-weed-shops-thailand
+├   └ /fr/best-weed-shops-thailand
+├ ● /[lang]/cannabis-club                  790 B         111 kB
+├   ├ /en/cannabis-club
+├   └ /fr/cannabis-club
+├ ● /[lang]/cbd-france                   1.54 kB         109 kB
+├   ├ /en/cbd-france
+├   └ /fr/cbd-france
+├ ƒ /[lang]/concentrates/[id]              978 B         115 kB
+├ ● /[lang]/contact                      2.89 kB         114 kB
+├   ├ /en/contact
+├   └ /fr/contact
+├ ● /[lang]/delivery                       778 B         111 kB
+├   ├ /en/delivery
+├   └ /fr/delivery
+├ ƒ /[lang]/edibles/[id]                 1.02 kB         115 kB
+├ ƒ /[lang]/gadgets/[id]                 1.67 kB         116 kB
+├ ● /[lang]/garden                       1.69 kB         112 kB
+├   ├ /en/garden
+├   └ /fr/garden
+├ ● /[lang]/growers                      1.69 kB         112 kB
+├   ├ /en/growers
+├   └ /fr/growers
+├ ● /[lang]/jobs                           765 B         108 kB
+├   ├ /en/jobs
+├   └ /fr/jobs
+├ ● /[lang]/legal-laws                   1.69 kB         112 kB
+├   ├ /en/legal-laws
+├   └ /fr/legal-laws
+├ ● /[lang]/locations                    1.66 kB         112 kB
+├   ├ /en/locations
+├   └ /fr/locations
+├ ● /[lang]/locations/[slug]              1.7 kB         112 kB
+├   ├ /en/locations/rawai
+├   ├ /en/locations/karon
+├   ├ /en/locations/phuket
+├   └ [+5 more paths]
+├ ● /[lang]/menu                         2.32 kB         113 kB
+├   ├ /en/menu
+├   └ /fr/menu
+├ ● /[lang]/menu/buds                       5 kB         116 kB          1h      1y
+├   ├ /en/menu/buds                                                      1h      1y
+├   └ /fr/menu/buds                                                      1h      1y
+├ ● /[lang]/menu/concentrates             4.3 kB         115 kB          1h      1y
+├   ├ /en/menu/concentrates                                              1h      1y
+├   └ /fr/menu/concentrates                                              1h      1y
+├ ● /[lang]/menu/edibles                 4.33 kB         115 kB          1h      1y
+├   ├ /en/menu/edibles                                                   1h      1y
+├   └ /fr/menu/edibles                                                   1h      1y
+├ ● /[lang]/menu/gadgets                 4.39 kB         115 kB          1h      1y
+├   ├ /en/menu/gadgets                                                   1h      1y
+├   └ /fr/menu/gadgets                                                   1h      1y
+├ ● /[lang]/menu/pre-rolls               4.09 kB         115 kB          1h      1y
+├   ├ /en/menu/pre-rolls                                                 1h      1y
+├   └ /fr/menu/pre-rolls                                                 1h      1y
+├ ● /[lang]/nft                           2.9 kB         110 kB
+├   ├ /en/nft
+├   └ /fr/nft
+├ ● /[lang]/nft/[slug]                   2.56 kB         110 kB
+├   ├ /en/nft/1
+├   ├ /en/nft/2
+├   ├ /en/nft/3
+├   └ [+837 more paths]
+├ ● /[lang]/payment                      1.49 kB         109 kB
+├   ├ /en/payment
+├   └ /fr/payment
+├ ● /[lang]/seeds                        1.69 kB         112 kB
+├   ├ /en/seeds
+├   └ /fr/seeds
+├ ● /[lang]/strains                      2.75 kB         113 kB
+├   ├ /en/strains
+├   └ /fr/strains
+├ ƒ /[lang]/strains/[id]                 2.22 kB         116 kB
+├ ● /[lang]/weed                         1.69 kB         112 kB
+├   ├ /en/weed
+├   └ /fr/weed
+├ ● /[lang]/wholesale                      790 B         111 kB
+├   ├ /en/wholesale
+├   └ /fr/wholesale
+├ ƒ /api/organization                      151 B         102 kB
+├ ƒ /api/products/[slug]                   151 B         102 kB
+├ ƒ /api/strains                           151 B         102 kB
+├ ○ /manifest.webmanifest                  151 B         102 kB
+├ ○ /robots.txt                            151 B         102 kB
+└ ○ /sitemap.xml                           151 B         102 kB
++ First Load JS shared by all             102 kB
+  ├ chunks/1255-404bb8de49c90395.js      45.8 kB
+  ├ chunks/4bd1b696-f785427dddbba9fb.js  54.2 kB
+  └ other shared chunks (total)          2.04 kB
+
+
+ƒ Middleware                             33.9 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

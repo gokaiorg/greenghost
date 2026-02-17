@@ -75,7 +75,7 @@ export default function EdiblesPageContent({
                     aria-label="Product details"
                   >
                     <li>
-                      <h2 className="text-base lg:text-lg font-semibold mb-1 text-sm leading-tight">
+                      <h2 className="text-base lg:text-md font-semibold mb-1 text-sm leading-tight">
                         {edible.name}
                       </h2>
                     </li>

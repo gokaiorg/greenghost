@@ -37,7 +37,7 @@ const BudListItem = memo(({ bud, locale = 'en' }: BudListItemProps) => {
           </div>
           <ul className="list-none m-0 p-0" aria-label="Product details">
             <li>
-              <h2 className="text-base lg:text-lg font-semibold mb-1 text-sm leading-tight">
+              <h2 className="text-base lg:text-md font-semibold mb-1 text-sm leading-tight">
                 {bud.name}
               </h2>
             </li>
