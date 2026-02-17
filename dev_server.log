@@ -2,146 +2,20 @@
 > greenghost@0.1.0 dev
 > next dev
 
+ ⚠ Port 3000 is in use by process 59302, using available port 3002 instead.
    ▲ Next.js 15.5.7
-   - Local:        http://localhost:3000
-   - Network:      http://192.168.1.71:3000
+   - Local:        http://localhost:3002
+   - Network:      http://192.168.1.71:3002
    - Experiments (use with caution):
      · cpus: 1
 
  ✓ Starting...
- ✓ Ready in 3.4s
- ○ Compiling /middleware ...
- ✓ Compiled /middleware in 778ms (115 modules)
+ ✓ Ready in 10.8s
+ ✓ Compiled /middleware in 365ms (135 modules)
  ○ Compiling /[lang] ...
- ✓ Compiled /[lang] in 23.9s (9205 modules)
- ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-(node:51269) Warning: `--localstorage-file` was provided without a valid path
+ ✓ Compiled /[lang] in 15.9s (9192 modules)
+(node:60246) Warning: `--localstorage-file` was provided without a valid path
 (Use `node --trace-warnings ...` to show where the warning was created)
- GET / 200 in 35193ms
- ○ Compiling /manifest.webmanifest ...
- ✓ Compiled /manifest.webmanifest in 4.7s (9197 modules)
- GET /manifest.webmanifest 200 in 5069ms
- ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
- HEAD / 200 in 9232ms
- GET / 200 in 5340ms
- GET /manifest.webmanifest 200 in 17ms
- GET / 200 in 5157ms
- GET /manifest.webmanifest 200 in 28ms
- HEAD / 200 in 4797ms
- ○ Compiling /[lang]/menu ...
- ✓ Compiled /[lang]/menu in 2.4s (9197 modules)
- ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
- GET /manifest.webmanifest 200 in 36ms
- GET /menu 200 in 6871ms
- ○ Compiling /[lang]/menu/buds ...
- ✓ Compiled /[lang]/menu/buds in 1605ms (9211 modules)
- ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
- GET /menu/buds 200 in 5488ms
- GET /manifest.webmanifest 200 in 150ms
- ○ Compiling /api/products/[slug] ...
- ✓ Compiled /api/products/[slug] in 923ms (9213 modules)
-Fetching products for category: Strains
-Found 110 products
- GET /api/products/strains 200 in 5095ms
-Fetching products for category: Strains
-Found 110 products
- GET /api/products/strains 200 in 32ms
- GET /manifest.webmanifest 200 in 93ms
- ○ Compiling /_not-found ...
- ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
- ✓ Compiled /_not-found in 11.5s (9219 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 12091ms
- ⨯ [TypeError: Cannot read properties of undefined (reading 'call')] {
-  digest: '1379709374'
-}
- GET /menu/buds 500 in 28227ms
- ○ Compiling /[lang]/menu/pre-rolls ...
- ✓ Compiled /[lang]/menu/pre-rolls in 14.1s (9200 modules)
- ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
- GET /menu/pre-rolls 200 in 10000ms
- GET /menu/pre-rolls 200 in 8502ms
- ○ Compiling /api/products/[slug] ...
- ✓ Compiled /api/products/[slug] in 1764ms (5097 modules)
- ✓ Compiled (5099 modules)
-Fetching products for category: Strains
- GET /manifest.webmanifest 200 in 3305ms
-Found 110 products
- GET /api/products/strains 200 in 5672ms
-Fetching products for category: Strains
-Found 110 products
- GET /api/products/strains 200 in 18ms
- ✓ Compiled in 7.4s (9214 modules)
- ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
- GET /menu/pre-rolls 200 in 6420ms
- ○ Compiling /manifest.webmanifest ...
- ✓ Compiled /manifest.webmanifest in 771ms (5097 modules)
- GET /manifest.webmanifest 200 in 975ms
- ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
- GET /menu/buds 200 in 3177ms
- ○ Compiling /api/products/[slug] ...
- ✓ Compiled /api/products/[slug] in 1270ms (5099 modules)
-Fetching products for category: Strains
- GET /manifest.webmanifest 200 in 1881ms
-Found 110 products
- GET /api/products/strains 200 in 4107ms
-Fetching products for category: Strains
-Found 110 products
- GET /api/products/strains 200 in 17ms
- ○ Compiling /[lang]/strains/[id] ...
- ✓ Compiled /[lang]/strains/[id] in 5.7s (9245 modules)
-Generating metadata for product: Rozay SEO: Sip on Rozay, a premium 50/50 Hybrid with 22% THC. Experience sweet berry champagne flavors and a happy, sleepy high. Perfect for deep relaxation and stress relief.
- GET /manifest.webmanifest 200 in 62ms
- GET /strains/rozay 200 in 10845ms
-Generating metadata for product: Rozay SEO: Sip on Rozay, a premium 50/50 Hybrid with 22% THC. Experience sweet berry champagne flavors and a happy, sleepy high. Perfect for deep relaxation and stress relief.
- GET /fr/strains/rozay 200 in 7651ms
- GET /manifest.webmanifest 200 in 109ms
-Generating metadata for product: Rozay SEO: Sip on Rozay, a premium 50/50 Hybrid with 22% THC. Experience sweet berry champagne flavors and a happy, sleepy high. Perfect for deep relaxation and stress relief.
- GET /fr/strains/rozay 200 in 5064ms
- GET /manifest.webmanifest 200 in 23ms
-Generating metadata for product: Rozay SEO: Sip on Rozay, a premium 50/50 Hybrid with 22% THC. Experience sweet berry champagne flavors and a happy, sleepy high. Perfect for deep relaxation and stress relief.
- HEAD /fr/strains/rozay 200 in 4167ms
- GET /manifest.webmanifest 200 in 73ms
- ○ Compiling /_not-found ...
-Generating metadata for product: Rozay SEO: Sip on Rozay, a premium 50/50 Hybrid with 22% THC. Experience sweet berry champagne flavors and a happy, sleepy high. Perfect for deep relaxation and stress relief.
- ✓ Compiled /_not-found in 9.5s (9249 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 9900ms
- ⨯ [TypeError: Cannot read properties of undefined (reading 'call')] {
-  digest: '1379709374'
-}
-Generating metadata for product: Rozay SEO: Sip on Rozay, a premium 50/50 Hybrid with 22% THC. Experience sweet berry champagne flavors and a happy, sleepy high. Perfect for deep relaxation and stress relief.
- GET /fr/strains/rozay 500 in 11605ms
- ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
- GET /manifest.webmanifest 200 in 44ms
- GET /fr/menu 200 in 3633ms
- GET /fr/menu/buds 200 in 2742ms
- ○ Compiling /api/products/[slug] ...
- ✓ Compiled /api/products/[slug] in 1348ms (5119 modules)
-Fetching products for category: Strains
- GET /manifest.webmanifest 200 in 2024ms
-Found 110 products
- GET /api/products/strains 200 in 4142ms
-Fetching products for category: Strains
-Found 110 products
- GET /api/products/strains 200 in 24ms
-Generating metadata for product: Rozay SEO: Sip on Rozay, a premium 50/50 Hybrid with 22% THC. Experience sweet berry champagne flavors and a happy, sleepy high. Perfect for deep relaxation and stress relief.
- GET /manifest.webmanifest 200 in 33ms
- GET /fr/strains/rozay 200 in 1872ms
- ✓ Compiled in 12.4s (9238 modules)
-Generating metadata for product: Rozay SEO: Sip on Rozay, a premium 50/50 Hybrid with 22% THC. Experience sweet berry champagne flavors and a happy, sleepy high. Perfect for deep relaxation and stress relief.
- GET /fr/strains/rozay 200 in 7630ms
- ○ Compiling /manifest.webmanifest ...
- ✓ Compiled /manifest.webmanifest in 1117ms (5117 modules)
- GET /manifest.webmanifest 200 in 1508ms
- ✓ Compiled in 796ms (4140 modules)
- ✓ Compiled in 1389ms (4140 modules)
-Generating metadata for product: Rozay SEO: Sip on Rozay, a premium 50/50 Hybrid with 22% THC. Experience sweet berry champagne flavors and a happy, sleepy high. Perfect for deep relaxation and stress relief.
- GET /fr/strains/rozay 200 in 10648ms
-Generating metadata for product: Rozay SEO: Sip on Rozay, a premium 50/50 Hybrid with 22% THC. Experience sweet berry champagne flavors and a happy, sleepy high. Perfect for deep relaxation and stress relief.
- GET /fr/strains/rozay 200 in 10144ms
- GET /manifest.webmanifest 200 in 77ms
- ✓ Compiled in 23.1s (9238 modules)
-Generating metadata for product: Rozay SEO: Sip on Rozay, a premium 50/50 Hybrid with 22% THC. Experience sweet berry champagne flavors and a happy, sleepy high. Perfect for deep relaxation and stress relief.
- GET /fr/strains/rozay 200 in 6993ms
- ○ Compiling /manifest.webmanifest ...
- ✓ Compiled /manifest.webmanifest in 1038ms (5117 modules)
- GET /manifest.webmanifest 200 in 1648ms
+ GET / 200 in 24827ms
+ GET / 200 in 6454ms
+ GET / 200 in 4743ms

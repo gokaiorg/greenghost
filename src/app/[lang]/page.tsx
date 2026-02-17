@@ -103,7 +103,7 @@ export default async function Home({
         <TopSection locale={lang} />
         <PromotesList locale={lang} />
         <GardenSection locale={lang} />
-        <Reviews />
+        <Reviews locale={lang} />
         <ContactSection locale={lang} />
       </div>
     </>

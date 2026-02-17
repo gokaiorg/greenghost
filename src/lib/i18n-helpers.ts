@@ -51,3 +51,38 @@ export function selectLocalizedFields<T extends Record<string, unknown>>(
     });
     return result as Partial<T>;
 }
+
+/**
+ * Generates a localized URL for the given path and locale.
+ * 
+ * @param path - The internal path (e.g., "/menu") or external URL.
+ * @param locale - The current locale (e.g., "en" or "fr").
+ * @returns The localized URL (e.g., "/fr/menu" for locale="fr", or "/menu" for locale="en").
+ */
+export function getLocalizedUrl(path: string, locale: string): string {
+    // Return paths as-is if they are external, anchor links, or already localized
+    if (
+        path.startsWith('http') ||
+        path.startsWith('//') ||
+        path.startsWith('#') ||
+        path.startsWith('mailto:') ||
+        path.startsWith('tel:')
+    ) {
+        return path;
+    }
+
+    // Normalize path to start with /
+    const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+
+    // Helper to check if path already starts with a locale
+    const pathSegments = normalizedPath.split('/').filter(Boolean);
+    if (pathSegments.length > 0 && (pathSegments[0] === 'en' || pathSegments[0] === 'fr')) {
+        return normalizedPath;
+    }
+
+    if (locale === 'en') {
+        return normalizedPath;
+    }
+
+    return `/${locale}${normalizedPath}`;
+}

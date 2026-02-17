@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import ConnectMenu from "@/components/ConnectMenu";
+import { getLocalizedUrl } from "@/lib/i18n-helpers";
 
 export interface MenuItem {
     path: string;
@@ -38,10 +39,7 @@ export default function NavBurger({
         };
     }, [isOpen]);
 
-    const getLocalizedPath = (path: string) => {
-        if (currentLang === "en") return path;
-        return `/${currentLang}${path === "/" ? "" : path}`;
-    };
+
 
     return (
         <div className="relative" ref={menuRef}>
@@ -61,7 +59,7 @@ export default function NavBurger({
                     {items.map((item) => (
                         <li key={item.path}>
                             <Link
-                                href={getLocalizedPath(item.path)}
+                                href={getLocalizedUrl(item.path, currentLang)}
                                 title={item.label}
                                 className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname.includes(item.path) ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                                 onClick={() => setIsOpen(false)}

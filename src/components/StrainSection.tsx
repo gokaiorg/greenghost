@@ -3,6 +3,7 @@ import { Product } from "@/lib/types";
 import { getProducts } from "@/lib/products";
 import { getSectionsData } from "@/lib/bigquery";
 import { getLocalizedSection } from "@/lib/i18n-db";
+import { getLocalizedUrl } from "@/lib/i18n-helpers";
 import MiniSlider from "@/components/MiniSlider";
 import BagAddButton from "@/components/BagAddButton";
 
@@ -75,7 +76,7 @@ export default async function StrainSection({
       >
         {products.map((bud) => (
           <li key={bud.id} className="relative">
-            <Link href={`/strains/${bud.id}`} title={bud.name}>
+            <Link href={getLocalizedUrl(`/strains/${bud.id}`, locale)} title={bud.name}>
               <div
                 className={`hover:bg-[#13DE00]/13 p-1 flex flex-col relative cursor-pointer`}
               >
@@ -130,7 +131,7 @@ export default async function StrainSection({
       <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
         {content.links[0] && (
           <Link
-            href={content.links[0].url}
+            href={getLocalizedUrl(content.links[0].url, locale)}
             title={content.links[0].label}
             className="bg-transparent border-2 border-[#13DE00] text-[#13DE00] hover:bg-[#13DE00]/13 font-bold py-3 px-6 text-base transition-colors duration-300 text-center"
           >
@@ -140,7 +141,7 @@ export default async function StrainSection({
 
         {content.links[1] && (
           <Link
-            href={content.links[1].url}
+            href={getLocalizedUrl(content.links[1].url, locale)}
             title={content.links[1].label}
             className="bg-[#13DE00] hover:bg-[#10c500] text-black font-bold py-3 px-6 text-base transition-colors duration-300 text-center"
           >

@@ -2,6 +2,7 @@ import Link from "next/link";
 import MiniSlider from "@/components/MiniSlider";
 import { getSectionsData } from "@/lib/bigquery";
 import { getLocalizedSection } from "@/lib/i18n-db";
+import { getLocalizedUrl } from "@/lib/i18n-helpers";
 
 const CAROUSEL_IMAGES = [
   "/images/gardens/green-ghost-garden-phuket-01.avif",
@@ -77,7 +78,7 @@ export default async function GardenSection({
 
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
-            href={linkUrl}
+            href={getLocalizedUrl(linkUrl, locale)}
             className="bg-[#13DE00] hover:bg-[#10c500] text-black font-bold py-4 px-8 text-lg transition-colors duration-300 text-center"
             title={linkLabel}
           >

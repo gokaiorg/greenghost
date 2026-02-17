@@ -31,6 +31,9 @@ export async function PagesMetadata({
   // 3. Current Page Slug
   const currentSlug = slugEn;
 
+  // 4. Base URL
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://green.gd";
+
   const meta_title = selectLocalizedField<string>((bqData as unknown) as Record<string, unknown>, 'meta_title', locale);
   const meta_description = selectLocalizedField<string>((bqData as unknown) as Record<string, unknown>, 'meta_description', locale);
   const title = selectLocalizedField<string>((bqData as unknown) as Record<string, unknown>, 'title', locale);
@@ -43,10 +46,10 @@ export async function PagesMetadata({
     description: meta_description,
     keywords: `${title}, Cannabis Dispensary, Weed Shop, Cannabis Store, Buy Weed, Weed Delivery`,
     alternates: {
-      canonical: `/${currentSlug}`,
+      canonical: `${baseUrl}/${currentSlug}`,
       languages: {
-        'en': `/${slugEn}`,
-        'fr': `/fr/${slugEn}`,
+        'en': `${baseUrl}/${slugEn}`,
+        'fr': `${baseUrl}/fr/${slugEn}`,
       },
     },
     openGraph: {
@@ -54,11 +57,11 @@ export async function PagesMetadata({
       description: meta_description,
       type: "website",
       locale: locale === 'fr' ? 'fr_FR' : 'en_US',
-      url: `/${currentSlug}`,
+      url: `${baseUrl}/${currentSlug}`,
       siteName: SITE_NAME,
       images: [
         {
-          url: `/images/banners/green-ghost-best-degen-weed-shop-${assetSlug}.avif`,
+          url: `${baseUrl}/images/banners/green-ghost-best-degen-weed-shop-${assetSlug}.avif`,
           width: 1920,
           height: 1080,
           alt: subtitle,
@@ -72,7 +75,7 @@ export async function PagesMetadata({
       title: meta_title,
       description: meta_description,
       images: [
-        `/images/banners/green-ghost-best-degen-weed-shop-${assetSlug}.avif`,
+        `${baseUrl}/images/banners/green-ghost-best-degen-weed-shop-${assetSlug}.avif`,
       ],
     },
     robots: {

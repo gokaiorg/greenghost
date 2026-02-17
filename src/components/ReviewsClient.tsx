@@ -7,11 +7,14 @@ import { Star } from "lucide-react";
 import { sanitizeUrl } from "@/lib/utils/url";
 import { Review } from "@/lib/types";
 
+import { getLocalizedUrl } from "@/lib/i18n-helpers";
+
 interface ReviewsClientProps {
     reviews: Review[];
+    locale?: string;
 }
 
-export default function ReviewsClient({ reviews = [] }: ReviewsClientProps) {
+export default function ReviewsClient({ reviews = [], locale = "en" }: ReviewsClientProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [itemsPerPage, setItemsPerPage] = useState(3);
     const [isDragging, setIsDragging] = useState(false);
@@ -236,7 +239,7 @@ export default function ReviewsClient({ reviews = [] }: ReviewsClientProps) {
                                                         </a>
                                                         {review.shop && (
                                                             <Link
-                                                                href={`/locations/${review.shop.toLowerCase()}`}
+                                                                href={getLocalizedUrl(`/locations/${review.shop.toLowerCase()}`, locale)}
                                                                 className="text-xs bg-gray-700 text-white py-1 px-2 hover:bg-gray-600 transition-colors"
                                                                 title={review.shop}
                                                             >

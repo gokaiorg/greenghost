@@ -3,6 +3,7 @@ import { Product } from "@/lib/types";
 import { getProducts } from "@/lib/products";
 import { getSectionsData } from "@/lib/bigquery";
 import { getLocalizedSection } from "@/lib/i18n-db";
+import { getLocalizedUrl } from "@/lib/i18n-helpers";
 import MiniSlider from "@/components/MiniSlider";
 import BagAddButton from "@/components/BagAddButton";
 
@@ -86,7 +87,7 @@ export default async function GadgetSection({
       >
         {products.map((gadget) => (
           <li key={gadget.id} className="relative">
-            <Link href={`/gadgets/${gadget.id}`} title={gadget.name}>
+            <Link href={getLocalizedUrl(`/gadgets/${gadget.id}`, locale)} title={gadget.name}>
               <div
                 className={`hover:bg-[#13DE00]/13 p-1 flex flex-col relative cursor-pointer`}
               >
@@ -125,7 +126,7 @@ export default async function GadgetSection({
       </ul>
       <div className="mt-8 text-center">
         <Link
-          href={linkUrl}
+          href={getLocalizedUrl(linkUrl, locale)}
           className="inline-block px-8 py-3 bg-[#13DE00] text-black font-bold text-lg hover:bg-[#13DE00]/80 transition-colors uppercase font-pixel shadow-[4px_4px_0px_#000000] border border-black hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#000000] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
         >
           {linkLabel}

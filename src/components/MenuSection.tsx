@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getSectionsData } from "@/lib/bigquery";
 import { getLocalizedSection } from "@/lib/i18n-db";
+import { getLocalizedUrl } from "@/lib/i18n-helpers";
 
 interface MenuSectionProps {
   locale?: string;
@@ -33,7 +34,7 @@ export default async function MenuSection({
       />
       <h2 className="text-2xl md:text-4xl font-bold mb-4 leading-tight">
         <Link
-          href="/menu"
+          href={getLocalizedUrl("/menu", locale)}
           className="text-[#13DE00] hover:text-[#13DE00]/80 transition-colors duration-300"
           aria-label="Shop our cannabis menu"
           title={title}

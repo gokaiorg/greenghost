@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getLocalizedUrl } from "@/lib/i18n-helpers";
 
 const HERO_IMAGES = [
   "/images/banners/green-ghost-best-degen-weed-shop-delivery-01.avif",
@@ -21,6 +22,7 @@ export default function BannerHero({
   menuSlot,
   subtitle,
   description,
+  locale,
 }: BannerHeroProps) {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
@@ -106,14 +108,14 @@ export default function BannerHero({
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link
-            href="/menu"
+            href={getLocalizedUrl("/menu", locale || "en")}
             className="bg-[#13DE00] hover:bg-[#10c500] text-black font-bold py-4 px-8 text-lg transition-colors duration-300"
             title="Cannabis Thailand"
           >
             CANNABIS THAILAND
           </Link>
           <Link
-            href="/cbd-france"
+            href={getLocalizedUrl("/cbd-france", locale || "en")}
             className="bg-transparent border-2 border-[#13DE00] text-[#13DE00] hover:bg-[#13DE00]/13 font-bold py-4 px-8 text-lg transition-colors duration-300"
             title="CBD France"
           >

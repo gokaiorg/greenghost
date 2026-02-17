@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getTopsData, getSectionsData } from "@/lib/bigquery";
 import { getLocalizedSection } from "@/lib/i18n-db";
 import { sanitizeUrl } from "@/lib/utils/url";
+import { getLocalizedUrl } from "@/lib/i18n-helpers";
 
 interface TopSectionProps {
   locale?: string;
@@ -58,7 +59,7 @@ export default async function TopSection({ locale = "en" }: TopSectionProps) {
         </div>
 
         <Link
-          href={linkUrl}
+          href={getLocalizedUrl(linkUrl, locale)}
           className="shrink-0 inline-flex items-center gap-2 text-[#13DE00] hover:text-white font-bold text-sm transition-colors group border border-[#13DE00]/21 hover:border-[#13DE00] px-4 py-2 rounded-none bg-[#13DE00]/5 hover:bg-[#13DE00]/13"
           title={linkLabel}
         >

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getPromotesData } from "@/lib/bigquery";
-import { selectLocalizedField } from "@/lib/i18n-helpers";
+import { selectLocalizedField, getLocalizedUrl } from "@/lib/i18n-helpers";
 
 const imageMapping: Record<string, string> = {
   "Cannabis Medical Prescription": "legal-laws",
@@ -18,7 +18,7 @@ export default async function PromotesList({ locale = 'en' }: PromotesListProps 
   const items = await getPromotesData();
 
   return (
-    <section className="container mx-auto px-4 py-12">
+    <section className="container mx-auto px-4 py-12" aria-label="Promotions Section">
       <ul
         className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4"
         aria-label="Promotions List"
@@ -55,7 +55,7 @@ export default async function PromotesList({ locale = 'en' }: PromotesListProps 
                   {description}
                 </p>
                 <Link
-                  href={item.link}
+                  href={getLocalizedUrl(item.link, locale)}
                   className="inline-block bg-[#13DE00] hover:bg-[#10c500] text-black font-bold py-3 px-8 transition-colors uppercase text-sm tracking-wider"
                 >
                   {linkLabel}

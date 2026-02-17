@@ -2,7 +2,7 @@ import { getReviewsData } from "@/lib/bigquery";
 import { shuffleArray } from "@/lib/utils/array";
 import ReviewsClient from "./ReviewsClient";
 
-export default async function Reviews() {
+export default async function Reviews({ locale = "en" }: { locale?: string }) {
   const reviewsData = await getReviewsData();
 
   // Map BigQuery data to component props
@@ -14,5 +14,5 @@ export default async function Reviews() {
   }));
   const shuffledReviews = shuffleArray(reviews);
 
-  return <ReviewsClient reviews={shuffledReviews} />;
+  return <ReviewsClient reviews={shuffledReviews} locale={locale} />;
 }

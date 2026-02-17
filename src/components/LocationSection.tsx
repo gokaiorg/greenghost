@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getAllLocations, getSectionsData } from "@/lib/bigquery";
 import { getLocalizedSection } from "@/lib/i18n-db";
+import { getLocalizedUrl } from "@/lib/i18n-helpers";
 
 interface LocationSectionProps {
   locale?: string;
@@ -70,7 +71,7 @@ export default async function LocationSection({
             <div className="absolute top-0 left-0 w-1 h-full bg-[#13DE00] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
 
             <Link
-              href={`/locations/${location.slug}`}
+              href={getLocalizedUrl(`/locations/${location.slug}`, locale)}
               className="block group-hover:text-[#13DE00] transition-colors"
               title={location.name}
             >
@@ -96,7 +97,7 @@ export default async function LocationSection({
 
       <div className="text-center">
         <Link
-          href={linkUrl}
+          href={getLocalizedUrl(linkUrl, locale)}
           title={linkLabel}
           className="inline-flex items-center gap-2 text-white hover:text-[#13DE00] font-bold transition-colors group"
         >
