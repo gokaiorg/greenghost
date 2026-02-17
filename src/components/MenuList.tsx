@@ -1,6 +1,7 @@
 import Link from "next/link";
 import NextImage from "next/image";
 import { getPagesData } from "@/lib/bigquery";
+import { selectLocalizedField } from "@/lib/i18n-helpers";
 
 const menuPages = [
   "Buds Menu",
@@ -10,26 +11,34 @@ const menuPages = [
   "Gadgets Menu",
 ];
 
-export default async function MenuList() {
+interface MenuListProps {
+  locale?: string;
+}
+
+export default async function MenuList({ locale = 'en' }: MenuListProps = {}) {
   const categoriesData = await Promise.all(
     menuPages.map(async (pageName) => {
       const data = await getPagesData(pageName);
-      // Default fallback if data is missing, though strictly expected to be there
-      const name =
-        data?.title.replace(" Menu", "") || pageName.replace(" Menu", "");
-      const slug = name.toLowerCase().replace(/\s+/g, "-");
 
-      // Construct the exact image path used previously
-      // e.g. /images/banners/buds-menu-weed-shop-green-ghost.avif
+      const title = selectLocalizedField<string>((data as unknown) as Record<string, unknown>, 'title', locale);
+      const description = selectLocalizedField<string>((data as unknown) as Record<string, unknown>, 'description', locale);
+
+      // Display Name (localized)
+      const displayName = title?.replace(" Menu", "") || pageName.replace(" Menu", "");
+
+      // Slug for URL (ALWAYS English)
+      const slugName = pageName.replace(" Menu", "");
+      const slug = slugName.toLowerCase().replace(/\s+/g, "-");
+
       const imageSlug = slug === "pre-rolls" ? "pre-rolls" : slug;
       const defaultImage = `/images/banners/${imageSlug}-menu-weed-shop-green-ghost.avif`;
 
       return {
         slug,
-        name,
+        name: displayName,
         defaultImage,
-        defaultDescription: data?.description || "",
-        path: `/menu/${slug}`,
+        defaultDescription: description || "",
+        path: locale === 'en' ? `/menu/${slug}` : `/${locale}/menu/${slug}`,
       };
     }),
   );

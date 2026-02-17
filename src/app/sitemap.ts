@@ -2,219 +2,142 @@ import { MetadataRoute } from "next";
 import { getAllLocations } from "@/lib/bigquery";
 import { getProductsByCategory } from "@/lib/products";
 import { getNFTsData } from "@/lib/bigquery";
+import { i18n } from "@/i18n-config";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://green.gd";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  // Static pages with their priorities
-  const staticPages: MetadataRoute.Sitemap = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/garden`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/menu`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/strains`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/delivery`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/wholesale`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/payment`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/locations`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/cannabis-club`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/nft`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/jobs`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/weed`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/cbd-france`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/growers`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/seeds`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/best-weed-shops-thailand`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/legal-laws`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
+  const routes = [
+    "",
+    "/garden",
+    "/menu",
+    "/strains",
+    "/delivery",
+    "/wholesale",
+    "/payment",
+    "/locations",
+    "/cannabis-club",
+    "/nft",
+    "/about",
+    "/contact",
+    "/jobs",
+    "/weed",
+    "/cbd-france",
+    "/growers",
+    "/seeds",
+    "/best-weed-shops-thailand",
+    "/legal-laws",
   ];
 
-  // Menu subpages
-  const menuPages: MetadataRoute.Sitemap = [
+  const menuCategories = [
     "buds",
     "pre-rolls",
     "edibles",
     "concentrates",
     "gadgets",
-  ].map((category) => ({
-    url: `${baseUrl}/menu/${category}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.8,
-  }));
+  ];
 
-  let dynamicPages: MetadataRoute.Sitemap = [];
+  const sitemapEntries: MetadataRoute.Sitemap = [];
+
+  // Helper to add entries for all locales
+  const addEntries = (path: string, changeFrequency: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never", priority: number) => {
+    i18n.locales.forEach((locale) => {
+      const url =
+        locale === i18n.defaultLocale
+          ? `${baseUrl}${path}`
+          : `${baseUrl}/${locale}${path}`;
+      sitemapEntries.push({
+        url,
+        lastModified: new Date(),
+        changeFrequency,
+        priority,
+      });
+    });
+  };
+
+
+
+
+  // Static pages
+  routes.forEach((route) => {
+    // Determine priority and frequency based on your original logic
+    let priority = 0.5;
+    let changeFrequency: "weekly" | "monthly" | "daily" = "monthly";
+
+    if (route === "") {
+      priority = 1;
+      changeFrequency = "daily";
+    } else if (
+      ["/garden", "/menu", "/locations", "/cbd-france"].includes(route)
+    ) {
+      priority = 0.9;
+      changeFrequency = "weekly";
+    } else if (["/strains", "/delivery", "/wholesale"].includes(route)) {
+      priority = 0.8;
+    } else if (
+      [
+        "/payment",
+        "/cannabis-club",
+        "/best-weed-shops-thailand",
+        "/legal-laws",
+      ].includes(route)
+    ) {
+      priority = 0.7;
+    } else if (
+      ["/nft", "/jobs", "/weed", "/growers", "/seeds"].includes(route)
+    ) {
+      priority = 0.6;
+    }
+
+    addEntries(route, changeFrequency, priority);
+  });
+
+  // Menu subpages
+  menuCategories.forEach((category) => {
+    addEntries(`/menu/${category}`, "weekly", 0.8);
+  });
 
   try {
-    // Fetch dynamic location pages
+    // Dynamic location pages
     const locations = await getAllLocations();
-    const locationPages: MetadataRoute.Sitemap = locations.map((location) => ({
-      url: `${baseUrl}/locations/${location.slug}`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    }));
-    dynamicPages = [...dynamicPages, ...locationPages];
+    locations.forEach((location) => {
+      addEntries(`/locations/${location.slug}`, "weekly", 0.8);
+    });
 
-    // Fetch strains
+    // Strains
     console.log("Fetching strains for sitemap...");
     const strains = await getProductsByCategory("Strains");
     console.log(`Found ${strains.length} strains`);
-    const strainPages: MetadataRoute.Sitemap = strains.map(
-      (strain: { id: string }) => ({
-        url: `${baseUrl}/strains/${strain.id}`,
-        lastModified: new Date(),
-        changeFrequency: "weekly",
-        priority: 0.7,
-      }),
-    );
-    dynamicPages = [...dynamicPages, ...strainPages];
+    strains.forEach((strain: { id: string }) => {
+      addEntries(`/strains/${strain.id}`, "weekly", 0.7);
+    });
 
-    // Fetch edibles
+    // Edibles
     const edibles = await getProductsByCategory("Edibles");
-    const ediblePages: MetadataRoute.Sitemap = edibles.map(
-      (edible: { id: string }) => ({
-        url: `${baseUrl}/edibles/${edible.id}`,
-        lastModified: new Date(),
-        changeFrequency: "weekly",
-        priority: 0.7,
-      }),
-    );
-    dynamicPages = [...dynamicPages, ...ediblePages];
+    edibles.forEach((edible: { id: string }) => {
+      addEntries(`/edibles/${edible.id}`, "weekly", 0.7);
+    });
 
-    // Fetch concentrates
+    // Concentrates
     const concentrates = await getProductsByCategory("Concentrates");
-    const concentratePages: MetadataRoute.Sitemap = concentrates.map(
-      (concentrate: { id: string }) => ({
-        url: `${baseUrl}/concentrates/${concentrate.id}`,
-        lastModified: new Date(),
-        changeFrequency: "weekly",
-        priority: 0.7,
-      }),
-    );
-    dynamicPages = [...dynamicPages, ...concentratePages];
+    concentrates.forEach((concentrate: { id: string }) => {
+      addEntries(`/concentrates/${concentrate.id}`, "weekly", 0.7);
+    });
 
-    // Fetch gadgets
+    // Gadgets
     const gadgets = await getProductsByCategory("Gadgets");
-    const gadgetPages: MetadataRoute.Sitemap = gadgets.map(
-      (gadget: { id: string }) => ({
-        url: `${baseUrl}/gadgets/${gadget.id}`,
-        lastModified: new Date(),
-        changeFrequency: "weekly",
-        priority: 0.7,
-      }),
-    );
-    dynamicPages = [...dynamicPages, ...gadgetPages];
+    gadgets.forEach((gadget: { id: string }) => {
+      addEntries(`/gadgets/${gadget.id}`, "weekly", 0.7);
+    });
 
-    // Fetch NFTs
+    // NFTs
     const nfts = await getNFTsData();
-    const nftPages: MetadataRoute.Sitemap = nfts.map(
-      (nft: { slug: string }) => ({
-        url: `${baseUrl}/nft/${nft.slug}`,
-        lastModified: new Date(),
-        changeFrequency: "monthly",
-        priority: 0.6,
-      }),
-    );
-    dynamicPages = [...dynamicPages, ...nftPages];
+    nfts.forEach((nft: { slug: string }) => {
+      addEntries(`/nft/${nft.slug}`, "monthly", 0.6);
+    });
   } catch (error) {
     console.error("Error generating sitemap:", error);
   }
 
-  return [...staticPages, ...menuPages, ...dynamicPages];
+  return sitemapEntries;
 }

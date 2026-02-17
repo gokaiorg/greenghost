@@ -1,36 +1,67 @@
 import { Metadata } from "next";
 import { getPagesData } from "@/lib/bigquery";
+import { selectLocalizedField } from "@/lib/i18n-helpers";
 
 interface PagesMetadataProps {
   pageName: string;
+  locale?: string;
   keywords?: string | string[];
 }
 
 export async function PagesMetadata({
   pageName,
+  locale = 'en',
 }: PagesMetadataProps): Promise<Metadata> {
   const bqData = await getPagesData(pageName);
-  const meta_title = bqData?.meta_title;
-  const meta_description = bqData?.meta_description;
-  const pageSlug = (bqData?.title || "").toLowerCase().replace(/\s+/g, "-");
-  const subtitle = bqData?.subtitle || "";
-  const page_name = bqData?.title || "";
+
+  /* 
+     CORRECTION:
+     - We use `title_en` for EVERYTHING (Asset Slug and URL Slug) as per user request.
+     - Localized titles are only used for meta tags (title, description).
+  */
+  const title_en = bqData?.title_en || "";
+
+  // 1. Asset Slug: Always based on English title
+  const assetSlug = title_en.toLowerCase().replace(/\s+/g, "-");
+
+  // 2. URL Slugs: Always based on English title
+  const rawSlugEn = title_en.toLowerCase().replace(/\s+/g, "-");
+  const slugEn = rawSlugEn === "green-ghost" ? "" : rawSlugEn;
+
+  // 3. Current Page Slug
+  const currentSlug = slugEn;
+
+  // 4. Base URL
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://green.gd";
+
+  const meta_title = selectLocalizedField<string>((bqData as unknown) as Record<string, unknown>, 'meta_title', locale);
+  const meta_description = selectLocalizedField<string>((bqData as unknown) as Record<string, unknown>, 'meta_description', locale);
+  const title = selectLocalizedField<string>((bqData as unknown) as Record<string, unknown>, 'title', locale);
+  const subtitle = selectLocalizedField<string>((bqData as unknown) as Record<string, unknown>, 'subtitle', locale);
   const SITE_NAME = "Green Ghost 🌿👻";
+
 
   return {
     title: meta_title,
     description: meta_description,
-    keywords: `${page_name}, Cannabis Dispensary, Weed Shop, Cannabis Store, Buy Weed, Weed Delivery`,
+    keywords: `${title}, Cannabis Dispensary, Weed Shop, Cannabis Store, Buy Weed, Weed Delivery`,
+    alternates: {
+      canonical: `${baseUrl}/${currentSlug}`,
+      languages: {
+        'en': `${baseUrl}/${slugEn}`,
+        'fr': `${baseUrl}/fr/${slugEn}`,
+      },
+    },
     openGraph: {
       title: meta_title,
       description: meta_description,
       type: "website",
-      locale: "en_US",
-      url: `/${pageSlug}`,
+      locale: locale === 'fr' ? 'fr_FR' : 'en_US',
+      url: `${baseUrl}/${currentSlug}`,
       siteName: SITE_NAME,
       images: [
         {
-          url: `/images/banners/green-ghost-best-degen-weed-shop-${pageSlug}.avif`,
+          url: `${baseUrl}/images/banners/green-ghost-best-degen-weed-shop-${assetSlug}.avif`,
           width: 1920,
           height: 1080,
           alt: subtitle,
@@ -44,11 +75,8 @@ export async function PagesMetadata({
       title: meta_title,
       description: meta_description,
       images: [
-        `/images/banners/green-ghost-best-degen-weed-shop-${pageSlug}.avif`,
+        `${baseUrl}/images/banners/green-ghost-best-degen-weed-shop-${assetSlug}.avif`,
       ],
-    },
-    alternates: {
-      canonical: `/${pageSlug}`,
     },
     robots: {
       index: true,

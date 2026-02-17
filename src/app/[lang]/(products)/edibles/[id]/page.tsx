@@ -1,0 +1,100 @@
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+
+import EdibleProductClient from "./EdibleProductClient";
+
+import { toJsonLd } from "@/lib/utils/json-ld";
+import { Product } from "@/lib/types";
+import {
+  generateProductMetadata,
+  generateProductSchema,
+} from "@/lib/config/product-metadata";
+import { getProductById } from "@/lib/products";
+import fs from "fs/promises";
+import path from "path";
+
+import MenuListInline from "@/components/MenuListInline";
+
+interface PageProps {
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}
+
+async function getProduct(id: string): Promise<Product | null> {
+  try {
+    const product = await getProductById(id);
+    if (!product || product.type !== "Edibles") {
+      return null;
+    }
+    const validImages: string[] = [];
+
+    const potentialImages = [
+      `/images/edibles/green-ghost-degen-weed-shop-menu-edible-${product.id}-cover.avif`,
+      `/images/edibles/green-ghost-degen-weed-shop-menu-edible-${product.id}-01.avif`,
+      `/images/edibles/green-ghost-degen-weed-shop-menu-edible-${product.id}-02.avif`,
+    ];
+
+    for (const imgPath of potentialImages) {
+      const fullPath = path.join(process.cwd(), "public", imgPath);
+      try {
+        await fs.access(fullPath);
+        validImages.push(imgPath);
+      } catch {
+        console.warn(`Image not found: ${imgPath}`);
+      }
+    }
+    product.images = validImages;
+
+    return product;
+  } catch (error) {
+    console.error("Error fetching product:", error);
+    return null;
+  }
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { id } = await params;
+  const product = await getProduct(id);
+
+  if (!product) {
+    return {
+      title: "Product Not Found | Green Ghost Weed Shop",
+      description: "The requested product could not be found.",
+    };
+  }
+
+  console.log(
+    "Generating metadata for product:",
+    product.name,
+    "SEO:",
+    product.seo,
+  );
+  return generateProductMetadata(product);
+}
+
+export default async function EdibleProductPage({
+  params,
+}: {
+  params: Promise<{ id: string; lang: string }>;
+}) {
+  const { id, lang } = await params;
+  const product = await getProduct(id);
+  if (!product) {
+    notFound();
+  }
+  const schema = generateProductSchema(product);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: toJsonLd(schema),
+        }}
+      />
+      <EdibleProductClient product={product} menuSlot={<MenuListInline locale={lang} />} />
+    </>
+  );
+}

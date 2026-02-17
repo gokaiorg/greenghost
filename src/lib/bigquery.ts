@@ -2,6 +2,7 @@ import { BigQuery } from "@google-cloud/bigquery";
 import { cache } from "react";
 import path from "path";
 
+
 const credentials =
   process.env.GOOGLE_CLIENT_EMAIL && process.env.GOOGLE_PRIVATE_KEY
     ? {
@@ -31,30 +32,36 @@ export const bigquery = new BigQuery({
    PAGES DATA 
    ========================================= */
 export interface PageData {
-  title: string;
-  subtitle: string;
-  description: string;
-  section_title: string;
-  section_description: string;
-  label: string;
-  meta_title: string;
-  meta_description: string;
+  // Raw localized fields
+  title_en?: string;
+  title_fr?: string;
+  subtitle_en?: string;
+  subtitle_fr?: string;
+  description_en?: string;
+  description_fr?: string;
+  section_title_en?: string;
+  section_title_fr?: string;
+  section_description_en?: string;
+  section_description_fr?: string;
+  label_en?: string;
+  label_fr?: string;
+  meta_title_en?: string;
+  meta_title_fr?: string;
+  meta_description_en?: string;
+  meta_description_fr?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
 }
+
+/* ... existing code ... */
 
 export const getPagesData = cache(
   async (pageTitle: string): Promise<PageData | null> => {
+    // Select all columns to get raw data
     const query = `
-      SELECT
-        title,
-        subtitle,
-        description,
-        section_title,
-        section_description,
-        label,
-        meta_title,
-        meta_description
+      SELECT *
       FROM \`green-ghost-432101.staging.stg_pages\`
-      WHERE LOWER(title) LIKE LOWER(@pageTitle)
+      WHERE LOWER(title_en) LIKE LOWER(@pageTitle)
       LIMIT 1
     `;
 
@@ -63,7 +70,12 @@ export const getPagesData = cache(
         query,
         params: { pageTitle: `${pageTitle}%` },
       });
-      return rows.length > 0 ? (rows[0] as PageData) : null;
+
+      if (rows.length > 0) {
+        const row = rows[0];
+        return row as PageData;
+      }
+      return null;
     } catch (error) {
       console.error("BigQuery fetching error (pages):", error);
       return null;
@@ -838,6 +850,44 @@ export const getProductsData = cache(async (): Promise<ProductData[]> => {
     }));
   } catch (error) {
     console.error("BigQuery fetching error (products):", error);
+    return [];
+  }
+});
+
+/* =========================================
+   SECTIONS DATA
+   ========================================= */
+export interface SectionData {
+  component: string;
+  title_en: string;
+  title_fr: string;
+  description_en: string;
+  description_fr: string;
+  link_label_01_en: string;
+  link_label_01_fr: string;
+  link_url_01_en: string;
+  link_url_01_fr: string;
+  link_label_02_en: string;
+  link_label_02_fr: string;
+  link_url_02_en: string;
+  link_url_02_fr: string;
+  link_label_03_en: string;
+  link_label_03_fr: string;
+  link_url_03_en: string;
+  link_url_03_fr: string;
+}
+
+export const getSectionsData = cache(async (): Promise<SectionData[]> => {
+  const query = `
+    SELECT *
+    FROM \`green-ghost-432101.staging.stg_sections\`
+  `;
+
+  try {
+    const [rows] = await bigquery.query({ query });
+    return rows as SectionData[];
+  } catch (error) {
+    console.error("BigQuery fetching error (sections):", error);
     return [];
   }
 });

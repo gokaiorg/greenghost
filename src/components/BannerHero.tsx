@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getLocalizedUrl } from "@/lib/i18n-helpers";
 
 const HERO_IMAGES = [
   "/images/banners/green-ghost-best-degen-weed-shop-delivery-01.avif",
@@ -14,12 +15,14 @@ interface BannerHeroProps {
   menuSlot?: ReactNode;
   subtitle?: string;
   description?: string;
+  locale?: string;
 }
 
 export default function BannerHero({
   menuSlot,
-  subtitle = "Best Degen Weed Shop and Delivery",
-  description = "Discover Thailand's top-rated cannabis dispensary offering premium quality weed hand-picked from the finest local growers. Green Ghost delivers exceptional strains, edibles, concentrates, and accessories across Phuket, Bangkok, and nationwide. Experience fast, reliable weed delivery with expert service, competitive prices, and organic products. From Rawai to Karon, we're your trusted source for authentic Thai cannabis. Also serving premium CBD products in France!",
+  subtitle,
+  description,
+  locale,
 }: BannerHeroProps) {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
@@ -54,9 +57,10 @@ export default function BannerHero({
   }, []);
 
   return (
-    <div
+    <section
       ref={parallaxRef}
       className="relative md:py-24 2xl:py-32 flex flex-col items-center justify-center overflow-hidden"
+      aria-label="Banner Hero"
     >
       {/* Background with parallax effect */}
       <div className="absolute inset-0 z-0">
@@ -92,36 +96,36 @@ export default function BannerHero({
 
       {/* Content */}
       <div className="container md:max-w-6xl md:px-4 bg-black/69 p-5 md:mx-auto z-30 text-center">
-        <h1 className="md:max-w-3xl mx-auto text-[25px] sm:text-[30px] md:text-[55px] font-bold mb-6 leading-tight">
+        <h1 className="md:max-w-3xl mx-auto text-[25px] sm:text-[30px] md:text-[40px] font-bold mb-6 leading-tight">
           <span className="text-[#13DE00]">
             {subtitle}
           </span>
         </h1>
 
-        <p className="text-sm sm:text-md md:text-lg text-gray-300 mb-10 max-w-5xl mx-auto">
+        <p className="text-sm sm:text-md md:text-[1rem] text-gray-300 mb-10 max-w-5xl mx-auto">
           {description}
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link
-            href="/menu"
+            href={getLocalizedUrl("/menu", locale || "en")}
             className="bg-[#13DE00] hover:bg-[#10c500] text-black font-bold py-4 px-8 text-lg transition-colors duration-300"
-            title="Shop Now"
+            title="Cannabis Thailand"
           >
-            Shop Now
+            CANNABIS THAILAND
           </Link>
           <Link
-            href="/delivery"
+            href={getLocalizedUrl("/cbd-france", locale || "en")}
             className="bg-transparent border-2 border-[#13DE00] text-[#13DE00] hover:bg-[#13DE00]/13 font-bold py-4 px-8 text-lg transition-colors duration-300"
-            title="Order Online"
+            title="CBD France"
           >
-            Order Online
+            CBD FRANCE
           </Link>
         </div>
 
         {/* Products Menu */}
         <div className="my-10 mx-auto">{menuSlot}</div>
       </div>
-    </div>
+    </section>
   );
 }

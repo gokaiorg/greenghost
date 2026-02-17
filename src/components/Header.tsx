@@ -4,20 +4,22 @@ import Link from "next/link";
 import Image from "next/image";
 import { useCart } from "@/contexts/CartContext";
 import { usePathname } from "next/navigation";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import BagPopup from "@/components/BagPopup";
-import { Menu, X } from "lucide-react";
-import ConnectMenu from "@/components/ConnectMenu";
 
-export default function Header() {
+import ConnectMenu from "@/components/ConnectMenu";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+
+import NavBurger, { MenuItem } from "@/components/NavBurger";
+
+export default function Header({ locale, menuItems }: { locale?: string; menuItems?: MenuItem[] }) {
   const { getItemCount } = useCart();
   const itemCount = getItemCount();
   const pathname = usePathname();
+  const currentLang = locale || "en";
   const [isHydrated, setIsHydrated] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isBumping, setIsBumping] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (itemCount === 0) return;
@@ -30,29 +32,11 @@ export default function Header() {
     setIsHydrated(true);
   }, []);
 
-  useEffect(() => {
-    if (!isMenuOpen) return;
-
-    // Close menu when clicking outside
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsMenuOpen(false);
-      }
-    };
-
-    // Close menu when scrolling
-    const handleScroll = () => {
-      setIsMenuOpen(false);
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isMenuOpen]);
+  // Helper to generate localized paths (though mostly handled in NavBurger now for logic there)
+  const getLocalizedPath = (path: string) => {
+    if (currentLang === "en") return path;
+    return `/${currentLang}${path === "/" ? "" : path}`;
+  };
 
   return (
     <header className="sticky top-0 z-40 text-white py-2 px-4 bg-black/80 backdrop-blur-sm border-b border-[#13DE00]/21">
@@ -64,7 +48,7 @@ export default function Header() {
       </a>
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-4">
-          <Link href="/" className="flex-shrink-0" title="Green Ghost Home">
+          <Link href={getLocalizedPath("/")} className="flex-shrink-0" title="Green Ghost Home">
             <Image
               src="/images/green-ghost-degen-weed-shop.avif"
               alt="Green Ghost"
@@ -76,166 +60,7 @@ export default function Header() {
               style={{ height: "auto" }}
             />
           </Link>
-          <div className="relative" ref={menuRef}>
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="hover:text-[#13DE00] transition-colors p-2 cursor-pointer"
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-
-            {isMenuOpen && (
-              <ul
-                className="fixed left-0 right-0 top-22 bg-black border-t border-b border-[#13DE00] shadow-lg py-1 z-50 md:absolute md:left-0 md:right-auto md:top-full md:mt-2 md:w-content md:border list-none m-0 p-0"
-                aria-label="Mobile navigation menu"
-              >
-                <li>
-                  <Link
-                    href="/menu"
-                    title="Explore our menu"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/menu" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
-                    onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === "/menu" ? "page" : undefined}
-                  >
-                    Explore our menu
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/delivery"
-                    title="Get delivered"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/delivery" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
-                    onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === "/delivery" ? "page" : undefined}
-                  >
-                    Get delivered
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/wholesale"
-                    title="Bulk ordering"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/wholesale" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
-                    onClick={() => setIsMenuOpen(false)}
-                    aria-current={
-                      pathname === "/wholesale" ? "page" : undefined
-                    }
-                  >
-                    Bulk ordering
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/payment"
-                    title="Make a payment"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/payment" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
-                    onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === "/payment" ? "page" : undefined}
-                  >
-                    Make a payment
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/strains"
-                    title="All the strains"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/strains" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
-                    onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === "/strains" ? "page" : undefined}
-                  >
-                    All the strains
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/weed"
-                    title="Learn about weed"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/weed" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
-                    onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === "/weed" ? "page" : undefined}
-                  >
-                    Learn about weed
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/about"
-                    title="Cannabis culture"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname?.startsWith("/about") ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
-                    onClick={() => setIsMenuOpen(false)}
-                    aria-current={
-                      pathname?.startsWith("/about") ? "page" : undefined
-                    }
-                  >
-                    Cannabis culture
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/cannabis-club"
-                    title="Join the club"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/cannabis-club" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
-                    onClick={() => setIsMenuOpen(false)}
-                    aria-current={
-                      pathname === "/cannabis-club" ? "page" : undefined
-                    }
-                  >
-                    Join the club
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/nft"
-                    title="Mint your NFT"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/nft" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
-                    onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === "/nft" ? "page" : undefined}
-                  >
-                    Mint your NFT
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/jobs"
-                    title="We are hiring"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/jobs" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
-                    onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === "/jobs" ? "page" : undefined}
-                  >
-                    We are hiring
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/locations"
-                    title="Visit our locations"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/locations" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
-                    onClick={() => setIsMenuOpen(false)}
-                    aria-current={
-                      pathname === "/locations" ? "page" : undefined
-                    }
-                  >
-                    Visit our locations
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    title="Contact us now"
-                    className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname === "/contact" ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
-                    onClick={() => setIsMenuOpen(false)}
-                    aria-current={pathname === "/contact" ? "page" : undefined}
-                  >
-                    Contact us now
-                  </Link>
-                </li>
-                <li className="px-4 py-2 md:hidden">
-                  <ConnectMenu />
-                </li>
-              </ul>
-            )}
-          </div>
+          <NavBurger locale={currentLang} items={menuItems || []} />
         </div>
 
         <div className="flex items-center">
@@ -245,30 +70,30 @@ export default function Header() {
           >
             <li>
               <Link
-                href="/menu"
+                href={getLocalizedPath("/menu")}
                 title="Menu"
-                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname === "/menu" ? "text-[#13DE00]" : ""}`}
-                aria-current={pathname === "/menu" ? "page" : undefined}
+                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname.includes("/menu") ? "text-[#13DE00]" : ""}`}
+                aria-current={pathname.includes("/menu") ? "page" : undefined}
               >
                 Menu
               </Link>
             </li>
             <li>
               <Link
-                href="/delivery"
+                href={getLocalizedPath("/delivery")}
                 title="Delivery"
-                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname === "/delivery" ? "text-[#13DE00]" : ""}`}
-                aria-current={pathname === "/delivery" ? "page" : undefined}
+                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname.includes("/delivery") ? "text-[#13DE00]" : ""}`}
+                aria-current={pathname.includes("/delivery") ? "page" : undefined}
               >
                 Delivery
               </Link>
             </li>
             <li>
               <Link
-                href="/contact"
+                href={getLocalizedPath("/contact")}
                 title="Contact"
-                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname === "/contact" ? "text-[#13DE00]" : ""}`}
-                aria-current={pathname === "/contact" ? "page" : undefined}
+                className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname.includes("/contact") ? "text-[#13DE00]" : ""}`}
+                aria-current={pathname.includes("/contact") ? "page" : undefined}
               >
                 Contact
               </Link>
@@ -297,7 +122,8 @@ export default function Header() {
             </button>
           </div>
 
-          <div className="ml-4">
+          <div className="ml-4 flex items-center gap-4">
+            <LanguageSwitcher />
             <ConnectMenu />
           </div>
         </div>

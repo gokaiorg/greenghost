@@ -8,17 +8,20 @@ import BagAddButton from "./BagAddButton";
 
 interface BudListItemProps {
   bud: Product;
+  locale?: string;
 }
 
-const BudListItem = memo(({ bud }: BudListItemProps) => {
+const BudListItem = memo(({ bud, locale = 'en' }: BudListItemProps) => {
   const images = [
     `/images/strains/green-ghost-degen-weed-shop-strain-${bud.id}-cover.avif`,
     `/images/strains/green-ghost-degen-weed-shop-strain-${bud.id}-bud-01.avif`,
   ];
 
+  const prefix = locale === 'en' ? '' : `/${locale}`;
+
   return (
     <li className="relative">
-      <Link href={`/strains/${bud.id}`} title={bud.name}>
+      <Link href={`${prefix}/strains/${bud.id}`} title={bud.name}>
         <div
           className={`hover:bg-[#13DE00]/13 p-1 flex flex-col relative cursor-pointer`}
         >
@@ -34,7 +37,7 @@ const BudListItem = memo(({ bud }: BudListItemProps) => {
           </div>
           <ul className="list-none m-0 p-0" aria-label="Product details">
             <li>
-              <h2 className="text-base lg:text-lg font-semibold mb-1 text-sm leading-tight">
+              <h2 className="text-base lg:text-md font-semibold mb-1 text-sm leading-tight">
                 {bud.name}
               </h2>
             </li>
