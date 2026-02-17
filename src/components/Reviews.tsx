@@ -2,9 +2,7 @@ import { getReviewsData } from "@/lib/bigquery";
 import { shuffleArray } from "@/lib/utils/array";
 import ReviewsClient from "./ReviewsClient";
 
-interface ReviewsProps { }
-
-export default async function Reviews({ }: ReviewsProps = {}) {
+export default async function Reviews() {
   const reviewsData = await getReviewsData();
 
   // Map BigQuery data to component props

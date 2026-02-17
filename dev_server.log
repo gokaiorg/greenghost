@@ -125,3 +125,175 @@ MenuPage params.lang: fr
 [getPagesData] Fetched data for page "Concentrates Menu"
 [getPagesData] Fetched data for page "Gadgets Menu"
  GET /fr/menu 200 in 6979ms
+ ⨯ ./src/app/[lang]/menu/page.tsx
+Module parse failed: Identifier 'lang' has already been declared (17:12)
+| export default async function Menu({ params }) {
+|     const { lang } = await params;
+>     const { lang } = await params;
+|     const organizationData = await getOrganizationData();
+|     const structuredData = await generateMenuPageSchema(organizationData);
+
+Import trace for requested module:
+./src/app/[lang]/menu/page.tsx
+ ○ Compiling /_error ...
+ ⨯ ./src/app/[lang]/menu/page.tsx
+Module parse failed: Identifier 'lang' has already been declared (17:12)
+| export default async function Menu({ params }) {
+|     const { lang } = await params;
+>     const { lang } = await params;
+|     const organizationData = await getOrganizationData();
+|     const structuredData = await generateMenuPageSchema(organizationData);
+
+Import trace for requested module:
+./src/app/[lang]/menu/page.tsx
+ GET /fr/menu 500 in 8900ms
+ GET /fr/menu 500 in 40ms
+ GET /fr/menu 500 in 32ms
+ GET /fr/menu 500 in 27ms
+ GET /favicon.ico 500 in 10ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled /_error in 12.1s (9532 modules)
+ GET /fr/menu 200 in 3609ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ✓ Compiled in 1435ms (4281 modules)
+ GET /fr/menu 200 in 8839ms
+ ○ Compiling /manifest.webmanifest ...
+ ✓ Compiled /manifest.webmanifest in 6.7s (5270 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/home/GitWorks/greenghost/.next/server/next-font-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/home/GitWorks/greenghost/.next/server/next-font-manifest.json',
+  page: '/manifest.webmanifest'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/home/GitWorks/greenghost/.next/server/next-font-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/home/GitWorks/greenghost/.next/server/next-font-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/home/GitWorks/greenghost/.next/server/next-font-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/home/GitWorks/greenghost/.next/server/next-font-manifest.json',
+  page: '/manifest.webmanifest'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/home/GitWorks/greenghost/.next/server/next-font-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/home/GitWorks/greenghost/.next/server/next-font-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/home/GitWorks/greenghost/.next/routes-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/home/GitWorks/greenghost/.next/routes-manifest.json'
+}
+ GET /manifest.webmanifest 500 in 7314ms
+ GET /manifest.webmanifest 500 in 129ms
+ ✓ Compiled in 1420ms (4281 modules)
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/home/GitWorks/greenghost/.next/routes-manifest.json'
+    at async L (.next/server/app/[lang]/page.js:1:18899) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/home/GitWorks/greenghost/.next/routes-manifest.json',
+  page: '/favicon.ico'
+}
+ GET /favicon.ico 500 in 827ms
+ ✓ Compiled in 1102ms (4281 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/home/GitWorks/greenghost/.next/routes-manifest.json'
+    at async L (.next/server/app/[lang]/menu/page.js:1:12752) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/home/GitWorks/greenghost/.next/routes-manifest.json',
+  page: '/fr/menu'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/home/GitWorks/greenghost/.next/server/pages-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/home/GitWorks/greenghost/.next/server/pages-manifest.json'
+}
+Error: ENOENT: no such file or directory, open '/Users/home/GitWorks/greenghost/.next/routes-manifest.json'
+    at async L (.next/server/app/[lang]/menu/page.js:1:12752) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/home/GitWorks/greenghost/.next/routes-manifest.json',
+  page: '/fr/menu'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/home/GitWorks/greenghost/.next/server/pages-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/home/GitWorks/greenghost/.next/server/pages-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/home/GitWorks/greenghost/.next/routes-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/home/GitWorks/greenghost/.next/routes-manifest.json'
+}
+ GET /fr/menu 500 in 872ms
+ GET /fr/menu 500 in 45ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/home/GitWorks/greenghost/.next/server/app-paths-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/home/GitWorks/greenghost/.next/server/app-paths-manifest.json',
+  page: '/favicon.ico'
+}
+ GET /favicon.ico 500 in 245ms
+ ✓ Compiled in 1258ms (4281 modules)
+ ✓ Compiled in 7.5s (9532 modules)
+ ✓ Compiled in 654ms (4281 modules)
+[Error: ENOENT: no such file or directory, stat '/Users/home/GitWorks/greenghost/.next/cache/webpack/server-development/11.pack.gz'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: '/Users/home/GitWorks/greenghost/.next/cache/webpack/server-development/11.pack.gz'
+}
+ ⨯ unhandledRejection: [Error: ENOENT: no such file or directory, stat '/Users/home/GitWorks/greenghost/.next/cache/webpack/server-development/11.pack.gz'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: '/Users/home/GitWorks/greenghost/.next/cache/webpack/server-development/11.pack.gz'
+}
+ ⨯ unhandledRejection:  [Error: ENOENT: no such file or directory, stat '/Users/home/GitWorks/greenghost/.next/cache/webpack/server-development/11.pack.gz'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: '/Users/home/GitWorks/greenghost/.next/cache/webpack/server-development/11.pack.gz'
+}
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, stat '/Users/home/GitWorks/greenghost/.next/cache/webpack/server-development/11.pack.gz'
+[Error: ENOENT: no such file or directory, stat '/Users/home/GitWorks/greenghost/.next/cache/webpack/client-development/10.pack.gz'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: '/Users/home/GitWorks/greenghost/.next/cache/webpack/client-development/10.pack.gz'
+}
+ ⨯ unhandledRejection: [Error: ENOENT: no such file or directory, stat '/Users/home/GitWorks/greenghost/.next/cache/webpack/client-development/10.pack.gz'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: '/Users/home/GitWorks/greenghost/.next/cache/webpack/client-development/10.pack.gz'
+}
+ ⨯ unhandledRejection:  [Error: ENOENT: no such file or directory, stat '/Users/home/GitWorks/greenghost/.next/cache/webpack/client-development/10.pack.gz'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: '/Users/home/GitWorks/greenghost/.next/cache/webpack/client-development/10.pack.gz'
+}
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, stat '/Users/home/GitWorks/greenghost/.next/cache/webpack/client-development/10.pack.gz'
+ ✓ Compiled in 2.4s (9532 modules)
+ ✓ Compiled in 319ms (4281 modules)
+ ✓ Compiled in 1359ms (4281 modules)
+ ✓ Compiled in 649ms (4281 modules)

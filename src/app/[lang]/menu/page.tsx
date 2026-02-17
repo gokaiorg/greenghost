@@ -29,7 +29,6 @@ export default async function Menu({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  console.log(`MenuPage params.lang: ${lang}`);
   const organizationData = await getOrganizationData();
   const structuredData = await generateMenuPageSchema(organizationData);
 

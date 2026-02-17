@@ -1,0 +1,39 @@
+
+> greenghost@0.1.0 build
+> if [ "$BRANCH" = "main" ] || [ "$BRANCH" = "prod" ]; then cp public/robots.prod.txt public/robots.txt && cp public/_headers.prod public/_headers; else cp public/robots.dev.txt public/robots.txt && cp public/_headers.dev public/_headers; fi && next build
+
+   ▲ Next.js 15.5.7
+   - Experiments (use with caution):
+     · cpus: 1
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 28.6s
+   Linting and checking validity of types ...
+
+./src/components/BannerHero.tsx
+24:3  Warning: 'locale' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/components/ServiceWorkerRegister.tsx
+10:16  Warning: 'registration' is defined but never used.  @typescript-eslint/no-unused-vars
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/904) ...
+Fetching strains for sitemap...
+Found 110 strains
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+(node:46885) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+   Generating static pages (73/904) 
+   Generating static pages (145/904) 
+   Generating static pages (217/904) 
+   Generating static pages (226/904) 
+   Generating static pages (297/904) 
+   Generating static pages (364/904) 
+   Generating static pages (433/904) 
+   Generating static pages (452/904) 
+   Generating static pages (529/904) 
+   Generating static pages (601/904) 
+   Generating static pages (665/904) 
+   Generating static pages (678/904) 
+   Generating static pages (753/904) 

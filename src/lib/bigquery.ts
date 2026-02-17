@@ -73,7 +73,6 @@ export const getPagesData = cache(
 
       if (rows.length > 0) {
         const row = rows[0];
-        console.log(`[getPagesData] Fetched data for page "${pageTitle}"`);
         return row as PageData;
       }
       return null;
