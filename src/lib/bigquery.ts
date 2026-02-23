@@ -2,31 +2,32 @@ import { BigQuery } from "@google-cloud/bigquery";
 import { cache } from "react";
 import path from "path";
 
-
-const credentials =
-  process.env.GOOGLE_CLIENT_EMAIL && process.env.GOOGLE_PRIVATE_KEY
-    ? {
-      client_email: process.env.GOOGLE_CLIENT_EMAIL,
-      private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
-    }
-    : undefined;
-
-export const bigquery = new BigQuery({
+// 1. On définit les options de base (Projet, Région, et les Scopes Google Drive)
+const options: any = {
   projectId: process.env.GOOGLE_PROJECT_ID || 'green-ghost-432101',
-  location: 'europe-west9', // Assurez-vous que votre dataset 'staging' est bien ici
+  location: 'europe-west9',
   scopes: [
     'https://www.googleapis.com/auth/bigquery',
-    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/drive', // Crucial pour lire vos Google Sheets !
   ],
-  ...(credentials
-    ? { credentials }
-    : {
-      keyFilename: path.join(
-        process.cwd(),
-        'green-ghost-432101-58ca22dd1b4c.json'
-      ),
-    }),
-});
+};
+
+// 2. Logique d'authentification intelligente selon l'environnement
+if (process.env.GOOGLE_CLIENT_EMAIL && process.env.GOOGLE_PRIVATE_KEY) {
+  // Cas A : On est sur Netlify ou Vercel (Utilisation des variables d'environnement)
+  options.credentials = {
+    client_email: process.env.GOOGLE_CLIENT_EMAIL,
+    private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+  };
+} else if (process.env.NODE_ENV === 'development') {
+  // Cas B : On est en développement local sur votre Mac
+  options.keyFilename = path.join(process.cwd(), 'green-ghost-432101-58ca22dd1b4c.json');
+}
+// Cas C : On est sur Google Cloud (Cloud Run / Cloud Build).
+// On ne fait RIEN. Google va automatiquement utiliser le "Service Account" de la machine.
+
+// 3. Initialisation
+export const bigquery = new BigQuery(options);
 
 /* =========================================
    PAGES DATA 
