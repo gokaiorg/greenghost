@@ -30,8 +30,7 @@ export default async function GadgetsPage({
   const { lang } = await params;
   const pageData = await getPagesData("Gadgets Menu");
 
-  const rawTitle = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'title', lang) || "Gadgets Menu";
-  const title = rawTitle.replace(lang === 'fr' ? "Menu " : " Menu", "");
+  const title = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'title', lang) || "Gadgets Menu";
   const description = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'subtitle', lang) || "Elevate your smoking experience.";
 
   return (

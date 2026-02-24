@@ -16,18 +16,18 @@ import { getLocalizedSection, getLocalizedValue } from "@/lib/i18n-db";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 
 const MENU_ITEMS_DEF = [
-  { path: "/menu", pageKey: "menu", defaultLabel: "Explore our menu" },
-  { path: "/delivery", pageKey: "delivery", defaultLabel: "Get delivered" },
-  { path: "/wholesale", pageKey: "wholesale", defaultLabel: "Bulk ordering" },
-  { path: "/payment", pageKey: "payment", defaultLabel: "Make a payment" },
-  { path: "/strains", pageKey: "strains", defaultLabel: "All the strains" },
-  { path: "/weed", pageKey: "weed", defaultLabel: "Learn about weed" },
-  { path: "/about", pageKey: "about", defaultLabel: "Cannabis culture" },
-  { path: "/cannabis-club", pageKey: "cannabis-club", defaultLabel: "Join the club" },
-  { path: "/nft", pageKey: "nft", defaultLabel: "Mint your NFT" },
-  { path: "/jobs", pageKey: "jobs", defaultLabel: "We are hiring" },
-  { path: "/locations", pageKey: "locations", defaultLabel: "Visit our locations" },
-  { path: "/contact", pageKey: "contact", defaultLabel: "Contact us now" },
+  { path: "/menu", pageKey: "menu", defaultLabel: "Explore our menu", defaultLabelFr: "Notre menu" },
+  { path: "/delivery", pageKey: "delivery", defaultLabel: "Get delivered", defaultLabelFr: "Livraison" },
+  { path: "/wholesale", pageKey: "wholesale", defaultLabel: "Bulk ordering", defaultLabelFr: "Achat en gros" },
+  { path: "/payment", pageKey: "payment", defaultLabel: "Make a payment", defaultLabelFr: "Paiement en ligne" },
+  { path: "/strains", pageKey: "strains", defaultLabel: "All the strains", defaultLabelFr: "Toutes les variétés" },
+  { path: "/weed", pageKey: "weed", defaultLabel: "Learn about weed", defaultLabelFr: "Tout savoir sur la beuh" },
+  { path: "/about", pageKey: "about", defaultLabel: "Cannabis culture", defaultLabelFr: "La culture du cannabis" },
+  { path: "/cannabis-club", pageKey: "cannabis-club", defaultLabel: "Join the club", defaultLabelFr: "Rejoignez le club" },
+  { path: "/nft", pageKey: "nft", defaultLabel: "Mint your NFT", defaultLabelFr: "Créer un NFT" },
+  { path: "/jobs", pageKey: "jobs", defaultLabel: "We are hiring", defaultLabelFr: "On recrute" },
+  { path: "/locations", pageKey: "locations", defaultLabel: "Visit our locations", defaultLabelFr: "Nos dispensaires" },
+  { path: "/contact", pageKey: "contact", defaultLabel: "Contact us now", defaultLabelFr: "Nous contacter" },
 ];
 
 async function getMenuItems(locale: string) {
@@ -37,17 +37,24 @@ async function getMenuItems(locale: string) {
       // We assume getPagesData handles caching/batching if optimized, 
       // or at least concurrent is better than serial.
       const pageData = await getPagesData(item.pageKey).catch(() => null);
-      let label = item.defaultLabel;
+      let label_en = item.defaultLabel;
+      let label_fr = item.defaultLabelFr || item.defaultLabel;
+      let label = locale === "fr" ? label_fr : label_en;
 
       if (pageData) {
+        label_en = getLocalizedValue(pageData, "label", "en", false) || getLocalizedValue(pageData, "title", "en") || label_en;
+        label_fr = getLocalizedValue(pageData, "label", "fr", false) || getLocalizedValue(pageData, "title", "fr") || label_fr;
+
         const localizedLabel = getLocalizedValue(pageData, "label", locale, false);
         if (localizedLabel) label = localizedLabel;
         else {
           const localizedTitle = getLocalizedValue(pageData, "title", locale);
           if (localizedTitle) label = localizedTitle;
         }
+      } else {
+        label = locale === "fr" ? label_fr : label_en;
       }
-      return { path: item.path, label };
+      return { path: item.path, label, label_en, label_fr };
     })
   );
   return items;

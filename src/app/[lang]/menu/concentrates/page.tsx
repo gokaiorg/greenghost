@@ -30,8 +30,7 @@ export default async function ConcentratesPage({
   const { lang } = await params;
   const pageData = await getPagesData("Concentrates Menu");
 
-  const rawTitle = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'title', lang) || "Concentrates Menu";
-  const title = rawTitle.replace(lang === 'fr' ? "Menu " : " Menu", "");
+  const title = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'title', lang) || "Concentrates Menu";
   const description = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'subtitle', lang) || "Concentrates price for 1 gram.";
 
   return (
