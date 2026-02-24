@@ -13,6 +13,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     pageName: "Best Weed Shops Thailand",
 
     locale: lang,
+    path: "/best-weed-shops-thailand",
 
   });
 }

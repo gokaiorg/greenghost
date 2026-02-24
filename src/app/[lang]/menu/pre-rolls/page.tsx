@@ -15,6 +15,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     pageName: "Pre-Rolls Menu",
 
     locale: lang,
+    path: "/menu/pre-rolls",
 
   });
 }

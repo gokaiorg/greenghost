@@ -13,6 +13,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     pageName: "Payment",
 
     locale: lang,
+    path: "/payment",
 
   });
 }

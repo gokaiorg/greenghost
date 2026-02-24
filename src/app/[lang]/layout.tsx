@@ -124,7 +124,7 @@ export default async function RootLayout({
   const menuItems = await getMenuItems(lang);
 
   return (
-    <html lang={lang} suppressHydrationWarning>
+    <html lang={lang === 'fr' ? 'fr-FR' : 'en-US'} suppressHydrationWarning>
       <head>
         <style
           dangerouslySetInnerHTML={{
