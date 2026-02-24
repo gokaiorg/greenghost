@@ -5,6 +5,7 @@ import { selectLocalizedField } from "@/lib/i18n-helpers";
 interface PagesMetadataProps {
   pageName: string;
   locale?: string;
+  path?: string;
   keywords?: string | string[];
 }
 
@@ -29,7 +30,17 @@ export async function PagesMetadata({
   const slugEn = rawSlugEn === "green-ghost" ? "" : rawSlugEn;
 
   // 3. Current Page Slug
-  const currentSlug = slugEn;
+  // 3. Current Page Slug
+  // If path is provided (e.g. /menu/pre-rolls), base the canonical URLs on that path instead of the BigQuery English title slug
+  const basePath = path ? path : `/${slugEn}`;
+  
+  // Clean up basePath: ensures it starts with slash, and if it's just "/" we handle it gracefully 
+  const cleanPath = basePath.startsWith('/') ? basePath : `/${basePath}`;
+  
+  // Construct language-specific paths
+  const enUrl = cleanPath === '/' ? baseUrl : `${baseUrl}${cleanPath}`;
+  const frUrl = cleanPath === '/' ? `${baseUrl}/fr` : `${baseUrl}/fr${cleanPath}`;
+
 
   // 4. Base URL
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://green.gd";
@@ -46,10 +57,10 @@ export async function PagesMetadata({
     description: meta_description,
     keywords: `${title}, Cannabis Dispensary, Weed Shop, Cannabis Store, Buy Weed, Weed Delivery`,
     alternates: {
-      canonical: `${baseUrl}/${currentSlug}`,
+      canonical: enUrl,
       languages: {
-        'en': `${baseUrl}/${slugEn}`,
-        'fr': `${baseUrl}/fr/${slugEn}`,
+        'en': enUrl,
+        'fr': frUrl,
       },
     },
     openGraph: {
@@ -57,7 +68,7 @@ export async function PagesMetadata({
       description: meta_description,
       type: "website",
       locale: locale === 'fr' ? 'fr_FR' : 'en_US',
-      url: `${baseUrl}/${currentSlug}`,
+      url: enUrl,
       siteName: SITE_NAME,
       images: [
         {
