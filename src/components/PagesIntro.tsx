@@ -49,35 +49,42 @@ const PagesIntro: React.FC<PagesIntroProps> = async ({
   }
 
   return (
-    <>
-      {content.label && content.label.trim() !== "" && (
-        <h2
-          id="who-are-we"
-          className="text-xl md:text-2xl font-bold text-center mb-4 mt-8 text-[#13DE00] whitespace-pre-wrap"
-        >
-          {content.label}
-        </h2>
-      )}
+    <div className="flex flex-wrap md:flex-row md:space-x-8 w-full">
+      <div className="flex-1">
+        {content.label && content.label.trim() !== "" && (
+          <h2
+            id="who-are-we"
+            className="text-lg md:text-xl font-bold text-center md:text-left mb-4 mt-8 text-[#13DE00] whitespace-pre-wrap"
+          >
+            {content.label}
+          </h2>
+        )}
 
-      {content.description && content.description.trim() !== "" && (
-        <div className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8 whitespace-pre-wrap">
-          {content.description}
-        </div>
-      )}
-
-      {content.sectionTitle && content.sectionTitle.trim() !== "" && (
-        <h2 className="text-xl md:text-2xl font-bold text-center mb-4 md:mb-8 text-[#13DE00] whitespace-pre-wrap">
-          {content.sectionTitle}
-        </h2>
-      )}
-
-      {content.sectionDescription &&
-        content.sectionDescription.trim() !== "" && (
-          <div className="text-xs md:text-sm lg:text-base text-gray-200 text-center w-full mb-4 md:mb-8 whitespace-pre-wrap">
-            {content.sectionDescription}
+        {content.description && content.description.trim() !== "" && (
+          <div className="text-[11px] md:text-xs lg:text-sm text-gray-200 text-center md:text-left w-full mb-4 md:mb-8 whitespace-pre-wrap">
+            {content.description}
           </div>
         )}
-    </>
+      </div>
+
+      {((content.sectionTitle && content.sectionTitle.trim() !== "") ||
+        (content.sectionDescription && content.sectionDescription.trim() !== "")) && (
+          <div className="flex-1">
+            {content.sectionTitle && content.sectionTitle.trim() !== "" && (
+              <h2 className="text-lg md:text-xl font-bold text-center md:text-left mb-4 mt-8 text-[#13DE00] whitespace-pre-wrap">
+                {content.sectionTitle}
+              </h2>
+            )}
+
+            {content.sectionDescription &&
+              content.sectionDescription.trim() !== "" && (
+                <div className="text-[11px] md:text-xs lg:text-sm text-gray-200 text-center md:text-left w-full mb-4 md:mb-8 whitespace-pre-wrap">
+                  {content.sectionDescription}
+                </div>
+              )}
+          </div>
+        )}
+    </div>
   );
 };
 

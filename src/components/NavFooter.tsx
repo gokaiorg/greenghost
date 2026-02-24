@@ -23,13 +23,13 @@ export default function NavFooter({
                         <Link
                             href={`${prefix}${item.path}`}
                             className={`bg-[#13DE00] h-[110px] max-w-[110px] flex items-center justify-center hover:bg-[#13DE00]/13 hover:text-[#13DE00] transition-colors text-xs font-medium p-1 tracking-tight ${pathname === item.path || pathname?.startsWith(`${item.path}/`)
-                                    ? "bg-[#13DE00]/13 text-[#13DE00]"
-                                    : "text-black"
+                                ? "bg-[#13DE00]/13 text-[#13DE00]"
+                                : "text-black"
                                 }`}
-                            aria-label={item.label}
-                            title={item.label}
+                            aria-label={locale === 'fr' && item.label_fr ? item.label_fr : (locale === 'en' && item.label_en ? item.label_en : item.label)}
+                            title={locale === 'fr' && item.label_fr ? item.label_fr : (locale === 'en' && item.label_en ? item.label_en : item.label)}
                         >
-                            {item.label}
+                            {locale === 'fr' && item.label_fr ? item.label_fr : (locale === 'en' && item.label_en ? item.label_en : item.label)}
                         </Link>
                     </li>
                 ))}

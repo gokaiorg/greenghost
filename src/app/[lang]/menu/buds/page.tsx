@@ -30,8 +30,7 @@ export default async function BudsPage({
   const { lang } = await params;
   const pageData = await getPagesData("Buds Menu");
 
-  const rawTitle = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'title', lang) || "Buds Menu";
-  const title = rawTitle.replace(lang === 'fr' ? "Menu " : " Menu", "");
+  const title = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'title', lang) || "Buds Menu";
   const description = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'subtitle', lang) || "Buds price for 1 gram.";
 
   return (

@@ -30,8 +30,7 @@ export default async function EdiblesPage({
   const { lang } = await params;
   const pageData = await getPagesData("Edibles Menu");
 
-  const rawTitle = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'title', lang) || "Edibles Menu";
-  const title = rawTitle.replace(lang === 'fr' ? "Menu " : " Menu", "");
+  const title = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'title', lang) || "Edibles Menu";
   const description = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'subtitle', lang) || "Edibles price per serving.";
 
   return (

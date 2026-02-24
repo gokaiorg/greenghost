@@ -8,6 +8,8 @@ import { getLocalizedUrl } from "@/lib/i18n-helpers";
 export interface MenuItem {
     path: string;
     label: string;
+    label_en?: string;
+    label_fr?: string;
 }
 
 export default function NavBurger({
@@ -60,12 +62,12 @@ export default function NavBurger({
                         <li key={item.path}>
                             <Link
                                 href={getLocalizedUrl(item.path, currentLang)}
-                                title={item.label}
+                                title={currentLang === 'fr' && item.label_fr ? item.label_fr : (currentLang === 'en' && item.label_en ? item.label_en : item.label)}
                                 className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname.includes(item.path) ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                                 onClick={() => setIsOpen(false)}
                                 aria-current={pathname.includes(item.path) ? "page" : undefined}
                             >
-                                {item.label}
+                                {currentLang === 'fr' && item.label_fr ? item.label_fr : (currentLang === 'en' && item.label_en ? item.label_en : item.label)}
                             </Link>
                         </li>
                     ))}

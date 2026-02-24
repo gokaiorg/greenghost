@@ -30,8 +30,7 @@ export default async function PreRollsPage({
   const { lang } = await params;
   const pageData = await getPagesData("Pre-Rolls Menu");
 
-  const rawTitle = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'title', lang) || "Pre-Rolls Menu";
-  const title = rawTitle.replace(lang === 'fr' ? "Menu " : " Menu", "");
+  const title = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'title', lang) || "Pre-rolls Menu";
   const description = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'subtitle', lang) || "On demand. +20THB on delivery. Free on store.";
 
   return (

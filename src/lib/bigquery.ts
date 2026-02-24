@@ -3,36 +3,35 @@ import { cache } from "react";
 import path from "path";
 
 
-const credentials =
-  process.env.GOOGLE_CLIENT_EMAIL && process.env.GOOGLE_PRIVATE_KEY
-    ? {
-      client_email: process.env.GOOGLE_CLIENT_EMAIL,
-      private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
-    }
-    : undefined;
-
-export const bigquery = new BigQuery({
+const options: import('@google-cloud/bigquery').BigQueryOptions = {
   projectId: process.env.GOOGLE_PROJECT_ID || 'green-ghost-432101',
-  location: 'europe-west9', // Assurez-vous que votre dataset 'staging' est bien ici
+  location: 'europe-west9',
   scopes: [
     'https://www.googleapis.com/auth/bigquery',
-    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/drive', 
   ],
-  ...(credentials
-    ? { credentials }
-    : {
-      keyFilename: path.join(
-        process.cwd(),
-        'green-ghost-432101-58ca22dd1b4c.json'
-      ),
-    }),
-});
+};
 
-/* =========================================
-   PAGES DATA 
-   ========================================= */
+
+if (process.env.GOOGLE_CLIENT_EMAIL && process.env.GOOGLE_PRIVATE_KEY) {
+  
+  options.credentials = {
+    client_email: process.env.GOOGLE_CLIENT_EMAIL,
+    private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+  };
+} else if (process.env.NODE_ENV === 'development') {
+  
+  options.keyFilename = path.join(process.cwd(), 'green-ghost-432101-58ca22dd1b4c.json');
+}
+
+
+
+
+export const bigquery = new BigQuery(options);
+
+
 export interface PageData {
-  // Raw localized fields
+  
   title_en?: string;
   title_fr?: string;
   subtitle_en?: string;
@@ -53,11 +52,11 @@ export interface PageData {
   [key: string]: any;
 }
 
-/* ... existing code ... */
+
 
 export const getPagesData = cache(
   async (pageTitle: string): Promise<PageData | null> => {
-    // Select all columns to get raw data
+    
     const query = `
       SELECT *
       FROM \`green-ghost-432101.staging.stg_pages\`
@@ -83,9 +82,7 @@ export const getPagesData = cache(
   }
 );
 
-/* =========================================
-   GARDENS DATA 
-   ========================================= */
+
 export interface GardenData {
   date: string;
   description: string;
@@ -107,9 +104,9 @@ export const getGardensData = cache(async (): Promise<GardenData[]> => {
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return rows.map((row: any, index: number) => {
-      // BigQuery renvoie parfois un objet Date ou un objet { value: string }
+      
       const dateVal = row.garden_date.value || row.garden_date;
-      // Gestion robuste si c'est déjà un objet Date JS
+      
       const dateStr = typeof dateVal === 'string' ? dateVal : dateVal.toISOString().split('T')[0];
 
       const [year, month, day] = dateStr.split("-");
@@ -130,9 +127,7 @@ export const getGardensData = cache(async (): Promise<GardenData[]> => {
   }
 });
 
-/* =========================================
-   REVIEWS DATA 
-   ========================================= */
+
 export interface ReviewData {
   user_name: string;
   comment: string;
@@ -141,7 +136,7 @@ export interface ReviewData {
 }
 
 export const getReviewsData = cache(async (): Promise<ReviewData[]> => {
-  // CORRECTION : On cible la vue staging et les vraies colonnes
+  
   const query = `
     SELECT
       user_name,
@@ -166,9 +161,7 @@ export const getReviewsData = cache(async (): Promise<ReviewData[]> => {
   }
 });
 
-/* =========================================
-   LOCATIONS DATA 
-   ========================================= */
+
 export interface LocationData {
   slug: string;
   name: string;
@@ -193,14 +186,14 @@ export interface LocationData {
   country: string;
 }
 
-// Helper pour mapper les résultats SQL (snake_case) vers l'interface TS
+
 const mapLocationRow = (row: LocationData): LocationData => ({
   slug: row.slug,
   name: row.name,
   hours: row.hours,
   phone: String(row.phone),
   address: row.address,
-  // Ici, on utilise les noms propres définis dans stg_locations.sqlx
+  
   address_link: row.address_link,
   review_link: row.review_link,
   details_short: row.details_short,
@@ -213,14 +206,14 @@ const mapLocationRow = (row: LocationData): LocationData => ({
   wongnai_link: row.wongnai_link,
   highthailand_link: row.highthailand_link,
   apple_map_link: row.apple_map_link,
-  latitude: row.latitude, // C'est déjà un number grâce au SAFE_CAST dans Dataform
+  latitude: row.latitude, 
   longitude: row.longitude,
   region: row.region,
   country: row.country,
 });
 
 export const getAllLocations = cache(async (): Promise<LocationData[]> => {
-  // CORRECTION : On utilise la vue staging et les colonnes snake_case
+  
   const query = `
     SELECT
       slug,
@@ -301,9 +294,7 @@ export const getLocationBySlug = cache(
   }
 );
 
-/* =========================================
-   BEST SHOPS DATA
-   ========================================= */
+
 export interface BestShopData {
   name: string;
   link: string;
@@ -328,9 +319,7 @@ export const getBestShopsData = cache(async (): Promise<BestShopData[]> => {
   }
 });
 
-/* =========================================
-   LAWS DATA
-   ========================================= */
+
 export interface LawData {
   title: string;
   description: string;
@@ -353,9 +342,7 @@ export const getLawsData = cache(async (): Promise<LawData[]> => {
   }
 });
 
-/* =========================================
-   LAWS FAQ DATA
-   ========================================= */
+
 export interface LawFAQData {
   title: string;
   description: string;
@@ -378,9 +365,7 @@ export const getLawsFAQData = cache(async (): Promise<LawFAQData[]> => {
   }
 });
 
-/* =========================================
-   GROWERS DATA
-   ========================================= */
+
 export interface GrowerData {
   name: string;
   link: string;
@@ -403,9 +388,7 @@ export const getGrowersData = cache(async (): Promise<GrowerData[]> => {
   }
 });
 
-/* =========================================
-   SEEDS DATA
-   ========================================= */
+
 export interface SeedData {
   name: string;
   link: string;
@@ -428,9 +411,7 @@ export const getSeedsData = cache(async (): Promise<SeedData[]> => {
   }
 });
 
-/* =========================================
-   WHOLESALES DATA
-   ========================================= */
+
 export interface WholesaleData {
   strain: string;
   price: string;
@@ -457,9 +438,7 @@ export const getWholesalesData = cache(async (): Promise<WholesaleData[]> => {
   }
 });
 
-/* =========================================
-   LISTINGS DATA
-   ========================================= */
+
 export interface ListingData {
   name: string;
   link: string;
@@ -482,9 +461,7 @@ export const getListingsData = cache(async (): Promise<ListingData[]> => {
   }
 });
 
-/* =========================================
-   TOPS DATA
-   ========================================= */
+
 export interface TopData {
   name: string;
   link: string;
@@ -507,9 +484,7 @@ export const getTopsData = cache(async (): Promise<TopData[]> => {
   }
 });
 
-/* =========================================
-   SOCIALS DATA
-   ========================================= */
+
 export interface SocialData {
   name: string;
   link: string;
@@ -532,9 +507,7 @@ export const getSocialsData = cache(async (): Promise<SocialData[]> => {
   }
 });
 
-/* =========================================
-   CONTACTS DATA
-   ========================================= */
+
 export interface ContactData {
   name: string;
   link: string;
@@ -557,9 +530,7 @@ export const getContactsData = cache(async (): Promise<ContactData[]> => {
   }
 });
 
-/* =========================================
-   DELIVERY DATA
-   ========================================= */
+
 export interface DeliveryData {
   name: string;
   description: string;
@@ -590,9 +561,7 @@ export const getDeliveryData = cache(async (): Promise<DeliveryData[]> => {
   }
 });
 
-/* =========================================
-   CLUBS DATA
-   ========================================= */
+
 export interface ClubData {
   name: string;
   description: string;
@@ -617,9 +586,7 @@ export const getClubsData = cache(async (): Promise<ClubData[]> => {
   }
 });
 
-/* =========================================
-   PAYMENTS DATA
-   ========================================= */
+
 export interface PaymentData {
   name: string;
   description: string;
@@ -646,9 +613,7 @@ export const getPaymentsData = cache(async (): Promise<PaymentData[]> => {
   }
 });
 
-/* =========================================
-   NFTS DATA
-   ========================================= */
+
 export interface NFTData {
   slug: string;
   name: string;
@@ -693,9 +658,7 @@ export const getNFTsData = cache(async (): Promise<NFTData[]> => {
   }
 });
 
-/* =========================================
-   CBDS DATA
-   ========================================= */
+
 export interface CBDData {
   item_name: string;
   type: string;
@@ -728,9 +691,7 @@ export const getCBDsData = cache(async (): Promise<CBDData[]> => {
   }
 });
 
-/* =========================================
-   PROMOTES DATA
-   ========================================= */
+
 export interface PromoteData {
   title: string;
   description: string;
@@ -757,9 +718,7 @@ export const getPromotesData = cache(async (): Promise<PromoteData[]> => {
   }
 });
 
-/* =========================================
-   WEEDS DATA
-   ========================================= */
+
 export interface WeedData {
   title: string;
   description: string;
@@ -784,9 +743,7 @@ export const getWeedsData = cache(async (): Promise<WeedData[]> => {
   }
 });
 
-/* =========================================
-   PRODUCTS DATA
-   ========================================= */
+
 export interface ProductData {
   item_name: string;
   type: string;
@@ -854,9 +811,7 @@ export const getProductsData = cache(async (): Promise<ProductData[]> => {
   }
 });
 
-/* =========================================
-   SECTIONS DATA
-   ========================================= */
+
 export interface SectionData {
   component: string;
   title_en: string;

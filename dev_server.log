@@ -1,21 +1,11 @@
 
-> greenghost@0.1.0 dev
+> greenghost@0.1.0 dev /Users/home/GitWorks/greenghost
 > next dev
 
- ⚠ Port 3000 is in use by process 59302, using available port 3002 instead.
    ▲ Next.js 15.5.7
-   - Local:        http://localhost:3002
-   - Network:      http://192.168.1.71:3002
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.71:3000
    - Experiments (use with caution):
      · cpus: 1
 
  ✓ Starting...
- ✓ Ready in 10.8s
- ✓ Compiled /middleware in 365ms (135 modules)
- ○ Compiling /[lang] ...
- ✓ Compiled /[lang] in 15.9s (9192 modules)
-(node:60246) Warning: `--localstorage-file` was provided without a valid path
-(Use `node --trace-warnings ...` to show where the warning was created)
- GET / 200 in 24827ms
- GET / 200 in 6454ms
- GET / 200 in 4743ms

@@ -43,7 +43,7 @@ export default function EdiblesPageContent({
     <div className="relative">
       <div className="container mx-auto px-4">
         <div className="sm:ml-auto sm:w-fit">{menuSlot}</div>
-        <div className="flex  md:flex-row flex-col md:items-center space-x-2 mb-2">
+        <div className="flex  md:flex-row flex-col md:items-center space-x-4 mb-2">
           <h1 className="text-xl lg:text-2xl font-bold text-left whitespace-nowrap">
             {title}
           </h1>
