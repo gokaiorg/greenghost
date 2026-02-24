@@ -5,7 +5,6 @@ import path from "path";
 
 const options: import('@google-cloud/bigquery').BigQueryOptions = {
   projectId: process.env.GOOGLE_PROJECT_ID || 'green-ghost-432101',
-  location: 'europe-west1',
   scopes: [
     'https://www.googleapis.com/auth/bigquery',
   ],
