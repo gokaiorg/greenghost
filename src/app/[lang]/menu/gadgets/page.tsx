@@ -15,6 +15,8 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     pageName: "Gadgets Menu",
 
     locale: lang,
+    path: "/menu/gadgets",
+    path: "/menu/gadgets",
 
   });
 }
