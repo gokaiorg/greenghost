@@ -14,6 +14,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     pageName: "Cannabis Club",
 
     locale: lang,
+    path: "/cannabis-club",
 
   });
 }

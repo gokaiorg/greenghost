@@ -14,6 +14,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     pageName: "Strains",
 
     locale: lang,
+    path: "/strains",
 
   });
 }

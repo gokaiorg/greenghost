@@ -16,6 +16,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     pageName: "Legal Laws",
 
     locale: lang,
+    path: "/legal-laws",
 
   });
 }

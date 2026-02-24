@@ -26,6 +26,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
   return PagesMetadata({
     pageName: "Green Ghost",
     locale: lang,
+    path: "/",
   });
 }
 

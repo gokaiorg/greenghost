@@ -5,22 +5,21 @@ import path from "path";
 
 const options: import('@google-cloud/bigquery').BigQueryOptions = {
   projectId: process.env.GOOGLE_PROJECT_ID || 'green-ghost-432101',
-  location: 'europe-west9',
+  location: 'europe-west1',
   scopes: [
     'https://www.googleapis.com/auth/bigquery',
-    'https://www.googleapis.com/auth/drive', 
   ],
 };
 
 
 if (process.env.GOOGLE_CLIENT_EMAIL && process.env.GOOGLE_PRIVATE_KEY) {
-  
+
   options.credentials = {
     client_email: process.env.GOOGLE_CLIENT_EMAIL,
     private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
   };
 } else if (process.env.NODE_ENV === 'development') {
-  
+
   options.keyFilename = path.join(process.cwd(), 'green-ghost-432101-58ca22dd1b4c.json');
 }
 
@@ -31,7 +30,7 @@ export const bigquery = new BigQuery(options);
 
 
 export interface PageData {
-  
+
   title_en?: string;
   title_fr?: string;
   subtitle_en?: string;
@@ -56,7 +55,7 @@ export interface PageData {
 
 export const getPagesData = cache(
   async (pageTitle: string): Promise<PageData | null> => {
-    
+
     const query = `
       SELECT *
       FROM \`green-ghost-432101.staging.stg_pages\`
@@ -104,9 +103,9 @@ export const getGardensData = cache(async (): Promise<GardenData[]> => {
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return rows.map((row: any, index: number) => {
-      
+
       const dateVal = row.garden_date.value || row.garden_date;
-      
+
       const dateStr = typeof dateVal === 'string' ? dateVal : dateVal.toISOString().split('T')[0];
 
       const [year, month, day] = dateStr.split("-");
@@ -136,7 +135,7 @@ export interface ReviewData {
 }
 
 export const getReviewsData = cache(async (): Promise<ReviewData[]> => {
-  
+
   const query = `
     SELECT
       user_name,
@@ -193,7 +192,7 @@ const mapLocationRow = (row: LocationData): LocationData => ({
   hours: row.hours,
   phone: String(row.phone),
   address: row.address,
-  
+
   address_link: row.address_link,
   review_link: row.review_link,
   details_short: row.details_short,
@@ -206,14 +205,14 @@ const mapLocationRow = (row: LocationData): LocationData => ({
   wongnai_link: row.wongnai_link,
   highthailand_link: row.highthailand_link,
   apple_map_link: row.apple_map_link,
-  latitude: row.latitude, 
+  latitude: row.latitude,
   longitude: row.longitude,
   region: row.region,
   country: row.country,
 });
 
 export const getAllLocations = cache(async (): Promise<LocationData[]> => {
-  
+
   const query = `
     SELECT
       slug,
