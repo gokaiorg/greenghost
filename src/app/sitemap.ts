@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 import { getAllLocations } from "@/lib/bigquery";
-import { getProductsByCategory } from "@/lib/products";
+import { getProducts } from "@/lib/products";
 import { getNFTsData } from "@/lib/bigquery";
 import { i18n } from "@/i18n-config";
 
@@ -98,45 +98,58 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   });
 
   try {
+    // Execute all heavy BigQuery fetches concurrently
+    const [locations, allProducts, nfts] = await Promise.all([
+      getAllLocations().catch((err: unknown) => {
+        console.error("Failed to fetch locations for sitemap:", err);
+        return [];
+      }),
+      getProducts().catch((err: unknown) => {
+        console.error("Failed to fetch products for sitemap:", err);
+        return [];
+      }),
+      getNFTsData().catch((err: unknown) => {
+        console.error("Failed to fetch NFTs for sitemap:", err);
+        return [];
+      }),
+    ]);
+
     // Dynamic location pages
-    const locations = await getAllLocations();
     locations.forEach((location) => {
       addEntries(`/locations/${location.slug}`, "weekly", 0.8);
     });
 
     // Strains
-    console.log("Fetching strains for sitemap...");
-    const strains = await getProductsByCategory("Strains");
-    console.log(`Found ${strains.length} strains`);
-    strains.forEach((strain: { id: string }) => {
+    const strains = allProducts.filter((p) => p.type === "Strains");
+    strains.forEach((strain) => {
       addEntries(`/strains/${strain.id}`, "weekly", 0.7);
     });
 
     // Edibles
-    const edibles = await getProductsByCategory("Edibles");
-    edibles.forEach((edible: { id: string }) => {
+    const edibles = allProducts.filter((p) => p.type === "Edibles");
+    edibles.forEach((edible) => {
       addEntries(`/edibles/${edible.id}`, "weekly", 0.7);
     });
 
     // Concentrates
-    const concentrates = await getProductsByCategory("Concentrates");
-    concentrates.forEach((concentrate: { id: string }) => {
+    const concentrates = allProducts.filter((p) => p.type === "Concentrates");
+    concentrates.forEach((concentrate) => {
       addEntries(`/concentrates/${concentrate.id}`, "weekly", 0.7);
     });
 
     // Gadgets
-    const gadgets = await getProductsByCategory("Gadgets");
-    gadgets.forEach((gadget: { id: string }) => {
+    const gadgets = allProducts.filter((p) => p.type === "Gadgets");
+    gadgets.forEach((gadget) => {
       addEntries(`/gadgets/${gadget.id}`, "weekly", 0.7);
     });
 
     // NFTs
-    const nfts = await getNFTsData();
-    nfts.forEach((nft: { slug: string }) => {
+    nfts.forEach((nft) => {
       addEntries(`/nft/${nft.slug}`, "monthly", 0.6);
     });
-  } catch (error) {
-    console.error("Error generating sitemap:", error);
+  } catch (error: unknown) {
+    console.error("Critical error generating dynamic sitemap routes:", error);
+    // Graceful degradation: we still return the static routes and menus arrays populated above.
   }
 
   return sitemapEntries;
