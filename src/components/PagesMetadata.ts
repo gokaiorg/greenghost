@@ -12,6 +12,7 @@ interface PagesMetadataProps {
 export async function PagesMetadata({
   pageName,
   locale = 'en',
+  path,
 }: PagesMetadataProps): Promise<Metadata> {
   const bqData = await getPagesData(pageName);
 
@@ -33,17 +34,16 @@ export async function PagesMetadata({
   // 3. Current Page Slug
   // If path is provided (e.g. /menu/pre-rolls), base the canonical URLs on that path instead of the BigQuery English title slug
   const basePath = path ? path : `/${slugEn}`;
-  
+
   // Clean up basePath: ensures it starts with slash, and if it's just "/" we handle it gracefully 
   const cleanPath = basePath.startsWith('/') ? basePath : `/${basePath}`;
-  
-  // Construct language-specific paths
-  const enUrl = cleanPath === '/' ? baseUrl : `${baseUrl}${cleanPath}`;
-  const frUrl = cleanPath === '/' ? `${baseUrl}/fr` : `${baseUrl}/fr${cleanPath}`;
-
 
   // 4. Base URL
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://green.gd";
+
+  // Construct language-specific paths
+  const enUrl = cleanPath === '/' ? baseUrl : `${baseUrl}${cleanPath}`;
+  const frUrl = cleanPath === '/' ? `${baseUrl}/fr` : `${baseUrl}/fr${cleanPath}`;
 
   const meta_title = selectLocalizedField<string>((bqData as unknown) as Record<string, unknown>, 'meta_title', locale);
   const meta_description = selectLocalizedField<string>((bqData as unknown) as Record<string, unknown>, 'meta_description', locale);
