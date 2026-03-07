@@ -1,6 +1,6 @@
 const CACHE_NAME = "green-ghost-cache-v1";
 
-self.addEventListener("install", (event) => {
+self.addEventListener("install", () => {
   // Skip waiting to ensure the new service worker activates immediately
   self.skipWaiting();
 });
@@ -23,7 +23,7 @@ self.addEventListener("activate", (event) => {
   );
 });
 
-self.addEventListener("fetch", (event) => {
+self.addEventListener("fetch", () => {
   // Simple cache-first strategy for images, network-first for others could be implemented here.
   // For now, we'll just pass through specific requests or could add basic caching.
   // This is a minimal implementation to satisfy PWA requirements.
