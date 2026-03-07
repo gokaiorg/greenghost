@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { CBDData } from "@/lib/bigquery";
+import { CBDData } from "@/lib/bigquery-types";
 
 interface CBDListProps {
   products: CBDData[];
@@ -33,8 +33,8 @@ export default function CBDList({ products }: CBDListProps) {
             key={type}
             onClick={() => setSelectedType(type)}
             className={`px-6 py-3 font-bold transition-colors cursor-pointer ${selectedType === type
-                ? "bg-[#13DE00] text-black"
-                : "bg-[#13DE00]/13 text-white hover:bg-[#13DE00]/20"
+              ? "bg-[#13DE00] text-black"
+              : "bg-[#13DE00]/13 text-white hover:bg-[#13DE00]/20"
               }`}
           >
             {type}

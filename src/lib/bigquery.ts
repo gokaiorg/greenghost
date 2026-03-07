@@ -1,3 +1,4 @@
+import "server-only";
 import { BigQuery } from "@google-cloud/bigquery";
 import { cache } from "react";
 import path from "path";

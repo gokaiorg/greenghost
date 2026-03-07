@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { NFTData } from "@/lib/bigquery";
+import { NFTData } from "@/lib/bigquery-types";
 
 interface NFTsListProps {
   nfts: NFTData[];

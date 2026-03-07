@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { BestShopData } from "@/lib/bigquery";
+import { BestShopData } from "@/lib/bigquery-types";
 import { sanitizeUrl } from "@/lib/utils/url";
 
 interface BestShopsListProps {
