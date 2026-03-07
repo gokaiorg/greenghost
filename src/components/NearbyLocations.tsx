@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { LocationData } from "@/lib/bigquery";
+import { LocationData } from "@/lib/bigquery-types";
 
 interface NearbyLocationsProps {
   currentSlug: string;

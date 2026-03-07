@@ -1,4 +1,4 @@
-import { LocationData } from "@/lib/bigquery";
+import { LocationData } from "@/lib/bigquery-types";
 import { sanitizeSchema } from "@/lib/utils/seo";
 import { parseHoursString } from "@/lib/utils/hours";
 

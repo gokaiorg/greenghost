@@ -1,4 +1,5 @@
 import { getReviewsData } from "@/lib/bigquery";
+// import { ReviewData } from "@/lib/bigquery-types";
 import { shuffleArray } from "@/lib/utils/array";
 import ReviewsClient from "./ReviewsClient";
 

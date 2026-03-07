@@ -1,4 +1,5 @@
 import { getPagesData } from "@/lib/bigquery";
+// import { PageData } from "@/lib/bigquery-types";
 import { selectLocalizedField } from "@/lib/i18n-helpers";
 import PagesBannerClient, { PagesBannerClientProps } from "./PagesBannerClient";
 

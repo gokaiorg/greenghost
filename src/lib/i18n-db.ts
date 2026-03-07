@@ -1,4 +1,4 @@
-import { SectionData } from "@/lib/bigquery";
+import { SectionData } from "@/lib/bigquery-types";
 
 /**
  * Generic helper to get a localized value from a data row

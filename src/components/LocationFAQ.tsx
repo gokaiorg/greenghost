@@ -1,5 +1,5 @@
 import React from "react";
-import { LocationData } from "@/lib/bigquery";
+import { LocationData } from "@/lib/bigquery-types";
 import { parseHoursString } from "@/lib/utils/hours";
 
 interface LocationFAQProps {
