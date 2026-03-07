@@ -15,3 +15,57 @@ p.banner-description {
   text-align: center;
   z-index: 10;
 }
+
+/* Google Places Autocomplete Retro Styling overrides */
+.pac-container {
+  background-color: #000000 !important;
+  border: 2px solid #13DE00 !important;
+  border-radius: 0 !important;
+  font-family: var(--font-pixel), monospace !important;
+  color: #39FF14 !important;
+  margin-top: 4px;
+}
+
+.pac-item {
+  color: #39FF14 !important;
+  border-top: 1px solid #13DE00 !important;
+  padding: 8px !important;
+  cursor: pointer;
+}
+
+.pac-item:hover, .pac-item-selected {
+  background-color: #13DE00 !important;
+  color: #000000 !important;
+}
+
+.pac-item-query {
+  color: #39FF14 !important;
+  font-size: 14px !important;
+}
+
+.pac-item:hover .pac-item-query,
+.pac-item-selected .pac-item-query {
+  color: #000000 !important;
+}
+
+.pac-matched {
+  font-weight: bold !important;
+  color: #ffffff !important;
+}
+
+.pac-item:hover .pac-matched,
+.pac-item-selected .pac-matched {
+  color: #ffffff !important;
+}
+
+/* Hide the default Google icon */
+.pac-icon {
+  display: none !important;
+}
+
+/* Suppress Google Maps Error Overlay */
+.gm-err-container,
+.gm-err-dialog,
+.gm-err-backdrop {
+  display: none !important;
+}

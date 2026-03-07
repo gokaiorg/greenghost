@@ -19,6 +19,7 @@
     "@gemini-wallet/core": "^0.3.2",
     "@google-cloud/bigquery": "^8.1.1",
     "@metamask/sdk": "^0.33.1",
+    "@react-google-maps/api": "^2.20.8",
     "@reown/appkit-common": "^1.8.15",
     "@reown/appkit-controllers": "^1.8.15",
     "@reown/appkit-scaffold-ui": "^1.8.15",
