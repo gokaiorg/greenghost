@@ -7,8 +7,35 @@ import { useLoadScript, Autocomplete } from "@react-google-maps/api";
 
 const libraries: ("places")[] = ["places"];
 
-// Using a placeholder coordinate for Rawai, Phuket
-const SHOP_LOCATION = { lat: 7.7766, lng: 98.3188 };
+// Delivery configuration
+const BASE_DELIVERY_FEE = 50;
+const PER_KM_FEE = 15;
+const NATIONWIDE_FEE = 500;
+const FREE_DELIVERY_THRESHOLD = 2000;
+const FALLBACK_FEE = 100;
+
+const SHOP_LOCATION = {
+  lat: parseFloat(process.env.NEXT_PUBLIC_SHOP_LAT || "7.7766"),
+  lng: parseFloat(process.env.NEXT_PUBLIC_SHOP_LNG || "98.3188")
+};
+
+const deliveryZones = [
+  { keywords: ["airport", "mai khao", "nai yang"], fee: 500 },
+  { keywords: ["kamala", "surin", "bang tao"], fee: 400 },
+  { keywords: ["patong", "phuket town", "phuket city", "mueang phuket", "talat yai", "talat nuea"], fee: 300 },
+  { keywords: ["karon", "kata", "chalong"], fee: 200 },
+  { keywords: ["rawai", "nai harn", "promthep", "ya nui"], fee: 100 },
+];
+
+function getZoneFee(locationName: string): number | null {
+  const locLower = locationName.toLowerCase();
+  for (const zone of deliveryZones) {
+    if (zone.keywords.some(keyword => locLower.includes(keyword))) {
+      return zone.fee;
+    }
+  }
+  return null;
+}
 
 // --- Subcomponent to handle the Maps API separately ---
 interface AddressAutocompleteProps {
@@ -23,7 +50,6 @@ const AddressAutocomplete = ({ locationName, onLocationChange }: AddressAutocomp
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: isValidKey ? apiKey : "",
     libraries,
-    // Only attempt to load the script if checking for a valid key
     id: 'google-maps-script',
   });
 
@@ -42,7 +68,7 @@ const AddressAutocomplete = ({ locationName, onLocationChange }: AddressAutocomp
       (response, status) => {
         if (status === "OK" && response && response.rows[0].elements[0].status === "OK") {
           const distanceInMeters = response.rows[0].elements[0].distance.value;
-          const distanceKm = Math.ceil(distanceInMeters / 1000); // 15THB per km
+          const distanceKm = Math.ceil(distanceInMeters / 1000);
           onLocationChange(placeName, placeUrl, distanceKm, isPhuket);
         } else {
           onLocationChange(placeName, placeUrl, null, isPhuket);
@@ -68,7 +94,6 @@ const AddressAutocomplete = ({ locationName, onLocationChange }: AddressAutocomp
           isPhuket = name.toLowerCase().includes("phuket") || name.includes("ภูเก็ต");
         }
 
-        // Initial change while calculating distance
         onLocationChange(name, url, null, isPhuket);
         calculateDistance(place.geometry.location, name, url, isPhuket);
       }
@@ -81,8 +106,25 @@ const AddressAutocomplete = ({ locationName, onLocationChange }: AddressAutocomp
     onLocationChange(val, "", null, isPhuket);
   };
 
-  // If there's no API key OR if there's a script loading error
-  if (!isValidKey || loadError) {
+  if (loadError) {
+    return (
+      <div className="flex flex-col">
+        <input
+          type="text"
+          value={locationName}
+          onChange={handleInputChange}
+          placeholder="e.g. 123 Rawai Beach Road"
+          className="w-full p-2 border-2 border-red-500 bg-black text-white focus:ring-2 focus:ring-red-500 focus:border-transparent mt-1"
+          required
+        />
+        <p className="text-red-500 text-[10px] mt-1 italic">
+          Error loading Google Maps. Please enter address manually.
+        </p>
+      </div>
+    );
+  }
+
+  if (!isValidKey) {
     return (
       <div className="flex flex-col">
         <input
@@ -93,11 +135,9 @@ const AddressAutocomplete = ({ locationName, onLocationChange }: AddressAutocomp
           className="w-full p-2 border-2 border-[#13DE00] bg-black text-white focus:ring-2 focus:ring-[#13DE00] focus:border-transparent mt-1"
           required
         />
-        {!isValidKey && (
-          <p className="text-yellow-500 text-[10px] mt-1 italic">
-            Maps API Key missing. Please provide manual entry.
-          </p>
-        )}
+        <p className="text-yellow-500 text-[10px] mt-1 italic">
+          Maps API Key missing. Please provide manual entry.
+        </p>
       </div>
     );
   }
@@ -150,7 +190,6 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
   }, [onClose]);
 
   useEffect(() => {
-    // If location is outside Phuket, strictly enforce pre-payment
     if (!isPhuket) {
       setPaymentMethod("prepaid");
     }
@@ -163,32 +202,19 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
     setIsPhuket(phuket);
   }, []);
 
-  // Delivery Rules:
-  // 1. Not in Phuket: 500 THB flat rate
-  // 2. Over 2000 THB (and in Phuket): Free Delivery
-  // 3. Sub-zones in Phuket have specific static delivery fees
-  // 4. Fallback to distance or default 100
   let deliveryFee = 0;
-  const locLower = locationName.toLowerCase();
+  const zoneFee = getZoneFee(locationName);
 
   if (!isPhuket) {
-    deliveryFee = 500;
-  } else if (total >= 2000) {
+    deliveryFee = NATIONWIDE_FEE;
+  } else if (total >= FREE_DELIVERY_THRESHOLD) {
     deliveryFee = 0;
-  } else if (locLower.includes("airport") || locLower.includes("mai khao") || locLower.includes("nai yang")) {
-    deliveryFee = 500;
-  } else if (locLower.includes("kamala") || locLower.includes("surin") || locLower.includes("bang tao")) {
-    deliveryFee = 400;
-  } else if (locLower.includes("rawai") || locLower.includes("nai harn") || locLower.includes("promthep") || locLower.includes("ya nui")) {
-    deliveryFee = 100;
-  } else if (locLower.includes("karon") || locLower.includes("kata") || locLower.includes("chalong")) {
-    deliveryFee = 200;
-  } else if (locLower.includes("patong") || locLower.includes("phuket town") || locLower.includes("phuket city") || locLower.includes("mueang phuket") || locLower.includes("talat yai") || locLower.includes("talat nuea")) {
-    deliveryFee = 300;
+  } else if (zoneFee !== null) {
+    deliveryFee = zoneFee;
   } else if (distanceKm !== null) {
-    deliveryFee = 50 + distanceKm * 15;
+    deliveryFee = BASE_DELIVERY_FEE + distanceKm * PER_KM_FEE;
   } else {
-    deliveryFee = 100; // Fallback
+    deliveryFee = FALLBACK_FEE;
   }
 
   const grandTotal = total + deliveryFee;

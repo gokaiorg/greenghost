@@ -62,10 +62,3 @@ p.banner-description {
 .pac-icon {
   display: none !important;
 }
-
-/* Suppress Google Maps Error Overlay */
-.gm-err-container,
-.gm-err-dialog,
-.gm-err-backdrop {
-  display: none !important;
-}
