@@ -3,6 +3,7 @@ import { Product } from "@/lib/types";
 
 
 import { getProductsData } from "@/lib/bigquery";
+// import { ProductData } from "@/lib/bigquery-types";
 
 async function fetchProductsFromBigQuery(): Promise<Product[]> {
   try {

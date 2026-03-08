@@ -40,3 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 green-ghost-432101-58ca22dd1b4c.json
+
+# agent
+/.agent/

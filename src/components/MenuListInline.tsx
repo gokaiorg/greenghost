@@ -1,4 +1,5 @@
 import { getPagesData } from "@/lib/bigquery";
+// import { PageData } from "@/lib/bigquery-types";
 import { getLocalizedValue } from "@/lib/i18n-db";
 import MenuListInlineClient from "@/components/MenuListInlineClient";
 

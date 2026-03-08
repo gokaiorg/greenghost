@@ -2,6 +2,7 @@
 
 
 import { getAllLocations } from "@/lib/bigquery";
+// import { LocationData } from "@/lib/bigquery-types";
 import { parseHoursString } from "@/lib/utils/hours";
 import { Organization } from "@/lib/types/organization";
 import { PHONE_NUMBER } from "@/lib/constants";

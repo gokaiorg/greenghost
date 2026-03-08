@@ -19,6 +19,7 @@
     "@gemini-wallet/core": "^0.3.2",
     "@google-cloud/bigquery": "^8.1.1",
     "@metamask/sdk": "^0.33.1",
+    "@react-google-maps/api": "^2.20.8",
     "@reown/appkit-common": "^1.8.15",
     "@reown/appkit-controllers": "^1.8.15",
     "@reown/appkit-scaffold-ui": "^1.8.15",
@@ -36,6 +37,7 @@
     "porto": "^0.2.37",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "server-only": "^0.0.1",
     "viem": "^2.43.3",
     "wagmi": "^3.1.0"
   },

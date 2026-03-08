@@ -10,10 +10,10 @@ import BagAddButton from "@/components/BagAddButton";
 const featuredStrainNames = [
   "Tropical Sunrise",
   "Mango Sticky Rice",
-  "Toasted Toffee",
-  "Ben & Gary's",
+  "Super Boof",
+  "Biscotti OG",
   "Thai Stick",
-  "Grandmaster Kush",
+  "LA Banana",
 ];
 
 interface StrainSectionProps {

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import LocationsStatus from "@/components/LocationsStatus"; // Check if this needs update too
 import { sanitizeUrl } from "@/lib/utils/url";
-import { LocationData } from "@/lib/bigquery";
+import { LocationData } from "@/lib/bigquery-types";
 
 interface LocationsListProps {
   locations: LocationData[];

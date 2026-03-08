@@ -1,6 +1,58 @@
+import "server-only";
 import { BigQuery } from "@google-cloud/bigquery";
 import { cache } from "react";
 import path from "path";
+import {
+  PageData,
+  GardenData,
+  ReviewData,
+  LocationData,
+  BestShopData,
+  LawData,
+  LawFAQData,
+  GrowerData,
+  SeedData,
+  WholesaleData,
+  ListingData,
+  TopData,
+  SocialData,
+  ContactData,
+  DeliveryData,
+  ClubData,
+  PaymentData,
+  NFTData,
+  CBDData,
+  PromoteData,
+  WeedData,
+  ProductData,
+  SectionData,
+} from "./bigquery-types";
+
+export type {
+  PageData,
+  GardenData,
+  ReviewData,
+  LocationData,
+  BestShopData,
+  LawData,
+  LawFAQData,
+  GrowerData,
+  SeedData,
+  WholesaleData,
+  ListingData,
+  TopData,
+  SocialData,
+  ContactData,
+  DeliveryData,
+  ClubData,
+  PaymentData,
+  NFTData,
+  CBDData,
+  PromoteData,
+  WeedData,
+  ProductData,
+  SectionData,
+};
 
 
 const options: import('@google-cloud/bigquery').BigQueryOptions = {
@@ -29,27 +81,7 @@ if (process.env.GOOGLE_CLIENT_EMAIL && process.env.GOOGLE_PRIVATE_KEY) {
 export const bigquery = new BigQuery(options);
 
 
-export interface PageData {
-
-  title_en?: string;
-  title_fr?: string;
-  subtitle_en?: string;
-  subtitle_fr?: string;
-  description_en?: string;
-  description_fr?: string;
-  section_title_en?: string;
-  section_title_fr?: string;
-  section_description_en?: string;
-  section_description_fr?: string;
-  label_en?: string;
-  label_fr?: string;
-  meta_title_en?: string;
-  meta_title_fr?: string;
-  meta_description_en?: string;
-  meta_description_fr?: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: string]: any;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 
 
@@ -82,11 +114,7 @@ export const getPagesData = cache(
 );
 
 
-export interface GardenData {
-  date: string;
-  description: string;
-  image: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getGardensData = cache(async (): Promise<GardenData[]> => {
   const query = `
@@ -127,12 +155,7 @@ export const getGardensData = cache(async (): Promise<GardenData[]> => {
 });
 
 
-export interface ReviewData {
-  user_name: string;
-  comment: string;
-  review_link: string;
-  shop_name: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getReviewsData = cache(async (): Promise<ReviewData[]> => {
 
@@ -161,29 +184,7 @@ export const getReviewsData = cache(async (): Promise<ReviewData[]> => {
 });
 
 
-export interface LocationData {
-  slug: string;
-  name: string;
-  hours: string;
-  phone: string;
-  address: string;
-  address_link: string;
-  review_link: string;
-  details_short: string;
-  description_long: string;
-  seo_description: string;
-  map_embed_link: string;
-  video_link: string;
-  tripadvisor_link: string;
-  weed_th_link: string;
-  wongnai_link: string;
-  highthailand_link: string;
-  apple_map_link: string;
-  latitude: number;
-  longitude: number;
-  region: string;
-  country: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 
 const mapLocationRow = (row: LocationData): LocationData => ({
@@ -294,11 +295,7 @@ export const getLocationBySlug = cache(
 );
 
 
-export interface BestShopData {
-  name: string;
-  link: string;
-  location: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getBestShopsData = cache(async (): Promise<BestShopData[]> => {
   const query = `
@@ -319,10 +316,7 @@ export const getBestShopsData = cache(async (): Promise<BestShopData[]> => {
 });
 
 
-export interface LawData {
-  title: string;
-  description: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getLawsData = cache(async (): Promise<LawData[]> => {
   const query = `
@@ -342,10 +336,7 @@ export const getLawsData = cache(async (): Promise<LawData[]> => {
 });
 
 
-export interface LawFAQData {
-  title: string;
-  description: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getLawsFAQData = cache(async (): Promise<LawFAQData[]> => {
   const query = `
@@ -365,10 +356,7 @@ export const getLawsFAQData = cache(async (): Promise<LawFAQData[]> => {
 });
 
 
-export interface GrowerData {
-  name: string;
-  link: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getGrowersData = cache(async (): Promise<GrowerData[]> => {
   const query = `
@@ -388,10 +376,7 @@ export const getGrowersData = cache(async (): Promise<GrowerData[]> => {
 });
 
 
-export interface SeedData {
-  name: string;
-  link: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getSeedsData = cache(async (): Promise<SeedData[]> => {
   const query = `
@@ -411,12 +396,7 @@ export const getSeedsData = cache(async (): Promise<SeedData[]> => {
 });
 
 
-export interface WholesaleData {
-  strain: string;
-  price: string;
-  Dominance: string;
-  THC: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getWholesalesData = cache(async (): Promise<WholesaleData[]> => {
   const query = `
@@ -438,10 +418,7 @@ export const getWholesalesData = cache(async (): Promise<WholesaleData[]> => {
 });
 
 
-export interface ListingData {
-  name: string;
-  link: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getListingsData = cache(async (): Promise<ListingData[]> => {
   const query = `
@@ -461,10 +438,7 @@ export const getListingsData = cache(async (): Promise<ListingData[]> => {
 });
 
 
-export interface TopData {
-  name: string;
-  link: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getTopsData = cache(async (): Promise<TopData[]> => {
   const query = `
@@ -484,10 +458,7 @@ export const getTopsData = cache(async (): Promise<TopData[]> => {
 });
 
 
-export interface SocialData {
-  name: string;
-  link: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getSocialsData = cache(async (): Promise<SocialData[]> => {
   const query = `
@@ -507,10 +478,7 @@ export const getSocialsData = cache(async (): Promise<SocialData[]> => {
 });
 
 
-export interface ContactData {
-  name: string;
-  link: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getContactsData = cache(async (): Promise<ContactData[]> => {
   const query = `
@@ -530,14 +498,7 @@ export const getContactsData = cache(async (): Promise<ContactData[]> => {
 });
 
 
-export interface DeliveryData {
-  name: string;
-  description: string;
-  label: string;
-  link: string;
-  hint: string;
-  video: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getDeliveryData = cache(async (): Promise<DeliveryData[]> => {
   const query = `
@@ -561,11 +522,7 @@ export const getDeliveryData = cache(async (): Promise<DeliveryData[]> => {
 });
 
 
-export interface ClubData {
-  name: string;
-  description: string;
-  link: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getClubsData = cache(async (): Promise<ClubData[]> => {
   const query = `
@@ -586,12 +543,7 @@ export const getClubsData = cache(async (): Promise<ClubData[]> => {
 });
 
 
-export interface PaymentData {
-  name: string;
-  description: string;
-  subtitle: string;
-  link: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getPaymentsData = cache(async (): Promise<PaymentData[]> => {
   const query = `
@@ -613,21 +565,7 @@ export const getPaymentsData = cache(async (): Promise<PaymentData[]> => {
 });
 
 
-export interface NFTData {
-  slug: string;
-  name: string;
-  logo: string;
-  description: string;
-  opensea: string;
-  embellishments: string;
-  ghost: string;
-  headgear: string;
-  joint: string;
-  leaves: string;
-  shades: string;
-  vibe: string;
-  vibes: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getNFTsData = cache(async (): Promise<NFTData[]> => {
   const query = `
@@ -658,15 +596,7 @@ export const getNFTsData = cache(async (): Promise<NFTData[]> => {
 });
 
 
-export interface CBDData {
-  item_name: string;
-  type: string;
-  price: string;
-  status: string;
-  description: string;
-  seo: string;
-  cbd: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getCBDsData = cache(async (): Promise<CBDData[]> => {
   const query = `
@@ -691,12 +621,7 @@ export const getCBDsData = cache(async (): Promise<CBDData[]> => {
 });
 
 
-export interface PromoteData {
-  title: string;
-  description: string;
-  link: string;
-  link_label: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getPromotesData = cache(async (): Promise<PromoteData[]> => {
   const query = `
@@ -718,11 +643,7 @@ export const getPromotesData = cache(async (): Promise<PromoteData[]> => {
 });
 
 
-export interface WeedData {
-  title: string;
-  description: string;
-  image: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getWeedsData = cache(async (): Promise<WeedData[]> => {
   const query = `
@@ -743,24 +664,7 @@ export const getWeedsData = cache(async (): Promise<WeedData[]> => {
 });
 
 
-export interface ProductData {
-  item_name: string;
-  type: string;
-  wholesale_price: number;
-  price: number;
-  rawai_entry: number;
-  rawai_stock: number;
-  karon_entry: number;
-  karon_stock: number;
-  status: string;
-  description: string;
-  seo_description: string;
-  dominance: string;
-  thc: string;
-  cbd: string;
-  effects: string;
-  relieves: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getProductsData = cache(async (): Promise<ProductData[]> => {
   const query = `
@@ -811,25 +715,7 @@ export const getProductsData = cache(async (): Promise<ProductData[]> => {
 });
 
 
-export interface SectionData {
-  component: string;
-  title_en: string;
-  title_fr: string;
-  description_en: string;
-  description_fr: string;
-  link_label_01_en: string;
-  link_label_01_fr: string;
-  link_url_01_en: string;
-  link_url_01_fr: string;
-  link_label_02_en: string;
-  link_label_02_fr: string;
-  link_url_02_en: string;
-  link_url_02_fr: string;
-  link_label_03_en: string;
-  link_label_03_fr: string;
-  link_url_03_en: string;
-  link_url_03_fr: string;
-}
+// (Interfaces moved to bigquery-types.ts)
 
 export const getSectionsData = cache(async (): Promise<SectionData[]> => {
   const query = `

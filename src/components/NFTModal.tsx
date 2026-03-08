@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import { X } from "lucide-react";
-import { NFTData } from "@/lib/bigquery";
+import { NFTData } from "@/lib/bigquery-types";
 
 interface NFTModalProps {
   nft: NFTData;

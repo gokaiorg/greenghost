@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { NFTData } from "@/lib/bigquery";
+import { NFTData } from "@/lib/bigquery-types";
 import NFTsList from "./NFTsList";
 import NFTModal from "./NFTModal";
 
