@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { Metadata } from "next";
 import PagesBanner from "@/components/PagesBanner";
 import PaymentList from "@/components/PaymentList";
