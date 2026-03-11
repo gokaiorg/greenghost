@@ -6,16 +6,16 @@ import PagesIntro from "@/components/PagesIntro";
 import GrowersList from "@/components/GrowersList";
 import WeedNavigation from "@/components/WeedNavigation";
 
-export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await props.params;
 
   return PagesMetadata({
-
     pageName: "Growers",
 
     locale: lang,
     path: "/growers",
-
   });
 }
 

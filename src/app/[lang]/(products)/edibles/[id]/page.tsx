@@ -94,7 +94,10 @@ export default async function EdibleProductPage({
           __html: toJsonLd(schema),
         }}
       />
-      <EdibleProductClient product={product} menuSlot={<MenuListInline locale={lang} />} />
+      <EdibleProductClient
+        product={product}
+        menuSlot={<MenuListInline locale={lang} />}
+      />
     </>
   );
 }

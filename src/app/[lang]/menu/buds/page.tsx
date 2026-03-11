@@ -1,22 +1,22 @@
 import { Metadata } from "next";
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 import BudsPageContent from "./BudsPageClient";
 
 import { PagesMetadata } from "@/components/PagesMetadata";
 import MenuListInline from "@/components/MenuListInline";
 
-export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await props.params;
 
   return PagesMetadata({
-
     pageName: "Buds Menu",
 
     locale: lang,
     path: "/menu/buds",
-
   });
 }
 
@@ -31,8 +31,18 @@ export default async function BudsPage({
   const { lang } = await params;
   const pageData = await getPagesData("Buds Menu");
 
-  const title = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'title', lang) || "Buds Menu";
-  const description = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'subtitle', lang) || "Buds price for 1 gram.";
+  const title =
+    selectLocalizedField<string>(
+      pageData as unknown as Record<string, unknown>,
+      "title",
+      lang,
+    ) || "Buds Menu";
+  const description =
+    selectLocalizedField<string>(
+      pageData as unknown as Record<string, unknown>,
+      "subtitle",
+      lang,
+    ) || "Buds price for 1 gram.";
 
   return (
     <BudsPageContent

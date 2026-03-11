@@ -12,8 +12,11 @@ interface FooterProps {
   menuItems?: MenuItem[];
 }
 
-export default function Footer({ socials, locale = 'en', menuItems }: FooterProps) {
-
+export default function Footer({
+  socials,
+  locale = "en",
+  menuItems,
+}: FooterProps) {
   return (
     <footer className="text-white py-8 mt-8">
       <div className="container mx-auto px-4">

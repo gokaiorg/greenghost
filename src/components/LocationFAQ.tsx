@@ -19,8 +19,8 @@ export default function LocationFAQ({ location }: LocationFAQProps) {
   // Determine open status text
   const openStatusText =
     todayHours &&
-      todayHours.toLowerCase() !== "closed" &&
-      todayHours.toLowerCase() !== "close"
+    todayHours.toLowerCase() !== "closed" &&
+    todayHours.toLowerCase() !== "close"
       ? `Yes, we are open today from ${todayHours}.`
       : "We are currently closed today.";
 

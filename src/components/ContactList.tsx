@@ -10,7 +10,6 @@ import {
   ExternalLink,
 } from "lucide-react";
 
-
 const getIcon = (name: string) => {
   const lowerName = name.toLowerCase();
   if (lowerName.includes("whatsapp"))

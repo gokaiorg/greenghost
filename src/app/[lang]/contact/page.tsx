@@ -7,16 +7,16 @@ import ContactList from "@/components/ContactList";
 import LocationSection from "@/components/LocationSection";
 import ContactForm from "@/components/ContactForm";
 
-export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await props.params;
 
   return PagesMetadata({
-
     pageName: "Contact",
 
     locale: lang,
     path: "/contact",
-
   });
 }
 

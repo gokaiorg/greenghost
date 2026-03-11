@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+export const revalidate = 86400;
 import { getLawsData, getLawsFAQData } from "@/lib/bigquery";
 
 import WeedNavigation from "@/components/WeedNavigation";
@@ -8,16 +9,16 @@ import { PagesMetadata } from "@/components/PagesMetadata";
 import Laws from "@/components/Laws";
 import LawsFAQ from "@/components/LawsFAQ";
 
-export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await props.params;
 
   return PagesMetadata({
-
     pageName: "Legal Laws",
 
     locale: lang,
     path: "/legal-laws",
-
   });
 }
 

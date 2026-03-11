@@ -12,7 +12,13 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 import NavBurger, { MenuItem } from "@/components/NavBurger";
 
-export default function Header({ locale, menuItems }: { locale?: string; menuItems?: MenuItem[] }) {
+export default function Header({
+  locale,
+  menuItems,
+}: {
+  locale?: string;
+  menuItems?: MenuItem[];
+}) {
   const { getItemCount } = useCart();
   const itemCount = getItemCount();
   const pathname = usePathname();
@@ -48,7 +54,11 @@ export default function Header({ locale, menuItems }: { locale?: string; menuIte
       </a>
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-4">
-          <Link href={getLocalizedPath("/")} className="flex-shrink-0" title="Green Ghost Home">
+          <Link
+            href={getLocalizedPath("/")}
+            className="flex-shrink-0"
+            title="Green Ghost Home"
+          >
             <Image
               src="/images/green-ghost-degen-weed-shop.avif"
               alt="Green Ghost"
@@ -83,7 +93,9 @@ export default function Header({ locale, menuItems }: { locale?: string; menuIte
                 href={getLocalizedPath("/delivery")}
                 title="Delivery"
                 className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname.includes("/delivery") ? "text-[#13DE00]" : ""}`}
-                aria-current={pathname.includes("/delivery") ? "page" : undefined}
+                aria-current={
+                  pathname.includes("/delivery") ? "page" : undefined
+                }
               >
                 Delivery
               </Link>
@@ -93,7 +105,9 @@ export default function Header({ locale, menuItems }: { locale?: string; menuIte
                 href={getLocalizedPath("/contact")}
                 title="Contact"
                 className={`hover:text-[#13DE00] text-sm transition-colors whitespace-nowrap font-medium ${pathname.includes("/contact") ? "text-[#13DE00]" : ""}`}
-                aria-current={pathname.includes("/contact") ? "page" : undefined}
+                aria-current={
+                  pathname.includes("/contact") ? "page" : undefined
+                }
               >
                 Contact
               </Link>

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { getPagesData } from "@/lib/bigquery";
 import { selectLocalizedField } from "@/lib/i18n-helpers";
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 import { PHONE_NUMBER } from "@/lib/constants";
 
@@ -21,7 +21,9 @@ import PromotesList from "@/components/PromotesList";
 import GadgetSection from "@/components/GadgetSection";
 import MenuListInline from "@/components/MenuListInline";
 
-export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await props.params;
   return PagesMetadata({
     pageName: "Green Ghost",
@@ -83,8 +85,16 @@ export default async function Home({
   const pageData = await getPagesData("Green Ghost");
 
   // Use correct localized fields matching the language
-  const bannerSubtitle = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'subtitle', lang);
-  const bannerDescription = selectLocalizedField<string>((pageData as unknown) as Record<string, unknown>, 'description', lang);
+  const bannerSubtitle = selectLocalizedField<string>(
+    pageData as unknown as Record<string, unknown>,
+    "subtitle",
+    lang,
+  );
+  const bannerDescription = selectLocalizedField<string>(
+    pageData as unknown as Record<string, unknown>,
+    "description",
+    lang,
+  );
 
   return (
     <>

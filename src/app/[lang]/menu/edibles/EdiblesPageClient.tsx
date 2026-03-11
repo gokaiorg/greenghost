@@ -19,9 +19,9 @@ interface EdiblesPageContentProps {
 
 export default function EdiblesPageContent({
   menuSlot,
-  locale = 'en',
+  locale = "en",
   title = "Edibles Menu",
-  description = "Edibles price per serving."
+  description = "Edibles price per serving.",
 }: EdiblesPageContentProps) {
   const [edibles, setEdibles] = useState<Product[]>([]);
 
@@ -55,7 +55,10 @@ export default function EdiblesPageContent({
         >
           {edibles.map((edible) => (
             <li key={edible.id} className="relative">
-              <Link href={`${locale === 'en' ? '' : `/${locale}`}/edibles/${edible.id}`} title={edible.name}>
+              <Link
+                href={`${locale === "en" ? "" : `/${locale}`}/edibles/${edible.id}`}
+                title={edible.name}
+              >
                 <div className="hover:bg-[#13DE00]/13 p-1 flex flex-col relative">
                   <div className="relative mb-2">
                     <MiniSlider

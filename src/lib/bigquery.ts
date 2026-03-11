@@ -54,40 +54,32 @@ export type {
   SectionData,
 };
 
-
-const options: import('@google-cloud/bigquery').BigQueryOptions = {
-  projectId: process.env.GOOGLE_PROJECT_ID || 'green-ghost-432101',
+const options: import("@google-cloud/bigquery").BigQueryOptions = {
+  projectId: process.env.GOOGLE_PROJECT_ID || "green-ghost-432101",
   scopes: [
-    'https://www.googleapis.com/auth/bigquery',
-    'https://www.googleapis.com/auth/drive',
+    "https://www.googleapis.com/auth/bigquery",
+    "https://www.googleapis.com/auth/drive",
   ],
 };
 
-
 if (process.env.GOOGLE_CLIENT_EMAIL && process.env.GOOGLE_PRIVATE_KEY) {
-
   options.credentials = {
     client_email: process.env.GOOGLE_CLIENT_EMAIL,
-    private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+    private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
   };
-} else if (process.env.NODE_ENV === 'development') {
-
-  options.keyFilename = path.join(process.cwd(), 'green-ghost-432101-58ca22dd1b4c.json');
+} else if (process.env.NODE_ENV === "development") {
+  options.keyFilename = path.join(
+    process.cwd(),
+    "green-ghost-432101-58ca22dd1b4c.json",
+  );
 }
-
-
-
 
 export const bigquery = new BigQuery(options);
 
-
 // (Interfaces moved to bigquery-types.ts)
-
-
 
 export const getPagesData = cache(
   async (pageTitle: string): Promise<PageData | null> => {
-
     const query = `
       SELECT *
       FROM \`green-ghost-432101.staging.stg_pages\`
@@ -110,9 +102,8 @@ export const getPagesData = cache(
       console.error("BigQuery fetching error (pages):", error);
       return null;
     }
-  }
+  },
 );
-
 
 // (Interfaces moved to bigquery-types.ts)
 
@@ -131,10 +122,12 @@ export const getGardensData = cache(async (): Promise<GardenData[]> => {
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return rows.map((row: any, index: number) => {
-
       const dateVal = row.garden_date.value || row.garden_date;
 
-      const dateStr = typeof dateVal === 'string' ? dateVal : dateVal.toISOString().split('T')[0];
+      const dateStr =
+        typeof dateVal === "string"
+          ? dateVal
+          : dateVal.toISOString().split("T")[0];
 
       const [year, month, day] = dateStr.split("-");
       const formattedDate = `${day} ${month} ${year}`;
@@ -154,11 +147,9 @@ export const getGardensData = cache(async (): Promise<GardenData[]> => {
   }
 });
 
-
 // (Interfaces moved to bigquery-types.ts)
 
 export const getReviewsData = cache(async (): Promise<ReviewData[]> => {
-
   const query = `
     SELECT
       user_name,
@@ -183,9 +174,7 @@ export const getReviewsData = cache(async (): Promise<ReviewData[]> => {
   }
 });
 
-
 // (Interfaces moved to bigquery-types.ts)
-
 
 const mapLocationRow = (row: LocationData): LocationData => ({
   slug: row.slug,
@@ -213,7 +202,6 @@ const mapLocationRow = (row: LocationData): LocationData => ({
 });
 
 export const getAllLocations = cache(async (): Promise<LocationData[]> => {
-
   const query = `
     SELECT
       slug,
@@ -291,9 +279,8 @@ export const getLocationBySlug = cache(
       console.error(`BigQuery fetching error (location: ${slug}):`, error);
       return null;
     }
-  }
+  },
 );
-
 
 // (Interfaces moved to bigquery-types.ts)
 
@@ -315,7 +302,6 @@ export const getBestShopsData = cache(async (): Promise<BestShopData[]> => {
   }
 });
 
-
 // (Interfaces moved to bigquery-types.ts)
 
 export const getLawsData = cache(async (): Promise<LawData[]> => {
@@ -334,7 +320,6 @@ export const getLawsData = cache(async (): Promise<LawData[]> => {
     return [];
   }
 });
-
 
 // (Interfaces moved to bigquery-types.ts)
 
@@ -355,7 +340,6 @@ export const getLawsFAQData = cache(async (): Promise<LawFAQData[]> => {
   }
 });
 
-
 // (Interfaces moved to bigquery-types.ts)
 
 export const getGrowersData = cache(async (): Promise<GrowerData[]> => {
@@ -375,7 +359,6 @@ export const getGrowersData = cache(async (): Promise<GrowerData[]> => {
   }
 });
 
-
 // (Interfaces moved to bigquery-types.ts)
 
 export const getSeedsData = cache(async (): Promise<SeedData[]> => {
@@ -394,7 +377,6 @@ export const getSeedsData = cache(async (): Promise<SeedData[]> => {
     return [];
   }
 });
-
 
 // (Interfaces moved to bigquery-types.ts)
 
@@ -417,7 +399,6 @@ export const getWholesalesData = cache(async (): Promise<WholesaleData[]> => {
   }
 });
 
-
 // (Interfaces moved to bigquery-types.ts)
 
 export const getListingsData = cache(async (): Promise<ListingData[]> => {
@@ -436,7 +417,6 @@ export const getListingsData = cache(async (): Promise<ListingData[]> => {
     return [];
   }
 });
-
 
 // (Interfaces moved to bigquery-types.ts)
 
@@ -457,7 +437,6 @@ export const getTopsData = cache(async (): Promise<TopData[]> => {
   }
 });
 
-
 // (Interfaces moved to bigquery-types.ts)
 
 export const getSocialsData = cache(async (): Promise<SocialData[]> => {
@@ -477,7 +456,6 @@ export const getSocialsData = cache(async (): Promise<SocialData[]> => {
   }
 });
 
-
 // (Interfaces moved to bigquery-types.ts)
 
 export const getContactsData = cache(async (): Promise<ContactData[]> => {
@@ -496,7 +474,6 @@ export const getContactsData = cache(async (): Promise<ContactData[]> => {
     return [];
   }
 });
-
 
 // (Interfaces moved to bigquery-types.ts)
 
@@ -521,7 +498,6 @@ export const getDeliveryData = cache(async (): Promise<DeliveryData[]> => {
   }
 });
 
-
 // (Interfaces moved to bigquery-types.ts)
 
 export const getClubsData = cache(async (): Promise<ClubData[]> => {
@@ -541,7 +517,6 @@ export const getClubsData = cache(async (): Promise<ClubData[]> => {
     return [];
   }
 });
-
 
 // (Interfaces moved to bigquery-types.ts)
 
@@ -563,7 +538,6 @@ export const getPaymentsData = cache(async (): Promise<PaymentData[]> => {
     return [];
   }
 });
-
 
 // (Interfaces moved to bigquery-types.ts)
 
@@ -595,7 +569,6 @@ export const getNFTsData = cache(async (): Promise<NFTData[]> => {
   }
 });
 
-
 // (Interfaces moved to bigquery-types.ts)
 
 export const getCBDsData = cache(async (): Promise<CBDData[]> => {
@@ -620,7 +593,6 @@ export const getCBDsData = cache(async (): Promise<CBDData[]> => {
   }
 });
 
-
 // (Interfaces moved to bigquery-types.ts)
 
 export const getPromotesData = cache(async (): Promise<PromoteData[]> => {
@@ -642,7 +614,6 @@ export const getPromotesData = cache(async (): Promise<PromoteData[]> => {
   }
 });
 
-
 // (Interfaces moved to bigquery-types.ts)
 
 export const getWeedsData = cache(async (): Promise<WeedData[]> => {
@@ -662,7 +633,6 @@ export const getWeedsData = cache(async (): Promise<WeedData[]> => {
     return [];
   }
 });
-
 
 // (Interfaces moved to bigquery-types.ts)
 
@@ -713,7 +683,6 @@ export const getProductsData = cache(async (): Promise<ProductData[]> => {
     return [];
   }
 });
-
 
 // (Interfaces moved to bigquery-types.ts)
 

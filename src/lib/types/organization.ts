@@ -1,6 +1,5 @@
 // LocationData is now imported from @/lib/bigquery where needed.
 
-
 export interface Organization {
   name: string;
   legalName: string;

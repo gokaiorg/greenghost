@@ -19,9 +19,9 @@ interface PreRollsPageContentProps {
 
 export default function PreRollsPageContent({
   menuSlot,
-  locale = 'en',
+  locale = "en",
   title = "Pre-rolls Menu",
-  description = "On demand. +20THB on delivery. Free on store."
+  description = "On demand. +20THB on delivery. Free on store.",
 }: PreRollsPageContentProps) {
   const [allPreRolls, setAllPreRolls] = useState<Product[]>([]);
   const [selectedDominances, setSelectedDominances] = useState<string[]>([]);
@@ -44,8 +44,8 @@ export default function PreRollsPageContent({
   const preRolls =
     selectedDominances.length > 0
       ? allPreRolls.filter((roll) =>
-        selectedDominances.some((d) => roll.dominance?.startsWith(d)),
-      )
+          selectedDominances.some((d) => roll.dominance?.startsWith(d)),
+        )
       : allPreRolls;
 
   return (
@@ -57,9 +57,7 @@ export default function PreRollsPageContent({
           <h1 className="text-xl lg:text-2xl font-bold text-left whitespace-nowrap">
             {title}
           </h1>
-          <p className="text-xs text-gray-400">
-            {description}
-          </p>
+          <p className="text-xs text-gray-400">{description}</p>
         </div>
         <StrainFilter
           selectedDominances={selectedDominances}
@@ -71,7 +69,10 @@ export default function PreRollsPageContent({
               key={roll.id}
               className="relative bg-black hover:bg-[#13DE00]/13 transition-all"
             >
-              <Link href={`${locale === 'en' ? '' : `/${locale}`}/strains/${roll.id}`} title={roll.name}>
+              <Link
+                href={`${locale === "en" ? "" : `/${locale}`}/strains/${roll.id}`}
+                title={roll.name}
+              >
                 <div className="p-2 flex items-start sm:items-center justify-between mb-2 sm:mb-0 sm:pr-24">
                   <ul
                     className="flex flex-col flex-grow list-none m-0 p-0"

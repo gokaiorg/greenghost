@@ -1,6 +1,5 @@
 // Locations data handling is now done via BigQuery (see src/lib/bigquery.ts)
 
-
 import { getAllLocations } from "@/lib/bigquery";
 // import { LocationData } from "@/lib/bigquery-types";
 import { parseHoursString } from "@/lib/utils/hours";
@@ -52,7 +51,8 @@ export async function getOrganizationData(): Promise<Organization> {
           streetAddress: location.address.split(", ")[0],
           addressLocality: location.address.split(", ")[1] || "",
           addressRegion: location.region,
-          postalCode: location.address.split(", ").pop()?.match(/\d+/)?.[0] || "",
+          postalCode:
+            location.address.split(", ").pop()?.match(/\d+/)?.[0] || "",
           addressCountry: location.country,
         },
         telephone: location.phone,

@@ -1,7 +1,5 @@
 import { Product } from "@/lib/types";
 
-
-
 import { getProductsData } from "@/lib/bigquery";
 // import { ProductData } from "@/lib/bigquery-types";
 
@@ -30,10 +28,12 @@ async function fetchProductsFromBigQuery(): Promise<Product[]> {
       // Convert values
       const price = Number(row.price) || 0;
       // Calculate total stock from both locations
-      const stock = (Number(row.rawai_stock) || 0) + (Number(row.karon_stock) || 0);
+      const stock =
+        (Number(row.rawai_stock) || 0) + (Number(row.karon_stock) || 0);
       const thc = parseFloat(cleanThc) || 0;
       const cbd = parseFloat(cleanCbd) || 0;
-      const initialNum = (Number(row.rawai_entry) || 0) + (Number(row.karon_entry) || 0);
+      const initialNum =
+        (Number(row.rawai_entry) || 0) + (Number(row.karon_entry) || 0);
       const wholesaleNum = Number(row.wholesale_price) || 0;
 
       // Map types to categories

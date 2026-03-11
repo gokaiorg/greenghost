@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+export const revalidate = 86400;
 import { notFound } from "next/navigation";
 
 import { toJsonLd } from "@/lib/utils/json-ld";
@@ -43,7 +44,7 @@ export default async function LocationPage({
     notFound();
   }
 
-  // Schema generation might need adaptation if it strictly expects old Location type. 
+  // Schema generation might need adaptation if it strictly expects old Location type.
   // For now assuming it accepts similar shape or partial.
   const localBusinessSchema = generateLocalBusinessSchema(location);
   const faqSchema = generateFAQSchema(location);
@@ -226,39 +227,42 @@ export default async function LocationPage({
 
                     {/* Social Links - Condensed */}
                     <div className="grid md:grid-cols-2 gap-2 mt-2">
-                      {location.tripadvisor_link && location.tripadvisor_link !== "#" && (
-                        <a
-                          href={sanitizeUrl(location.tripadvisor_link)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title="TripAdvisor"
-                          className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all"
-                        >
-                          TripAdvisor
-                        </a>
-                      )}
-                      {location.weed_th_link && location.weed_th_link !== "#" && (
-                        <a
-                          href={sanitizeUrl(location.weed_th_link)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title="WEED.TH"
-                          className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all"
-                        >
-                          WEED.TH
-                        </a>
-                      )}
-                      {location.wongnai_link && location.wongnai_link !== "#" && (
-                        <a
-                          href={sanitizeUrl(location.wongnai_link)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title="Wongnai"
-                          className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all"
-                        >
-                          Wongnai
-                        </a>
-                      )}
+                      {location.tripadvisor_link &&
+                        location.tripadvisor_link !== "#" && (
+                          <a
+                            href={sanitizeUrl(location.tripadvisor_link)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="TripAdvisor"
+                            className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all"
+                          >
+                            TripAdvisor
+                          </a>
+                        )}
+                      {location.weed_th_link &&
+                        location.weed_th_link !== "#" && (
+                          <a
+                            href={sanitizeUrl(location.weed_th_link)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="WEED.TH"
+                            className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all"
+                          >
+                            WEED.TH
+                          </a>
+                        )}
+                      {location.wongnai_link &&
+                        location.wongnai_link !== "#" && (
+                          <a
+                            href={sanitizeUrl(location.wongnai_link)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Wongnai"
+                            className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all"
+                          >
+                            Wongnai
+                          </a>
+                        )}
                       {location.highthailand_link &&
                         location.highthailand_link !== "#" && (
                           <a
@@ -271,17 +275,18 @@ export default async function LocationPage({
                             High Thailand
                           </a>
                         )}
-                      {location.apple_map_link && location.apple_map_link !== "#" && (
-                        <a
-                          href={sanitizeUrl(location.apple_map_link)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title="Apple Maps"
-                          className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all"
-                        >
-                          Apple Maps
-                        </a>
-                      )}
+                      {location.apple_map_link &&
+                        location.apple_map_link !== "#" && (
+                          <a
+                            href={sanitizeUrl(location.apple_map_link)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Apple Maps"
+                            className="text-xs text-left p-2 bg-black/30 hover:bg-[#13DE00]/13 border border-white/10 hover:border-[#13DE00] text-gray-300 hover:text-white transition-all"
+                          >
+                            Apple Maps
+                          </a>
+                        )}
                     </div>
                   </div>
                 </section>
@@ -294,12 +299,14 @@ export default async function LocationPage({
         <LocationFAQ location={location} />
 
         {/* Nearby Locations */}
-        <NearbyLocations currentSlug={location.slug} allLocations={allLocations} />
+        <NearbyLocations
+          currentSlug={location.slug}
+          allLocations={allLocations}
+        />
       </div>
     </>
   );
 }
-
 
 // Helper function to convert YouTube embed URL to watch URL
 function convertYouTubeEmbedToWatch(embedUrl: string): string {

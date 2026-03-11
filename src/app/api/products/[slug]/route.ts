@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+export const revalidate = 86400;
 import { getProductById, getProductsByCategory } from "@/lib/products";
 
 export async function GET(

@@ -19,9 +19,9 @@ interface ConcentratesPageContentProps {
 
 export default function ConcentratesPageContent({
   menuSlot,
-  locale = 'en',
+  locale = "en",
   title = "Concentrates Menu",
-  description = "Concentrates price for 1 gram."
+  description = "Concentrates price for 1 gram.",
 }: ConcentratesPageContentProps) {
   const [concentrates, setConcentrates] = useState<Product[]>([]);
 
@@ -47,9 +47,7 @@ export default function ConcentratesPageContent({
           <h1 className="text-xl lg:text-2xl font-bold text-left whitespace-nowrap">
             {title}
           </h1>
-          <p className="text-xs text-gray-400">
-            {description}
-          </p>
+          <p className="text-xs text-gray-400">{description}</p>
         </div>
         <ul
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 list-none m-0 p-0"
@@ -58,7 +56,7 @@ export default function ConcentratesPageContent({
           {concentrates.map((concentrate) => (
             <li key={concentrate.id} className="relative">
               <Link
-                href={`${locale === 'en' ? '' : `/${locale}`}/concentrates/${concentrate.id}`}
+                href={`${locale === "en" ? "" : `/${locale}`}/concentrates/${concentrate.id}`}
                 title={concentrate.name}
               >
                 <div className="hover:bg-[#13DE00]/13 p-1 flex flex-col relative">

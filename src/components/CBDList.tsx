@@ -32,10 +32,11 @@ export default function CBDList({ products }: CBDListProps) {
           <button
             key={type}
             onClick={() => setSelectedType(type)}
-            className={`px-6 py-3 font-bold transition-colors cursor-pointer ${selectedType === type
-              ? "bg-[#13DE00] text-black"
-              : "bg-[#13DE00]/13 text-white hover:bg-[#13DE00]/20"
-              }`}
+            className={`px-6 py-3 font-bold transition-colors cursor-pointer ${
+              selectedType === type
+                ? "bg-[#13DE00] text-black"
+                : "bg-[#13DE00]/13 text-white hover:bg-[#13DE00]/20"
+            }`}
           >
             {type}
           </button>
@@ -49,7 +50,9 @@ export default function CBDList({ products }: CBDListProps) {
         {filteredProducts.map((product, index) => {
           // Generate image path based on product name
           // Convert name to lowercase and replace spaces with hyphens
-          const imageName = product.item_name.toLowerCase().replace(/\s+/g, "-");
+          const imageName = product.item_name
+            .toLowerCase()
+            .replace(/\s+/g, "-");
           const imagePath = `/images/cbd/${imageName}-cover-green-ghost.avif`;
 
           // Generate slug for external link

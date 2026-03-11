@@ -14,9 +14,7 @@ export async function getStrains(): Promise<Strain[]> {
         type: "Strain", // Legacy type expected by Strain interface
         thc: p.thc,
         cbd: p.cbd,
-        description: p.description
-          .replace(/\\n/g, " ")
-          .replace(/"/g, ""),
+        description: p.description.replace(/\\n/g, " ").replace(/"/g, ""),
         effects: p.effects,
         relieves: p.relieves,
         dominance: p.dominance,
@@ -26,4 +24,3 @@ export async function getStrains(): Promise<Strain[]> {
     return [];
   }
 }
-

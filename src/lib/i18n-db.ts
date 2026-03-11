@@ -10,37 +10,37 @@ import { SectionData } from "@/lib/bigquery-types";
  * @returns The localized string
  */
 export function getLocalizedValue(
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    row: Record<string, any>,
-    field: string,
-    locale: string,
-    fallbackToEn = true
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  row: Record<string, any>,
+  field: string,
+  locale: string,
+  fallbackToEn = true,
 ): string {
-    const localized = row[`${field}_${locale}`];
-    const english = row[`${field}_en`];
+  const localized = row[`${field}_${locale}`];
+  const english = row[`${field}_en`];
 
-    // If we have a value for the requested locale, return it
-    if (localized) {
-        return localized;
-    }
+  // If we have a value for the requested locale, return it
+  if (localized) {
+    return localized;
+  }
 
-    // Only fallback if requested and English value exists
-    if (fallbackToEn && english) {
-        return english;
-    }
+  // Only fallback if requested and English value exists
+  if (fallbackToEn && english) {
+    return english;
+  }
 
-    return "";
+  return "";
 }
 
 interface LocalizedLink {
-    label: string;
-    url: string;
+  label: string;
+  url: string;
 }
 
 interface LocalizedSection {
-    title: string;
-    description: string;
-    links: LocalizedLink[];
+  title: string;
+  description: string;
+  links: LocalizedLink[];
 }
 
 /**
@@ -51,43 +51,43 @@ interface LocalizedSection {
  * @returns Clean localized object with title, description and links
  */
 export function getLocalizedSection(
-    sections: SectionData[],
-    componentName: string,
-    locale: string
+  sections: SectionData[],
+  componentName: string,
+  locale: string,
 ): LocalizedSection {
-    const section = sections.find((s) => s.component === componentName);
+  const section = sections.find((s) => s.component === componentName);
 
-    if (!section) {
-        return {
-            title: "",
-            description: "",
-            links: [],
-        };
-    }
-
-    const title = getLocalizedValue(section, "title", locale);
-    const description = getLocalizedValue(section, "description", locale);
-
-    const links: LocalizedLink[] = [];
-
-    // Helper to process a link pair (label + url)
-    const processLink = (index: string) => {
-        const label = getLocalizedValue(section, `link_label_${index}`, locale);
-        const url = getLocalizedValue(section, `link_url_${index}`, locale);
-
-        if (label && url) {
-            links.push({ label, url });
-        }
-    };
-
-    // Process up to 3 links (based on current database schema)
-    processLink("01");
-    processLink("02");
-    processLink("03");
-
+  if (!section) {
     return {
-        title,
-        description,
-        links,
+      title: "",
+      description: "",
+      links: [],
     };
+  }
+
+  const title = getLocalizedValue(section, "title", locale);
+  const description = getLocalizedValue(section, "description", locale);
+
+  const links: LocalizedLink[] = [];
+
+  // Helper to process a link pair (label + url)
+  const processLink = (index: string) => {
+    const label = getLocalizedValue(section, `link_label_${index}`, locale);
+    const url = getLocalizedValue(section, `link_url_${index}`, locale);
+
+    if (label && url) {
+      links.push({ label, url });
+    }
+  };
+
+  // Process up to 3 links (based on current database schema)
+  processLink("01");
+  processLink("02");
+  processLink("03");
+
+  return {
+    title,
+    description,
+    links,
+  };
 }

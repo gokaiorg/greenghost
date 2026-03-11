@@ -9,11 +9,7 @@ import {
   SetStateAction,
 } from "react";
 import { Send, X } from "lucide-react";
-import {
-  findStrain,
-  formatStrainInfo,
-  escapeHtml,
-} from "@/lib/strain-utils";
+import { findStrain, formatStrainInfo, escapeHtml } from "@/lib/strain-utils";
 import { Message } from "@/lib/types";
 
 // Helper function to create links
@@ -56,10 +52,11 @@ const MessageList = memo(function MessageList({
           className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
         >
           <div
-            className={`max-w-[80%] p-3 ${message.sender === "user"
-              ? "bg-[#13DE00] text-black"
-              : "bg-[#13DE00]/13 text-white"
-              }`}
+            className={`max-w-[80%] p-3 ${
+              message.sender === "user"
+                ? "bg-[#13DE00] text-black"
+                : "bg-[#13DE00]/13 text-white"
+            }`}
           >
             {/* Security Fix: Only render bot messages as HTML, render user messages as text */}
             {message.sender === "user" ? (
@@ -96,9 +93,9 @@ export default function ChatWindow({
   onClose,
 }: ChatWindowProps) {
   const [input, setInput] = useState("");
-  const [strains, setStrains] = useState<
-    import("@/lib/strain-utils").Strain[]
-  >([]);
+  const [strains, setStrains] = useState<import("@/lib/strain-utils").Strain[]>(
+    [],
+  );
   const hasLoadedStrains = useRef(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -246,9 +243,7 @@ export default function ChatWindow({
         if (matchingStrains.length > 0) {
           const topStrains = matchingStrains.slice(0, 3);
           const strainList = topStrains
-            .map(
-              (s) => `- ${escapeHtml(s.name)} (${escapeHtml(s.effects)})`,
-            )
+            .map((s) => `- ${escapeHtml(s.name)} (${escapeHtml(s.effects)})`)
             .join("\n");
           return `Here are some strains that might help with ${matchedEffect}:\n\n${strainList}\n\nYou can ask me for more details about any of these strains!`;
         }

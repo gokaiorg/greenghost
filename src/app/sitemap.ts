@@ -40,7 +40,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
   // Helper to add entries for all locales
-  const addEntries = (path: string, changeFrequency: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never", priority: number) => {
+  const addEntries = (
+    path: string,
+    changeFrequency:
+      | "always"
+      | "hourly"
+      | "daily"
+      | "weekly"
+      | "monthly"
+      | "yearly"
+      | "never",
+    priority: number,
+  ) => {
     i18n.locales.forEach((locale) => {
       const url =
         locale === i18n.defaultLocale
@@ -54,9 +65,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       });
     });
   };
-
-
-
 
   // Static pages
   routes.forEach((route) => {

@@ -5,7 +5,7 @@ import { CartItem } from "@/lib/types";
 import Link from "next/link";
 import { useLoadScript, Autocomplete } from "@react-google-maps/api";
 
-const libraries: ("places")[] = ["places"];
+const libraries: "places"[] = ["places"];
 
 // Delivery configuration
 const BASE_DELIVERY_FEE = 50;
@@ -16,13 +16,23 @@ const FALLBACK_FEE = 100;
 
 const SHOP_LOCATION = {
   lat: parseFloat(process.env.NEXT_PUBLIC_SHOP_LAT || "7.7766"),
-  lng: parseFloat(process.env.NEXT_PUBLIC_SHOP_LNG || "98.3188")
+  lng: parseFloat(process.env.NEXT_PUBLIC_SHOP_LNG || "98.3188"),
 };
 
 const deliveryZones = [
   { keywords: ["airport", "mai khao", "nai yang"], fee: 500 },
   { keywords: ["kamala", "surin", "bang tao"], fee: 400 },
-  { keywords: ["patong", "phuket town", "phuket city", "mueang phuket", "talat yai", "talat nuea"], fee: 300 },
+  {
+    keywords: [
+      "patong",
+      "phuket town",
+      "phuket city",
+      "mueang phuket",
+      "talat yai",
+      "talat nuea",
+    ],
+    fee: 300,
+  },
   { keywords: ["karon", "kata", "chalong"], fee: 200 },
   { keywords: ["rawai", "nai harn", "promthep", "ya nui"], fee: 100 },
 ];
@@ -30,7 +40,7 @@ const deliveryZones = [
 function getZoneFee(locationName: string): number | null {
   const locLower = locationName.toLowerCase();
   for (const zone of deliveryZones) {
-    if (zone.keywords.some(keyword => locLower.includes(keyword))) {
+    if (zone.keywords.some((keyword) => locLower.includes(keyword))) {
       return zone.fee;
     }
   }
@@ -40,58 +50,83 @@ function getZoneFee(locationName: string): number | null {
 // --- Subcomponent to handle the Maps API separately ---
 interface AddressAutocompleteProps {
   locationName: string;
-  onLocationChange: (name: string, url: string, distanceKm: number | null, isPhuket: boolean) => void;
+  onLocationChange: (
+    name: string,
+    url: string,
+    distanceKm: number | null,
+    isPhuket: boolean,
+  ) => void;
 }
 
-const AddressAutocomplete = ({ locationName, onLocationChange }: AddressAutocompleteProps) => {
+const AddressAutocomplete = ({
+  locationName,
+  onLocationChange,
+}: AddressAutocompleteProps) => {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "";
   const isValidKey = apiKey && apiKey !== "insert_key_here";
 
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: isValidKey ? apiKey : "",
     libraries,
-    id: 'google-maps-script',
+    id: "google-maps-script",
   });
 
   const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null);
 
-  const calculateDistance = useCallback((destination: google.maps.LatLng, placeName: string, placeUrl: string, isPhuket: boolean) => {
-    if (!window.google) return;
-    const service = new google.maps.DistanceMatrixService();
-    service.getDistanceMatrix(
-      {
-        origins: [SHOP_LOCATION],
-        destinations: [destination],
-        travelMode: google.maps.TravelMode.DRIVING,
-        unitSystem: google.maps.UnitSystem.METRIC,
-      },
-      (response, status) => {
-        if (status === "OK" && response && response.rows[0].elements[0].status === "OK") {
-          const distanceInMeters = response.rows[0].elements[0].distance.value;
-          const distanceKm = Math.ceil(distanceInMeters / 1000);
-          onLocationChange(placeName, placeUrl, distanceKm, isPhuket);
-        } else {
-          onLocationChange(placeName, placeUrl, null, isPhuket);
-        }
-      }
-    );
-  }, [onLocationChange]);
+  const calculateDistance = useCallback(
+    (
+      destination: google.maps.LatLng,
+      placeName: string,
+      placeUrl: string,
+      isPhuket: boolean,
+    ) => {
+      if (!window.google) return;
+      const service = new google.maps.DistanceMatrixService();
+      service.getDistanceMatrix(
+        {
+          origins: [SHOP_LOCATION],
+          destinations: [destination],
+          travelMode: google.maps.TravelMode.DRIVING,
+          unitSystem: google.maps.UnitSystem.METRIC,
+        },
+        (response, status) => {
+          if (
+            status === "OK" &&
+            response &&
+            response.rows[0].elements[0].status === "OK"
+          ) {
+            const distanceInMeters =
+              response.rows[0].elements[0].distance.value;
+            const distanceKm = Math.ceil(distanceInMeters / 1000);
+            onLocationChange(placeName, placeUrl, distanceKm, isPhuket);
+          } else {
+            onLocationChange(placeName, placeUrl, null, isPhuket);
+          }
+        },
+      );
+    },
+    [onLocationChange],
+  );
 
   const onPlaceChanged = () => {
     if (autocompleteRef.current) {
       const place = autocompleteRef.current.getPlace();
       if (place.geometry && place.geometry.location) {
         const name = place.formatted_address || place.name || "";
-        const url = place.url || `https://www.google.com/maps/search/?api=1&query=${place.geometry.location.lat()},${place.geometry.location.lng()}`;
+        const url =
+          place.url ||
+          `https://www.google.com/maps/search/?api=1&query=${place.geometry.location.lat()},${place.geometry.location.lng()}`;
 
         let isPhuket = true;
         if (place.address_components) {
-          isPhuket = place.address_components.some((comp) =>
-            comp.long_name.toLowerCase().includes("phuket") ||
-            comp.short_name.includes("ภูเก็ต")
+          isPhuket = place.address_components.some(
+            (comp) =>
+              comp.long_name.toLowerCase().includes("phuket") ||
+              comp.short_name.includes("ภูเก็ต"),
           );
         } else {
-          isPhuket = name.toLowerCase().includes("phuket") || name.includes("ภูเก็ต");
+          isPhuket =
+            name.toLowerCase().includes("phuket") || name.includes("ภูเก็ต");
         }
 
         onLocationChange(name, url, null, isPhuket);
@@ -102,7 +137,8 @@ const AddressAutocomplete = ({ locationName, onLocationChange }: AddressAutocomp
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value;
-    const isPhuket = val.toLowerCase().includes("phuket") || val.includes("ภูเก็ต");
+    const isPhuket =
+      val.toLowerCase().includes("phuket") || val.includes("ภูเก็ต");
     onLocationChange(val, "", null, isPhuket);
   };
 
@@ -143,12 +179,16 @@ const AddressAutocomplete = ({ locationName, onLocationChange }: AddressAutocomp
   }
 
   if (!isLoaded) {
-    return <p className="text-[#13DE00] text-sm animate-pulse">Loading maps...</p>;
+    return (
+      <p className="text-[#13DE00] text-sm animate-pulse">Loading maps...</p>
+    );
   }
 
   return (
     <Autocomplete
-      onLoad={(autocomplete) => { autocompleteRef.current = autocomplete; }}
+      onLoad={(autocomplete) => {
+        autocompleteRef.current = autocomplete;
+      }}
       onPlaceChanged={onPlaceChanged}
       options={{ componentRestrictions: { country: "th" } }}
     >
@@ -172,8 +212,12 @@ interface BagMessagingProps {
 
 const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
   const [name, setName] = useState("");
-  const [paymentMethod, setPaymentMethod] = useState<"prepaid" | "cod">("prepaid");
-  const [activeTab, setActiveTab] = useState<"whatsapp" | "messenger" | "telegram">("whatsapp");
+  const [paymentMethod, setPaymentMethod] = useState<"prepaid" | "cod">(
+    "prepaid",
+  );
+  const [activeTab, setActiveTab] = useState<
+    "whatsapp" | "messenger" | "telegram"
+  >("whatsapp");
 
   // Consolidated location state from autocomplete
   const [locationName, setLocationName] = useState("");
@@ -195,12 +239,15 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
     }
   }, [isPhuket]);
 
-  const handleLocationChange = useCallback((name: string, url: string, distance: number | null, phuket: boolean) => {
-    setLocationName(name);
-    setLocationUrl(url);
-    setDistanceKm(distance);
-    setIsPhuket(phuket);
-  }, []);
+  const handleLocationChange = useCallback(
+    (name: string, url: string, distance: number | null, phuket: boolean) => {
+      setLocationName(name);
+      setLocationUrl(url);
+      setDistanceKm(distance);
+      setIsPhuket(phuket);
+    },
+    [],
+  );
 
   let deliveryFee = 0;
   const zoneFee = getZoneFee(locationName);
@@ -221,7 +268,8 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
 
   const getItemTotal = (item: CartItem) => {
     if (item.menuType === "Buds" || item.menuType === "Pre-rolls") {
-      const basePrice = item.menuType === "Pre-rolls" ? item.price + 20 : item.price;
+      const basePrice =
+        item.menuType === "Pre-rolls" ? item.price + 20 : item.price;
       if (item.quantity >= 30) return basePrice * item.quantity * 0.7; // 30% off
       if (item.quantity >= 10) return basePrice * item.quantity * 0.8; // 20% off
       if (item.quantity >= 5) return basePrice * (item.quantity - 1); // Buy 4 Get 1 Free
@@ -231,16 +279,24 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
   };
 
   const orderDetails = `Name: ${name}\nDelivery Address: ${locationName}${locationUrl ? `\nMaps Link: ${locationUrl}` : ""}\nPayment Method: ${paymentMethod === "prepaid" ? "Pre-payment (Bank Transfer)" : "Cash on Delivery"}\n\nOrder Details:\n${items
-    .map((item) => `${item.quantity} x ${item.name} (${item.menuType}) - ${getItemTotal(item)}฿`)
-    .join("\n")}\n\nSubtotal: ${total}฿\nDelivery Fee: ${deliveryFee}฿\nGrand Total: ${grandTotal}฿`;
+    .map(
+      (item) =>
+        `${item.quantity} x ${item.name} (${item.menuType}) - ${getItemTotal(item)}฿`,
+    )
+    .join(
+      "\n",
+    )}\n\nSubtotal: ${total}฿\nDelivery Fee: ${deliveryFee}฿\nGrand Total: ${grandTotal}฿`;
 
   const getMessagingLink = () => {
     const message = encodeURIComponent(orderDetails);
     switch (activeTab) {
-      case "messenger": return `https://m.me/greenghostdegenCBD?text=${message}`;
-      case "telegram": return `https://t.me/+66874201144?text=${message}`;
+      case "messenger":
+        return `https://m.me/greenghostdegenCBD?text=${message}`;
+      case "telegram":
+        return `https://t.me/+66874201144?text=${message}`;
       case "whatsapp":
-      default: return `https://wa.me/66874201144?text=${message}`;
+      default:
+        return `https://wa.me/66874201144?text=${message}`;
     }
   };
 
@@ -270,11 +326,14 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
         </div>
         <div
           className="p-4 flex-1 overflow-y-auto border-4 border-[#13DE00] bg-black text-white relative"
-          onScroll={() => window.dispatchEvent(new Event('resize'))} // Force Google Autocomplete dropdown to stick on scroll
+          onScroll={() => window.dispatchEvent(new Event("resize"))} // Force Google Autocomplete dropdown to stick on scroll
         >
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-white mb-1">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-white mb-1"
+              >
                 Your Name *
               </label>
               <input
@@ -288,17 +347,30 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
             </div>
 
             <div>
-              <label htmlFor="location" className="block text-sm font-medium text-white mb-1">
+              <label
+                htmlFor="location"
+                className="block text-sm font-medium text-white mb-1"
+              >
                 Delivery Address *
               </label>
-              <AddressAutocomplete locationName={locationName} onLocationChange={handleLocationChange} />
+              <AddressAutocomplete
+                locationName={locationName}
+                onLocationChange={handleLocationChange}
+              />
             </div>
 
             <div>
-              <label id="payment-method-label" className="block text-sm font-medium text-white mb-2">
+              <label
+                id="payment-method-label"
+                className="block text-sm font-medium text-white mb-2"
+              >
                 Payment Method *
               </label>
-              <div className="grid grid-cols-2 gap-2" role="radiogroup" aria-labelledby="payment-method-label">
+              <div
+                className="grid grid-cols-2 gap-2"
+                role="radiogroup"
+                aria-labelledby="payment-method-label"
+              >
                 <button
                   type="button"
                   role="radio"
@@ -324,15 +396,28 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
               <div className="mt-2 p-2 bg-gray-900 border border-gray-700 text-xs text-gray-300">
                 {!isPhuket ? (
                   <p>
-                    Deliveries outside of Phuket require Pre-payment. Please attach the payment slip in the chat after sending your order.{" "}
-                    <Link href="/payment" target="_blank" rel="noopener noreferrer" className="text-[#13DE00] underline hover:text-white">
+                    Deliveries outside of Phuket require Pre-payment. Please
+                    attach the payment slip in the chat after sending your
+                    order.{" "}
+                    <Link
+                      href="/payment"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#13DE00] underline hover:text-white"
+                    >
                       See bank details
                     </Link>
                   </p>
                 ) : paymentMethod === "prepaid" ? (
                   <p>
-                    Please attach the payment slip in the chat after sending your order.{" "}
-                    <Link href="/payment" target="_blank" rel="noopener noreferrer" className="text-[#13DE00] underline hover:text-white">
+                    Please attach the payment slip in the chat after sending
+                    your order.{" "}
+                    <Link
+                      href="/payment"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#13DE00] underline hover:text-white"
+                    >
                       See bank details
                     </Link>
                   </p>
@@ -343,10 +428,17 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
             </div>
 
             <div>
-              <h3 id="send-order-label" className="text-sm font-medium text-white mb-2">
+              <h3
+                id="send-order-label"
+                className="text-sm font-medium text-white mb-2"
+              >
                 Send Order Via
               </h3>
-              <div className="grid grid-cols-3 gap-2" role="radiogroup" aria-labelledby="send-order-label">
+              <div
+                className="grid grid-cols-3 gap-2"
+                role="radiogroup"
+                aria-labelledby="send-order-label"
+              >
                 {(["whatsapp", "messenger", "telegram"] as const).map((tab) => (
                   <button
                     key={tab}
@@ -354,8 +446,11 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
                     role="radio"
                     aria-checked={activeTab === tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`p-3 flex items-center justify-center space-x-2 text-[10px] md:text-sm text-white ${activeTab === tab ? "bg-black border-2 border-[#13DE00]" : "bg-black border-2 border-gray-600"
-                      } hover:border-[#13DE00] cursor-pointer`}
+                    className={`p-3 flex items-center justify-center space-x-2 text-[10px] md:text-sm text-white ${
+                      activeTab === tab
+                        ? "bg-black border-2 border-[#13DE00]"
+                        : "bg-black border-2 border-gray-600"
+                    } hover:border-[#13DE00] cursor-pointer`}
                   >
                     <span className="capitalize">{tab}</span>
                   </button>
@@ -378,21 +473,28 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
                     <span>{deliveryFee}฿</span>
                   </div>
                   <div className="flex justify-between items-center pt-3 border-t-2 border-gray-800">
-                    <span className="text-base font-bold text-white">Grand Total:</span>
-                    <span className="text-base font-bold text-[#13DE00]">{grandTotal}฿</span>
+                    <span className="text-base font-bold text-white">
+                      Grand Total:
+                    </span>
+                    <span className="text-base font-bold text-[#13DE00]">
+                      {grandTotal}฿
+                    </span>
                   </div>
                 </>
               ) : total >= 2000 ? (
                 /* Free Delivery in Phuket (>= 2000 THB) */
                 <>
-
                   <div className="flex justify-between items-center mb-4 text-[#13DE00]">
                     <span>Delivery Fee (Free over 2000฿):</span>
                     <span>FREE</span>
                   </div>
                   <div className="flex justify-between items-center pt-3 border-t-2 border-gray-800">
-                    <span className="text-base font-bold text-white">Grand Total:</span>
-                    <span className="text-base font-bold text-[#13DE00]">{grandTotal}฿</span>
+                    <span className="text-base font-bold text-white">
+                      Grand Total:
+                    </span>
+                    <span className="text-base font-bold text-[#13DE00]">
+                      {grandTotal}฿
+                    </span>
                   </div>
                 </>
               ) : distanceKm !== null ? (
@@ -403,8 +505,12 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
                     <span>{deliveryFee}฿</span>
                   </div>
                   <div className="flex justify-between items-center pt-3 border-t-2 border-gray-800">
-                    <span className="text-base font-bold text-white">Grand Total:</span>
-                    <span className="text-base font-bold text-[#13DE00]">{grandTotal}฿</span>
+                    <span className="text-base font-bold text-white">
+                      Grand Total:
+                    </span>
+                    <span className="text-base font-bold text-[#13DE00]">
+                      {grandTotal}฿
+                    </span>
                   </div>
                 </>
               ) : (
@@ -415,12 +521,20 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
                     <span>{deliveryFee}฿</span>
                   </div>
                   <div className="flex justify-between items-center pt-3 border-t-2 border-gray-800">
-                    <span className="text-base font-bold text-white">Grand Total:</span>
-                    <span className="text-base font-bold text-[#13DE00]">{grandTotal}฿</span>
+                    <span className="text-base font-bold text-white">
+                      Grand Total:
+                    </span>
+                    <span className="text-base font-bold text-[#13DE00]">
+                      {grandTotal}฿
+                    </span>
                   </div>
-                  {(!process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY === "insert_key_here") && (
+                  {(!process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ||
+                    process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ===
+                      "insert_key_here") && (
                     <div className="flex justify-between items-center mt-2">
-                      <span className="text-[10px] text-yellow-500 italic">Maps API required for precise distance calculation.</span>
+                      <span className="text-[10px] text-yellow-500 italic">
+                        Maps API required for precise distance calculation.
+                      </span>
                     </div>
                   )}
                 </>

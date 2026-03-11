@@ -85,8 +85,8 @@ export function generateMenuMetadata(menuId: string): Metadata {
     alternates: {
       canonical: `https://green.gd/menu/${menuItem.id}`,
       languages: {
-        'en': `https://green.gd/menu/${menuItem.id}`,
-        'fr': `https://green.gd/fr/menu/${menuItem.id}`,
+        en: `https://green.gd/menu/${menuItem.id}`,
+        fr: `https://green.gd/fr/menu/${menuItem.id}`,
       },
     },
   };

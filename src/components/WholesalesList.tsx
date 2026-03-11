@@ -36,7 +36,7 @@ async function getWholesaleData(): Promise<WholesaleItem[]> {
       strain: item.strain,
       price: item.price,
       dominance: item.Dominance, // Map Capitalized to lowercase
-      thc: formattedThc,         // Map Capitalized to lowercase
+      thc: formattedThc, // Map Capitalized to lowercase
       slug,
     };
   });

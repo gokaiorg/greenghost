@@ -14,9 +14,7 @@ interface ClubSectionProps {
   locale?: string;
 }
 
-export default async function ClubSection({
-  locale = "en",
-}: ClubSectionProps) {
+export default async function ClubSection({ locale = "en" }: ClubSectionProps) {
   const sections = await getSectionsData();
   const content = getLocalizedSection(sections, "ClubSection", locale);
 
@@ -26,7 +24,8 @@ export default async function ClubSection({
   // Format title: Last 2 words green, rest white
   const formatTitle = (text: string) => {
     const words = text.split(" ");
-    if (words.length <= 2) return <span className="text-[#13DE00]">{text}</span>;
+    if (words.length <= 2)
+      return <span className="text-[#13DE00]">{text}</span>;
     const lastTwo = words.slice(-2).join(" ");
     const rest = words.slice(0, -2).join(" ");
     return (
@@ -42,7 +41,12 @@ export default async function ClubSection({
     "Born in the heart of Thailand, Green Ghost is your premier Thailand cannabis shop dedicated to cultivating premium organic cannabis. Our Thai-grown strains embody our commitment to quality, sustainability, and the rich heritage of Thai cannabis culture. As a leading premium weed Thailand provider, we combine traditional cultivation methods with modern expertise to deliver exceptional products that honor both nature and our local community.";
 
   // Helper to render links with default fallbacks
-  const renderLink = (index: number, defaultHref: string, defaultLabel: string, primary: boolean = false) => {
+  const renderLink = (
+    index: number,
+    defaultHref: string,
+    defaultLabel: string,
+    primary: boolean = false,
+  ) => {
     const linkData = content.links[index];
     const href = linkData ? linkData.url : defaultHref;
     const label = linkData ? linkData.label : defaultLabel;
@@ -53,19 +57,17 @@ export default async function ClubSection({
       : "bg-transparent border-2 border-[#13DE00] text-[#13DE00] hover:bg-[#13DE00]/13 font-bold py-4 px-8 text-lg transition-colors duration-300 text-center";
 
     return (
-      <Link
-        href={href}
-        className={className}
-        title={label}
-        aria-label={label}
-      >
+      <Link href={href} className={className} title={label} aria-label={label}>
         {label}
       </Link>
     );
   };
 
   return (
-    <section aria-label={titleText} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center container mx-auto px-4 py-20 bg-black">
+    <section
+      aria-label={titleText}
+      className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center container mx-auto px-4 py-20 bg-black"
+    >
       {/* Text Column */}
       <div className="order-2 lg:order-1">
         <h2 className="text-2xl md:text-4xl font-bold mb-6 leading-tight">

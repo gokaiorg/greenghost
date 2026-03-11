@@ -37,7 +37,8 @@ export default async function StrainSection({
   // Format title: first 3 words green
   const formatTitle = (text: string) => {
     const words = text.split(" ");
-    if (words.length <= 3) return <span className="text-[#13DE00]">{text}</span>;
+    if (words.length <= 3)
+      return <span className="text-[#13DE00]">{text}</span>;
     const firstThree = words.slice(0, 3).join(" ");
     const rest = words.slice(3).join(" ");
     return (
@@ -76,7 +77,10 @@ export default async function StrainSection({
       >
         {products.map((bud) => (
           <li key={bud.id} className="relative">
-            <Link href={getLocalizedUrl(`/strains/${bud.id}`, locale)} title={bud.name}>
+            <Link
+              href={getLocalizedUrl(`/strains/${bud.id}`, locale)}
+              title={bud.name}
+            >
               <div
                 className={`hover:bg-[#13DE00]/13 p-1 flex flex-col relative cursor-pointer`}
               >

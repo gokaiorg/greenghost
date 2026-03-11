@@ -1,20 +1,21 @@
 import PagesBanner from "@/components/PagesBanner";
+export const revalidate = 86400;
 import PagesIntro from "@/components/PagesIntro";
 import { getAllLocations } from "@/lib/bigquery";
 import { Metadata } from "next";
 import { PagesMetadata } from "@/components/PagesMetadata";
 import LocationsList from "@/components/LocationsList";
 
-export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await props.params;
 
   return PagesMetadata({
-
     pageName: "Locations",
 
     locale: lang,
     path: "/locations",
-
   });
 }
 

@@ -52,14 +52,17 @@ export default function WeedNavigation() {
   const getItemStyles = (href: string) => {
     const isActive = pathname === href;
     return {
-      container: `group flex flex-col items-center p-6 transition-all duration-300 h-full ${isActive
-        ? "bg-[#13DE00]/5 border-[#13DE00]"
-        : "bg-[#13DE00]/13 border-[#13DE00]/21 hover:border-[#13DE00] hover:bg-[#13DE00]/5"
-        } border`,
-      title: `text-xl text-center font-bold transition-colors font-pixel mb-2 ${isActive ? "text-[#13DE00]" : "text-white group-hover:text-[#13DE00]"
-        }`,
-      description: `text-center text-sm transition-colors ${isActive ? "text-gray-300" : "text-gray-400 group-hover:text-gray-300"
-        }`,
+      container: `group flex flex-col items-center p-6 transition-all duration-300 h-full ${
+        isActive
+          ? "bg-[#13DE00]/5 border-[#13DE00]"
+          : "bg-[#13DE00]/13 border-[#13DE00]/21 hover:border-[#13DE00] hover:bg-[#13DE00]/5"
+      } border`,
+      title: `text-xl text-center font-bold transition-colors font-pixel mb-2 ${
+        isActive ? "text-[#13DE00]" : "text-white group-hover:text-[#13DE00]"
+      }`,
+      description: `text-center text-sm transition-colors ${
+        isActive ? "text-gray-300" : "text-gray-400 group-hover:text-gray-300"
+      }`,
     };
   };
 

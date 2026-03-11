@@ -35,7 +35,8 @@ export default async function ContactSection({
     }
     // Generic formatting: last word green
     const words = text.split(" ");
-    if (words.length <= 1) return <span className="text-[#13DE00]">{text}</span>;
+    if (words.length <= 1)
+      return <span className="text-[#13DE00]">{text}</span>;
     const lastWord = words[words.length - 1];
     const rest = words.slice(0, -1).join(" ");
     return (
@@ -47,7 +48,10 @@ export default async function ContactSection({
   };
 
   return (
-    <section className="container mx-auto px-4 text-center py-20 bg-black max-w-4xl mx-auto" aria-label={titleContent}>
+    <section
+      className="container mx-auto px-4 text-center py-20 bg-black max-w-4xl mx-auto"
+      aria-label={titleContent}
+    >
       <h2 className="text-2xl md:text-4xl font-bold mb-6 leading-tight">
         {formatTitle(titleContent)}
       </h2>

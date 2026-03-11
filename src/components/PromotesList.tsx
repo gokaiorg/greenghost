@@ -14,23 +14,42 @@ interface PromotesListProps {
   locale?: string;
 }
 
-export default async function PromotesList({ locale = 'en' }: PromotesListProps = {}) {
+export default async function PromotesList({
+  locale = "en",
+}: PromotesListProps = {}) {
   const items = await getPromotesData();
 
   return (
-    <section className="container mx-auto px-4 py-12" aria-label="Promotions Section">
+    <section
+      className="container mx-auto px-4 py-12"
+      aria-label="Promotions Section"
+    >
       <ul
         className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4"
         aria-label="Promotions List"
       >
         {items.map((item, index) => {
-          const title = selectLocalizedField<string>((item as unknown) as Record<string, unknown>, 'title', locale) || item.title;
-          const description = selectLocalizedField<string>((item as unknown) as Record<string, unknown>, 'description', locale) || item.description;
-          const linkLabel = selectLocalizedField<string>((item as unknown) as Record<string, unknown>, 'link_label', locale) || item.link_label;
+          const title =
+            selectLocalizedField<string>(
+              item as unknown as Record<string, unknown>,
+              "title",
+              locale,
+            ) || item.title;
+          const description =
+            selectLocalizedField<string>(
+              item as unknown as Record<string, unknown>,
+              "description",
+              locale,
+            ) || item.description;
+          const linkLabel =
+            selectLocalizedField<string>(
+              item as unknown as Record<string, unknown>,
+              "link_label",
+              locale,
+            ) || item.link_label;
 
           const imageKey =
-            imageMapping[title] ||
-            title.toLowerCase().replace(/\s+/g, "-");
+            imageMapping[title] || title.toLowerCase().replace(/\s+/g, "-");
           const imagePath = `/images/icons/green-ghost-${imageKey}.avif`;
 
           return (

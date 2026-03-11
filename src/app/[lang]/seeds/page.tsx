@@ -5,16 +5,16 @@ import { Metadata } from "next";
 import PagesIntro from "@/components/PagesIntro";
 import { PagesMetadata } from "@/components/PagesMetadata";
 
-export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await props.params;
 
   return PagesMetadata({
-
     pageName: "Seeds",
 
     locale: lang,
     path: "/seeds",
-
   });
 }
 

@@ -15,16 +15,25 @@ interface MenuListProps {
   locale?: string;
 }
 
-export default async function MenuList({ locale = 'en' }: MenuListProps = {}) {
+export default async function MenuList({ locale = "en" }: MenuListProps = {}) {
   const categoriesData = await Promise.all(
     menuPages.map(async (pageName) => {
       const data = await getPagesData(pageName);
 
-      const title = selectLocalizedField<string>((data as unknown) as Record<string, unknown>, 'title', locale);
-      const description = selectLocalizedField<string>((data as unknown) as Record<string, unknown>, 'description', locale);
+      const title = selectLocalizedField<string>(
+        data as unknown as Record<string, unknown>,
+        "title",
+        locale,
+      );
+      const description = selectLocalizedField<string>(
+        data as unknown as Record<string, unknown>,
+        "description",
+        locale,
+      );
 
       // Display Name (localized)
-      const displayName = title?.replace(" Menu", "") || pageName.replace(" Menu", "");
+      const displayName =
+        title?.replace(" Menu", "") || pageName.replace(" Menu", "");
 
       // Slug for URL (ALWAYS English)
       const slugName = pageName.replace(" Menu", "");
@@ -38,7 +47,7 @@ export default async function MenuList({ locale = 'en' }: MenuListProps = {}) {
         name: displayName,
         defaultImage,
         defaultDescription: description || "",
-        path: locale === 'en' ? `/menu/${slug}` : `/${locale}/menu/${slug}`,
+        path: locale === "en" ? `/menu/${slug}` : `/${locale}/menu/${slug}`,
       };
     }),
   );

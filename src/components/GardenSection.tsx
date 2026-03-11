@@ -40,7 +40,8 @@ export default async function GardenSection({
     }
     // Generic formatting: last word green
     const words = text.split(" ");
-    if (words.length <= 1) return <span className="text-[#13DE00]">{text}</span>;
+    if (words.length <= 1)
+      return <span className="text-[#13DE00]">{text}</span>;
     const lastWord = words[words.length - 1];
     const rest = words.slice(0, -1).join(" ");
     return (
@@ -52,7 +53,10 @@ export default async function GardenSection({
   };
 
   return (
-    <section className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 items-center py-20 bg-black" aria-label={titleContent}>
+    <section
+      className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 items-center py-20 bg-black"
+      aria-label={titleContent}
+    >
       {/* Image Column - Left on desktop */}
       <div className="order-1 md:col-span-1">
         <div className="relative overflow-hidden aspect-square w-full h-auto">

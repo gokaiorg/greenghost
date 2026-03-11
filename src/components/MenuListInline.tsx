@@ -15,23 +15,29 @@ interface MenuListInlineProps {
   locale?: string;
 }
 
-export default async function MenuListInline({ locale = 'en' }: MenuListInlineProps = {}) {
+export default async function MenuListInline({
+  locale = "en",
+}: MenuListInlineProps = {}) {
   const categoriesData = await Promise.all(
     menuPages.map(async (pageName) => {
       const data = await getPagesData(pageName);
       const name = data
-        ? getLocalizedValue(data, "title", locale)
-          .replace(locale === "fr" ? /^Menu\s+/i : /\s+Menu$/i, "") ||
-        pageName.replace(" Menu", "")
+        ? getLocalizedValue(data, "title", locale).replace(
+            locale === "fr" ? /^Menu\s+/i : /\s+Menu$/i,
+            "",
+          ) || pageName.replace(" Menu", "")
         : pageName.replace(" Menu", "");
 
       // Always use English slug for URL consistency
-      const slug = pageName.replace(" Menu", "").toLowerCase().replace(/\s+/g, "-");
+      const slug = pageName
+        .replace(" Menu", "")
+        .toLowerCase()
+        .replace(/\s+/g, "-");
 
       return {
         slug,
         name,
-        path: locale === 'en' ? `/menu/${slug}` : `/${locale}/menu/${slug}`,
+        path: locale === "en" ? `/menu/${slug}` : `/${locale}/menu/${slug}`,
       };
     }),
   );
