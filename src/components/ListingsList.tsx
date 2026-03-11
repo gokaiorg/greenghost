@@ -8,7 +8,9 @@ interface ListingsListProps {
   locale?: string;
 }
 
-export default async function ListingsList({ locale = 'en' }: ListingsListProps = {}) {
+export default async function ListingsList({
+  locale = "en",
+}: ListingsListProps = {}) {
   const listings = await getListingsData();
 
   return (
@@ -22,7 +24,12 @@ export default async function ListingsList({ locale = 'en' }: ListingsListProps 
         aria-label="External Listings"
       >
         {listings.map((listing) => {
-          const name = selectLocalizedField<string>((listing as unknown) as Record<string, unknown>, 'name', locale) || listing.name;
+          const name =
+            selectLocalizedField<string>(
+              listing as unknown as Record<string, unknown>,
+              "name",
+              locale,
+            ) || listing.name;
 
           return (
             <li key={name} className="list-none">

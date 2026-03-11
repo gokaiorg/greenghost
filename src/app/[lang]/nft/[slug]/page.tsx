@@ -1,4 +1,5 @@
 import { getNFTsData } from "@/lib/bigquery";
+export const revalidate = 86400;
 import NFTPageContent from "@/components/NFTPageContent";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";

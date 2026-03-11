@@ -69,7 +69,9 @@ export default function LocationsList({ locations }: LocationsListProps) {
               {/* Address */}
               <div className="flex items-start gap-2 text-sm">
                 <a
-                  href={sanitizeUrl(location.address_link || location.map_embed_link)}
+                  href={sanitizeUrl(
+                    location.address_link || location.map_embed_link,
+                  )}
                   title={location.address}
                   target="_blank"
                   rel="noopener noreferrer"

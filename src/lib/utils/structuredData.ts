@@ -15,10 +15,14 @@ export function generateLocalBusinessSchema(location: LocationData) {
       const hours = timeRange;
       // Handle "09:00 - 02:00" format
       if (typeof hours === "string" && hours.includes("-")) {
-        const [open, close] = hours.split("-").map(t => t.trim());
+        const [open, close] = hours.split("-").map((t) => t.trim());
         openTime = open || "";
         closeTime = close || "";
-      } else if (hours && typeof hours === 'string' && hours.toLowerCase() !== 'closed') {
+      } else if (
+        hours &&
+        typeof hours === "string" &&
+        hours.toLowerCase() !== "closed"
+      ) {
         // Fallback if just one time present or different format, try to parse
         openTime = hours; // potentially unsafe but better than crash
       }
@@ -141,12 +145,12 @@ export function generateProductSchema(product: Record<string, unknown>) {
     },
     aggregateRating: product.rating
       ? {
-        "@type": "AggregateRating",
-        ratingValue: product.rating,
-        reviewCount: product.reviewCount || 1,
-        bestRating: 5,
-        worstRating: 1,
-      }
+          "@type": "AggregateRating",
+          ratingValue: product.rating,
+          reviewCount: product.reviewCount || 1,
+          bestRating: 5,
+          worstRating: 1,
+        }
       : undefined,
   });
 }
@@ -162,8 +166,8 @@ export function generateFAQSchema(location: LocationData) {
 
   const openStatusText =
     todayHours &&
-      todayHours.toLowerCase() !== "closed" &&
-      todayHours.toLowerCase() !== "close"
+    todayHours.toLowerCase() !== "closed" &&
+    todayHours.toLowerCase() !== "close"
       ? `Yes, we are open today from ${todayHours}.`
       : "We are currently closed today.";
 

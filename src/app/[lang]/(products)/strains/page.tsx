@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+export const revalidate = 86400;
 
 import StrainsClient from "./StrainsClient";
 
@@ -6,16 +7,16 @@ import PagesBanner from "@/components/PagesBanner";
 import PagesIntro from "@/components/PagesIntro";
 import { PagesMetadata } from "@/components/PagesMetadata";
 
-export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await props.params;
 
   return PagesMetadata({
-
     pageName: "Strains",
 
     locale: lang,
     path: "/strains",
-
   });
 }
 

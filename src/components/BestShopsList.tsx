@@ -32,9 +32,10 @@ export default function BestShopsList({ shops }: BestShopsListProps) {
             onClick={() => setSelectedLocation(location)}
             className={`
               px-4 py-2 text-sm font-bold uppercase tracking-wider transition-all duration-300 border cursor-pointer
-              ${selectedLocation === location
-                ? "bg-[#13DE00] text-black border-[#13DE00]"
-                : "bg-black text-gray-400 border-[#13DE00]/21 hover:border-[#13DE00] hover:text-[#13DE00]"
+              ${
+                selectedLocation === location
+                  ? "bg-[#13DE00] text-black border-[#13DE00]"
+                  : "bg-black text-gray-400 border-[#13DE00]/21 hover:border-[#13DE00] hover:text-[#13DE00]"
               }
             `}
           >

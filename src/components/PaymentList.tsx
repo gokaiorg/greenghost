@@ -29,10 +29,11 @@ export default function PaymentList({ payments }: PaymentListProps) {
           <button
             key={payment.name}
             onClick={() => setActiveTab(index)}
-            className={`px-6 py-3 font-bold transition-colors cursor-pointer ${activeTab === index
-              ? "bg-[#13DE00] text-black"
-              : "bg-[#13DE00]/13 text-white hover:bg-[#13DE00]/20"
-              }`}
+            className={`px-6 py-3 font-bold transition-colors cursor-pointer ${
+              activeTab === index
+                ? "bg-[#13DE00] text-black"
+                : "bg-[#13DE00]/13 text-white hover:bg-[#13DE00]/20"
+            }`}
           >
             {payment.name}
           </button>

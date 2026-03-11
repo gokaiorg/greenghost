@@ -1,20 +1,21 @@
 import { getNFTsData } from "@/lib/bigquery";
+export const revalidate = 86400;
 import NFTPageContent from "@/components/NFTPageContent";
 import { Metadata } from "next";
 import PagesBanner from "@/components/PagesBanner";
 import PagesIntro from "@/components/PagesIntro";
 import { PagesMetadata } from "@/components/PagesMetadata";
 
-export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await props.params;
 
   return PagesMetadata({
-
     pageName: "Nft",
 
     locale: lang,
     path: "/nft",
-
   });
 }
 

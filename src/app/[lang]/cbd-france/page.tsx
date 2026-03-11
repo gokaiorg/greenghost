@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+export const revalidate = 86400;
 
 import { PagesMetadata } from "@/components/PagesMetadata";
 import PagesBanner from "@/components/PagesBanner";
@@ -6,16 +7,16 @@ import PagesIntro from "@/components/PagesIntro";
 import { getCBDsData } from "@/lib/bigquery";
 import CBDList from "@/components/CBDList";
 
-export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await props.params;
 
   return PagesMetadata({
-
     pageName: "CBD France",
 
     locale: lang,
     path: "/cbd-france",
-
   });
 }
 

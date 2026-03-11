@@ -102,9 +102,9 @@ export function generateProductMetadata(product: Product): Metadata {
     alternates: {
       canonical: url,
       languages: {
-        'en': url,
-        'fr': url.replace('https://green.gd', 'https://green.gd/fr'),
-      }
+        en: url,
+        fr: url.replace("https://green.gd", "https://green.gd/fr"),
+      },
     },
   };
 }

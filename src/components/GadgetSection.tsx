@@ -87,7 +87,10 @@ export default async function GadgetSection({
       >
         {products.map((gadget) => (
           <li key={gadget.id} className="relative">
-            <Link href={getLocalizedUrl(`/gadgets/${gadget.id}`, locale)} title={gadget.name}>
+            <Link
+              href={getLocalizedUrl(`/gadgets/${gadget.id}`, locale)}
+              title={gadget.name}
+            >
               <div
                 className={`hover:bg-[#13DE00]/13 p-1 flex flex-col relative cursor-pointer`}
               >

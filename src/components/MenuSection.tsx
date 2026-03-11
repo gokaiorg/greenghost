@@ -9,9 +9,7 @@ interface MenuSectionProps {
   locale?: string;
 }
 
-export default async function MenuSection({
-  locale = "en",
-}: MenuSectionProps) {
+export default async function MenuSection({ locale = "en" }: MenuSectionProps) {
   const sections = await getSectionsData();
   const content = getLocalizedSection(sections, "MenuSection", locale);
 

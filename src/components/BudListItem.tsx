@@ -11,13 +11,13 @@ interface BudListItemProps {
   locale?: string;
 }
 
-const BudListItem = memo(({ bud, locale = 'en' }: BudListItemProps) => {
+const BudListItem = memo(({ bud, locale = "en" }: BudListItemProps) => {
   const images = [
     `/images/strains/green-ghost-degen-weed-shop-strain-${bud.id}-cover.avif`,
     `/images/strains/green-ghost-degen-weed-shop-strain-${bud.id}-bud-01.avif`,
   ];
 
-  const prefix = locale === 'en' ? '' : `/${locale}`;
+  const prefix = locale === "en" ? "" : `/${locale}`;
 
   return (
     <li className="relative">

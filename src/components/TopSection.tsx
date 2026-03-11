@@ -38,7 +38,8 @@ export default async function TopSection({ locale = "en" }: TopSectionProps) {
     }
     // Generic formatting: last 3 words green if not default
     const words = text.split(" ");
-    if (words.length <= 3) return <span className="text-[#13DE00]">{text}</span>;
+    if (words.length <= 3)
+      return <span className="text-[#13DE00]">{text}</span>;
     const lastThree = words.slice(-3).join(" ");
     const rest = words.slice(0, -3).join(" ");
     return (
@@ -49,7 +50,10 @@ export default async function TopSection({ locale = "en" }: TopSectionProps) {
   };
 
   return (
-    <section className="py-12 bg-black container mx-auto px-4" aria-label={titleContent}>
+    <section
+      className="py-12 bg-black container mx-auto px-4"
+      aria-label={titleContent}
+    >
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-8">
         <div className="text-center md:text-left">
           <h2 className="text-2xl font-bold text-white mb-2">

@@ -20,9 +20,9 @@ interface GadgetsPageContentProps {
 
 export default function GadgetsPageContent({
   menuSlot,
-  locale = 'en',
+  locale = "en",
   title = "Gadgets Menu",
-  description = "Elevate your smoking experience."
+  description = "Elevate your smoking experience.",
 }: GadgetsPageContentProps) {
   const [gadgets, setGadgets] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -53,9 +53,7 @@ export default function GadgetsPageContent({
           <h1 className="text-xl lg:text-2xl font-bold text-left whitespace-nowrap">
             {title}
           </h1>
-          <p className="text-xs text-gray-400">
-            {description}
-          </p>
+          <p className="text-xs text-gray-400">{description}</p>
         </div>
         <ul
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 list-none m-0 p-0"
@@ -63,7 +61,10 @@ export default function GadgetsPageContent({
         >
           {gadgets.map((gadget) => (
             <li key={gadget.id} className="relative">
-              <Link href={`${locale === 'en' ? '' : `/${locale}`}/gadgets/${gadget.id}`} title={gadget.name}>
+              <Link
+                href={`${locale === "en" ? "" : `/${locale}`}/gadgets/${gadget.id}`}
+                title={gadget.name}
+              >
                 <div className="hover:bg-[#13DE00]/13 p-1 flex flex-col relative">
                   <div className="relative mb-2">
                     <MiniSlider

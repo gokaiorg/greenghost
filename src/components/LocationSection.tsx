@@ -28,7 +28,8 @@ export default async function LocationSection({
   // Helper to format title with green accent (Last 2 words green)
   const formatTitle = (text: string) => {
     const words = text.split(" ");
-    if (words.length <= 2) return <span className="text-[#13DE00]">{text}</span>;
+    if (words.length <= 2)
+      return <span className="text-[#13DE00]">{text}</span>;
     const lastTwo = words.slice(-2).join(" ");
     const rest = words.slice(0, -2).join(" ");
     return (
@@ -40,7 +41,10 @@ export default async function LocationSection({
   };
 
   return (
-    <section className="container mx-auto px-4 relative z-10 py-20 bg-black relative overflow-hidden" aria-label={titleContent}>
+    <section
+      className="container mx-auto px-4 relative z-10 py-20 bg-black relative overflow-hidden"
+      aria-label={titleContent}
+    >
       <div className="text-center mb-16">
         <div className="flex justify-center mb-6">
           <Image
@@ -54,9 +58,7 @@ export default async function LocationSection({
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
           {formatTitle(titleContent)}
         </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto">
-          {description}
-        </p>
+        <p className="text-gray-400 max-w-2xl mx-auto">{description}</p>
       </div>
 
       <ul

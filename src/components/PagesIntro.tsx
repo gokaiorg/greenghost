@@ -13,7 +13,7 @@ interface PagesIntroProps {
 
 const PagesIntro: React.FC<PagesIntroProps> = async ({
   pageName,
-  locale = 'en',
+  locale = "en",
   label,
   description,
   sectionTitle,
@@ -34,8 +34,8 @@ const PagesIntro: React.FC<PagesIntroProps> = async ({
 
       const localizedData = selectLocalizedFields<LocalizedIntroData>(
         bqData,
-        ['label', 'description', 'section_title', 'section_description'],
-        locale
+        ["label", "description", "section_title", "section_description"],
+        locale,
       );
 
       // Map snake_case to camelCase
@@ -68,22 +68,23 @@ const PagesIntro: React.FC<PagesIntroProps> = async ({
       </div>
 
       {((content.sectionTitle && content.sectionTitle.trim() !== "") ||
-        (content.sectionDescription && content.sectionDescription.trim() !== "")) && (
-          <div className="flex-1">
-            {content.sectionTitle && content.sectionTitle.trim() !== "" && (
-              <h2 className="text-lg md:text-xl font-bold text-center md:text-left mb-4 mt-8 text-[#13DE00] whitespace-pre-wrap">
-                {content.sectionTitle}
-              </h2>
-            )}
+        (content.sectionDescription &&
+          content.sectionDescription.trim() !== "")) && (
+        <div className="flex-1">
+          {content.sectionTitle && content.sectionTitle.trim() !== "" && (
+            <h2 className="text-lg md:text-xl font-bold text-center md:text-left mb-4 mt-8 text-[#13DE00] whitespace-pre-wrap">
+              {content.sectionTitle}
+            </h2>
+          )}
 
-            {content.sectionDescription &&
-              content.sectionDescription.trim() !== "" && (
-                <div className="text-[11px] md:text-xs lg:text-sm text-gray-200 text-center md:text-left w-full mb-4 md:mb-8 whitespace-pre-wrap">
-                  {content.sectionDescription}
-                </div>
-              )}
-          </div>
-        )}
+          {content.sectionDescription &&
+            content.sectionDescription.trim() !== "" && (
+              <div className="text-[11px] md:text-xs lg:text-sm text-gray-200 text-center md:text-left w-full mb-4 md:mb-8 whitespace-pre-wrap">
+                {content.sectionDescription}
+              </div>
+            )}
+        </div>
+      )}
     </div>
   );
 };

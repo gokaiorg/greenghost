@@ -1,4 +1,5 @@
 import type { Viewport } from "next";
+export const revalidate = 86400;
 import { Geist, Geist_Mono, Press_Start_2P } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -16,25 +17,85 @@ import { getLocalizedSection, getLocalizedValue } from "@/lib/i18n-db";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 
 const MENU_ITEMS_DEF = [
-  { path: "/menu", pageKey: "menu", defaultLabel: "Explore our menu", defaultLabelFr: "Notre menu" },
-  { path: "/delivery", pageKey: "delivery", defaultLabel: "Get delivered", defaultLabelFr: "Livraison" },
-  { path: "/wholesale", pageKey: "wholesale", defaultLabel: "Bulk ordering", defaultLabelFr: "Achat en gros" },
-  { path: "/payment", pageKey: "payment", defaultLabel: "Make a payment", defaultLabelFr: "Paiement en ligne" },
-  { path: "/strains", pageKey: "strains", defaultLabel: "All the strains", defaultLabelFr: "Toutes les variétés" },
-  { path: "/weed", pageKey: "weed", defaultLabel: "Learn about weed", defaultLabelFr: "Tout savoir sur la beuh" },
-  { path: "/about", pageKey: "about", defaultLabel: "Cannabis culture", defaultLabelFr: "La culture du cannabis" },
-  { path: "/cannabis-club", pageKey: "cannabis-club", defaultLabel: "Join the club", defaultLabelFr: "Rejoignez le club" },
-  { path: "/nft", pageKey: "nft", defaultLabel: "Mint your NFT", defaultLabelFr: "Créer un NFT" },
-  { path: "/jobs", pageKey: "jobs", defaultLabel: "We are hiring", defaultLabelFr: "On recrute" },
-  { path: "/locations", pageKey: "locations", defaultLabel: "Visit our locations", defaultLabelFr: "Nos dispensaires" },
-  { path: "/contact", pageKey: "contact", defaultLabel: "Contact us now", defaultLabelFr: "Nous contacter" },
+  {
+    path: "/menu",
+    pageKey: "menu",
+    defaultLabel: "Explore our menu",
+    defaultLabelFr: "Notre menu",
+  },
+  {
+    path: "/delivery",
+    pageKey: "delivery",
+    defaultLabel: "Get delivered",
+    defaultLabelFr: "Livraison",
+  },
+  {
+    path: "/wholesale",
+    pageKey: "wholesale",
+    defaultLabel: "Bulk ordering",
+    defaultLabelFr: "Achat en gros",
+  },
+  {
+    path: "/payment",
+    pageKey: "payment",
+    defaultLabel: "Make a payment",
+    defaultLabelFr: "Paiement en ligne",
+  },
+  {
+    path: "/strains",
+    pageKey: "strains",
+    defaultLabel: "All the strains",
+    defaultLabelFr: "Toutes les variétés",
+  },
+  {
+    path: "/weed",
+    pageKey: "weed",
+    defaultLabel: "Learn about weed",
+    defaultLabelFr: "Tout savoir sur la beuh",
+  },
+  {
+    path: "/about",
+    pageKey: "about",
+    defaultLabel: "Cannabis culture",
+    defaultLabelFr: "La culture du cannabis",
+  },
+  {
+    path: "/cannabis-club",
+    pageKey: "cannabis-club",
+    defaultLabel: "Join the club",
+    defaultLabelFr: "Rejoignez le club",
+  },
+  {
+    path: "/nft",
+    pageKey: "nft",
+    defaultLabel: "Mint your NFT",
+    defaultLabelFr: "Créer un NFT",
+  },
+  {
+    path: "/jobs",
+    pageKey: "jobs",
+    defaultLabel: "We are hiring",
+    defaultLabelFr: "On recrute",
+  },
+  {
+    path: "/locations",
+    pageKey: "locations",
+    defaultLabel: "Visit our locations",
+    defaultLabelFr: "Nos dispensaires",
+  },
+  {
+    path: "/contact",
+    pageKey: "contact",
+    defaultLabel: "Contact us now",
+    defaultLabelFr: "Nous contacter",
+  },
 ];
 
 async function getMenuItems(locale: string) {
   const items = await Promise.all(
     MENU_ITEMS_DEF.map(async (item) => {
       // Use cache if possible or just concurrent request
-      // We assume getPagesData handles caching/batching if optimized, 
+      // We assume getPagesData handles caching/batching if optimized,
       // or at least concurrent is better than serial.
       const pageData = await getPagesData(item.pageKey).catch(() => null);
       let label_en = item.defaultLabel;
@@ -42,10 +103,21 @@ async function getMenuItems(locale: string) {
       let label = locale === "fr" ? label_fr : label_en;
 
       if (pageData) {
-        label_en = getLocalizedValue(pageData, "label", "en", false) || getLocalizedValue(pageData, "title", "en") || label_en;
-        label_fr = getLocalizedValue(pageData, "label", "fr", false) || getLocalizedValue(pageData, "title", "fr") || label_fr;
+        label_en =
+          getLocalizedValue(pageData, "label", "en", false) ||
+          getLocalizedValue(pageData, "title", "en") ||
+          label_en;
+        label_fr =
+          getLocalizedValue(pageData, "label", "fr", false) ||
+          getLocalizedValue(pageData, "title", "fr") ||
+          label_fr;
 
-        const localizedLabel = getLocalizedValue(pageData, "label", locale, false);
+        const localizedLabel = getLocalizedValue(
+          pageData,
+          "label",
+          locale,
+          false,
+        );
         if (localizedLabel) label = localizedLabel;
         else {
           const localizedTitle = getLocalizedValue(pageData, "title", locale);
@@ -55,7 +127,7 @@ async function getMenuItems(locale: string) {
         label = locale === "fr" ? label_fr : label_en;
       }
       return { path: item.path, label, label_en, label_fr };
-    })
+    }),
   );
   return items;
 }
@@ -110,7 +182,11 @@ export default async function RootLayout({
   const organizationData = await getOrganizationData();
   const socials = await getSocialsData();
   const sections = await getSectionsData();
-  const ageModalContent = getLocalizedSection(sections, "AgeModalSection", lang);
+  const ageModalContent = getLocalizedSection(
+    sections,
+    "AgeModalSection",
+    lang,
+  );
 
   const ageModalTitle = ageModalContent.title || "ARE YOU 20 YEARS OR OLDER?";
   const ageModalDescription =
@@ -124,7 +200,7 @@ export default async function RootLayout({
   const menuItems = await getMenuItems(lang);
 
   return (
-    <html lang={lang === 'fr' ? 'fr-FR' : 'en-US'} suppressHydrationWarning>
+    <html lang={lang === "fr" ? "fr-FR" : "en-US"} suppressHydrationWarning>
       <head>
         <style
           dangerouslySetInnerHTML={{

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+export const revalidate = 86400;
 
 import { getOrganizationData } from "@/lib/organization-data";
 
@@ -11,16 +12,16 @@ import PagesBanner from "@/components/PagesBanner";
 import PagesIntro from "@/components/PagesIntro";
 import MenuList from "@/components/MenuList";
 
-export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await props.params;
 
   return PagesMetadata({
-
     pageName: "Menu",
 
     locale: lang,
     path: "/menu",
-
   });
 }
 

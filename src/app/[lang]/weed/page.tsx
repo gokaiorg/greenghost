@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+export const revalidate = 86400;
 import PagesBanner from "@/components/PagesBanner";
 import WeedsBlock from "@/components/WeedsBlock";
 import WeedNavigation from "@/components/WeedNavigation";
@@ -6,16 +7,16 @@ import { getWeedsData } from "@/lib/bigquery";
 import PagesIntro from "@/components/PagesIntro";
 import { PagesMetadata } from "@/components/PagesMetadata";
 
-export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata(props: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await props.params;
 
   return PagesMetadata({
-
     pageName: "Weed",
 
     locale: lang,
     path: "/weed",
-
   });
 }
 
@@ -37,11 +38,7 @@ export default async function WeedPage({
       <PagesBanner pageName="Weed" locale={lang} />
       <div className="container mx-auto px-4">
         <PagesIntro pageName="Weed" locale={lang} />
-        <WeedsBlock
-          strains={strains}
-          compounds={compounds}
-          info={info}
-        />
+        <WeedsBlock strains={strains} compounds={compounds} info={info} />
         <WeedNavigation />
       </div>
     </>

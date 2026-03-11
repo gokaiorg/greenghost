@@ -96,7 +96,10 @@ export default async function GadgetProductPage({
           __html: toJsonLd(schema),
         }}
       />
-      <GadgetProductClient product={product} menuSlot={<MenuListInline locale={lang} />} />
+      <GadgetProductClient
+        product={product}
+        menuSlot={<MenuListInline locale={lang} />}
+      />
       <GadgetSection locale={lang} />
     </>
   );

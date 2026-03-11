@@ -10,7 +10,7 @@ interface PagesBannerProps extends Partial<PagesBannerClientProps> {
 
 export default async function PagesBanner({
   pageName,
-  locale = 'en',
+  locale = "en",
   ...props
 }: PagesBannerProps) {
   let fetchedProps: Partial<PagesBannerClientProps> = {};
@@ -19,8 +19,16 @@ export default async function PagesBanner({
     const bqData = await getPagesData(pageName);
 
     if (bqData) {
-      const title = selectLocalizedField<string>((bqData as unknown) as Record<string, unknown>, 'title', locale);
-      const subtitle = selectLocalizedField<string>((bqData as unknown) as Record<string, unknown>, 'subtitle', locale);
+      const title = selectLocalizedField<string>(
+        bqData as unknown as Record<string, unknown>,
+        "title",
+        locale,
+      );
+      const subtitle = selectLocalizedField<string>(
+        bqData as unknown as Record<string, unknown>,
+        "subtitle",
+        locale,
+      );
       const slug = (bqData.title_en || "").toLowerCase().replace(/\s+/g, "-");
 
       fetchedProps = {

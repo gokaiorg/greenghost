@@ -19,9 +19,9 @@ interface BudsPageContentProps {
 
 export default function BudsPageContent({
   menuSlot,
-  locale = 'en',
+  locale = "en",
   title = "Buds Menu",
-  description = "Buds price for 1 gram."
+  description = "Buds price for 1 gram.",
 }: BudsPageContentProps) {
   // Since it's client, fetch here
   const [allBuds, setAllBuds] = useState<Product[]>([]);
@@ -45,8 +45,8 @@ export default function BudsPageContent({
   const buds =
     selectedDominances.length > 0
       ? allBuds.filter((bud) =>
-        selectedDominances.some((d) => bud.dominance?.startsWith(d)),
-      )
+          selectedDominances.some((d) => bud.dominance?.startsWith(d)),
+        )
       : allBuds;
 
   return (

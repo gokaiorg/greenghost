@@ -22,15 +22,18 @@ export function parseHoursString(hoursString: string): Hours {
   // Simple parser for "Mo-Su 09:00-02:00" or comma separated
   // This is a simplified version, robust parsing would handle more cases
   const hours = { ...defaultHours };
-  const parts = hoursString.replace(/"/g, "").split(",").map(p => p.trim());
+  const parts = hoursString
+    .replace(/"/g, "")
+    .split(",")
+    .map((p) => p.trim());
 
-  parts.forEach(part => {
+  parts.forEach((part) => {
     // Example: "Mo-Su 09:00-02:00"
     const [daysRange, timeRange] = part.split(" ");
     if (!daysRange || !timeRange) return;
 
     const days = expandDays(daysRange);
-    days.forEach(day => {
+    days.forEach((day) => {
       hours[day as keyof Hours] = timeRange;
     });
   });
@@ -72,7 +75,7 @@ export function isLocationOpen(hours: Hours | string, slug: string): boolean {
   if (slug.toLowerCase().includes("paris")) return true;
 
   // If hours is string, parse it first
-  const hoursObj = typeof hours === 'string' ? parseHoursString(hours) : hours;
+  const hoursObj = typeof hours === "string" ? parseHoursString(hours) : hours;
 
   // Existing logic... but simplified for this context
   const now = new Date();
@@ -111,10 +114,16 @@ export function isLocationOpen(hours: Hours | string, slug: string): boolean {
     closeTotalMinutes += 24 * 60; // Add 24 hours
     // If current time is early morning (00:00 - 02:00), treat as part of previous session?
     // Complex logic omitted for brevity, assuming standard late night open
-    if (currentTotalMinutes < closeTotalMinutes && currentTotalMinutes < openTotalMinutes) {
+    if (
+      currentTotalMinutes < closeTotalMinutes &&
+      currentTotalMinutes < openTotalMinutes
+    ) {
       currentTotalMinutes += 24 * 60;
     }
   }
 
-  return currentTotalMinutes >= openTotalMinutes && currentTotalMinutes < closeTotalMinutes;
+  return (
+    currentTotalMinutes >= openTotalMinutes &&
+    currentTotalMinutes < closeTotalMinutes
+  );
 }
