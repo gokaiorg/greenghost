@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 export interface PagesBannerClientProps {
@@ -18,16 +18,36 @@ export default function PagesBannerClient({
   iconSrc,
   iconAlt,
 }: PagesBannerClientProps) {
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
+  const imageContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (imageContainerRef.current) {
+            // Target the next/image img element which is a direct child usually,
+            // or we can query for the specific class.
+            const img = imageContainerRef.current.querySelector('img.object-cover.z-0') as HTMLImageElement;
+            if (img) {
+              img.style.objectPosition = `center ${window.pageYOffset * 0.5}px`;
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    // Initial position
+    handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div className="relative sm:min-h-[250px] md:min-h-[400px] flex flex-col items-center justify-center text-white md:p-8 mb-4 md:mb-8 overflow-hidden">
+    <div ref={imageContainerRef} className="relative sm:min-h-[250px] md:min-h-[400px] flex flex-col items-center justify-center text-white md:p-8 mb-4 md:mb-8 overflow-hidden">
       <Image
         src={`/images/banners/${bgSrc}`}
         alt={iconAlt || title}
@@ -38,7 +58,7 @@ export default function PagesBannerClient({
         loading="eager"
         className="object-cover z-0"
         style={{
-          objectPosition: `center ${offsetY * 0.5}px`,
+          objectPosition: "center 0px", // Initial state
         }}
       />
 
