@@ -29,24 +29,24 @@ export default function StrainProductClient({
           <h1 className="text-xl md:text-2xl font-bold">{product.name}</h1>
         </div>
         <p className="text-[10px] md:text-xs lg:text-sm text-gray-400 mb-4">
-          {product.seo || product.description}
+          {product.seo}
         </p>
         <ImageSlider
           images={
             product.images && product.images.length > 0
               ? product.images.map((img, index) => ({
-                  src: img,
-                  alt:
-                    index === 0
-                      ? `${product.name} cover`
-                      : `${product.name} ${img.includes("bud-01") ? "bud 01" : "bud 02"}`,
-                }))
+                src: img,
+                alt:
+                  index === 0
+                    ? `${product.name} cover`
+                    : `${product.name} ${img.includes("bud-01") ? "bud 01" : "bud 02"}`,
+              }))
               : [
-                  {
-                    src: "/images/logo-green-ghost-degen-weed-shop.png",
-                    alt: "No image available",
-                  },
-                ]
+                {
+                  src: "/images/logo-green-ghost-degen-weed-shop.png",
+                  alt: "No image available",
+                },
+              ]
           }
           width={200}
           height={200}

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getListingsData } from "@/lib/bigquery";
+import { getListingsData } from "@/lib/firestore";
 import { ExternalLink } from "lucide-react";
 import { sanitizeUrl } from "@/lib/utils/url";
 import { selectLocalizedField } from "@/lib/i18n-helpers";

@@ -4,7 +4,7 @@ export const revalidate = 86400;
 import { PagesMetadata } from "@/components/PagesMetadata";
 import PagesBanner from "@/components/PagesBanner";
 import PagesIntro from "@/components/PagesIntro";
-import { getCBDsData } from "@/lib/bigquery";
+import { getCBDsData } from "@/lib/firestore";
 import CBDList from "@/components/CBDList";
 
 export async function generateMetadata(props: {

@@ -1,6 +1,6 @@
 import { toJsonLd } from "@/lib/utils/json-ld";
 import Image from "next/image";
-import { getGardensData } from "@/lib/bigquery";
+import { getGardensData } from "@/lib/firestore";
 
 export default async function GardensList() {
   const gardens = await getGardensData();

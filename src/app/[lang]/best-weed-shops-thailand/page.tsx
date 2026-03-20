@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 export const revalidate = 86400;
-import { getBestShopsData } from "@/lib/bigquery";
+import { getBestShopsData } from "@/lib/firestore";
 import BestShopsList from "@/components/BestShopsList";
 import PagesBanner from "@/components/PagesBanner";
 import PagesIntro from "@/components/PagesIntro";

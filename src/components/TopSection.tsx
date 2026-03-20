@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getTopsData, getSectionsData } from "@/lib/bigquery";
+import { getTopsData, getSectionsData } from "@/lib/firestore";
 import { getLocalizedSection } from "@/lib/i18n-db";
 import { sanitizeUrl } from "@/lib/utils/url";
 import { getLocalizedUrl } from "@/lib/i18n-helpers";
@@ -79,14 +79,15 @@ export default async function TopSection({ locale = "en" }: TopSectionProps) {
         aria-label={titleContent}
       >
         {tops.map((top) => {
-          const slug = top.name.toLowerCase().replace(/\s+/g, "-");
+          const name = top?.name || "Unknown";
+          const slug = name.toLowerCase().replace(/\s+/g, "-");
           const imagePath = `/images/partners/green-ghost-top-dispensary-${slug}.avif`;
 
           return (
-            <li key={top.name}>
+            <li key={name}>
               <a
-                href={sanitizeUrl(top.link)}
-                title={top.name}
+                href={sanitizeUrl(top?.link || "#")}
+                title={name}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block bg-[#13DE00]/13 border border-[#13DE00]/21 hover:border-[#13DE00]/50 p-4 transition-all duration-300 flex flex-col items-center justify-center gap-3 h-full"

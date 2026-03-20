@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { WeedData } from "@/lib/bigquery";
+import { WeedData } from "@/lib/firestore";
 
 interface WeedsBlockProps {
   strains: WeedData[];

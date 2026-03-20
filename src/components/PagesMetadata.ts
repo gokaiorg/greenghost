@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { getPagesData } from "@/lib/bigquery";
+import { getPagesData } from "@/lib/firestore";
 import { selectLocalizedField } from "@/lib/i18n-helpers";
 
 interface PagesMetadataProps {

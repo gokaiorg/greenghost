@@ -1,4 +1,4 @@
-import { getNFTsData } from "@/lib/bigquery";
+import { getNFTsData } from "@/lib/firestore";
 export const revalidate = 86400;
 import NFTPageContent from "@/components/NFTPageContent";
 import { notFound } from "next/navigation";

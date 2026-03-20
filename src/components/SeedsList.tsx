@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getSeedsData } from "@/lib/bigquery";
+import { getSeedsData } from "@/lib/firestore";
 import { ExternalLink } from "lucide-react";
 import { sanitizeUrl } from "@/lib/utils/url";
 

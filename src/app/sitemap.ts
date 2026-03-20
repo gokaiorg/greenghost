@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
-import { getAllLocations } from "@/lib/bigquery";
+import { getAllLocations } from "@/lib/firestore";
 import { getProducts } from "@/lib/products";
-import { getNFTsData } from "@/lib/bigquery";
+import { getNFTsData } from "@/lib/firestore";
 import { i18n } from "@/i18n-config";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://green.gd";

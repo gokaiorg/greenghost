@@ -1,6 +1,6 @@
 import Link from "next/link";
 import NextImage from "next/image";
-import { getPagesData } from "@/lib/bigquery";
+import { getPagesData } from "@/lib/firestore";
 import { selectLocalizedField } from "@/lib/i18n-helpers";
 
 const menuPages = [

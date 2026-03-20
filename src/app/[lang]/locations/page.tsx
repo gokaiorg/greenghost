@@ -1,7 +1,7 @@
 import PagesBanner from "@/components/PagesBanner";
 export const revalidate = 86400;
 import PagesIntro from "@/components/PagesIntro";
-import { getAllLocations } from "@/lib/bigquery";
+import { getAllLocations } from "@/lib/firestore";
 import { Metadata } from "next";
 import { PagesMetadata } from "@/components/PagesMetadata";
 import LocationsList from "@/components/LocationsList";

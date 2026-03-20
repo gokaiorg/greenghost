@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getAllLocations, getSectionsData } from "@/lib/bigquery";
+import { getAllLocations, getSectionsData } from "@/lib/firestore";
 import { getLocalizedSection } from "@/lib/i18n-db";
 import { getLocalizedUrl } from "@/lib/i18n-helpers";
 

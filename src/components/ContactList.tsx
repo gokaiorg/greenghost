@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getContactsData } from "@/lib/bigquery";
+import { getContactsData } from "@/lib/firestore";
 import { sanitizeUrl } from "@/lib/utils/url";
 import {
   Phone,
@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 
 const getIcon = (name: string) => {
-  const lowerName = name.toLowerCase();
+  const lowerName = (name || "").toLowerCase();
   if (lowerName.includes("whatsapp"))
     return <MessageCircle className="w-6 h-6" />;
   if (lowerName.includes("messenger"))

@@ -11,6 +11,7 @@ import LoadingSpinner from "@/components/LoadingSpinner";
 import { ReactNode } from "react";
 
 interface BudsPageContentProps {
+  initialBuds?: Product[];
   menuSlot: ReactNode;
   locale?: string;
   title?: string;
@@ -18,29 +19,23 @@ interface BudsPageContentProps {
 }
 
 export default function BudsPageContent({
+  initialBuds = [],
   menuSlot,
   locale = "en",
   title = "Buds Menu",
   description = "Buds price for 1 gram.",
 }: BudsPageContentProps) {
   // Since it's client, fetch here
-  const [allBuds, setAllBuds] = useState<Product[]>([]);
+  const [allBuds, setAllBuds] = useState<Product[]>(initialBuds);
   const [selectedDominances, setSelectedDominances] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/products/strains")
-      .then((res) => res.json())
-      .then((data) => {
-        const filtered = data
-          .filter((strain: Product) => strain.status === "In stock")
-          .sort((a: Product, b: Product) => a.price - b.price);
-        setAllBuds(filtered);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  }, []);
+    if (initialBuds.length > 0) {
+      setAllBuds(initialBuds);
+      setIsLoading(false);
+    }
+  }, [initialBuds]);
 
   const buds =
     selectedDominances.length > 0

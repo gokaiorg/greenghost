@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 export const revalidate = 86400;
-import { getLawsData, getLawsFAQData } from "@/lib/bigquery";
+import { getLawsData, getLawsFAQData } from "@/lib/firestore";
 
 import WeedNavigation from "@/components/WeedNavigation";
 import PagesBanner from "@/components/PagesBanner";

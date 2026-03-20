@@ -1,6 +1,6 @@
-// Locations data handling is now done via BigQuery (see src/lib/bigquery.ts)
+// Locations data handling is now done via Firestore (see src/lib/firestore.ts)
 
-import { getAllLocations } from "@/lib/bigquery";
+import { getAllLocations } from "@/lib/firestore";
 // import { LocationData } from "@/lib/bigquery-types";
 import { parseHoursString } from "@/lib/utils/hours";
 import { Organization } from "@/lib/types/organization";

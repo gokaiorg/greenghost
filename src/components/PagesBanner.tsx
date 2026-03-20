@@ -1,4 +1,4 @@
-import { getPagesData } from "@/lib/bigquery";
+import { getPagesData } from "@/lib/firestore";
 // import { PageData } from "@/lib/bigquery-types";
 import { selectLocalizedField } from "@/lib/i18n-helpers";
 import PagesBannerClient, { PagesBannerClientProps } from "./PagesBannerClient";
