@@ -74,3 +74,11 @@
 1. Systematically identified all components rendering links from data sources.
 2. Applied `sanitizeUrl` to all dynamic `href` and `src` attributes in these components.
 3. Reinforced the rule: "Any external data going into a URL attribute must be sanitized."
+
+## 2033-04-18 - GardensList JSON-LD Stored XSS
+
+**Vulnerability:** The `GardensList` component rendered JSON-LD structured data directly by stringifying it with `JSON.stringify` and inserting it into `dangerouslySetInnerHTML`. Because data points like `description` or `headline` come from a BigQuery database, an attacker could potentially execute a Stored XSS attack if they manage to insert malicious scripts (e.g. `</script><script>alert(1)</script>`) into the data source.
+**Learning:** `JSON.stringify` does not escape characters like `<` or `>`, which is necessary when inserting JSON inside a `<script>` tag via `dangerouslySetInnerHTML`. Always use a safe JSON-LD serialization utility like the built-in `toJsonLd` when inserting dynamic data into script tags.
+**Prevention:**
+1. Avoid `JSON.stringify` inside `dangerouslySetInnerHTML`.
+2. Use the provided `toJsonLd` utility helper function which properly escapes `<` to `\u003c`.

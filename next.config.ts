@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
     unoptimized: true, // Disable image optimization to prevent memory errors
     qualities: [25, 50, 75, 100],
   },
+  serverExternalPackages: ["firebase-admin", "@google-cloud/firestore"],
   experimental: {
     workerThreads: false,
     cpus: 1,

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { DeliveryData } from "@/lib/bigquery";
+import { DeliveryData } from "@/lib/firestore";
 
 interface DeliveryListProps {
   steps: DeliveryData[];

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import MiniSlider from "@/components/MiniSlider";
-import { getSectionsData } from "@/lib/bigquery";
+import { getSectionsData } from "@/lib/firestore";
 import { getLocalizedSection } from "@/lib/i18n-db";
 
 const CAROUSEL_IMAGES = [

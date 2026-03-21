@@ -50,7 +50,7 @@ export default function CBDList({ products }: CBDListProps) {
         {filteredProducts.map((product, index) => {
           // Generate image path based on product name
           // Convert name to lowercase and replace spaces with hyphens
-          const imageName = product.item_name
+          const imageName = (product.item_name || "")
             .toLowerCase()
             .replace(/\s+/g, "-");
           const imagePath = `/images/cbd/${imageName}-cover-green-ghost.avif`;
@@ -59,7 +59,7 @@ export default function CBDList({ products }: CBDListProps) {
           const slug = imageName;
 
           // Check if product is in stock
-          const isInStock = product.status.toLowerCase() === "in stock";
+          const isInStock = (product.status || "").toLowerCase() === "in stock";
 
           return (
             <li key={index} className="list-none">

@@ -20,6 +20,8 @@ export interface Product {
   seo: string;
   effects: string;
   relieves: string;
+  item_name?: string;
+  image_url?: string;
   image: string;
   images: string[];
 }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getWholesalesData } from "@/lib/bigquery";
+import { getWholesalesData } from "@/lib/firestore";
 
 interface WholesaleItem {
   strain: string;

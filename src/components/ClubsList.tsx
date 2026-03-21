@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { sanitizeUrl } from "@/lib/utils/url";
-import { ClubData } from "@/lib/bigquery";
+import { ClubData } from "@/lib/firestore";
 
 interface ClubsListProps {
   clubs: ClubData[];

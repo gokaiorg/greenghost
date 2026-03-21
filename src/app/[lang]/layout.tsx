@@ -12,7 +12,7 @@ import GoogleTagManager from "@/components/GoogleTagManager";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import AgeModalSection from "@/components/AgeModalSection";
 import { getOrganizationData } from "@/lib/organization-data";
-import { getSocialsData, getSectionsData, getPagesData } from "@/lib/bigquery";
+import { getSocialsData, getSectionsData, getPagesData } from "@/lib/firestore";
 import { getLocalizedSection, getLocalizedValue } from "@/lib/i18n-db";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 

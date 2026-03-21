@@ -8,7 +8,7 @@ import {
   generateLocalBusinessSchema,
   generateFAQSchema,
 } from "@/lib/utils/structuredData";
-import { getAllLocations, getLocationBySlug } from "@/lib/bigquery";
+import { getAllLocations, getLocationBySlug } from "@/lib/firestore";
 import { getLocationImages } from "@/lib/utils/images";
 import { getCanonicalUrl } from "@/lib/utils/seo";
 

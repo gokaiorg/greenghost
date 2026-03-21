@@ -24,7 +24,7 @@ export default function EdibleProductClient({
           <h1 className="text-xl md:text-2xl font-bold">{product.name}</h1>
         </div>
         <p className="text-[10px] md:text-xs lg:text-sm text-gray-400 mb-4">
-          {product.seo || product.description}
+          {product.seo}
         </p>
         <ImageSlider
           images={[

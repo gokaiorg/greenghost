@@ -5,7 +5,7 @@ import { PagesMetadata } from "@/components/PagesMetadata";
 import PagesBanner from "@/components/PagesBanner";
 import PagesIntro from "@/components/PagesIntro";
 import ClubsList from "@/components/ClubsList";
-import { getClubsData } from "@/lib/bigquery";
+import { getClubsData } from "@/lib/firestore";
 
 export async function generateMetadata(props: {
   params: Promise<{ lang: string }>;

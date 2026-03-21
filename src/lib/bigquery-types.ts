@@ -23,6 +23,8 @@ export interface GardenData {
   date: string;
   description: string;
   image: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  garden_date?: any;
 }
 
 export interface ReviewData {
@@ -182,11 +184,13 @@ export interface ProductData {
   status: string;
   description: string;
   seo_description: string;
+  seo?: string;
   dominance: string;
   thc: string;
   cbd: string;
   effects: string;
   relieves: string;
+  image_url?: string;
 }
 
 export interface SectionData {

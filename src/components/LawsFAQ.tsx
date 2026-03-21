@@ -1,6 +1,6 @@
 import React from "react";
 
-import { LawFAQData } from "@/lib/bigquery";
+import { LawFAQData } from "@/lib/firestore";
 
 interface LawsFAQProps {
   items: LawFAQData[];

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import { LawData } from "@/lib/bigquery";
+import { LawData } from "@/lib/firestore";
 
 interface LawsProps {
   items: LawData[];

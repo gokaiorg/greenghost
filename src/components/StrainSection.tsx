@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Product } from "@/lib/types";
 import { getProducts } from "@/lib/products";
-import { getSectionsData } from "@/lib/bigquery";
+import { getSectionsData } from "@/lib/firestore";
 import { getLocalizedSection } from "@/lib/i18n-db";
 import { getLocalizedUrl } from "@/lib/i18n-helpers";
 import MiniSlider from "@/components/MiniSlider";

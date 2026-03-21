@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PHONE_NUMBER } from "@/lib/constants";
-import { getSectionsData } from "@/lib/bigquery";
+import { getSectionsData } from "@/lib/firestore";
 // import { SectionData } from "@/lib/bigquery-types";
 import { getLocalizedSection } from "@/lib/i18n-db";
 import { getLocalizedUrl } from "@/lib/i18n-helpers";

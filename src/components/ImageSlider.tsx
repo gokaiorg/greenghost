@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, memo } from "react";
 import StrainImage from "./StrainImage";
 
 interface ImageSliderProps {
@@ -128,7 +128,9 @@ function MobileSlider({
 }
 
 // Desktop Grid Component - Show all images in a responsive grid
-function DesktopGrid({ images }: ImageSliderProps) {
+// ⚡ Bolt: Memoized DesktopGrid to prevent unnecessary re-renders when the parent
+// ImageSlider's currentIndex changes (which only affects the mobile view).
+const DesktopGrid = memo(function DesktopGrid({ images }: ImageSliderProps) {
   return (
     <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
       {images.map((image, index) => (
@@ -144,7 +146,7 @@ function DesktopGrid({ images }: ImageSliderProps) {
       ))}
     </div>
   );
-}
+});
 
 export default function ImageSlider({
   images,

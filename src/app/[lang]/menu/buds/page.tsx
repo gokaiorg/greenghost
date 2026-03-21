@@ -20,8 +20,9 @@ export async function generateMetadata(props: {
   });
 }
 
-import { getPagesData } from "@/lib/bigquery";
+import { getPagesData } from "@/lib/firestore";
 import { selectLocalizedField } from "@/lib/i18n-helpers";
+import { getFilteredProductsForMenu } from "@/lib/products";
 
 export default async function BudsPage({
   params,
@@ -44,8 +45,12 @@ export default async function BudsPage({
       lang,
     ) || "Buds price for 1 gram.";
 
+  const products = await getFilteredProductsForMenu("Strain", "In stock");
+  console.log("Fetched Products:", products);
+
   return (
     <BudsPageContent
+      initialBuds={products}
       menuSlot={<MenuListInline locale={lang} />}
       locale={lang}
       title={title}

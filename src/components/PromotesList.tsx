@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getPromotesData } from "@/lib/bigquery";
+import { getPromotesData } from "@/lib/firestore";
 import { selectLocalizedField, getLocalizedUrl } from "@/lib/i18n-helpers";
 
 const imageMapping: Record<string, string> = {

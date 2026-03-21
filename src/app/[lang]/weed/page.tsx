@@ -3,7 +3,7 @@ export const revalidate = 86400;
 import PagesBanner from "@/components/PagesBanner";
 import WeedsBlock from "@/components/WeedsBlock";
 import WeedNavigation from "@/components/WeedNavigation";
-import { getWeedsData } from "@/lib/bigquery";
+import { getWeedsData } from "@/lib/firestore";
 import PagesIntro from "@/components/PagesIntro";
 import { PagesMetadata } from "@/components/PagesMetadata";
 

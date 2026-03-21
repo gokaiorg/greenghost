@@ -1,13 +1,16 @@
+console.log("[Products] products.ts loaded");
 import { Product } from "@/lib/types";
 
-import { getProductsData } from "@/lib/bigquery";
+import { getProductsData } from "@/lib/firestore";
 // import { ProductData } from "@/lib/bigquery-types";
 
-async function fetchProductsFromBigQuery(): Promise<Product[]> {
+async function fetchProductsFromFirestore(): Promise<Product[]> {
   try {
     const bqProducts = await getProductsData();
-
-    if (bqProducts.length === 0) return [];
+    console.log(`[Products] Raw products from Firestore: ${bqProducts.length}`);
+    if (bqProducts.length > 0) {
+      console.log(`[Products] Sample raw product types:`, bqProducts.slice(0, 3).map(p => p.type));
+    }
 
     const products: Product[] = [];
     const usedIds = new Set<string>();
@@ -18,7 +21,7 @@ async function fetchProductsFromBigQuery(): Promise<Product[]> {
       const cleanType = (row.type || "").trim();
       const cleanStatus = (row.status || "").trim();
       const cleanDescription = (row.description || "").trim();
-      const cleanSeo = (row.seo_description || "").trim();
+      const cleanSeo = (row.seo || row.seo_description || "").trim();
       const cleanDominance = (row.dominance || "").trim();
       const cleanThc = (row.thc || "0").trim();
       const cleanCbd = (row.cbd || "0").trim();
@@ -91,6 +94,7 @@ async function fetchProductsFromBigQuery(): Promise<Product[]> {
       const product: Product = {
         id,
         name,
+        item_name: row.item_name,
         type: category,
         price,
         stock,
@@ -104,6 +108,7 @@ async function fetchProductsFromBigQuery(): Promise<Product[]> {
         cbd,
         effects: cleanEffects,
         relieves: cleanRelieves,
+        image_url: row.image_url,
         image:
           category === "Strains"
             ? `/images/strains/green-ghost-degen-weed-shop-strain-${id}-cover.avif`
@@ -113,9 +118,15 @@ async function fetchProductsFromBigQuery(): Promise<Product[]> {
 
       products.push(product);
     }
+    const counts: Record<string, number> = {};
+    products.forEach(p => {
+      counts[p.type] = (counts[p.type] || 0) + 1;
+    });
+    console.log(`[Products] Mapped category counts:`, counts);
+    console.log(`[Products] Successfully mapped ${products.length} products.`);
     return products;
   } catch (error) {
-    console.error("Error fetching products from BigQuery:", error);
+    console.error("Error fetching products from Firestore:", error);
     return [];
   }
 }
@@ -125,7 +136,7 @@ let productsCache: Product[] = [];
 export async function getProducts(): Promise<Product[]> {
   if (productsCache.length > 0) return productsCache;
 
-  const data = await fetchProductsFromBigQuery();
+  const data = await fetchProductsFromFirestore();
   if (data.length > 0) {
     productsCache = data;
     return data;
@@ -144,4 +155,21 @@ export async function getProductsByCategory(
 ): Promise<Product[]> {
   const products = await getProducts();
   return products.filter((p) => p.type === category);
+}
+
+export async function getFilteredProductsForMenu(
+  type: string,
+  status: string = "In stock",
+): Promise<Product[]> {
+  const allProducts = await getProducts();
+  
+  // Normalize type for filtering
+  const targetCategory = type === "Strain" ? "Strains" : 
+                         type === "Edible" ? "Edibles" : 
+                         type === "Concentrate" ? "Concentrates" : 
+                         type === "Gadget" ? "Gadgets" : type;
+
+  return allProducts.filter(
+    (p) => p.type === targetCategory && p.status === status,
+  );
 }

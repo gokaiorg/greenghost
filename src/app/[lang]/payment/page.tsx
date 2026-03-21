@@ -3,7 +3,7 @@ export const dynamic = "force-dynamic";
 import { Metadata } from "next";
 import PagesBanner from "@/components/PagesBanner";
 import PaymentList from "@/components/PaymentList";
-import { getPaymentsData } from "@/lib/bigquery";
+import { getPaymentsData } from "@/lib/firestore";
 import PagesIntro from "@/components/PagesIntro";
 import { PagesMetadata } from "@/components/PagesMetadata";
 
