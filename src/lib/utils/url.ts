@@ -8,7 +8,15 @@
 export function sanitizeUrl(url: string | undefined | null): string {
   if (!url) return "#";
 
-  const trimmed = url.trim();
+  let trimmed = url.trim();
+
+  // Handle case where the URL provided is actually a whole iframe tag: <iframe src="..." ...></iframe>
+  if (trimmed.startsWith("<iframe")) {
+    const match = trimmed.match(/src=["'](.*?)["']/);
+    if (match && match[1]) {
+      trimmed = match[1].trim();
+    }
+  }
 
   // Allow relative URLs (starting with / or #)
   if (trimmed.startsWith("/") || trimmed.startsWith("#")) {
@@ -16,9 +24,6 @@ export function sanitizeUrl(url: string | undefined | null): string {
   }
 
   // Allow http/https/mailto/tel schemes
-  // We use a regex to ensure the scheme is at the start and followed by colon
-  // This prevents things like " javascript:alert(1)" (handled by trim)
-  // or weird combinations.
   if (/^(?:https?|mailto|tel):/i.test(trimmed)) {
     return trimmed;
   }

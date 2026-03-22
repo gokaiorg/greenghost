@@ -56,12 +56,14 @@ export interface LocationData {
   longitude: number;
   region: string;
   country: string;
+  order?: number;
 }
 
 export interface BestShopData {
   name: string;
   link: string;
   location: string;
+  order?: number;
 }
 
 export interface LawData {
@@ -109,6 +111,7 @@ export interface SocialData {
 export interface ContactData {
   name: string;
   link: string;
+  order?: number;
 }
 
 export interface DeliveryData {
@@ -170,6 +173,7 @@ export interface WeedData {
   title: string;
   description: string;
   image: string;
+  order?: number;
 }
 
 export interface ProductData {

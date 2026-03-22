@@ -23,18 +23,22 @@ export default async function ListingsList({
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
         aria-label="External Listings"
       >
-        {listings.map((listing) => {
+        {listings.map((listing, index) => {
+          // Some Firestore items use capitalized 'Name' and 'Link'
+          const rawName = (listing.name || (listing as any).Name || "") as string;
+          const rawLink = (listing.link || (listing as any).Link || "") as string;
+
           const name =
             selectLocalizedField<string>(
               listing as unknown as Record<string, unknown>,
               "name",
               locale,
-            ) || listing.name;
+            ) || rawName;
 
           return (
-            <li key={name} className="list-none">
+            <li key={name || index} className="list-none">
               <Link
-                href={sanitizeUrl(listing.link)}
+                href={sanitizeUrl(rawLink)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center justify-between p-4 bg-black border-2 border-[#13DE00]/30 hover:border-[#13DE00] hover:bg-[#13DE00]/13 transition-all duration-300"

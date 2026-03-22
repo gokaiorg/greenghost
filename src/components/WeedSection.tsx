@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import { WeedData } from "@/lib/firestore";
+import { WeedData } from "@/lib/bigquery-types";
 
-interface WeedsBlockProps {
+interface WeedSectionProps {
   strains: WeedData[];
   compounds: WeedData[];
   info: WeedData[];
 }
 
-const WeedsBlock: React.FC<WeedsBlockProps> = ({
+const WeedSection: React.FC<WeedSectionProps> = ({
   strains,
   compounds,
   info,
@@ -27,7 +27,7 @@ const WeedsBlock: React.FC<WeedsBlockProps> = ({
           {strains.map((item, index) => (
             <li
               key={index}
-              className="flex flex-col items-center text-center bg-[#13DE00]/13 p-6 border border-[#13DE00]/21 transition-colors duration-300"
+              className="flex flex-col items-center text-center bg-[#13DE00]/13 p-6 border border-[#13DE00]/30 transition-colors duration-300"
             >
               {item.image && (
                 <div className="relative w-50 h-50 mb-4">
@@ -60,7 +60,7 @@ const WeedsBlock: React.FC<WeedsBlockProps> = ({
           {compounds.map((item, index) => (
             <li
               key={index}
-              className="flex flex-col md:flex-row items-center md:items-start bg-[#13DE00]/13 p-6 border border-[#13DE00]/21 transition-colors duration-300"
+              className="flex flex-col md:flex-row items-center md:items-start bg-[#13DE00]/13 p-6 border border-[#13DE00]/30 transition-colors duration-300"
             >
               <div className="flex-1 text-center md:text-left">
                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
@@ -85,7 +85,7 @@ const WeedsBlock: React.FC<WeedsBlockProps> = ({
           {info.map((item, index) => (
             <li
               key={index}
-              className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-6 md:gap-12 items-center bg-[#13DE00]/13 p-6 md:p-8 border border-[#13DE00]/21`}
+              className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-6 md:gap-12 items-center bg-[#13DE00]/13 p-6 md:p-8 border border-[#13DE00]/30`}
             >
               {item.image && (
                 <div className="w-full md:w-1/3 relative aspect-square overflow-hidden shrink-0">
@@ -111,4 +111,4 @@ const WeedsBlock: React.FC<WeedsBlockProps> = ({
   );
 };
 
-export default WeedsBlock;
+export default WeedSection;

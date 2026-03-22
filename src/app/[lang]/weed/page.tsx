@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 export const revalidate = 86400;
 import PagesBanner from "@/components/PagesBanner";
-import WeedsBlock from "@/components/WeedsBlock";
+import WeedSection from "@/components/WeedSection";
 import WeedNavigation from "@/components/WeedNavigation";
 import { getWeedsData } from "@/lib/firestore";
 import PagesIntro from "@/components/PagesIntro";
@@ -38,7 +38,7 @@ export default async function WeedPage({
       <PagesBanner pageName="Weed" locale={lang} />
       <div className="container mx-auto px-4">
         <PagesIntro pageName="Weed" locale={lang} />
-        <WeedsBlock strains={strains} compounds={compounds} info={info} />
+        <WeedSection strains={strains} compounds={compounds} info={info} />
         <WeedNavigation />
       </div>
     </>
