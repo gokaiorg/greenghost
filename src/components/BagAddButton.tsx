@@ -115,7 +115,7 @@ const BagAddButton: React.FC<BagAddButtonProps> = ({
       }}
       disabled={product.status !== "In stock"}
       className={`
-        bg-[#13DE00] text-black font-bold hover:bg-white hover:text-[#13DE00] transition-colors cursor-pointer relative z-20
+        bg-[#13DE00] text-black font-bold hover:bg-white hover:text-[#13DE00] transition-colors cursor-pointer relative z-20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black
         ${compact ? "px-3 py-1 text-sm" : "px-6 py-2 text-base"}
         ${product.status !== "In stock" ? "opacity-50 cursor-not-allowed bg-gray-500" : ""}
         ${className}
