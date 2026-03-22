@@ -17,7 +17,7 @@ interface SheetSyncConfig {
 const SHEETS_TO_SYNC: SheetSyncConfig[] = [
   { sheet: "pages", collection: "pages", idField: "title_en" },
   { sheet: "sections", collection: "sections", idField: "id" },
-  { sheet: "gardens", collection: "gardens", idField: "garden_date" },
+  { sheet: "gardens", collection: "gardens", idField: "date" },
   { sheet: "reviews", collection: "reviews", idField: "user_name" },
   { sheet: "locations", collection: "locations", idField: "slug" },
   { sheet: "best_shops_thailand", collection: "best_shops", idField: "name" },
@@ -65,12 +65,14 @@ function mapRowsToObjects(rows: unknown[][]) {
   const headers = rows[0].map(h => String(h).toLowerCase().trim());
   const dataRows = rows.slice(1);
 
-  return dataRows.map((row) => {
+  return dataRows.map((row, index) => {
     const obj: Record<string, unknown> = {};
-    headers.forEach((header, index) => {
+    headers.forEach((header, hIndex) => {
       // Map each row value to its lowercased header key
-      obj[header] = row[index] !== undefined ? row[index] : null;
+      obj[header] = row[hIndex] !== undefined ? row[hIndex] : null;
     });
+    // Add order field to preserve sheet sequence in Firestore
+    obj["order"] = index + 1;
     return obj;
   });
 }
@@ -135,6 +137,10 @@ export async function GET(request: NextRequest) {
             docId = slugify(String(data.item_name || ""));
           } else if (autoId) {
             // Let Firestore auto-generate IDs if configured
+          } else if (collection === "gardens") {
+            const baseId = String(data.date || "");
+            const descPart = String(data.description || "").substring(0, 30);
+            docId = slugify(`${baseId}-${descPart}`);
           } else {
             // Specific ID logic for others
             const idVal = data[idField || ""] || "";

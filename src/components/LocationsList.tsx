@@ -54,7 +54,7 @@ export default function LocationsList({ locations }: LocationsListProps) {
                 className="block group-hover:opacity-80 transition-opacity"
                 title={location.name}
               >
-                <h2 className="text-xl font-bold text-white group-hover:text-[#13DE00] transition-colors line-clamp-2">
+                <h2 className="text-xl font-bold text-white group-hover:text-[#13DE00] transition-colors">
                   {location.name}
                 </h2>
               </Link>

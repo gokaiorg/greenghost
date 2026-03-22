@@ -27,6 +27,32 @@ import {
   SectionData,
 } from "./bigquery-types";
 
+export type {
+  PageData,
+  GardenData,
+  ReviewData,
+  LocationData,
+  BestShopData,
+  LawData,
+  LawFAQData,
+  GrowerData,
+  SeedData,
+  WholesaleData,
+  ListingData,
+  TopData,
+  SocialData,
+  ContactData,
+  DeliveryData,
+  ClubData,
+  PaymentData,
+  NFTData,
+  CBDData,
+  PromoteData,
+  WeedData,
+  ProductData,
+  SectionData,
+};
+
 // Helper to get all docs from a collection
 async function getAllFromCollection<T extends FirebaseFirestore.DocumentData>(collectionName: string): Promise<T[]> {
   try {
@@ -56,38 +82,100 @@ export const getPagesData = cache(
 );
 
 export const getGardensData = cache(async (): Promise<GardenData[]> => {
-  const data = await getAllFromCollection<GardenData>("gardens");
+  const data = await getAllFromCollection<any>("gardens");
+  
+  // Helper to parse D/M/YYYY or DD/MM/YYYY into timestamp
+  const parseDate = (d: string) => {
+    if (!d) return 0;
+    const parts = d.split("/");
+    if (parts.length !== 3) return 0;
+    const day = parseInt(parts[0]);
+    const month = parseInt(parts[1]);
+    const year = parseInt(parts[2]);
+    return new Date(year, month - 1, day).getTime();
+  };
+
   const sorted = data.sort((a, b) => {
-    const dateA = a.garden_date?.value || a.garden_date || "";
-    const dateB = b.garden_date?.value || b.garden_date || "";
-    return dateB.localeCompare(dateA);
+    const timeA = parseDate(String(a.date || ""));
+    const timeB = parseDate(String(b.date || ""));
+    // Default to 'order' if dates same or missing
+    if (timeA === timeB) return (a.order || 0) - (b.order || 0);
+    return timeB - timeA; // Newest first
   });
 
   const totalRows = sorted.length;
   return sorted.map((row, index) => {
-    const dateVal = row.garden_date?.value || row.garden_date || "";
-    const dateStr = typeof dateVal === "string" ? dateVal : "";
-    const [year, month, day] = dateStr.split("-");
-    const formattedDate = day && month && year ? `${day} ${month} ${year}` : dateStr;
+    // Already in correct chronological order after sort
+    const dateStr = String(row.date || "");
+    const parts = dateStr.split("/");
+    
+    // Map months to names for prettier display
+    const months = [
+      "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+    
+    let formattedDate = dateStr;
+    if (parts.length === 3) {
+      const day = parseInt(parts[0]);
+      const monthIdx = parseInt(parts[1]) - 1;
+      const year = parts[2];
+      if (months[monthIdx]) {
+        formattedDate = `${day} ${months[monthIdx]} ${year}`;
+      }
+    }
 
     const imageIndex = (totalRows - index).toString().padStart(2, "0");
     const image = `/images/gardens/green-ghost-garden-phuket-${imageIndex}.avif`;
 
     return {
       date: formattedDate,
-      description: row.description,
+      description: String(row.description || ""),
       image,
     };
   });
 });
 
 export const getReviewsData = cache(async (): Promise<ReviewData[]> => {
-  const data = await getAllFromCollection<ReviewData>("reviews");
-  return data.filter(row => row.comment != null);
+  const data = await getAllFromCollection<any>("reviews");
+  return data
+    .filter(row => row.comment != null)
+    .map(row => ({
+      user_name: String(row.user_name || row.name || ""),
+      comment: String(row.comment || ""),
+      review_link: String(row.review_link || row.link || ""),
+      shop_name: String(row.shop_name || row.shop || ""),
+    }));
 });
 
 export const getAllLocations = cache(async (): Promise<LocationData[]> => {
-  return getAllFromCollection<LocationData>("locations");
+  const data = await getAllFromCollection<any>("locations");
+  return data
+    .map(row => ({
+      slug: String(row.slug || ""),
+      name: String(row.name || ""),
+      hours: String(row.hours || ""),
+      phone: String(row.phone || ""),
+      address: String(row.address || ""),
+      address_link: String(row.addreslink || row.address_link || ""),
+      review_link: String(row.reviewlink || row.review_link || ""),
+      details_short: String(row.details || row.details_short || ""),
+      description_long: String(row.description || row.description_long || ""),
+      seo_description: String(row.descseo || row.seo_description || ""),
+      map_embed_link: String(row.maplink || row.map_embed_link || ""),
+      video_link: String(row.videolink || row.video_link || ""),
+      tripadvisor_link: String(row.tripadvisor || row.tripadvisor_link || ""),
+      weed_th_link: String(row.weedth || row.weed_th_link || ""),
+      wongnai_link: String(row.wongnai || row.wongnai_link || ""),
+      highthailand_link: String(row.highthailand || row.highthailand_link || ""),
+      apple_map_link: String(row.applemap || row.apple_map_link || ""),
+      latitude: Number(row.lat || row.latitude || 0),
+      longitude: Number(row.lng || row.longitude || 0),
+      region: String(row.region || ""),
+      country: String(row.country || ""),
+      order: Number(row.order || 0),
+    }))
+    .sort((a, b) => (a.order || 0) - (b.order || 0));
 });
 
 export const getLocationBySlug = cache(
@@ -95,7 +183,31 @@ export const getLocationBySlug = cache(
     try {
       const doc = await db.collection("locations").doc(slug).get();
       if (doc.exists) {
-        return doc.data() as LocationData;
+        const row = doc.data() as any;
+        return {
+          slug: String(row.slug || ""),
+          name: String(row.name || ""),
+          hours: String(row.hours || ""),
+          phone: String(row.phone || ""),
+          address: String(row.address || ""),
+          address_link: String(row.addreslink || row.address_link || ""),
+          review_link: String(row.reviewlink || row.review_link || ""),
+          details_short: String(row.details || row.details_short || ""),
+          description_long: String(row.description || row.description_long || ""),
+          seo_description: String(row.descseo || row.seo_description || ""),
+          map_embed_link: String(row.maplink || row.map_embed_link || ""),
+          video_link: String(row.videolink || row.video_link || ""),
+          tripadvisor_link: String(row.tripadvisor || row.tripadvisor_link || ""),
+          weed_th_link: String(row.weedth || row.weed_th_link || ""),
+          wongnai_link: String(row.wongnai || row.wongnai_link || ""),
+          highthailand_link: String(row.highthailand || row.highthailand_link || ""),
+          apple_map_link: String(row.applemap || row.apple_map_link || ""),
+          latitude: Number(row.lat || row.latitude || 0),
+          longitude: Number(row.lng || row.longitude || 0),
+          region: String(row.region || ""),
+          country: String(row.country || ""),
+          order: Number(row.order || 0),
+        };
       }
       return null;
     } catch (error) {
@@ -106,15 +218,32 @@ export const getLocationBySlug = cache(
 );
 
 export const getBestShopsData = cache(async (): Promise<BestShopData[]> => {
-  return getAllFromCollection<BestShopData>("best_shops");
+  const data = await getAllFromCollection<any>("best_shops");
+  return data
+    .filter(row => row.name && String(row.name).trim() !== "" && row.location && String(row.location).trim() !== "")
+    .map(row => ({
+      name: String(row.name || ""),
+      link: String(row.link || ""),
+      location: String(row.location || ""),
+      order: Number(row.order || 0),
+    }))
+    .sort((a, b) => (a.order || 0) - (b.order || 0));
 });
 
 export const getLawsData = cache(async (): Promise<LawData[]> => {
-  return getAllFromCollection<LawData>("laws");
+  const data = await getAllFromCollection<any>("laws");
+  return data.map(row => ({
+    title: String(row.title || ""),
+    description: String(row.description || row.decription || ""),
+  }));
 });
 
 export const getLawsFAQData = cache(async (): Promise<LawFAQData[]> => {
-  return getAllFromCollection<LawFAQData>("laws_faq");
+  const data = await getAllFromCollection<any>("laws_faq");
+  return data.map(row => ({
+    title: String(row.title || ""),
+    description: String(row.description || row.decription || ""),
+  }));
 });
 
 export const getGrowersData = cache(async (): Promise<GrowerData[]> => {
@@ -142,7 +271,15 @@ export const getSocialsData = cache(async (): Promise<SocialData[]> => {
 });
 
 export const getContactsData = cache(async (): Promise<ContactData[]> => {
-  return getAllFromCollection<ContactData>("contacts");
+  const data = await getAllFromCollection<any>("contacts");
+  return data
+    .filter(row => row.name && String(row.name).trim() !== "")
+    .map(row => ({
+      name: String(row.name || ""),
+      link: String(row.link || ""),
+      order: Number(row.order || 0),
+    }))
+    .sort((a, b) => (a.order || 0) - (b.order || 0));
 });
 
 export const getDeliveryData = cache(async (): Promise<DeliveryData[]> => {
@@ -154,16 +291,25 @@ export const getClubsData = cache(async (): Promise<ClubData[]> => {
 });
 
 export const getPaymentsData = cache(async (): Promise<PaymentData[]> => {
-  return getAllFromCollection<PaymentData>("payments");
+  const data = await getAllFromCollection<PaymentData>("payments");
+  return data.reverse();
 });
 
 export const getNFTsData = cache(async (): Promise<NFTData[]> => {
   const data = await getAllFromCollection<NFTData>("nfts");
-  return data.map(row => ({
-    ...row,
-    slug: String(row.slug),
-    logo: row.logo.startsWith("/nft/") ? `/images${row.logo}` : row.logo,
-  }));
+  return data
+    .map(row => ({
+      ...row,
+      slug: String(row.slug),
+      logo: row.logo.startsWith("/nft/") ? `/images${row.logo}` : row.logo,
+    }))
+    .sort((a, b) => {
+      const getNum = (name: string) => {
+        const match = name.match(/(\d+)$/);
+        return match ? parseInt(match[1], 10) : 0;
+      };
+      return getNum(a.name) - getNum(b.name);
+    });
 });
 
 export const getCBDsData = cache(async (): Promise<CBDData[]> => {
@@ -175,13 +321,20 @@ export const getPromotesData = cache(async (): Promise<PromoteData[]> => {
 });
 
 export const getWeedsData = cache(async (): Promise<WeedData[]> => {
-  return getAllFromCollection<WeedData>("weeds");
+  const data = await getAllFromCollection<any>("weeds");
+  return data
+    .map(row => ({
+      title: row.title || "",
+      description: row.description || row.decription || "",
+      image: row.image || "",
+      order: Number(row.order) || 999,
+    }))
+    .sort((a, b) => a.order - b.order);
 });
 
 export const getProductsData = cache(async (): Promise<ProductData[]> => {
   const products = await getAllFromCollection<ProductData>("products");
-  const strains = await getAllFromCollection<ProductData>("strains");
-  const data = [...products, ...strains];
+  const data = [...products];
 
   return data
     .sort((a, b) => {
