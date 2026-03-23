@@ -26,7 +26,7 @@ export default function EdiblesPageContent({
   const [edibles, setEdibles] = useState<Product[]>([]);
 
   useEffect(() => {
-    fetch("/api/products/edibles")
+    fetch(`/api/products/edibles?lang=${locale}`)
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.sort((a: Product, b: Product) => {

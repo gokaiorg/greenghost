@@ -17,9 +17,17 @@ export interface Product {
   thc: number;
   cbd: number;
   description: string;
+  description_en: string;
+  description_fr: string;
   seo: string;
+  seo_en: string;
+  seo_fr: string;
   effects: string;
+  effects_en: string;
+  effects_fr: string;
   relieves: string;
+  relieves_en: string;
+  relieves_fr: string;
   item_name?: string;
   image_url?: string;
   image: string;

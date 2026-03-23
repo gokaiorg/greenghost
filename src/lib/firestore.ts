@@ -59,7 +59,6 @@ async function getAllFromCollection<T extends FirebaseFirestore.DocumentData>(co
     const snapshot = await db.collection(collectionName).get();
     return snapshot.docs.map(doc => doc.data() as T);
   } catch (error) {
-    console.error(`Firestore fetching error (${collectionName}):`, error);
     return [];
   }
 }
@@ -75,7 +74,6 @@ export const getPagesData = cache(
       }
       return null;
     } catch (error) {
-      console.error("Firestore fetching error (pages):", error);
       return null;
     }
   },
@@ -211,7 +209,6 @@ export const getLocationBySlug = cache(
       }
       return null;
     } catch (error) {
-      console.error(`Firestore fetching error (location: ${slug}):`, error);
       return null;
     }
   },
@@ -379,7 +376,6 @@ export const getProductsByFilter = cache(
           cbd: String(row.cbd !== undefined ? row.cbd : "0"),
         }));
     } catch (error) {
-      console.error(`Firestore fetching error (products filtered):`, error);
       return [];
     }
   },

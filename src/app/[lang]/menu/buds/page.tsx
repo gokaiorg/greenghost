@@ -22,7 +22,7 @@ export async function generateMetadata(props: {
 
 import { getPagesData } from "@/lib/firestore";
 import { selectLocalizedField } from "@/lib/i18n-helpers";
-import { getFilteredProductsForMenu } from "@/lib/products";
+import { getFilteredProductsForMenu, localizeProduct } from "@/lib/products";
 
 export default async function BudsPage({
   params,
@@ -45,8 +45,8 @@ export default async function BudsPage({
       lang,
     ) || "Buds price for 1 gram.";
 
-  const products = await getFilteredProductsForMenu("Strain", "In stock");
-  console.log("Fetched Products:", products);
+  const rawProducts = await getFilteredProductsForMenu("Strain", "In stock");
+  const products = rawProducts.map((p) => localizeProduct(p, lang));
 
   return (
     <BudsPageContent
