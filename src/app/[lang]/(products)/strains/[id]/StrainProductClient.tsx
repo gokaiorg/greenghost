@@ -12,11 +12,13 @@ import BagAddButton from "@/components/BagAddButton";
 interface StrainProductClientProps {
   product: Product;
   menuSlot: React.ReactNode;
+  locale?: string;
 }
 
 export default function StrainProductClient({
   product,
   menuSlot,
+  locale = "en",
 }: StrainProductClientProps) {
   const [isPreRoll, setIsPreRoll] = useState(false);
 
@@ -26,7 +28,7 @@ export default function StrainProductClient({
         <div className="sm:ml-auto sm:w-fit">{menuSlot}</div>
         <div className="flex items-center mb-2">
           <BackButton />
-          <h1 className="text-xl md:text-2xl font-bold">{product.name}</h1>
+          <h1 className="text-xl md:text-2xl font-bold">{product.item_name || product.name}</h1>
         </div>
         <p className="text-[10px] md:text-xs lg:text-sm text-gray-400 mb-4">
           {product.seo}
@@ -38,8 +40,8 @@ export default function StrainProductClient({
                 src: img,
                 alt:
                   index === 0
-                    ? `${product.name} cover`
-                    : `${product.name} ${img.includes("bud-01") ? "bud 01" : "bud 02"}`,
+                    ? `${product.item_name || product.name} cover`
+                    : `${product.item_name || product.name} ${img.includes("bud-01") ? "bud 01" : "bud 02"}`,
               }))
               : [
                 {
@@ -122,13 +124,13 @@ export default function StrainProductClient({
             </li>
             {product.effects && (
               <li>
-                <span className="text-gray-400">Feelings:</span>{" "}
+                <span className="text-gray-400">{locale === "fr" ? "Effets" : "Feelings"}:</span>{" "}
                 <span className="text-yellow-600">{product.effects}</span>
               </li>
             )}
             {product.relieves && (
               <li>
-                <span className="text-gray-400">Relieves:</span>{" "}
+                <span className="text-gray-400">{locale === "fr" ? "Soulage" : "Relieves"}:</span>{" "}
                 <span className="text-yellow-600">{product.relieves}</span>
               </li>
             )}
@@ -203,13 +205,13 @@ export default function StrainProductClient({
             </li>
             {product.effects && (
               <li>
-                <span className="text-gray-400">Feelings:</span>{" "}
+                <span className="text-gray-400">{locale === "fr" ? "Effets" : "Feelings"}:</span>{" "}
                 <span className="text-yellow-600">{product.effects}</span>
               </li>
             )}
             {product.relieves && (
               <li>
-                <span className="text-gray-400">Relieves:</span>{" "}
+                <span className="text-gray-400">{locale === "fr" ? "Soulage" : "Relieves"}:</span>{" "}
                 <span className="text-yellow-600">{product.relieves}</span>
               </li>
             )}

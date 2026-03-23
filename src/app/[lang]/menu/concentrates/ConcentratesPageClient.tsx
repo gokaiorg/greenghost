@@ -26,7 +26,7 @@ export default function ConcentratesPageContent({
   const [concentrates, setConcentrates] = useState<Product[]>([]);
 
   useEffect(() => {
-    fetch("/api/products/concentrates")
+    fetch(`/api/products/concentrates?lang=${locale}`)
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.sort((a: Product, b: Product) => {

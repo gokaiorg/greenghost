@@ -28,7 +28,7 @@ export default function GadgetsPageContent({
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/products/gadgets")
+    fetch(`/api/products/gadgets?lang=${locale}`)
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.sort((a: Product, b: Product) => {

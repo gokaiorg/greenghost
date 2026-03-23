@@ -9,7 +9,7 @@ import {
   generateProductMetadata,
   generateProductSchema,
 } from "@/lib/config/product-metadata";
-import { getProductById } from "@/lib/products";
+import { getProductById, localizeProduct } from "@/lib/products";
 
 import StrainSection from "@/components/StrainSection";
 import MenuListInline from "@/components/MenuListInline";
@@ -19,13 +19,16 @@ interface PageProps {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
-async function getProduct(id: string): Promise<Product | null> {
+async function getProduct(id: string, lang: string): Promise<Product | null> {
   try {
-    const product = await getProductById(id);
-    if (!product || product.type !== "Strains") {
-      console.error("Invalid product data or type:", product);
+    const rawProduct = await getProductById(id);
+    if (!rawProduct || rawProduct.type !== "Strains") {
       return null;
     }
+    
+    // Localize the product fields first
+    const product = localizeProduct(rawProduct, lang);
+    
     product.images = [
       `/images/strains/green-ghost-degen-weed-shop-strain-${product.id}-cover.avif`,
       `/images/strains/green-ghost-degen-weed-shop-strain-${product.id}-bud-01.avif`,
@@ -33,7 +36,6 @@ async function getProduct(id: string): Promise<Product | null> {
     ];
     return product;
   } catch (error) {
-    console.error("Error fetching product:", error);
     return null;
   }
 }
@@ -46,8 +48,8 @@ export const viewport: Viewport = {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { id } = await params;
-  const product = await getProduct(id);
+  const { id, lang } = await params;
+  const product = await getProduct(id, lang);
   if (!product) {
     return {
       title: "Product Not Found | Green Ghost Weed Shop",
@@ -55,12 +57,6 @@ export async function generateMetadata({
     };
   }
 
-  console.log(
-    "Generating metadata for product:",
-    product.name,
-    "SEO:",
-    product.seo,
-  );
   return generateProductMetadata(product);
 }
 
@@ -70,7 +66,7 @@ export default async function StrainProductPage({
   params: Promise<{ id: string; lang: string }>;
 }) {
   const { id, lang } = await params;
-  const product = await getProduct(id);
+  const product = await getProduct(id, lang);
   if (!product) {
     notFound();
   }

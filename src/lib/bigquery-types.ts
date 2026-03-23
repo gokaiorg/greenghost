@@ -186,14 +186,17 @@ export interface ProductData {
   karon_entry: number;
   karon_stock: number;
   status: string;
-  description: string;
-  seo_description: string;
-  seo?: string;
+  description_en: string;
+  description_fr: string;
+  seo_en: string;
+  seo_fr: string;
   dominance: string;
   thc: string;
   cbd: string;
-  effects: string;
-  relieves: string;
+  effects_en: string;
+  effects_fr: string;
+  relieves_en: string;
+  relieves_fr: string;
   image_url?: string;
 }
 

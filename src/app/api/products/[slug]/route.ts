@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 export const revalidate = 86400;
-import { getProductById, getProductsByCategory } from "@/lib/products";
+import { getProductById, getProductsByCategory, localizeProduct } from "@/lib/products";
 
 export async function GET(
   request: NextRequest,
@@ -16,27 +16,28 @@ export async function GET(
       "edibles",
       "concentrates",
     ];
+    const { searchParams } = new URL(request.url);
+    const lang = searchParams.get("lang") || "en";
+
     if (knownCategories.includes(slug)) {
       // It's a category
-      const capitalizedCategory = slug.charAt(0).toUpperCase() + slug.slice(1);
-      console.log(`Fetching products for category: ${capitalizedCategory}`);
-      const products = await getProductsByCategory(capitalizedCategory);
-      console.log(`Found ${products.length} products`);
+      const capitalizedCategory = (slug === "buds" ? "strains" : slug).charAt(0).toUpperCase() + (slug === "buds" ? "strains" : slug).slice(1);
+      const rawProducts = await getProductsByCategory(capitalizedCategory);
+      const products = rawProducts.map(p => localizeProduct(p, lang));
       return NextResponse.json(products);
     } else {
       // It's an individual product id
-      console.log(`Fetching product by id: ${slug}`);
-      const product = await getProductById(slug);
-      if (!product) {
+      const rawProduct = await getProductById(slug);
+      if (!rawProduct) {
         return NextResponse.json(
           { error: "Product not found" },
           { status: 404 },
         );
       }
+      const product = localizeProduct(rawProduct, lang);
       return NextResponse.json(product);
     }
   } catch (error) {
-    console.error("Error fetching:", error);
     return NextResponse.json({ error: "Failed to fetch" }, { status: 500 });
   }
 }

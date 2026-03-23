@@ -1,16 +1,9 @@
-console.log("[Products] products.ts loaded");
 import { Product } from "@/lib/types";
-
 import { getProductsData } from "@/lib/firestore";
-// import { ProductData } from "@/lib/bigquery-types";
 
 async function fetchProductsFromFirestore(): Promise<Product[]> {
   try {
     const bqProducts = await getProductsData();
-    console.log(`[Products] Raw products from Firestore: ${bqProducts.length}`);
-    if (bqProducts.length > 0) {
-      console.log(`[Products] Sample raw product types:`, bqProducts.slice(0, 3).map(p => p.type));
-    }
 
     const products: Product[] = [];
     const usedIds = new Set<string>();
@@ -20,13 +13,18 @@ async function fetchProductsFromFirestore(): Promise<Product[]> {
       const name = (row.item_name || "").trim();
       const cleanType = (row.type || "").trim();
       const cleanStatus = (row.status || "").trim();
-      const cleanDescription = (row.description || "").trim();
-      const cleanSeo = (row.seo || row.seo_description || "").trim();
+      const cleanDescriptionEn = (row.description_en || "").trim();
+      const cleanDescriptionFr = (row.description_fr || "").trim();
+      const cleanSeoEn = (row.seo_en || "").trim();
+      const cleanSeoFr = (row.seo_fr || "").trim();
+      const cleanEffectsEn = (row.effects_en || "").trim();
+      const cleanEffectsFr = (row.effects_fr || "").trim();
+      const cleanRelievesEn = (row.relieves_en || "").trim();
+      const cleanRelievesFr = (row.relieves_fr || "").trim();
+
       const cleanDominance = (row.dominance || "").trim();
       const cleanThc = (row.thc || "0").trim();
       const cleanCbd = (row.cbd || "0").trim();
-      const cleanEffects = (row.effects || "").trim();
-      const cleanRelieves = (row.relieves || "").trim();
 
       // Convert values
       const price = Number(row.price) || 0;
@@ -101,13 +99,21 @@ async function fetchProductsFromFirestore(): Promise<Product[]> {
         initial: initialNum,
         wholesale: wholesaleNum,
         status: cleanStatus === "In stock" ? "In stock" : "Sold out",
-        description: cleanDescription,
-        seo: cleanSeo,
+        description: cleanDescriptionEn || cleanDescriptionFr || "",
+        description_en: cleanDescriptionEn,
+        description_fr: cleanDescriptionFr,
+        seo: cleanSeoEn || cleanSeoFr || "",
+        seo_en: cleanSeoEn,
+        seo_fr: cleanSeoFr,
         dominance: cleanDominance,
         thc,
         cbd,
-        effects: cleanEffects,
-        relieves: cleanRelieves,
+        effects: cleanEffectsEn || cleanEffectsFr || "",
+        effects_en: cleanEffectsEn,
+        effects_fr: cleanEffectsFr,
+        relieves: cleanRelievesEn || cleanRelievesFr || "",
+        relieves_en: cleanRelievesEn,
+        relieves_fr: cleanRelievesFr,
         image_url: row.image_url,
         image:
           category === "Strains"
@@ -118,15 +124,8 @@ async function fetchProductsFromFirestore(): Promise<Product[]> {
 
       products.push(product);
     }
-    const counts: Record<string, number> = {};
-    products.forEach(p => {
-      counts[p.type] = (counts[p.type] || 0) + 1;
-    });
-    console.log(`[Products] Mapped category counts:`, counts);
-    console.log(`[Products] Successfully mapped ${products.length} products.`);
     return products;
   } catch (error) {
-    console.error("Error fetching products from Firestore:", error);
     return [];
   }
 }
@@ -162,14 +161,33 @@ export async function getFilteredProductsForMenu(
   status: string = "In stock",
 ): Promise<Product[]> {
   const allProducts = await getProducts();
-  
+
   // Normalize type for filtering
-  const targetCategory = type === "Strain" ? "Strains" : 
-                         type === "Edible" ? "Edibles" : 
-                         type === "Concentrate" ? "Concentrates" : 
-                         type === "Gadget" ? "Gadgets" : type;
+  const targetCategory = type === "Strain" ? "Strains" :
+    type === "Edible" ? "Edibles" :
+      type === "Concentrate" ? "Concentrates" :
+        type === "Gadget" ? "Gadgets" : type;
 
   return allProducts.filter(
     (p) => p.type === targetCategory && p.status === status,
   );
+}
+
+export function localizeProduct(product: Product, locale: string): Product {
+  const isFr = locale === "fr";
+  return {
+    ...product,
+    description: isFr
+      ? product.description_fr || product.description_en || product.description
+      : product.description_en || product.description,
+    seo: isFr
+      ? product.seo_fr || product.seo_en || product.seo
+      : product.seo_en || product.seo,
+    effects: isFr
+      ? product.effects_fr || product.effects_en || product.effects
+      : product.effects_en || product.effects,
+    relieves: isFr
+      ? product.relieves_fr || product.relieves_en || product.relieves
+      : product.relieves_en || product.relieves,
+  };
 }
