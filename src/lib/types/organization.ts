@@ -1,5 +1,7 @@
 // LocationData is now imported from @/lib/bigquery where needed.
 
+import { OfferCatalog } from "./schema";
+
 export interface Organization {
   name: string;
   legalName: string;
@@ -38,14 +40,7 @@ export interface Organization {
     };
     openingHours: string[];
     priceRange: string;
-    hasOfferCatalog?: {
-      itemListElement: Array<{
-        name: string;
-        itemListElement: Array<{
-          url: string;
-          description: string;
-        }>;
-      }>;
-    };
+    hasOfferCatalog?: OfferCatalog;
   }[];
+  areaServed: string[];
 }
