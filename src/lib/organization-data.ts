@@ -11,8 +11,9 @@ export async function getOrganizationData(): Promise<Organization> {
     name: "Green Ghost",
     legalName: "Green Ghost",
     description:
-      "Premium cannabis products in Thailand. Fast, discreet delivery. Shop our selection of buds, edibles, concentrates, and accessories.",
+      "Green Ghost is Thailand's premier degen weed shop, offering premium organic cannabis strains, high-THC flowers, edibles, and CBD in France. Fast, discreet delivery in Phuket (Rawai/Karon) & Bangkok.",
     foundingDate: "2022",
+    areaServed: ["Thailand", "France"],
     url: "https://green.gd",
     logo: "https://green.gd/images/logo-green-ghost-degen-weed-shop.png",
     sameAs: [
@@ -32,7 +33,6 @@ export async function getOrganizationData(): Promise<Organization> {
     locations: locations.map((location) => {
       const hoursObj = parseHoursString(location.hours);
       const openingHours = Object.entries(hoursObj)
-
         .filter(([, time]) => time && time.toLowerCase() !== "closed")
         .map(
           ([day, time]) =>
@@ -64,6 +64,77 @@ export async function getOrganizationData(): Promise<Organization> {
         },
         openingHours,
         priceRange: "$$",
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Green Ghost Product Categories",
+          itemListElement: [
+            {
+              "@type": "OfferCatalog",
+              name: "Cannabis Flowers",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Premium Sativa, Indica & Hybrid Buds",
+                  },
+                },
+              ],
+            },
+            {
+              "@type": "OfferCatalog",
+              name: "Pre-rolls",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Hand-rolled premium joints",
+                  },
+                },
+              ],
+            },
+            {
+              "@type": "OfferCatalog",
+              name: "Concentrates",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "High-purity cannabis extracts",
+                  },
+                },
+              ],
+            },
+            {
+              "@type": "OfferCatalog",
+              name: "Edibles",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "THC-infused treats and gummies",
+                  },
+                },
+              ],
+            },
+            {
+              "@type": "OfferCatalog",
+              name: "CBD France",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Premium CBD products for the French market",
+                  },
+                },
+              ],
+            },
+          ],
+        },
       };
     }),
   };

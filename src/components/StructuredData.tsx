@@ -36,6 +36,7 @@ export function generateOrganizationSchema(organization: Organization) {
       ...organization.contactPoint,
     },
     address: organization.locations[0]?.address,
+    areaServed: organization.areaServed,
     location: organization.locations.map((loc) => ({
       ...loc,
       "@context": undefined, // Remove context from nested objects

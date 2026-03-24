@@ -39,13 +39,10 @@ export interface Organization {
     openingHours: string[];
     priceRange: string;
     hasOfferCatalog?: {
-      itemListElement: Array<{
-        name: string;
-        itemListElement: Array<{
-          url: string;
-          description: string;
-        }>;
-      }>;
+      "@type": string;
+      name: string;
+      itemListElement: any[];
     };
   }[];
+  areaServed: string[];
 }
