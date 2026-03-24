@@ -77,6 +77,8 @@ export async function getOrganizationData(): Promise<Organization> {
                   itemOffered: {
                     "@type": "Service",
                     name: "Premium Sativa, Indica & Hybrid Buds",
+                    description: "High-quality organic cannabis flowers including premium strains from Thailand's top growers.",
+                    url: "/menu#strains",
                   },
                 },
               ],
@@ -90,6 +92,8 @@ export async function getOrganizationData(): Promise<Organization> {
                   itemOffered: {
                     "@type": "Service",
                     name: "Hand-rolled premium joints",
+                    description: "Expertly rolled joints using our finest organic cannabis buds for your convenience.",
+                    url: "/menu#prerolls",
                   },
                 },
               ],
@@ -103,6 +107,8 @@ export async function getOrganizationData(): Promise<Organization> {
                   itemOffered: {
                     "@type": "Service",
                     name: "High-purity cannabis extracts",
+                    description: "Concentrated cannabis extracts including hash, oil, and more for maximum potency.",
+                    url: "/menu#concentrates",
                   },
                 },
               ],
@@ -116,6 +122,8 @@ export async function getOrganizationData(): Promise<Organization> {
                   itemOffered: {
                     "@type": "Service",
                     name: "THC-infused treats and gummies",
+                    description: "Delicious cannabis-infused edibles, brownies, and gummies made with premium distilled oil.",
+                    url: "/menu#edibles",
                   },
                 },
               ],
@@ -129,6 +137,8 @@ export async function getOrganizationData(): Promise<Organization> {
                   itemOffered: {
                     "@type": "Service",
                     name: "Premium CBD products for the French market",
+                    description: "Top-quality CBD oils, flowers, and topicals for our customers in France.",
+                    url: "/france",
                   },
                 },
               ],

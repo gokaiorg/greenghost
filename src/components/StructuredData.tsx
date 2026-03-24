@@ -1,5 +1,6 @@
 import Script from "next/script";
 import type { Organization } from "@/lib/types/organization";
+import type { OfferCatalog, Offer } from "@/lib/types/schema";
 
 import { toJsonLd } from "@/lib/utils/json-ld";
 
@@ -121,15 +122,20 @@ export async function generateMenuPageSchema(organization: Organization) {
     "@context": "https://schema.org",
     "@type": "ItemList",
     itemListElement:
-      organization.locations[0]?.hasOfferCatalog?.itemListElement?.map(
-        (item, index: number) => ({
-          "@type": "Product",
-          position: index + 1,
-          name: item.name,
-          url: `${baseUrl}${item.itemListElement[0].url}`,
-          description: item.itemListElement[0].description,
-          image: `${baseUrl}/images/icons/${(item.name as string).toLowerCase()}-menu-weed-shop-green-ghost.avif`,
-        }),
+      (organization.locations[0]?.hasOfferCatalog?.itemListElement as OfferCatalog[] | undefined)?.map(
+        (category, index: number) => {
+          const firstOffer = category.itemListElement?.[0] as Offer | undefined;
+          const itemOffered = firstOffer?.itemOffered;
+
+          return {
+            "@type": "Product",
+            position: index + 1,
+            name: category.name,
+            url: itemOffered?.url ? `${baseUrl}${itemOffered.url}` : baseUrl,
+            description: itemOffered?.description || "",
+            image: `${baseUrl}/images/icons/${(category.name as string).toLowerCase().replace(/\s+/g, "-")}-menu-weed-shop-green-ghost.avif`,
+          };
+        },
       ) || [],
   };
 
