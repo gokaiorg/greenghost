@@ -36,16 +36,26 @@ export default function BannerHero({
   }, []);
 
   useEffect(() => {
+    // ⚡ Bolt: Throttled scroll event using requestAnimationFrame to prevent
+    // main thread blocking and layout thrashing. The `ticking` flag ensures
+    // we only process one frame at a time, making parallax scrolling smoother.
+    let ticking = false;
     const handleScroll = () => {
-      if (parallaxRef.current && bgRef.current) {
-        const rect = parallaxRef.current.getBoundingClientRect();
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (parallaxRef.current && bgRef.current) {
+            const rect = parallaxRef.current.getBoundingClientRect();
 
-        // Only apply parallax when hero section is in view
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          const scrolled = window.scrollY;
-          const offset = scrolled * 0.5;
-          bgRef.current.style.transform = `translateY(${offset}px)`;
-        }
+            // Only apply parallax when hero section is in view
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              const scrolled = window.scrollY;
+              const offset = scrolled * 0.5;
+              bgRef.current.style.transform = `translateY(${offset}px)`;
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
