@@ -8,7 +8,8 @@
     "build": "if [ \"$BRANCH\" = \"main\" ] || [ \"$BRANCH\" = \"prod\" ]; then cp public/robots.prod.txt public/robots.txt && cp public/_headers.prod public/_headers; else cp public/robots.dev.txt public/robots.txt && cp public/_headers.dev public/_headers; fi && NODE_OPTIONS='--max-old-space-size=8192' next build",
     "build:turbo": "if [ \"$BRANCH\" = \"main\" ] || [ \"$BRANCH\" = \"prod\" ]; then cp public/robots.prod.txt public/robots.txt && cp public/_headers.prod public/_headers; else cp public/robots.dev.txt public/robots.txt && cp public/_headers.dev public/_headers; fi && NODE_OPTIONS='--max-old-space-size=8192' next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sync-firestore": "npx tsx scripts/sync-firestore.ts"
   },
   "dependencies": {
     "@base-org/account": "^2.4.2",
@@ -51,6 +52,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^17.3.1",
     "eslint": "^9",
     "eslint-config-next": "15.5.6",
     "glob": "^13.0.6",

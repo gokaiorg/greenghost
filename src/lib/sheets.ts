@@ -37,11 +37,19 @@ export async function fetchProductsFromSheets(): Promise<Product[]> {
       thc: 0,
       cbd: 0,
       description: "",
+      description_en: "",
+      description_fr: "",
       seo: "",
+      seo_en: "",
+      seo_fr: "",
       effects: "",
+      effects_en: "",
+      effects_fr: "",
       relieves: "",
+      relieves_en: "",
+      relieves_fr: "",
       image: "",
-      images: [],
+      images: [] as string[],
     }));
   } catch (error) {
     console.error("Error fetching from Google Sheets:", error);
