@@ -152,6 +152,7 @@ const AddressAutocomplete = ({
           placeholder="e.g. 123 Rawai Beach Road"
           className="w-full p-2 border-2 border-red-500 bg-black text-white focus:ring-2 focus:ring-red-500 focus:border-transparent mt-1"
           required
+          maxLength={255}
         />
         <p className="text-red-500 text-[10px] mt-1 italic">
           Error loading Google Maps. Please enter address manually.
@@ -170,6 +171,7 @@ const AddressAutocomplete = ({
           placeholder="e.g. 123 Rawai Beach Road"
           className="w-full p-2 border-2 border-[#13DE00] bg-black text-white focus:ring-2 focus:ring-[#13DE00] focus:border-transparent mt-1"
           required
+          maxLength={255}
         />
         <p className="text-yellow-500 text-[10px] mt-1 italic">
           Maps API Key missing. Please provide manual entry.
@@ -199,6 +201,7 @@ const AddressAutocomplete = ({
         placeholder="Search your address (Thailand only)"
         className="w-full p-2 border-2 border-[#13DE00] bg-black text-white focus:ring-2 focus:ring-[#13DE00] focus:border-transparent mt-1"
         required
+        maxLength={255}
       />
     </Autocomplete>
   );
@@ -343,6 +346,7 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
                 onChange={(e) => setName(e.target.value)}
                 className="w-full p-2 border-2 border-[#13DE00] bg-black text-white focus:ring-2 focus:ring-[#13DE00] focus:border-transparent"
                 required
+                maxLength={100}
               />
             </div>
 
