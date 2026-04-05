@@ -36,16 +36,24 @@ export default function BannerHero({
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (parallaxRef.current && bgRef.current) {
-        const rect = parallaxRef.current.getBoundingClientRect();
+    let ticking = false;
 
-        // Only apply parallax when hero section is in view
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          const scrolled = window.scrollY;
-          const offset = scrolled * 0.5;
-          bgRef.current.style.transform = `translateY(${offset}px)`;
-        }
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (parallaxRef.current && bgRef.current) {
+            const rect = parallaxRef.current.getBoundingClientRect();
+
+            // Only apply parallax when hero section is in view
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              const scrolled = window.scrollY;
+              const offset = scrolled * 0.5;
+              bgRef.current.style.transform = `translateY(${offset}px)`;
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
