@@ -133,7 +133,9 @@ async function fetchProductsFromFirestore(): Promise<Product[]> {
 let productsCache: Product[] = [];
 
 export async function getProducts(): Promise<Product[]> {
-  if (productsCache.length > 0) return productsCache;
+  if (process.env.NODE_ENV !== "development" && productsCache.length > 0) {
+    return productsCache;
+  }
 
   const data = await fetchProductsFromFirestore();
   if (data.length > 0) {
