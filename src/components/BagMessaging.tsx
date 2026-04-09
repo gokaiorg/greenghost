@@ -8,8 +8,8 @@ import { useLoadScript, Autocomplete } from "@react-google-maps/api";
 const libraries: "places"[] = ["places"];
 
 // Delivery configuration
-const BASE_DELIVERY_FEE = 50;
-const PER_KM_FEE = 15;
+const BASE_DELIVERY_FEE = 30;
+const PER_KM_FEE = 10;
 const NATIONWIDE_FEE = 500;
 const FREE_DELIVERY_THRESHOLD = 2000;
 const FALLBACK_FEE = 100;
@@ -20,8 +20,8 @@ const SHOP_LOCATION = {
 };
 
 const deliveryZones = [
-  { keywords: ["airport", "mai khao", "nai yang"], fee: 500 },
-  { keywords: ["kamala", "surin", "bang tao"], fee: 400 },
+  { keywords: ["airport", "mai khao", "nai yang"], fee: 400 },
+  { keywords: ["kamala", "surin", "bang tao"], fee: 300 },
   {
     keywords: [
       "patong",
@@ -33,8 +33,8 @@ const deliveryZones = [
     ],
     fee: 300,
   },
-  { keywords: ["karon", "kata", "chalong"], fee: 200 },
-  { keywords: ["rawai", "nai harn", "promthep", "ya nui"], fee: 100 },
+  { keywords: ["karon", "kata", "chalong"], fee: 100 },
+  { keywords: ["rawai", "nai harn", "promthep", "ya nui"], fee: 50 },
 ];
 
 function getZoneFee(locationName: string): number | null {
@@ -446,11 +446,10 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
                     role="radio"
                     aria-checked={activeTab === tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`p-3 flex items-center justify-center space-x-2 text-[10px] md:text-sm text-white ${
-                      activeTab === tab
+                    className={`p-3 flex items-center justify-center space-x-2 text-[10px] md:text-sm text-white ${activeTab === tab
                         ? "bg-black border-2 border-[#13DE00]"
                         : "bg-black border-2 border-gray-600"
-                    } hover:border-[#13DE00] cursor-pointer`}
+                      } hover:border-[#13DE00] cursor-pointer`}
                   >
                     <span className="capitalize">{tab}</span>
                   </button>
@@ -530,13 +529,13 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
                   </div>
                   {(!process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ||
                     process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ===
-                      "insert_key_here") && (
-                    <div className="flex justify-between items-center mt-2">
-                      <span className="text-[10px] text-yellow-500 italic">
-                        Maps API required for precise distance calculation.
-                      </span>
-                    </div>
-                  )}
+                    "insert_key_here") && (
+                      <div className="flex justify-between items-center mt-2">
+                        <span className="text-[10px] text-yellow-500 italic">
+                          Maps API required for precise distance calculation.
+                        </span>
+                      </div>
+                    )}
                 </>
               )}
             </div>
