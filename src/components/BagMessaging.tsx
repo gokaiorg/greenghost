@@ -31,7 +31,7 @@ const deliveryZones = [
       "talat yai",
       "talat nuea",
     ],
-    fee: 300,
+    fee: 200,
   },
   { keywords: ["karon", "kata", "chalong"], fee: 100 },
   { keywords: ["rawai", "nai harn", "promthep", "ya nui"], fee: 50 },
@@ -447,8 +447,8 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
                     aria-checked={activeTab === tab}
                     onClick={() => setActiveTab(tab)}
                     className={`p-3 flex items-center justify-center space-x-2 text-[10px] md:text-sm text-white ${activeTab === tab
-                        ? "bg-black border-2 border-[#13DE00]"
-                        : "bg-black border-2 border-gray-600"
+                      ? "bg-black border-2 border-[#13DE00]"
+                      : "bg-black border-2 border-gray-600"
                       } hover:border-[#13DE00] cursor-pointer`}
                   >
                     <span className="capitalize">{tab}</span>
