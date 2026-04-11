@@ -15,14 +15,23 @@ const FREE_DELIVERY_THRESHOLD = 2000;
 const FALLBACK_FEE = 100;
 
 const SHOP_LOCATION = {
-  lat: parseFloat(process.env.NEXT_PUBLIC_SHOP_LAT || "7.7766"),
+  lat: parseFloat(process.env.NEXT_PUBLIC_SHOP_LAT || "7.7766"), // Rawai/Nai Harn area
   lng: parseFloat(process.env.NEXT_PUBLIC_SHOP_LNG || "98.3188"),
 };
 
 const deliveryZones = [
-  { keywords: ["airport", "mai khao", "nai yang"], fee: 400 },
-  { keywords: ["kamala", "surin", "bang tao"], fee: 300 },
   {
+    // ZONE 1 : (0-5km environ)
+    keywords: ["rawai", "nai harn", "naiharn", "promthep", "ya nui", "sai yuan"],
+    fee: 50,
+  },
+  {
+    // ZONE 2 : (5-12km)
+    keywords: ["chalong", "kata", "karon", "kata noi"],
+    fee: 100,
+  },
+  {
+    // ZONE 3 : (12-20km)
     keywords: [
       "patong",
       "phuket town",
@@ -30,11 +39,42 @@ const deliveryZones = [
       "mueang phuket",
       "talat yai",
       "talat nuea",
+      "vichit",
+      "panwa",
+      "cape panwa",
+      "kathu"
     ],
     fee: 200,
   },
-  { keywords: ["karon", "kata", "chalong"], fee: 100 },
-  { keywords: ["rawai", "nai harn", "promthep", "ya nui"], fee: 50 },
+  {
+    // ZONE 4 : (20-35km)
+    keywords: [
+      "kamala",
+      "surin",
+      "bang tao",
+      "bangtao",
+      "thalang",
+      "cherngtalay",
+      "laguna",
+      "pa klok",
+      "koh kaew"
+    ],
+    fee: 350,
+  },
+  {
+    // ZONE 5 : (35km+)
+    keywords: [
+      "airport",
+      "mai khao",
+      "maikhao",
+      "nai yang",
+      "naiyang",
+      "naithon",
+      "nai thon",
+      "sa kaeo"
+    ],
+    fee: 400,
+  },
 ];
 
 function getZoneFee(locationName: string): number | null {
