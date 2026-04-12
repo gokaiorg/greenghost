@@ -32,3 +32,8 @@
 
 **Learning:** The `MiniSlider` component is frequently nested within `Link` components (e.g., in product lists), creating invalid HTML and accessibility issues because it renders interactive `<button>` elements for slide indicators.
 **Action:** When using `MiniSlider` inside a `Link`, always pass `interactive={false}` to render the indicators as non-interactive `<span>` elements, preventing nested interactive controls while maintaining visual feedback.
+
+## 2025-05-28 - Dropdown Escape Key Escape Pattern
+
+**Learning:** Dropdown elements like `LanguageSwitcher.tsx` need to specifically listen for the `Escape` key inside an effect, and then intelligently return focus back to the dropdown toggle button so keyboard users don't lose their place on the page. Returning focus correctly provides a massive UX win for accessibility.
+**Action:** When implementing or updating custom dropdown menus, always attach an `Escape` key listener on the document (with cleanup) to close the dropdown, and try to restore focus back to the toggle element.
