@@ -189,6 +189,7 @@ const AddressAutocomplete = ({
           type="text"
           value={locationName}
           onChange={handleInputChange}
+          maxLength={255}
           placeholder="e.g. 123 Rawai Beach Road"
           className="w-full p-2 border-2 border-red-500 bg-black text-white focus:ring-2 focus:ring-red-500 focus:border-transparent mt-1"
           required
@@ -207,6 +208,7 @@ const AddressAutocomplete = ({
           type="text"
           value={locationName}
           onChange={handleInputChange}
+          maxLength={255}
           placeholder="e.g. 123 Rawai Beach Road"
           className="w-full p-2 border-2 border-[#13DE00] bg-black text-white focus:ring-2 focus:ring-[#13DE00] focus:border-transparent mt-1"
           required
@@ -236,6 +238,7 @@ const AddressAutocomplete = ({
         type="text"
         value={locationName}
         onChange={handleInputChange}
+        maxLength={255}
         placeholder="Search your address (Thailand only)"
         className="w-full p-2 border-2 border-[#13DE00] bg-black text-white focus:ring-2 focus:ring-[#13DE00] focus:border-transparent mt-1"
         required
@@ -381,6 +384,7 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                maxLength={100}
                 className="w-full p-2 border-2 border-[#13DE00] bg-black text-white focus:ring-2 focus:ring-[#13DE00] focus:border-transparent"
                 required
               />
