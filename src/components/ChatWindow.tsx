@@ -293,6 +293,7 @@ export default function ChatWindow({
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
+            maxLength={1000}
             placeholder="Type your message..."
             aria-label="Type your message"
             className="w-full flex-1 bg-[#13DE00]/13 text-white text-sm px-3 py-2 focus:outline-none focus:border-2 focus:border-[#13DE00]"

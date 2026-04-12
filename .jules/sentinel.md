@@ -82,3 +82,8 @@
 **Prevention:**
 1. Avoid `JSON.stringify` inside `dangerouslySetInnerHTML`.
 2. Use the provided `toJsonLd` utility helper function which properly escapes `<` to `\u003c`.
+## 2025-02-27 - Missing input length limits
+
+**Vulnerability:** Multiple user input fields across the application (Contact Form, Bag Messaging, Chat Window, Strain Search) lacked `maxLength` constraints. This could potentially allow excessively large payloads to be submitted or manipulated on the client side, leading to Denial of Service (DoS) risks or unintended application behavior.
+**Learning:** Client-side input validation is a crucial layer of defense-in-depth. While server-side validation is mandatory, adding basic constraints like `maxLength` on the frontend prevents unnecessary processing of oversized inputs and improves the application's resilience.
+**Prevention:** Always define reasonable `maxLength` limits on `<input>` and `<textarea>` elements based on the expected data (e.g., 100 for names, 255 for emails, 1000/2000 for messages).
