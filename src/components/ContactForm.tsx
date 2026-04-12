@@ -113,6 +113,7 @@ export default function ContactForm() {
               name="name"
               autoComplete="name"
               required
+              maxLength={100}
               value={formData.name}
               onChange={handleChange}
               className="w-full bg-black border-2 border-[#13DE00]/50 focus:border-[#13DE00] text-white p-3 outline-none transition-colors font-mono"
@@ -136,6 +137,7 @@ export default function ContactForm() {
               name="email"
               autoComplete="email"
               required
+              maxLength={255}
               value={formData.email}
               onChange={handleChange}
               className="w-full bg-black border-2 border-[#13DE00]/50 focus:border-[#13DE00] text-white p-3 outline-none transition-colors font-mono"
@@ -157,6 +159,7 @@ export default function ContactForm() {
               id="message"
               name="message"
               required
+              maxLength={2000}
               rows={5}
               value={formData.message}
               onChange={handleChange}

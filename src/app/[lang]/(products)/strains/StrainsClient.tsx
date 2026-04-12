@@ -64,6 +64,7 @@ export default function StrainsClient() {
             placeholder="Search strains by name..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
+            maxLength={100}
             className="w-full px-4 py-2 bg-black/30 border border-[#13DE00]/30 text-white placeholder-gray-400 focus:outline-none focus:border-[#13DE00]/60 focus:bg-black/40"
           />
         </div>
