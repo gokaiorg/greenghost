@@ -23,6 +23,7 @@ export default function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
   const { showLoader } = useLoader();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
 
   // Determine current language from URL
   const currentLangCode = pathname.startsWith("/fr") ? "fr" : "en";
@@ -42,6 +43,7 @@ export default function LanguageSwitcher() {
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape" && isOpen) {
         setIsOpen(false);
+        triggerRef.current?.focus();
       }
     }
 
@@ -55,6 +57,7 @@ export default function LanguageSwitcher() {
 
   const handleLanguageChange = (langCode: string) => {
     setIsOpen(false);
+    triggerRef.current?.focus();
     showLoader();
 
     // Logic to switch language while preserving path
@@ -85,6 +88,7 @@ export default function LanguageSwitcher() {
   return (
     <div className="relative" ref={dropdownRef}>
       <button
+        ref={triggerRef}
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-center p-2 hover:bg-white/10 transition-colors text-white hover:text-[#13DE00] cursor-pointer focus-visible:ring-2 focus-visible:ring-[#13DE00] focus-visible:outline-none"
         aria-label="Select language"
