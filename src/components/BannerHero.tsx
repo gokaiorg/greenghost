@@ -37,11 +37,26 @@ export default function BannerHero({
 
   useEffect(() => {
     let ticking = false;
+    let isVisible = true; // Assume visible initially
+
+    // Setup IntersectionObserver to only track layout when visible
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]) {
+          isVisible = entries[0].isIntersecting;
+        }
+      },
+      { threshold: 0 }
+    );
+
+    if (parallaxRef.current) {
+      observer.observe(parallaxRef.current);
+    }
 
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          if (parallaxRef.current && bgRef.current) {
+          if (isVisible && parallaxRef.current && bgRef.current) {
             const rect = parallaxRef.current.getBoundingClientRect();
 
             // Only apply parallax when hero section is in view
@@ -61,7 +76,10 @@ export default function BannerHero({
     // Initial calculation in case we start scrolled down
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   return (
