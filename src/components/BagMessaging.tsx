@@ -244,8 +244,8 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
 
   const handleLocationChange = useCallback(
     (name: string, url: string, distance: number | null, phuket: boolean) => {
-      setLocationName(name);
-      setLocationUrl(url);
+      setLocationName(name.substring(0, 255));
+      setLocationUrl(url.substring(0, 1000));
       setDistanceKm(distance);
       setIsPhuket(phuket);
     },
