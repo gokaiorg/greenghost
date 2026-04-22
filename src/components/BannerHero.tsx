@@ -75,9 +75,8 @@ export default function BannerHero({
           {HERO_IMAGES.map((src, index) => (
             <div
               key={src}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                index === currentImageIndex ? "opacity-100" : "opacity-0"
-              }`}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentImageIndex ? "opacity-100" : "opacity-0"
+                }`}
             >
               <Image
                 src={src}
@@ -109,16 +108,16 @@ export default function BannerHero({
           <Link
             href={getLocalizedUrl("/menu", locale || "en")}
             className="bg-[#13DE00] hover:bg-[#10c500] text-black font-bold py-4 px-8 text-lg transition-colors duration-300"
-            title="Cannabis Thailand"
+            title="Cannabis Menu Thailand"
           >
-            CANNABIS THAILAND
+            CANNABIS MENU
           </Link>
           <Link
-            href={getLocalizedUrl("/cbd-france", locale || "en")}
+            href={getLocalizedUrl("/gadgets/cannabis-medical-prescription", locale || "en")}
             className="bg-transparent border-2 border-[#13DE00] text-[#13DE00] hover:bg-[#13DE00]/13 font-bold py-4 px-8 text-lg transition-colors duration-300"
-            title="CBD France"
+            title="Medical Prescription"
           >
-            CBD FRANCE
+            MEDICAL PRESCRIPTION
           </Link>
         </div>
 
