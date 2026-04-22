@@ -28,7 +28,7 @@ export default function PreRollsPageContent({
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/products/strains")
+    fetch(`/api/products/strains?lang=${locale}`)
       .then((res) => res.json())
       .then((data) => {
         const filtered = data

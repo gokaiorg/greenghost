@@ -93,7 +93,7 @@ export default function ConcentratesPageContent({
                       >
                         {concentrate.status === "In stock"
                           ? `${concentrate.price}฿`
-                          : "Sold out"}
+                          : locale === "fr" ? "Épuisé" : "Sold out"}
                       </p>
                     </li>
                   </ul>

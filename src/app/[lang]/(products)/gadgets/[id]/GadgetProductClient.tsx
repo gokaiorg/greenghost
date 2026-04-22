@@ -10,12 +10,14 @@ interface GadgetProductClientProps {
   product: Product;
   featuredSection?: React.ReactNode;
   menuSlot: React.ReactNode;
+  locale?: string;
 }
 
 export default function GadgetProductClient({
   product,
   featuredSection,
   menuSlot,
+  locale = "en",
 }: GadgetProductClientProps) {
   return (
     <div className="relative">
@@ -59,7 +61,7 @@ export default function GadgetProductClient({
             </div>
           ) : (
             <div className="text-center">
-              <p className="text-red-500 text-right">Sold out</p>
+              <p className="text-red-500 text-right">{locale === "fr" ? "Épuisé" : "Sold out"}</p>
             </div>
           )}
         </div>
@@ -75,7 +77,7 @@ export default function GadgetProductClient({
               <BagAddButton product={product} category="Gadgets" compact />
             </div>
           ) : (
-            <p className="text-red-500 text-right">Sold out</p>
+            <p className="text-red-500 text-right">{locale === "fr" ? "Épuisé" : "Sold out"}</p>
           )}
         </div>
 

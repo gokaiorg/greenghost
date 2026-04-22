@@ -29,6 +29,8 @@ export interface Product {
   relieves_en: string;
   relieves_fr: string;
   item_name?: string;
+  item_name_en?: string;
+  item_name_fr?: string;
   image_url?: string;
   image: string;
   images: string[];

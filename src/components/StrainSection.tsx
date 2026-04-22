@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Product } from "@/lib/types";
-import { getProducts } from "@/lib/products";
+import { getProducts, localizeProduct } from "@/lib/products";
 import { getSectionsData } from "@/lib/firestore";
 import { getLocalizedSection } from "@/lib/i18n-db";
 import { getLocalizedUrl } from "@/lib/i18n-helpers";
@@ -59,6 +59,7 @@ export default async function StrainSection({
         featuredStrainNames.includes(product.name) &&
         product.status === "In stock",
     )
+    .map((p) => localizeProduct(p, locale))
     .slice(0, 6);
 
   if (products.length === 0) {

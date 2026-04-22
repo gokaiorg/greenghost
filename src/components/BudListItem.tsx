@@ -72,7 +72,7 @@ const BudListItem = memo(({ bud, locale = "en" }: BudListItemProps) => {
               <p
                 className={`px-2 py-1 text-sm ${bud.status === "In stock" ? "bg-black text-[#13DE00]" : "bg-black text-red-500"}`}
               >
-                {bud.status === "In stock" ? `${bud.price}฿` : "Sold out"}
+                {bud.status === "In stock" ? `${bud.price}฿` : locale === "fr" ? "Épuisé" : "Sold out"}
               </p>
             </li>
           </ul>

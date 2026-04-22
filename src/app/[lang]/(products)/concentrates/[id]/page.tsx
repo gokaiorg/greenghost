@@ -9,23 +9,27 @@ import {
   generateProductMetadata,
   generateProductSchema,
 } from "@/lib/config/product-metadata";
-import { getProductById } from "@/lib/products";
+import { getProductById, localizeProduct } from "@/lib/products";
 import fs from "fs/promises";
 import path from "path";
 
 import MenuListInline from "@/components/MenuListInline";
 
 interface PageProps {
-  params: Promise<{ id: string }>;
+  params: Promise<{ id: string; lang: string }>;
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
-async function getProduct(id: string): Promise<Product | null> {
+async function getProduct(id: string, lang: string): Promise<Product | null> {
   try {
-    const product = await getProductById(id);
-    if (!product || product.type !== "Concentrates") {
+    const rawProduct = await getProductById(id);
+    if (!rawProduct || rawProduct.type !== "Concentrates") {
       return null;
     }
+    
+    // Localize the product fields first
+    const product = localizeProduct(rawProduct, lang);
+
     const validImages: string[] = [];
     const potentialImages = [
       `/images/concentrates/green-ghost-degen-weed-shop-menu-concentrates-${product.id}-cover.avif`,
@@ -38,7 +42,7 @@ async function getProduct(id: string): Promise<Product | null> {
         await fs.access(fullPath);
         validImages.push(imgPath);
       } catch {
-        console.warn(`Image not found: ${imgPath}`);
+        // console.warn(`Image not found: ${imgPath}`);
       }
     }
     product.images = validImages;
@@ -54,8 +58,8 @@ async function getProduct(id: string): Promise<Product | null> {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { id } = await params;
-  const product = await getProduct(id);
+  const { id, lang } = await params;
+  const product = await getProduct(id, lang);
   if (!product) {
     return {
       title: "Product Not Found | Green Ghost Weed Shop",
@@ -72,7 +76,7 @@ export default async function ConcentrateProductPage({
   params: Promise<{ id: string; lang: string }>;
 }) {
   const { id, lang } = await params;
-  const product = await getProduct(id);
+  const product = await getProduct(id, lang);
   if (!product) {
     notFound();
   }
@@ -89,6 +93,7 @@ export default async function ConcentrateProductPage({
       <ConcentrateProductClient
         product={product}
         menuSlot={<MenuListInline locale={lang} />}
+        locale={lang}
       />
     </>
   );

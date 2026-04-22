@@ -9,11 +9,13 @@ import BagAddButton from "@/components/BagAddButton";
 interface EdibleProductClientProps {
   product: Product;
   menuSlot: React.ReactNode;
+  locale?: string;
 }
 
 export default function EdibleProductClient({
   product,
   menuSlot,
+  locale = "en",
 }: EdibleProductClientProps) {
   return (
     <div className="relative">
@@ -61,7 +63,7 @@ export default function EdibleProductClient({
             </div>
           ) : (
             <div className="text-center">
-              <p className="text-red-500 text-right">Sold out</p>
+              <p className="text-red-500 text-right">{locale === "fr" ? "Épuisé" : "Sold out"}</p>
             </div>
           )}
         </div>
@@ -76,13 +78,13 @@ export default function EdibleProductClient({
             ) : null}
             {product.effects && (
               <span>
-                <span className="text-gray-400">Feelings:</span>{" "}
+                <span className="text-gray-400">{locale === "fr" ? "Effets" : "Feelings"}:</span>{" "}
                 <span className="text-yellow-600">{product.effects}</span>
               </span>
             )}
             {product.relieves && (
               <span>
-                <span className="text-gray-400">Relieves:</span>{" "}
+                <span className="text-gray-400">{locale === "fr" ? "Soulage" : "Relieves"}:</span>{" "}
                 <span className="text-yellow-600">{product.relieves}</span>
               </span>
             )}
@@ -95,7 +97,7 @@ export default function EdibleProductClient({
               <BagAddButton product={product} category="Edibles" compact />
             </div>
           ) : (
-            <p className="text-red-500 text-right">Sold out</p>
+            <p className="text-red-500 text-right">{locale === "fr" ? "Épuisé" : "Sold out"}</p>
           )}
         </div>
 
@@ -109,13 +111,13 @@ export default function EdibleProductClient({
             ) : null}
             {product.effects && (
               <span>
-                <span className="text-gray-500">Feelings:</span>{" "}
+                <span className="text-gray-400">{locale === "fr" ? "Effets" : "Feelings"}:</span>{" "}
                 <span className="text-yellow-600">{product.effects}</span>
               </span>
             )}
             {product.relieves && (
               <span>
-                <span className="text-gray-500">Relieves:</span>{" "}
+                <span className="text-gray-400">{locale === "fr" ? "Soulage" : "Relieves"}:</span>{" "}
                 <span className="text-yellow-600">{product.relieves}</span>
               </span>
             )}

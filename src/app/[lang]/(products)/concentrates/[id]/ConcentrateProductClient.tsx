@@ -9,11 +9,13 @@ import BagAddButton from "@/components/BagAddButton";
 interface ConcentrateProductClientProps {
   product: Product;
   menuSlot: React.ReactNode;
+  locale?: string;
 }
 
 export default function ConcentrateProductClient({
   product,
   menuSlot,
+  locale = "en",
 }: ConcentrateProductClientProps) {
   return (
     <div className="relative">
@@ -61,7 +63,7 @@ export default function ConcentrateProductClient({
             </div>
           ) : (
             <div className="text-center">
-              <p className="text-red-500 text-right">Sold out</p>
+              <p className="text-red-500 text-right">{locale === "fr" ? "Épuisé" : "Sold out"}</p>
             </div>
           )}
         </div>
@@ -72,13 +74,13 @@ export default function ConcentrateProductClient({
             <span className="whitespace-nowrap">THC {product.thc}%</span>
             {product.effects && (
               <span>
-                <span className="text-gray-400">Feelings:</span>{" "}
+                <span className="text-gray-400">{locale === "fr" ? "Effets" : "Feelings"}:</span>{" "}
                 <span className="text-yellow-600">{product.effects}</span>
               </span>
             )}
             {product.relieves && (
               <span>
-                <span className="text-gray-500">Relieves:</span>{" "}
+                <span className="text-gray-400">{locale === "fr" ? "Soulage" : "Relieves"}:</span>{" "}
                 <span className="text-yellow-600">{product.relieves}</span>
               </span>
             )}
@@ -91,7 +93,7 @@ export default function ConcentrateProductClient({
               <BagAddButton product={product} category="Concentrates" compact />
             </div>
           ) : (
-            <p className="text-red-500 text-right">Sold out</p>
+            <p className="text-red-500 text-right">{locale === "fr" ? "Épuisé" : "Sold out"}</p>
           )}
         </div>
 
@@ -101,13 +103,13 @@ export default function ConcentrateProductClient({
             <span className="whitespace-nowrap">THC {product.thc}%</span>
             {product.effects && (
               <span>
-                <span className="text-gray-400">Feelings:</span>{" "}
+                <span className="text-gray-400">{locale === "fr" ? "Effets" : "Feelings"}:</span>{" "}
                 <span className="text-yellow-600">{product.effects}</span>
               </span>
             )}
             {product.relieves && (
               <span>
-                <span className="text-gray-400">Relieves:</span>{" "}
+                <span className="text-gray-400">{locale === "fr" ? "Soulage" : "Relieves"}:</span>{" "}
                 <span className="text-yellow-600">{product.relieves}</span>
               </span>
             )}
