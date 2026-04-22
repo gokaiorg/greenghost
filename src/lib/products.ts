@@ -21,6 +21,8 @@ async function fetchProductsFromFirestore(): Promise<Product[]> {
       const cleanEffectsFr = (row.effects_fr || "").trim();
       const cleanRelievesEn = (row.relieves_en || "").trim();
       const cleanRelievesFr = (row.relieves_fr || "").trim();
+      const cleanItemNameEn = (row.item_name_en || row.item_name || "").trim();
+      const cleanItemNameFr = (row.item_name_fr || "").trim();
 
       const cleanDominance = (row.dominance || "").trim();
       const cleanThc = (row.thc || "0").trim();
@@ -91,8 +93,10 @@ async function fetchProductsFromFirestore(): Promise<Product[]> {
       // Create product object with all fields
       const product: Product = {
         id,
-        name,
+        name: cleanItemNameEn,
         item_name: row.item_name,
+        item_name_en: cleanItemNameEn,
+        item_name_fr: cleanItemNameFr,
         type: category,
         price,
         stock,
@@ -179,6 +183,9 @@ export function localizeProduct(product: Product, locale: string): Product {
   const isFr = locale === "fr";
   return {
     ...product,
+    name: isFr
+      ? product.item_name_fr || product.item_name_en || product.name
+      : product.item_name_en || product.name,
     description: isFr
       ? product.description_fr || product.description_en || product.description
       : product.description_en || product.description,

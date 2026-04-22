@@ -94,7 +94,7 @@ export default function GadgetsPageContent({
                       >
                         {gadget.status === "In stock"
                           ? `${gadget.price}฿`
-                          : "Sold out"}
+                          : locale === "fr" ? "Épuisé" : "Sold out"}
                       </p>
                     </li>
                   </ul>

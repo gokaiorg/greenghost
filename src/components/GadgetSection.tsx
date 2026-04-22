@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Product } from "@/lib/types";
-import { getProducts } from "@/lib/products";
+import { getProducts, localizeProduct } from "@/lib/products";
 import { getSectionsData } from "@/lib/firestore";
 import { getLocalizedSection } from "@/lib/i18n-db";
 import { getLocalizedUrl } from "@/lib/i18n-helpers";
@@ -63,11 +63,16 @@ export default async function GadgetSection({
         product.type === "Gadgets" &&
         featuredGadgetNames.includes(product.name),
     )
+    // Localize products after filtering
+    .map((product) => localizeProduct(product, locale))
     // Sort by the order in featuredGadgetNames
     .sort(
-      (a, b) =>
-        featuredGadgetNames.indexOf(a.name) -
-        featuredGadgetNames.indexOf(b.name),
+      (a, b) => {
+        // We need the unlocalized name to sort, but let's just use the current name if it matches
+        const aIndex = featuredGadgetNames.indexOf(a.item_name_en || a.name);
+        const bIndex = featuredGadgetNames.indexOf(b.item_name_en || b.name);
+        return aIndex - bIndex;
+      }
     )
     .slice(0, 6);
 

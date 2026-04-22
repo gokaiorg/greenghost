@@ -99,7 +99,7 @@ export default function EdiblesPageContent({
                       >
                         {edible.status === "In stock"
                           ? `${edible.price}฿`
-                          : "Sold out"}
+                          : locale === "fr" ? "Épuisé" : "Sold out"}
                       </p>
                     </li>
                   </ul>
