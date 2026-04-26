@@ -178,6 +178,8 @@ export interface WeedData {
 
 export interface ProductData {
   item_name: string;
+  item_name_en?: string;
+  item_name_fr?: string;
   type: string;
   wholesale_price: number;
   price: number;
