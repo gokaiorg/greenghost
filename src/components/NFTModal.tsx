@@ -50,6 +50,7 @@ export default function NFTModal({ nft, onClose }: NFTModalProps) {
         <button
           onClick={onClose}
           className="absolute top-4 right-4 z-10 p-2 bg-black/69 hover:bg-white/10 text-white/70 hover:text-white transition-colors"
+          aria-label="Close modal"
         >
           <X size={24} />
         </button>

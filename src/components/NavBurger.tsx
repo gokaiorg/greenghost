@@ -47,6 +47,8 @@ export default function NavBurger({
         onClick={() => setIsOpen(!isOpen)}
         className="hover:text-[#13DE00] transition-colors p-2 cursor-pointer"
         aria-label="Toggle menu"
+        aria-expanded={isOpen}
+        aria-haspopup="menu"
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
