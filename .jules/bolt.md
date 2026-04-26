@@ -16,3 +16,8 @@
 
 **Learning:** Using React state (`useState`) to track scroll position (`offsetY`) for UI effects (e.g. parallax or fixed positioning) causes excessive main-thread blocking re-renders during scroll events, drastically reducing scroll performance and smoothness.
 **Action:** When implementing scroll-based UI effects (like parallax image backgrounds), remove the React state. Instead, use a `useRef` to target the DOM element directly, and update its inline style within a `requestAnimationFrame` loop wrapped in a `window.addEventListener('scroll')` callback.
+
+## 2026-04-26 - IntersectionObserver for Scroll Parallax Optimization
+
+**Learning:** Synchronous DOM reads like `getBoundingClientRect()` inside scroll event handlers force synchronous layout calculations and block the main thread, degrading scroll performance.
+**Action:** For scroll-based effects (like parallax), combine an `IntersectionObserver` to track visibility with `requestAnimationFrame` throttling to only update inline styles when the element is visible, avoiding expensive DOM reads completely.

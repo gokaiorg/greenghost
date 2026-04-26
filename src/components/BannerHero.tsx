@@ -36,24 +36,57 @@ export default function BannerHero({
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (parallaxRef.current && bgRef.current) {
-        const rect = parallaxRef.current.getBoundingClientRect();
+    let ticking = false;
+    let isVisible = false;
 
-        // Only apply parallax when hero section is in view
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          const scrolled = window.scrollY;
-          const offset = scrolled * 0.5;
-          bgRef.current.style.transform = `translateY(${offset}px)`;
+    // Use IntersectionObserver to track visibility
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+        // Trigger a scroll handle immediately if it becomes visible
+        if (isVisible && !ticking) {
+          ticking = true;
+          window.requestAnimationFrame(() => {
+            if (bgRef.current) {
+              const scrolled = window.scrollY;
+              const offset = scrolled * 0.5;
+              bgRef.current.style.transform = `translateY(${offset}px)`;
+            }
+            ticking = false;
+          });
         }
+      },
+      { threshold: 0 }
+    );
+
+    if (parallaxRef.current) {
+      observer.observe(parallaxRef.current);
+    }
+
+    const handleScroll = () => {
+      if (!isVisible) return; // Skip if not in viewport
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (bgRef.current) {
+            const scrolled = window.scrollY;
+            const offset = scrolled * 0.5;
+            bgRef.current.style.transform = `translateY(${offset}px)`;
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    // Initial calculation in case we start scrolled down
+    // Initial calculation
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   return (
