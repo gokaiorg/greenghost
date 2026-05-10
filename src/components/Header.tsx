@@ -117,7 +117,7 @@ export default function Header({
           <div>
             <button
               onClick={() => setIsCartOpen(true)}
-              className="hover:text-[#13DE00] text-sm transition-colors relative cursor-pointer p-2"
+              className="hover:text-[#13DE00] text-sm transition-colors relative cursor-pointer p-2 focus-visible:ring-2 focus-visible:ring-[#13DE00] rounded-sm outline-none"
               aria-label={
                 itemCount > 0
                   ? `Shopping bag, ${itemCount} items`

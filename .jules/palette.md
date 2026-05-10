@@ -32,3 +32,8 @@
 
 **Learning:** The `MiniSlider` component is frequently nested within `Link` components (e.g., in product lists), creating invalid HTML and accessibility issues because it renders interactive `<button>` elements for slide indicators.
 **Action:** When using `MiniSlider` inside a `Link`, always pass `interactive={false}` to render the indicators as non-interactive `<span>` elements, preventing nested interactive controls while maintaining visual feedback.
+
+## 2025-10-24 - Custom Dropdown Accessibility (LanguageSwitcher & NavBurger)
+
+**Learning:** Custom dropdown menus like `LanguageSwitcher.tsx` and `NavBurger.tsx` require manual implementation of ARIA attributes to be accessible. This includes adding `aria-expanded`, `aria-haspopup`, and `aria-controls` to the trigger button, and applying `id` and `role="menu"` to the dropdown container. Additionally, nested `<li>` elements should have `role="none"` while the interactive children (`<button>` or `<Link>`) should have `role="menuitem"`. Furthermore, explicit focus indicators using `focus-visible:ring-2 focus-visible:ring-[#13DE00] rounded-sm outline-none` are crucial for keyboard navigation.
+**Action:** When creating or updating custom dropdown components without UI primitives, explicitly add the necessary ARIA roles, states, properties, and focus-visible classes to ensure proper screen reader and keyboard interaction.
