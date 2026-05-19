@@ -12,6 +12,7 @@
     "sync-firestore": "npx tsx scripts/sync-firestore.ts"
   },
   "dependencies": {
+    "accounts": "~0.12",
     "@base-org/account": "^2.4.2",
     "@coinbase/wallet-sdk": "^4.3.7",
     "@farcaster/miniapp-sdk": "^0.2.1",
