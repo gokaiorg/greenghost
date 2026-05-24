@@ -32,3 +32,8 @@
 
 **Learning:** The `MiniSlider` component is frequently nested within `Link` components (e.g., in product lists), creating invalid HTML and accessibility issues because it renders interactive `<button>` elements for slide indicators.
 **Action:** When using `MiniSlider` inside a `Link`, always pass `interactive={false}` to render the indicators as non-interactive `<span>` elements, preventing nested interactive controls while maintaining visual feedback.
+
+## 2025-05-28 - Custom Dropdown Keyboard Navigation
+
+**Learning:** Custom dropdown components like `LanguageSwitcher` and `NavBurger` lack native keyboard navigation. Without explicitly adding an `Escape` key listener to close the dropdown and returning focus to the trigger element (`triggerRef.current?.focus()`), keyboard users are trapped or lose their place in the DOM when navigating away.
+**Action:** When creating custom dropdowns or popovers, always include an `Escape` key handler that sets `isOpen(false)` and restores focus to the trigger button, in addition to standard `role="menu"` and `role="menuitem"` ARIA attributes.
