@@ -16,3 +16,7 @@
 
 **Learning:** Using React state (`useState`) to track scroll position (`offsetY`) for UI effects (e.g. parallax or fixed positioning) causes excessive main-thread blocking re-renders during scroll events, drastically reducing scroll performance and smoothness.
 **Action:** When implementing scroll-based UI effects (like parallax image backgrounds), remove the React state. Instead, use a `useRef` to target the DOM element directly, and update its inline style within a `requestAnimationFrame` loop wrapped in a `window.addEventListener('scroll')` callback.
+
+## 2025-05-23 - Prevent Unnecessary Re-renders on Desktop Sliders
+**Learning:** In slider components (like `ProductSlider`), updating a local `currentIndex` state to manage the sliding translation triggers a full re-render of the component and all its heavily nested children (product cards), even though the content of the slides hasn't changed.
+**Action:** Extract the static content of the slide into a separate component (e.g. `ProductSlide`) and wrap it in `React.memo`. Pass down necessary static props (products, itemsToShow) so that when `currentIndex` updates to move the slider track, the individual slides bypass the render phase.
