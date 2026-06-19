@@ -13,7 +13,7 @@ export default async function Reviews({ locale = "en" }: { locale?: string }) {
     link: review.review_link,
     shop: review.shop_name,
   }));
-  const shuffledReviews = shuffleArray(reviews);
+  const shuffledReviews = shuffleArray(reviews).slice(0, 15);
 
   return <ReviewsClient reviews={shuffledReviews} locale={locale} />;
 }
