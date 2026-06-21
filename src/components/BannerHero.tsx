@@ -36,7 +36,12 @@ export default function BannerHero({
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
+    // ⚡ Bolt: Throttled scroll event with requestAnimationFrame to prevent main-thread
+    // blocking and layout thrashing (getBoundingClientRect).
+    // Expected impact: smoother 60fps scrolling performance on mobile devices.
+    let ticking = false;
+
+    const updateParallax = () => {
       if (parallaxRef.current && bgRef.current) {
         const rect = parallaxRef.current.getBoundingClientRect();
 
@@ -46,6 +51,14 @@ export default function BannerHero({
           const offset = scrolled * 0.5;
           bgRef.current.style.transform = `translateY(${offset}px)`;
         }
+      }
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
       }
     };
 
