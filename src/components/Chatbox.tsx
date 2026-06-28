@@ -37,7 +37,7 @@ export default function Chatbox() {
       ) : (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-[#13DE00] text-black p-4 shadow-lg hover:bg-[#13DE00]/90 transition-colors border-2 border-[#13DE00] cursor-pointer"
+          className="bg-[#13DE00] text-black p-4 shadow-lg hover:bg-[#13DE00]/90 transition-colors border-2 border-[#13DE00] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           aria-label="Open chat"
         >
           <MessageSquare size={24} />

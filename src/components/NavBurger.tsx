@@ -45,7 +45,7 @@ export default function NavBurger({
     <div className="relative" ref={menuRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="hover:text-[#13DE00] transition-colors p-2 cursor-pointer"
+        className="hover:text-[#13DE00] transition-colors p-2 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#13DE00] focus-visible:ring-offset-2 focus-visible:ring-offset-black"
         aria-label="Toggle menu"
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -67,7 +67,7 @@ export default function NavBurger({
                       ? item.label_en
                       : item.label
                 }
-                className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname.includes(item.path) ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
+                className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#13DE00] focus-visible:ring-offset-2 focus-visible:ring-offset-black focus-visible:bg-[#13DE00]/10 ${pathname.includes(item.path) ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                 onClick={() => setIsOpen(false)}
                 aria-current={pathname.includes(item.path) ? "page" : undefined}
               >

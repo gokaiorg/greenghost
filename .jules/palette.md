@@ -32,3 +32,8 @@
 
 **Learning:** The `MiniSlider` component is frequently nested within `Link` components (e.g., in product lists), creating invalid HTML and accessibility issues because it renders interactive `<button>` elements for slide indicators.
 **Action:** When using `MiniSlider` inside a `Link`, always pass `interactive={false}` to render the indicators as non-interactive `<span>` elements, preventing nested interactive controls while maintaining visual feedback.
+
+## 2025-05-30 - Keyboard Focus Visibility on Custom Elements
+
+**Learning:** Custom interactive elements (like custom dropdowns, language switchers, and floating chatboxes) often drop native focus rings when styled with Tailwind CSS (`outline-none`). This makes the UI completely inaccessible for keyboard users who lose track of their tab focus.
+**Action:** When styling custom interactive components, always include explicit focus indicator utilities using `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color] focus-visible:ring-offset-2` to restore keyboard accessibility without affecting mouse users.
