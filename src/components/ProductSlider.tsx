@@ -1,11 +1,67 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Product } from "@/lib/types";
 import StrainImage from "./StrainImage";
 import Link from "next/link";
 
 import BagAddButton from "./BagAddButton";
+
+// Extracted to a memoized component to prevent re-renders when currentIndex changes
+const ProductSlide = React.memo(
+  ({ product, category }: { product: Product; category?: string }) => (
+    <div className="relative">
+      <Link href={`/strains/${product.id}`} title={product.name}>
+        <div
+          className={`hover:bg-[#13DE00]/13 p-6 flex flex-col relative cursor-pointer`}
+        >
+          <div className="relative mb-2">
+            <StrainImage
+              src={`/images/strains/green-ghost-degen-weed-shop-strain-${product.id}-cover.avif`}
+              alt={product.name}
+              width={100}
+              height={100}
+              className="w-full h-auto mx-auto"
+            />
+          </div>
+          <h2 className="text-base md:text-lg font-semibold mb-2">
+            {product.name}
+          </h2>
+          <div className="flex justify-between flex-wrap">
+            <p
+              className={`text-xs ${
+                product.dominance && product.dominance.startsWith("Sativa")
+                  ? "text-[#d1fee5]"
+                  : product.dominance && product.dominance.startsWith("Hybrid")
+                    ? "text-[#c0ef24]"
+                    : product.dominance &&
+                        product.dominance.startsWith("Indica")
+                      ? "text-[#ee9cc9]"
+                      : "text-gray-400"
+              }`}
+            >
+              {product.dominance}
+            </p>
+            {product.thc && product.thc > 0 ? (
+              <p className="text-xs text-gray-400">THC {product.thc}%</p>
+            ) : product.cbd && product.cbd > 0 ? (
+              <p className="text-xs text-gray-400">CBD {product.cbd}%</p>
+            ) : null}
+          </div>
+          <p className="absolute top-0 right-2 bg-black text-[#13DE00] px-2 py-1 text-sm">
+            {product.price}฿
+          </p>
+        </div>
+      </Link>
+      <div className="absolute top-6 left-6 right-6 h-[100px] pointer-events-none z-10">
+        <div className="absolute bottom-1 left-1 pointer-events-auto">
+          <BagAddButton product={product} category={category} compact />
+        </div>
+      </div>
+    </div>
+  ),
+);
+ProductSlide.displayName = "ProductSlide";
 
 interface ProductSliderProps {
   products: Product[];
@@ -157,68 +213,11 @@ export default function ProductSlider({
                     (slideIndex + 1) * itemsToShow,
                   )
                   .map((product) => (
-                    <div key={product.id} className="relative">
-                      <Link
-                        href={`/strains/${product.id}`}
-                        title={product.name}
-                      >
-                        <div
-                          className={`hover:bg-[#13DE00]/13 p-6 flex flex-col relative cursor-pointer`}
-                        >
-                          <div className="relative mb-2">
-                            <StrainImage
-                              src={`/images/strains/green-ghost-degen-weed-shop-strain-${product.id}-cover.avif`}
-                              alt={product.name}
-                              width={100}
-                              height={100}
-                              className="w-full h-auto mx-auto"
-                            />
-                          </div>
-                          <h2 className="text-base md:text-lg font-semibold mb-2">
-                            {product.name}
-                          </h2>
-                          <div className="flex justify-between flex-wrap">
-                            <p
-                              className={`text-xs ${
-                                product.dominance &&
-                                product.dominance.startsWith("Sativa")
-                                  ? "text-[#d1fee5]"
-                                  : product.dominance &&
-                                      product.dominance.startsWith("Hybrid")
-                                    ? "text-[#c0ef24]"
-                                    : product.dominance &&
-                                        product.dominance.startsWith("Indica")
-                                      ? "text-[#ee9cc9]"
-                                      : "text-gray-400"
-                              }`}
-                            >
-                              {product.dominance}
-                            </p>
-                            {product.thc && product.thc > 0 ? (
-                              <p className="text-xs text-gray-400">
-                                THC {product.thc}%
-                              </p>
-                            ) : product.cbd && product.cbd > 0 ? (
-                              <p className="text-xs text-gray-400">
-                                CBD {product.cbd}%
-                              </p>
-                            ) : null}
-                          </div>
-                          <p className="absolute top-0 right-2 bg-black text-[#13DE00] px-2 py-1 text-sm">
-                            {product.price}฿
-                          </p>
-                        </div>
-                      </Link>
-                      <div className="absolute top-6 left-6 right-6 h-[100px] pointer-events-none z-10">
-                        <div className="absolute bottom-1 left-1 pointer-events-auto">
-                          <BagAddButton
-                            product={product}
-                            category={category}
-                            compact
-                          />
-                        </div>
-                      </div>
-                    </div>
+                    <ProductSlide
+                      key={product.id}
+                      product={product}
+                      category={category}
+                    />
                   ))}
               </div>
             </div>
