@@ -16,3 +16,6 @@
 
 **Learning:** Using React state (`useState`) to track scroll position (`offsetY`) for UI effects (e.g. parallax or fixed positioning) causes excessive main-thread blocking re-renders during scroll events, drastically reducing scroll performance and smoothness.
 **Action:** When implementing scroll-based UI effects (like parallax image backgrounds), remove the React state. Instead, use a `useRef` to target the DOM element directly, and update its inline style within a `requestAnimationFrame` loop wrapped in a `window.addEventListener('scroll')` callback.
+## 2024-07-28 - [Memoizing Product Cards in Sliders]
+**Learning:** Carousel components like `ProductSlider.tsx` naturally have state changes for their translation offsets (e.g. `currentIndex`). Rendering nested complex items natively inside the mapping array forces all item DOM structures to re-render constantly.
+**Action:** Always extract individual slide items into their own memoized components (`React.memo`) to prevent re-renders when their own props (`product` object) haven't changed.
