@@ -87,3 +87,8 @@
 **Vulnerability:** Multiple user input fields across the application (Contact Form, Bag Messaging, Chat Window, Strain Search) lacked `maxLength` constraints. This could potentially allow excessively large payloads to be submitted or manipulated on the client side, leading to Denial of Service (DoS) risks or unintended application behavior.
 **Learning:** Client-side input validation is a crucial layer of defense-in-depth. While server-side validation is mandatory, adding basic constraints like `maxLength` on the frontend prevents unnecessary processing of oversized inputs and improves the application's resilience.
 **Prevention:** Always define reasonable `maxLength` limits on `<input>` and `<textarea>` elements based on the expected data (e.g., 100 for names, 255 for emails, 1000/2000 for messages).
+
+## 2025-02-27 - Cross-Site Scripting (XSS) in ChatWindow
+**Vulnerability:** The ChatWindow component was using `dangerouslySetInnerHTML` to render bot messages directly into the DOM without sanitization, creating an XSS vulnerability if an attacker could control the chatbot responses or if the bot returned malicious HTML.
+**Learning:** `dangerouslySetInnerHTML` bypasses React's built-in XSS protections. Always use a sanitization library before inserting any data into it.
+**Prevention:** We enforced the use of `DOMPurify.sanitize()` on the message text before inserting it via `dangerouslySetInnerHTML`.
