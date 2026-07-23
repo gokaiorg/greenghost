@@ -5,9 +5,9 @@ import MenuListInlineClient from "@/components/MenuListInlineClient";
 
 const menuPages = [
   "Buds Menu",
-  "Pre-Rolls Menu",
-  "Concentrates Menu",
-  "Edibles Menu",
+  // "Pre-Rolls Menu",
+  // "Concentrates Menu",
+  // "Edibles Menu",
   "Gadgets Menu",
 ];
 
@@ -23,9 +23,9 @@ export default async function MenuListInline({
       const data = await getPagesData(pageName);
       const name = data
         ? getLocalizedValue(data, "title", locale).replace(
-            locale === "fr" ? /^Menu\s+/i : /\s+Menu$/i,
-            "",
-          ) || pageName.replace(" Menu", "")
+          locale === "fr" ? /^Menu\s+/i : /\s+Menu$/i,
+          "",
+        ) || pageName.replace(" Menu", "")
         : pageName.replace(" Menu", "");
 
       // Always use English slug for URL consistency
