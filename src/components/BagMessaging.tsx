@@ -237,15 +237,7 @@ const AddressAutocomplete = ({
         <input
           type="text"
           value={locationName}
-          onChange={(e) => {
-            const val = e.target.value;
-            const lowerVal = val.toLowerCase();
-            const isPhuket =
-              lowerVal.includes("phuket") ||
-              val.includes("ภูเก็ต") ||
-              getZoneFee(val) !== null;
-            onLocationChange(val, "", null, isPhuket, val.trim().length > 0);
-          }}
+          onChange={handleInputChange}
           maxLength={255}
           placeholder="e.g. 123 Rawai Beach Road"
           className="w-full p-2 border-2 border-red-500 bg-black text-white focus:ring-2 focus:ring-red-500 focus:border-transparent mt-1"
@@ -264,15 +256,7 @@ const AddressAutocomplete = ({
         <input
           type="text"
           value={locationName}
-          onChange={(e) => {
-            const val = e.target.value;
-            const lowerVal = val.toLowerCase();
-            const isPhuket =
-              lowerVal.includes("phuket") ||
-              val.includes("ภูเก็ต") ||
-              getZoneFee(val) !== null;
-            onLocationChange(val, "", null, isPhuket, val.trim().length > 0);
-          }}
+          onChange={handleInputChange}
           maxLength={255}
           placeholder="e.g. 123 Rawai Beach Road"
           className="w-full p-2 border-2 border-[#13DE00] bg-black text-white focus:ring-2 focus:ring-[#13DE00] focus:border-transparent mt-1"
@@ -292,31 +276,23 @@ const AddressAutocomplete = ({
   }
 
   return (
-    <div className="flex flex-col">
-      <Autocomplete
-        onLoad={(autocomplete) => {
-          autocompleteRef.current = autocomplete;
-        }}
-        onPlaceChanged={onPlaceChanged}
-        options={{ componentRestrictions: { country: "th" } }}
-      >
-        <input
-          ref={inputRef}
-          type="text"
-          value={locationName}
-          onChange={handleInputChange}
-          maxLength={255}
-          placeholder="Search your address (Thailand only)"
-          className="w-full p-2 border-2 border-[#13DE00] bg-black text-white focus:ring-2 focus:ring-[#13DE00] focus:border-transparent mt-1"
-          required
-        />
-      </Autocomplete>
-      {locationName.trim() !== "" && !isPlaceSelected && (
-        <p className="text-yellow-400 text-xs mt-1 italic">
-          Please select your address from the dropdown list to enable order.
-        </p>
-      )}
-    </div>
+    <Autocomplete
+      onLoad={(autocomplete) => {
+        autocompleteRef.current = autocomplete;
+      }}
+      onPlaceChanged={onPlaceChanged}
+      options={{ componentRestrictions: { country: "th" } }}
+    >
+      <input
+        type="text"
+        value={locationName}
+        onChange={handleInputChange}
+        maxLength={255}
+        placeholder="Search your address (Thailand only)"
+        className="w-full p-2 border-2 border-[#13DE00] bg-black text-white focus:ring-2 focus:ring-[#13DE00] focus:border-transparent mt-1"
+        required
+      />
+    </Autocomplete>
   );
 };
 
