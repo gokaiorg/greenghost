@@ -12,7 +12,7 @@ const featuredStrainNames = [
   "Mango Sticky Rice",
   "Super Boof",
   "Biscotti OG",
-  "Thai Stick",
+  "Super Lemon Haze",
   "LA Banana",
 ];
 

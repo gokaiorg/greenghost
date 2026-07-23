@@ -5,9 +5,9 @@ import { selectLocalizedField } from "@/lib/i18n-helpers";
 
 const menuPages = [
   "Buds Menu",
-  "Pre-Rolls Menu",
-  "Concentrates Menu",
-  "Edibles Menu",
+  // "Pre-Rolls Menu",
+  // "Concentrates Menu",
+  // "Edibles Menu",
   "Gadgets Menu",
 ];
 

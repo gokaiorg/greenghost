@@ -78,7 +78,11 @@ const deliveryZones = [
 ];
 
 function getZoneFee(locationName: string): number | null {
-  const locLower = locationName.toLowerCase();
+  // Normalize string to remove diacritics (e.g., Rawaï -> Rawai)
+  const locLower = locationName
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
   for (const zone of deliveryZones) {
     if (zone.keywords.some((keyword) => locLower.includes(keyword))) {
       return zone.fee;
@@ -90,16 +94,19 @@ function getZoneFee(locationName: string): number | null {
 // --- Subcomponent to handle the Maps API separately ---
 interface AddressAutocompleteProps {
   locationName: string;
+  isPlaceSelected: boolean;
   onLocationChange: (
     name: string,
     url: string,
     distanceKm: number | null,
     isPhuket: boolean,
+    isPlaceSelected: boolean,
   ) => void;
 }
 
 const AddressAutocomplete = ({
   locationName,
+  isPlaceSelected,
   onLocationChange,
 }: AddressAutocompleteProps) => {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "";
@@ -112,6 +119,7 @@ const AddressAutocomplete = ({
   });
 
   const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const calculateDistance = useCallback(
     (
@@ -138,9 +146,9 @@ const AddressAutocomplete = ({
             const distanceInMeters =
               response.rows[0].elements[0].distance.value;
             const distanceKm = Math.ceil(distanceInMeters / 1000);
-            onLocationChange(placeName, placeUrl, distanceKm, isPhuket);
+            onLocationChange(placeName, placeUrl, distanceKm, isPhuket, true);
           } else {
-            onLocationChange(placeName, placeUrl, null, isPhuket);
+            onLocationChange(placeName, placeUrl, null, isPhuket, true);
           }
         },
       );
@@ -151,35 +159,76 @@ const AddressAutocomplete = ({
   const onPlaceChanged = () => {
     if (autocompleteRef.current) {
       const place = autocompleteRef.current.getPlace();
-      if (place.geometry && place.geometry.location) {
-        const name = place.formatted_address || place.name || "";
+      if (place && place.geometry && place.geometry.location) {
+        // Use the exact text Google populated into the input from the dropdown suggestion
+        let name = inputRef.current?.value || "";
+        if (!name) {
+          name =
+            place.name &&
+            place.formatted_address &&
+            !place.formatted_address.includes(place.name)
+              ? `${place.name}, ${place.formatted_address}`
+              : place.formatted_address || place.name || "";
+        }
+
         const url =
           place.url ||
           `https://www.google.com/maps/search/?api=1&query=${place.geometry.location.lat()},${place.geometry.location.lng()}`;
 
         let isPhuket = true;
         if (place.address_components) {
-          isPhuket = place.address_components.some(
-            (comp) =>
-              comp.long_name.toLowerCase().includes("phuket") ||
-              comp.short_name.includes("ภูเก็ต"),
-          );
+          isPhuket = place.address_components.some((comp) => {
+            const compLower = comp.long_name
+              .toLowerCase()
+              .normalize("NFD")
+              .replace(/[\u0300-\u036f]/g, "");
+            return (
+              compLower.includes("phuket") ||
+              comp.short_name.includes("ภูเก็ต")
+            );
+          });
+          if (!isPhuket && getZoneFee(name) !== null) {
+            isPhuket = true;
+          }
         } else {
+          const nameLower = name
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "");
           isPhuket =
-            name.toLowerCase().includes("phuket") || name.includes("ภูเก็ต");
+            nameLower.includes("phuket") ||
+            name.includes("ภูเก็ต") ||
+            getZoneFee(name) !== null;
         }
 
-        onLocationChange(name, url, null, isPhuket);
+        onLocationChange(name, url, null, isPhuket, true);
         calculateDistance(place.geometry.location, name, url, isPhuket);
+      } else if (place && place.name) {
+        const name = place.name;
+        const lowerVal = name
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "");
+        const isPhuket =
+          lowerVal.includes("phuket") ||
+          name.includes("ภูเก็ต") ||
+          getZoneFee(name) !== null;
+        onLocationChange(name, "", null, isPhuket, false);
       }
     }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value;
+    const lowerVal = val
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
     const isPhuket =
-      val.toLowerCase().includes("phuket") || val.includes("ภูเก็ต");
-    onLocationChange(val, "", null, isPhuket);
+      lowerVal.includes("phuket") ||
+      val.includes("ภูเก็ต") ||
+      getZoneFee(val) !== null;
+    onLocationChange(val, "", null, isPhuket, false);
   };
 
   if (loadError) {
@@ -188,7 +237,15 @@ const AddressAutocomplete = ({
         <input
           type="text"
           value={locationName}
-          onChange={handleInputChange}
+          onChange={(e) => {
+            const val = e.target.value;
+            const lowerVal = val.toLowerCase();
+            const isPhuket =
+              lowerVal.includes("phuket") ||
+              val.includes("ภูเก็ต") ||
+              getZoneFee(val) !== null;
+            onLocationChange(val, "", null, isPhuket, val.trim().length > 0);
+          }}
           maxLength={255}
           placeholder="e.g. 123 Rawai Beach Road"
           className="w-full p-2 border-2 border-red-500 bg-black text-white focus:ring-2 focus:ring-red-500 focus:border-transparent mt-1"
@@ -207,13 +264,21 @@ const AddressAutocomplete = ({
         <input
           type="text"
           value={locationName}
-          onChange={handleInputChange}
+          onChange={(e) => {
+            const val = e.target.value;
+            const lowerVal = val.toLowerCase();
+            const isPhuket =
+              lowerVal.includes("phuket") ||
+              val.includes("ภูเก็ต") ||
+              getZoneFee(val) !== null;
+            onLocationChange(val, "", null, isPhuket, val.trim().length > 0);
+          }}
           maxLength={255}
           placeholder="e.g. 123 Rawai Beach Road"
           className="w-full p-2 border-2 border-[#13DE00] bg-black text-white focus:ring-2 focus:ring-[#13DE00] focus:border-transparent mt-1"
           required
         />
-        <p className="text-yellow-500 text-[10px] mt-1 italic">
+        <p className="text-[#13DE00] text-[10px] mt-1 italic">
           Maps API Key missing. Please provide manual entry.
         </p>
       </div>
@@ -227,23 +292,31 @@ const AddressAutocomplete = ({
   }
 
   return (
-    <Autocomplete
-      onLoad={(autocomplete) => {
-        autocompleteRef.current = autocomplete;
-      }}
-      onPlaceChanged={onPlaceChanged}
-      options={{ componentRestrictions: { country: "th" } }}
-    >
-      <input
-        type="text"
-        value={locationName}
-        onChange={handleInputChange}
-        maxLength={255}
-        placeholder="Search your address (Thailand only)"
-        className="w-full p-2 border-2 border-[#13DE00] bg-black text-white focus:ring-2 focus:ring-[#13DE00] focus:border-transparent mt-1"
-        required
-      />
-    </Autocomplete>
+    <div className="flex flex-col">
+      <Autocomplete
+        onLoad={(autocomplete) => {
+          autocompleteRef.current = autocomplete;
+        }}
+        onPlaceChanged={onPlaceChanged}
+        options={{ componentRestrictions: { country: "th" } }}
+      >
+        <input
+          ref={inputRef}
+          type="text"
+          value={locationName}
+          onChange={handleInputChange}
+          maxLength={255}
+          placeholder="Search your address (Thailand only)"
+          className="w-full p-2 border-2 border-[#13DE00] bg-black text-white focus:ring-2 focus:ring-[#13DE00] focus:border-transparent mt-1"
+          required
+        />
+      </Autocomplete>
+      {locationName.trim() !== "" && !isPlaceSelected && (
+        <p className="text-yellow-400 text-xs mt-1 italic">
+          Please select your address from the dropdown list to enable order.
+        </p>
+      )}
+    </div>
   );
 };
 
@@ -267,6 +340,7 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
   const [locationUrl, setLocationUrl] = useState("");
   const [distanceKm, setDistanceKm] = useState<number | null>(null);
   const [isPhuket, setIsPhuket] = useState<boolean>(true); // Default assume inside Phuket
+  const [isPlaceSelected, setIsPlaceSelected] = useState<boolean>(false);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -283,11 +357,18 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
   }, [isPhuket]);
 
   const handleLocationChange = useCallback(
-    (name: string, url: string, distance: number | null, phuket: boolean) => {
+    (
+      name: string,
+      url: string,
+      distance: number | null,
+      phuket: boolean,
+      isSelected: boolean,
+    ) => {
       setLocationName(name);
       setLocationUrl(url);
       setDistanceKm(distance);
       setIsPhuket(phuket);
+      setIsPlaceSelected(isSelected);
     },
     [],
   );
@@ -345,7 +426,7 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name || !locationName) return;
+    if (!name || !locationName || !isPlaceSelected) return;
     window.open(getMessagingLink(), "_blank", "noopener,noreferrer");
     onClose();
   };
@@ -399,6 +480,7 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
               </label>
               <AddressAutocomplete
                 locationName={locationName}
+                isPlaceSelected={isPlaceSelected}
                 onLocationChange={handleLocationChange}
               />
             </div>
@@ -594,7 +676,7 @@ const BagMessaging = ({ items, total, onClose }: BagMessagingProps) => {
               </button>
               <button
                 type="submit"
-                disabled={!name || !locationName}
+                disabled={!name.trim() || !locationName.trim() || !isPlaceSelected}
                 className="px-4 py-2 text-sm font-medium text-black bg-[#13DE00] hover:bg-white hover:text-[#13DE00] disabled:opacity-50 disabled:cursor-not-allowed border border-[#13DE00] cursor-pointer"
               >
                 Send Order
