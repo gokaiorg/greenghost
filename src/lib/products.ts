@@ -30,9 +30,10 @@ async function fetchProductsFromFirestore(): Promise<Product[]> {
 
       // Convert values
       const price = Number(row.price) || 0;
-      // Calculate total stock from both locations
-      const stock =
-        (Number(row.rawai_stock) || 0) + (Number(row.karon_stock) || 0);
+      // Calculate available stock from rawai_stock
+      const rawaiStock = Number(row.rawai_stock) || 0;
+      const karonStock = Number(row.karon_stock) || 0;
+      const stock = rawaiStock;
       const thc = parseFloat(cleanThc) || 0;
       const cbd = parseFloat(cleanCbd) || 0;
       const initialNum =
@@ -100,9 +101,11 @@ async function fetchProductsFromFirestore(): Promise<Product[]> {
         type: category,
         price,
         stock,
+        rawai_stock: rawaiStock,
+        karon_stock: karonStock,
         initial: initialNum,
         wholesale: wholesaleNum,
-        status: cleanStatus === "In stock" ? "In stock" : "Sold out",
+        status: cleanStatus === "In stock" && stock > 0 ? "In stock" : "Sold out",
         description: cleanDescriptionEn || cleanDescriptionFr || "",
         description_en: cleanDescriptionEn,
         description_fr: cleanDescriptionFr,

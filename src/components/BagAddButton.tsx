@@ -47,7 +47,7 @@ const BagAddButton: React.FC<BagAddButtonProps> = ({
       itemCategory === "Buds" ||
       itemCategory === "Pre-rolls"
     ) {
-      const maxQuantity = 30;
+      const maxQuantity = Math.min(30, product.stock);
       const oldQuantity = cartItem.quantity;
       const isIncrementing = newQuantity > oldQuantity;
 

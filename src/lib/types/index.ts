@@ -31,7 +31,8 @@ export interface Product {
   item_name?: string;
   item_name_en?: string;
   item_name_fr?: string;
-  image_url?: string;
+  rawai_stock?: number;
+  karon_stock?: number;
   image: string;
   images: string[];
 }

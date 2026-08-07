@@ -31,10 +31,8 @@ export default function BudsPageContent({
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (initialBuds.length > 0) {
-      setAllBuds(initialBuds);
-      setIsLoading(false);
-    }
+    setAllBuds(initialBuds || []);
+    setIsLoading(false);
   }, [initialBuds]);
 
   const buds =
