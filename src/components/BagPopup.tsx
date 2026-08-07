@@ -22,6 +22,21 @@ export default function BagPopup({ isOpen, onClose }: BagPopupProps) {
   const previousFocusRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    items.forEach((item) => {
+      const maxAllowed =
+        item.menuType === "Buds" ||
+        item.menuType === "Pre-rolls" ||
+        item.menuType === "Strains"
+          ? Math.min(30, item.stock)
+          : item.stock;
+
+      if (item.stock !== undefined && item.quantity > maxAllowed && maxAllowed > 0) {
+        updateQuantity(item.id, maxAllowed, item.menuType);
+      }
+    });
+  }, [items, updateQuantity]);
+
+  useEffect(() => {
     if (!isOpen) return;
 
     // Save previous focus
@@ -122,8 +137,12 @@ export default function BagPopup({ isOpen, onClose }: BagPopupProps) {
 
     let newQuantity = oldQuantity; // Start with oldQuantity and adjust
 
-    if (item.menuType === "Buds" || item.menuType === "Pre-rolls") {
-      const maxQuantity = 30; // Strains have a max of 30
+    if (
+      item.menuType === "Buds" ||
+      item.menuType === "Pre-rolls" ||
+      item.menuType === "Strains"
+    ) {
+      const maxQuantity = Math.min(30, item.stock);
 
       if (requestedNewQuantity > oldQuantity) {
         // Incrementing

@@ -114,6 +114,11 @@ function mapRowsToObjects(rows: any[][]) {
       }
       obj[header] = value;
     });
+
+    if (!obj["item_name"] && obj["column 1"]) {
+      obj["item_name"] = obj["column 1"];
+    }
+
     obj["order"] = index + 1;
     return obj;
   });
@@ -174,6 +179,7 @@ async function syncAll() {
 
         const objects = mapRowsToObjects(rows);
         const batch = db.batch();
+        const validDocIds = new Set<string>();
 
         objects.forEach((data: any) => {
           let docId = "";
@@ -192,12 +198,25 @@ async function syncAll() {
             docId = Math.random().toString(36).substring(7);
           }
 
+          validDocIds.add(docId);
           const docRef = autoId ? db.collection(collection).doc() : db.collection(collection).doc(docId);
           batch.set(docRef, data);
         });
 
+        // Delete orphaned documents (only for non-autoId collections)
+        let deletedCount = 0;
+        if (!autoId) {
+          const snapshot = await db.collection(collection).get();
+          snapshot.docs.forEach((doc) => {
+            if (!validDocIds.has(doc.id)) {
+              batch.delete(doc.ref);
+              deletedCount++;
+            }
+          });
+        }
+
         await batch.commit();
-        console.log(`✅ Success (Synced ${objects.length} documents)`);
+        console.log(`✅ Success (Synced ${objects.length} documents, Deleted ${deletedCount} documents)`);
       } catch (err: any) {
         console.log(`❌ Error: ${err.message}`);
       }
