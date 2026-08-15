@@ -10,7 +10,7 @@ async function fetchProductsFromFirestore(): Promise<Product[]> {
 
     for (const row of bqProducts) {
       // Get values with fallbacks and clean them
-      const name = (row.item_name || "").trim();
+      const name = (row.item_name || row.product || "").trim();
       const cleanType = (row.type || "").trim();
       const cleanStatus = (row.status || "").trim();
       const cleanDescriptionEn = (row.description_en || "").trim();
@@ -21,7 +21,7 @@ async function fetchProductsFromFirestore(): Promise<Product[]> {
       const cleanEffectsFr = (row.effects_fr || "").trim();
       const cleanRelievesEn = (row.relieves_en || "").trim();
       const cleanRelievesFr = (row.relieves_fr || "").trim();
-      const cleanItemNameEn = (row.item_name_en || row.item_name || "").trim();
+      const cleanItemNameEn = (row.item_name_en || row.item_name || row.product || "").trim();
       const cleanItemNameFr = (row.item_name_fr || "").trim();
 
       const cleanDominance = (row.dominance || "").trim();
