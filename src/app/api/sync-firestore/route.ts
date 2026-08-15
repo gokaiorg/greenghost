@@ -63,6 +63,13 @@ function mapRowsToObjects(rows: unknown[][]) {
     headers.forEach((header, hIndex) => {
       obj[header] = row[hIndex] !== undefined ? row[hIndex] : null;
     });
+    if (!obj["item_name"]) {
+      if (obj["product"]) {
+        obj["item_name"] = obj["product"];
+      } else if (obj["column 1"]) {
+        obj["item_name"] = obj["column 1"];
+      }
+    }
     obj["order"] = index + 1;
     return obj;
   });
@@ -111,7 +118,7 @@ export async function GET(request: NextRequest) {
         objects.forEach((data: any) => {
           let docId = "";
           if (collection === "products") {
-            docId = slugify(String(data.item_name || ""));
+            docId = slugify(String(data.item_name || data.product || ""));
           } else if (collection === "gardens") {
             const baseId = String(data.date || "");
             const descPart = String(data.description || "").substring(0, 30);
