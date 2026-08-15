@@ -115,12 +115,8 @@ function mapRowsToObjects(rows: any[][]) {
       obj[header] = value;
     });
 
-    if (!obj["item_name"]) {
-      if (obj["product"]) {
-        obj["item_name"] = obj["product"];
-      } else if (obj["column 1"]) {
-        obj["item_name"] = obj["column 1"];
-      }
+    if (!obj["item_name"] && obj["column 1"]) {
+      obj["item_name"] = obj["column 1"];
     }
 
     obj["order"] = index + 1;
