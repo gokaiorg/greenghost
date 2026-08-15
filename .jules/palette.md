@@ -32,3 +32,8 @@
 
 **Learning:** The `MiniSlider` component is frequently nested within `Link` components (e.g., in product lists), creating invalid HTML and accessibility issues because it renders interactive `<button>` elements for slide indicators.
 **Action:** When using `MiniSlider` inside a `Link`, always pass `interactive={false}` to render the indicators as non-interactive `<span>` elements, preventing nested interactive controls while maintaining visual feedback.
+
+## 2025-05-27 - Custom Dropdown Accessibility (LanguageSwitcher)
+
+**Learning:** When building custom dropdown components (like `LanguageSwitcher.tsx`), ARIA attributes must bridge the trigger button (`aria-haspopup`, `aria-controls`, `aria-expanded`) to the dropdown wrapper (`role="menu"`, `id`). Internal lists (`<ul>`, `<li>`) must have `role="none"` to reset their default semantics, while the actionable items must have `role="menuitem"`. Additionally, keyboard navigation (specifically closing on `Escape`) is crucial. A simple `mousedown` listener is insufficient.
+**Action:** When implementing custom dropdowns, always implement the complete ARIA menu pattern and an `Escape` key event listener. Ensure the keydown listener uses the correct dependencies (e.g., `isOpen`) to avoid stale closures if bound inside a `useEffect`.
