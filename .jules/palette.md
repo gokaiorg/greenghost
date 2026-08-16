@@ -32,3 +32,8 @@
 
 **Learning:** The `MiniSlider` component is frequently nested within `Link` components (e.g., in product lists), creating invalid HTML and accessibility issues because it renders interactive `<button>` elements for slide indicators.
 **Action:** When using `MiniSlider` inside a `Link`, always pass `interactive={false}` to render the indicators as non-interactive `<span>` elements, preventing nested interactive controls while maintaining visual feedback.
+
+## 2025-05-27 - Custom Dropdown Keyboard Management
+
+**Learning:** Dropdowns created with native HTML/React (like `LanguageSwitcher`) require explicit focus management. When closing via `Escape` key, it's essential to return focus to the trigger button so keyboard users do not lose their place in the DOM structure.
+**Action:** Whenever implementing custom dropdowns or modals, always ensure `Escape` closes the element AND restores focus to the invoking element. Additionally, verify `focus-visible` states are clearly defined for all interactive child items.
