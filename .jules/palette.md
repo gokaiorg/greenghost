@@ -32,3 +32,6 @@
 
 **Learning:** The `MiniSlider` component is frequently nested within `Link` components (e.g., in product lists), creating invalid HTML and accessibility issues because it renders interactive `<button>` elements for slide indicators.
 **Action:** When using `MiniSlider` inside a `Link`, always pass `interactive={false}` to render the indicators as non-interactive `<span>` elements, preventing nested interactive controls while maintaining visual feedback.
+## 2024-11-20 - Custom Dropdown Accessibility Pattern
+**Learning:** Custom dropdown components built without primitives (like Radix UI) often miss crucial ARIA states (`aria-expanded`, `aria-haspopup`, `aria-controls`), roles (`menu`, `menuitem`), and keyboard events (closing on `Escape` key).
+**Action:** When inspecting or building custom menus/dropdowns, always ensure they include proper ARIA roles for the menu/items, explicit `focus-visible` styles for the interactive elements inside, and global keyboard event listeners to allow closing via the Escape key to satisfy basic WCAG requirements.
