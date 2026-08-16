@@ -32,11 +32,18 @@ export default function NavBurger({
       }
     };
     const handleScroll = () => setIsOpen(false);
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
 
     document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
       window.removeEventListener("scroll", handleScroll);
     };
   }, [isOpen]);
@@ -45,21 +52,27 @@ export default function NavBurger({
     <div className="relative" ref={menuRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="hover:text-[#13DE00] transition-colors p-2 cursor-pointer"
+        className="hover:text-[#13DE00] transition-colors p-2 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#13DE00] focus-visible:ring-offset-2 focus-visible:ring-offset-black"
         aria-label="Toggle menu"
+        aria-expanded={isOpen}
+        aria-haspopup="true"
+        aria-controls="mobile-nav-menu"
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
       {isOpen && (
         <ul
+          id="mobile-nav-menu"
+          role="menu"
           className="fixed left-0 right-0 top-[60px] bg-black border-t border-b border-[#13DE00] shadow-lg py-1 z-50 md:absolute md:left-0 md:right-auto md:top-full md:mt-2 md:w-max md:border list-none m-0 p-0"
           aria-label="Mobile navigation menu"
         >
           {items.map((item) => (
-            <li key={item.path}>
+            <li key={item.path} role="none">
               <Link
                 href={getLocalizedUrl(item.path, currentLang)}
+                role="menuitem"
                 title={
                   currentLang === "fr" && item.label_fr
                     ? item.label_fr
@@ -67,7 +80,7 @@ export default function NavBurger({
                       ? item.label_en
                       : item.label
                 }
-                className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap ${pathname.includes(item.path) ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
+                className={`block px-4 py-2 text-sm hover:bg-[#13DE00]/13 hover:text-[#13DE00] whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#13DE00] focus-visible:ring-offset-2 focus-visible:ring-offset-black ${pathname.includes(item.path) ? "bg-[#13DE00]/13 text-[#13DE00]" : ""}`}
                 onClick={() => setIsOpen(false)}
                 aria-current={pathname.includes(item.path) ? "page" : undefined}
               >
@@ -79,7 +92,7 @@ export default function NavBurger({
               </Link>
             </li>
           ))}
-          <li className="px-4 py-2 md:hidden">
+          <li className="px-4 py-2 md:hidden" role="none">
             <ConnectMenu />
           </li>
         </ul>
