@@ -11,6 +11,8 @@ const HERO_IMAGES = [
   "/images/banners/green-ghost-best-degen-weed-shop-delivery-03.avif",
 ];
 
+const PARALLAX_FACTOR = 0.5;
+
 interface BannerHeroProps {
   menuSlot?: ReactNode;
   subtitle?: string;
@@ -36,16 +38,27 @@ export default function BannerHero({
   }, []);
 
   useEffect(() => {
+    // ⚡ Bolt: Throttled scroll event using requestAnimationFrame to prevent
+    // main thread blocking and layout thrashing. The `ticking` flag ensures
+    // we only process one frame at a time, making parallax scrolling smoother.
+    let ticking = false;
+    let rafId: number | null = null;
     const handleScroll = () => {
-      if (parallaxRef.current && bgRef.current) {
-        const rect = parallaxRef.current.getBoundingClientRect();
+      if (!ticking) {
+        rafId = window.requestAnimationFrame(() => {
+          if (parallaxRef.current && bgRef.current) {
+            const rect = parallaxRef.current.getBoundingClientRect();
 
-        // Only apply parallax when hero section is in view
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          const scrolled = window.scrollY;
-          const offset = scrolled * 0.5;
-          bgRef.current.style.transform = `translateY(${offset}px)`;
-        }
+            // Only apply parallax when hero section is in view
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              const scrolled = window.scrollY;
+              const offset = scrolled * PARALLAX_FACTOR;
+              bgRef.current.style.transform = `translateY(${offset}px)`;
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
@@ -53,7 +66,12 @@ export default function BannerHero({
     // Initial calculation in case we start scrolled down
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafId) {
+        window.cancelAnimationFrame(rafId);
+      }
+    };
   }, []);
 
   return (
@@ -69,7 +87,6 @@ export default function BannerHero({
           className="absolute inset-0 w-full h-full"
           style={{
             transform: "translateY(0px)", // Initial state
-            transition: "transform 0.1s ease-out",
           }}
         >
           {HERO_IMAGES.map((src, index) => (
