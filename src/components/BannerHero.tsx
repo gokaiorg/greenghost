@@ -36,16 +36,39 @@ export default function BannerHero({
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (parallaxRef.current && bgRef.current) {
-        const rect = parallaxRef.current.getBoundingClientRect();
+    let ticking = false;
+    let isVisible = true; // Assume visible initially
 
-        // Only apply parallax when hero section is in view
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          const scrolled = window.scrollY;
-          const offset = scrolled * 0.5;
-          bgRef.current.style.transform = `translateY(${offset}px)`;
+    // Setup IntersectionObserver to only track layout when visible
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]) {
+          isVisible = entries[0].isIntersecting;
         }
+      },
+      { threshold: 0 }
+    );
+
+    if (parallaxRef.current) {
+      observer.observe(parallaxRef.current);
+    }
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (isVisible && parallaxRef.current && bgRef.current) {
+            const rect = parallaxRef.current.getBoundingClientRect();
+
+            // Only apply parallax when hero section is in view
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              const scrolled = window.scrollY;
+              const offset = scrolled * 0.5;
+              bgRef.current.style.transform = `translateY(${offset}px)`;
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
@@ -53,7 +76,10 @@ export default function BannerHero({
     // Initial calculation in case we start scrolled down
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   return (
