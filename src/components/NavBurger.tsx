@@ -45,14 +45,19 @@ export default function NavBurger({
     <div className="relative" ref={menuRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="hover:text-[#13DE00] transition-colors p-2 cursor-pointer"
+        className="hover:text-[#13DE00] transition-colors p-2 cursor-pointer focus-visible:ring-2 focus-visible:ring-[#13DE00] rounded-sm outline-none"
         aria-label="Toggle menu"
+        aria-expanded={isOpen}
+        aria-haspopup="true"
+        aria-controls="mobile-menu"
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
       {isOpen && (
         <ul
+          id="mobile-menu"
+          role="menu"
           className="fixed left-0 right-0 top-[60px] bg-black border-t border-b border-[#13DE00] shadow-lg py-1 z-50 md:absolute md:left-0 md:right-auto md:top-full md:mt-2 md:w-max md:border list-none m-0 p-0"
           aria-label="Mobile navigation menu"
         >
