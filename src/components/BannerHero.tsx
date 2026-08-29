@@ -36,16 +36,39 @@ export default function BannerHero({
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (parallaxRef.current && bgRef.current) {
-        const rect = parallaxRef.current.getBoundingClientRect();
+    let isVisible = true;
+    let ticking = false;
 
-        // Only apply parallax when hero section is in view
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          const scrolled = window.scrollY;
-          const offset = scrolled * 0.5;
-          bgRef.current.style.transform = `translateY(${offset}px)`;
-        }
+    // ⚡ Bolt Optimization: Use IntersectionObserver to skip expensive DOM updates when the hero section is off-screen.
+    // Expected impact: Eliminates layout thrashing and prevents main-thread blocking when the user scrolls past the banner.
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+      },
+      { threshold: 0 },
+    );
+
+    if (parallaxRef.current) {
+      observer.observe(parallaxRef.current);
+    }
+
+    const handleScroll = () => {
+      // Skip parallax calculations if the hero is not in view
+      if (!isVisible) return;
+
+      // ⚡ Bolt Optimization: Throttle scroll event handling using requestAnimationFrame.
+      // Expected impact: Decouples visual updates from high-frequency scroll events, ensuring smoother rendering and scrolling performance.
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (bgRef.current) {
+            // Apply parallax effect based on window scroll position
+            const scrolled = window.scrollY;
+            const offset = scrolled * 0.5;
+            bgRef.current.style.transform = `translateY(${offset}px)`;
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
@@ -53,7 +76,10 @@ export default function BannerHero({
     // Initial calculation in case we start scrolled down
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   return (
@@ -75,8 +101,9 @@ export default function BannerHero({
           {HERO_IMAGES.map((src, index) => (
             <div
               key={src}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentImageIndex ? "opacity-100" : "opacity-0"
-                }`}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                index === currentImageIndex ? "opacity-100" : "opacity-0"
+              }`}
             >
               <Image
                 src={src}
@@ -113,7 +140,10 @@ export default function BannerHero({
             CANNABIS MENU
           </Link>
           <Link
-            href={getLocalizedUrl("/gadgets/cannabis-medical-prescription", locale || "en")}
+            href={getLocalizedUrl(
+              "/gadgets/cannabis-medical-prescription",
+              locale || "en",
+            )}
             className="bg-transparent border-2 border-[#13DE00] text-[#13DE00] hover:bg-[#13DE00]/13 font-bold py-4 px-8 text-lg transition-colors duration-300"
             title="Medical Prescription"
           >
