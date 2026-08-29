@@ -32,3 +32,8 @@
 
 **Learning:** The `MiniSlider` component is frequently nested within `Link` components (e.g., in product lists), creating invalid HTML and accessibility issues because it renders interactive `<button>` elements for slide indicators.
 **Action:** When using `MiniSlider` inside a `Link`, always pass `interactive={false}` to render the indicators as non-interactive `<span>` elements, preventing nested interactive controls while maintaining visual feedback.
+
+## $(date +%Y-%m-%d) - Language Switcher Accessibility
+
+**Learning:** Custom dropdown components like `LanguageSwitcher` built without UI primitives must implement ARIA attributes (`role="menu"`, `role="menuitem"`, `aria-haspopup`, `aria-controls`, `aria-expanded`) and an `Escape` key event listener for proper keyboard accessibility.
+**Action:** When implementing custom interactive elements, always consider screen reader roles and keyboard navigation (e.g., closing modals/dropdowns with Escape, focus states via `focus-visible`).
