@@ -9,6 +9,7 @@ import {
   SetStateAction,
 } from "react";
 import { Send, X } from "lucide-react";
+import DOMPurify from "dompurify";
 import { findStrain, formatStrainInfo, escapeHtml } from "@/lib/strain-utils";
 import { Message } from "@/lib/types";
 
@@ -64,7 +65,7 @@ const MessageList = memo(function MessageList({
             ) : (
               <p
                 className="text-xs"
-                dangerouslySetInnerHTML={{ __html: message.text }}
+                dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(message.text) }}
               />
             )}
             <p className="text-xs opacity-60 mt-1">
