@@ -11,6 +11,7 @@ import {
 import { Send, X } from "lucide-react";
 import { findStrain, formatStrainInfo, escapeHtml } from "@/lib/strain-utils";
 import { Message } from "@/lib/types";
+import DOMPurify from "dompurify";
 
 // Helper function to create links
 const createLink = (path: string, text: string) =>
@@ -64,7 +65,7 @@ const MessageList = memo(function MessageList({
             ) : (
               <p
                 className="text-xs"
-                dangerouslySetInnerHTML={{ __html: message.text }}
+                dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(message.text) }}
               />
             )}
             <p className="text-xs opacity-60 mt-1">
