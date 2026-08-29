@@ -75,7 +75,7 @@ export default function LanguageSwitcher() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-center p-2 hover:bg-white/10 transition-colors text-white hover:text-[#13DE00] cursor-pointer"
+        className="flex items-center justify-center p-2 hover:bg-white/10 transition-colors text-white hover:text-[#13DE00] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#13DE00] focus-visible:ring-offset-2 focus-visible:ring-offset-black"
         aria-label="Select language"
         aria-expanded={isOpen}
       >
@@ -89,7 +89,7 @@ export default function LanguageSwitcher() {
               <li key={lang.code}>
                 <button
                   onClick={() => handleLanguageChange(lang.code)}
-                  className={`w-full text-left px-4 py-2 text-xs font-medium flex items-center space-x-2 hover:bg-[#13DE00]/20 transition-colors cursor-pointer
+                  className={`w-full text-left px-4 py-2 text-xs font-medium flex items-center space-x-2 hover:bg-[#13DE00]/20 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#13DE00] focus-visible:ring-offset-2 focus-visible:ring-offset-black focus-visible:bg-[#13DE00]/10
                     ${currentLang.code === lang.code ? "text-[#13DE00] bg-[#13DE00]/10" : "text-white"}
                   `}
                 >
