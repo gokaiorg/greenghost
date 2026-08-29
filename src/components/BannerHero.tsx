@@ -36,24 +36,45 @@ export default function BannerHero({
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (parallaxRef.current && bgRef.current) {
-        const rect = parallaxRef.current.getBoundingClientRect();
+    let ticking = false;
+    let isVisible = false;
 
-        // Only apply parallax when hero section is in view
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          const scrolled = window.scrollY;
-          const offset = scrolled * 0.5;
-          bgRef.current.style.transform = `translateY(${offset}px)`;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]) {
+          isVisible = entries[0].isIntersecting;
         }
+      },
+      { threshold: 0 }
+    );
+
+    if (parallaxRef.current) {
+      observer.observe(parallaxRef.current);
+    }
+
+    const handleScroll = () => {
+      if (!ticking && isVisible) {
+        window.requestAnimationFrame(() => {
+          if (parallaxRef.current && bgRef.current) {
+            const scrolled = window.scrollY;
+            const offset = scrolled * 0.5;
+            bgRef.current.style.transform = `translateY(${offset}px)`;
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     // Initial calculation in case we start scrolled down
+    isVisible = true; // force true for initial
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   return (
@@ -69,7 +90,6 @@ export default function BannerHero({
           className="absolute inset-0 w-full h-full"
           style={{
             transform: "translateY(0px)", // Initial state
-            transition: "transform 0.1s ease-out",
           }}
         >
           {HERO_IMAGES.map((src, index) => (
